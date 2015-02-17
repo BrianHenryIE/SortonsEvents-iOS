@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A631B9671A925C0F00164ECA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6C6130F1A91492500A5F082 /* Info.plist */; };
+		A631B9681A925C2400164ECA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6C613291A91492500A5F082 /* Info.plist */; };
+		A64FD23C1A93F2210075E514 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A64FD23B1A93F2210075E514 /* AsyncImageView.m */; };
+		A6C613111A91492500A5F082 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613101A91492500A5F082 /* main.m */; };
+		A6C613141A91492500A5F082 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613131A91492500A5F082 /* AppDelegate.m */; };
+		A6C613171A91492500A5F082 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613161A91492500A5F082 /* ViewController.m */; };
+		A6C6131A1A91492500A5F082 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6C613181A91492500A5F082 /* Main.storyboard */; };
+		A6C6131C1A91492500A5F082 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131B1A91492500A5F082 /* Images.xcassets */; };
+		A6C6131F1A91492500A5F082 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131D1A91492500A5F082 /* LaunchScreen.xib */; };
+		A6C6132B1A91492500A5F082 /* SortonsEventsOCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6132A1A91492500A5F082 /* SortonsEventsOCTests.m */; };
+		A6C613391A914A3200A5F082 /* DiscoveredEventBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613381A914A3200A5F082 /* DiscoveredEventBuilder.m */; };
+		A6C6133C1A914A4D00A5F082 /* DiscoveredEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6133B1A914A4D00A5F082 /* DiscoveredEvent.m */; };
+		A6C6133F1A914B6C00A5F082 /* SortonsEventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6133E1A914B6C00A5F082 /* SortonsEventsManager.m */; };
+		A6C613421A914B8B00A5F082 /* SortonsEventsCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */; };
+		A6C613491A91614F00A5F082 /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613481A91614F00A5F082 /* DetailCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A6C613251A91492500A5F082 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6C613031A91492500A5F082 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6C6130A1A91492500A5F082;
+			remoteInfo = DublinTheatreOC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A64FD23A1A93F2210075E514 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncImageView.h; path = "../../../Downloads/AsyncImageView-master/AsyncImageView/AsyncImageView.h"; sourceTree = "<group>"; };
+		A64FD23B1A93F2210075E514 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncImageView.m; path = "../../../Downloads/AsyncImageView-master/AsyncImageView/AsyncImageView.m"; sourceTree = "<group>"; };
+		A6C6130B1A91492500A5F082 /* SortonsEventsOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SortonsEventsOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6C6130F1A91492500A5F082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6C613101A91492500A5F082 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A6C613121A91492500A5F082 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A6C613131A91492500A5F082 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A6C613151A91492500A5F082 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A6C613161A91492500A5F082 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A6C613191A91492500A5F082 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A6C6131B1A91492500A5F082 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A6C6131E1A91492500A5F082 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A6C613241A91492500A5F082 /* SortonsEventsOCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SortonsEventsOCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6C613291A91492500A5F082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6C6132A1A91492500A5F082 /* SortonsEventsOCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortonsEventsOCTests.m; sourceTree = "<group>"; };
+		A6C613371A914A3200A5F082 /* DiscoveredEventBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoveredEventBuilder.h; sourceTree = "<group>"; };
+		A6C613381A914A3200A5F082 /* DiscoveredEventBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoveredEventBuilder.m; sourceTree = "<group>"; };
+		A6C6133A1A914A4D00A5F082 /* DiscoveredEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoveredEvent.h; sourceTree = "<group>"; };
+		A6C6133B1A914A4D00A5F082 /* DiscoveredEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoveredEvent.m; sourceTree = "<group>"; };
+		A6C6133D1A914B6C00A5F082 /* SortonsEventsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortonsEventsManager.h; sourceTree = "<group>"; };
+		A6C6133E1A914B6C00A5F082 /* SortonsEventsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortonsEventsManager.m; sourceTree = "<group>"; };
+		A6C613401A914B8B00A5F082 /* SortonsEventsCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortonsEventsCommunicator.h; sourceTree = "<group>"; };
+		A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortonsEventsCommunicator.m; sourceTree = "<group>"; };
+		A6C613431A914CA300A5F082 /* SortonsEventsCommunicatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortonsEventsCommunicatorDelegate.h; sourceTree = "<group>"; };
+		A6C613461A91530E00A5F082 /* SortonsEventsManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortonsEventsManagerDelegate.h; sourceTree = "<group>"; };
+		A6C613471A91614F00A5F082 /* DetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCell.h; sourceTree = "<group>"; };
+		A6C613481A91614F00A5F082 /* DetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A6C613081A91492500A5F082 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6C613211A91492500A5F082 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A6C613021A91492500A5F082 = {
+			isa = PBXGroup;
+			children = (
+				A6C6130D1A91492500A5F082 /* SortonsEventsOC */,
+				A6C613271A91492500A5F082 /* SortonsEventsOCTests */,
+				A6C6130C1A91492500A5F082 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A6C6130C1A91492500A5F082 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6C6130B1A91492500A5F082 /* SortonsEventsOC.app */,
+				A6C613241A91492500A5F082 /* SortonsEventsOCTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6C6130D1A91492500A5F082 /* SortonsEventsOC */ = {
+			isa = PBXGroup;
+			children = (
+				A64FD23A1A93F2210075E514 /* AsyncImageView.h */,
+				A64FD23B1A93F2210075E514 /* AsyncImageView.m */,
+				A6C613471A91614F00A5F082 /* DetailCell.h */,
+				A6C613481A91614F00A5F082 /* DetailCell.m */,
+				A6C613121A91492500A5F082 /* AppDelegate.h */,
+				A6C613131A91492500A5F082 /* AppDelegate.m */,
+				A6C613151A91492500A5F082 /* ViewController.h */,
+				A6C613161A91492500A5F082 /* ViewController.m */,
+				A6C613181A91492500A5F082 /* Main.storyboard */,
+				A6C6131B1A91492500A5F082 /* Images.xcassets */,
+				A6C6131D1A91492500A5F082 /* LaunchScreen.xib */,
+				A6C6130E1A91492500A5F082 /* Supporting Files */,
+				A6C613371A914A3200A5F082 /* DiscoveredEventBuilder.h */,
+				A6C613381A914A3200A5F082 /* DiscoveredEventBuilder.m */,
+				A6C6133A1A914A4D00A5F082 /* DiscoveredEvent.h */,
+				A6C6133B1A914A4D00A5F082 /* DiscoveredEvent.m */,
+				A6C6133D1A914B6C00A5F082 /* SortonsEventsManager.h */,
+				A6C6133E1A914B6C00A5F082 /* SortonsEventsManager.m */,
+				A6C613401A914B8B00A5F082 /* SortonsEventsCommunicator.h */,
+				A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */,
+				A6C613431A914CA300A5F082 /* SortonsEventsCommunicatorDelegate.h */,
+				A6C613461A91530E00A5F082 /* SortonsEventsManagerDelegate.h */,
+			);
+			path = SortonsEventsOC;
+			sourceTree = "<group>";
+		};
+		A6C6130E1A91492500A5F082 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A6C6130F1A91492500A5F082 /* Info.plist */,
+				A6C613101A91492500A5F082 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A6C613271A91492500A5F082 /* SortonsEventsOCTests */ = {
+			isa = PBXGroup;
+			children = (
+				A6C6132A1A91492500A5F082 /* SortonsEventsOCTests.m */,
+				A6C613281A91492500A5F082 /* Supporting Files */,
+			);
+			path = SortonsEventsOCTests;
+			sourceTree = "<group>";
+		};
+		A6C613281A91492500A5F082 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A6C613291A91492500A5F082 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A6C6130A1A91492500A5F082 /* SortonsEventsOC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6C6132E1A91492500A5F082 /* Build configuration list for PBXNativeTarget "SortonsEventsOC" */;
+			buildPhases = (
+				A6C613071A91492500A5F082 /* Sources */,
+				A6C613081A91492500A5F082 /* Frameworks */,
+				A6C613091A91492500A5F082 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SortonsEventsOC;
+			productName = DublinTheatreOC;
+			productReference = A6C6130B1A91492500A5F082 /* SortonsEventsOC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A6C613231A91492500A5F082 /* SortonsEventsOCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6C613311A91492500A5F082 /* Build configuration list for PBXNativeTarget "SortonsEventsOCTests" */;
+			buildPhases = (
+				A6C613201A91492500A5F082 /* Sources */,
+				A6C613211A91492500A5F082 /* Frameworks */,
+				A6C613221A91492500A5F082 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6C613261A91492500A5F082 /* PBXTargetDependency */,
+			);
+			name = SortonsEventsOCTests;
+			productName = DublinTheatreOCTests;
+			productReference = A6C613241A91492500A5F082 /* SortonsEventsOCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A6C613031A91492500A5F082 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Sortons;
+				TargetAttributes = {
+					A6C6130A1A91492500A5F082 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					A6C613231A91492500A5F082 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = A6C6130A1A91492500A5F082;
+					};
+				};
+			};
+			buildConfigurationList = A6C613061A91492500A5F082 /* Build configuration list for PBXProject "UCD Events" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A6C613021A91492500A5F082;
+			productRefGroup = A6C6130C1A91492500A5F082 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A6C6130A1A91492500A5F082 /* SortonsEventsOC */,
+				A6C613231A91492500A5F082 /* SortonsEventsOCTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A6C613091A91492500A5F082 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A631B9671A925C0F00164ECA /* Info.plist in Resources */,
+				A6C6131A1A91492500A5F082 /* Main.storyboard in Resources */,
+				A6C6131F1A91492500A5F082 /* LaunchScreen.xib in Resources */,
+				A6C6131C1A91492500A5F082 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6C613221A91492500A5F082 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A631B9681A925C2400164ECA /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A6C613071A91492500A5F082 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6C613171A91492500A5F082 /* ViewController.m in Sources */,
+				A64FD23C1A93F2210075E514 /* AsyncImageView.m in Sources */,
+				A6C613141A91492500A5F082 /* AppDelegate.m in Sources */,
+				A6C613491A91614F00A5F082 /* DetailCell.m in Sources */,
+				A6C6133C1A914A4D00A5F082 /* DiscoveredEvent.m in Sources */,
+				A6C613111A91492500A5F082 /* main.m in Sources */,
+				A6C613421A914B8B00A5F082 /* SortonsEventsCommunicator.m in Sources */,
+				A6C613391A914A3200A5F082 /* DiscoveredEventBuilder.m in Sources */,
+				A6C6133F1A914B6C00A5F082 /* SortonsEventsManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6C613201A91492500A5F082 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6C6132B1A91492500A5F082 /* SortonsEventsOCTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A6C613261A91492500A5F082 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6C6130A1A91492500A5F082 /* SortonsEventsOC */;
+			targetProxy = A6C613251A91492500A5F082 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A6C613181A91492500A5F082 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6C613191A91492500A5F082 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A6C6131D1A91492500A5F082 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6C6131E1A91492500A5F082 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A6C6132C1A91492500A5F082 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A6C6132D1A91492500A5F082 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A6C6132F1A91492500A5F082 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SortonsEventsOC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = SortonsEventsOC;
+			};
+			name = Debug;
+		};
+		A6C613301A91492500A5F082 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SortonsEventsOC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = SortonsEventsOC;
+			};
+			name = Release;
+		};
+		A6C613321A91492500A5F082 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SortonsEventsOCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = SortonsEventsOCTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SortonsEventsOC.app/SortonsEventsOC";
+			};
+			name = Debug;
+		};
+		A6C613331A91492500A5F082 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SortonsEventsOCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = SortonsEventsOCTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SortonsEventsOC.app/SortonsEventsOC";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A6C613061A91492500A5F082 /* Build configuration list for PBXProject "UCD Events" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6C6132C1A91492500A5F082 /* Debug */,
+				A6C6132D1A91492500A5F082 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6C6132E1A91492500A5F082 /* Build configuration list for PBXNativeTarget "SortonsEventsOC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6C6132F1A91492500A5F082 /* Debug */,
+				A6C613301A91492500A5F082 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6C613311A91492500A5F082 /* Build configuration list for PBXNativeTarget "SortonsEventsOCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6C613321A91492500A5F082 /* Debug */,
+				A6C613331A91492500A5F082 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A6C613031A91492500A5F082 /* Project object */;
+}
