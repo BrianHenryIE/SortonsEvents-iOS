@@ -11,15 +11,15 @@
 #import "DiscoveredEvent.h"
 #import "SortonsEventsManager.h"
 #import "SortonsEventsCommunicator.h"
-#import "DetailCell.h"
+#import "DiscoveredEventCell.h"
 
 #import "AsyncImageView.h"
 
 @interface ViewController () <SortonsEventsManagerDelegate> {
     NSArray *_discoveredEvents;
-    NSMutableArray *_downloadedImages;
     SortonsEventsManager *_manager;
 }
+
 @end
 
 @implementation ViewController
@@ -30,11 +30,74 @@
     [_manager fetchDiscoveredEvents];
 }
 
+- (NSString *)friendlyDate:(NSString *)deDateString
+{
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];
+    NSDate *startTime = [dateFormat dateFromString:deDateString];
+  
+    
+    // if it's yesterday, today or tomorrow use the word
+    
+    NSTimeInterval secondsPerDay = 24 * 60 * 60;
+    NSDate *tomorrowExactly = [[NSDate alloc]
+                               initWithTimeIntervalSinceNow:secondsPerDay];
+    NSDate *yesterdayExactly = [[NSDate alloc]
+                                initWithTimeIntervalSinceNow:-secondsPerDay];
+    
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    
+    // prepare yesterday for comparison
+    NSDateComponents *components = [cal components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay) fromDate:yesterdayExactly];
+    NSDate *yesterday = [cal dateFromComponents:components];
+    
+    // prepare today for comparison
+    components = [cal components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay) fromDate:[NSDate date]];
+    NSDate *today = [cal dateFromComponents:components];
+    
+    // prepare today for comparison
+    components = [cal components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay) fromDate:tomorrowExactly];
+    NSDate *tomorrow = [cal dateFromComponents:components];
+    
+    
+    
+    // prepare other date for comparison
+    components = [cal components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay) fromDate:startTime];
+    NSDate *otherDate = [cal dateFromComponents:components];
+    
+    [dateFormat setDateFormat:@"HH:mm"];
+
+    if([yesterday isEqualToDate:otherDate]) {
+        NSString *friendlyStartTime = [NSString stringWithFormat:@"Yesterday at %@",[dateFormat stringFromDate:startTime]];
+        return friendlyStartTime;
+        
+    }else if([today isEqualToDate:otherDate]) {
+        NSString *friendlyStartTime = [NSString stringWithFormat:@"Today at %@",[dateFormat stringFromDate:startTime]];
+        return friendlyStartTime;
+        
+    } else if([tomorrow isEqualToDate:otherDate]) {
+        NSString *friendlyStartTime = [NSString stringWithFormat:@"Tomorrow at %@",[dateFormat stringFromDate:startTime]];
+        return friendlyStartTime;
+        
+    } else {
+
+//        [dateFormat setDateFormat:@"dd/MM/yyyy HH:mm"];
+        [dateFormat setDateFormat:@"EEEE dd MMM 'at' HH:mm"];
+        NSString *friendlyStartTime = [NSString stringWithFormat:@"%@",[dateFormat stringFromDate:startTime]];
+        
+        return friendlyStartTime;
+    }
+    
+    
+}
+
 - (void)didReceiveDiscoveredEvents:(NSArray *)discoveredEvents
 {
     NSLog(@"ViewController didReceiveDiscoveredEvents");
     _discoveredEvents = discoveredEvents;
-    [self.tableView reloadData];
+    // [self.tableView reloadData];
+    [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES]; 
 }
 
 - (void)fetchingDiscoveredEventsFailedWithError:(NSError *)error
@@ -49,52 +112,25 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"discoveredEventCell" forIndexPath:indexPath];
+    DiscoveredEventCell *cell = [tableView dequeueReusableCellWithIdentifier:@"discoveredEventCell" forIndexPath:indexPath];
+    
+    // Clear old images asap when cells are being reused.
+    cell.theImage.image = nil;
     
     DiscoveredEvent *discoveredEvent = _discoveredEvents[indexPath.row];
     [cell.nameLabel setText:discoveredEvent.name];
-    
-    // 2015-02-16T00:00:00.000Z
-    
-    
-//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//    [formatter setDateFormat:@"EEE, MM-dd-yyyy"];
-//    NSDate *dt = [NSDate date];
-//    NSString *dateAsString = [formatter stringFromDate:dt];
-//    [formatter release];
-
-//    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-//    [dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS"];
-//    NSDate *startTime = [dateFormat dateFromString:discoveredEvent.startTime];
-//    
-//    [dateFormat setDateFormat:@"dd/MM/yyyy HH:mm"];
-//    NSString *friendlyStartTime = [NSString stringWithFormat:@"%@",[dateFormat stringFromDate:startTime]];
-//    
-//    [cell.startTimeLabel setText:friendlyStartTime];
-   
-    [cell.startTimeLabel setText:discoveredEvent.startTime];
+ 
+    // [cell.startTimeLabel setText:discoveredEvent.startTime];
+    NSString *friendlyDate = [self friendlyDate:discoveredEvent.startTime];
+    [cell.startTimeLabel setText:friendlyDate];
     
     [cell.locationLabel setText:discoveredEvent.location];
     
     // Download the images once only!
-//    if(_downloadedImages.count < indexPath.row){
-//        NSLog(@"Image on row %ld not found, downloading.", (long)indexPath.row);
 
-        NSString *imageURLString = [NSString stringWithFormat: @"http://graph.facebook.com/%@/picture?type=square", discoveredEvent.eid];
-        NSURL *imageURL = [NSURL URLWithString:imageURLString];
-//        NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
-//        // Store the data
-//        UIImage *image = [UIImage imageWithData:imageData];
-//        
-//        // This isn't working
-//        [_downloadedImages addObject:image];
-//        
-//        cell.theImage.image = image;
-//    } else {
-//        NSLog(@"Using cached image for row %ld.", (long)indexPath.row);
+    NSString *imageURLString = [NSString stringWithFormat: @"http://graph.facebook.com/%@/picture?type=square", discoveredEvent.eid];
+    NSURL *imageURL = [NSURL URLWithString:imageURLString];
 
-//        cell.theImage.image = _downloadedImages[indexPath.row];
-//    }
 
     cell.theImage.imageURL = imageURL;
     
@@ -105,9 +141,19 @@
 
     DiscoveredEvent *discoveredEvent = _discoveredEvents[indexPath.row];
 
-     NSString *eventURLString = [NSString stringWithFormat: @"fb://profile/%@/", discoveredEvent.eid];
-    NSURL *url = [NSURL URLWithString:eventURLString];
-    [[UIApplication sharedApplication] openURL:url];
+    NSString *eventAppURLString = [NSString stringWithFormat: @"fb://profile/%@/", discoveredEvent.eid];
+    NSString *eventHttpURLString = [NSString stringWithFormat: @"http://facebook.com/events/%@/", discoveredEvent.eid];
+    
+    NSURL *facebookURL = [NSURL URLWithString:eventAppURLString];
+    if ([[UIApplication sharedApplication] canOpenURL:facebookURL]) {
+        [[UIApplication sharedApplication] openURL:facebookURL];
+    } else {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:eventHttpURLString]];
+    }
+    
+    
+    //NSURL *url = [NSURL URLWithString:eventAppURLString];
+    //[[UIApplication sharedApplication] openURL:url];
     
 }
 
@@ -119,7 +165,10 @@
     _manager.communicator = [[SortonsEventsCommunicator alloc] init];
     _manager.communicator.delegate = _manager;
     _manager.delegate = self;
-   
+    
+    self.tableView.estimatedRowHeight = 300;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
     [self startFetchingDiscoveredEvents];
 }
 
@@ -127,5 +176,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
 
 @end

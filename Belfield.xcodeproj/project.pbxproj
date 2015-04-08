@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A631B9671A925C0F00164ECA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6C6130F1A91492500A5F082 /* Info.plist */; };
-		A631B9681A925C2400164ECA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6C613291A91492500A5F082 /* Info.plist */; };
-		A64FD23C1A93F2210075E514 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A64FD23B1A93F2210075E514 /* AsyncImageView.m */; };
+		A64065F41AA4F8AA009B7F2A /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A64065F31AA4F8AA009B7F2A /* AsyncImageView.m */; };
 		A6C613111A91492500A5F082 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613101A91492500A5F082 /* main.m */; };
 		A6C613141A91492500A5F082 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613131A91492500A5F082 /* AppDelegate.m */; };
 		A6C613171A91492500A5F082 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613161A91492500A5F082 /* ViewController.m */; };
@@ -21,7 +19,7 @@
 		A6C6133C1A914A4D00A5F082 /* DiscoveredEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6133B1A914A4D00A5F082 /* DiscoveredEvent.m */; };
 		A6C6133F1A914B6C00A5F082 /* SortonsEventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6133E1A914B6C00A5F082 /* SortonsEventsManager.m */; };
 		A6C613421A914B8B00A5F082 /* SortonsEventsCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */; };
-		A6C613491A91614F00A5F082 /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613481A91614F00A5F082 /* DetailCell.m */; };
+		A6C613491A91614F00A5F082 /* DiscoveredEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A64FD23A1A93F2210075E514 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncImageView.h; path = "../../../Downloads/AsyncImageView-master/AsyncImageView/AsyncImageView.h"; sourceTree = "<group>"; };
-		A64FD23B1A93F2210075E514 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncImageView.m; path = "../../../Downloads/AsyncImageView-master/AsyncImageView/AsyncImageView.m"; sourceTree = "<group>"; };
+		A64065F21AA4F8AA009B7F2A /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncImageView.h; path = AsyncImageView/AsyncImageView.h; sourceTree = "<group>"; };
+		A64065F31AA4F8AA009B7F2A /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncImageView.m; path = AsyncImageView/AsyncImageView.m; sourceTree = "<group>"; };
 		A6C6130B1A91492500A5F082 /* SortonsEventsOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SortonsEventsOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C6130F1A91492500A5F082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6C613101A91492500A5F082 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,8 +58,8 @@
 		A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortonsEventsCommunicator.m; sourceTree = "<group>"; };
 		A6C613431A914CA300A5F082 /* SortonsEventsCommunicatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortonsEventsCommunicatorDelegate.h; sourceTree = "<group>"; };
 		A6C613461A91530E00A5F082 /* SortonsEventsManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortonsEventsManagerDelegate.h; sourceTree = "<group>"; };
-		A6C613471A91614F00A5F082 /* DetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCell.h; sourceTree = "<group>"; };
-		A6C613481A91614F00A5F082 /* DetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCell.m; sourceTree = "<group>"; };
+		A6C613471A91614F00A5F082 /* DiscoveredEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoveredEventCell.h; sourceTree = "<group>"; };
+		A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoveredEventCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +101,10 @@
 		A6C6130D1A91492500A5F082 /* SortonsEventsOC */ = {
 			isa = PBXGroup;
 			children = (
-				A64FD23A1A93F2210075E514 /* AsyncImageView.h */,
-				A64FD23B1A93F2210075E514 /* AsyncImageView.m */,
-				A6C613471A91614F00A5F082 /* DetailCell.h */,
-				A6C613481A91614F00A5F082 /* DetailCell.m */,
+				A64065F21AA4F8AA009B7F2A /* AsyncImageView.h */,
+				A64065F31AA4F8AA009B7F2A /* AsyncImageView.m */,
+				A6C613471A91614F00A5F082 /* DiscoveredEventCell.h */,
+				A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */,
 				A6C613121A91492500A5F082 /* AppDelegate.h */,
 				A6C613131A91492500A5F082 /* AppDelegate.m */,
 				A6C613151A91492500A5F082 /* ViewController.h */,
@@ -204,6 +202,7 @@
 				TargetAttributes = {
 					A6C6130A1A91492500A5F082 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 3RM6H33EW7;
 					};
 					A6C613231A91492500A5F082 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -211,7 +210,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A6C613061A91492500A5F082 /* Build configuration list for PBXProject "UCD Events" */;
+			buildConfigurationList = A6C613061A91492500A5F082 /* Build configuration list for PBXProject "Belfield" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -235,7 +234,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A631B9671A925C0F00164ECA /* Info.plist in Resources */,
 				A6C6131A1A91492500A5F082 /* Main.storyboard in Resources */,
 				A6C6131F1A91492500A5F082 /* LaunchScreen.xib in Resources */,
 				A6C6131C1A91492500A5F082 /* Images.xcassets in Resources */,
@@ -246,7 +244,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A631B9681A925C2400164ECA /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +255,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6C613171A91492500A5F082 /* ViewController.m in Sources */,
-				A64FD23C1A93F2210075E514 /* AsyncImageView.m in Sources */,
+				A64065F41AA4F8AA009B7F2A /* AsyncImageView.m in Sources */,
 				A6C613141A91492500A5F082 /* AppDelegate.m in Sources */,
-				A6C613491A91614F00A5F082 /* DetailCell.m in Sources */,
+				A6C613491A91614F00A5F082 /* DiscoveredEventCell.m in Sources */,
 				A6C6133C1A914A4D00A5F082 /* DiscoveredEvent.m in Sources */,
 				A6C613111A91492500A5F082 /* main.m in Sources */,
 				A6C613421A914B8B00A5F082 /* SortonsEventsCommunicator.m in Sources */,
@@ -389,9 +386,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SortonsEventsOC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = SortonsEventsOC;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -399,9 +400,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SortonsEventsOC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = SortonsEventsOC;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -442,7 +447,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A6C613061A91492500A5F082 /* Build configuration list for PBXProject "UCD Events" */ = {
+		A6C613061A91492500A5F082 /* Build configuration list for PBXProject "Belfield" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A6C6132C1A91492500A5F082 /* Debug */,

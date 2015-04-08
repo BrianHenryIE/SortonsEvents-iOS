@@ -1,5 +1,5 @@
 //
-//  DetailCell.h
+//  DiscoveredEventCell
 //  BrowseMeetup
 //
 //  Created by TAMIM Ziad on 8/16/13.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailCell : UITableViewCell
+@interface DiscoveredEventCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;

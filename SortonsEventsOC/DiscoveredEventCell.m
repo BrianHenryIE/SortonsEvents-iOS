@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 TAMIM Ziad. All rights reserved.
 //
 
-#import "DetailCell.h"
+#import "DiscoveredEventCell.h"
 
-@implementation DetailCell
+@implementation DiscoveredEventCell
 
 @end
