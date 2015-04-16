@@ -7,10 +7,12 @@
 //
 
 #import "NewsViewController.h"
+#import "CommonWebViewController.h"
 
 @interface NewsViewController () <UIWebViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
+
 
 @end
 
@@ -48,14 +50,29 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
-
+//*/
+//
 - (BOOL)webView:(UIWebView*)webView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType {
-    //CAPTURE USER LINK-CLICK.
-    NSURL *url = [request URL];
-    
-    NSLog [url absoluteString];
-    
+
+    // Get the URL clicked and display it in a modal webview.
+    // Maybe the webview should be a singleton?!
+    if (navigationType == UIWebViewNavigationTypeLinkClicked){
+
+        NSURL *url = [request URL];
+        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UIViewController *myController = [storyboard instantiateViewControllerWithIdentifier:@"CommonWebViewController"];
+
+        CommonWebViewController *cwvs = [CommonWebViewController alloc];
+        cwvs = (CommonWebViewController *) myController;
+        
+        [cwvs setWebViewURL:url];
+        
+        self.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
+        [self presentViewController:myController animated:YES completion:NULL];
+        
+        return NO;
+    }
     
     return YES;
 }

@@ -92,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTR-AS-H4w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-842" y="-1149"/>
+            <point key="canvasLocation" x="1126" y="-283"/>
         </scene>
         <!--Belfield-->
         <scene sceneID="Cjf-6L-D3W">
@@ -114,7 +114,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C54-ob-zfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1038" y="-351"/>
+            <point key="canvasLocation" x="-908" y="-1307"/>
         </scene>
         <!--Pages-->
         <scene sceneID="ddE-D9-cdt">
@@ -149,7 +149,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z9w-pP-KKW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="26" y="-351"/>
+            <point key="canvasLocation" x="-350" y="-283"/>
         </scene>
         <!--News-->
         <scene sceneID="MRg-ny-UE2">
@@ -166,24 +166,79 @@
                             <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfR-F3-lBt">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="JH1-J5-feI" id="63M-c2-X8D"/>
+                                </connections>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bfR-F3-lBt" firstAttribute="leading" secondItem="447-wI-2SS" secondAttribute="leadingMargin" constant="-16" id="52m-KY-PBv"/>
-                            <constraint firstItem="bfR-F3-lBt" firstAttribute="top" secondItem="ia6-iz-Wx4" secondAttribute="bottom" constant="-20" id="7oD-kO-6sE"/>
-                            <constraint firstItem="bfR-F3-lBt" firstAttribute="height" secondItem="447-wI-2SS" secondAttribute="height" id="b22-VM-IVn"/>
+                            <constraint firstItem="7Vf-l2-k1z" firstAttribute="top" secondItem="bfR-F3-lBt" secondAttribute="bottom" id="FxP-rB-O85"/>
+                            <constraint firstItem="bfR-F3-lBt" firstAttribute="top" secondItem="ia6-iz-Wx4" secondAttribute="bottom" id="GYl-yu-VzX"/>
+                            <constraint firstAttribute="centerX" secondItem="bfR-F3-lBt" secondAttribute="centerX" id="JfS-EP-NbN"/>
                             <constraint firstItem="bfR-F3-lBt" firstAttribute="width" secondItem="447-wI-2SS" secondAttribute="width" id="rBc-ky-ygQ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="News" id="29B-NB-HPO"/>
                     <connections>
-                        <outlet property="webView" destination="bfR-F3-lBt" id="Kx4-uP-8g2"/>
+                        <outlet property="webView" destination="bfR-F3-lBt" id="lxD-Tj-2QU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNH-s6-4VY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-70" y="359"/>
+            <point key="canvasLocation" x="-1138" y="-277"/>
+        </scene>
+        <!--Common Web View Controller-->
+        <scene sceneID="jtJ-nW-3XO">
+            <objects>
+                <viewController storyboardIdentifier="CommonWebViewController" id="sfb-W3-MCt" customClass="CommonWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2GL-IX-F9P"/>
+                        <viewControllerLayoutGuide type="bottom" id="GfM-G5-hcW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hs8-PF-oDj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MVL-T8-Dmp">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="Tfk-OZ-jhI">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="EUd-W9-waY">
+                                            <connections>
+                                                <action selector="doneButton:" destination="sfb-W3-MCt" id="2hk-Of-ORq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kar-QE-vEG">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="sfb-W3-MCt" id="aRX-PZ-8WR"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="MVL-T8-Dmp" secondAttribute="width" id="5G0-QU-IU8"/>
+                            <constraint firstAttribute="centerX" secondItem="Kar-QE-vEG" secondAttribute="centerX" id="PbR-zZ-9Eq"/>
+                            <constraint firstItem="Kar-QE-vEG" firstAttribute="width" secondItem="Hs8-PF-oDj" secondAttribute="width" id="TLr-np-aWG"/>
+                            <constraint firstItem="GfM-G5-hcW" firstAttribute="top" secondItem="Kar-QE-vEG" secondAttribute="bottom" id="eTP-vX-gZo"/>
+                            <constraint firstItem="MVL-T8-Dmp" firstAttribute="top" secondItem="2GL-IX-F9P" secondAttribute="bottom" id="fcQ-Id-P7o"/>
+                            <constraint firstAttribute="centerX" secondItem="MVL-T8-Dmp" secondAttribute="centerX" id="kYX-Bb-exI"/>
+                            <constraint firstItem="Kar-QE-vEG" firstAttribute="top" secondItem="2GL-IX-F9P" secondAttribute="bottom" constant="44" id="xw9-uf-y3y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="Tfk-OZ-jhI" id="NYL-ff-pdb"/>
+                        <outlet property="webView" destination="Kar-QE-vEG" id="GkD-ze-Rda"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iWh-ZU-lLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-751" y="482"/>
         </scene>
         <!--Help-->
         <scene sceneID="l1v-Mr-i5p">
@@ -228,7 +283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="blC-lD-fLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-100" y="1059"/>
+            <point key="canvasLocation" x="380" y="-277"/>
         </scene>
     </scenes>
 </document>

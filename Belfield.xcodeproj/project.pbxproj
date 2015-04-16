@@ -20,6 +20,7 @@
 		A6C6133F1A914B6C00A5F082 /* SortonsEventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6133E1A914B6C00A5F082 /* SortonsEventsManager.m */; };
 		A6C613421A914B8B00A5F082 /* SortonsEventsCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */; };
 		A6C613491A91614F00A5F082 /* DiscoveredEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */; };
+		A6D4C8921AE04E5500AA4D48 /* CommonWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D4C8911AE04E5500AA4D48 /* CommonWebViewController.m */; };
 		A6EA1CAC1ADC3B7100F6FB18 /* news.html in Resources */ = {isa = PBXBuildFile; fileRef = A6EA1CAB1ADC3B7100F6FB18 /* news.html */; };
 		A6EA1CB61ADC4CBD00F6FB18 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1CB51ADC4CBD00F6FB18 /* NewsViewController.m */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,8 @@
 		A6C613461A91530E00A5F082 /* SortonsEventsManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortonsEventsManagerDelegate.h; sourceTree = "<group>"; };
 		A6C613471A91614F00A5F082 /* DiscoveredEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoveredEventCell.h; sourceTree = "<group>"; };
 		A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoveredEventCell.m; sourceTree = "<group>"; };
+		A6D4C8901AE04E5500AA4D48 /* CommonWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonWebViewController.h; sourceTree = "<group>"; };
+		A6D4C8911AE04E5500AA4D48 /* CommonWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonWebViewController.m; sourceTree = "<group>"; };
 		A6EA1CAB1ADC3B7100F6FB18 /* news.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = news.html; sourceTree = "<group>"; };
 		A6EA1CB41ADC4CBD00F6FB18 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		A6EA1CB51ADC4CBD00F6FB18 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
@@ -106,6 +109,7 @@
 		A6C6130D1A91492500A5F082 /* SortonsEventsOC */ = {
 			isa = PBXGroup;
 			children = (
+				A6D4C88F1AE04DD800AA4D48 /* CommonWebView */,
 				A6EA1CAA1ADC3B6100F6FB18 /* News */,
 				A64065F21AA4F8AA009B7F2A /* AsyncImageView.h */,
 				A64065F31AA4F8AA009B7F2A /* AsyncImageView.m */,
@@ -144,6 +148,15 @@
 				A6C613291A91492500A5F082 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A6D4C88F1AE04DD800AA4D48 /* CommonWebView */ = {
+			isa = PBXGroup;
+			children = (
+				A6D4C8901AE04E5500AA4D48 /* CommonWebViewController.h */,
+				A6D4C8911AE04E5500AA4D48 /* CommonWebViewController.m */,
+			);
+			name = CommonWebView;
 			sourceTree = "<group>";
 		};
 		A6EA1CAA1ADC3B6100F6FB18 /* News */ = {
@@ -287,6 +300,7 @@
 				A6C613111A91492500A5F082 /* main.m in Sources */,
 				A6C613421A914B8B00A5F082 /* SortonsEventsCommunicator.m in Sources */,
 				A6EA1CB61ADC4CBD00F6FB18 /* NewsViewController.m in Sources */,
+				A6D4C8921AE04E5500AA4D48 /* CommonWebViewController.m in Sources */,
 				A6C613391A914A3200A5F082 /* DiscoveredEventBuilder.m in Sources */,
 				A6C6133F1A914B6C00A5F082 /* SortonsEventsManager.m in Sources */,
 			);
