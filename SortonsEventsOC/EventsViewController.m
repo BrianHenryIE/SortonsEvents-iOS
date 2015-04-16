@@ -1,12 +1,12 @@
 //
-//  ViewController.m
+//  EventsViewController.m
 //  DublinTheatreOC
 //
 //  Created by Brian Henry on 15/02/2015.
 //  Copyright (c) 2015 Sorton. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "EventsViewController.h"
 
 #import "DiscoveredEvent.h"
 #import "SortonsEventsManager.h"
@@ -15,14 +15,18 @@
 
 #import "AsyncImageView.h"
 
-@interface ViewController () <SortonsEventsManagerDelegate> {
+@interface EventsViewController () <SortonsEventsManagerDelegate> {
     NSArray *_discoveredEvents;
     SortonsEventsManager *_manager;
 }
 
 @end
 
-@implementation ViewController
+@implementation EventsViewController
+{
+    NSArray *tableData;
+    IBOutlet UITableView *tableViewOutlet;
+}
 
 
 - (void)startFetchingDiscoveredEvents
@@ -96,14 +100,19 @@
 {
     NSLog(@"ViewController didReceiveDiscoveredEvents");
     _discoveredEvents = discoveredEvents;
+    tableData = discoveredEvents;
+    
     // [self.tableView reloadData];
-    [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES]; 
+    [tableViewOutlet performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
 }
 
 - (void)fetchingDiscoveredEventsFailedWithError:(NSError *)error
 {
     NSLog(@"Error %@; %@", error, [error localizedDescription]);
 }
+
+
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -131,11 +140,12 @@
     NSString *imageURLString = [NSString stringWithFormat: @"http://graph.facebook.com/%@/picture?type=square", discoveredEvent.eid];
     NSURL *imageURL = [NSURL URLWithString:imageURLString];
 
-
     cell.theImage.imageURL = imageURL;
     
     return cell;    
 }
+
+#pragma mark - UITableViewDelegate
 
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
 
@@ -157,17 +167,19 @@
     
 }
 
+#pragma mark - UIViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     
     _manager = [[SortonsEventsManager alloc] init];
     _manager.communicator = [[SortonsEventsCommunicator alloc] init];
     _manager.communicator.delegate = _manager;
     _manager.delegate = self;
     
-    self.tableView.estimatedRowHeight = 300;
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    tableViewOutlet.estimatedRowHeight = 300;
+    tableViewOutlet.rowHeight = UITableViewAutomaticDimension;
     
     [self startFetchingDiscoveredEvents];
 }

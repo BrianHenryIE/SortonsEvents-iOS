@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A64065F41AA4F8AA009B7F2A /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A64065F31AA4F8AA009B7F2A /* AsyncImageView.m */; };
+		A6BF5B181ADDAC5500826813 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6BF5B171ADDAC5500826813 /* Main.storyboard */; };
 		A6C613111A91492500A5F082 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613101A91492500A5F082 /* main.m */; };
 		A6C613141A91492500A5F082 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613131A91492500A5F082 /* AppDelegate.m */; };
-		A6C613171A91492500A5F082 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613161A91492500A5F082 /* ViewController.m */; };
-		A6C6131A1A91492500A5F082 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6C613181A91492500A5F082 /* Main.storyboard */; };
+		A6C613171A91492500A5F082 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613161A91492500A5F082 /* EventsViewController.m */; };
 		A6C6131C1A91492500A5F082 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131B1A91492500A5F082 /* Images.xcassets */; };
 		A6C6131F1A91492500A5F082 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131D1A91492500A5F082 /* LaunchScreen.xib */; };
 		A6C6132B1A91492500A5F082 /* SortonsEventsOCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6132A1A91492500A5F082 /* SortonsEventsOCTests.m */; };
@@ -20,6 +20,8 @@
 		A6C6133F1A914B6C00A5F082 /* SortonsEventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6133E1A914B6C00A5F082 /* SortonsEventsManager.m */; };
 		A6C613421A914B8B00A5F082 /* SortonsEventsCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */; };
 		A6C613491A91614F00A5F082 /* DiscoveredEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */; };
+		A6EA1CAC1ADC3B7100F6FB18 /* news.html in Resources */ = {isa = PBXBuildFile; fileRef = A6EA1CAB1ADC3B7100F6FB18 /* news.html */; };
+		A6EA1CB61ADC4CBD00F6FB18 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1CB51ADC4CBD00F6FB18 /* NewsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,14 +37,14 @@
 /* Begin PBXFileReference section */
 		A64065F21AA4F8AA009B7F2A /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncImageView.h; path = AsyncImageView/AsyncImageView.h; sourceTree = "<group>"; };
 		A64065F31AA4F8AA009B7F2A /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncImageView.m; path = AsyncImageView/AsyncImageView.m; sourceTree = "<group>"; };
+		A6BF5B171ADDAC5500826813 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A6C6130B1A91492500A5F082 /* SortonsEventsOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SortonsEventsOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C6130F1A91492500A5F082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6C613101A91492500A5F082 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A6C613121A91492500A5F082 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A6C613131A91492500A5F082 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A6C613151A91492500A5F082 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A6C613161A91492500A5F082 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A6C613191A91492500A5F082 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A6C613151A91492500A5F082 /* EventsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
+		A6C613161A91492500A5F082 /* EventsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		A6C6131B1A91492500A5F082 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A6C6131E1A91492500A5F082 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A6C613241A91492500A5F082 /* SortonsEventsOCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SortonsEventsOCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +62,9 @@
 		A6C613461A91530E00A5F082 /* SortonsEventsManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortonsEventsManagerDelegate.h; sourceTree = "<group>"; };
 		A6C613471A91614F00A5F082 /* DiscoveredEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoveredEventCell.h; sourceTree = "<group>"; };
 		A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoveredEventCell.m; sourceTree = "<group>"; };
+		A6EA1CAB1ADC3B7100F6FB18 /* news.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = news.html; sourceTree = "<group>"; };
+		A6EA1CB41ADC4CBD00F6FB18 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		A6EA1CB51ADC4CBD00F6FB18 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,28 +106,16 @@
 		A6C6130D1A91492500A5F082 /* SortonsEventsOC */ = {
 			isa = PBXGroup;
 			children = (
+				A6EA1CAA1ADC3B6100F6FB18 /* News */,
 				A64065F21AA4F8AA009B7F2A /* AsyncImageView.h */,
 				A64065F31AA4F8AA009B7F2A /* AsyncImageView.m */,
-				A6C613471A91614F00A5F082 /* DiscoveredEventCell.h */,
-				A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */,
+				A6EA1CAD1ADC494A00F6FB18 /* Events */,
 				A6C613121A91492500A5F082 /* AppDelegate.h */,
 				A6C613131A91492500A5F082 /* AppDelegate.m */,
-				A6C613151A91492500A5F082 /* ViewController.h */,
-				A6C613161A91492500A5F082 /* ViewController.m */,
-				A6C613181A91492500A5F082 /* Main.storyboard */,
+				A6BF5B171ADDAC5500826813 /* Main.storyboard */,
 				A6C6131B1A91492500A5F082 /* Images.xcassets */,
 				A6C6131D1A91492500A5F082 /* LaunchScreen.xib */,
 				A6C6130E1A91492500A5F082 /* Supporting Files */,
-				A6C613371A914A3200A5F082 /* DiscoveredEventBuilder.h */,
-				A6C613381A914A3200A5F082 /* DiscoveredEventBuilder.m */,
-				A6C6133A1A914A4D00A5F082 /* DiscoveredEvent.h */,
-				A6C6133B1A914A4D00A5F082 /* DiscoveredEvent.m */,
-				A6C6133D1A914B6C00A5F082 /* SortonsEventsManager.h */,
-				A6C6133E1A914B6C00A5F082 /* SortonsEventsManager.m */,
-				A6C613401A914B8B00A5F082 /* SortonsEventsCommunicator.h */,
-				A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */,
-				A6C613431A914CA300A5F082 /* SortonsEventsCommunicatorDelegate.h */,
-				A6C613461A91530E00A5F082 /* SortonsEventsManagerDelegate.h */,
 			);
 			path = SortonsEventsOC;
 			sourceTree = "<group>";
@@ -151,6 +144,37 @@
 				A6C613291A91492500A5F082 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A6EA1CAA1ADC3B6100F6FB18 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				A6EA1CAB1ADC3B7100F6FB18 /* news.html */,
+				A6EA1CB41ADC4CBD00F6FB18 /* NewsViewController.h */,
+				A6EA1CB51ADC4CBD00F6FB18 /* NewsViewController.m */,
+			);
+			name = News;
+			sourceTree = "<group>";
+		};
+		A6EA1CAD1ADC494A00F6FB18 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				A6C613471A91614F00A5F082 /* DiscoveredEventCell.h */,
+				A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */,
+				A6C613151A91492500A5F082 /* EventsViewController.h */,
+				A6C613161A91492500A5F082 /* EventsViewController.m */,
+				A6C613371A914A3200A5F082 /* DiscoveredEventBuilder.h */,
+				A6C613381A914A3200A5F082 /* DiscoveredEventBuilder.m */,
+				A6C6133A1A914A4D00A5F082 /* DiscoveredEvent.h */,
+				A6C6133B1A914A4D00A5F082 /* DiscoveredEvent.m */,
+				A6C6133D1A914B6C00A5F082 /* SortonsEventsManager.h */,
+				A6C6133E1A914B6C00A5F082 /* SortonsEventsManager.m */,
+				A6C613401A914B8B00A5F082 /* SortonsEventsCommunicator.h */,
+				A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */,
+				A6C613431A914CA300A5F082 /* SortonsEventsCommunicatorDelegate.h */,
+				A6C613461A91530E00A5F082 /* SortonsEventsManagerDelegate.h */,
+			);
+			name = Events;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,9 +258,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6C6131A1A91492500A5F082 /* Main.storyboard in Resources */,
 				A6C6131F1A91492500A5F082 /* LaunchScreen.xib in Resources */,
+				A6EA1CAC1ADC3B7100F6FB18 /* news.html in Resources */,
 				A6C6131C1A91492500A5F082 /* Images.xcassets in Resources */,
+				A6BF5B181ADDAC5500826813 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +279,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6C613171A91492500A5F082 /* ViewController.m in Sources */,
+				A6C613171A91492500A5F082 /* EventsViewController.m in Sources */,
 				A64065F41AA4F8AA009B7F2A /* AsyncImageView.m in Sources */,
 				A6C613141A91492500A5F082 /* AppDelegate.m in Sources */,
 				A6C613491A91614F00A5F082 /* DiscoveredEventCell.m in Sources */,
 				A6C6133C1A914A4D00A5F082 /* DiscoveredEvent.m in Sources */,
 				A6C613111A91492500A5F082 /* main.m in Sources */,
 				A6C613421A914B8B00A5F082 /* SortonsEventsCommunicator.m in Sources */,
+				A6EA1CB61ADC4CBD00F6FB18 /* NewsViewController.m in Sources */,
 				A6C613391A914A3200A5F082 /* DiscoveredEventBuilder.m in Sources */,
 				A6C6133F1A914B6C00A5F082 /* SortonsEventsManager.m in Sources */,
 			);
@@ -285,14 +311,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A6C613181A91492500A5F082 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A6C613191A91492500A5F082 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A6C6131D1A91492500A5F082 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

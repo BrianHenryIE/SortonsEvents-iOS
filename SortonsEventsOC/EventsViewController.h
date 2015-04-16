@@ -11,7 +11,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UITableViewController
+@interface EventsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 
 @end
