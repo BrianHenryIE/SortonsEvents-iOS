@@ -1,0 +1,42 @@
+
+/* Class = "UITabBarItem"; title = "Nouvelles"; ObjectID = "29B-NB-HPO"; */
+"29B-NB-HPO.title" = "Nouvelles";
+
+/* Class = "UITabBarItem"; title = "Événements"; ObjectID = "314-27-NfX"; */
+"314-27-NfX.title" = "Événements";
+
+/* Class = "UIButton"; normalTitle = "Signaler problème"; ObjectID = "4Xg-C8-b1B"; */
+"4Xg-C8-b1B.normalTitle" = "Signaler problème";
+
+/* Class = "UILabel"; text = "Nom"; ObjectID = "7go-35-PxK"; */
+"7go-35-PxK.text" = "Nom";
+
+/* Class = "UIButton"; normalTitle = "Envoyer suggestion"; ObjectID = "KSt-xy-m9S"; */
+"KSt-xy-m9S.normalTitle" = "Envoyer suggestion";
+
+/* Class = "UILabel"; text = "Emplacement"; ObjectID = "O2d-gi-ZGK"; */
+"O2d-gi-ZGK.text" = "Emplacement";
+
+/* Class = "UITabBarItem"; title = "Plus"; ObjectID = "Y4M-7J-Ibz"; */
+"Y4M-7J-Ibz.title" = "Plus";
+
+/* Class = "UIButton"; normalTitle = "Ajouter une page"; ObjectID = "Yf6-fs-lSX"; */
+"Yf6-fs-lSX.normalTitle" = "Ajouter une page";
+
+/* Class = "UITabBarController"; title = "Belfield"; ObjectID = "fOK-iX-9zf"; */
+"fOK-iX-9zf.title" = "Belfield";
+
+/* Class = "UILabel"; text = "Connectez-vous à Facebook pour des résultats personnalisés"; ObjectID = "gOK-zV-efD"; */
+"gOK-zV-efD.text" = "Connectez-vous à Facebook pour des résultats personnalisés";
+
+/* Class = "UILabel"; text = "PageName"; ObjectID = "giX-Hf-DzT"; */
+"giX-Hf-DzT.text" = "PageName";
+
+/* Class = "UITabBarItem"; title = "Annuaire"; ObjectID = "kd3-6l-y6B"; */
+"kd3-6l-y6B.title" = "Annuaire";
+
+/* Class = "UILabel"; text = "Start Time"; ObjectID = "wEf-AL-Zva"; */
+"wEf-AL-Zva.text" = "Start Time";
+
+/* Class = "UIButton"; normalTitle = "Partagez"; ObjectID = "xqt-OX-cCs"; */
+"xqt-OX-cCs.normalTitle" = "Partagez";

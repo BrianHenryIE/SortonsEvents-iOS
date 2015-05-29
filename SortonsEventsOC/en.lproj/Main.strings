@@ -1,0 +1,42 @@
+
+/* Class = "UITabBarItem"; title = "News"; ObjectID = "29B-NB-HPO"; */
+"29B-NB-HPO.title" = "News";
+
+/* Class = "UITabBarItem"; title = "Events"; ObjectID = "314-27-NfX"; */
+"314-27-NfX.title" = "Events";
+
+/* Class = "UIButton"; normalTitle = "Report problem"; ObjectID = "4Xg-C8-b1B"; */
+"4Xg-C8-b1B.normalTitle" = "Report problem";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "7go-35-PxK"; */
+"7go-35-PxK.text" = "Name";
+
+/* Class = "UIButton"; normalTitle = "Send suggestion"; ObjectID = "KSt-xy-m9S"; */
+"KSt-xy-m9S.normalTitle" = "Send suggestion";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "O2d-gi-ZGK"; */
+"O2d-gi-ZGK.text" = "Location";
+
+/* Class = "UITabBarItem"; title = "More"; ObjectID = "Y4M-7J-Ibz"; */
+"Y4M-7J-Ibz.title" = "More";
+
+/* Class = "UIButton"; normalTitle = "Add Page"; ObjectID = "Yf6-fs-lSX"; */
+"Yf6-fs-lSX.normalTitle" = "Add Page";
+
+/* Class = "UITabBarController"; title = "Belfield"; ObjectID = "fOK-iX-9zf"; */
+"fOK-iX-9zf.title" = "Belfield";
+
+/* Class = "UILabel"; text = "Login to Facebook for personalised results"; ObjectID = "gOK-zV-efD"; */
+"gOK-zV-efD.text" = "Login to Facebook for personalised results";
+
+/* Class = "UILabel"; text = "PageName"; ObjectID = "giX-Hf-DzT"; */
+"giX-Hf-DzT.text" = "PageName";
+
+/* Class = "UITabBarItem"; title = "Directory"; ObjectID = "kd3-6l-y6B"; */
+"kd3-6l-y6B.title" = "Directory";
+
+/* Class = "UILabel"; text = "Start Time"; ObjectID = "wEf-AL-Zva"; */
+"wEf-AL-Zva.text" = "Start Time";
+
+/* Class = "UIButton"; normalTitle = "Share"; ObjectID = "xqt-OX-cCs"; */
+"xqt-OX-cCs.normalTitle" = "Share";

@@ -12,8 +12,10 @@
 #import "SortonsEventsManager.h"
 #import "SortonsEventsCommunicator.h"
 #import "DiscoveredEventCell.h"
-
 #import "AsyncImageView.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "CommonWebViewController.h"
 
 @interface EventsViewController () <SortonsEventsManagerDelegate> {
     NSArray *_discoveredEvents;
@@ -86,7 +88,6 @@
         
     } else {
 
-//        [dateFormat setDateFormat:@"dd/MM/yyyy HH:mm"];
         [dateFormat setDateFormat:@"EEEE dd MMM 'at' HH:mm"];
         NSString *friendlyStartTime = [NSString stringWithFormat:@"%@",[dateFormat stringFromDate:startTime]];
         
@@ -102,7 +103,16 @@
     _discoveredEvents = discoveredEvents;
     tableData = discoveredEvents;
     
-    // [self.tableView reloadData];
+    // If we're logged into Facebook, go get the friends that are attending
+    if ([FBSDKAccessToken currentAccessToken]) {
+        NSLog(@"Logged in to Facebook (Events View)");
+        /* make the API call */
+        NSLog(@"%@", [FBSDKAccessToken currentAccessToken]);
+        
+    }else{
+        NSLog(@"NOT Logged in to Facebook (Events View)");
+    }
+    
     [tableViewOutlet performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
 }
 
@@ -150,20 +160,41 @@
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
 
     DiscoveredEvent *discoveredEvent = _discoveredEvents[indexPath.row];
-
-    NSString *eventAppURLString = [NSString stringWithFormat: @"fb://profile/%@/", discoveredEvent.eid];
+    
+    // Get user preference
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    BOOL runNative = [defaults boolForKey:@"launch_native_apps_toggle"];
+    
     NSString *eventHttpURLString = [NSString stringWithFormat: @"http://facebook.com/events/%@/", discoveredEvent.eid];
     
-    NSURL *facebookURL = [NSURL URLWithString:eventAppURLString];
-    if ([[UIApplication sharedApplication] canOpenURL:facebookURL]) {
-        [[UIApplication sharedApplication] openURL:facebookURL];
+    if(runNative==TRUE){
+        NSLog(@"Run native");
+        NSString *eventAppURLString = [NSString stringWithFormat: @"fb://profile/%@/", discoveredEvent.eid];
+    
+        NSURL *facebookURL = [NSURL URLWithString:eventAppURLString];
+        if ([[UIApplication sharedApplication] canOpenURL:facebookURL]) {
+            [[UIApplication sharedApplication] openURL:facebookURL];
+        } else {
+            [self openInWebView:[NSURL URLWithString:eventHttpURLString]];
+        }
     } else {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:eventHttpURLString]];
+        [self openInWebView:[NSURL URLWithString:eventHttpURLString]];
     }
     
+}
+
+-(void)openInWebView:(NSURL*)url{
     
-    //NSURL *url = [NSURL URLWithString:eventAppURLString];
-    //[[UIApplication sharedApplication] openURL:url];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *myController = [storyboard instantiateViewControllerWithIdentifier:@"CommonWebViewController"];
+    
+    CommonWebViewController *cwvs = [CommonWebViewController alloc];
+    cwvs = (CommonWebViewController *) myController;
+    
+    [cwvs setWebViewURL:url];
+    
+    self.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
+    [self presentViewController:myController animated:YES completion:NULL];
     
 }
 

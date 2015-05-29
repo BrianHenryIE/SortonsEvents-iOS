@@ -16,6 +16,10 @@ static NSString *const UCDEVENTS = @"197528567092983";
 - (void)getDiscoveredEvents
 {
     NSString *urlAsString = [NSString stringWithFormat:@"https://sortonsevents.appspot.com/_ah/api/upcomingEvents/v1/discoveredeventsresponse/197528567092983"];
+    
+    // 632419800128560 Dublin Theatre
+    // 197528567092983 UCD Events
+    
     NSURL *url = [[NSURL alloc] initWithString:urlAsString];
     NSLog(@"%@", urlAsString);
     

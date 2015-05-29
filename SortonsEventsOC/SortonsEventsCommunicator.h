@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
-
 @protocol SortonsEventsCommunicatorDelegate;
 
 @interface SortonsEventsCommunicator : NSObject
