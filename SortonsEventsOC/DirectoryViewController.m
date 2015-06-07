@@ -13,6 +13,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "CommonWebViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface DirectoryViewController ()
 
@@ -89,8 +90,10 @@ static NSString * const reuseIdentifier = @"pagecollectioncell";
     
     
     NSString *imageURLString = [NSString stringWithFormat: @"http://graph.facebook.com/%@/picture?type=large", ((IncludedPage *) self.filteredData[indexPath.row]).pageId];
-    NSURL *imageURL = [NSURL URLWithString:imageURLString];
-    cell.cellImage.imageURL = imageURL;
+    [cell.cellImage sd_setImageWithURL:[NSURL URLWithString:imageURLString]    placeholderImage:nil];
+//    [cell.cellImage sd_setImageWithURL:[NSURL URLWithString:@"https://graph.facebook.com/olivier.poitrey/picture"]
+//                 placeholderImage:[UIImage imageNamed:@"avatar-placeholder.png"]
+//                          options:SDWebImageRefreshCached]; // caches less aggressively
 
     
     // Move this to ViewDidLoad?

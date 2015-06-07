@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AsyncImageView.h"
 
 @interface DirectoryCollectionViewCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet AsyncImageView *cellImage;
-
+@property (weak, nonatomic) IBOutlet UIImageView *cellImage;
 @property (strong, nonatomic) IBOutlet UILabel *cellTitle;
 
 @end

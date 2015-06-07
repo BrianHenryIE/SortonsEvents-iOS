@@ -5,8 +5,8 @@ platform :ios, '8.3'
 target 'SortonsEventsOC' do
 
     pod 'AFNetworking', '2.5.3'
-    pod 'AsyncImageView', '1.5.1'
-    pod "Facebook-iOS-SDK"
+    pod 'Facebook-iOS-SDK'
+    pod 'SDWebImage', '~>3.6'
 
 end
 

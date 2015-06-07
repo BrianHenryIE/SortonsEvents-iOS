@@ -12,9 +12,7 @@
 #import "SortonsEventsManager.h"
 #import "SortonsEventsCommunicator.h"
 #import "DiscoveredEventCell.h"
-//#import "AsyncImageView.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "CommonWebViewController.h"
@@ -156,9 +154,8 @@
     // Download the images once only!
 
     NSString *imageURLString = [NSString stringWithFormat: @"http://graph.facebook.com/%@/picture?type=square", discoveredEvent.eid];
-    NSURL *imageURL = [NSURL URLWithString:imageURLString];
-
-    cell.theImage.imageURL = imageURL;
+    [cell.theImage sd_setImageWithURL:[NSURL URLWithString:imageURLString]];
+//placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
     
     return cell;    
 }

@@ -15,5 +15,4 @@
 @property (weak, nonatomic) IBOutlet UILabel *startTimeLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *theImage;
 
-
 @end
