@@ -12,7 +12,9 @@
 #import "SortonsEventsManager.h"
 #import "SortonsEventsCommunicator.h"
 #import "DiscoveredEventCell.h"
-#import "AsyncImageView.h"
+//#import "AsyncImageView.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "CommonWebViewController.h"
@@ -35,6 +37,8 @@
 {
     [_manager fetchDiscoveredEvents];
 }
+
+
 
 - (NSString *)friendlyDate:(NSString *)deDateString
 {
@@ -138,7 +142,11 @@
     
     DiscoveredEvent *discoveredEvent = _discoveredEvents[indexPath.row];
     [cell.nameLabel setText:discoveredEvent.name];
- 
+    
+    // Fix for multiline text wrapping not working on first load
+    cell.nameLabel.preferredMaxLayoutWidth = cell.nameLabel.frame.size.width;
+    cell.locationLabel.preferredMaxLayoutWidth = cell.locationLabel.frame.size.width;
+    
     // [cell.startTimeLabel setText:discoveredEvent.startTime];
     NSString *friendlyDate = [self friendlyDate:discoveredEvent.startTime];
     [cell.startTimeLabel setText:friendlyDate];
