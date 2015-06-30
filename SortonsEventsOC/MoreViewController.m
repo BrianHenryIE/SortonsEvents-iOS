@@ -12,6 +12,9 @@
 
 @interface MoreViewController ()
 
+- (IBAction)settingButton:(id)sender;
+
+
 @end
 
 @implementation MoreViewController
@@ -41,4 +44,8 @@
 }
 */
 
+- (IBAction)settingButton:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+
+}
 @end

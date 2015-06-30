@@ -351,6 +351,15 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oP-1l-me2">
+                                <rect key="frame" x="262" y="417" width="77" height="30"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="settingButton:" destination="OrY-4w-3Ic" eventType="touchUpInside" id="qbg-Ro-nGM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -360,9 +369,11 @@
                             <constraint firstAttribute="centerX" secondItem="KSt-xy-m9S" secondAttribute="centerX" id="CgT-k2-LCL"/>
                             <constraint firstAttribute="centerX" secondItem="Yf6-fs-lSX" secondAttribute="centerX" id="IG5-xh-7nK"/>
                             <constraint firstAttribute="centerX" secondItem="xqt-OX-cCs" secondAttribute="centerX" id="MdO-hX-XwT"/>
+                            <constraint firstAttribute="centerX" secondItem="1oP-1l-me2" secondAttribute="centerX" constant="-0.5" id="Na8-3P-WNT"/>
                             <constraint firstItem="PRQ-uQ-JPC" firstAttribute="top" secondItem="gOK-zV-efD" secondAttribute="bottom" constant="30" id="O17-if-waS"/>
                             <constraint firstItem="KSt-xy-m9S" firstAttribute="top" secondItem="Yf6-fs-lSX" secondAttribute="bottom" constant="30" id="YDn-i4-Jsp"/>
                             <constraint firstItem="4Xg-C8-b1B" firstAttribute="top" secondItem="KSt-xy-m9S" secondAttribute="bottom" constant="30" id="doa-kb-P8c"/>
+                            <constraint firstItem="1oP-1l-me2" firstAttribute="top" secondItem="xqt-OX-cCs" secondAttribute="bottom" constant="32" id="gqW-H7-WTH"/>
                             <constraint firstItem="Yf6-fs-lSX" firstAttribute="top" secondItem="PRQ-uQ-JPC" secondAttribute="bottom" constant="30" id="j01-7f-RlJ"/>
                             <constraint firstItem="xqt-OX-cCs" firstAttribute="top" secondItem="4Xg-C8-b1B" secondAttribute="bottom" constant="30" id="jty-fT-bDu"/>
                             <constraint firstAttribute="centerX" secondItem="PRQ-uQ-JPC" secondAttribute="centerX" id="m2T-3A-VYE"/>
