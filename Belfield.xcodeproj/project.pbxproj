@@ -30,7 +30,6 @@
 		A6D386BB1AE5494F00D1C950 /* CPDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BA1AE5494F00D1C950 /* CPDAPIClient.m */; };
 		A6D386BF1AE5519800D1C950 /* DirectoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BE1AE5519800D1C950 /* DirectoryViewController.m */; };
 		A6D4C8921AE04E5500AA4D48 /* CommonWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D4C8911AE04E5500AA4D48 /* CommonWebViewController.m */; };
-		A6EA1CAC1ADC3B7100F6FB18 /* news.html in Resources */ = {isa = PBXBuildFile; fileRef = A6EA1CAB1ADC3B7100F6FB18 /* news.html */; };
 		A6EA1CB61ADC4CBD00F6FB18 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1CB51ADC4CBD00F6FB18 /* NewsViewController.m */; };
 		DF292AAF37A0C8F7CD1F6665 /* libPods-SortonsEventsOC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1794D544EC069467CDC849 /* libPods-SortonsEventsOC.a */; };
 /* End PBXBuildFile section */
@@ -91,7 +90,6 @@
 		A6D386BE1AE5519800D1C950 /* DirectoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryViewController.m; sourceTree = "<group>"; };
 		A6D4C8901AE04E5500AA4D48 /* CommonWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonWebViewController.h; sourceTree = "<group>"; };
 		A6D4C8911AE04E5500AA4D48 /* CommonWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonWebViewController.m; sourceTree = "<group>"; };
-		A6EA1CAB1ADC3B7100F6FB18 /* news.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = news.html; sourceTree = "<group>"; };
 		A6EA1CB41ADC4CBD00F6FB18 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		A6EA1CB51ADC4CBD00F6FB18 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		CF1794D544EC069467CDC849 /* libPods-SortonsEventsOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SortonsEventsOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,7 +248,6 @@
 		A6EA1CAA1ADC3B6100F6FB18 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				A6EA1CAB1ADC3B7100F6FB18 /* news.html */,
 				A6EA1CB41ADC4CBD00F6FB18 /* NewsViewController.h */,
 				A6EA1CB51ADC4CBD00F6FB18 /* NewsViewController.m */,
 			);
@@ -364,7 +361,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6C6131F1A91492500A5F082 /* LaunchScreen.xib in Resources */,
-				A6EA1CAC1ADC3B7100F6FB18 /* news.html in Resources */,
 				A6C6131C1A91492500A5F082 /* Images.xcassets in Resources */,
 				A67FCB751AE5AF5F007EEFB6 /* ClientPageData.json in Resources */,
 				A6BDA8781AE5CA6500C1A55C /* Settings.bundle in Resources */,

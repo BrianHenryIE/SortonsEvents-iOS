@@ -29,8 +29,9 @@
     // Code for displaying a remote page
     // http://sortonsevents.appspot.com/recentposts/?page_id=197528567092983
     // some data: http://www.sortons.ie/events/somerecent.html
+    // http://sortonsevents.appspot.com/recentpostsmobile/news.html
     //load url into webview
-    NSString *strURL = @"http://www.sortons.ie/events/somerecent.html";
+    NSString *strURL = @"http://sortonsevents.appspot.com/recentpostsmobile/news.html";
     NSURL *url = [NSURL URLWithString:strURL];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:urlRequest];
