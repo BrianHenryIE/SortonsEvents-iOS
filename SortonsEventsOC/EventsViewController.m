@@ -150,12 +150,15 @@
     [cell.startTimeLabel setText:friendlyDate];
     
     [cell.locationLabel setText:discoveredEvent.location];
-    
-    // Download the images once only!
-
+   
     NSString *imageURLString = [NSString stringWithFormat: @"http://graph.facebook.com/%@/picture?type=square", discoveredEvent.eid];
     [cell.theImage sd_setImageWithURL:[NSURL URLWithString:imageURLString]];
-//placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+    //placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+    
+    
+    cell.theImage.layer.cornerRadius = cell.theImage.frame.size.width / 2;
+    cell.theImage.clipsToBounds = YES;
+    
     
     return cell;    
 }
@@ -208,6 +211,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Preload the subsquent tabs
+    for (UIViewController *aVC in self.tabBarController.viewControllers)
+        if ([aVC respondsToSelector:@selector(view)] && aVC != self)
+            [aVC view];
     
     _manager = [[SortonsEventsManager alloc] init];
     _manager.communicator = [[SortonsEventsCommunicator alloc] init];

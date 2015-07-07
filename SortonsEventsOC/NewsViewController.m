@@ -20,18 +20,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    // Code for local file which has a Facebook bug stopping progress!
-//    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"news" ofType:@"html"];
-//    NSString* htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
-//    [self.webView loadHTMLString:htmlString baseURL:nil];
     
     // Code for displaying a remote page
     // http://sortonsevents.appspot.com/recentposts/?page_id=197528567092983
     // some data: http://www.sortons.ie/events/somerecent.html
     // http://sortonsevents.appspot.com/recentpostsmobile/news.html
+    // http://172.20.10.2/~brianhenry/SortonsEvents-Gwt-AppEngine-Java/src/main/webapp/recentpostsmobile/news.html
     //load url into webview
-    NSString *strURL = @"http://sortonsevents.appspot.com/recentpostsmobile/news.html";
+
+     NSString *strURL = @"http://sortonsevents.appspot.com/recentpostsmobile/news.html#197528567092983";
+    //NSString *strURL = @"http://172.20.10.2/~brianhenry/SortonsEvents-Gwt-AppEngine-Java/src/main/webapp/recentpostsmobile/news.html#197528567092983";
+   
     NSURL *url = [NSURL URLWithString:strURL];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:urlRequest];
@@ -43,16 +42,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-//*/
-//
 - (BOOL)webView:(UIWebView*)webView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType {
 
     // Get the URL clicked and display it in a modal webview.
@@ -77,5 +67,32 @@
     
     return YES;
 }
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+
+    [self.webView stringByEvaluatingJavaScriptFromString:@"refreshXfbml()"];
+
+    NSLog(@"viewDidAppear");
+}
+
+
+
+
+// When the phone is rotated
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    if (self.view.superview){
+        // Do view manipulation here.
+        [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    
+        [self.webView stringByEvaluatingJavaScriptFromString:@"refreshXfbml()"];
+
+        NSLog(@"view rotated");
+    }
+    
+}
+
 
 @end

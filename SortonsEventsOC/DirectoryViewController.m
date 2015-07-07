@@ -149,12 +149,15 @@ static NSString * const reuseIdentifier = @"pagecollectioncell";
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
 {
+    if (self.view.superview){
+
     // Do view manipulation here.
     [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
     
     [self calculateBestBoxSize:size.width];
     [self.collectionView.collectionViewLayout invalidateLayout];
 
+    }
 }
 
 -(void)calculateBestBoxSize:(int)width{
