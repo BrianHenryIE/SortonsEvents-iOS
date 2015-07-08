@@ -28,8 +28,9 @@
     // http://172.20.10.2/~brianhenry/SortonsEvents-Gwt-AppEngine-Java/src/main/webapp/recentpostsmobile/news.html
     //load url into webview
 
-     NSString *strURL = @"http://sortonsevents.appspot.com/recentpostsmobile/news.html#197528567092983";
+    NSString *strURL = @"http://sortonsevents.appspot.com/recentpostsmobile/news.html#197528567092983";
     //NSString *strURL = @"http://172.20.10.2/~brianhenry/SortonsEvents-Gwt-AppEngine-Java/src/main/webapp/recentpostsmobile/news.html#197528567092983";
+    //NSString *strURL = @"http://dev.sortons.ie/~brianhenry/SortonsEvents-Gwt-AppEngine-Java/src/main/webapp/recentpostsmobile/news.html#197528567092983";
    
     NSURL *url = [NSURL URLWithString:strURL];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
@@ -72,6 +73,9 @@
 {
     [super viewDidAppear:animated];
 
+    // TODO
+    // Check was the view already rendered in this same orientation => don't rerender
+    
     [self.webView stringByEvaluatingJavaScriptFromString:@"refreshXfbml()"];
 
     NSLog(@"viewDidAppear");
@@ -80,17 +84,36 @@
 
 
 
-// When the phone is rotated
+// Redraw the news items after the phone rotates
+// because they're the wrong width now.
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
 {
     if (self.view.superview){
-        // Do view manipulation here.
-        [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
-    
-        [self.webView stringByEvaluatingJavaScriptFromString:@"refreshXfbml()"];
 
-        NSLog(@"view rotated");
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    // Hide the view so the ill sized news items don't rotate
+    self.webView.hidden = YES;
+    
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+        
+        // Place code here to perform animations during the rotation.
+        // You can pass nil or leave this block empty if not necessary.
+        
+    } completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+
+        self.webView.hidden = NO;
+        
+                    // Do view manipulation here.
+            [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+            
+            //        [self.webView stringByEvaluatingJavaScriptFromString:@"stopJS()"];
+            [self.webView stringByEvaluatingJavaScriptFromString:@"refreshXfbml()"];
+            
+            NSLog(@"view rotated");
+        
+    }];
     }
+    
     
 }
 
