@@ -135,32 +135,27 @@
 {
     DiscoveredEventCell *cell = [tableView dequeueReusableCellWithIdentifier:@"discoveredEventCell" forIndexPath:indexPath];
     
-    // Clear old images asap when cells are being reused.
-    cell.theImage.image = nil;
-    
     DiscoveredEvent *discoveredEvent = _discoveredEvents[indexPath.row];
+    
     [cell.nameLabel setText:discoveredEvent.name];
     
-    // Fix for multiline text wrapping not working on first load
-    cell.nameLabel.preferredMaxLayoutWidth = cell.nameLabel.frame.size.width;
-    cell.locationLabel.preferredMaxLayoutWidth = cell.locationLabel.frame.size.width;
-    
-    // [cell.startTimeLabel setText:discoveredEvent.startTime];
+    // Format and set date
     NSString *friendlyDate = [self friendlyDate:discoveredEvent.startTime];
     [cell.startTimeLabel setText:friendlyDate];
     
     [cell.locationLabel setText:discoveredEvent.location];
    
+    // Set image
     NSString *imageURLString = [NSString stringWithFormat: @"http://graph.facebook.com/%@/picture?type=square", discoveredEvent.eid];
     [cell.theImage sd_setImageWithURL:[NSURL URLWithString:imageURLString]];
-    //placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
-    
-    
+    // Round corners of image
     cell.theImage.layer.cornerRadius = cell.theImage.frame.size.width / 2;
     cell.theImage.clipsToBounds = YES;
+
+    // Fix for multiline titles not laying out properly
+    [cell layoutIfNeeded];
     
-    
-    return cell;    
+    return cell;
 }
 
 #pragma mark - UITableViewDelegate
@@ -221,8 +216,8 @@
     _manager.communicator.delegate = _manager;
     _manager.delegate = self;
     
-    tableViewOutlet.estimatedRowHeight = 300;
     tableViewOutlet.rowHeight = UITableViewAutomaticDimension;
+    tableViewOutlet.estimatedRowHeight = 300;
     
     [self startFetchingDiscoveredEvents];
 }
