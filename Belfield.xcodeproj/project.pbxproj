@@ -168,6 +168,7 @@
 		A6C6130D1A91492500A5F082 /* SortonsEventsOC */ = {
 			isa = PBXGroup;
 			children = (
+				A6D7AECE1B4E9931002F1BDA /* Model */,
 				A6BDA8791AE61C4300C1A55C /* More */,
 				A6D386BC1AE5517800D1C950 /* Directory */,
 				A6D386B81AE5490E00D1C950 /* APIClient */,
@@ -215,12 +216,16 @@
 		A6D386B81AE5490E00D1C950 /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
+				A6C613371A914A3200A5F082 /* DiscoveredEventBuilder.h */,
+				A6C613381A914A3200A5F082 /* DiscoveredEventBuilder.m */,
+				A6C6133D1A914B6C00A5F082 /* SortonsEventsManager.h */,
+				A6C6133E1A914B6C00A5F082 /* SortonsEventsManager.m */,
+				A6C613401A914B8B00A5F082 /* SortonsEventsCommunicator.h */,
+				A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */,
+				A6C613431A914CA300A5F082 /* SortonsEventsCommunicatorDelegate.h */,
+				A6C613461A91530E00A5F082 /* SortonsEventsManagerDelegate.h */,
 				A6D386B91AE5494F00D1C950 /* CPDAPIClient.h */,
 				A6D386BA1AE5494F00D1C950 /* CPDAPIClient.m */,
-				A6A201181AE5652E00BB1925 /* IncludedPage.h */,
-				A6A201191AE5652E00BB1925 /* IncludedPage.m */,
-				A6A2011B1AE5657B00BB1925 /* PageLocation.h */,
-				A6A2011C1AE5657B00BB1925 /* PageLocation.m */,
 			);
 			name = APIClient;
 			sourceTree = "<group>";
@@ -245,6 +250,19 @@
 			name = CommonWebView;
 			sourceTree = "<group>";
 		};
+		A6D7AECE1B4E9931002F1BDA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A6A2011B1AE5657B00BB1925 /* PageLocation.h */,
+				A6A2011C1AE5657B00BB1925 /* PageLocation.m */,
+				A6A201181AE5652E00BB1925 /* IncludedPage.h */,
+				A6A201191AE5652E00BB1925 /* IncludedPage.m */,
+				A6C6133A1A914A4D00A5F082 /* DiscoveredEvent.h */,
+				A6C6133B1A914A4D00A5F082 /* DiscoveredEvent.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		A6EA1CAA1ADC3B6100F6FB18 /* News */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,16 +279,6 @@
 				A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */,
 				A6C613151A91492500A5F082 /* EventsViewController.h */,
 				A6C613161A91492500A5F082 /* EventsViewController.m */,
-				A6C613371A914A3200A5F082 /* DiscoveredEventBuilder.h */,
-				A6C613381A914A3200A5F082 /* DiscoveredEventBuilder.m */,
-				A6C6133A1A914A4D00A5F082 /* DiscoveredEvent.h */,
-				A6C6133B1A914A4D00A5F082 /* DiscoveredEvent.m */,
-				A6C6133D1A914B6C00A5F082 /* SortonsEventsManager.h */,
-				A6C6133E1A914B6C00A5F082 /* SortonsEventsManager.m */,
-				A6C613401A914B8B00A5F082 /* SortonsEventsCommunicator.h */,
-				A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */,
-				A6C613431A914CA300A5F082 /* SortonsEventsCommunicatorDelegate.h */,
-				A6C613461A91530E00A5F082 /* SortonsEventsManagerDelegate.h */,
 			);
 			name = Events;
 			sourceTree = "<group>";
