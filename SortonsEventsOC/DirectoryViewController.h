@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DirectoryViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate>
+@interface DirectoryViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 
 @end

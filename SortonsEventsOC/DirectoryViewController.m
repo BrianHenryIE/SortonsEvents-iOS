@@ -8,8 +8,8 @@
 
 #import "DirectoryViewController.h"
 #import "CPDAPIClient.h"
-#import "DirectoryCollectionViewCell.h"
 #import "IncludedPage.h"
+#import "IncludedPageCell.h"
 #import "CommonWebViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
@@ -17,99 +17,57 @@
 
 @property (nonatomic,strong) NSArray *dataSource;
 @property (nonatomic,strong) NSMutableArray *filteredData;
-@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
-@property int boxSize;
-
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
 @implementation DirectoryViewController
 
-static NSString * const reuseIdentifier = @"pagecollectioncell";
 
+#pragma mark - UITableViewDataSource
 
-- (void)viewDidLoad
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    [super viewDidLoad];
-    
-    CPDAPIClient *client = [CPDAPIClient sharedClient];
-    
-    [client getClientPages:@"197528567092983"
-                    success:^(NSURLSessionDataTask *task, id responseObject) {
-                        _dataSource = [CPDAPIClient includedPagesFromJSON:(NSData *)responseObject error:nil];
-                        _filteredData = [NSMutableArray arrayWithArray:_dataSource];
-                        [self.collectionView reloadData];
-                    }
-                    failure:^(NSURLSessionDataTask *task, NSError *error) {
-                        NSLog(@"Failure -- %@", error);
-                    }];
-    
-    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    
-    CGFloat width = [UIScreen mainScreen].bounds.size.width;
-    [self calculateBestBoxSize:width];
-    
-    // this line probably isnt needed
-    [flowLayout setItemSize:CGSizeMake(self.boxSize, self.boxSize)];
-    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-    
-    [self.collectionView setCollectionViewLayout:flowLayout];
-    
-}
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
-
-#pragma mark - <UICollectionViewDataSource>
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    // Maybe later this will be two... one for active pages and one for dormant ones
-    return 1;
-}
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.filteredData.count;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    DirectoryCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
- 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    IncludedPageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"includedPageCell" forIndexPath:indexPath];
+    
     cell.cellTitle.text = ((IncludedPage *) self.filteredData[indexPath.row]).name;
 
-    // This can probably be somewhere more efficient.
-    cell.cellTitle.layer.shadowOffset = CGSizeMake(0.0, 0.0);
-    cell.cellTitle.layer.shadowRadius = 5.0;
-    cell.cellTitle.layer.shadowOpacity = 1.0;
-    
+    cell.detailsLabel.text = @"";
     
     NSString *imageURLString = [NSString stringWithFormat: @"http://graph.facebook.com/%@/picture?type=large", ((IncludedPage *) self.filteredData[indexPath.row]).pageId];
     [cell.cellImage sd_setImageWithURL:[NSURL URLWithString:imageURLString]    placeholderImage:nil];
-//    [cell.cellImage sd_setImageWithURL:[NSURL URLWithString:@"https://graph.facebook.com/olivier.poitrey/picture"]
-//                 placeholderImage:[UIImage imageNamed:@"avatar-placeholder.png"]
-//                          options:SDWebImageRefreshCached]; // caches less aggressively
+    //    [cell.cellImage sd_setImageWithURL:[NSURL URLWithString:@"https://graph.facebook.com/olivier.poitrey/picture"]
+    //                 placeholderImage:[UIImage imageNamed:@"avatar-placeholder.png"]
+    //                          options:SDWebImageRefreshCached]; // caches less aggressively
 
+    cell.cellImage.layer.cornerRadius = cell.cellImage.frame.size.width / 2;
+    cell.cellImage.clipsToBounds = YES;
+    
+    // Fix for multiline titles not laying out properly
+    [cell layoutIfNeeded];
     
     return cell;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView
-    didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+#pragma mark - UITableViewDelegate
+
+- (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
     
     IncludedPage *selectedPage = _filteredData[indexPath.row];
     
     // Get user preference
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     BOOL runNative = [defaults boolForKey:@"launch_native_apps_toggle"];
-    
+   
     NSString *httpURLString = [NSString stringWithFormat: @"http://facebook.com/%@/", selectedPage.pageId];
     
     if(runNative==TRUE){
-        NSLog(@"Run native");
         NSString *appURLString = [NSString stringWithFormat: @"fb://profile/%@/", selectedPage.pageId];
         
         NSURL *facebookURL = [NSURL URLWithString:appURLString];
@@ -121,8 +79,12 @@ static NSString * const reuseIdentifier = @"pagecollectioncell";
     } else {
         [self openInWebView:[NSURL URLWithString:httpURLString]];
     }
+    
 }
 
+
+
+// duplicate code! (also in EventsViewController)
 -(void)openInWebView:(NSURL*)url{
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -138,69 +100,6 @@ static NSString * const reuseIdentifier = @"pagecollectioncell";
 
 }
 
-- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
-{
-    if (self.view.superview){
-
-    // Do view manipulation here.
-    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
-    
-    [self calculateBestBoxSize:size.width];
-    [self.collectionView.collectionViewLayout invalidateLayout];
-
-    }
-}
-
--(void)calculateBestBoxSize:(int)width{
-    
-    NSLog(@"width: %d", width);
-    
-    // around 165 is nice.
-    // I was going to run a calculation here to find the best
-    // width but instead I'm running a switch
-    
-    switch ((int)width)
-    {
-        case 320: //iPhone 4S, 5 portrait
-            self.boxSize = 155;
-            break;
-        case 375: // iPhone 6, portrait
-            self.boxSize = 182;
-            break;
-        case 768: // iPad 2, mini, air, portrait
-            self.boxSize = 184;
-            break;
-        case 480: // iPhone 4s, landscape
-            self.boxSize = 153;
-            break;
-        case 1024: // iPad 2, landscape
-            self.boxSize = 196;
-            break;
-        case 414: // iPhone 6+, portrait
-            self.boxSize = 131;
-            break;
-        case 568: // iPhone 5, landscape
-            self.boxSize = 182;
-            break;
-        case 667:  // iPhone 6, landscape
-            self.boxSize = 159;
-            break;
-        case 736: // iPhone 6+ landscape
-            self.boxSize = 176;
-            break;
-            
-        default: // future models!
-            self.boxSize = 165;
-            break;
-            
-    }
-    
-
-}
-
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(self.boxSize, self.boxSize);
-}
 
 // Filter the list when searching
 - (void)searchBar:(UISearchBar *)searchBar
@@ -218,9 +117,11 @@ static NSString * const reuseIdentifier = @"pagecollectioncell";
             }
         }
     }
-    [self.collectionView reloadData];
+    
+    [self.tableView reloadData];
     
 }
+
 
 // Hide the keybaord
 - (void) searchBarSearchButtonClicked:(UISearchBar *)searchBar {
@@ -230,6 +131,34 @@ static NSString * const reuseIdentifier = @"pagecollectioncell";
 -(void) scrollViewDidScroll:(UIScrollView *)scrollView{
     // probably goes somewhere else
     scrollView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
+}
+
+
+
+#pragma mark - UIViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    CPDAPIClient *client = [CPDAPIClient sharedClient];
+    
+    [client getClientPages:@"197528567092983"
+                   success:^(NSURLSessionDataTask *task, id responseObject) {
+                       _dataSource = [CPDAPIClient includedPagesFromJSON:(NSData *)responseObject error:nil];
+                       _filteredData = [NSMutableArray arrayWithArray:_dataSource];
+                       [self.tableView reloadData];
+                   }
+                   failure:^(NSURLSessionDataTask *task, NSError *error) {
+                       NSLog(@"Failure -- %@", error);
+                   }];
+
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 
