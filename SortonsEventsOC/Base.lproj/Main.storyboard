@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fOK-iX-9zf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fOK-iX-9zf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -110,7 +110,6 @@
                         <segue destination="DIm-Z8-AX6" kind="relationship" relationship="viewControllers" id="WaP-Ae-aIc"/>
                         <segue destination="JH1-J5-feI" kind="relationship" relationship="viewControllers" id="hRi-Tp-89g"/>
                         <segue destination="LWO-8l-cGf" kind="relationship" relationship="viewControllers" id="IKm-Is-LkY"/>
-                        <segue destination="OrY-4w-3Ic" kind="relationship" relationship="viewControllers" id="qvd-pQ-PHy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C54-ob-zfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -300,93 +299,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWh-ZU-lLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-751" y="482"/>
-        </scene>
-        <!--Help-->
-        <scene sceneID="l1v-Mr-i5p">
-            <objects>
-                <viewController id="OrY-4w-3Ic" userLabel="Help" customClass="MoreViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="nuV-w7-Ao0"/>
-                        <viewControllerLayoutGuide type="bottom" id="83F-dF-8cG"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3Ui-3e-dAg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xg-C8-b1B">
-                                <rect key="frame" x="246" y="295" width="108" height="30"/>
-                                <state key="normal" title="Report problem">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSt-xy-m9S">
-                                <rect key="frame" x="242" y="235" width="116" height="30"/>
-                                <state key="normal" title="Send suggestion">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PRQ-uQ-JPC" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="182" y="101" width="237" height="44"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Oz2-ua-DVW"/>
-                                    <constraint firstAttribute="width" constant="237" id="pqF-E7-iK8"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login to Facebook for personalised results" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOK-zV-efD">
-                                <rect key="frame" x="137" y="50" width="327" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yf6-fs-lSX">
-                                <rect key="frame" x="266" y="175" width="68" height="30"/>
-                                <state key="normal" title="Add Page">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqt-OX-cCs">
-                                <rect key="frame" x="280" y="355" width="40" height="30"/>
-                                <state key="normal" title="Share">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oP-1l-me2">
-                                <rect key="frame" x="262" y="417" width="77" height="30"/>
-                                <state key="normal" title="Settings">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="settingButton:" destination="OrY-4w-3Ic" eventType="touchUpInside" id="qbg-Ro-nGM"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="gOK-zV-efD" firstAttribute="top" secondItem="nuV-w7-Ao0" secondAttribute="bottom" constant="30" id="3H6-TU-dUf"/>
-                            <constraint firstAttribute="centerX" secondItem="4Xg-C8-b1B" secondAttribute="centerX" id="5UJ-lM-7CA"/>
-                            <constraint firstAttribute="centerX" secondItem="gOK-zV-efD" secondAttribute="centerX" id="Bds-SI-aIz"/>
-                            <constraint firstAttribute="centerX" secondItem="KSt-xy-m9S" secondAttribute="centerX" id="CgT-k2-LCL"/>
-                            <constraint firstAttribute="centerX" secondItem="Yf6-fs-lSX" secondAttribute="centerX" id="IG5-xh-7nK"/>
-                            <constraint firstAttribute="centerX" secondItem="xqt-OX-cCs" secondAttribute="centerX" id="MdO-hX-XwT"/>
-                            <constraint firstAttribute="centerX" secondItem="1oP-1l-me2" secondAttribute="centerX" constant="-0.5" id="Na8-3P-WNT"/>
-                            <constraint firstItem="PRQ-uQ-JPC" firstAttribute="top" secondItem="gOK-zV-efD" secondAttribute="bottom" constant="30" id="O17-if-waS"/>
-                            <constraint firstItem="KSt-xy-m9S" firstAttribute="top" secondItem="Yf6-fs-lSX" secondAttribute="bottom" constant="30" id="YDn-i4-Jsp"/>
-                            <constraint firstItem="4Xg-C8-b1B" firstAttribute="top" secondItem="KSt-xy-m9S" secondAttribute="bottom" constant="30" id="doa-kb-P8c"/>
-                            <constraint firstItem="1oP-1l-me2" firstAttribute="top" secondItem="xqt-OX-cCs" secondAttribute="bottom" constant="32" id="gqW-H7-WTH"/>
-                            <constraint firstItem="Yf6-fs-lSX" firstAttribute="top" secondItem="PRQ-uQ-JPC" secondAttribute="bottom" constant="30" id="j01-7f-RlJ"/>
-                            <constraint firstItem="xqt-OX-cCs" firstAttribute="top" secondItem="4Xg-C8-b1B" secondAttribute="bottom" constant="30" id="jty-fT-bDu"/>
-                            <constraint firstAttribute="centerX" secondItem="PRQ-uQ-JPC" secondAttribute="centerX" id="m2T-3A-VYE"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="More" id="Y4M-7J-Ibz"/>
-                    <connections>
-                        <outlet property="loginButton" destination="PRQ-uQ-JPC" id="tGH-pm-xrN"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="blC-lD-fLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="380" y="-277"/>
         </scene>
     </scenes>
 </document>

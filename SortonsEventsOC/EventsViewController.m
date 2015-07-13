@@ -13,8 +13,6 @@
 #import "SortonsEventsCommunicator.h"
 #import "DiscoveredEventCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "CommonWebViewController.h"
 
 @interface EventsViewController () <SortonsEventsManagerDelegate> {
@@ -104,16 +102,6 @@
     NSLog(@"ViewController didReceiveDiscoveredEvents");
     _discoveredEvents = discoveredEvents;
     tableData = discoveredEvents;
-    
-    // If we're logged into Facebook, go get the friends that are attending
-    if ([FBSDKAccessToken currentAccessToken]) {
-        NSLog(@"Logged in to Facebook (Events View)");
-        /* make the API call */
-        NSLog(@"%@", [FBSDKAccessToken currentAccessToken]);
-        
-    }else{
-        NSLog(@"NOT Logged in to Facebook (Events View)");
-    }
     
     [tableViewOutlet performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
 }

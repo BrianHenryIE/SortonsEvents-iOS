@@ -14,7 +14,6 @@
 		A6A2011A1AE5652E00BB1925 /* IncludedPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A201191AE5652E00BB1925 /* IncludedPage.m */; };
 		A6A2011D1AE5657B00BB1925 /* PageLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A2011C1AE5657B00BB1925 /* PageLocation.m */; };
 		A6BDA8781AE5CA6500C1A55C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
-		A6BDA87C1AE61C6300C1A55C /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6BDA87B1AE61C6300C1A55C /* MoreViewController.m */; };
 		A6BDA87D1AE62AFF00C1A55C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA87F1AE62AFF00C1A55C /* Main.storyboard */; };
 		A6C613111A91492500A5F082 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613101A91492500A5F082 /* main.m */; };
 		A6C613141A91492500A5F082 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613131A91492500A5F082 /* AppDelegate.m */; };
@@ -55,8 +54,6 @@
 		A6A2011B1AE5657B00BB1925 /* PageLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageLocation.h; sourceTree = "<group>"; };
 		A6A2011C1AE5657B00BB1925 /* PageLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageLocation.m; sourceTree = "<group>"; };
 		A6BDA8771AE5CA6500C1A55C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		A6BDA87A1AE61C6300C1A55C /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
-		A6BDA87B1AE61C6300C1A55C /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		A6BDA87E1AE62AFF00C1A55C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A6BDA8841AE62C2300C1A55C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		A6BDA8871AE6465F00C1A55C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
@@ -136,15 +133,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A6BDA8791AE61C4300C1A55C /* More */ = {
-			isa = PBXGroup;
-			children = (
-				A6BDA87A1AE61C6300C1A55C /* MoreViewController.h */,
-				A6BDA87B1AE61C6300C1A55C /* MoreViewController.m */,
-			);
-			name = More;
-			sourceTree = "<group>";
-		};
 		A6C613021A91492500A5F082 = {
 			isa = PBXGroup;
 			children = (
@@ -169,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				A6D7AECE1B4E9931002F1BDA /* Model */,
-				A6BDA8791AE61C4300C1A55C /* More */,
 				A6D386BC1AE5517800D1C950 /* Directory */,
 				A6D386B81AE5490E00D1C950 /* APIClient */,
 				A6D4C88F1AE04DD800AA4D48 /* CommonWebView */,
@@ -455,7 +442,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6C613171A91492500A5F082 /* EventsViewController.m in Sources */,
-				A6BDA87C1AE61C6300C1A55C /* MoreViewController.m in Sources */,
 				A6D386BB1AE5494F00D1C950 /* CPDAPIClient.m in Sources */,
 				A6C613141A91492500A5F082 /* AppDelegate.m in Sources */,
 				A6A2011A1AE5652E00BB1925 /* IncludedPage.m in Sources */,

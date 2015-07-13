@@ -10,8 +10,6 @@
 #import "CPDAPIClient.h"
 #import "DirectoryCollectionViewCell.h"
 #import "IncludedPage.h"
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "CommonWebViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
@@ -95,13 +93,6 @@ static NSString * const reuseIdentifier = @"pagecollectioncell";
 //                 placeholderImage:[UIImage imageNamed:@"avatar-placeholder.png"]
 //                          options:SDWebImageRefreshCached]; // caches less aggressively
 
-    
-    // Move this to ViewDidLoad?
-    if ([FBSDKAccessToken currentAccessToken]) {
-        // NSLog(@"Logged in to Facebook (Directory View)");
-    }else{
-        // NSLog(@"NOT Logged in to Facebook (Directory View)");
-    }
     
     return cell;
 }
