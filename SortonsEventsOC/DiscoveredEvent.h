@@ -13,7 +13,7 @@
 @property (strong, nonatomic) NSString *eid;
 
 @property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *startTime;
+@property (strong, nonatomic) NSDate *startTime;
 
 @property BOOL isDateOnly;
 

@@ -27,6 +27,10 @@
     NSLog(@"Count %lu", (unsigned long)results.count);
     
     
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];
+    
     // For each object in the array of resutls
     for (NSDictionary *discoveredEventsDic in results) {
         
@@ -37,7 +41,7 @@
         
         discoveredEvent.name = [[discoveredEventsDic valueForKey:@"fbEvent"] valueForKey:@"name"];
 
-        discoveredEvent.startTime = [[discoveredEventsDic valueForKey:@"fbEvent"] valueForKey:@"start_time"];
+        discoveredEvent.startTime = [dateFormat dateFromString:[[discoveredEventsDic valueForKey:@"fbEvent"] valueForKey:@"start_time"]];
 
         discoveredEvent.isDateOnly =  [[[discoveredEventsDic valueForKey:@"fbEvent"] objectForKey:@"isDateOnly"] boolValue];
         
@@ -46,8 +50,6 @@
         [discoveredEvents addObject:discoveredEvent];
         
     }
-    
-    NSLog(@"%@", @"All events parsed");
     
     return discoveredEvents;
 }

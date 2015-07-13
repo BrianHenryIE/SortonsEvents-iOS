@@ -14,6 +14,7 @@
 #import "DiscoveredEventCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "CommonWebViewController.h"
+#import "DiscoveredEventBuilder.h"
 
 @interface EventsViewController () <SortonsEventsManagerDelegate> {
     NSArray *_discoveredEvents;
@@ -36,13 +37,11 @@
 
 
 
-- (NSString *)friendlyDate:(NSString *)deDateString
+- (NSString *)friendlyDate:(NSDate *)dateTime
 {
     
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];
-    NSDate *startTime = [dateFormat dateFromString:deDateString];
-  
+   // [dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];
     
     // if it's yesterday, today or tomorrow use the word
     
@@ -69,29 +68,29 @@
     
     
     // prepare other date for comparison
-    components = [cal components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay) fromDate:startTime];
+    components = [cal components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay) fromDate:dateTime];
     NSDate *otherDate = [cal dateFromComponents:components];
     
     [dateFormat setDateFormat:@"HH:mm"];
 
     if([yesterday isEqualToDate:otherDate]) {
-        NSString *friendlyStartTime = [NSString stringWithFormat:@"Yesterday at %@",[dateFormat stringFromDate:startTime]];
-        return friendlyStartTime;
+        NSString *friendlyTime = [NSString stringWithFormat:@"Yesterday at %@",[dateFormat stringFromDate:dateTime]];
+        return friendlyTime;
         
     }else if([today isEqualToDate:otherDate]) {
-        NSString *friendlyStartTime = [NSString stringWithFormat:@"Today at %@",[dateFormat stringFromDate:startTime]];
-        return friendlyStartTime;
+        NSString *friendlyTime = [NSString stringWithFormat:@"Today at %@",[dateFormat stringFromDate:dateTime]];
+        return friendlyTime;
         
     } else if([tomorrow isEqualToDate:otherDate]) {
-        NSString *friendlyStartTime = [NSString stringWithFormat:@"Tomorrow at %@",[dateFormat stringFromDate:startTime]];
-        return friendlyStartTime;
+        NSString *friendlyTime = [NSString stringWithFormat:@"Tomorrow at %@",[dateFormat stringFromDate:dateTime]];
+        return friendlyTime;
         
     } else {
 
         [dateFormat setDateFormat:@"EEEE dd MMM 'at' HH:mm"];
-        NSString *friendlyStartTime = [NSString stringWithFormat:@"%@",[dateFormat stringFromDate:startTime]];
+        NSString *friendlyTime = [NSString stringWithFormat:@"%@",[dateFormat stringFromDate:dateTime]];
         
-        return friendlyStartTime;
+        return friendlyTime;
     }
     
     
@@ -198,6 +197,33 @@
     for (UIViewController *aVC in self.tabBarController.viewControllers)
         if ([aVC respondsToSelector:@selector(view)] && aVC != self)
             [aVC view];
+    
+    // TODO: test this code!
+    
+    // Read from cache
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *cachesFolder = paths[0];
+    NSString *fullPath = [cachesFolder stringByAppendingPathComponent:@"eventscache.txt"];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if ([fileManager fileExistsAtPath:fullPath]){
+        NSLog(@"reading from cache");
+        NSData *cache = [NSData dataWithContentsOfFile:fullPath];
+        NSMutableArray *discoveredEvents = [NSMutableArray arrayWithArray:[DiscoveredEventBuilder discoveredEventsFromJSON:cache error:nil]];
+        
+        DiscoveredEvent *item;
+        NSMutableArray *itemsToKeep = [NSMutableArray arrayWithCapacity:[discoveredEvents count]];
+        
+        NSDate *now = [[NSDate alloc] init];
+        for (item in discoveredEvents) {
+            if (!(item.startTime < now))
+                [itemsToKeep addObject:item];
+        }
+        [discoveredEvents setArray:itemsToKeep];
+        
+        _discoveredEvents = discoveredEvents;
+        [tableViewOutlet reloadData];
+    }
+    
     
     _manager = [[SortonsEventsManager alloc] init];
     _manager.communicator = [[SortonsEventsCommunicator alloc] init];

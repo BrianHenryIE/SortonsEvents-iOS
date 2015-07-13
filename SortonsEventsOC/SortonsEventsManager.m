@@ -30,7 +30,15 @@
     
     NSLog(@"receivedDiscoveredEventsJSON %lu", (unsigned long)discoveredEvents.count);
     
-    
+    // Cache the resutls
+    if(discoveredEvents.count>0){
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+        NSString *cachesFolder = paths[0];
+        NSString *fullPath = [cachesFolder stringByAppendingPathComponent:@"eventscache.txt"];
+        
+        [objectNotation writeToFile:fullPath atomically:YES];
+    }
+
     if (error != nil) {
         [self.delegate fetchingDiscoveredEventsFailedWithError:error];
         
