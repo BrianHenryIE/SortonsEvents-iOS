@@ -79,11 +79,18 @@
     // Check was the view already rendered in this same orientation => don't rerender
     
     [self.webView stringByEvaluatingJavaScriptFromString:@"refreshXfbml()"];
-
-    self.webView.hidden = NO;
+    
+    [NSTimer scheduledTimerWithTimeInterval:0.5
+                                     target:self
+                                   selector:@selector(showWebView)
+                                   userInfo:nil
+                                    repeats:NO];
 }
 
-
+- (void)showWebView
+{
+    self.webView.hidden = NO;
+}
 
 
 // Redraw the news items after the phone rotates
