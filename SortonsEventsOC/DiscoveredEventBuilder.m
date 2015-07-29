@@ -37,15 +37,17 @@
         // Prepare object
         DiscoveredEvent *discoveredEvent = [[DiscoveredEvent alloc] init];
         
-        discoveredEvent.eid = [discoveredEventsDic valueForKey:@"eid"];
-        
-        discoveredEvent.name = [[discoveredEventsDic valueForKey:@"fbEvent"] valueForKey:@"name"];
+        discoveredEvent.eventId = [discoveredEventsDic valueForKey:@"eventId"];
 
-        discoveredEvent.startTime = [dateFormat dateFromString:[[discoveredEventsDic valueForKey:@"fbEvent"] valueForKey:@"start_time"]];
-
-        discoveredEvent.isDateOnly =  [[[discoveredEventsDic valueForKey:@"fbEvent"] objectForKey:@"isDateOnly"] boolValue];
+        discoveredEvent.clientId = [discoveredEventsDic valueForKey:@"clientId"];
         
-        discoveredEvent.location = [[discoveredEventsDic valueForKey:@"fbEvent"] valueForKey:@"location"];
+        discoveredEvent.name = [discoveredEventsDic valueForKey:@"name"];
+        
+        discoveredEvent.location = [discoveredEventsDic valueForKey:@"location"];
+
+        discoveredEvent.startTime = [dateFormat dateFromString:[discoveredEventsDic valueForKey:@"startTime"]];
+
+        discoveredEvent.isDateOnly =  [discoveredEventsDic valueForKey:@"dateOnly"];
         
         [discoveredEvents addObject:discoveredEvent];
         

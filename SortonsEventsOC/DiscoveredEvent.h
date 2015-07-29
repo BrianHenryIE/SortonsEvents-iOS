@@ -10,13 +10,20 @@
 
 @interface DiscoveredEvent : NSObject
 
-@property (strong, nonatomic) NSString *eid;
+@property (strong, nonatomic) NSString *id;
+
+@property (strong, nonatomic) NSString *eventId;
+@property (strong, nonatomic) NSString *clientId;
+
+// List<SourcePage> sourcePages
 
 @property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *location;
+
 @property (strong, nonatomic) NSDate *startTime;
+@property (strong, nonatomic) NSDate *endTime;
 
 @property BOOL isDateOnly;
 
-@property (strong, nonatomic) NSString *location;
 
 @end

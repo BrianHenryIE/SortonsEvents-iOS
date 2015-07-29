@@ -133,7 +133,7 @@
     [cell.locationLabel setText:discoveredEvent.location];
    
     // Set image
-    NSString *imageURLString = [NSString stringWithFormat: @"http://graph.facebook.com/%@/picture?type=square", discoveredEvent.eid];
+    NSString *imageURLString = [NSString stringWithFormat: @"http://graph.facebook.com/%@/picture?type=square", discoveredEvent.eventId];
     [cell.theImage sd_setImageWithURL:[NSURL URLWithString:imageURLString]];
     // Round corners of image
     cell.theImage.layer.cornerRadius = cell.theImage.frame.size.width / 2;
@@ -155,11 +155,11 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     BOOL runNative = [defaults boolForKey:@"launch_native_apps_toggle"];
     
-    NSString *eventHttpURLString = [NSString stringWithFormat: @"http://facebook.com/events/%@/", discoveredEvent.eid];
+    NSString *eventHttpURLString = [NSString stringWithFormat: @"http://facebook.com/events/%@/", discoveredEvent.eventId];
     
     if(runNative==TRUE){
         NSLog(@"Run native");
-        NSString *eventAppURLString = [NSString stringWithFormat: @"fb://profile/%@/", discoveredEvent.eid];
+        NSString *eventAppURLString = [NSString stringWithFormat: @"fb://profile/%@/", discoveredEvent.eventId];
     
         NSURL *facebookURL = [NSURL URLWithString:eventAppURLString];
         if ([[UIApplication sharedApplication] canOpenURL:facebookURL]) {
