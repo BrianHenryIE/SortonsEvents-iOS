@@ -326,7 +326,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A6C613061A91492500A5F082 /* Build configuration list for PBXProject "Belfield" */;
+			buildConfigurationList = A6C613061A91492500A5F082 /* Build configuration list for PBXProject "FOMO UCD" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -640,7 +640,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A6C613061A91492500A5F082 /* Build configuration list for PBXProject "Belfield" */ = {
+		A6C613061A91492500A5F082 /* Build configuration list for PBXProject "FOMO UCD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A6C6132C1A91492500A5F082 /* Debug */,
