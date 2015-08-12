@@ -53,7 +53,6 @@
 		A6BDA8771AE5CA6500C1A55C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		A6BDA87E1AE62AFF00C1A55C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A6BDA8841AE62C2300C1A55C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		A6BDA8871AE6465F00C1A55C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		A6C6130B1A91492500A5F082 /* SortonsEventsOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SortonsEventsOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C6130F1A91492500A5F082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6C613101A91492500A5F082 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -477,7 +476,6 @@
 			children = (
 				A6BDA87E1AE62AFF00C1A55C /* Base */,
 				A6BDA8841AE62C2300C1A55C /* en */,
-				A6BDA8871AE6465F00C1A55C /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
