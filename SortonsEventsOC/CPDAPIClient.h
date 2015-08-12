@@ -20,4 +20,6 @@ extern NSString * const cpdBaseURL;
                 success:(void(^)(NSURLSessionDataTask *task, id responseObject))success
                 failure:(void(^)(NSURLSessionDataTask *task, NSError *error))failure;
 
+-(void)saveToCache:(NSData *)objectNotation;
+
 @end

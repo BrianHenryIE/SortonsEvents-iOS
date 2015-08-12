@@ -7,7 +7,7 @@
 //
 
 #import "CPDAPIClient.h"
-#import "IncludedPage.h"
+#import "SourcePage.h"
 
 NSString * const cpdBaseURL = @"https://sortonsevents.appspot.com/_ah/api/clientdata/v1/clientpagedata/";
 // 197528567092983
@@ -56,6 +56,36 @@ NSString * const cpdBaseURL = @"https://sortonsevents.appspot.com/_ah/api/client
 }
 
 
+-(NSArray *)includedPagesFromCache
+{
+    // Read from cache
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *cachesFolder = paths[0];
+    NSString *fullPath = [cachesFolder stringByAppendingPathComponent:@"directorycache.txt"];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if ([fileManager fileExistsAtPath:fullPath]){
+        NSLog(@"reading directory from cache");
+        NSData *cache = [NSData dataWithContentsOfFile:fullPath];
+        NSArray *directoryPages = [CPDAPIClient includedPagesFromJSON:cache error:nil];
+      
+        return directoryPages;
+    }
+    
+    return nil;
+}
+
+-(void)saveToCache:(NSData *)objectNotation
+{
+    if(objectNotation!=nil){
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+        NSString *cachesFolder = paths[0];
+        NSString *fullPath = [cachesFolder stringByAppendingPathComponent:@"directorycache.txt"];
+        
+        [objectNotation writeToFile:fullPath atomically:YES];
+    }
+
+}
+
 
 + (NSArray *)includedPagesFromJSON:(NSData *)objectNotation error:(NSError **)error
 {
@@ -77,7 +107,7 @@ NSString * const cpdBaseURL = @"https://sortonsevents.appspot.com/_ah/api/client
     for (NSDictionary *includedPagesDic in results) {
         
         // Prepare object
-        IncludedPage *page = [[IncludedPage alloc] initWithDictionary:includedPagesDic];
+        SourcePage *page = [[SourcePage alloc] initWithDictionary:includedPagesDic];
       
         [includedPages addObject:page];
         

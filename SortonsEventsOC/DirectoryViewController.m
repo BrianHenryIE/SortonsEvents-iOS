@@ -8,7 +8,7 @@
 
 #import "DirectoryViewController.h"
 #import "CPDAPIClient.h"
-#import "IncludedPage.h"
+#import "SourcePage.h"
 #import "IncludedPageCell.h"
 #import "CommonWebViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
@@ -36,11 +36,11 @@
     
     IncludedPageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"includedPageCell" forIndexPath:indexPath];
     
-    cell.cellTitle.text = ((IncludedPage *) self.filteredData[indexPath.row]).name;
+    cell.cellTitle.text = ((SourcePage *) self.filteredData[indexPath.row]).name;
 
     cell.detailsLabel.text = @"";
     
-    NSString *imageURLString = [NSString stringWithFormat: @"http://graph.facebook.com/%@/picture?type=large", ((IncludedPage *) self.filteredData[indexPath.row]).pageId];
+    NSString *imageURLString = [NSString stringWithFormat: @"http://graph.facebook.com/%@/picture?type=large", ((SourcePage *) self.filteredData[indexPath.row]).pageId];
     [cell.cellImage sd_setImageWithURL:[NSURL URLWithString:imageURLString]    placeholderImage:nil];
     //    [cell.cellImage sd_setImageWithURL:[NSURL URLWithString:@"https://graph.facebook.com/olivier.poitrey/picture"]
     //                 placeholderImage:[UIImage imageNamed:@"avatar-placeholder.png"]
@@ -59,7 +59,7 @@
 
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
     
-    IncludedPage *selectedPage = _filteredData[indexPath.row];
+    SourcePage *selectedPage = _filteredData[indexPath.row];
     
     // Get user preference
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -109,7 +109,7 @@
         _filteredData = [NSMutableArray arrayWithArray:_dataSource];
     }else {
         [self.filteredData removeAllObjects];
-        for (IncludedPage *item in self.dataSource)
+        for (SourcePage *item in self.dataSource)
         {
             // drop the case for search
             if([item.name.lowercaseString containsString:searchText.lowercaseString]){
@@ -143,8 +143,11 @@
     
     CPDAPIClient *client = [CPDAPIClient sharedClient];
     
+    
+    
     [client getClientPages:@"197528567092983"
                    success:^(NSURLSessionDataTask *task, id responseObject) {
+                       [client saveToCache:(NSData *)responseObject];
                        _dataSource = [CPDAPIClient includedPagesFromJSON:(NSData *)responseObject error:nil];
                        _filteredData = [NSMutableArray arrayWithArray:_dataSource];
                        [self.tableView reloadData];

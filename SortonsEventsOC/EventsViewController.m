@@ -193,11 +193,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Preload the subsquent tabs
-    for (UIViewController *aVC in self.tabBarController.viewControllers)
-        if ([aVC respondsToSelector:@selector(view)] && aVC != self)
-            [aVC view];
-    
     // TODO: test this code!
     
     // Read from cache
@@ -223,6 +218,12 @@
         _discoveredEvents = discoveredEvents;
         [tableViewOutlet reloadData];
     }
+    
+    
+    // Preload the subsquent tabs
+    for (UIViewController *aVC in self.tabBarController.viewControllers)
+        if ([aVC respondsToSelector:@selector(view)] && aVC != self)
+            [aVC view];
     
     
     _manager = [[SortonsEventsManager alloc] init];

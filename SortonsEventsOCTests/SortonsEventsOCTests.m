@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "PageLocation.h"
-#import "IncludedPage.h"
+
+#import "SourcePage.h"
 #import "CPDAPIClient.h"
 
 @interface SortonsEventsOCTests : XCTestCase
@@ -92,64 +92,6 @@
 }
 
 
--(void)testPageLocationParsing {
-    
-    
-//    "location": {
-//        "street": "Belfield",
-//        "city": "Dublin",
-//        "country": "Ireland",
-//        "zip": "Dublin 4",
-//        "latitude": 53.3081613643,
-//        "longitude": -6.22701770022,
-//        "friendlyString": "Belfield, Dublin, Dublin 4, Ireland"
-//    },
-    
-    NSString *jsonString = @"{\"location\": {\"street\": \"Belfield\", \"city\": \"Dublin\", \"country\": \"Ireland\",\"zip\": \"Dublin 4\",\"latitude\": 53.3081613643,\"longitude\": -6.22701770022,\"friendlyString\": \"Belfield, Dublin, Dublin 4, Ireland\"}}";
-    NSData *data = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-
-    NSDictionary *parsedObject = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
- 
-    NSDictionary *results = [parsedObject valueForKey:@"location"];
-
-    PageLocation *pl = [[PageLocation alloc] initWithDictionary:results];
-    
-    XCTAssert([pl.city isEqualToString:@"Dublin"], @"City should be Dublin");
-    
-}
-
-
-//{
-//    "location": {
-//        "street": "Belfield",
-//        "city": "Dublin",
-//        "country": "Ireland",
-//        "zip": "Dublin 4",
-//        "latitude": 53.3081613643,
-//        "longitude": -6.22701770022,
-//        "friendlyString": "Belfield, Dublin, Dublin 4, Ireland"
-//    },
-//    "name": "UCD Clubhouse Bar",
-//    "page_id": "530264647027072",
-//    "page_url": "http://www.facebook.com/ucdclubhousebar",
-//    "pageUrl": "http://www.facebook.com/ucdclubhousebar",
-//    "pageId": "530264647027072"
-//}
-
--(void)testPageParsing {
-    
-    NSString *jsonString = @"{        \"location\": {            \"street\": \"Belfield\",            \"city\": \"Dublin\",            \"country\": \"Ireland\",            \"zip\": \"Dublin 4\",            \"latitude\": 53.3081613643,            \"longitude\": -6.22701770022,            \"friendlyString\": \"Belfield, Dublin, Dublin 4, Ireland\"        },        \"name\": \"UCD Clubhouse Bar\",        \"page_id\": \"530264647027072\",        \"page_url\": \"http://www.facebook.com/ucdclubhousebar\",        \"pageUrl\": \"http://www.facebook.com/ucdclubhousebar\",        \"pageId\": \"530264647027072\"    }";
-
-    NSData *data = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-    
-    NSDictionary *parsedObject = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-    
-    IncludedPage *ip = [[IncludedPage alloc] initWithDictionary:parsedObject];
-
-    XCTAssert([ip.pageId isEqualToString:@"530264647027072"], @"Page Id is incorrect");
-    XCTAssert([ip.location.city isEqualToString:@"Dublin"], @"City should be Dublin");
-
-}
 
 -(void)testCPDParsing {
     

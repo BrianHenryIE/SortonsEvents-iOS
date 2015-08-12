@@ -10,8 +10,7 @@
 		83FDD75099FAA6441C30424C /* libPods-SortonsEventsOCTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5082A7E5E78F8CD9B7F8E5 /* libPods-SortonsEventsOCTests.a */; };
 		A64104201AE542D700FDA62D /* ClientPageData.json in Resources */ = {isa = PBXBuildFile; fileRef = A641041F1AE542D700FDA62D /* ClientPageData.json */; };
 		A67FCB751AE5AF5F007EEFB6 /* ClientPageData.json in Resources */ = {isa = PBXBuildFile; fileRef = A641041F1AE542D700FDA62D /* ClientPageData.json */; };
-		A6A2011A1AE5652E00BB1925 /* IncludedPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A201191AE5652E00BB1925 /* IncludedPage.m */; };
-		A6A2011D1AE5657B00BB1925 /* PageLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A2011C1AE5657B00BB1925 /* PageLocation.m */; };
+		A6A2011A1AE5652E00BB1925 /* SourcePage.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A201191AE5652E00BB1925 /* SourcePage.m */; };
 		A6AF6F381B5416FF00BA62DF /* IncludedPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AF6F371B5416FF00BA62DF /* IncludedPageCell.m */; };
 		A6BDA8781AE5CA6500C1A55C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
 		A6BDA87D1AE62AFF00C1A55C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA87F1AE62AFF00C1A55C /* Main.storyboard */; };
@@ -47,10 +46,8 @@
 		1130405B10F6A5C955C8BFE1 /* Pods-SortonsEventsOCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SortonsEventsOCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SortonsEventsOCTests/Pods-SortonsEventsOCTests.release.xcconfig"; sourceTree = "<group>"; };
 		728F31569781EE0F9CC5F2C8 /* Pods-SortonsEventsOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SortonsEventsOC.release.xcconfig"; path = "Pods/Target Support Files/Pods-SortonsEventsOC/Pods-SortonsEventsOC.release.xcconfig"; sourceTree = "<group>"; };
 		A641041F1AE542D700FDA62D /* ClientPageData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ClientPageData.json; sourceTree = "<group>"; };
-		A6A201181AE5652E00BB1925 /* IncludedPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncludedPage.h; sourceTree = "<group>"; };
-		A6A201191AE5652E00BB1925 /* IncludedPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncludedPage.m; sourceTree = "<group>"; };
-		A6A2011B1AE5657B00BB1925 /* PageLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageLocation.h; sourceTree = "<group>"; };
-		A6A2011C1AE5657B00BB1925 /* PageLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageLocation.m; sourceTree = "<group>"; };
+		A6A201181AE5652E00BB1925 /* SourcePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourcePage.h; sourceTree = "<group>"; };
+		A6A201191AE5652E00BB1925 /* SourcePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourcePage.m; sourceTree = "<group>"; };
 		A6AF6F361B5416FF00BA62DF /* IncludedPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncludedPageCell.h; sourceTree = "<group>"; };
 		A6AF6F371B5416FF00BA62DF /* IncludedPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncludedPageCell.m; sourceTree = "<group>"; };
 		A6BDA8771AE5CA6500C1A55C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -240,10 +237,8 @@
 		A6D7AECE1B4E9931002F1BDA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A6A2011B1AE5657B00BB1925 /* PageLocation.h */,
-				A6A2011C1AE5657B00BB1925 /* PageLocation.m */,
-				A6A201181AE5652E00BB1925 /* IncludedPage.h */,
-				A6A201191AE5652E00BB1925 /* IncludedPage.m */,
+				A6A201181AE5652E00BB1925 /* SourcePage.h */,
+				A6A201191AE5652E00BB1925 /* SourcePage.m */,
 				A6C6133A1A914A4D00A5F082 /* DiscoveredEvent.h */,
 				A6C6133B1A914A4D00A5F082 /* DiscoveredEvent.m */,
 			);
@@ -444,8 +439,7 @@
 				A6C613171A91492500A5F082 /* EventsViewController.m in Sources */,
 				A6D386BB1AE5494F00D1C950 /* CPDAPIClient.m in Sources */,
 				A6C613141A91492500A5F082 /* AppDelegate.m in Sources */,
-				A6A2011A1AE5652E00BB1925 /* IncludedPage.m in Sources */,
-				A6A2011D1AE5657B00BB1925 /* PageLocation.m in Sources */,
+				A6A2011A1AE5652E00BB1925 /* SourcePage.m in Sources */,
 				A6C613491A91614F00A5F082 /* DiscoveredEventCell.m in Sources */,
 				A6C6133C1A914A4D00A5F082 /* DiscoveredEvent.m in Sources */,
 				A6C613111A91492500A5F082 /* main.m in Sources */,
