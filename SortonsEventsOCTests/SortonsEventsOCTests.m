@@ -98,7 +98,7 @@
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"ClientPageData" ofType:@"json"];
     NSData *clientPageDataJson = [NSData dataWithContentsOfFile:filePath];
     
-    NSArray *pages = [CPDAPIClient includedPagesFromJSON:clientPageDataJson error:nil];
+    NSArray *pages = [CPDAPIClient includedPagesFromJSON:(NSDictionary *)clientPageDataJson error:nil];
     
     XCTAssertEqual(307, (unsigned long)pages.count, "Wrong number of pages parsed");
 }

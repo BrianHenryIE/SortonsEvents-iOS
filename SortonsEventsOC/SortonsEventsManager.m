@@ -28,7 +28,7 @@
     NSError *error = nil;
     NSArray *discoveredEvents = [DiscoveredEventBuilder discoveredEventsFromJSON:objectNotation error:&error];
     
-    NSLog(@"receivedDiscoveredEventsJSON %lu", (unsigned long)discoveredEvents.count);
+    // NSLog(@"receivedDiscoveredEventsJSON %lu", (unsigned long)discoveredEvents.count);
     
     // Cache the resutls
     if(discoveredEvents.count>0){

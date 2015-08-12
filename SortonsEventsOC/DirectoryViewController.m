@@ -79,7 +79,8 @@
     } else {
         [self openInWebView:[NSURL URLWithString:httpURLString]];
     }
-    
+ 
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 
@@ -143,12 +144,13 @@
     
     CPDAPIClient *client = [CPDAPIClient sharedClient];
     
-    
+    _dataSource = [client includedPagesFromCache];
+    _filteredData = [NSMutableArray arrayWithArray:_dataSource];
+    [self.tableView reloadData];
     
     [client getClientPages:@"197528567092983"
                    success:^(NSURLSessionDataTask *task, id responseObject) {
-                       [client saveToCache:(NSData *)responseObject];
-                       _dataSource = [CPDAPIClient includedPagesFromJSON:(NSData *)responseObject error:nil];
+                       _dataSource = [CPDAPIClient includedPagesFromJSON:(NSDictionary *)responseObject error:nil];
                        _filteredData = [NSMutableArray arrayWithArray:_dataSource];
                        [self.tableView reloadData];
                    }

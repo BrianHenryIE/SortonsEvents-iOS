@@ -46,6 +46,7 @@ NSString * const cpdBaseURL = @"https://sortonsevents.appspot.com/_ah/api/client
     
     [self GET:path parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         if (success) {
+            [self saveToCache:responseObject];
             success(task, responseObject);
         }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -55,39 +56,42 @@ NSString * const cpdBaseURL = @"https://sortonsevents.appspot.com/_ah/api/client
     }];
 }
 
+-(void)saveToCache:(NSData *)responseObject
+{
+    if(responseObject!=nil){
+        
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+        NSString *cachesFolder = paths[0];
+        NSString *fullPath = [cachesFolder stringByAppendingPathComponent:@"directorycache.data"];
+        
+        //NSLog(@"writing directory to cache file");
+        
+        [responseObject writeToFile:fullPath atomically:YES];
+       
+    }
+    
+}
+
 
 -(NSArray *)includedPagesFromCache
 {
     // Read from cache
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     NSString *cachesFolder = paths[0];
-    NSString *fullPath = [cachesFolder stringByAppendingPathComponent:@"directorycache.txt"];
+    NSString *fullPath = [cachesFolder stringByAppendingPathComponent:@"directorycache.data"];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     if ([fileManager fileExistsAtPath:fullPath]){
-        NSLog(@"reading directory from cache");
-        NSData *cache = [NSData dataWithContentsOfFile:fullPath];
-        NSArray *directoryPages = [CPDAPIClient includedPagesFromJSON:cache error:nil];
-      
-        return directoryPages;
+        //NSLog(@"reading directory from cache");
+        NSDictionary *cache = [NSDictionary dictionaryWithContentsOfFile:fullPath];
+  
+        return [CPDAPIClient includedPagesFromJSON:cache                                     error:nil];
     }
     
     return nil;
 }
 
--(void)saveToCache:(NSData *)objectNotation
-{
-    if(objectNotation!=nil){
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-        NSString *cachesFolder = paths[0];
-        NSString *fullPath = [cachesFolder stringByAppendingPathComponent:@"directorycache.txt"];
-        
-        [objectNotation writeToFile:fullPath atomically:YES];
-    }
 
-}
-
-
-+ (NSArray *)includedPagesFromJSON:(NSData *)objectNotation error:(NSError **)error
++ (NSArray *)includedPagesFromJSON:(NSDictionary *)objectNotation error:(NSError **)error
 {
     NSError *localError = nil;
 //    NSDictionary *parsedObject = [NSJSONSerialization JSONObjectWithData:objectNotation options:0 error:&localError];
@@ -100,7 +104,7 @@ NSString * const cpdBaseURL = @"https://sortonsevents.appspot.com/_ah/api/client
     NSMutableArray *includedPages = [[NSMutableArray alloc] init];
     
     NSArray *results = [objectNotation valueForKey:@"includedPages"];
-    NSLog(@"Count %lu", (unsigned long)results.count);
+    // NSLog(@"Count %lu", (unsigned long)results.count);
     
     
     // For each object in the array of resutls

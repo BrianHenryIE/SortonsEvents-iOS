@@ -21,7 +21,8 @@ static NSString *const UCDEVENTS = @"197528567092983";
     // 197528567092983 UCD Events
     
     NSURL *url = [[NSURL alloc] initWithString:urlAsString];
-    NSLog(@"%@", urlAsString);
+    
+    //NSLog(@"%@", urlAsString);
     
     [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
         

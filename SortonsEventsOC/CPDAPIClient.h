@@ -14,12 +14,14 @@ extern NSString * const cpdBaseURL;
 @interface CPDAPIClient : AFHTTPSessionManager
 
 + (CPDAPIClient *)sharedClient;
-+ (NSArray *)includedPagesFromJSON:(NSData *)objectNotation error:(NSError **)error;
++ (NSArray *)includedPagesFromJSON:(NSDictionary *)objectNotation error:(NSError **)error;
+
+- (NSArray *)includedPagesFromCache;
 
 - (void)getClientPages:(NSString *)cpid
                 success:(void(^)(NSURLSessionDataTask *task, id responseObject))success
                 failure:(void(^)(NSURLSessionDataTask *task, NSError *error))failure;
 
--(void)saveToCache:(NSData *)objectNotation;
+- (void)saveToCache:(NSData *)objectNotation;
 
 @end

@@ -98,7 +98,7 @@
 
 - (void)didReceiveDiscoveredEvents:(NSArray *)discoveredEvents
 {
-    NSLog(@"ViewController didReceiveDiscoveredEvents");
+    // NSLog(@"ViewController didReceiveDiscoveredEvents");
     _discoveredEvents = discoveredEvents;
     tableData = discoveredEvents;
     
@@ -171,6 +171,7 @@
         [self openInWebView:[NSURL URLWithString:eventHttpURLString]];
     }
     
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 -(void)openInWebView:(NSURL*)url{
@@ -201,7 +202,7 @@
     NSString *fullPath = [cachesFolder stringByAppendingPathComponent:@"eventscache.txt"];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     if ([fileManager fileExistsAtPath:fullPath]){
-        NSLog(@"reading from cache");
+        // NSLog(@"reading from cache");
         NSData *cache = [NSData dataWithContentsOfFile:fullPath];
         NSMutableArray *discoveredEvents = [NSMutableArray arrayWithArray:[DiscoveredEventBuilder discoveredEventsFromJSON:cache error:nil]];
         

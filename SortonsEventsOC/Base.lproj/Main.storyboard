@@ -86,7 +86,7 @@
                             <constraint firstAttribute="centerX" secondItem="DPK-Av-5Vq" secondAttribute="centerX" id="uoc-cb-ijz"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Events" image="EventsTabBarIcon" selectedImage="EventsTabBarIconFilled" id="314-27-NfX">
+                    <tabBarItem key="tabBarItem" title="Events" image="EventsTabBarIcon" id="314-27-NfX">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="EventsTabBarIconFilled"/>
                         </userDefinedRuntimeAttributes>
@@ -99,10 +99,10 @@
             </objects>
             <point key="canvasLocation" x="-1902" y="-277"/>
         </scene>
-        <!--Belfield-->
+        <!--FOMO-->
         <scene sceneID="Cjf-6L-D3W">
             <objects>
-                <tabBarController title="Belfield" id="fOK-iX-9zf" sceneMemberID="viewController">
+                <tabBarController title="Belfield" id="fOK-iX-9zf" userLabel="FOMO" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Bvr-O5-V7q">
@@ -139,7 +139,7 @@
                                     <outlet property="delegate" destination="LWO-8l-cGf" id="jrp-H5-DKe"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dcU-vf-qTG">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dcU-vf-qTG">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -149,8 +149,8 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VyN-WR-vXu" id="4Ec-ld-Mfy">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="752" misplaced="YES" text="Name" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPH-3e-wtA">
-                                                    <rect key="frame" x="70" y="2" width="517" height="23"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Name" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPH-3e-wtA">
+                                                    <rect key="frame" x="70" y="10" width="517" height="23"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -195,11 +195,12 @@
                             <constraint firstItem="92q-tz-ovU" firstAttribute="top" secondItem="zrh-od-CdU" secondAttribute="bottom" id="EQw-4Y-Z7F"/>
                             <constraint firstItem="dcU-vf-qTG" firstAttribute="top" secondItem="92q-tz-ovU" secondAttribute="bottom" id="Mt9-XU-kEC"/>
                             <constraint firstItem="92q-tz-ovU" firstAttribute="width" secondItem="HPZ-wl-kr2" secondAttribute="width" id="gV0-z2-Nta"/>
+                            <constraint firstAttribute="centerX" secondItem="dcU-vf-qTG" secondAttribute="centerX" id="h65-9l-h47"/>
                             <constraint firstAttribute="centerX" secondItem="92q-tz-ovU" secondAttribute="centerX" id="ice-Vt-jvI"/>
                             <constraint firstItem="dcU-vf-qTG" firstAttribute="width" secondItem="HPZ-wl-kr2" secondAttribute="width" id="mAr-u1-xYH"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Directory" image="DirectoryTabBarIcon" selectedImage="DirectoryTabBarIconFilled" id="WDl-EB-POw">
+                    <tabBarItem key="tabBarItem" title="Directory" image="DirectoryTabBarIcon" id="WDl-EB-POw">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="DirectoryTabBarIconFilled"/>
                         </userDefinedRuntimeAttributes>
@@ -240,7 +241,7 @@
                             <constraint firstItem="bfR-F3-lBt" firstAttribute="width" secondItem="447-wI-2SS" secondAttribute="width" id="rBc-ky-ygQ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="News" image="NewsTabBarIcon" selectedImage="NewsTabBarIconFilled" id="29B-NB-HPO">
+                    <tabBarItem key="tabBarItem" title="News" image="NewsTabBarIcon" id="29B-NB-HPO">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="NewsTabBarIconFilled"/>
                         </userDefinedRuntimeAttributes>

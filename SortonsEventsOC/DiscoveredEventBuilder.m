@@ -24,7 +24,7 @@
     NSMutableArray *discoveredEvents = [[NSMutableArray alloc] init];
     
     NSArray *results = [parsedObject valueForKey:@"data"];
-    NSLog(@"Count %lu", (unsigned long)results.count);
+    // NSLog(@"Count %lu", (unsigned long)results.count);
     
     
     
@@ -47,7 +47,7 @@
 
         discoveredEvent.startTime = [dateFormat dateFromString:[discoveredEventsDic valueForKey:@"startTime"]];
 
-        discoveredEvent.isDateOnly =  [discoveredEventsDic valueForKey:@"dateOnly"];
+        discoveredEvent.isDateOnly =  [[discoveredEventsDic valueForKey:@"dateOnly"] boolValue];
         
         [discoveredEvents addObject:discoveredEvent];
         
