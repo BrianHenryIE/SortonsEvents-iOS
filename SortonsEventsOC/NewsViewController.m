@@ -21,17 +21,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Code for displaying a remote page
-    // http://sortonsevents.appspot.com/recentposts/?page_id=197528567092983
-    // some data: http://www.sortons.ie/events/somerecent.html
-    // http://sortonsevents.appspot.com/recentpostsmobile/news.html
-    // http://172.20.10.2/~brianhenry/SortonsEvents-Gwt-AppEngine-Java/src/main/webapp/recentpostsmobile/news.html
     //load url into webview
 
+    // The correct URL... TODO, build it properly from a plist
     NSString *strURL = @"http://sortonsevents.appspot.com/recentpostsmobile/news.html#197528567092983";
+    
+    
     //NSString *strURL = @"http://172.20.10.2/~brianhenry/SortonsEvents-Gwt-AppEngine-Java/src/main/webapp/recentpostsmobile/news.html#197528567092983";
-    //NSString *strURL = @"http://dev.sortons.ie/~brianhenry/SortonsEvents-Gwt-AppEngine-Java/src/main/webapp/recentpostsmobile/news.html#197528567092983";
-   
+    
     NSURL *url = [NSURL URLWithString:strURL];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:urlRequest];
