@@ -86,7 +86,11 @@
                             <constraint firstAttribute="centerX" secondItem="DPK-Av-5Vq" secondAttribute="centerX" id="uoc-cb-ijz"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Events" id="314-27-NfX"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="EventsTabBarIcon" selectedImage="EventsTabBarIconFilled" id="314-27-NfX">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="EventsTabBarIconFilled"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <connections>
                         <outlet property="tableViewOutlet" destination="DPK-Av-5Vq" id="zaK-Al-SwD"/>
                     </connections>
@@ -195,7 +199,11 @@
                             <constraint firstItem="dcU-vf-qTG" firstAttribute="width" secondItem="HPZ-wl-kr2" secondAttribute="width" id="mAr-u1-xYH"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Directory" id="WDl-EB-POw"/>
+                    <tabBarItem key="tabBarItem" title="Directory" image="DirectoryTabBarIcon" selectedImage="DirectoryTabBarIconFilled" id="WDl-EB-POw">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="DirectoryTabBarIconFilled"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <connections>
                         <outlet property="tableView" destination="dcU-vf-qTG" id="pKO-AY-aHc"/>
                     </connections>
@@ -232,7 +240,11 @@
                             <constraint firstItem="bfR-F3-lBt" firstAttribute="width" secondItem="447-wI-2SS" secondAttribute="width" id="rBc-ky-ygQ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="News" id="29B-NB-HPO"/>
+                    <tabBarItem key="tabBarItem" title="News" image="NewsTabBarIcon" selectedImage="NewsTabBarIconFilled" id="29B-NB-HPO">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="NewsTabBarIconFilled"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <connections>
                         <outlet property="webView" destination="bfR-F3-lBt" id="lxD-Tj-2QU"/>
                     </connections>
@@ -294,4 +306,12 @@
             <point key="canvasLocation" x="-398" y="-1243"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DirectoryTabBarIcon" width="25" height="25"/>
+        <image name="DirectoryTabBarIconFilled" width="25" height="25"/>
+        <image name="EventsTabBarIcon" width="25" height="25"/>
+        <image name="EventsTabBarIconFilled" width="25" height="25"/>
+        <image name="NewsTabBarIcon" width="25" height="25"/>
+        <image name="NewsTabBarIconFilled" width="25" height="25"/>
+    </resources>
 </document>
