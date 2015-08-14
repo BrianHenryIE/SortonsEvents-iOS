@@ -89,6 +89,15 @@
     self.webView.hidden = NO;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    // We've already preloaded 5* news stories before knowing the user will look at any
+    // Now they're on the view, load some more.
+    [self.webView stringByEvaluatingJavaScriptFromString:@"addPosts()"];
+
+}
 
 // Redraw the news items after the phone rotates
 // because they're the wrong width now.
@@ -109,13 +118,13 @@
 
         self.webView.hidden = NO;
         
-                    // Do view manipulation here.
-            [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
-            
-            //        [self.webView stringByEvaluatingJavaScriptFromString:@"stopJS()"];
-            [self.webView stringByEvaluatingJavaScriptFromString:@"refreshXfbml()"];
-            
-            NSLog(@"view rotated");
+        // Do view manipulation here.
+        [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+
+        [self.webView stringByEvaluatingJavaScriptFromString:@"refreshXfbml()"];
+        
+        // This should be prooperly logged and used to determine if users might like a prerendered landscape view.
+        //NSLog(@"view rotated");
         
     }];
     }
