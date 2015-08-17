@@ -5,20 +5,20 @@
 	<key>PreferenceSpecifiers</key>
 	<array>
 		<dict>
-			<key>Title</key>
-			<string>Group</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
 			<key>DefaultValue</key>
-			<true/>
+			<false/>
 			<key>Key</key>
 			<string>launch_native_apps_toggle</string>
 			<key>Title</key>
 			<string>Launch native apps</string>
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>info@sortons.ie</string>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
 		</dict>
 	</array>
 	<key>StringsTable</key>
