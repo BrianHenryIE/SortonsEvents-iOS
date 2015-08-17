@@ -8,6 +8,7 @@
 
 #import "NewsViewController.h"
 #import "CommonWebViewController.h"
+#import "fomo.h"
 
 @interface NewsViewController () <UIWebViewDelegate>
 
@@ -24,8 +25,9 @@
     //load url into webview
 
     // The correct URL... TODO, build it properly from a plist
-    NSString *strURL = @"http://sortonsevents.appspot.com/recentpostsmobile/news.html#197528567092983";
+    NSString *strURL = [NSString stringWithFormat:@"http://sortonsevents.appspot.com/recentpostsmobile/news.html#%@", [Fomo fomoId]];
     
+    // NSLog(@"strURL: %@", strURL);
     
     //NSString *strURL = @"http://172.20.10.2/~brianhenry/SortonsEvents-Gwt-AppEngine-Java/src/main/webapp/recentpostsmobile/news.html#197528567092983";
     

@@ -12,6 +12,7 @@
 #import "IncludedPageCell.h"
 #import "CommonWebViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "Fomo.h"
 
 @interface DirectoryViewController ()
 
@@ -148,7 +149,7 @@
     _filteredData = [NSMutableArray arrayWithArray:_dataSource];
     [self.tableView reloadData];
     
-    [client getClientPages:@"197528567092983"
+    [client getClientPages:[Fomo fomoId]
                    success:^(NSURLSessionDataTask *task, id responseObject) {
                        _dataSource = [CPDAPIClient includedPagesFromJSON:(NSDictionary *)responseObject error:nil];
                        _filteredData = [NSMutableArray arrayWithArray:_dataSource];

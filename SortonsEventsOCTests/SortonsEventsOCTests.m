@@ -11,6 +11,7 @@
 
 #import "SourcePage.h"
 #import "CPDAPIClient.h"
+#import "Fomo.h"
 
 @interface SortonsEventsOCTests : XCTestCase
 
@@ -28,8 +29,42 @@
     [super tearDown];
 }
 
-- (void)testDateFormatting {
+- (void)testTLAFromBindle {
     
+    
+    NSString *bundleIdentifier = @"ie.sortons.events.ucd";
+    
+    NSArray *bundleArray = [bundleIdentifier componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
+    
+    XCTAssert((bundleArray.count==4), @"bundle array separated ok?");
+    
+    NSString *tla = bundleArray[bundleArray.count-1]; // ucd, tcd etc
+    
+    XCTAssert([tla isEqualToString:@"ucd"], @"should be ucd?");
+    
+    NSDictionary *plistDict = [NSDictionary dictionaryWithContentsOfFile:@"/fomo.plist"];
+    
+    NSString *fomoId = [plistDict objectForKey:tla];
+    
+    // NSLog(@"%@", fomoId);
+
+    
+}
+
+-(void) testMore
+{
+    
+    NSLog(@"testStringFromClass");
+    NSLog(@"%@", [Fomo fomoId]);
+    
+    
+}
+
+
+/*
+
+- (void)testDateFormatting {
+       
     
     
     NSString *deStartTime = @"2015-02-19T00:00:00.000Z";
@@ -87,20 +122,10 @@
     }
     
     
-    
     XCTAssert(YES, @"Pass");
 }
 
+*/
 
-
--(void)testCPDParsing {
-    
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"ClientPageData" ofType:@"json"];
-    NSData *clientPageDataJson = [NSData dataWithContentsOfFile:filePath];
-    
-    NSArray *pages = [CPDAPIClient includedPagesFromJSON:(NSDictionary *)clientPageDataJson error:nil];
-    
-    XCTAssertEqual(307, (unsigned long)pages.count, "Wrong number of pages parsed");
-}
 
 @end
