@@ -37,8 +37,9 @@
 
 
 
-- (NSString *)friendlyDate:(NSDate *)dateTime
+- (NSString *)friendlyDate:(DiscoveredEvent *)discoveredEvent
 {
+    NSDate *dateTime = discoveredEvent.startTime;
     
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
    // [dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];
@@ -87,8 +88,12 @@
         
     } else {
 
-        [dateFormat setDateFormat:@"EEEE dd MMM 'at' HH:mm"];
-        NSString *friendlyTime = [NSString stringWithFormat:@"%@",[dateFormat stringFromDate:dateTime]];
+        if(discoveredEvent.isDateOnly){
+            [dateFormat setDateFormat:@"EEEE dd MMM"];
+        }else{
+            [dateFormat setDateFormat:@"EEEE dd MMM 'at' HH:mm"];
+        }
+        NSString *friendlyTime = [dateFormat stringFromDate:dateTime];
         
         return friendlyTime;
     }
@@ -127,7 +132,7 @@
     [cell.nameLabel setText:discoveredEvent.name];
     
     // Format and set date
-    NSString *friendlyDate = [self friendlyDate:discoveredEvent.startTime];
+    NSString *friendlyDate = [self friendlyDate:discoveredEvent];
     [cell.startTimeLabel setText:friendlyDate];
     
     [cell.locationLabel setText:discoveredEvent.location];
