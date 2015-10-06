@@ -1,17 +1,9 @@
+source 'https://github.com/CocoaPods/Specs.git'
 
+platform :ios, '9.0'
 
-platform :ios, '8.3'
+xcodeproj 'Sortons Events'
 
-target 'SortonsEventsOC' do
-
-    pod 'AFNetworking', '2.5.3'
-    pod 'SDWebImage', '~>3.6'
-
-end
-
-target 'SortonsEventsOCTests' do
-
-    pod 'AFNetworking', '2.5.3'
-
-end
+pod 'AFNetworking', '~>2.6'
+pod 'SDWebImage', '~>3.6'
 
