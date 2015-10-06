@@ -76,7 +76,6 @@
     NSDate *otherDate = [cal dateFromComponents:components];
     
     [dateFormat setDateFormat:@"HH:mm"];
-//    [dateFormat setTimeZone:[NSTimeZone timeZoneWithName:@"Europe/Dublin"]];
 
     if([yesterday isEqualToDate:otherDate]) {
         NSString *friendlyTime = [NSString stringWithFormat:@"Yesterday at %@",[dateFormat stringFromDate:dateTime]];

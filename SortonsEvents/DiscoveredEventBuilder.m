@@ -29,7 +29,7 @@
     
     
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];
+    [dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
     
     // For each object in the array of resutls
     for (NSDictionary *discoveredEventsDic in results) {
