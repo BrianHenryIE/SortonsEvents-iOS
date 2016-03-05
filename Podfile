@@ -7,3 +7,6 @@ xcodeproj 'Sortons Events'
 pod 'AFNetworking', '~>2.6'
 pod 'SDWebImage', '~>3.6'
 
+#pod 'FBSDKCoreKit'
+#pod 'FBSDKLoginKit'
+#pod 'FBSDKShareKit'

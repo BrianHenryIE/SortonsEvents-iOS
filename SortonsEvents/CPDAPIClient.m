@@ -12,6 +12,11 @@
 NSString * const cpdBaseURL = @"https://sortonsevents.appspot.com/_ah/api/clientdata/v1/clientpagedata/";
 // 197528567092983
 
+// me?fields=likes{events}
+
+
+
+
 @implementation CPDAPIClient
 
 

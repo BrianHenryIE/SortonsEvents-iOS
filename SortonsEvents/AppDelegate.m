@@ -23,7 +23,7 @@
     
     // Set the application defaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSDictionary *appDefaults = [NSDictionary dictionaryWithObject:@"NO"
+    NSDictionary *appDefaults = [NSDictionary dictionaryWithObject:@"YES"
                                                             forKey:@"launch_native_apps_toggle"];
     [defaults registerDefaults:appDefaults];
     [defaults synchronize];

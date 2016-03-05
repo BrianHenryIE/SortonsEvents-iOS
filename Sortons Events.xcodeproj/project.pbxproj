@@ -28,8 +28,8 @@
 		A6141D581BB9F44F003150F1 /* ClientPageData.json in Resources */ = {isa = PBXBuildFile; fileRef = A641041F1AE542D700FDA62D /* ClientPageData.json */; };
 		A6141D591BB9F44F003150F1 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
 		A6141D5A1BB9F44F003150F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA87F1AE62AFF00C1A55C /* Main.storyboard */; };
-		A6141D6A1BB9F51B003150F1 /* LaunchScreenTCD.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6141D611BB9F507003150F1 /* LaunchScreenTCD.xib */; settings = {ASSET_TAGS = (); }; };
-		A6141D6B1BB9F52E003150F1 /* LaunchScreenUCD.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6141D651BB9F507003150F1 /* LaunchScreenUCD.xib */; settings = {ASSET_TAGS = (); }; };
+		A6141D6A1BB9F51B003150F1 /* LaunchScreenTCD.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6141D611BB9F507003150F1 /* LaunchScreenTCD.xib */; };
+		A6141D6B1BB9F52E003150F1 /* LaunchScreenUCD.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6141D651BB9F507003150F1 /* LaunchScreenUCD.xib */; };
 		A6141D6F1BB9F537003150F1 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613161A91492500A5F082 /* EventsViewController.m */; };
 		A6141D701BB9F537003150F1 /* CPDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BA1AE5494F00D1C950 /* CPDAPIClient.m */; };
 		A6141D711BB9F537003150F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613131A91492500A5F082 /* AppDelegate.m */; };
@@ -45,13 +45,13 @@
 		A6141D7B1BB9F537003150F1 /* DirectoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BE1AE5519800D1C950 /* DirectoryViewController.m */; };
 		A6141D7C1BB9F537003150F1 /* IncludedPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AF6F371B5416FF00BA62DF /* IncludedPageCell.m */; };
 		A6141D7D1BB9F537003150F1 /* SortonsEventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6133E1A914B6C00A5F082 /* SortonsEventsManager.m */; };
-		A6141D811BB9F537003150F1 /* LaunchScreenTCD.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6141D611BB9F507003150F1 /* LaunchScreenTCD.xib */; settings = {ASSET_TAGS = (); }; };
+		A6141D811BB9F537003150F1 /* LaunchScreenTCD.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6141D611BB9F507003150F1 /* LaunchScreenTCD.xib */; };
 		A6141D821BB9F537003150F1 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A67150C31B825D66006537B8 /* fomo.plist */; };
 		A6141D831BB9F537003150F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131B1A91492500A5F082 /* Images.xcassets */; };
 		A6141D841BB9F537003150F1 /* ClientPageData.json in Resources */ = {isa = PBXBuildFile; fileRef = A641041F1AE542D700FDA62D /* ClientPageData.json */; };
 		A6141D851BB9F537003150F1 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
 		A6141D861BB9F537003150F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA87F1AE62AFF00C1A55C /* Main.storyboard */; };
-		A6141D8D1BB9F55D003150F1 /* LaunchScreenUCC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6141D631BB9F507003150F1 /* LaunchScreenUCC.xib */; settings = {ASSET_TAGS = (); }; };
+		A6141D8D1BB9F55D003150F1 /* LaunchScreenUCC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6141D631BB9F507003150F1 /* LaunchScreenUCC.xib */; };
 		A62BD61B1B9E1C4500E928E5 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613161A91492500A5F082 /* EventsViewController.m */; };
 		A62BD61C1B9E1C4500E928E5 /* CPDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BA1AE5494F00D1C950 /* CPDAPIClient.m */; };
 		A62BD61D1B9E1C4500E928E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613131A91492500A5F082 /* AppDelegate.m */; };
@@ -72,6 +72,30 @@
 		A62BD6301B9E1C4500E928E5 /* ClientPageData.json in Resources */ = {isa = PBXBuildFile; fileRef = A641041F1AE542D700FDA62D /* ClientPageData.json */; };
 		A62BD6311B9E1C4500E928E5 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
 		A62BD6321B9E1C4500E928E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA87F1AE62AFF00C1A55C /* Main.storyboard */; };
+		A62E6E1F1C8500AB001A645D /* LaunchScreenDCU.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A62E6E1E1C8500AB001A645D /* LaunchScreenDCU.storyboard */; };
+		A62E6E201C85015B001A645D /* LaunchScreenDCU.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A62E6E1E1C8500AB001A645D /* LaunchScreenDCU.storyboard */; };
+		A63B32A31C68AFA400C46020 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613161A91492500A5F082 /* EventsViewController.m */; };
+		A63B32A41C68AFA400C46020 /* CPDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BA1AE5494F00D1C950 /* CPDAPIClient.m */; };
+		A63B32A51C68AFA400C46020 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613131A91492500A5F082 /* AppDelegate.m */; };
+		A63B32A61C68AFA400C46020 /* SourcePage.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A201191AE5652E00BB1925 /* SourcePage.m */; };
+		A63B32A71C68AFA400C46020 /* DiscoveredEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */; };
+		A63B32A81C68AFA400C46020 /* Fomo.m in Sources */ = {isa = PBXBuildFile; fileRef = A67150C61B825EB1006537B8 /* Fomo.m */; };
+		A63B32A91C68AFA400C46020 /* DiscoveredEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6133B1A914A4D00A5F082 /* DiscoveredEvent.m */; };
+		A63B32AA1C68AFA400C46020 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613101A91492500A5F082 /* main.m */; };
+		A63B32AB1C68AFA400C46020 /* SortonsEventsCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */; };
+		A63B32AC1C68AFA400C46020 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1CB51ADC4CBD00F6FB18 /* NewsViewController.m */; };
+		A63B32AD1C68AFA400C46020 /* CommonWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D4C8911AE04E5500AA4D48 /* CommonWebViewController.m */; };
+		A63B32AE1C68AFA400C46020 /* DiscoveredEventBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613381A914A3200A5F082 /* DiscoveredEventBuilder.m */; };
+		A63B32AF1C68AFA400C46020 /* DirectoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BE1AE5519800D1C950 /* DirectoryViewController.m */; };
+		A63B32B01C68AFA400C46020 /* IncludedPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AF6F371B5416FF00BA62DF /* IncludedPageCell.m */; };
+		A63B32B11C68AFA400C46020 /* SortonsEventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6133E1A914B6C00A5F082 /* SortonsEventsManager.m */; };
+		A63B32B31C68AFA400C46020 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A64F897E1BC4861700AA6A7F /* libPods.a */; };
+		A63B32B51C68AFA400C46020 /* LaunchScreenNUIG.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131D1A91492500A5F082 /* LaunchScreenNUIG.xib */; };
+		A63B32B61C68AFA400C46020 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A67150C31B825D66006537B8 /* fomo.plist */; };
+		A63B32B71C68AFA400C46020 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131B1A91492500A5F082 /* Images.xcassets */; };
+		A63B32B81C68AFA400C46020 /* ClientPageData.json in Resources */ = {isa = PBXBuildFile; fileRef = A641041F1AE542D700FDA62D /* ClientPageData.json */; };
+		A63B32B91C68AFA400C46020 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
+		A63B32BA1C68AFA400C46020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA87F1AE62AFF00C1A55C /* Main.storyboard */; };
 		A64104201AE542D700FDA62D /* ClientPageData.json in Resources */ = {isa = PBXBuildFile; fileRef = A641041F1AE542D700FDA62D /* ClientPageData.json */; };
 		A64F897B1BC4860A00AA6A7F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A64F897A1BC4860A00AA6A7F /* libPods.a */; };
 		A64F897D1BC4861200AA6A7F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A64F897C1BC4861200AA6A7F /* libPods.a */; };
@@ -79,7 +103,33 @@
 		A67150C41B825D66006537B8 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A67150C31B825D66006537B8 /* fomo.plist */; };
 		A67150C71B825EB1006537B8 /* Fomo.m in Sources */ = {isa = PBXBuildFile; fileRef = A67150C61B825EB1006537B8 /* Fomo.m */; };
 		A67150C81B826B03006537B8 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A67150C31B825D66006537B8 /* fomo.plist */; };
+		A676277B1C839558004C8E08 /* Luke4C&C.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A676277A1C839558004C8E08 /* Luke4C&C.storyboard */; };
+		A676277F1C839586004C8E08 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613161A91492500A5F082 /* EventsViewController.m */; };
+		A67627801C839586004C8E08 /* CPDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BA1AE5494F00D1C950 /* CPDAPIClient.m */; };
+		A67627811C839586004C8E08 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613131A91492500A5F082 /* AppDelegate.m */; };
+		A67627821C839586004C8E08 /* SourcePage.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A201191AE5652E00BB1925 /* SourcePage.m */; };
+		A67627831C839586004C8E08 /* DiscoveredEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */; };
+		A67627841C839586004C8E08 /* Fomo.m in Sources */ = {isa = PBXBuildFile; fileRef = A67150C61B825EB1006537B8 /* Fomo.m */; };
+		A67627851C839586004C8E08 /* DiscoveredEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6133B1A914A4D00A5F082 /* DiscoveredEvent.m */; };
+		A67627861C839586004C8E08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613101A91492500A5F082 /* main.m */; };
+		A67627871C839586004C8E08 /* SortonsEventsCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */; };
+		A67627881C839586004C8E08 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1CB51ADC4CBD00F6FB18 /* NewsViewController.m */; };
+		A67627891C839586004C8E08 /* CommonWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D4C8911AE04E5500AA4D48 /* CommonWebViewController.m */; };
+		A676278A1C839586004C8E08 /* DiscoveredEventBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613381A914A3200A5F082 /* DiscoveredEventBuilder.m */; };
+		A676278B1C839586004C8E08 /* DirectoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BE1AE5519800D1C950 /* DirectoryViewController.m */; };
+		A676278C1C839586004C8E08 /* IncludedPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AF6F371B5416FF00BA62DF /* IncludedPageCell.m */; };
+		A676278D1C839586004C8E08 /* SortonsEventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6133E1A914B6C00A5F082 /* SortonsEventsManager.m */; };
+		A67627901C839586004C8E08 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A67150C31B825D66006537B8 /* fomo.plist */; };
+		A67627921C839586004C8E08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131B1A91492500A5F082 /* Images.xcassets */; };
+		A67627931C839586004C8E08 /* ClientPageData.json in Resources */ = {isa = PBXBuildFile; fileRef = A641041F1AE542D700FDA62D /* ClientPageData.json */; };
+		A67627941C839586004C8E08 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
+		A67627951C839586004C8E08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA87F1AE62AFF00C1A55C /* Main.storyboard */; };
+		A676279C1C839835004C8E08 /* Luke4C&C.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A676277A1C839558004C8E08 /* Luke4C&C.storyboard */; };
 		A67FCB751AE5AF5F007EEFB6 /* ClientPageData.json in Resources */ = {isa = PBXBuildFile; fileRef = A641041F1AE542D700FDA62D /* ClientPageData.json */; };
+		A69DBF401C8AD654005064F7 /* DiscoveredEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF3F1C8AD654005064F7 /* DiscoveredEvent.swift */; };
+		A69DBF421C8AD67D005064F7 /* EventsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF411C8AD67D005064F7 /* EventsDataManager.swift */; };
+		A69DBF441C8AD688005064F7 /* EventsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF431C8AD688005064F7 /* EventsInteractor.swift */; };
+		A69DBF461C8AD68F005064F7 /* EventsInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF451C8AD68F005064F7 /* EventsInteractorIO.swift */; };
 		A6A2011A1AE5652E00BB1925 /* SourcePage.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A201191AE5652E00BB1925 /* SourcePage.m */; };
 		A6AF6F381B5416FF00BA62DF /* IncludedPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AF6F371B5416FF00BA62DF /* IncludedPageCell.m */; };
 		A6BDA8781AE5CA6500C1A55C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
@@ -95,6 +145,7 @@
 		A6C6133F1A914B6C00A5F082 /* SortonsEventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6133E1A914B6C00A5F082 /* SortonsEventsManager.m */; };
 		A6C613421A914B8B00A5F082 /* SortonsEventsCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */; };
 		A6C613491A91614F00A5F082 /* DiscoveredEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */; };
+		A6CF3FB31C83B64800E70437 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CF3FB21C83B64800E70437 /* libPods.a */; };
 		A6D386BB1AE5494F00D1C950 /* CPDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BA1AE5494F00D1C950 /* CPDAPIClient.m */; };
 		A6D386BF1AE5519800D1C950 /* DirectoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BE1AE5519800D1C950 /* DirectoryViewController.m */; };
 		A6D4C8921AE04E5500AA4D48 /* CommonWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D4C8911AE04E5500AA4D48 /* CommonWebViewController.m */; };
@@ -121,7 +172,10 @@
 		A6141D641BB9F507003150F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreenUCC.xib; sourceTree = "<group>"; };
 		A6141D661BB9F507003150F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreenUCD.xib; sourceTree = "<group>"; };
 		A6141D8B1BB9F537003150F1 /* FOMO UCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO UCC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A62BD6371B9E1C4500E928E5 /* SortonsEvents copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SortonsEvents copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A62BD6371B9E1C4500E928E5 /* FOMO UCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO UCD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A62E6E1E1C8500AB001A645D /* LaunchScreenDCU.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreenDCU.storyboard; sourceTree = "<group>"; };
+		A63B32BF1C68AFA400C46020 /* FOMO DCU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO DCU.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A63B32C01C68AFA400C46020 /* FOMO NUIG copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FOMO NUIG copy-Info.plist"; path = "/Users/brianhenry/Sites/SortonsEvents-iOS/FOMO NUIG copy-Info.plist"; sourceTree = "<absolute>"; };
 		A641041F1AE542D700FDA62D /* ClientPageData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ClientPageData.json; sourceTree = "<group>"; };
 		A64F897A1BC4860A00AA6A7F /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		A64F897C1BC4861200AA6A7F /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
@@ -129,6 +183,14 @@
 		A67150C31B825D66006537B8 /* fomo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fomo.plist; sourceTree = "<group>"; };
 		A67150C51B825EB1006537B8 /* Fomo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fomo.h; sourceTree = "<group>"; };
 		A67150C61B825EB1006537B8 /* Fomo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fomo.m; sourceTree = "<group>"; };
+		A676277A1C839558004C8E08 /* Luke4C&C.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Luke4C&C.storyboard"; sourceTree = "<group>"; };
+		A676279A1C839586004C8E08 /* Luke 4 C&C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Luke 4 C&C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A676279B1C839589004C8E08 /* FOMO UCD copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FOMO UCD copy-Info.plist"; path = "/Users/brianhenry/Sites/SortonsEvents-iOS/FOMO UCD copy-Info.plist"; sourceTree = "<absolute>"; };
+		A69DBF3E1C8AD654005064F7 /* SortonsEventsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SortonsEventsTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		A69DBF3F1C8AD654005064F7 /* DiscoveredEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveredEvent.swift; sourceTree = "<group>"; };
+		A69DBF411C8AD67D005064F7 /* EventsDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsDataManager.swift; sourceTree = "<group>"; };
+		A69DBF431C8AD688005064F7 /* EventsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsInteractor.swift; sourceTree = "<group>"; };
+		A69DBF451C8AD68F005064F7 /* EventsInteractorIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsInteractorIO.swift; sourceTree = "<group>"; };
 		A6A201181AE5652E00BB1925 /* SourcePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourcePage.h; sourceTree = "<group>"; };
 		A6A201191AE5652E00BB1925 /* SourcePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourcePage.m; sourceTree = "<group>"; };
 		A6AF6F361B5416FF00BA62DF /* IncludedPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncludedPageCell.h; sourceTree = "<group>"; };
@@ -159,6 +221,7 @@
 		A6C613461A91530E00A5F082 /* SortonsEventsManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortonsEventsManagerDelegate.h; sourceTree = "<group>"; };
 		A6C613471A91614F00A5F082 /* DiscoveredEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoveredEventCell.h; sourceTree = "<group>"; };
 		A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoveredEventCell.m; sourceTree = "<group>"; };
+		A6CF3FB21C83B64800E70437 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		A6D386B91AE5494F00D1C950 /* CPDAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDAPIClient.h; sourceTree = "<group>"; };
 		A6D386BA1AE5494F00D1C950 /* CPDAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDAPIClient.m; sourceTree = "<group>"; };
 		A6D386BD1AE5519800D1C950 /* DirectoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryViewController.h; sourceTree = "<group>"; };
@@ -195,6 +258,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A63B32B21C68AFA400C46020 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A63B32B31C68AFA400C46020 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A676278E1C839586004C8E08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6CF3FB31C83B64800E70437 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A6C613081A91492500A5F082 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -218,6 +297,7 @@
 		7ED8EBE8F8E37C0B2B3A2F16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A6CF3FB21C83B64800E70437 /* libPods.a */,
 				A64F897E1BC4861700AA6A7F /* libPods.a */,
 				A64F897C1BC4861200AA6A7F /* libPods.a */,
 				A64F897A1BC4860A00AA6A7F /* libPods.a */,
@@ -237,6 +317,152 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A69DBF2D1C8AD441005064F7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A69DBF2E1C8AD44A005064F7 /* Common */,
+				A69DBF301C8AD479005064F7 /* Modules */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		A69DBF2E1C8AD44A005064F7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A69DBF2F1C8AD459005064F7 /* View */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		A69DBF2F1C8AD459005064F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A69DBF301C8AD479005064F7 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A69DBF311C8AD487005064F7 /* Events */,
+				A69DBF321C8AD48D005064F7 /* News */,
+				A69DBF331C8AD493005064F7 /* Directory */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		A69DBF311C8AD487005064F7 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				A69DBF341C8AD4C0005064F7 /* Application Logic */,
+				A69DBF351C8AD4C9005064F7 /* Module Interface */,
+				A69DBF361C8AD4D1005064F7 /* User Interface */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
+		A69DBF321C8AD48D005064F7 /* News */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = News;
+			sourceTree = "<group>";
+		};
+		A69DBF331C8AD493005064F7 /* Directory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Directory;
+			sourceTree = "<group>";
+		};
+		A69DBF341C8AD4C0005064F7 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				A69DBF371C8AD4E5005064F7 /* Interactor */,
+				A69DBF381C8AD4EE005064F7 /* Manager */,
+				A69DBF391C8AD4F3005064F7 /* Model */,
+			);
+			name = "Application Logic";
+			sourceTree = "<group>";
+		};
+		A69DBF351C8AD4C9005064F7 /* Module Interface */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Module Interface";
+			sourceTree = "<group>";
+		};
+		A69DBF361C8AD4D1005064F7 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				A69DBF3C1C8AD530005064F7 /* Presenter */,
+				A69DBF3B1C8AD528005064F7 /* View */,
+				A69DBF3A1C8AD520005064F7 /* Wireframe */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		A69DBF371C8AD4E5005064F7 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				A69DBF431C8AD688005064F7 /* EventsInteractor.swift */,
+				A69DBF451C8AD68F005064F7 /* EventsInteractorIO.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		A69DBF381C8AD4EE005064F7 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A69DBF411C8AD67D005064F7 /* EventsDataManager.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		A69DBF391C8AD4F3005064F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A69DBF3F1C8AD654005064F7 /* DiscoveredEvent.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A69DBF3A1C8AD520005064F7 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Wireframe;
+			sourceTree = "<group>";
+		};
+		A69DBF3B1C8AD528005064F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A69DBF3C1C8AD530005064F7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		A69DBF3D1C8AD57B005064F7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A6BDA87F1AE62AFF00C1A55C /* Main.storyboard */,
+				A6C6131D1A91492500A5F082 /* LaunchScreenNUIG.xib */,
+				A6141D611BB9F507003150F1 /* LaunchScreenTCD.xib */,
+				A6141D631BB9F507003150F1 /* LaunchScreenUCC.xib */,
+				A6141D651BB9F507003150F1 /* LaunchScreenUCD.xib */,
+				A6C6131B1A91492500A5F082 /* Images.xcassets */,
+				A676277A1C839558004C8E08 /* Luke4C&C.storyboard */,
+				A62E6E1E1C8500AB001A645D /* LaunchScreenDCU.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		A6C613021A91492500A5F082 = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +471,8 @@
 				A6C6130C1A91492500A5F082 /* Products */,
 				8E75CCF169DD431EAC8B24DD /* Pods */,
 				7ED8EBE8F8E37C0B2B3A2F16 /* Frameworks */,
+				A63B32C01C68AFA400C46020 /* FOMO NUIG copy-Info.plist */,
+				A676279B1C839589004C8E08 /* FOMO UCD copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -253,9 +481,11 @@
 			children = (
 				A6C6130B1A91492500A5F082 /* SortonsEvents.app */,
 				A6C613241A91492500A5F082 /* SortonsEventsTests.xctest */,
-				A62BD6371B9E1C4500E928E5 /* SortonsEvents copy.app */,
+				A62BD6371B9E1C4500E928E5 /* FOMO UCD.app */,
 				A6141D5F1BB9F44F003150F1 /* FOMO TCD.app */,
 				A6141D8B1BB9F537003150F1 /* FOMO UCC.app */,
+				A63B32BF1C68AFA400C46020 /* FOMO DCU.app */,
+				A676279A1C839586004C8E08 /* Luke 4 C&C.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -263,6 +493,7 @@
 		A6C6130D1A91492500A5F082 /* SortonsEvents */ = {
 			isa = PBXGroup;
 			children = (
+				A69DBF2D1C8AD441005064F7 /* Classes */,
 				A6D7AECE1B4E9931002F1BDA /* Model */,
 				A6D386B81AE5490E00D1C950 /* APIClient */,
 				A6EA1CAD1ADC494A00F6FB18 /* Events */,
@@ -271,17 +502,11 @@
 				A6D4C88F1AE04DD800AA4D48 /* CommonWebView */,
 				A6C613121A91492500A5F082 /* AppDelegate.h */,
 				A6C613131A91492500A5F082 /* AppDelegate.m */,
-				A6BDA87F1AE62AFF00C1A55C /* Main.storyboard */,
-				A6C6131D1A91492500A5F082 /* LaunchScreenNUIG.xib */,
-				A6141D611BB9F507003150F1 /* LaunchScreenTCD.xib */,
-				A6141D631BB9F507003150F1 /* LaunchScreenUCC.xib */,
-				A6141D651BB9F507003150F1 /* LaunchScreenUCD.xib */,
-				A6C6131B1A91492500A5F082 /* Images.xcassets */,
+				A69DBF3D1C8AD57B005064F7 /* Resources */,
 				A6C6130E1A91492500A5F082 /* Supporting Files */,
-				A6BDA8771AE5CA6500C1A55C /* Settings.bundle */,
-				A67150C31B825D66006537B8 /* fomo.plist */,
 				A67150C51B825EB1006537B8 /* Fomo.h */,
 				A67150C61B825EB1006537B8 /* Fomo.m */,
+				A69DBF3E1C8AD654005064F7 /* SortonsEventsTests-Bridging-Header.h */,
 			);
 			path = SortonsEvents;
 			sourceTree = "<group>";
@@ -289,6 +514,8 @@
 		A6C6130E1A91492500A5F082 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A67150C31B825D66006537B8 /* fomo.plist */,
+				A6BDA8771AE5CA6500C1A55C /* Settings.bundle */,
 				A6C6130F1A91492500A5F082 /* Info.plist */,
 				A6C613101A91492500A5F082 /* main.m */,
 			);
@@ -438,7 +665,45 @@
 			);
 			name = "FOMO UCD";
 			productName = DublinTheatreOC;
-			productReference = A62BD6371B9E1C4500E928E5 /* SortonsEvents copy.app */;
+			productReference = A62BD6371B9E1C4500E928E5 /* FOMO UCD.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A63B32A01C68AFA400C46020 /* FOMO DCU */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A63B32BC1C68AFA400C46020 /* Build configuration list for PBXNativeTarget "FOMO DCU" */;
+			buildPhases = (
+				A63B32A11C68AFA400C46020 /* Check Pods Manifest.lock */,
+				A63B32A21C68AFA400C46020 /* Sources */,
+				A63B32B21C68AFA400C46020 /* Frameworks */,
+				A63B32B41C68AFA400C46020 /* Resources */,
+				A63B32BB1C68AFA400C46020 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FOMO DCU";
+			productName = DublinTheatreOC;
+			productReference = A63B32BF1C68AFA400C46020 /* FOMO DCU.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A676277C1C839586004C8E08 /* Luke 4 C&C */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A67627971C839586004C8E08 /* Build configuration list for PBXNativeTarget "Luke 4 C&C" */;
+			buildPhases = (
+				A676277D1C839586004C8E08 /* Check Pods Manifest.lock */,
+				A676277E1C839586004C8E08 /* Sources */,
+				A676278E1C839586004C8E08 /* Frameworks */,
+				A676278F1C839586004C8E08 /* Resources */,
+				A67627961C839586004C8E08 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Luke 4 C&C";
+			productName = DublinTheatreOC;
+			productReference = A676279A1C839586004C8E08 /* Luke 4 C&C.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A6C6130A1A91492500A5F082 /* FOMO NUIG */ = {
@@ -486,6 +751,7 @@
 		A6C613031A91492500A5F082 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Sortons;
 				TargetAttributes = {
@@ -493,6 +759,9 @@
 						DevelopmentTeam = 3RM6H33EW7;
 					};
 					A62BD6181B9E1C4500E928E5 = {
+						DevelopmentTeam = 3RM6H33EW7;
+					};
+					A676277C1C839586004C8E08 = {
 						DevelopmentTeam = 3RM6H33EW7;
 					};
 					A6C6130A1A91492500A5F082 = {
@@ -523,6 +792,8 @@
 				A6C6130A1A91492500A5F082 /* FOMO NUIG */,
 				A6141D401BB9F44F003150F1 /* FOMO TCD */,
 				A6141D6C1BB9F537003150F1 /* FOMO UCC */,
+				A63B32A01C68AFA400C46020 /* FOMO DCU */,
+				A676277C1C839586004C8E08 /* Luke 4 C&C */,
 			);
 		};
 /* End PBXProject section */
@@ -568,6 +839,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A63B32B41C68AFA400C46020 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A63B32B51C68AFA400C46020 /* LaunchScreenNUIG.xib in Resources */,
+				A63B32B61C68AFA400C46020 /* fomo.plist in Resources */,
+				A63B32B71C68AFA400C46020 /* Images.xcassets in Resources */,
+				A63B32B81C68AFA400C46020 /* ClientPageData.json in Resources */,
+				A62E6E201C85015B001A645D /* LaunchScreenDCU.storyboard in Resources */,
+				A63B32B91C68AFA400C46020 /* Settings.bundle in Resources */,
+				A63B32BA1C68AFA400C46020 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A676278F1C839586004C8E08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A67627901C839586004C8E08 /* fomo.plist in Resources */,
+				A676279C1C839835004C8E08 /* Luke4C&C.storyboard in Resources */,
+				A67627921C839586004C8E08 /* Images.xcassets in Resources */,
+				A67627931C839586004C8E08 /* ClientPageData.json in Resources */,
+				A67627941C839586004C8E08 /* Settings.bundle in Resources */,
+				A67627951C839586004C8E08 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A6C613091A91492500A5F082 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -585,6 +883,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A62E6E1F1C8500AB001A645D /* LaunchScreenDCU.storyboard in Resources */,
+				A676277B1C839558004C8E08 /* Luke4C&C.storyboard in Resources */,
 				A64104201AE542D700FDA62D /* ClientPageData.json in Resources */,
 				A67150C81B826B03006537B8 /* fomo.plist in Resources */,
 			);
@@ -728,6 +1028,66 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A63B32A11C68AFA400C46020 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A63B32BB1C68AFA400C46020 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A676277D1C839586004C8E08 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A67627961C839586004C8E08 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F2FF5B912E30EC81F3873C3B /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -812,6 +1172,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A63B32A21C68AFA400C46020 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A63B32A31C68AFA400C46020 /* EventsViewController.m in Sources */,
+				A63B32A41C68AFA400C46020 /* CPDAPIClient.m in Sources */,
+				A63B32A51C68AFA400C46020 /* AppDelegate.m in Sources */,
+				A63B32A61C68AFA400C46020 /* SourcePage.m in Sources */,
+				A63B32A71C68AFA400C46020 /* DiscoveredEventCell.m in Sources */,
+				A63B32A81C68AFA400C46020 /* Fomo.m in Sources */,
+				A63B32A91C68AFA400C46020 /* DiscoveredEvent.m in Sources */,
+				A63B32AA1C68AFA400C46020 /* main.m in Sources */,
+				A63B32AB1C68AFA400C46020 /* SortonsEventsCommunicator.m in Sources */,
+				A63B32AC1C68AFA400C46020 /* NewsViewController.m in Sources */,
+				A63B32AD1C68AFA400C46020 /* CommonWebViewController.m in Sources */,
+				A63B32AE1C68AFA400C46020 /* DiscoveredEventBuilder.m in Sources */,
+				A63B32AF1C68AFA400C46020 /* DirectoryViewController.m in Sources */,
+				A63B32B01C68AFA400C46020 /* IncludedPageCell.m in Sources */,
+				A63B32B11C68AFA400C46020 /* SortonsEventsManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A676277E1C839586004C8E08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A676277F1C839586004C8E08 /* EventsViewController.m in Sources */,
+				A67627801C839586004C8E08 /* CPDAPIClient.m in Sources */,
+				A67627811C839586004C8E08 /* AppDelegate.m in Sources */,
+				A67627821C839586004C8E08 /* SourcePage.m in Sources */,
+				A67627831C839586004C8E08 /* DiscoveredEventCell.m in Sources */,
+				A67627841C839586004C8E08 /* Fomo.m in Sources */,
+				A67627851C839586004C8E08 /* DiscoveredEvent.m in Sources */,
+				A67627861C839586004C8E08 /* main.m in Sources */,
+				A67627871C839586004C8E08 /* SortonsEventsCommunicator.m in Sources */,
+				A67627881C839586004C8E08 /* NewsViewController.m in Sources */,
+				A67627891C839586004C8E08 /* CommonWebViewController.m in Sources */,
+				A676278A1C839586004C8E08 /* DiscoveredEventBuilder.m in Sources */,
+				A676278B1C839586004C8E08 /* DirectoryViewController.m in Sources */,
+				A676278C1C839586004C8E08 /* IncludedPageCell.m in Sources */,
+				A676278D1C839586004C8E08 /* SortonsEventsManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A6C613071A91492500A5F082 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -838,6 +1242,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A69DBF401C8AD654005064F7 /* DiscoveredEvent.swift in Sources */,
+				A69DBF461C8AD68F005064F7 /* EventsInteractorIO.swift in Sources */,
+				A69DBF441C8AD688005064F7 /* EventsInteractor.swift in Sources */,
+				A69DBF421C8AD67D005064F7 /* EventsDataManager.swift in Sources */,
 				A6C6132B1A91492500A5F082 /* SortonsEventsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1015,8 +1423,16 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.ucd;
-				PRODUCT_NAME = "SortonsEvents copy";
+				PRODUCT_NAME = "FOMO UCD";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1037,8 +1453,190 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.ucd;
-				PRODUCT_NAME = "SortonsEvents copy";
+				PRODUCT_NAME = "FOMO UCD";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A63B32BD1C68AFA400C46020 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 655F14701D4FAE9BCEEDFBE2 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDCU;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"DISABLE_PUSH_NOTIFICATIONS=1",
+				);
+				INFOPLIST_FILE = "FOMO NUIG copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.dcu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A63B32BE1C68AFA400C46020 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F9602B1EA7B4C9C3C87BF5B /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDCU;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"DISABLE_PUSH_NOTIFICATIONS=1",
+				);
+				INFOPLIST_FILE = "FOMO NUIG copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.dcu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A67627981C839586004C8E08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 655F14701D4FAE9BCEEDFBE2 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconLuke4cc;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"DISABLE_PUSH_NOTIFICATIONS=1",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-weak_framework",
+					"\"Accounts\"",
+					"-weak_framework",
+					"\"AudioToolbox\"",
+					"-weak_framework",
+					"\"CoreGraphics\"",
+					"-weak_framework",
+					"\"CoreLocation\"",
+					"-weak_framework",
+					"\"Foundation\"",
+					"-weak_framework",
+					"\"QuartzCore\"",
+					"-weak_framework",
+					"\"Security\"",
+					"-weak_framework",
+					"\"Social\"",
+					"-weak_framework",
+					"\"UIKit\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.luke4cc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A67627991C839586004C8E08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F9602B1EA7B4C9C3C87BF5B /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconLuke4cc;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"DISABLE_PUSH_NOTIFICATIONS=1",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-weak_framework",
+					"\"Accounts\"",
+					"-weak_framework",
+					"\"AudioToolbox\"",
+					"-weak_framework",
+					"\"CoreGraphics\"",
+					"-weak_framework",
+					"\"CoreLocation\"",
+					"-weak_framework",
+					"\"Foundation\"",
+					"-weak_framework",
+					"\"QuartzCore\"",
+					"-weak_framework",
+					"\"Security\"",
+					"-weak_framework",
+					"\"Social\"",
+					"-weak_framework",
+					"\"UIKit\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.luke4cc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1081,6 +1679,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1118,6 +1717,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1184,6 +1784,7 @@
 			baseConfigurationReference = 655F14701D4FAE9BCEEDFBE2 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1196,6 +1797,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ie.sortons.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SortonsEventsTests;
+				SWIFT_OBJC_BRIDGING_HEADER = "SortonsEvents/SortonsEventsTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SortonsEvents.app/SortonsEvents";
 			};
 			name = Debug;
@@ -1205,6 +1808,7 @@
 			baseConfigurationReference = 2F9602B1EA7B4C9C3C87BF5B /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1213,6 +1817,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ie.sortons.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SortonsEventsTests;
+				SWIFT_OBJC_BRIDGING_HEADER = "SortonsEvents/SortonsEventsTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SortonsEvents.app/SortonsEvents";
 			};
 			name = Release;
@@ -1243,6 +1848,24 @@
 			buildConfigurations = (
 				A62BD6351B9E1C4500E928E5 /* Debug */,
 				A62BD6361B9E1C4500E928E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A63B32BC1C68AFA400C46020 /* Build configuration list for PBXNativeTarget "FOMO DCU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A63B32BD1C68AFA400C46020 /* Debug */,
+				A63B32BE1C68AFA400C46020 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A67627971C839586004C8E08 /* Build configuration list for PBXNativeTarget "Luke 4 C&C" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A67627981C839586004C8E08 /* Debug */,
+				A67627991C839586004C8E08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
