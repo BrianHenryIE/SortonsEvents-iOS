@@ -1,12 +1,14 @@
 source 'https://github.com/CocoaPods/Specs.git'
-
+use_frameworks!
 platform :ios, '9.0'
 
-xcodeproj 'Sortons Events'
+xcodeproj 'SortonsEvents'
 
-pod 'AFNetworking', '~>2.6'
-pod 'SDWebImage', '~>3.6'
+pod 'AFNetworking'
+pod 'SDWebImage'
 
 #pod 'FBSDKCoreKit'
 #pod 'FBSDKLoginKit'
 #pod 'FBSDKShareKit'
+
+pod 'ObjectMapper'
