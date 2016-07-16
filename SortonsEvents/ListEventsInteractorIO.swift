@@ -8,19 +8,6 @@
 
 import Foundation
 
-//
-//protocol ListEventsViewControllerOutput {
-//    func fetchEvents(request: ListEvents_FetchEvents_Request)
-//    
-//    // func reportEvent(id: String, message : String)
-//    
-//    // send feedback: general/page to add
-//    
-//    // analytics!
-//    
-//}
-
-
 protocol ListEventsInteractorOutput {
     func presentFetchedEvents(upcomingEvents: ListEvents_FetchEvents_Response)
 }

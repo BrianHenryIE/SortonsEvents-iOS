@@ -8,27 +8,31 @@
 
 import Foundation
 
-class ClientPageDataCacheWorker {
+
+protocol ClientPageDataCacheWorkerProtocol {
+    
+    func fetch(completionHandler: (clientPageData: String) -> Void)
+    func save(latestClientPageData: String)
+}
+
+class ClientPageDataCacheWorker : ClientPageDataCacheWorkerProtocol {
     
     let fileURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).URLByAppendingPathComponent("fomo.json")
     
-    func fetchClientPageData() -> String {
+    func fetch(completionHandler: (clientPageData: String) -> Void) {
         
         // read file
         do {
             let fileFromCache = try String(contentsOfURL: fileURL)
-            return fileFromCache
+            completionHandler(clientPageData: fileFromCache)
         } catch {
             // TODO / this will throw an error already when parsing
-            return "{}"
         }
-        
-        // Filter to future events in presenter
     }
     
-    func saveClientPageDataToCache(newClientPageData: NSString) {
+    func save(latestClientPageData: String) {
         
-        let data = newClientPageData.dataUsingEncoding(NSUTF8StringEncoding)
+        let data = latestClientPageData.dataUsingEncoding(NSUTF8StringEncoding)
         
         do {
             try data!.writeToURL(fileURL, options: .AtomicWrite)

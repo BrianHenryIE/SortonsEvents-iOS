@@ -28,13 +28,25 @@ class ClientPageDataCacheWorkerTests: XCTestCase {
         let clientPageDataFromFile = try String(contentsOfFile: path)
         
         // Save using eventsCacheWorker
-        clientPageDataCacheWorker.saveClientPageDataToCache(clientPageDataFromFile)
+        clientPageDataCacheWorker.save(clientPageDataFromFile)
+        
+        let expectation = expectationWithDescription("clientPageDataCacheWorker.fetch()")
         
         // Get file from cache
-        let fileFromCache = clientPageDataCacheWorker.fetchClientPageData()
+        clientPageDataCacheWorker.fetch() { (clientPageData: String) in
         
-        // Verify the saved file
-        XCTAssertEqual(clientPageDataFromFile, fileFromCache)
+            // Verify the saved file
+            XCTAssertEqual(clientPageDataFromFile, clientPageData)
+
+            expectation.fulfill()
+            
+        }
+        
+        waitForExpectationsWithTimeout(5) { error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
+        }
         
         // Clean up
         do {
