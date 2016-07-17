@@ -8,10 +8,10 @@
 
 import Foundation
 
-protocol ListEventsPresenterOutput {
-    func displaySomething(viewModel: ListEventsViewModel)
-}
-
 protocol ListEventsTableViewControllerOutput {
     func fetchEvents(request: ListEvents_FetchEvents_Request)
+}
+
+protocol ListEventsPresenterOutput {
+    func displaySomething(viewModel: ListEventsViewModel)
 }
