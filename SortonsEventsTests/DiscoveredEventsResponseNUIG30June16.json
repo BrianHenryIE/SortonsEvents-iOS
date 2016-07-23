@@ -23,9 +23,8 @@
 ],
 "name": "Information Evening for Volunteering with Galway's Community Bicycle Workshop",
 "location": "Block R, Earls Island, University Road, Galway.",
-"startTime": "2016-06-30T18:00:00.000Z",
-"endTime": "2016-06-30T19:00:00.000Z",
-"dateOnly": false,
+"startTime": "2016-06-30T00:00:00.000Z",
+"dateOnly": true,
 "class": "ie.sortons.events.shared.DiscoveredEvent"
 },
 {
@@ -243,8 +242,7 @@
 ],
 "name": "Gender Fabulosity - Ivan Fahy's Gender Liberating Fashion Show",
 "location": "Bank of Ireland Theatre NUIG",
-"startTime": "2016-07-23T18:00:00.000Z",
-"endTime": "2016-07-23T20:00:00.000Z",
+"startTime": "2016-07-23T19:00:00.000Z",
 "dateOnly": false,
 "class": "ie.sortons.events.shared.DiscoveredEvent"
 },
