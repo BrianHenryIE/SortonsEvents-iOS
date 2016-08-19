@@ -11,10 +11,10 @@ import ObjectMapper
 
 class ListEventsPresenterOutputSpy : ListEventsPresenterOutput {
     
-    var displaySomethingCalled = false
+    var presentFetchedEventsCalled = false
     
-    func displaySomething(viewModel: ListEventsViewModel) {
-        displaySomethingCalled = true
+    func presentFetchedEvents(viewModel: ListEventsViewModel) {
+        presentFetchedEventsCalled = true
     }
 }
 
@@ -22,7 +22,8 @@ class ListEventsPresenterTests: XCTestCase {
     
     var events : [DiscoveredEvent]!
     
-    let sut = ListEventsPresenter()
+    var sut : ListEventsPresenter!
+    let spy = ListEventsPresenterOutputSpy()
     
     override func setUp() {
         super.setUp()
@@ -38,7 +39,17 @@ class ListEventsPresenterTests: XCTestCase {
         } catch {
             // stop the tests!
         }
+        
+        sut = ListEventsPresenter(output: spy)
     }
+    
+    func testPresentFetchedEvents() {
+        
+        sut.presentFetchedEvents(ListEvents_FetchEvents_Response(events: events))
+        
+        XCTAssertTrue(spy.presentFetchedEventsCalled)        
+    }
+    
     
     func testShouldDiscardEarlyEvents() {
         var remainingEvents : [DiscoveredEvent]

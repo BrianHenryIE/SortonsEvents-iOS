@@ -11,15 +11,23 @@
 
 import UIKit
 
-struct ListEvents_FetchEvents_Request
-{
+struct ListEvents_FetchEvents_Request {
 }
 
-struct ListEvents_FetchEvents_Response
-{
+struct ListEvents_FetchEvents_Response {
     let events : [DiscoveredEvent]
 }
 
-struct ListEventsViewModel
-{
+struct ListEventsViewModel {
+    let discoveredEvents : [DiscoveredEventCellModel]
 }
+
+struct DiscoveredEventCellModel {
+    let webUrl: NSURL
+    let appUrl : NSURL
+    let name: String
+    let startTime : String
+    let location: String?
+    let imageUrl : NSURL
+}
+

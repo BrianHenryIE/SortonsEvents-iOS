@@ -10,29 +10,43 @@ import Foundation
 
 class ListEventsPresenter : ListEventsInteractorOutput {
     
-    let observingFrom : NSDate
+    let output : ListEventsPresenterOutput
+    
+    let observingFrom : NSDate!
     
     let dateFormat = NSDateFormatter()
     let calendar = NSCalendar.currentCalendar()
- 
+    
     // For testing
-    init(withDate: NSDate = NSDate()){
+    init(output: ListEventsPresenterOutput, withDate: NSDate = NSDate()){
+        self.output = output
         observingFrom = withDate
-        
     }
     
     // Gotta set the view controller here... router?
     
     func presentFetchedEvents(upcomingEvents: ListEvents_FetchEvents_Response) {
     
+        let filteredEvents = filterToOngoingEvents(upcomingEvents.events, observingFrom: observingFrom)
+        
+        // TODO This should maybe be outside this function. Currently untested
+        let cellModels : [DiscoveredEventCellModel] = filteredEvents.map({
+            let webUrl = NSURL(string: "https://facebook.com/events/\($0.eventId)/")!
+            let appUrl = NSURL(string: "fb://profile/\($0.eventId)/")!
+            let imageUrl = NSURL(string: "https://graph.facebook.com/\($0.eventId)@/picture?type=square")!
+            
+            return DiscoveredEventCellModel(webUrl: webUrl, appUrl: appUrl, name: $0.name, startTime: formatFriendlyTime($0.startTime, allDay: $0.dateOnly), location: $0.location, imageUrl: imageUrl)
+        })
+        
+        let viewModel = ListEventsViewModel(discoveredEvents: cellModels)
+        
+        output.presentFetchedEvents(viewModel)
     }
     
     func filterToOngoingEvents(allEvents : [DiscoveredEvent], observingFrom: NSDate) -> [DiscoveredEvent] {
         
         let yesterday = calendar.dateByAddingUnit(.Day, value: -1, toDate: observingFrom, options: [])!
         let yesterday6pm = calendar.dateBySettingHour(18, minute: 0, second: 0, ofDate: yesterday, options: [])!
-        let tomorrow = calendar.dateByAddingUnit(.Day, value: 1, toDate: observingFrom, options: [])!
-        
         let today6am = calendar.dateBySettingHour(6, minute: 0, second: 0, ofDate: observingFrom, options: NSCalendarOptions.MatchFirst)!
         
         var filteredEvents = [DiscoveredEvent]()
@@ -65,7 +79,7 @@ class ListEventsPresenter : ListEventsInteractorOutput {
     }
     
     // Should really be an NSDate extension
-    func formatFriendlyTime(date : NSDate, allDay : Bool, observingFrom : NSDate) -> String {
+    func formatFriendlyTime(date : NSDate, allDay : Bool, observingFrom : NSDate = NSDate()) -> String {
         
         let yesterday = calendar.dateByAddingUnit(.Day, value: -1, toDate: observingFrom, options: [])!
         let tomorrow = calendar.dateByAddingUnit(.Day, value: 1, toDate: observingFrom, options: [])!

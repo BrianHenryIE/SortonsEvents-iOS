@@ -13,5 +13,5 @@ protocol ListEventsTableViewControllerOutput {
 }
 
 protocol ListEventsPresenterOutput {
-    func displaySomething(viewModel: ListEventsViewModel)
+    func presentFetchedEvents(viewModel: ListEventsViewModel)
 }
