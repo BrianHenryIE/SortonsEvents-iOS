@@ -26,7 +26,8 @@
 
     NSString *fomoId = [plistDict objectForKey:tla];
  
-    return fomoId;
+    // return fomoId;
+    return @"428055040731753";
     
 }
 

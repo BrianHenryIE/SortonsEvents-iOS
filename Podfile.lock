@@ -15,7 +15,9 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - Alamofire (3.4.1)
-  - ObjectMapper (1.3.0)
+  - AlamofireImage (2.4.1):
+    - Alamofire (~> 3.3)
+  - ObjectMapper (1.4.0)
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
@@ -23,15 +25,17 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - Alamofire (~> 3.4)
+  - AlamofireImage (~> 2.0)
   - ObjectMapper
   - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
-  ObjectMapper: 4eb08a726e9791a93b2632049951b56a7c17e471
+  AlamofireImage: 3ccf3347d9ea24580dc11fb892770a0be6a29826
+  ObjectMapper: a07ad0462c5adf014adc0f89ef04c29b626e855e
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
 
-PODFILE CHECKSUM: 8523dc48fce9ae34c3929d84a322e1c05981a84a
+PODFILE CHECKSUM: 51b19384b0ddf6fcfffc538aae6c56a1e56a4939
 
 COCOAPODS: 1.0.1

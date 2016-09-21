@@ -49,9 +49,9 @@
 		<true/>
 	</dict>
 	<key>UILaunchStoryboardName</key>
-	<string>Luke4C&amp;C</string>
+	<string>LaunchScreenNUIG</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
+	<string>Root</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

@@ -89,7 +89,7 @@
 // duplicate code! (also in EventsViewController)
 -(void)openInWebView:(NSURL*)url{
     
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"CommonWebView" bundle:nil];
     UIViewController *myController = [storyboard instantiateViewControllerWithIdentifier:@"CommonWebViewController"];
 
     CommonWebViewController *cwvs = [CommonWebViewController alloc];
@@ -149,7 +149,7 @@
     _filteredData = [NSMutableArray arrayWithArray:_dataSource];
     [self.tableView reloadData];
     
-    [client getClientPages:[Fomo fomoId]
+    [client getClientPages:@"428055040731753"
                    success:^(NSURLSessionDataTask *task, id responseObject) {
                        _dataSource = [CPDAPIClient includedPagesFromJSON:(NSDictionary *)responseObject error:nil];
                        _filteredData = [NSMutableArray arrayWithArray:_dataSource];
