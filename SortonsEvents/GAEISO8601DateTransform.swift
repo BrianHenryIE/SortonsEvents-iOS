@@ -1,4 +1,4 @@
-//
+    //
 //  GAEISO8601DateTransform.swift
 //  SortonsEvents
 //
@@ -9,13 +9,13 @@
 import Foundation
 import ObjectMapper
 
-public class GAEISO8601DateTransform: DateFormatterTransform {
+open class GAEISO8601DateTransform: DateFormatterTransform {
     
     public init() {
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         
         // Not sure if this line is needed - copied from proper 8601
-        formatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+        formatter.locale = Locale(identifier: "en_US_POSIX")
         
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         

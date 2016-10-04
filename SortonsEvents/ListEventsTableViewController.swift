@@ -11,7 +11,6 @@
 
 import UIKit
 
-
 class ListEventsTableViewController: UITableViewController, ListEventsPresenterOutput
 {
     var output: ListEventsTableViewControllerOutput!
@@ -28,6 +27,8 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NSLog("ListEvents viewDidLoad")
         fetchEventsOnLoad()
     }
 
@@ -38,9 +39,10 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
 
 // MARK: Display logic ListEventsPresenterOutput
 
-    func displaySomething(viewModel: ListEventsViewModel) {
+    func presentFetchedEvents(_ viewModel: ListEventsViewModel) {
         // NOTE: Display the result from the Presenter
 
-        // nameTextField.text = viewModel.name
+        NSLog("present events")
+       
     }
 }

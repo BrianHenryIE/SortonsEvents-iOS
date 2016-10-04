@@ -7,7 +7,7 @@
         <!--FOMO-->
         <scene sceneID="Cjf-6L-D3W">
             <objects>
-                <tabBarController title="Belfield" id="fOK-iX-9zf" userLabel="FOMO" sceneMemberID="viewController">
+                <tabBarController title="Belfield" id="fOK-iX-9zf" userLabel="FOMO" customClass="RootViewController" customModule="SortonsEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Bvr-O5-V7q">

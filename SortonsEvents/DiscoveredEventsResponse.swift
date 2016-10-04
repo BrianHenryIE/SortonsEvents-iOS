@@ -15,7 +15,7 @@ class DiscoveredEventsResponse : Mappable {
     
     var data : [DiscoveredEvent]!
     
-    required init?(_ map: Map) {
+    required init?(map _: Map) {
         
     }
     

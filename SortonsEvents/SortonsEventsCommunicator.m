@@ -16,7 +16,7 @@
 
 - (void)getDiscoveredEvents
 {
-    NSString *urlAsString = [NSString stringWithFormat:@"https://sortonsevents.appspot.com/_ah/api/upcomingEvents/v1/discoveredeventsresponse/%@", [Fomo fomoId]];
+    NSString *urlAsString = [NSString stringWithFormat:@"https://sortonsevents.appspot.com/_ah/api/upcomingEvents/v1/discoveredeventsresponse/%@", @"428055040731753"];
     
     // 632419800128560 Dublin Theatre
     // 197528567092983 UCD Events

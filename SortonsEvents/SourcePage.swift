@@ -1,3 +1,4 @@
+
 //
 //  SourcePage.swift
 //  SortonsEvents
@@ -23,7 +24,7 @@ class SourcePage : Mappable {
     var zip : String?
     var friendlyLocationString : String?
     
-    required init?(_ map: Map) {
+    required init?(map _: Map) {
         
     }
     

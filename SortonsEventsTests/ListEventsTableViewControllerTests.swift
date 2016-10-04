@@ -13,7 +13,7 @@ class ListEventsTableViewControllerOutputSpy : ListEventsTableViewControllerOutp
     
     var fetchEventsCalled = false
 
-    func fetchEvents(request: ListEvents_FetchEvents_Request) {
+    func fetchEvents(_ request: ListEvents_FetchEvents_Request) {
           fetchEventsCalled = true
     }
 }
@@ -44,9 +44,9 @@ class ListEventsTableViewControllerTests: XCTestCase {
     func setupListOrdersViewController()
     {
         //let bundle = NSBundle.mainBundle()
-        let bundle = NSBundle(forClass: self.classForCoder)
+        let bundle = Bundle(for: self.classForCoder)
         let storyboard = UIStoryboard(name: "ListEventsStoryboard", bundle: bundle)
-        sut = storyboard.instantiateViewControllerWithIdentifier("ListEventsTableViewController") as! ListEventsTableViewController
+        sut = storyboard.instantiateViewController(withIdentifier: "ListEventsTableViewController") as! ListEventsTableViewController
     }
     
     func testShouldFetchOrdersWhenViewIsLoaded()
@@ -66,7 +66,7 @@ class ListEventsTableViewControllerTests: XCTestCase {
     func loadView()
     {
         window.addSubview(sut.view)
-        NSRunLoop.currentRunLoop().runUntilDate(NSDate())
+        RunLoop.current.run(until: Date())
     }
     
 }

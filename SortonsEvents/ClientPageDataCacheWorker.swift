@@ -11,31 +11,31 @@ import Foundation
 
 protocol ClientPageDataCacheWorkerProtocol {
     
-    func fetch(completionHandler: (clientPageData: String) -> Void)
-    func save(latestClientPageData: String)
+    func fetch(_ completionHandler: (_ clientPageData: String) -> Void)
+    func save(_ latestClientPageData: String)
 }
 
 class ClientPageDataCacheWorker : ClientPageDataCacheWorkerProtocol {
     
-    let fileURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).URLByAppendingPathComponent("fomo.json")
+    let fileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("fomo.json")
     
-    func fetch(completionHandler: (clientPageData: String) -> Void) {
+    func fetch(_ completionHandler: (_ clientPageData: String) -> Void) {
         
         // read file
         do {
-            let fileFromCache = try String(contentsOfURL: fileURL)
-            completionHandler(clientPageData: fileFromCache)
+            let fileFromCache = try String(contentsOf: fileURL)
+            completionHandler(fileFromCache)
         } catch {
             // TODO / this will throw an error already when parsing
         }
     }
     
-    func save(latestClientPageData: String) {
+    func save(_ latestClientPageData: String) {
         
-        let data = latestClientPageData.dataUsingEncoding(NSUTF8StringEncoding)
+        let data = latestClientPageData.data(using: String.Encoding.utf8)
         
         do {
-            try data!.writeToURL(fileURL, options: .AtomicWrite)
+            try data!.write(to: fileURL, options: .atomicWrite)
         } catch {
             // TODO
         }

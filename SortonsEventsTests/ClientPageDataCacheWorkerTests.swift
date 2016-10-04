@@ -15,22 +15,22 @@ class ClientPageDataCacheWorkerTests: XCTestCase {
     func testCilentPageDataCacheWorker() throws {
        
         // Clear the cache
-        let fileURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).URLByAppendingPathComponent("fomo.json")
+        let fileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("fomo.json")
         do {
-            try NSFileManager.defaultManager().removeItemAtURL(fileURL)
+            try FileManager.default.removeItem(at: fileURL)
         } catch {
             // ...
         }
         
         // Read test ClientPageData from file
-        let bundle = NSBundle(forClass: self.classForCoder)
-        let path = bundle.pathForResource("ClientPageDataUcdEvents", ofType: "json")!
+        let bundle = Bundle(for: self.classForCoder)
+        let path = bundle.path(forResource: "ClientPageDataUcdEvents", ofType: "json")!
         let clientPageDataFromFile = try String(contentsOfFile: path)
         
         // Save using eventsCacheWorker
         clientPageDataCacheWorker.save(clientPageDataFromFile)
         
-        let expectation = expectationWithDescription("clientPageDataCacheWorker.fetch()")
+        let expectation = self.expectation(description: "clientPageDataCacheWorker.fetch()")
         
         // Get file from cache
         clientPageDataCacheWorker.fetch() { (clientPageData: String) in
@@ -42,7 +42,7 @@ class ClientPageDataCacheWorkerTests: XCTestCase {
             
         }
         
-        waitForExpectationsWithTimeout(5) { error in
+        waitForExpectations(timeout: 5) { error in
             if let error = error {
                 print("Error: \(error.localizedDescription)")
             }
@@ -50,7 +50,7 @@ class ClientPageDataCacheWorkerTests: XCTestCase {
         
         // Clean up
         do {
-            try NSFileManager.defaultManager().removeItemAtURL(fileURL)
+            try FileManager.default.removeItem(at: fileURL)
         } catch {
             // ...
         }

@@ -23,11 +23,11 @@ class ListEventsInteractor : NSObject, ListEventsTableViewControllerOutput {
         self.listEventsCacheWorker = listEventsCacheWorker
     }
     
-    func fetchEvents(request: ListEvents_FetchEvents_Request) {
+    func fetchEvents(_ request: ListEvents_FetchEvents_Request) {
         
         // Get from cache
         listEventsCacheWorker.fetch { (cacheString) -> Void in
-            let eventsFromCache : DiscoveredEventsResponse = Mapper<DiscoveredEventsResponse>().map(cacheString)!
+            let eventsFromCache : DiscoveredEventsResponse = Mapper<DiscoveredEventsResponse>().map(JSONString: cacheString)!
             if let data = eventsFromCache.data {
                 let response = ListEvents_FetchEvents_Response(events: data)
                 self.output.presentFetchedEvents(response)
@@ -38,7 +38,7 @@ class ListEventsInteractor : NSObject, ListEventsTableViewControllerOutput {
         listEventsNetworkWorker.fetchEvents(fomoId) { (discoveredEventsJsonPage) -> Void in
             
             // parse from json
-            let discoveredEventsResponse : DiscoveredEventsResponse = Mapper<DiscoveredEventsResponse>().map(discoveredEventsJsonPage)!
+            let discoveredEventsResponse : DiscoveredEventsResponse = Mapper<DiscoveredEventsResponse>().map(JSONString: discoveredEventsJsonPage)!
             
             if let data = discoveredEventsResponse.data {
                 // save to cache

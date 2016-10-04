@@ -16,11 +16,11 @@ class DiscoveredEvent : Mappable {
     var sourcePages: [SourcePage]!
     var name : String!
     var location : String?
-    var startTime : NSDate!
-    var endTime : NSDate?
+    var startTime : Date!
+    var endTime : Date?
     var dateOnly : Bool!
     
-    required init?(_ map: Map) {
+    required init?(map _: Map) {
         
     }
     
