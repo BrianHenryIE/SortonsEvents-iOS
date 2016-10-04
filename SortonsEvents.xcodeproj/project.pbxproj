@@ -10,7 +10,6 @@
 		A6141D431BB9F44F003150F1 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613161A91492500A5F082 /* EventsViewController.m */; };
 		A6141D441BB9F44F003150F1 /* CPDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BA1AE5494F00D1C950 /* CPDAPIClient.m */; };
 		A6141D471BB9F44F003150F1 /* DiscoveredEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */; };
-		A6141D481BB9F44F003150F1 /* Fomo.m in Sources */ = {isa = PBXBuildFile; fileRef = A67150C61B825EB1006537B8 /* Fomo.m */; };
 		A6141D4B1BB9F44F003150F1 /* SortonsEventsCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */; };
 		A6141D4C1BB9F44F003150F1 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1CB51ADC4CBD00F6FB18 /* NewsViewController.m */; };
 		A6141D4D1BB9F44F003150F1 /* CommonWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D4C8911AE04E5500AA4D48 /* CommonWebViewController.m */; };
@@ -27,7 +26,6 @@
 		A6141D6F1BB9F537003150F1 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613161A91492500A5F082 /* EventsViewController.m */; };
 		A6141D701BB9F537003150F1 /* CPDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BA1AE5494F00D1C950 /* CPDAPIClient.m */; };
 		A6141D731BB9F537003150F1 /* DiscoveredEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */; };
-		A6141D741BB9F537003150F1 /* Fomo.m in Sources */ = {isa = PBXBuildFile; fileRef = A67150C61B825EB1006537B8 /* Fomo.m */; };
 		A6141D771BB9F537003150F1 /* SortonsEventsCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */; };
 		A6141D781BB9F537003150F1 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1CB51ADC4CBD00F6FB18 /* NewsViewController.m */; };
 		A6141D791BB9F537003150F1 /* CommonWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D4C8911AE04E5500AA4D48 /* CommonWebViewController.m */; };
@@ -51,7 +49,6 @@
 		A62BD61B1B9E1C4500E928E5 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613161A91492500A5F082 /* EventsViewController.m */; };
 		A62BD61C1B9E1C4500E928E5 /* CPDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BA1AE5494F00D1C950 /* CPDAPIClient.m */; };
 		A62BD61F1B9E1C4500E928E5 /* DiscoveredEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */; };
-		A62BD6201B9E1C4500E928E5 /* Fomo.m in Sources */ = {isa = PBXBuildFile; fileRef = A67150C61B825EB1006537B8 /* Fomo.m */; };
 		A62BD6231B9E1C4500E928E5 /* SortonsEventsCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */; };
 		A62BD6241B9E1C4500E928E5 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1CB51ADC4CBD00F6FB18 /* NewsViewController.m */; };
 		A62BD6251B9E1C4500E928E5 /* CommonWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D4C8911AE04E5500AA4D48 /* CommonWebViewController.m */; };
@@ -76,7 +73,6 @@
 		A63B32A31C68AFA400C46020 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613161A91492500A5F082 /* EventsViewController.m */; };
 		A63B32A41C68AFA400C46020 /* CPDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BA1AE5494F00D1C950 /* CPDAPIClient.m */; };
 		A63B32A71C68AFA400C46020 /* DiscoveredEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */; };
-		A63B32A81C68AFA400C46020 /* Fomo.m in Sources */ = {isa = PBXBuildFile; fileRef = A67150C61B825EB1006537B8 /* Fomo.m */; };
 		A63B32AB1C68AFA400C46020 /* SortonsEventsCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */; };
 		A63B32AC1C68AFA400C46020 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1CB51ADC4CBD00F6FB18 /* NewsViewController.m */; };
 		A63B32AD1C68AFA400C46020 /* CommonWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D4C8911AE04E5500AA4D48 /* CommonWebViewController.m */; };
@@ -103,7 +99,6 @@
 		A66DC3981CF3966700ED636B /* SourcePageTcdAsian.json in Resources */ = {isa = PBXBuildFile; fileRef = A66DC3971CF3966700ED636B /* SourcePageTcdAsian.json */; };
 		A66DC39C1CF398DB00ED636B /* ClientPageDataCacheWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66DC39B1CF398DB00ED636B /* ClientPageDataCacheWorkerTests.swift */; };
 		A67150C41B825D66006537B8 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A67150C31B825D66006537B8 /* fomo.plist */; };
-		A67150C71B825EB1006537B8 /* Fomo.m in Sources */ = {isa = PBXBuildFile; fileRef = A67150C61B825EB1006537B8 /* Fomo.m */; };
 		A68183D51D2ADD6200E45D35 /* ListEventsTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68183D41D2ADD6200E45D35 /* ListEventsTableViewControllerTests.swift */; };
 		A68183DA1D2AFFB900E45D35 /* ListEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68183D91D2AFFB900E45D35 /* ListEventsTableViewController.swift */; };
 		A68183DD1D2B009E00E45D35 /* ListEventsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68183DC1D2B009E00E45D35 /* ListEventsModels.swift */; };
@@ -155,6 +150,10 @@
 		A6AF6F381B5416FF00BA62DF /* IncludedPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AF6F371B5416FF00BA62DF /* IncludedPageCell.m */; };
 		A6BDA8781AE5CA6500C1A55C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
 		A6BDA87D1AE62AFF00C1A55C /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA87F1AE62AFF00C1A55C /* Root.storyboard */; };
+		A6C45C071DA386E600FC57D5 /* FomoIdTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C45C061DA386E600FC57D5 /* FomoIdTest.swift */; };
+		A6C45C091DA3882B00FC57D5 /* FomoId.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C45C081DA3882B00FC57D5 /* FomoId.swift */; };
+		A6C45C0A1DA3898C00FC57D5 /* FomoId.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C45C081DA3882B00FC57D5 /* FomoId.swift */; };
+		A6C45C0D1DA38A1A00FC57D5 /* Fomo.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C45C0B1DA38A1A00FC57D5 /* Fomo.m */; };
 		A6C613171A91492500A5F082 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613161A91492500A5F082 /* EventsViewController.m */; };
 		A6C6131C1A91492500A5F082 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131B1A91492500A5F082 /* AppImages.xcassets */; };
 		A6C6131F1A91492500A5F082 /* LaunchScreenNUIG.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131D1A91492500A5F082 /* LaunchScreenNUIG.xib */; };
@@ -213,8 +212,6 @@
 		A66DC3971CF3966700ED636B /* SourcePageTcdAsian.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SourcePageTcdAsian.json; sourceTree = "<group>"; };
 		A66DC39B1CF398DB00ED636B /* ClientPageDataCacheWorkerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientPageDataCacheWorkerTests.swift; sourceTree = "<group>"; };
 		A67150C31B825D66006537B8 /* fomo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fomo.plist; sourceTree = "<group>"; };
-		A67150C51B825EB1006537B8 /* Fomo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fomo.h; sourceTree = "<group>"; };
-		A67150C61B825EB1006537B8 /* Fomo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fomo.m; sourceTree = "<group>"; };
 		A68183D41D2ADD6200E45D35 /* ListEventsTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsTableViewControllerTests.swift; sourceTree = "<group>"; };
 		A68183D91D2AFFB900E45D35 /* ListEventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsTableViewController.swift; sourceTree = "<group>"; };
 		A68183DC1D2B009E00E45D35 /* ListEventsModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsModels.swift; sourceTree = "<group>"; };
@@ -245,6 +242,10 @@
 		A6AF6F371B5416FF00BA62DF /* IncludedPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncludedPageCell.m; sourceTree = "<group>"; };
 		A6BDA8771AE5CA6500C1A55C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		A6BDA87E1AE62AFF00C1A55C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Root.storyboard; sourceTree = "<group>"; };
+		A6C45C061DA386E600FC57D5 /* FomoIdTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FomoIdTest.swift; sourceTree = "<group>"; };
+		A6C45C081DA3882B00FC57D5 /* FomoId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FomoId.swift; sourceTree = "<group>"; };
+		A6C45C0B1DA38A1A00FC57D5 /* Fomo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fomo.m; sourceTree = "<group>"; };
+		A6C45C0C1DA38A1A00FC57D5 /* Fomo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fomo.h; sourceTree = "<group>"; };
 		A6C6130B1A91492500A5F082 /* SortonsEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SortonsEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C6130F1A91492500A5F082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6C613151A91492500A5F082 /* EventsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
@@ -533,6 +534,7 @@
 				A6141D611BB9F507003150F1 /* LaunchScreenTCD.xib */,
 				A6141D631BB9F507003150F1 /* LaunchScreenUCC.xib */,
 				A62E6E1E1C8500AB001A645D /* LaunchScreenDCU.storyboard */,
+				A6C45C081DA3882B00FC57D5 /* FomoId.swift */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -540,10 +542,10 @@
 		A69DBF4A1C8ADBE8005064F7 /* ObjC */ = {
 			isa = PBXGroup;
 			children = (
+				A6C45C0B1DA38A1A00FC57D5 /* Fomo.m */,
+				A6C45C0C1DA38A1A00FC57D5 /* Fomo.h */,
 				A6D386B81AE5490E00D1C950 /* APIClient */,
 				A6EA1CAD1ADC494A00F6FB18 /* Events */,
-				A67150C51B825EB1006537B8 /* Fomo.h */,
-				A67150C61B825EB1006537B8 /* Fomo.m */,
 			);
 			name = ObjC;
 			sourceTree = "<group>";
@@ -551,6 +553,7 @@
 		A69DBF501C8AE4D8005064F7 /* SortonsEventsTests */ = {
 			isa = PBXGroup;
 			children = (
+				A6C45C051DA386A600FC57D5 /* Common */,
 				A69DBF531C8AE4D8005064F7 /* Info.plist */,
 				A66DC3951CF395E000ED636B /* Tests.swift */,
 				A636D2701D0C8A1D00FB9C62 /* Model */,
@@ -560,6 +563,14 @@
 				A68183D41D2ADD6200E45D35 /* ListEventsTableViewControllerTests.swift */,
 			);
 			path = SortonsEventsTests;
+			sourceTree = "<group>";
+		};
+		A6C45C051DA386A600FC57D5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A6C45C061DA386E600FC57D5 /* FomoIdTest.swift */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 		A6C613021A91492500A5F082 = {
@@ -1022,7 +1033,6 @@
 				A6141D431BB9F44F003150F1 /* EventsViewController.m in Sources */,
 				A6141D441BB9F44F003150F1 /* CPDAPIClient.m in Sources */,
 				A6141D471BB9F44F003150F1 /* DiscoveredEventCell.m in Sources */,
-				A6141D481BB9F44F003150F1 /* Fomo.m in Sources */,
 				A6141D4B1BB9F44F003150F1 /* SortonsEventsCommunicator.m in Sources */,
 				A6141D4C1BB9F44F003150F1 /* NewsViewController.m in Sources */,
 				A6141D4D1BB9F44F003150F1 /* CommonWebViewController.m in Sources */,
@@ -1045,7 +1055,6 @@
 				A6141D6F1BB9F537003150F1 /* EventsViewController.m in Sources */,
 				A6141D701BB9F537003150F1 /* CPDAPIClient.m in Sources */,
 				A6141D731BB9F537003150F1 /* DiscoveredEventCell.m in Sources */,
-				A6141D741BB9F537003150F1 /* Fomo.m in Sources */,
 				A6141D771BB9F537003150F1 /* SortonsEventsCommunicator.m in Sources */,
 				A6141D781BB9F537003150F1 /* NewsViewController.m in Sources */,
 				A6141D791BB9F537003150F1 /* CommonWebViewController.m in Sources */,
@@ -1078,12 +1087,13 @@
 				A68183DD1D2B009E00E45D35 /* ListEventsModels.swift in Sources */,
 				A6ABE5311D3AB12200EF3D11 /* DiscoveredEventTableViewCell.swift in Sources */,
 				A62BD61F1B9E1C4500E928E5 /* DiscoveredEventCell.m in Sources */,
-				A62BD6201B9E1C4500E928E5 /* Fomo.m in Sources */,
 				A63693451D3A497E00808DC5 /* DiscoveredEventsResponse.swift in Sources */,
 				A6A675941C941D6300FAD755 /* AppDelegate.swift in Sources */,
+				A6C45C091DA3882B00FC57D5 /* FomoId.swift in Sources */,
 				A625EA7F1C8AF07F00B35D80 /* ListEventsNetworkWorker.swift in Sources */,
 				A625EA7A1C8AEEAB00B35D80 /* ListEventsInteractorIO.swift in Sources */,
 				A6AAD3DE1D258E570097AF22 /* ClientPageDataCacheWorker.swift in Sources */,
+				A6C45C0D1DA38A1A00FC57D5 /* Fomo.m in Sources */,
 				A62BD6231B9E1C4500E928E5 /* SortonsEventsCommunicator.m in Sources */,
 				A6ABE5351D3AB9A600EF3D11 /* ListEventsPresenter.swift in Sources */,
 				A65B23C11D6DFCA800A66C85 /* RootViewController.swift in Sources */,
@@ -1107,7 +1117,6 @@
 				A63B32A31C68AFA400C46020 /* EventsViewController.m in Sources */,
 				A63B32A41C68AFA400C46020 /* CPDAPIClient.m in Sources */,
 				A63B32A71C68AFA400C46020 /* DiscoveredEventCell.m in Sources */,
-				A63B32A81C68AFA400C46020 /* Fomo.m in Sources */,
 				A63B32AB1C68AFA400C46020 /* SortonsEventsCommunicator.m in Sources */,
 				A63B32AC1C68AFA400C46020 /* NewsViewController.m in Sources */,
 				A63B32AD1C68AFA400C46020 /* CommonWebViewController.m in Sources */,
@@ -1129,6 +1138,7 @@
 				A625EA801C8AF09200B35D80 /* ListEventsNetworkWorker.swift in Sources */,
 				A6AAD3F71D25B64D0097AF22 /* GAEISO8601DateTransform.swift in Sources */,
 				A68183D51D2ADD6200E45D35 /* ListEventsTableViewControllerTests.swift in Sources */,
+				A6C45C0A1DA3898C00FC57D5 /* FomoId.swift in Sources */,
 				A68183DE1D2B009E00E45D35 /* ListEventsModels.swift in Sources */,
 				A6AAD3E91D2590600097AF22 /* ClientPageData.swift in Sources */,
 				A6ABE5371D3ABFCC00EF3D11 /* ListEventsPresenter.swift in Sources */,
@@ -1138,6 +1148,7 @@
 				A6A6759C1C943AED00FAD755 /* ListEventsCacheWorker.swift in Sources */,
 				A6AAD3FE1D25B7E90097AF22 /* DiscoveredEventsResponseTests.swift in Sources */,
 				A6AAD3DF1D258EE60097AF22 /* ClientPageDataCacheWorker.swift in Sources */,
+				A6C45C071DA386E600FC57D5 /* FomoIdTest.swift in Sources */,
 				A6AAD4001D25B96D0097AF22 /* DiscoveredEventsResponse.swift in Sources */,
 				A636934D1D3A4CD900808DC5 /* ListEventsTableViewController.swift in Sources */,
 				A69DBF591C8AE8E3005064F7 /* ListEventsInteractorTests.swift in Sources */,
@@ -1161,7 +1172,6 @@
 				A6C613171A91492500A5F082 /* EventsViewController.m in Sources */,
 				A6D386BB1AE5494F00D1C950 /* CPDAPIClient.m in Sources */,
 				A6C613491A91614F00A5F082 /* DiscoveredEventCell.m in Sources */,
-				A67150C71B825EB1006537B8 /* Fomo.m in Sources */,
 				A6C613421A914B8B00A5F082 /* SortonsEventsCommunicator.m in Sources */,
 				A6EA1CB61ADC4CBD00F6FB18 /* NewsViewController.m in Sources */,
 				A6D4C8921AE04E5500AA4D48 /* CommonWebViewController.m in Sources */,
