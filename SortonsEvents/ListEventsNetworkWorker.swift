@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 protocol ListEventsNetworkWorkerProtocol {
-    func fetchEvents(fomoId : String, completionHandler: (discoveredEventsJsonPage: String) -> Void)
+    func fetchEvents(_ fomoId : String, completionHandler: @escaping (_ discoveredEventsJsonPage: String) -> Void)
 }
 
 class ListEventsNetworkWorker : ListEventsNetworkWorkerProtocol {
@@ -22,13 +22,13 @@ class ListEventsNetworkWorker : ListEventsNetworkWorkerProtocol {
     // Ideally it can be changed OTA
     let baseUrl = "https://sortonsevents.appspot.com/_ah/api/upcomingEvents/v1/discoveredeventsresponse/"
     
-    func fetchEvents(fomoId: String, completionHandler: (discoveredEventsJsonPage: String) -> Void) {
+    func fetchEvents(_ fomoId: String, completionHandler: @escaping (_ discoveredEventsJsonPage: String) -> Void) {
         
         let endpoint = "\(baseUrl)\(fomoId)"
         
-        Alamofire.request(.GET, endpoint)
+        Alamofire.request(endpoint)
             .responseString { response in
-                completionHandler(discoveredEventsJsonPage: response.result.value!)
+                completionHandler(response.result.value!)
         }
     }
 }

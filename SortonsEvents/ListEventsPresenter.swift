@@ -12,28 +12,28 @@ class ListEventsPresenter : ListEventsInteractorOutput {
     
     let output : ListEventsPresenterOutput
     
-    let observingFrom : NSDate!
+    let observingFrom : Date!
     
-    let dateFormat = NSDateFormatter()
-    let calendar = NSCalendar.currentCalendar()
+    let dateFormat = DateFormatter()
+    let calendar = Calendar.current
     
     // For testing
-    init(output: ListEventsPresenterOutput, withDate: NSDate = NSDate()){
+    init(output: ListEventsPresenterOutput, withDate: Date = Date()){
         self.output = output
         observingFrom = withDate
     }
     
     // Gotta set the view controller here... router?
     
-    func presentFetchedEvents(upcomingEvents: ListEvents_FetchEvents_Response) {
+    func presentFetchedEvents(_ upcomingEvents: ListEvents_FetchEvents_Response) {
     
         let filteredEvents = filterToOngoingEvents(upcomingEvents.events, observingFrom: observingFrom)
         
         // TODO This should maybe be outside this function. Currently untested
         let cellModels : [DiscoveredEventCellModel] = filteredEvents.map({
-            let webUrl = NSURL(string: "https://facebook.com/events/\($0.eventId)/")!
-            let appUrl = NSURL(string: "fb://profile/\($0.eventId)/")!
-            let imageUrl = NSURL(string: "https://graph.facebook.com/\($0.eventId)@/picture?type=square")!
+            let webUrl = URL(string: "https://facebook.com/events/\($0.eventId)/")!
+            let appUrl = URL(string: "fb://profile/\($0.eventId)/")!
+            let imageUrl = URL(string: "https://graph.facebook.com/\($0.eventId)@/picture?type=square")!
             
             return DiscoveredEventCellModel(webUrl: webUrl, appUrl: appUrl, name: $0.name, startTime: formatFriendlyTime($0.startTime, allDay: $0.dateOnly), location: $0.location, imageUrl: imageUrl)
         })
@@ -43,11 +43,11 @@ class ListEventsPresenter : ListEventsInteractorOutput {
         output.presentFetchedEvents(viewModel)
     }
     
-    func filterToOngoingEvents(allEvents : [DiscoveredEvent], observingFrom: NSDate) -> [DiscoveredEvent] {
+    func filterToOngoingEvents(_ allEvents : [DiscoveredEvent], observingFrom: Date) -> [DiscoveredEvent] {
         
-        let yesterday = calendar.dateByAddingUnit(.Day, value: -1, toDate: observingFrom, options: [])!
-        let yesterday6pm = calendar.dateBySettingHour(18, minute: 0, second: 0, ofDate: yesterday, options: [])!
-        let today6am = calendar.dateBySettingHour(6, minute: 0, second: 0, ofDate: observingFrom, options: NSCalendarOptions.MatchFirst)!
+        let yesterday = calendar.date(byAdding: .day, value: -1, to: observingFrom)!
+        let yesterday6pm = calendar.date(bySettingHour: 18, minute: 0, second: 0, of: yesterday)!
+        let today6am = calendar.date(bySettingHour: 6, minute: 0, second: 0, of: Date())!
         
         var filteredEvents = [DiscoveredEvent]()
         
@@ -55,43 +55,43 @@ class ListEventsPresenter : ListEventsInteractorOutput {
         let ongoingEvents = allEvents.filter(
             { ($0.endTime != nil && $0.endTime!.compare(observingFrom).rawValue > 0) || $0.startTime.compare(observingFrom).rawValue > 0 }
         )
-        filteredEvents.appendContentsOf(ongoingEvents)
+        filteredEvents.append(contentsOf: ongoingEvents)
         
         // all day event today
         let todayAllDay = allEvents.filter({
-             $0.dateOnly && calendar.isDate($0.startTime, equalToDate: observingFrom, toUnitGranularity: .Day)
+             $0.dateOnly && (calendar as Calendar).isDate($0.startTime as Date, equalTo: observingFrom, toGranularity: .day)
             })
-        filteredEvents.appendContentsOf(todayAllDay)
+        filteredEvents.append(contentsOf: todayAllDay)
         
         // (no end time and start time today)
         let todayNoEnd = allEvents.filter({
-                 $0.endTime==nil && calendar.isDate($0.startTime, equalToDate: observingFrom, toUnitGranularity: .Day) && ($0.dateOnly == false)
+                 $0.endTime==nil && (calendar as Calendar).isDate($0.startTime as Date, equalTo: observingFrom, toGranularity: .day) && ($0.dateOnly == false)
             })
-        filteredEvents.appendContentsOf(todayNoEnd)
+        filteredEvents.append(contentsOf: todayNoEnd)
         
         // if the current time is before 6am and the event started yesterday evening and had no end time
         let lastNight = allEvents.filter({
-            observingFrom.compare(today6am).rawValue < 0 && calendar.isDate($0.startTime, equalToDate: yesterday, toUnitGranularity: .Day) && $0.startTime.compare(yesterday6pm).rawValue > 0 && $0.endTime==nil
+            observingFrom.compare(today6am).rawValue < 0 && (calendar as NSCalendar).isDate($0.startTime as Date, equalTo: yesterday, toUnitGranularity: .day) && $0.startTime.compare(yesterday6pm).rawValue > 0 && $0.endTime==nil
             })
-        filteredEvents.appendContentsOf(lastNight)
+        filteredEvents.append(contentsOf: lastNight)
     
         return filteredEvents
     }
     
     // Should really be an NSDate extension
-    func formatFriendlyTime(date : NSDate, allDay : Bool, observingFrom : NSDate = NSDate()) -> String {
+    func formatFriendlyTime(_ date : Date, allDay : Bool, observingFrom : Date = Date()) -> String {
         
-        let yesterday = calendar.dateByAddingUnit(.Day, value: -1, toDate: observingFrom, options: [])!
-        let tomorrow = calendar.dateByAddingUnit(.Day, value: 1, toDate: observingFrom, options: [])!
+        let yesterday = calendar.date(byAdding: .day, value: -1, to: observingFrom)!
+        let tomorrow = calendar.date(byAdding: .day, value: 1, to: observingFrom)!
         
         var format : String
         
         // if it's yesterday, today or tomorrow use the word
-        if(calendar.isDate(date, equalToDate: yesterday, toUnitGranularity: .Day)) {
+        if((calendar as Calendar).isDate(date, equalTo: yesterday, toGranularity: .day)) {
             format = "'Yesterday'"
-        } else if(calendar.isDate(date, equalToDate: observingFrom, toUnitGranularity: .Day)) {
+        } else if((calendar as Calendar).isDate(date, equalTo: observingFrom, toGranularity: .day)) {
             format = "'Today'"
-        } else if(calendar.isDate(date, equalToDate: tomorrow, toUnitGranularity: .Day)) {
+        } else if((calendar as Calendar).isDate(date, equalTo: tomorrow, toGranularity: .day)) {
             format = "'Tomorrow'"
         } else {
             format = "EEEE dd MMMM"
@@ -103,6 +103,6 @@ class ListEventsPresenter : ListEventsInteractorOutput {
         
         dateFormat.dateFormat = format
         
-        return dateFormat.stringFromDate(date)
+        return dateFormat.string(from: date)
     }
 }

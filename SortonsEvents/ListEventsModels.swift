@@ -23,11 +23,11 @@ struct ListEventsViewModel {
 }
 
 struct DiscoveredEventCellModel {
-    let webUrl: NSURL
-    let appUrl : NSURL
+    let webUrl: URL
+    let appUrl : URL
     let name: String
     let startTime : String
     let location: String?
-    let imageUrl : NSURL
+    let imageUrl : URL
 }
 

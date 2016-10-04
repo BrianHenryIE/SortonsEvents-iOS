@@ -13,22 +13,22 @@ import Foundation
 
 protocol ListEventsCacheWorkerProtocol {
 
-    func fetch(completionHandler: (discoveredEvents: String) -> Void)
-    func save(latestDiscoveredEvents: String)
+    func fetch(_ completionHandler: (_ discoveredEvents: String) -> Void)
+    func save(_ latestDiscoveredEvents: String)
 }
 
 class ListEventsCacheWorker : ListEventsCacheWorkerProtocol {
     
-    func fetch(completionHandler: (discoveredEvents: String) -> Void)
+    func fetch(_ completionHandler: (_ discoveredEvents: String) -> Void)
     {
         // read file
         
-        completionHandler(discoveredEvents: "")
+        completionHandler("")
         
         // Filter to future events in presenter
     }
     
-    func save(latestEvents: String) {
+    func save(_ latestEvents: String) {
         
     }
 

@@ -10,6 +10,6 @@ import Foundation
 
 protocol ListEventsInteractorOutput {
     
-    func presentFetchedEvents(upcomingEvents: ListEvents_FetchEvents_Response)
+    func presentFetchedEvents(_ upcomingEvents: ListEvents_FetchEvents_Response)
 }
 

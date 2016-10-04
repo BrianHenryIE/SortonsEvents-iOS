@@ -14,28 +14,28 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - Alamofire (3.4.1)
-  - AlamofireImage (2.4.1):
-    - Alamofire (~> 3.3)
-  - ObjectMapper (1.4.0)
-  - SDWebImage (3.8.1):
-    - SDWebImage/Core (= 3.8.1)
-  - SDWebImage/Core (3.8.1)
+  - Alamofire (4.0.1)
+  - AlamofireImage (3.0.0):
+    - Alamofire (~> 4.0)
+  - ObjectMapper (2.0.0)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
 
 DEPENDENCIES:
   - AFNetworking
-  - Alamofire (~> 3.4)
-  - AlamofireImage (~> 2.0)
-  - ObjectMapper
+  - Alamofire (~> 4.0)
+  - AlamofireImage (~> 3.0)
+  - ObjectMapper (~> 2.0)
   - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
-  AlamofireImage: 3ccf3347d9ea24580dc11fb892770a0be6a29826
-  ObjectMapper: a07ad0462c5adf014adc0f89ef04c29b626e855e
-  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  AlamofireImage: 6594aa1139a67dcd36cde6da79ea4e5b318e60fb
+  ObjectMapper: aed2570edabbd3c9b26c939e1cabdb6558f933e0
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: 51b19384b0ddf6fcfffc538aae6c56a1e56a4939
+PODFILE CHECKSUM: efb1f5ce1dd86e9ac242454ee69b7d5475927989
 
 COCOAPODS: 1.0.1

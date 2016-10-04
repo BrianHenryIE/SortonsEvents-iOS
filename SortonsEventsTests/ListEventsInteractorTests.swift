@@ -15,10 +15,10 @@ class EmptyListEventsNetworkWorkerSpy : ListEventsNetworkWorker {
     var fetchEventsCalled = false
     
     // MARK: Spied methods
-    override func fetchEvents(fomoId: String, completionHandler: (discoveredEvents: String) -> Void) {
+    override func fetchEvents(_ fomoId: String, completionHandler: @escaping (_ discoveredEventsJsonPage: String) -> Void) {
         
         fetchEventsCalled = true
-        completionHandler(discoveredEvents: "{}")
+        completionHandler("{}")
     }
 }
 
@@ -26,14 +26,14 @@ class EmptyListEventsCacheWorkerSpy : ListEventsCacheWorkerProtocol {
     
     var fetchCalled = false
     
-    func fetch(completionHandler: (discoveredEvents: String) -> Void) {
+    func fetch(_ completionHandler: (_ discoveredEvents: String) -> Void) {
         fetchCalled = true
-        completionHandler(discoveredEvents: "{}") // should I bother?
+        completionHandler("{}") // should I bother?
     }
     
     var saveCalled = false
     
-    func save(latestDiscoveredEvents: String) {
+    func save(_ latestDiscoveredEvents: String) {
         saveCalled = true
     }
 }
@@ -43,10 +43,10 @@ class ListEventsNetworkWorkerSpy : ListEventsNetworkWorker {
     var fetchEventsCalled = false
     
     // MARK: Spied methods
-    override func fetchEvents(fomoId: String, completionHandler: (discoveredEvents: String) -> Void) {
+    override func fetchEvents(_ fomoId: String, completionHandler: @escaping (_ discoveredEventsJsonPage: String) -> Void) {
         
         fetchEventsCalled = true
-        completionHandler(discoveredEvents: "{\"data\": [{\"eventId\": \"918777258231182\",\"clientId\": \"1049082365115363\",\"sourcePages\": [{\"clientId\": \"1049082365115363\",\"id\": \"1049082365115363457660710939203\",\"about\": \"NUI Galway's Student Volunteering Programme www.nuigalway.ie/alive\",\"name\": \"Alive Nuigalway\",\"pageId\": \"457660710939203\",\"pageUrl\": \"https://www.facebook.com/alive.nuigalway\",\"street\": \"\",\"zip\": \"\",\"uid\": \"457660710939203\",\"title\": \"Alive Nuigalway\",\"subTitle\": \"\",\"friendlyLocationString\": \"\",\"searchableString\": \"Alive Nuigalway null null Alive Nuigalway null \",\"class\": \"ie.sortons.events.shared.SourcePage\"}],\"name\": \"Information Evening for Volunteering with Galway's Community Bicycle Workshop\",\"location\": \"Block R, Earls Island, University Road, Galway.\",\"startTime\": \"2016-06-30T18:00:00.000Z\",\"endTime\": \"2016-06-30T19:00:00.000Z\",\"dateOnly\": false}]}")
+        completionHandler("{\"data\": [{\"eventId\": \"918777258231182\",\"clientId\": \"1049082365115363\",\"sourcePages\": [{\"clientId\": \"1049082365115363\",\"id\": \"1049082365115363457660710939203\",\"about\": \"NUI Galway's Student Volunteering Programme www.nuigalway.ie/alive\",\"name\": \"Alive Nuigalway\",\"pageId\": \"457660710939203\",\"pageUrl\": \"https://www.facebook.com/alive.nuigalway\",\"street\": \"\",\"zip\": \"\",\"uid\": \"457660710939203\",\"title\": \"Alive Nuigalway\",\"subTitle\": \"\",\"friendlyLocationString\": \"\",\"searchableString\": \"Alive Nuigalway null null Alive Nuigalway null \",\"class\": \"ie.sortons.events.shared.SourcePage\"}],\"name\": \"Information Evening for Volunteering with Galway's Community Bicycle Workshop\",\"location\": \"Block R, Earls Island, University Road, Galway.\",\"startTime\": \"2016-06-30T18:00:00.000Z\",\"endTime\": \"2016-06-30T19:00:00.000Z\",\"dateOnly\": false}]}")
     }
 }
 
@@ -54,14 +54,14 @@ class ListEventsCacheWorkerSpy : ListEventsCacheWorkerProtocol {
     
     var fetchCalled = false
     
-    func fetch(completionHandler: (discoveredEvents: String) -> Void) {
+    func fetch(_ completionHandler: (_ discoveredEvents: String) -> Void) {
         fetchCalled = true
-        completionHandler(discoveredEvents: "{\"data\": [{\"eventId\": \"918777258231182\",\"clientId\": \"1049082365115363\",\"sourcePages\": [{\"clientId\": \"1049082365115363\",\"id\": \"1049082365115363457660710939203\",\"about\": \"NUI Galway's Student Volunteering Programme www.nuigalway.ie/alive\",\"name\": \"Alive Nuigalway\",\"pageId\": \"457660710939203\",\"pageUrl\": \"https://www.facebook.com/alive.nuigalway\",\"street\": \"\",\"zip\": \"\",\"uid\": \"457660710939203\",\"title\": \"Alive Nuigalway\",\"subTitle\": \"\",\"friendlyLocationString\": \"\",\"searchableString\": \"Alive Nuigalway null null Alive Nuigalway null \",\"class\": \"ie.sortons.events.shared.SourcePage\"}],\"name\": \"Information Evening for Volunteering with Galway's Community Bicycle Workshop\",\"location\": \"Block R, Earls Island, University Road, Galway.\",\"startTime\": \"2016-06-30T18:00:00.000Z\",\"endTime\": \"2016-06-30T19:00:00.000Z\",\"dateOnly\": false}]}") // should I bother?
+        completionHandler("{\"data\": [{\"eventId\": \"918777258231182\",\"clientId\": \"1049082365115363\",\"sourcePages\": [{\"clientId\": \"1049082365115363\",\"id\": \"1049082365115363457660710939203\",\"about\": \"NUI Galway's Student Volunteering Programme www.nuigalway.ie/alive\",\"name\": \"Alive Nuigalway\",\"pageId\": \"457660710939203\",\"pageUrl\": \"https://www.facebook.com/alive.nuigalway\",\"street\": \"\",\"zip\": \"\",\"uid\": \"457660710939203\",\"title\": \"Alive Nuigalway\",\"subTitle\": \"\",\"friendlyLocationString\": \"\",\"searchableString\": \"Alive Nuigalway null null Alive Nuigalway null \",\"class\": \"ie.sortons.events.shared.SourcePage\"}],\"name\": \"Information Evening for Volunteering with Galway's Community Bicycle Workshop\",\"location\": \"Block R, Earls Island, University Road, Galway.\",\"startTime\": \"2016-06-30T18:00:00.000Z\",\"endTime\": \"2016-06-30T19:00:00.000Z\",\"dateOnly\": false}]}") // should I bother?
     }
     
     var saveCalled = false
     
-    func save(latestDiscoveredEvents: String) {
+    func save(_ latestDiscoveredEvents: String) {
         saveCalled = true
     }
 }
@@ -70,7 +70,7 @@ class ListEventsInteractorOutputSpy : ListEventsInteractorOutput {
     
     var presentFetchedEventsCalled = false
     
-    func presentFetchedEvents(upcomingEvents: ListEvents_FetchEvents_Response) {
+    func presentFetchedEvents(_ upcomingEvents: ListEvents_FetchEvents_Response) {
         presentFetchedEventsCalled = true
     }
 }

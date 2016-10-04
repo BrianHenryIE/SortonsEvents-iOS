@@ -14,13 +14,13 @@ class DiscoveredEventsResponseTests: XCTestCase {
     func testExample() throws {
         
         // Read in the file
-        let bundle = NSBundle(forClass: self.classForCoder)
-        let path = bundle.pathForResource("DiscoveredEventsResponseNUIG30June16", ofType: "json")!
+        let bundle = Bundle(for: self.classForCoder)
+        let path = bundle.path(forResource: "DiscoveredEventsResponseNUIG30June16", ofType: "json")!
                 
         let content = try String(contentsOfFile: path)
         
         // Use objectmapper
-        let nuigJun16 : DiscoveredEventsResponse = Mapper<DiscoveredEventsResponse>().map(content)!
+        let nuigJun16 : DiscoveredEventsResponse = Mapper<DiscoveredEventsResponse>().map(JSONString: content)!
         
         XCTAssertEqual(nuigJun16.data.count, 9)
     }

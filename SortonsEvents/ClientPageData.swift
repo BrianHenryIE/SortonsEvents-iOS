@@ -14,7 +14,7 @@ class ClientPageData : Mappable {
     var clientPage : SourcePage!
     var includedPages : [SourcePage]!
    
-    required init?(_ map: Map) {
+    required init?(map _: Map) {
         
     }
     

@@ -14,13 +14,13 @@ class ClientPageDataTest: XCTestCase {
     func testClientPageDataParsing() throws {
 
         // Read in the file
-        let bundle = NSBundle(forClass: self.classForCoder)
-        let path = bundle.pathForResource("ClientPageDataUcdEvents", ofType: "json")!
+        let bundle = Bundle(for: self.classForCoder)
+        let path = bundle.path(forResource: "ClientPageDataUcdEvents", ofType: "json")!
         
         let content = try String(contentsOfFile: path)
         
         // Use objectmapper
-        let ucdEvents : ClientPageData = Mapper<ClientPageData>().map(content)!
+        let ucdEvents : ClientPageData = Mapper<ClientPageData>().map(JSONString: content)!
         
         XCTAssertEqual(ucdEvents.clientPageId, "197528567092983")
         XCTAssertEqual(ucdEvents.clientPage.pageId, "197528567092983")

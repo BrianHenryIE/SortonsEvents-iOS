@@ -13,7 +13,7 @@ class ListEventsPresenterOutputSpy : ListEventsPresenterOutput {
     
     var presentFetchedEventsCalled = false
     
-    func presentFetchedEvents(viewModel: ListEventsViewModel) {
+    func presentFetchedEvents(_ viewModel: ListEventsViewModel) {
         presentFetchedEventsCalled = true
     }
 }
@@ -29,12 +29,12 @@ class ListEventsPresenterTests: XCTestCase {
         super.setUp()
        
         // Read in the file
-        let bundle = NSBundle(forClass: self.classForCoder)
-        let path = bundle.pathForResource("DiscoveredEventsResponseNUIG30June16", ofType: "json")!
+        let bundle = Bundle(for: self.classForCoder)
+        let path = bundle.path(forResource: "DiscoveredEventsResponseNUIG30June16", ofType: "json")!
         
         do {
             let content = try String(contentsOfFile: path)
-            let nuigJun16 : DiscoveredEventsResponse = Mapper<DiscoveredEventsResponse>().map(content)!
+            let nuigJun16 : DiscoveredEventsResponse = Mapper<DiscoveredEventsResponse>().map(JSONString: content)!
             events = nuigJun16.data
         } catch {
             // stop the tests!
@@ -53,10 +53,10 @@ class ListEventsPresenterTests: XCTestCase {
     
     func testShouldDiscardEarlyEvents() {
         var remainingEvents : [DiscoveredEvent]
-        var ourTime : NSDate
-        let calendar = NSCalendar.currentCalendar()
-        let dateComponents = NSDateComponents()
-        dateComponents.timeZone = NSTimeZone(abbreviation: "UTC") // prob doesn't matter
+        var ourTime : Date
+        let calendar = Calendar.current
+        var dateComponents = DateComponents()
+        (dateComponents as NSDateComponents).timeZone = TimeZone(abbreviation: "UTC") // prob doesn't matter
         
         // Test data: 9 total
         
@@ -67,7 +67,7 @@ class ListEventsPresenterTests: XCTestCase {
         dateComponents.month = 08
         dateComponents.day = 15
         
-        ourTime = calendar.dateFromComponents(dateComponents)!
+        ourTime = calendar.date(from: dateComponents)!
         remainingEvents = sut.filterToOngoingEvents(events, observingFrom: ourTime)
         
         XCTAssertEqual(remainingEvents.count, 1, "the wrong number of events were filtered out")
@@ -78,7 +78,7 @@ class ListEventsPresenterTests: XCTestCase {
         dateComponents.hour = 19
         dateComponents.minute = 00
         
-        ourTime = calendar.dateFromComponents(dateComponents)!
+        ourTime = calendar.date(from: dateComponents)!
         remainingEvents = sut.filterToOngoingEvents(events, observingFrom: ourTime)
         
         XCTAssertEqual(remainingEvents.count, 2, "Was the ongoing event properly included?")
@@ -89,7 +89,7 @@ class ListEventsPresenterTests: XCTestCase {
         dateComponents.day = 11
         dateComponents.hour = 22
         
-        ourTime = calendar.dateFromComponents(dateComponents)!
+        ourTime = calendar.date(from: dateComponents)!
         remainingEvents = sut.filterToOngoingEvents(events, observingFrom: ourTime)
         
         XCTAssertEqual(remainingEvents.count, 3, "Event starting today with no end time should be included")
@@ -97,7 +97,7 @@ class ListEventsPresenterTests: XCTestCase {
         dateComponents.day = 12
         dateComponents.hour = 02
         
-        ourTime = calendar.dateFromComponents(dateComponents)!
+        ourTime = calendar.date(from: dateComponents)!
         remainingEvents = sut.filterToOngoingEvents(events, observingFrom: ourTime)
         
         XCTAssertEqual(remainingEvents.count, 2, "Event starting yesteday before 6pm with no end time should not be included")
@@ -108,14 +108,14 @@ class ListEventsPresenterTests: XCTestCase {
         dateComponents.day = 24
         dateComponents.hour = 02
         
-        ourTime = calendar.dateFromComponents(dateComponents)!
+        ourTime = calendar.date(from: dateComponents)!
         remainingEvents = sut.filterToOngoingEvents(events, observingFrom: ourTime)
         
         XCTAssertEqual(remainingEvents.count, 2, "Event starting yesteday after 6pm with no end time should be included until 6am following")
 
         dateComponents.hour = 07
         
-        ourTime = calendar.dateFromComponents(dateComponents)!
+        ourTime = calendar.date(from: dateComponents)!
         remainingEvents = sut.filterToOngoingEvents(events, observingFrom: ourTime)
         
         XCTAssertEqual(remainingEvents.count, 1, "Event starting yesteday after 6pm with no end time should not be included after 6am following")
@@ -130,7 +130,7 @@ class ListEventsPresenterTests: XCTestCase {
         dateComponents.hour = 19
         dateComponents.minute = 00
         
-        ourTime = calendar.dateFromComponents(dateComponents)!
+        ourTime = calendar.date(from: dateComponents)!
         remainingEvents = sut.filterToOngoingEvents(events, observingFrom: ourTime)
         
         XCTAssertEqual(remainingEvents.count, 9, "All day events starting today should be included")
@@ -138,7 +138,7 @@ class ListEventsPresenterTests: XCTestCase {
         dateComponents.month = 07
         dateComponents.day = 01
         
-        ourTime = calendar.dateFromComponents(dateComponents)!
+        ourTime = calendar.date(from: dateComponents)!
         remainingEvents = sut.filterToOngoingEvents(events, observingFrom: ourTime)
         
         XCTAssertEqual(remainingEvents.count, 7, "All day events starting yesterday should not be included")
@@ -147,7 +147,7 @@ class ListEventsPresenterTests: XCTestCase {
         dateComponents.month = 01
         dateComponents.day = 01
         
-        ourTime = calendar.dateFromComponents(dateComponents)!
+        ourTime = calendar.date(from: dateComponents)!
         remainingEvents = sut.filterToOngoingEvents(events, observingFrom: ourTime)
         
         XCTAssertEqual(remainingEvents.count, 9, "Everything in the future (no filter!)")
@@ -159,22 +159,22 @@ class ListEventsPresenterTests: XCTestCase {
         // Testing times: 2016-06-30T20:00:00.000Z
         let displayDate = events[1].startTime
         
-        var ourTime : NSDate
-        let calendar = NSCalendar.currentCalendar()
-        let dateComponents = NSDateComponents()
+        var ourTime : Date
+        let calendar = Calendar.current
+        var dateComponents = DateComponents()
         
         //  what about timezones? (we'll see once we get to California!)
-        dateComponents.timeZone = NSTimeZone(abbreviation: "UTC")
+        (dateComponents as NSDateComponents).timeZone = TimeZone(abbreviation: "UTC")
         
         // 1. A normal "not close" date format
         var expected = "Thursday 30 June at 21:00"
-        var formatted = sut.formatFriendlyTime(displayDate, allDay : false, observingFrom: NSDate())
+        var formatted = sut.formatFriendlyTime(displayDate!, allDay : false, observingFrom: Date())
         
         XCTAssertEqual(expected, formatted, "Most basic formatted time is wrong!")
         
         // as all day event
         expected = "Thursday 30 June"
-        formatted = sut.formatFriendlyTime(displayDate, allDay : true, observingFrom: NSDate())
+        formatted = sut.formatFriendlyTime(displayDate!, allDay : true, observingFrom: Date())
         
         XCTAssertEqual(expected, formatted, "Most basic all-day formatted time is wrong!")
         
@@ -185,16 +185,16 @@ class ListEventsPresenterTests: XCTestCase {
         dateComponents.month = 06
         dateComponents.day = 29
         
-        ourTime = calendar.dateFromComponents(dateComponents)!
+        ourTime = calendar.date(from: dateComponents)!
         
         expected = "Tomorrow at 21:00"
-        formatted = sut.formatFriendlyTime(displayDate, allDay : false, observingFrom: ourTime)
+        formatted = sut.formatFriendlyTime(displayDate!, allDay : false, observingFrom: ourTime)
         
         XCTAssertEqual(expected, formatted, "Tomorrow's formatted time is wrong!")
         
         // as all day event
         expected = "Tomorrow"
-        formatted = sut.formatFriendlyTime(displayDate, allDay : true, observingFrom: ourTime)
+        formatted = sut.formatFriendlyTime(displayDate!, allDay : true, observingFrom: ourTime)
         
         XCTAssertEqual(expected, formatted, "Tomorrow's all-day formatted time is wrong!")
         
@@ -202,16 +202,16 @@ class ListEventsPresenterTests: XCTestCase {
         dateComponents.month = 06
         dateComponents.day = 30
         
-        ourTime = calendar.dateFromComponents(dateComponents)!
+        ourTime = calendar.date(from: dateComponents)!
         
         expected = "Today at 21:00"
-        formatted = sut.formatFriendlyTime(displayDate, allDay : false, observingFrom: ourTime)
+        formatted = sut.formatFriendlyTime(displayDate!, allDay : false, observingFrom: ourTime)
         
         XCTAssertEqual(expected, formatted, "Today's formatted time is wrong!")
        
         // as all day event
         expected = "Today"
-        formatted = sut.formatFriendlyTime(displayDate, allDay : true, observingFrom: ourTime)
+        formatted = sut.formatFriendlyTime(displayDate!, allDay : true, observingFrom: ourTime)
         
         XCTAssertEqual(expected, formatted, "Today's all-day formatted time is wrong!")
         
@@ -219,16 +219,16 @@ class ListEventsPresenterTests: XCTestCase {
         dateComponents.month = 07
         dateComponents.day = 01
         
-        ourTime = calendar.dateFromComponents(dateComponents)!
+        ourTime = calendar.date(from: dateComponents)!
         
         expected = "Yesterday at 21:00"
-        formatted = sut.formatFriendlyTime(displayDate, allDay : false, observingFrom: ourTime)
+        formatted = sut.formatFriendlyTime(displayDate!, allDay : false, observingFrom: ourTime)
         
         XCTAssertEqual(expected, formatted, "Yesterday's formatted time is wrong!")
         
         // as all day event (I'm not sure if this one is posisble!)
         expected = "Yesterday"
-        formatted = sut.formatFriendlyTime(displayDate, allDay : true, observingFrom: ourTime)
+        formatted = sut.formatFriendlyTime(displayDate!, allDay : true, observingFrom: ourTime)
         
         XCTAssertEqual(expected, formatted, "Yesterday's all-day formatted time is wrong!")
     }

@@ -39,7 +39,7 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
 
 // MARK: Display logic ListEventsPresenterOutput
 
-    func presentFetchedEvents(viewModel: ListEventsViewModel) {
+    func presentFetchedEvents(_ viewModel: ListEventsViewModel) {
         // NOTE: Display the result from the Presenter
 
         NSLog("present events")

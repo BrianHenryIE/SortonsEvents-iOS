@@ -14,13 +14,13 @@ class SourcePageTest: XCTestCase {
     func testTcdAsianJsonParsing() throws {
         
         // Read in the file
-        let bundle = NSBundle(forClass: self.classForCoder)
-        let path = bundle.pathForResource("SourcePageTcdAsian", ofType: "json")!
+        let bundle = Bundle(for: self.classForCoder)
+        let path = bundle.path(forResource: "SourcePageTcdAsian", ofType: "json")!
         
         let content = try String(contentsOfFile: path)
       
         // Use objectmapper
-        let tcdAsian : SourcePage = Mapper<SourcePage>().map(content)!
+        let tcdAsian : SourcePage = Mapper<SourcePage>().map(JSONString: content)!
             
         //"id": "884332671653875691002424327686",
         //"about": "The Trinity Centre Asian Studies is a teaching and research centre which offers Chinese, Korean and Japanese Studies as well as pan-Asian area studies.",

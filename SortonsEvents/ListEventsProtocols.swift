@@ -9,9 +9,9 @@
 import Foundation
 
 protocol ListEventsTableViewControllerOutput {
-    func fetchEvents(request: ListEvents_FetchEvents_Request)
+    func fetchEvents(_ request: ListEvents_FetchEvents_Request)
 }
 
 protocol ListEventsPresenterOutput {
-    func presentFetchedEvents(viewModel: ListEventsViewModel)
+    func presentFetchedEvents(_ viewModel: ListEventsViewModel)
 }

@@ -32,9 +32,9 @@ class RootViewController: UITabBarController {
         let directoryWireframe = DirectoryWireframe(fomoId: fomoId)
         let directoryViewController = directoryWireframe.directoryView
         
-        viewControllers!.append(directoryViewController)
+        viewControllers!.append(directoryViewController!)
         
-        self.presentViewController(directoryViewController, animated: true, completion: nil)
+        self.present(directoryViewController!, animated: true, completion: nil)
         
         
 
