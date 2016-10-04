@@ -37,7 +37,7 @@ class DiscoveredEventTest: XCTestCase {
         dateComponents.year = 2016
         dateComponents.month = 06
         dateComponents.day = 30
-        (dateComponents as NSDateComponents).timeZone = TimeZone(abbreviation: "UTC")
+        dateComponents.timeZone = TimeZone(abbreviation: "UTC")
         dateComponents.hour = 18
         dateComponents.minute = 00
         

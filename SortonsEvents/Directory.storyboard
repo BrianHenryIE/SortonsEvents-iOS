@@ -9,7 +9,7 @@
         <!--Directory-->
         <scene sceneID="OWZ-oL-Jnv">
             <objects>
-                <viewController storyboardIdentifier="DirectoryStoryboard" id="LWO-8l-cGf" userLabel="Directory" customClass="DirectoryViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="Directory" storyboardIdentifier="Directory" id="LWO-8l-cGf" userLabel="Directory" customClass="DirectoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zrh-od-CdU"/>
                         <viewControllerLayoutGuide type="bottom" id="xyk-cw-weA"/>

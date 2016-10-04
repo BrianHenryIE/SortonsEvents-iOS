@@ -39,8 +39,9 @@ class ListEventsPresenterTests: XCTestCase {
         } catch {
             // stop the tests!
         }
-        
-        sut = ListEventsPresenter(output: spy)
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone(abbreviation: "UTC")!
+        sut = ListEventsPresenter(output: spy, withDate: Date(), withCalendar: calendar)
     }
     
     func testPresentFetchedEvents() {
@@ -56,12 +57,14 @@ class ListEventsPresenterTests: XCTestCase {
         var ourTime : Date
         let calendar = Calendar.current
         var dateComponents = DateComponents()
-        (dateComponents as NSDateComponents).timeZone = TimeZone(abbreviation: "UTC") // prob doesn't matter
+        dateComponents.timeZone = TimeZone(abbreviation: "UTC")
+        
         
         // Test data: 9 total
         
         // 8-endTime: 2016-07-23T20:00:00.000Z
         // 9-startTime: 2016-09-24T09:00:00.000Z
+        
         
         dateComponents.year = 2016
         dateComponents.month = 08
@@ -100,7 +103,7 @@ class ListEventsPresenterTests: XCTestCase {
         ourTime = calendar.date(from: dateComponents)!
         remainingEvents = sut.filterToOngoingEvents(events, observingFrom: ourTime)
         
-        XCTAssertEqual(remainingEvents.count, 2, "Event starting yesteday before 6pm with no end time should not be included")
+        XCTAssertEqual(remainingEvents.count, 2, "Event starting yesterday before 6pm with no end time should not be included")
         
         // If the event has no end time but started after 6pm, we don't remove it until 6am
         // The choice of nighttime cutoff is arbirtary
@@ -111,9 +114,9 @@ class ListEventsPresenterTests: XCTestCase {
         ourTime = calendar.date(from: dateComponents)!
         remainingEvents = sut.filterToOngoingEvents(events, observingFrom: ourTime)
         
-        XCTAssertEqual(remainingEvents.count, 2, "Event starting yesteday after 6pm with no end time should be included until 6am following")
+        XCTAssertEqual(remainingEvents.count, 2, "Event starting yesterday after 6pm with no end time should be included until 6am following")
 
-        dateComponents.hour = 07
+        dateComponents.hour = 08
         
         ourTime = calendar.date(from: dateComponents)!
         remainingEvents = sut.filterToOngoingEvents(events, observingFrom: ourTime)
@@ -164,10 +167,10 @@ class ListEventsPresenterTests: XCTestCase {
         var dateComponents = DateComponents()
         
         //  what about timezones? (we'll see once we get to California!)
-        (dateComponents as NSDateComponents).timeZone = TimeZone(abbreviation: "UTC")
+        dateComponents.timeZone = TimeZone(abbreviation: "UTC")
         
         // 1. A normal "not close" date format
-        var expected = "Thursday 30 June at 21:00"
+        var expected = "Thursday 30 June at 20:00"
         var formatted = sut.formatFriendlyTime(displayDate!, allDay : false, observingFrom: Date())
         
         XCTAssertEqual(expected, formatted, "Most basic formatted time is wrong!")
@@ -187,7 +190,7 @@ class ListEventsPresenterTests: XCTestCase {
         
         ourTime = calendar.date(from: dateComponents)!
         
-        expected = "Tomorrow at 21:00"
+        expected = "Tomorrow at 20:00"
         formatted = sut.formatFriendlyTime(displayDate!, allDay : false, observingFrom: ourTime)
         
         XCTAssertEqual(expected, formatted, "Tomorrow's formatted time is wrong!")
@@ -204,7 +207,7 @@ class ListEventsPresenterTests: XCTestCase {
         
         ourTime = calendar.date(from: dateComponents)!
         
-        expected = "Today at 21:00"
+        expected = "Today at 20:00"
         formatted = sut.formatFriendlyTime(displayDate!, allDay : false, observingFrom: ourTime)
         
         XCTAssertEqual(expected, formatted, "Today's formatted time is wrong!")
@@ -221,7 +224,7 @@ class ListEventsPresenterTests: XCTestCase {
         
         ourTime = calendar.date(from: dateComponents)!
         
-        expected = "Yesterday at 21:00"
+        expected = "Yesterday at 20:00"
         formatted = sut.formatFriendlyTime(displayDate!, allDay : false, observingFrom: ourTime)
         
         XCTAssertEqual(expected, formatted, "Yesterday's formatted time is wrong!")

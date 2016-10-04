@@ -45,8 +45,8 @@ class ListEventsTableViewControllerTests: XCTestCase {
     {
         //let bundle = NSBundle.mainBundle()
         let bundle = Bundle(for: self.classForCoder)
-        let storyboard = UIStoryboard(name: "ListEventsStoryboard", bundle: bundle)
-        sut = storyboard.instantiateViewController(withIdentifier: "ListEventsTableViewController") as! ListEventsTableViewController
+        let storyboard = UIStoryboard(name: "ListEvents", bundle: bundle)
+        sut = storyboard.instantiateViewController(withIdentifier: "ListEvents") as! ListEventsTableViewController
     }
     
     func testShouldFetchOrdersWhenViewIsLoaded()

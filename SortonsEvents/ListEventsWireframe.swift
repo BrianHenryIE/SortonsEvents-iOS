@@ -17,7 +17,7 @@ class ListEventsWireframe {
         
         let storyboard = UIStoryboard(name: "ListEvents", bundle: Bundle.main)
         
-        listEventsView = storyboard.instantiateViewController(withIdentifier: "ListEventsStoryboard") as! ListEventsTableViewController
+        listEventsView = storyboard.instantiateViewController(withIdentifier: "ListEvents") as! ListEventsTableViewController
      
         let listEventsPresenter = ListEventsPresenter(output: listEventsView)
 

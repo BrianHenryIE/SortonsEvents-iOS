@@ -14,13 +14,16 @@ class ListEventsPresenter : ListEventsInteractorOutput {
     
     let observingFrom : Date!
     
-    let dateFormat = DateFormatter()
-    let calendar = Calendar.current
+    let dateFormat : DateFormatter
+    let calendar : Calendar
     
     // For testing
-    init(output: ListEventsPresenterOutput, withDate: Date = Date()){
+    init(output: ListEventsPresenterOutput, withDate: Date = Date(), withCalendar: Calendar = Calendar.current){
         self.output = output
         observingFrom = withDate
+        self.calendar = withCalendar
+        dateFormat = DateFormatter()
+        dateFormat.timeZone = calendar.timeZone
     }
     
     // Gotta set the view controller here... router?
@@ -47,7 +50,7 @@ class ListEventsPresenter : ListEventsInteractorOutput {
         
         let yesterday = calendar.date(byAdding: .day, value: -1, to: observingFrom)!
         let yesterday6pm = calendar.date(bySettingHour: 18, minute: 0, second: 0, of: yesterday)!
-        let today6am = calendar.date(bySettingHour: 6, minute: 0, second: 0, of: Date())!
+        let today6am = calendar.date(bySettingHour: 6, minute: 0, second: 0, of: observingFrom)!
         
         var filteredEvents = [DiscoveredEvent]()
         
@@ -87,11 +90,11 @@ class ListEventsPresenter : ListEventsInteractorOutput {
         var format : String
         
         // if it's yesterday, today or tomorrow use the word
-        if((calendar as Calendar).isDate(date, equalTo: yesterday, toGranularity: .day)) {
+        if(calendar.isDate(date, equalTo: yesterday, toGranularity: .day)) {
             format = "'Yesterday'"
-        } else if((calendar as Calendar).isDate(date, equalTo: observingFrom, toGranularity: .day)) {
+        } else if(calendar.isDate(date, equalTo: observingFrom, toGranularity: .day)) {
             format = "'Today'"
-        } else if((calendar as Calendar).isDate(date, equalTo: tomorrow, toGranularity: .day)) {
+        } else if(calendar.isDate(date, equalTo: tomorrow, toGranularity: .day)) {
             format = "'Tomorrow'"
         } else {
             format = "EEEE dd MMMM"

@@ -12,35 +12,31 @@ class RootViewController: UITabBarController {
 
     // This instead? : https://makeapppie.com/2014/09/09/swift-swift-using-tab-bar-controllers-in-swift/
     
+    let fomoId = "428055040731753"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Instantiate and add the modules, display events (or a preference, or last used!)
         NSLog("action")
         
-        let fomoId = "428055040731753"
+        
        
-//        
-//        let listEventsWireframe = ListEventsWireframe(fomoId: fomoId)
-//        let listEventsView = listEventsWireframe.listEventsView
-//        
-//        viewControllers!.append(listEventsView)
-//        
-//        self.presentViewController(listEventsView, animated: true, completion: nil)
-//       
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+    
+        let listEventsWireframe = ListEventsWireframe(fomoId: fomoId)
+        let listEventsView = listEventsWireframe.listEventsView!
+        
         
         let directoryWireframe = DirectoryWireframe(fomoId: fomoId)
-        let directoryViewController = directoryWireframe.directoryView
+        let directoryViewController = directoryWireframe.directoryView!
         
-        viewControllers!.append(directoryViewController!)
+        viewControllers = [listEventsView, directoryViewController]
         
-        self.present(directoryViewController!, animated: true, completion: nil)
-        
-        
+//        self.present(directoryViewController, animated: true, completion: nil)
 
-        
-        
-        
     }
 
     override func didReceiveMemoryWarning() {

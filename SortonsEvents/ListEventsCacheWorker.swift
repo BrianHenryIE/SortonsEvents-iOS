@@ -23,7 +23,9 @@ class ListEventsCacheWorker : ListEventsCacheWorkerProtocol {
     {
         // read file
         
-        completionHandler("")
+        completionHandler("{}")
+        
+        // If no file, return...? {} ?
         
         // Filter to future events in presenter
     }
