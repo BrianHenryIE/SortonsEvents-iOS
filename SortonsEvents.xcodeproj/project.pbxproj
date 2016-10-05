@@ -7,32 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A6141D431BB9F44F003150F1 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613161A91492500A5F082 /* EventsViewController.m */; };
 		A6141D441BB9F44F003150F1 /* CPDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BA1AE5494F00D1C950 /* CPDAPIClient.m */; };
-		A6141D471BB9F44F003150F1 /* DiscoveredEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */; };
-		A6141D4B1BB9F44F003150F1 /* SortonsEventsCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */; };
 		A6141D4C1BB9F44F003150F1 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1CB51ADC4CBD00F6FB18 /* NewsViewController.m */; };
 		A6141D4D1BB9F44F003150F1 /* CommonWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D4C8911AE04E5500AA4D48 /* CommonWebViewController.m */; };
-		A6141D4E1BB9F44F003150F1 /* DiscoveredEventBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613381A914A3200A5F082 /* DiscoveredEventBuilder.m */; };
 		A6141D4F1BB9F44F003150F1 /* DirectoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BE1AE5519800D1C950 /* DirectoryViewController.m */; };
 		A6141D501BB9F44F003150F1 /* IncludedPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AF6F371B5416FF00BA62DF /* IncludedPageCell.m */; };
-		A6141D511BB9F44F003150F1 /* SortonsEventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6133E1A914B6C00A5F082 /* SortonsEventsManager.m */; };
 		A6141D561BB9F44F003150F1 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A67150C31B825D66006537B8 /* fomo.plist */; };
 		A6141D571BB9F44F003150F1 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131B1A91492500A5F082 /* AppImages.xcassets */; };
 		A6141D591BB9F44F003150F1 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
 		A6141D5A1BB9F44F003150F1 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA87F1AE62AFF00C1A55C /* Root.storyboard */; };
 		A6141D6A1BB9F51B003150F1 /* LaunchScreenTCD.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6141D611BB9F507003150F1 /* LaunchScreenTCD.xib */; };
 		A6141D6B1BB9F52E003150F1 /* LaunchScreenUCD.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6141D651BB9F507003150F1 /* LaunchScreenUCD.xib */; };
-		A6141D6F1BB9F537003150F1 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613161A91492500A5F082 /* EventsViewController.m */; };
 		A6141D701BB9F537003150F1 /* CPDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BA1AE5494F00D1C950 /* CPDAPIClient.m */; };
-		A6141D731BB9F537003150F1 /* DiscoveredEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */; };
-		A6141D771BB9F537003150F1 /* SortonsEventsCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */; };
 		A6141D781BB9F537003150F1 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1CB51ADC4CBD00F6FB18 /* NewsViewController.m */; };
 		A6141D791BB9F537003150F1 /* CommonWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D4C8911AE04E5500AA4D48 /* CommonWebViewController.m */; };
-		A6141D7A1BB9F537003150F1 /* DiscoveredEventBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613381A914A3200A5F082 /* DiscoveredEventBuilder.m */; };
 		A6141D7B1BB9F537003150F1 /* DirectoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BE1AE5519800D1C950 /* DirectoryViewController.m */; };
 		A6141D7C1BB9F537003150F1 /* IncludedPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AF6F371B5416FF00BA62DF /* IncludedPageCell.m */; };
-		A6141D7D1BB9F537003150F1 /* SortonsEventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6133E1A914B6C00A5F082 /* SortonsEventsManager.m */; };
 		A6141D811BB9F537003150F1 /* LaunchScreenTCD.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6141D611BB9F507003150F1 /* LaunchScreenTCD.xib */; };
 		A6141D821BB9F537003150F1 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A67150C31B825D66006537B8 /* fomo.plist */; };
 		A6141D831BB9F537003150F1 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131B1A91492500A5F082 /* AppImages.xcassets */; };
@@ -46,21 +36,15 @@
 		A625EA7F1C8AF07F00B35D80 /* ListEventsNetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF411C8AD67D005064F7 /* ListEventsNetworkWorker.swift */; };
 		A625EA801C8AF09200B35D80 /* ListEventsNetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF411C8AD67D005064F7 /* ListEventsNetworkWorker.swift */; };
 		A625EA811C8AF14200B35D80 /* ListEventsInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF451C8AD68F005064F7 /* ListEventsInteractorIO.swift */; };
-		A62BD61B1B9E1C4500E928E5 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613161A91492500A5F082 /* EventsViewController.m */; };
 		A62BD61C1B9E1C4500E928E5 /* CPDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BA1AE5494F00D1C950 /* CPDAPIClient.m */; };
-		A62BD61F1B9E1C4500E928E5 /* DiscoveredEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */; };
-		A62BD6231B9E1C4500E928E5 /* SortonsEventsCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */; };
 		A62BD6241B9E1C4500E928E5 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1CB51ADC4CBD00F6FB18 /* NewsViewController.m */; };
 		A62BD6251B9E1C4500E928E5 /* CommonWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D4C8911AE04E5500AA4D48 /* CommonWebViewController.m */; };
-		A62BD6261B9E1C4500E928E5 /* DiscoveredEventBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613381A914A3200A5F082 /* DiscoveredEventBuilder.m */; };
 		A62BD6271B9E1C4500E928E5 /* DirectoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BE1AE5519800D1C950 /* DirectoryViewController.m */; };
 		A62BD6281B9E1C4500E928E5 /* IncludedPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AF6F371B5416FF00BA62DF /* IncludedPageCell.m */; };
-		A62BD6291B9E1C4500E928E5 /* SortonsEventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6133E1A914B6C00A5F082 /* SortonsEventsManager.m */; };
 		A62BD62E1B9E1C4500E928E5 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A67150C31B825D66006537B8 /* fomo.plist */; };
 		A62BD62F1B9E1C4500E928E5 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131B1A91492500A5F082 /* AppImages.xcassets */; };
 		A62BD6311B9E1C4500E928E5 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
 		A62BD6321B9E1C4500E928E5 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA87F1AE62AFF00C1A55C /* Root.storyboard */; };
-		A62E6E201C85015B001A645D /* LaunchScreenDCU.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A62E6E1E1C8500AB001A645D /* LaunchScreenDCU.storyboard */; };
 		A63693451D3A497E00808DC5 /* DiscoveredEventsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3FF1D25B96D0097AF22 /* DiscoveredEventsResponse.swift */; };
 		A636934A1D3A4BD100808DC5 /* ListEventsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63693491D3A4BD100808DC5 /* ListEventsProtocols.swift */; };
 		A636934D1D3A4CD900808DC5 /* ListEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68183D91D2AFFB900E45D35 /* ListEventsTableViewController.swift */; };
@@ -70,16 +54,11 @@
 		A636D26F1D0C892F00FB9C62 /* DiscoveredEventNIUGBicycleVolunteering.json in Resources */ = {isa = PBXBuildFile; fileRef = A636D26E1D0C892F00FB9C62 /* DiscoveredEventNIUGBicycleVolunteering.json */; };
 		A636D2741D0C8A8700FB9C62 /* SourcePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A636D2731D0C8A8700FB9C62 /* SourcePage.swift */; };
 		A636D2761D0C8A9A00FB9C62 /* SourcePageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A636D2751D0C8A9A00FB9C62 /* SourcePageTest.swift */; };
-		A63B32A31C68AFA400C46020 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613161A91492500A5F082 /* EventsViewController.m */; };
 		A63B32A41C68AFA400C46020 /* CPDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BA1AE5494F00D1C950 /* CPDAPIClient.m */; };
-		A63B32A71C68AFA400C46020 /* DiscoveredEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */; };
-		A63B32AB1C68AFA400C46020 /* SortonsEventsCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */; };
 		A63B32AC1C68AFA400C46020 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1CB51ADC4CBD00F6FB18 /* NewsViewController.m */; };
 		A63B32AD1C68AFA400C46020 /* CommonWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D4C8911AE04E5500AA4D48 /* CommonWebViewController.m */; };
-		A63B32AE1C68AFA400C46020 /* DiscoveredEventBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613381A914A3200A5F082 /* DiscoveredEventBuilder.m */; };
 		A63B32AF1C68AFA400C46020 /* DirectoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BE1AE5519800D1C950 /* DirectoryViewController.m */; };
 		A63B32B01C68AFA400C46020 /* IncludedPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AF6F371B5416FF00BA62DF /* IncludedPageCell.m */; };
-		A63B32B11C68AFA400C46020 /* SortonsEventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6133E1A914B6C00A5F082 /* SortonsEventsManager.m */; };
 		A63B32B51C68AFA400C46020 /* LaunchScreenNUIG.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131D1A91492500A5F082 /* LaunchScreenNUIG.xib */; };
 		A63B32B61C68AFA400C46020 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A67150C31B825D66006537B8 /* fomo.plist */; };
 		A63B32B71C68AFA400C46020 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131B1A91492500A5F082 /* AppImages.xcassets */; };
@@ -111,7 +90,6 @@
 		A6A675941C941D6300FAD755 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A675931C941D6300FAD755 /* AppDelegate.swift */; };
 		A6A6759B1C943AED00FAD755 /* ListEventsCacheWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A6759A1C943AED00FAD755 /* ListEventsCacheWorker.swift */; };
 		A6A6759C1C943AED00FAD755 /* ListEventsCacheWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A6759A1C943AED00FAD755 /* ListEventsCacheWorker.swift */; };
-		A6AAD3DB1D258D920097AF22 /* DiscoveredEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3D81D258D920097AF22 /* DiscoveredEvent.m */; };
 		A6AAD3DC1D258D920097AF22 /* SourcePage.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3DA1D258D920097AF22 /* SourcePage.m */; };
 		A6AAD3DE1D258E570097AF22 /* ClientPageDataCacheWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3DD1D258E570097AF22 /* ClientPageDataCacheWorker.swift */; };
 		A6AAD3DF1D258EE60097AF22 /* ClientPageDataCacheWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3DD1D258E570097AF22 /* ClientPageDataCacheWorker.swift */; };
@@ -153,14 +131,8 @@
 		A6C45C071DA386E600FC57D5 /* FomoIdTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C45C061DA386E600FC57D5 /* FomoIdTest.swift */; };
 		A6C45C091DA3882B00FC57D5 /* FomoId.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C45C081DA3882B00FC57D5 /* FomoId.swift */; };
 		A6C45C0A1DA3898C00FC57D5 /* FomoId.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C45C081DA3882B00FC57D5 /* FomoId.swift */; };
-		A6C45C0D1DA38A1A00FC57D5 /* Fomo.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C45C0B1DA38A1A00FC57D5 /* Fomo.m */; };
-		A6C613171A91492500A5F082 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613161A91492500A5F082 /* EventsViewController.m */; };
 		A6C6131C1A91492500A5F082 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131B1A91492500A5F082 /* AppImages.xcassets */; };
 		A6C6131F1A91492500A5F082 /* LaunchScreenNUIG.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131D1A91492500A5F082 /* LaunchScreenNUIG.xib */; };
-		A6C613391A914A3200A5F082 /* DiscoveredEventBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613381A914A3200A5F082 /* DiscoveredEventBuilder.m */; };
-		A6C6133F1A914B6C00A5F082 /* SortonsEventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6133E1A914B6C00A5F082 /* SortonsEventsManager.m */; };
-		A6C613421A914B8B00A5F082 /* SortonsEventsCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */; };
-		A6C613491A91614F00A5F082 /* DiscoveredEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */; };
 		A6D386BB1AE5494F00D1C950 /* CPDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BA1AE5494F00D1C950 /* CPDAPIClient.m */; };
 		A6D386BF1AE5519800D1C950 /* DirectoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D386BE1AE5519800D1C950 /* DirectoryViewController.m */; };
 		A6D4C8921AE04E5500AA4D48 /* CommonWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D4C8911AE04E5500AA4D48 /* CommonWebViewController.m */; };
@@ -190,7 +162,6 @@
 		A6141D661BB9F507003150F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreenUCD.xib; sourceTree = "<group>"; };
 		A6141D8B1BB9F537003150F1 /* FOMO UCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO UCC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A62BD6371B9E1C4500E928E5 /* FOMO UCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO UCD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A62E6E1E1C8500AB001A645D /* LaunchScreenDCU.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreenDCU.storyboard; sourceTree = "<group>"; };
 		A63693491D3A4BD100808DC5 /* ListEventsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsProtocols.swift; sourceTree = "<group>"; };
 		A636D26C1D0C88FF00FB9C62 /* DiscoveredEventTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveredEventTest.swift; sourceTree = "<group>"; };
 		A636D26E1D0C892F00FB9C62 /* DiscoveredEventNIUGBicycleVolunteering.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DiscoveredEventNIUGBicycleVolunteering.json; sourceTree = "<group>"; };
@@ -224,8 +195,6 @@
 		A69DBF531C8AE4D8005064F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6A675931C941D6300FAD755 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6A6759A1C943AED00FAD755 /* ListEventsCacheWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsCacheWorker.swift; sourceTree = "<group>"; };
-		A6AAD3D71D258D920097AF22 /* DiscoveredEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoveredEvent.h; sourceTree = "<group>"; };
-		A6AAD3D81D258D920097AF22 /* DiscoveredEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoveredEvent.m; sourceTree = "<group>"; };
 		A6AAD3D91D258D920097AF22 /* SourcePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourcePage.h; sourceTree = "<group>"; };
 		A6AAD3DA1D258D920097AF22 /* SourcePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourcePage.m; sourceTree = "<group>"; };
 		A6AAD3DD1D258E570097AF22 /* ClientPageDataCacheWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientPageDataCacheWorker.swift; sourceTree = "<group>"; };
@@ -244,24 +213,10 @@
 		A6BDA87E1AE62AFF00C1A55C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Root.storyboard; sourceTree = "<group>"; };
 		A6C45C061DA386E600FC57D5 /* FomoIdTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FomoIdTest.swift; sourceTree = "<group>"; };
 		A6C45C081DA3882B00FC57D5 /* FomoId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FomoId.swift; sourceTree = "<group>"; };
-		A6C45C0B1DA38A1A00FC57D5 /* Fomo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fomo.m; sourceTree = "<group>"; };
-		A6C45C0C1DA38A1A00FC57D5 /* Fomo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fomo.h; sourceTree = "<group>"; };
 		A6C6130B1A91492500A5F082 /* SortonsEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SortonsEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C6130F1A91492500A5F082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A6C613151A91492500A5F082 /* EventsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
-		A6C613161A91492500A5F082 /* EventsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		A6C6131B1A91492500A5F082 /* AppImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppImages.xcassets; sourceTree = "<group>"; };
 		A6C6131E1A91492500A5F082 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreenNUIG.xib; sourceTree = "<group>"; };
-		A6C613371A914A3200A5F082 /* DiscoveredEventBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoveredEventBuilder.h; sourceTree = "<group>"; };
-		A6C613381A914A3200A5F082 /* DiscoveredEventBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoveredEventBuilder.m; sourceTree = "<group>"; };
-		A6C6133D1A914B6C00A5F082 /* SortonsEventsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortonsEventsManager.h; sourceTree = "<group>"; };
-		A6C6133E1A914B6C00A5F082 /* SortonsEventsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortonsEventsManager.m; sourceTree = "<group>"; };
-		A6C613401A914B8B00A5F082 /* SortonsEventsCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortonsEventsCommunicator.h; sourceTree = "<group>"; };
-		A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortonsEventsCommunicator.m; sourceTree = "<group>"; };
-		A6C613431A914CA300A5F082 /* SortonsEventsCommunicatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortonsEventsCommunicatorDelegate.h; sourceTree = "<group>"; };
-		A6C613461A91530E00A5F082 /* SortonsEventsManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortonsEventsManagerDelegate.h; sourceTree = "<group>"; };
-		A6C613471A91614F00A5F082 /* DiscoveredEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoveredEventCell.h; sourceTree = "<group>"; };
-		A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoveredEventCell.m; sourceTree = "<group>"; };
 		A6D386B91AE5494F00D1C950 /* CPDAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDAPIClient.h; sourceTree = "<group>"; };
 		A6D386BA1AE5494F00D1C950 /* CPDAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDAPIClient.m; sourceTree = "<group>"; };
 		A6D386BD1AE5519800D1C950 /* DirectoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryViewController.h; sourceTree = "<group>"; };
@@ -533,21 +488,9 @@
 				A6C6131D1A91492500A5F082 /* LaunchScreenNUIG.xib */,
 				A6141D611BB9F507003150F1 /* LaunchScreenTCD.xib */,
 				A6141D631BB9F507003150F1 /* LaunchScreenUCC.xib */,
-				A62E6E1E1C8500AB001A645D /* LaunchScreenDCU.storyboard */,
 				A6C45C081DA3882B00FC57D5 /* FomoId.swift */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		A69DBF4A1C8ADBE8005064F7 /* ObjC */ = {
-			isa = PBXGroup;
-			children = (
-				A6C45C0B1DA38A1A00FC57D5 /* Fomo.m */,
-				A6C45C0C1DA38A1A00FC57D5 /* Fomo.h */,
-				A6D386B81AE5490E00D1C950 /* APIClient */,
-				A6EA1CAD1ADC494A00F6FB18 /* Events */,
-			);
-			name = ObjC;
 			sourceTree = "<group>";
 		};
 		A69DBF501C8AE4D8005064F7 /* SortonsEventsTests */ = {
@@ -600,7 +543,6 @@
 		A6C6130D1A91492500A5F082 /* SortonsEvents */ = {
 			isa = PBXGroup;
 			children = (
-				A69DBF4A1C8ADBE8005064F7 /* ObjC */,
 				A69DBF2D1C8AD441005064F7 /* Classes */,
 				A6C6130E1A91492500A5F082 /* Supporting Files */,
 				A6A675931C941D6300FAD755 /* AppDelegate.swift */,
@@ -617,30 +559,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A6D386B81AE5490E00D1C950 /* APIClient */ = {
-			isa = PBXGroup;
-			children = (
-				A6AAD3D71D258D920097AF22 /* DiscoveredEvent.h */,
-				A6AAD3D81D258D920097AF22 /* DiscoveredEvent.m */,
-				A6AAD3D91D258D920097AF22 /* SourcePage.h */,
-				A6AAD3DA1D258D920097AF22 /* SourcePage.m */,
-				A6C613371A914A3200A5F082 /* DiscoveredEventBuilder.h */,
-				A6C613381A914A3200A5F082 /* DiscoveredEventBuilder.m */,
-				A6C6133D1A914B6C00A5F082 /* SortonsEventsManager.h */,
-				A6C6133E1A914B6C00A5F082 /* SortonsEventsManager.m */,
-				A6C613401A914B8B00A5F082 /* SortonsEventsCommunicator.h */,
-				A6C613411A914B8B00A5F082 /* SortonsEventsCommunicator.m */,
-				A6C613431A914CA300A5F082 /* SortonsEventsCommunicatorDelegate.h */,
-				A6C613461A91530E00A5F082 /* SortonsEventsManagerDelegate.h */,
-				A6D386B91AE5494F00D1C950 /* CPDAPIClient.h */,
-				A6D386BA1AE5494F00D1C950 /* CPDAPIClient.m */,
-			);
-			name = APIClient;
-			sourceTree = "<group>";
-		};
 		A6D386BC1AE5517800D1C950 /* ObjC */ = {
 			isa = PBXGroup;
 			children = (
+				A6AAD3D91D258D920097AF22 /* SourcePage.h */,
+				A6AAD3DA1D258D920097AF22 /* SourcePage.m */,
+				A6D386B91AE5494F00D1C950 /* CPDAPIClient.h */,
+				A6D386BA1AE5494F00D1C950 /* CPDAPIClient.m */,
 				A6D386BD1AE5519800D1C950 /* DirectoryViewController.h */,
 				A6D386BE1AE5519800D1C950 /* DirectoryViewController.m */,
 				A6AF6F361B5416FF00BA62DF /* IncludedPageCell.h */,
@@ -665,17 +590,6 @@
 				A6EA1CB51ADC4CBD00F6FB18 /* NewsViewController.m */,
 			);
 			name = ObjC;
-			sourceTree = "<group>";
-		};
-		A6EA1CAD1ADC494A00F6FB18 /* Events */ = {
-			isa = PBXGroup;
-			children = (
-				A6C613151A91492500A5F082 /* EventsViewController.h */,
-				A6C613161A91492500A5F082 /* EventsViewController.m */,
-				A6C613471A91614F00A5F082 /* DiscoveredEventCell.h */,
-				A6C613481A91614F00A5F082 /* DiscoveredEventCell.m */,
-			);
-			name = Events;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -899,7 +813,6 @@
 				A63B32B51C68AFA400C46020 /* LaunchScreenNUIG.xib in Resources */,
 				A63B32B61C68AFA400C46020 /* fomo.plist in Resources */,
 				A63B32B71C68AFA400C46020 /* AppImages.xcassets in Resources */,
-				A62E6E201C85015B001A645D /* LaunchScreenDCU.storyboard in Resources */,
 				A63B32B91C68AFA400C46020 /* Settings.bundle in Resources */,
 				A63B32BA1C68AFA400C46020 /* Root.storyboard in Resources */,
 			);
@@ -1030,20 +943,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A698B6F91D2589F7003494A3 /* AppDelegate.swift in Sources */,
-				A6141D431BB9F44F003150F1 /* EventsViewController.m in Sources */,
 				A6141D441BB9F44F003150F1 /* CPDAPIClient.m in Sources */,
-				A6141D471BB9F44F003150F1 /* DiscoveredEventCell.m in Sources */,
-				A6141D4B1BB9F44F003150F1 /* SortonsEventsCommunicator.m in Sources */,
 				A6141D4C1BB9F44F003150F1 /* NewsViewController.m in Sources */,
 				A6141D4D1BB9F44F003150F1 /* CommonWebViewController.m in Sources */,
-				A6141D4E1BB9F44F003150F1 /* DiscoveredEventBuilder.m in Sources */,
 				A6AAD3FA1D25B6D20097AF22 /* GAEISO8601DateTransform.swift in Sources */,
 				A6141D4F1BB9F44F003150F1 /* DirectoryViewController.m in Sources */,
 				A6AAD3F21D25A6610097AF22 /* DiscoveredEvent.swift in Sources */,
 				A6141D501BB9F44F003150F1 /* IncludedPageCell.m in Sources */,
 				A6AAD3EE1D25A5E80097AF22 /* SourcePage.swift in Sources */,
 				A6AAD3E61D25905F0097AF22 /* ClientPageData.swift in Sources */,
-				A6141D511BB9F44F003150F1 /* SortonsEventsManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1052,20 +960,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A698B6FA1D2589F8003494A3 /* AppDelegate.swift in Sources */,
-				A6141D6F1BB9F537003150F1 /* EventsViewController.m in Sources */,
 				A6141D701BB9F537003150F1 /* CPDAPIClient.m in Sources */,
-				A6141D731BB9F537003150F1 /* DiscoveredEventCell.m in Sources */,
-				A6141D771BB9F537003150F1 /* SortonsEventsCommunicator.m in Sources */,
 				A6141D781BB9F537003150F1 /* NewsViewController.m in Sources */,
 				A6141D791BB9F537003150F1 /* CommonWebViewController.m in Sources */,
-				A6141D7A1BB9F537003150F1 /* DiscoveredEventBuilder.m in Sources */,
 				A6AAD3F91D25B6D10097AF22 /* GAEISO8601DateTransform.swift in Sources */,
 				A6141D7B1BB9F537003150F1 /* DirectoryViewController.m in Sources */,
 				A6AAD3F31D25A6620097AF22 /* DiscoveredEvent.swift in Sources */,
 				A6141D7C1BB9F537003150F1 /* IncludedPageCell.m in Sources */,
 				A6AAD3EF1D25A5E80097AF22 /* SourcePage.swift in Sources */,
 				A6AAD3E81D25905F0097AF22 /* ClientPageData.swift in Sources */,
-				A6141D7D1BB9F537003150F1 /* SortonsEventsManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1073,8 +976,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A62BD61B1B9E1C4500E928E5 /* EventsViewController.m in Sources */,
-				A6AAD3DB1D258D920097AF22 /* DiscoveredEvent.m in Sources */,
 				A625EA791C8AEEA800B35D80 /* ListEventsInteractor.swift in Sources */,
 				A65B23C31D6E00FF00A66C85 /* ListEventsWireframe.swift in Sources */,
 				A6AAD3E31D258F8E0097AF22 /* ClientPageData.swift in Sources */,
@@ -1086,26 +987,21 @@
 				A65B23CB1D6E0E1F00A66C85 /* DirectoryWireframe.swift in Sources */,
 				A68183DD1D2B009E00E45D35 /* ListEventsModels.swift in Sources */,
 				A6ABE5311D3AB12200EF3D11 /* DiscoveredEventTableViewCell.swift in Sources */,
-				A62BD61F1B9E1C4500E928E5 /* DiscoveredEventCell.m in Sources */,
 				A63693451D3A497E00808DC5 /* DiscoveredEventsResponse.swift in Sources */,
 				A6A675941C941D6300FAD755 /* AppDelegate.swift in Sources */,
 				A6C45C091DA3882B00FC57D5 /* FomoId.swift in Sources */,
 				A625EA7F1C8AF07F00B35D80 /* ListEventsNetworkWorker.swift in Sources */,
 				A625EA7A1C8AEEAB00B35D80 /* ListEventsInteractorIO.swift in Sources */,
 				A6AAD3DE1D258E570097AF22 /* ClientPageDataCacheWorker.swift in Sources */,
-				A6C45C0D1DA38A1A00FC57D5 /* Fomo.m in Sources */,
-				A62BD6231B9E1C4500E928E5 /* SortonsEventsCommunicator.m in Sources */,
 				A6ABE5351D3AB9A600EF3D11 /* ListEventsPresenter.swift in Sources */,
 				A65B23C11D6DFCA800A66C85 /* RootViewController.swift in Sources */,
 				A6AAD3E41D258FD80097AF22 /* SourcePage.swift in Sources */,
 				A62BD6241B9E1C4500E928E5 /* NewsViewController.m in Sources */,
 				A62BD6251B9E1C4500E928E5 /* CommonWebViewController.m in Sources */,
 				A6AAD3FC1D25B6D30097AF22 /* GAEISO8601DateTransform.swift in Sources */,
-				A62BD6261B9E1C4500E928E5 /* DiscoveredEventBuilder.m in Sources */,
 				A62BD6271B9E1C4500E928E5 /* DirectoryViewController.m in Sources */,
 				A68183DA1D2AFFB900E45D35 /* ListEventsTableViewController.swift in Sources */,
 				A62BD6281B9E1C4500E928E5 /* IncludedPageCell.m in Sources */,
-				A62BD6291B9E1C4500E928E5 /* SortonsEventsManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1114,20 +1010,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A698B6FB1D2589F8003494A3 /* AppDelegate.swift in Sources */,
-				A63B32A31C68AFA400C46020 /* EventsViewController.m in Sources */,
 				A63B32A41C68AFA400C46020 /* CPDAPIClient.m in Sources */,
-				A63B32A71C68AFA400C46020 /* DiscoveredEventCell.m in Sources */,
-				A63B32AB1C68AFA400C46020 /* SortonsEventsCommunicator.m in Sources */,
 				A63B32AC1C68AFA400C46020 /* NewsViewController.m in Sources */,
 				A63B32AD1C68AFA400C46020 /* CommonWebViewController.m in Sources */,
-				A63B32AE1C68AFA400C46020 /* DiscoveredEventBuilder.m in Sources */,
 				A6AAD3F81D25B6D10097AF22 /* GAEISO8601DateTransform.swift in Sources */,
 				A63B32AF1C68AFA400C46020 /* DirectoryViewController.m in Sources */,
 				A6AAD3F41D25A6620097AF22 /* DiscoveredEvent.swift in Sources */,
 				A63B32B01C68AFA400C46020 /* IncludedPageCell.m in Sources */,
 				A6AAD3F01D25A5E90097AF22 /* SourcePage.swift in Sources */,
 				A6AAD3E71D25905F0097AF22 /* ClientPageData.swift in Sources */,
-				A63B32B11C68AFA400C46020 /* SortonsEventsManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1169,20 +1060,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A698B6F81D2589F7003494A3 /* AppDelegate.swift in Sources */,
-				A6C613171A91492500A5F082 /* EventsViewController.m in Sources */,
 				A6D386BB1AE5494F00D1C950 /* CPDAPIClient.m in Sources */,
-				A6C613491A91614F00A5F082 /* DiscoveredEventCell.m in Sources */,
-				A6C613421A914B8B00A5F082 /* SortonsEventsCommunicator.m in Sources */,
 				A6EA1CB61ADC4CBD00F6FB18 /* NewsViewController.m in Sources */,
 				A6D4C8921AE04E5500AA4D48 /* CommonWebViewController.m in Sources */,
-				A6C613391A914A3200A5F082 /* DiscoveredEventBuilder.m in Sources */,
 				A6AAD3FB1D25B6D20097AF22 /* GAEISO8601DateTransform.swift in Sources */,
 				A6D386BF1AE5519800D1C950 /* DirectoryViewController.m in Sources */,
 				A6AAD3F11D25A6600097AF22 /* DiscoveredEvent.swift in Sources */,
 				A6AF6F381B5416FF00BA62DF /* IncludedPageCell.m in Sources */,
 				A6AAD3ED1D25A5E80097AF22 /* SourcePage.swift in Sources */,
 				A6AAD3E51D25905E0097AF22 /* ClientPageData.swift in Sources */,
-				A6C6133F1A914B6C00A5F082 /* SortonsEventsManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
