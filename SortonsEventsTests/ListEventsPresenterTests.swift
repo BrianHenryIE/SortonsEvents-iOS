@@ -41,7 +41,15 @@ class ListEventsPresenterTests: XCTestCase {
         }
         var calendar = Calendar.current
         calendar.timeZone = TimeZone(abbreviation: "UTC")!
-        sut = ListEventsPresenter(output: spy, withDate: Date(), withCalendar: calendar)
+        
+        var dateComponents = DateComponents()
+        dateComponents.timeZone = TimeZone(abbreviation: "UTC")
+        dateComponents.year = 2016
+        dateComponents.month = 08
+        dateComponents.day = 15
+        let date = calendar.date(from: dateComponents)!
+
+        sut = ListEventsPresenter(output: spy, withDate: date, withCalendar: calendar)
     }
     
     func testPresentFetchedEvents() {
@@ -49,6 +57,19 @@ class ListEventsPresenterTests: XCTestCase {
         sut.presentFetchedEvents(ListEvents_FetchEvents_Response(events: events))
         
         XCTAssertTrue(spy.presentFetchedEventsCalled)        
+    }
+    
+    func testPresentEmptyFetchedEvents() {
+        // If there are no events found, it should not push to the next layer
+        // becuase it's crashing
+        // TODO: ultimately, it should show a polite message
+        
+        let empty = [DiscoveredEvent]()
+        
+        sut.presentFetchedEvents(ListEvents_FetchEvents_Response(events: empty))
+        
+        XCTAssertFalse(spy.presentFetchedEventsCalled)
+        
     }
     
     
@@ -156,7 +177,7 @@ class ListEventsPresenterTests: XCTestCase {
         XCTAssertEqual(remainingEvents.count, 9, "Everything in the future (no filter!)")
     }
     
-    
+    // Move to NSDate extension
     func testFormatFriendlyTime() {
         
         // Testing times: 2016-06-30T20:00:00.000Z

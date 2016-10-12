@@ -24,8 +24,7 @@ class ListEventsWireframe {
         let listEventsInteractor = ListEventsInteractor(fomoId: fomoId, output: listEventsPresenter, listEventsNetworkWorker: ListEventsNetworkWorker(), listEventsCacheWorker: ListEventsCacheWorker())
         
         listEventsView.output = listEventsInteractor
-    
-        
+     
     }
 
 }
