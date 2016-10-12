@@ -32,18 +32,21 @@ class ListEventsPresenter : ListEventsInteractorOutput {
     
         let filteredEvents = filterToOngoingEvents(upcomingEvents.events, observingFrom: observingFrom)
         
-        // TODO This should maybe be outside this function. Currently untested
-        let cellModels : [DiscoveredEventCellModel] = filteredEvents.map({
-            let webUrl = URL(string: "https://facebook.com/events/\($0.eventId)/")!
-            let appUrl = URL(string: "fb://profile/\($0.eventId)/")!
-            let imageUrl = URL(string: "https://graph.facebook.com/\($0.eventId)@/picture?type=square")!
+        if(!filteredEvents.isEmpty){
             
-            return DiscoveredEventCellModel(webUrl: webUrl, appUrl: appUrl, name: $0.name, startTime: formatFriendlyTime($0.startTime, allDay: $0.dateOnly), location: $0.location, imageUrl: imageUrl)
-        })
-        
-        let viewModel = ListEventsViewModel(discoveredEvents: cellModels)
-        
-        output.presentFetchedEvents(viewModel)
+            // TODO This should maybe be outside this function. Currently test failing here!
+            let cellModels : [DiscoveredEventCellModel] = filteredEvents.map({
+                let webUrl = URL(string: "https://facebook.com/events/\($0.eventId!)/")!
+                let appUrl = URL(string: "fb://profile/\($0.eventId!)/")!
+                let imageUrl = URL(string: "https://graph.facebook.com/\($0.eventId!)@/picture?type=square")!
+                
+                return DiscoveredEventCellModel(webUrl: webUrl, appUrl: appUrl, name: $0.name, startTime: formatFriendlyTime($0.startTime, allDay: $0.dateOnly), location: $0.location, imageUrl: imageUrl)
+            })
+            
+            let viewModel = ListEventsViewModel(discoveredEvents: cellModels)
+            
+            output.presentFetchedEvents(viewModel)
+        }
     }
     
     func filterToOngoingEvents(_ allEvents : [DiscoveredEvent], observingFrom: Date) -> [DiscoveredEvent] {
