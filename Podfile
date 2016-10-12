@@ -18,16 +18,6 @@ target 'SortonsEventsTests' do
 end
 
 
-# Objective C pods to be removed:
-
-pod 'AFNetworking'
-pod 'SDWebImage'
-
-#pod 'FBSDKCoreKit'
-#pod 'FBSDKLoginKit'
-#pod 'FBSDKShareKit'
-
-
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
