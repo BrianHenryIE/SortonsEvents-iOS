@@ -8,9 +8,6 @@
 
 import UIKit
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
 //    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
 //    
 //    // Set the application defaults
@@ -19,12 +16,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    forKey:@"launch_native_apps_toggle"];
 //    [defaults registerDefaults:appDefaults];
 //    [defaults synchronize];
+
+// https://makeapppie.com/2014/09/09/swift-swift-using-tab-bar-controllers-in-swift/
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        let frame = UIScreen.main.bounds
+        window = UIWindow(frame: frame)
+        
+        // TODO - shouldn't be hardcoded
+        let fomoId = FomoId.numberFromBundle(bundleName: "ie.sortons.events.ucd")!
+        
+        let listEventsWireframe = ListEventsWireframe(fomoId: fomoId)
+        let listEventsView = listEventsWireframe.listEventsView!
+        
+        let directoryWireframe = DirectoryWireframe(fomoId: fomoId)
+        let directoryView = directoryWireframe.directoryView!
+        
+        let tabBarController = UITabBarController()
+        
+        let viewControllers = [listEventsView, directoryView]
+        
+        tabBarController.viewControllers = viewControllers
+        window?.rootViewController = tabBarController
+        window!.makeKeyAndVisible()
+        
+        let firstImage = UIImage(named: "ListEventsTabBarIcon")
+        let secondImage = UIImage(named: "NewsTabBarIcon")
+        let thirdImage = UIImage(named: "DirectoryTabBarIcon")
+        
+        listEventsView.tabBarItem = UITabBarItem(
+            title: "Events",
+            image: firstImage,
+            tag: 1)
+        
+        
+        
+        directoryView.tabBarItem = UITabBarItem(
+            title: "Directory",
+            image: thirdImage,
+            tag:2)
+        
         return true
     }
-    
 }
