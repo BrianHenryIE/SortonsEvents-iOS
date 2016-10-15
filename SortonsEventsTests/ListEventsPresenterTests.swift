@@ -9,7 +9,7 @@
 import XCTest
 import ObjectMapper
 
-class ListEventsPresenterOutputSpy : ListEventsPresenterOutput {
+class ListEventsPresenterOutputSpy: ListEventsPresenterOutput {
     
     var presentFetchedEventsCalled = false
     
@@ -20,9 +20,9 @@ class ListEventsPresenterOutputSpy : ListEventsPresenterOutput {
 
 class ListEventsPresenterTests: XCTestCase {
     
-    var events : [DiscoveredEvent]!
+    var events: [DiscoveredEvent]!
     
-    var sut : ListEventsPresenter!
+    var sut: ListEventsPresenter!
     let spy = ListEventsPresenterOutputSpy()
     
     override func setUp() {
@@ -34,7 +34,7 @@ class ListEventsPresenterTests: XCTestCase {
         
         do {
             let content = try String(contentsOfFile: path)
-            let nuigJun16 : DiscoveredEventsResponse = Mapper<DiscoveredEventsResponse>().map(JSONString: content)!
+            let nuigJun16: DiscoveredEventsResponse = Mapper<DiscoveredEventsResponse>().map(JSONString: content)!
             events = nuigJun16.data
         } catch {
             // stop the tests!
@@ -71,11 +71,10 @@ class ListEventsPresenterTests: XCTestCase {
         XCTAssertFalse(spy.presentFetchedEventsCalled)
         
     }
-    
-    
+
     func testShouldDiscardEarlyEvents() {
-        var remainingEvents : [DiscoveredEvent]
-        var ourTime : Date
+        var remainingEvents: [DiscoveredEvent]
+        var ourTime: Date
         let calendar = Calendar.current
         var dateComponents = DateComponents()
         dateComponents.timeZone = TimeZone(abbreviation: "UTC")
@@ -183,7 +182,7 @@ class ListEventsPresenterTests: XCTestCase {
         // Testing times: 2016-06-30T20:00:00.000Z
         let displayDate = events[1].startTime
         
-        var ourTime : Date
+        var ourTime: Date
         let calendar = Calendar.current
         var dateComponents = DateComponents()
         
@@ -192,7 +191,7 @@ class ListEventsPresenterTests: XCTestCase {
         
         // 1. A normal "not close" date format
         var expected = "Thursday 30 June at 20:00"
-        var formatted = sut.formatFriendlyTime(displayDate!, allDay : false, observingFrom: Date())
+        var formatted = sut.formatFriendlyTime(displayDate!, allDay: false, observingFrom: Date())
         
         XCTAssertEqual(expected, formatted, "Most basic formatted time is wrong!")
         

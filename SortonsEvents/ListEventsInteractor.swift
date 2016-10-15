@@ -9,14 +9,14 @@
 import Foundation
 import ObjectMapper
 
-class ListEventsInteractor : NSObject, ListEventsTableViewControllerOutput {
+class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutput {
     
-    let fomoId : String
-    let output : ListEventsInteractorOutput
-    let listEventsNetworkWorker : ListEventsNetworkWorkerProtocol
-    let listEventsCacheWorker : ListEventsCacheWorkerProtocol
+    let fomoId: String
+    let output: ListEventsInteractorOutput
+    let listEventsNetworkWorker: ListEventsNetworkWorkerProtocol
+    let listEventsCacheWorker: ListEventsCacheWorkerProtocol
 
-    init(fomoId: String, output : ListEventsInteractorOutput, listEventsNetworkWorker : ListEventsNetworkWorkerProtocol, listEventsCacheWorker : ListEventsCacheWorkerProtocol){
+    init(fomoId: String, output: ListEventsInteractorOutput, listEventsNetworkWorker: ListEventsNetworkWorkerProtocol, listEventsCacheWorker: ListEventsCacheWorkerProtocol){
         self.fomoId = fomoId
         self.output = output
         self.listEventsNetworkWorker = listEventsNetworkWorker
@@ -27,7 +27,7 @@ class ListEventsInteractor : NSObject, ListEventsTableViewControllerOutput {
         
         // Get from cache
         listEventsCacheWorker.fetch { (cacheString) -> Void in
-            let eventsFromCache : DiscoveredEventsResponse = Mapper<DiscoveredEventsResponse>().map(JSONString: cacheString)!
+            let eventsFromCache: DiscoveredEventsResponse = Mapper<DiscoveredEventsResponse>().map(JSONString: cacheString)!
             if let data = eventsFromCache.data {
                 let response = ListEvents_FetchEvents_Response(events: data)
                 self.output.presentFetchedEvents(response)
@@ -38,7 +38,7 @@ class ListEventsInteractor : NSObject, ListEventsTableViewControllerOutput {
         listEventsNetworkWorker.fetchEvents(fomoId) { (discoveredEventsJsonPage) -> Void in
             
             // parse from json
-            let discoveredEventsResponse : DiscoveredEventsResponse = Mapper<DiscoveredEventsResponse>().map(JSONString: discoveredEventsJsonPage)!
+            let discoveredEventsResponse: DiscoveredEventsResponse = Mapper<DiscoveredEventsResponse>().map(JSONString: discoveredEventsJsonPage)!
             
             if let data = discoveredEventsResponse.data {
                 // save to cache

@@ -17,7 +17,7 @@ protocol ListEventsCacheWorkerProtocol {
     func save(_ latestDiscoveredEvents: String)
 }
 
-class ListEventsCacheWorker : ListEventsCacheWorkerProtocol {
+class ListEventsCacheWorker: ListEventsCacheWorkerProtocol {
     
     func fetch(_ completionHandler: (_ discoveredEvents: String) -> Void)
     {

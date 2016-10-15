@@ -20,7 +20,7 @@ class DiscoveredEventsResponseTests: XCTestCase {
         let content = try String(contentsOfFile: path)
         
         // Use objectmapper
-        let nuigJun16 : DiscoveredEventsResponse = Mapper<DiscoveredEventsResponse>().map(JSONString: content)!
+        let nuigJun16: DiscoveredEventsResponse = Mapper<DiscoveredEventsResponse>().map(JSONString: content)!
         
         XCTAssertEqual(nuigJun16.data.count, 9)
     }

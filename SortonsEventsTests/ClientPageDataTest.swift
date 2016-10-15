@@ -20,7 +20,7 @@ class ClientPageDataTest: XCTestCase {
         let content = try String(contentsOfFile: path)
         
         // Use objectmapper
-        let ucdEvents : ClientPageData = Mapper<ClientPageData>().map(JSONString: content)!
+        let ucdEvents: ClientPageData = Mapper<ClientPageData>().map(JSONString: content)!
         
         XCTAssertEqual(ucdEvents.clientPageId, "197528567092983")
         XCTAssertEqual(ucdEvents.clientPage.pageId, "197528567092983")

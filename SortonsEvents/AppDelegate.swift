@@ -60,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         directoryView.tabBarItem = UITabBarItem(
             title: "Directory",
             image: thirdImage,
-            tag:2)
+            tag: 2)
         
         return true
     }

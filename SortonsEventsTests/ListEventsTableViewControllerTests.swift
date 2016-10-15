@@ -9,7 +9,7 @@
 import XCTest
 @testable import SortonsEvents
 
-class ListEventsTableViewControllerOutputSpy : ListEventsTableViewControllerOutput {
+class ListEventsTableViewControllerOutputSpy: ListEventsTableViewControllerOutput {
     
     var fetchEventsCalled = false
 
@@ -26,31 +26,26 @@ class ListEventsTableViewControllerTests: XCTestCase {
     
     // MARK: Test lifecycle
     
-    override func setUp()
-    {
+    override func setUp() {
         super.setUp()
         window = UIWindow()
         setupListOrdersViewController()
     }
     
-    override func tearDown()
-    {
+    override func tearDown() {
         window = nil
         super.tearDown()
     }
     
     // MARK: Test setup
-    
-    func setupListOrdersViewController()
-    {
+    func setupListOrdersViewController() {
         //let bundle = NSBundle.mainBundle()
         let bundle = Bundle(for: self.classForCoder)
         let storyboard = UIStoryboard(name: "ListEvents", bundle: bundle)
         sut = storyboard.instantiateViewController(withIdentifier: "ListEvents") as! ListEventsTableViewController
     }
     
-    func testShouldFetchOrdersWhenViewIsLoaded()
-    {
+    func testShouldFetchOrdersWhenViewIsLoaded() {
         // Given
         let listEventsViewControllerOutputSpy = ListEventsTableViewControllerOutputSpy()
         
@@ -63,8 +58,7 @@ class ListEventsTableViewControllerTests: XCTestCase {
         XCTAssert(listEventsViewControllerOutputSpy.fetchEventsCalled, "Should fetch events when the view is loaded")
     }
     
-    func loadView()
-    {
+    func loadView() {
         window.addSubview(sut.view)
         RunLoop.current.run(until: Date())
     }

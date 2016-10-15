@@ -11,18 +11,18 @@ import Foundation
 import ObjectMapper
 
 // should be struct!? (...but ObjectMapper) //TODO
-class SourcePage : Mappable {
+class SourcePage: Mappable {
     
-    var name : String!
-    var pageId : String!
-    var pageUrl : String!
-    var street : String?
-    var city : String?
-    var country : String?
-    var latitude : Double?
-    var longitude : Double?
-    var zip : String?
-    var friendlyLocationString : String?
+    var name: String!
+    var pageId: String!
+    var pageUrl: String!
+    var street: String?
+    var city: String?
+    var country: String?
+    var latitude: Double?
+    var longitude: Double?
+    var zip: String?
+    var friendlyLocationString: String?
     
     required init?(map _: Map) {
         

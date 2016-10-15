@@ -9,14 +9,11 @@
 
 import Foundation
 
-
-
 // Unit Tests //
 
 // can get endpoint url from plist
 // can get clientpageid from plist
 // can parse json to structs
-
 
 // Integration Tests //
 

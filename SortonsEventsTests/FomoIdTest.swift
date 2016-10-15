@@ -14,8 +14,8 @@ class FomoIdTest: XCTestCase {
     
     func testFomoId() {
    
-        var actual : String
-        var expected : String
+        var actual: String
+        var expected: String
        
         actual = FomoId.numberFromBundle(bundleName: "ie.sortons.events.nuig")!
         expected = "1049082365115363"

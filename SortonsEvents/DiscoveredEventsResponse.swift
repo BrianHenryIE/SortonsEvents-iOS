@@ -11,9 +11,9 @@ import Foundation
 import ObjectMapper
 
 // This whole object is because Google App Engine can't straight return Lists<>
-class DiscoveredEventsResponse : Mappable {
+class DiscoveredEventsResponse: Mappable {
     
-    var data : [DiscoveredEvent]!
+    var data: [DiscoveredEvent]!
     
     required init?(map _: Map) {
         

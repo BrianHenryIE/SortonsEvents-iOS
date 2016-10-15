@@ -8,14 +8,13 @@
 
 import Foundation
 
-
 protocol ClientPageDataCacheWorkerProtocol {
     
     func fetch(_ completionHandler: (_ clientPageData: String) -> Void)
     func save(_ latestClientPageData: String)
 }
 
-class ClientPageDataCacheWorker : ClientPageDataCacheWorkerProtocol {
+class ClientPageDataCacheWorker: ClientPageDataCacheWorkerProtocol {
     
     let fileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("fomo.json")
     

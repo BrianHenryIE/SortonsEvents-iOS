@@ -9,16 +9,16 @@
 import Foundation
 import ObjectMapper
 
-class DiscoveredEvent : Mappable {
+class DiscoveredEvent: Mappable {
     
-    var eventId : String!
-    var clientId : String!
+    var eventId: String!
+    var clientId: String!
     var sourcePages: [SourcePage]!
-    var name : String!
-    var location : String?
-    var startTime : Date!
-    var endTime : Date?
-    var dateOnly : Bool!
+    var name: String!
+    var location: String?
+    var startTime: Date!
+    var endTime: Date?
+    var dateOnly: Bool!
     
     required init?(map _: Map) {
         

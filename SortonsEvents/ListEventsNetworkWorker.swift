@@ -10,10 +10,10 @@ import Foundation
 import Alamofire
 
 protocol ListEventsNetworkWorkerProtocol {
-    func fetchEvents(_ fomoId : String, completionHandler: @escaping (_ discoveredEventsJsonPage: String) -> Void)
+    func fetchEvents(_ fomoId: String, completionHandler: @escaping (_ discoveredEventsJsonPage: String) -> Void)
 }
 
-class ListEventsNetworkWorker : ListEventsNetworkWorkerProtocol {
+class ListEventsNetworkWorker: ListEventsNetworkWorkerProtocol {
     
     // What's the correct thing to do if there's no network?
     // i.e. how to pass back exceptions to UI and handle repeating

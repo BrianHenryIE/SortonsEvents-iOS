@@ -11,10 +11,9 @@
 
 import UIKit
 
-class ListEventsTableViewController: UITableViewController, ListEventsPresenterOutput
-{
+class ListEventsTableViewController: UITableViewController, ListEventsPresenterOutput {
     var output: ListEventsTableViewControllerOutput!
-    var data : ListEventsViewModel?
+    var data: ListEventsViewModel?
 
     // MARK: Object lifecycle
 
@@ -33,7 +32,6 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
     }
 
 // MARK: Display logic ListEventsPresenterOutput
-
     func presentFetchedEvents(_ viewModel: ListEventsViewModel) {
         data = viewModel
         tableView.reloadData()
@@ -46,20 +44,17 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
 
 extension ListEventsTableViewController
 {    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let events = data?.discoveredEvents {
             return events.count
         }    
         return 0
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let event = data!.discoveredEvents[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "DiscoveredEventCell", for: indexPath) as! DiscoveredEventTableViewCell
         cell.setDiscoveredEvent(event)
         return cell
     }
 }
- 

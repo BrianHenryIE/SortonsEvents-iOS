@@ -12,4 +12,3 @@ protocol ListEventsInteractorOutput {
     
     func presentFetchedEvents(_ upcomingEvents: ListEvents_FetchEvents_Response)
 }
-

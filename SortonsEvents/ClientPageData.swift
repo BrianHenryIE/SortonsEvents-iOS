@@ -8,11 +8,11 @@
 
 import ObjectMapper
 
-class ClientPageData : Mappable {
+class ClientPageData: Mappable {
     
-    var clientPageId : String!
-    var clientPage : SourcePage!
-    var includedPages : [SourcePage]!
+    var clientPageId: String!
+    var clientPage: SourcePage!
+    var includedPages: [SourcePage]!
    
     required init?(map _: Map) {
         

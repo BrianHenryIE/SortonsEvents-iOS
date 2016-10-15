@@ -8,11 +8,9 @@
 
 import XCTest
 import ObjectMapper
-// @testable import SortonsEvents
 
 class DiscoveredEventTest: XCTestCase {
 
-    
     func testDiscoveredEventParsing() throws {
         
         // Read in the file
@@ -21,7 +19,7 @@ class DiscoveredEventTest: XCTestCase {
         let content = try String(contentsOfFile: path)
       
         // Use objectmapper
-        let nuigCycling : DiscoveredEvent = Mapper<DiscoveredEvent>().map(JSONString: content)!
+        let nuigCycling: DiscoveredEvent = Mapper<DiscoveredEvent>().map(JSONString: content)!
         
         // Verify
         XCTAssertEqual(nuigCycling.eventId, "918777258231182")

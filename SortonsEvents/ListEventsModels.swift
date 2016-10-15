@@ -15,19 +15,19 @@ struct ListEvents_FetchEvents_Request {
 }
 
 struct ListEvents_FetchEvents_Response {
-    let events : [DiscoveredEvent]
+    let events: [DiscoveredEvent]
 }
 
 struct ListEventsViewModel {
-    let discoveredEvents : [DiscoveredEventCellModel]
+    let discoveredEvents: [DiscoveredEventCellModel]
 }
 
 struct DiscoveredEventCellModel {
     let webUrl: URL
-    let appUrl : URL
+    let appUrl: URL
     let name: String
-    let startTime : String
+    let startTime: String
     let location: String?
-    let imageUrl : URL
+    let imageUrl: URL
 }
 

@@ -18,7 +18,7 @@ class DiscoveredEventTableViewCell: UITableViewCell {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var eventImage: UIImageView!
     
-    func setDiscoveredEvent(_ event : DiscoveredEventCellModel) {
+    func setDiscoveredEvent(_ event: DiscoveredEventCellModel) {
         eventImage.image = placeholderImage
         nameLabel.text = event.name
         startTimeLabel.text = event.startTime

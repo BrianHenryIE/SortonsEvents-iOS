@@ -9,7 +9,7 @@
 import XCTest
 @testable import SortonsEvents
 
-class EmptyListEventsNetworkWorkerSpy : ListEventsNetworkWorker {
+class EmptyListEventsNetworkWorkerSpy: ListEventsNetworkWorker {
     
     // MARK: Method call expectations
     var fetchEventsCalled = false
@@ -22,7 +22,7 @@ class EmptyListEventsNetworkWorkerSpy : ListEventsNetworkWorker {
     }
 }
 
-class EmptyListEventsCacheWorkerSpy : ListEventsCacheWorkerProtocol {
+class EmptyListEventsCacheWorkerSpy: ListEventsCacheWorkerProtocol {
     
     var fetchCalled = false
     
@@ -37,7 +37,7 @@ class EmptyListEventsCacheWorkerSpy : ListEventsCacheWorkerProtocol {
         saveCalled = true
     }
 }
-class ListEventsNetworkWorkerSpy : ListEventsNetworkWorker {
+class ListEventsNetworkWorkerSpy: ListEventsNetworkWorker {
     
     // MARK: Method call expectations
     var fetchEventsCalled = false
@@ -50,7 +50,7 @@ class ListEventsNetworkWorkerSpy : ListEventsNetworkWorker {
     }
 }
 
-class ListEventsCacheWorkerSpy : ListEventsCacheWorkerProtocol {
+class ListEventsCacheWorkerSpy: ListEventsCacheWorkerProtocol {
     
     var fetchCalled = false
     
@@ -66,7 +66,7 @@ class ListEventsCacheWorkerSpy : ListEventsCacheWorkerProtocol {
     }
 }
 
-class ListEventsInteractorOutputSpy : ListEventsInteractorOutput {
+class ListEventsInteractorOutputSpy: ListEventsInteractorOutput {
     
     var presentFetchedEventsCalled = false
     
@@ -77,8 +77,7 @@ class ListEventsInteractorOutputSpy : ListEventsInteractorOutput {
 
 class ListEventsInteractorTests: XCTestCase {
     
-    func testFetchEventsShouldAskEventsNetworkWorkerToFetchEventsAndPresenterToFormatResult()
-    {
+    func testFetchEventsShouldAskEventsNetworkWorkerToFetchEventsAndPresenterToFormatResult() {
         let listEventsNetworkWorkerSpy = ListEventsNetworkWorkerSpy()
         let listEventsCacheWorkerSpy = ListEventsCacheWorkerSpy()
    
@@ -100,8 +99,7 @@ class ListEventsInteractorTests: XCTestCase {
         XCTAssert(listEventsInteractorOutputSpy.presentFetchedEventsCalled, "FetchEvents() should ask presenter to format events result")
     }
     
-    func testEmptyFetchEventsShouldNotHitPresenter()
-    {
+    func testEmptyFetchEventsShouldNotHitPresenter() {
         let emptyListEventsNetworkWorkerSpy = EmptyListEventsNetworkWorkerSpy()
         let emptyListEventsCacheWorkerSpy = EmptyListEventsCacheWorkerSpy()
 

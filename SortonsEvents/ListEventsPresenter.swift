@@ -8,14 +8,14 @@
 
 import Foundation
 
-class ListEventsPresenter : ListEventsInteractorOutput {
+class ListEventsPresenter: ListEventsInteractorOutput {
     
-    let output : ListEventsPresenterOutput
+    let output: ListEventsPresenterOutput
     
-    let observingFrom : Date!
+    let observingFrom: Date!
     
-    let dateFormat : DateFormatter
-    let calendar : Calendar
+    let dateFormat: DateFormatter
+    let calendar: Calendar
     
     // For testing
     init(output: ListEventsPresenterOutput, withDate: Date = Date(), withCalendar: Calendar = Calendar.current){
@@ -32,11 +32,11 @@ class ListEventsPresenter : ListEventsInteractorOutput {
     
         let filteredEvents = filterToOngoingEvents(upcomingEvents.events, observingFrom: observingFrom)
         
-        if(!filteredEvents.isEmpty){
+        if(!filteredEvents.isEmpty) {
             
             // TODO This should maybe be outside this function. 
             // Test were failing test here 
-            let cellModels : [DiscoveredEventCellModel] = filteredEvents.map({
+            let cellModels: [DiscoveredEventCellModel] = filteredEvents.map({
                 let webUrl = URL(string: "https://facebook.com/events/\($0.eventId!)/")!
                 let appUrl = URL(string: "fb://profile/\($0.eventId!)/")!
                 let imageUrl = URL(string: "https://graph.facebook.com/\($0.eventId!)/picture?type=square")!
@@ -50,7 +50,7 @@ class ListEventsPresenter : ListEventsInteractorOutput {
         }
     }
     
-    func filterToOngoingEvents(_ allEvents : [DiscoveredEvent], observingFrom: Date) -> [DiscoveredEvent] {
+    func filterToOngoingEvents(_ allEvents: [DiscoveredEvent], observingFrom: Date) -> [DiscoveredEvent] {
         
         let yesterday = calendar.date(byAdding: .day, value: -1, to: observingFrom)!
         let yesterday6pm = calendar.date(bySettingHour: 18, minute: 0, second: 0, of: yesterday)!
@@ -86,12 +86,12 @@ class ListEventsPresenter : ListEventsInteractorOutput {
     }
     
     // Should really be an NSDate extension
-    func formatFriendlyTime(_ date : Date, allDay : Bool, observingFrom : Date = Date()) -> String {
+    func formatFriendlyTime(_ date: Date, allDay: Bool, observingFrom: Date = Date()) -> String {
         
         let yesterday = calendar.date(byAdding: .day, value: -1, to: observingFrom)!
         let tomorrow = calendar.date(byAdding: .day, value: 1, to: observingFrom)!
         
-        var format : String
+        var format: String
         
         // if it's yesterday, today or tomorrow use the word
         if(calendar.isDate(date, equalTo: yesterday, toGranularity: .day)) {

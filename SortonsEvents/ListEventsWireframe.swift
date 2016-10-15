@@ -11,9 +11,9 @@ import Foundation
 
 class ListEventsWireframe {
 
-    let listEventsView : ListEventsTableViewController!
+    let listEventsView: ListEventsTableViewController!
     
-    init(fomoId : String) {
+    init(fomoId: String) {
         
         let storyboard = UIStoryboard(name: "ListEvents", bundle: Bundle.main)
         
