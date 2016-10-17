@@ -53,12 +53,16 @@ class DirectoryInteractor: DirectoryViewControllerOutput {
         outputDirectoryToPresenter()
     }
     
-    func outputDirectoryToPresenter() {
+    private func outputDirectoryToPresenter() {
         // filter directory using currentfilter and save to displayedDirectory
         
-        displayedDirectory = directory.filter({
-            ($0.name.lowercased()).contains(currentFilter)
-        })
+        if currentFilter.trimmingCharacters(in: NSCharacterSet.whitespaces) != "" {
+                displayedDirectory = directory.filter({
+                    ($0.name.lowercased()).contains(currentFilter)
+                })
+        } else {
+            displayedDirectory = directory
+        }
         
         let response = Directory_FetchDirectory_Response(directory: displayedDirectory)
         self.output.presentFetchedDirectory(directory: response)
@@ -66,7 +70,7 @@ class DirectoryInteractor: DirectoryViewControllerOutput {
     
     func displaySelectedPageFrom(rowNumber: Int) {
         
-        let fbId = displayedDirectory[rowNumber].pageId
+        let fbId = displayedDirectory[rowNumber].pageId!
         
         let appUrl = URL(string: "fb://profile/\(fbId)")!
         let safariUrl = URL(string: "https://facebook.com/\(fbId)")!
