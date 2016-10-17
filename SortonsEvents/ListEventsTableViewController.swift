@@ -22,6 +22,11 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Start content below (not beneath) the status bar
+        let top = UIApplication.shared.statusBarFrame.size.height
+        self.tableView.contentInset = UIEdgeInsetsMake(top, 0, 0, 0);
+        
+        // Autosizing cell heights
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
         
@@ -64,5 +69,6 @@ extension ListEventsTableViewController
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         output.displayEvent(for: indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

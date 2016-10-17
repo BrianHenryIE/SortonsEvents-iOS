@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let frame = UIScreen.main.bounds
         window = UIWindow(frame: frame)
-        
+               
         // TODO - shouldn't be hardcoded
         let fomoId = FomoId.numberFromBundle(bundleName: "ie.sortons.events.ucd")!
         
@@ -39,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let directoryView = directoryWireframe.directoryView!
         
         let tabBarController = UITabBarController()
+        tabBarController.view.backgroundColor = UIColor.white
         
         let viewControllers = [listEventsView, directoryView]
         
