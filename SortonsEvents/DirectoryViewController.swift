@@ -55,6 +55,7 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = indexPath.row
         output.displaySelectedPageFrom(rowNumber: row)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     // MARK: UISearchBar    
