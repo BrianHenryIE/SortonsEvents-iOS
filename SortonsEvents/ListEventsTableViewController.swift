@@ -63,6 +63,6 @@ extension ListEventsTableViewController
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        output.displayEvent(indexPath.row)
+        output.displayEvent(for: indexPath.row)
     }
 }

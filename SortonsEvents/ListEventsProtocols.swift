@@ -18,5 +18,5 @@ protocol ListEventsPresenterOutput {
 protocol ListEventsTableViewControllerOutput {
     func fetchEvents(_ request: ListEvents_FetchEvents_Request)
     
-    func displayEvent(_ eventDataRow: Int)
+    func displayEvent(for rowNumber : Int)
 }

@@ -12,29 +12,19 @@ class ListEventsPresenter: ListEventsInteractorOutput {
     
     let output: ListEventsPresenterOutput
     
-    let observingFrom: Date!
-    
-    let dateFormat: DateFormatter
-    let calendar: Calendar
     
     // For testing
-    init(output: ListEventsPresenterOutput, withDate: Date = Date(), withCalendar: Calendar = Calendar.current){
+    init(output: ListEventsPresenterOutput){
         self.output = output
-        observingFrom = withDate
-        self.calendar = withCalendar
-        dateFormat = DateFormatter()
-        dateFormat.timeZone = calendar.timeZone
     }
-        
-    func presentFetchedEvents(_ upcomingEvents: ListEvents_FetchEvents_Response) {
     
-        let filteredEvents = filterToOngoingEvents(upcomingEvents.events, observingFrom: observingFrom)
+    func presentFetchedEvents(_ upcomingEvents: ListEvents_FetchEvents_Response) {
         
-        if(!filteredEvents.isEmpty) {
+        if(!upcomingEvents.events.isEmpty) {
             
             // TODO This should maybe be outside this function. 
             // Test were failing test here 
-            let cellModels: [DiscoveredEventCellModel] = filteredEvents.map({
+            let cellModels: [DiscoveredEventCellModel] = upcomingEvents.events.map({
                 let webUrl = URL(string: "https://facebook.com/events/\($0.eventId!)/")!
                 let appUrl = URL(string: "fb://profile/\($0.eventId!)/")!
                 let imageUrl = URL(string: "https://graph.facebook.com/\($0.eventId!)/picture?type=square")!
@@ -48,43 +38,14 @@ class ListEventsPresenter: ListEventsInteractorOutput {
         }
     }
     
-    func filterToOngoingEvents(_ allEvents: [DiscoveredEvent], observingFrom: Date) -> [DiscoveredEvent] {
-        
-        let yesterday = calendar.date(byAdding: .day, value: -1, to: observingFrom)!
-        let yesterday6pm = calendar.date(bySettingHour: 18, minute: 0, second: 0, of: yesterday)!
-        let today6am = calendar.date(bySettingHour: 6, minute: 0, second: 0, of: observingFrom)!
-        
-        var filteredEvents = [DiscoveredEvent]()
-        
-        // Events with a start or end time in the future
-        let ongoingEvents = allEvents.filter(
-            { ($0.endTime != nil && $0.endTime!.compare(observingFrom).rawValue > 0) || $0.startTime.compare(observingFrom).rawValue > 0 }
-        )
-        filteredEvents.append(contentsOf: ongoingEvents)
-        
-        // all day event today
-        let todayAllDay = allEvents.filter({
-             $0.dateOnly && calendar.isDate($0.startTime as Date, equalTo: observingFrom, toGranularity: .day)
-            })
-        filteredEvents.append(contentsOf: todayAllDay)
-        
-        // (no end time and start time today)
-        let todayNoEnd = allEvents.filter({
-                 $0.endTime==nil && calendar.isDate($0.startTime as Date, equalTo: observingFrom, toGranularity: .day) && ($0.dateOnly == false)
-            })
-        filteredEvents.append(contentsOf: todayNoEnd)
-        
-        // if the current time is before 6am and the event started yesterday evening and had no end time
-        let lastNight = allEvents.filter({
-            observingFrom.compare(today6am).rawValue < 0 && (calendar as NSCalendar).isDate($0.startTime as Date, equalTo: yesterday, toUnitGranularity: .day) && $0.startTime.compare(yesterday6pm).rawValue > 0 && $0.endTime==nil
-            })
-        filteredEvents.append(contentsOf: lastNight)
-    
-        return filteredEvents
-    }
-    
     // Should really be an NSDate extension
     func formatFriendlyTime(_ date: Date, allDay: Bool, observingFrom: Date = Date()) -> String {
+        
+        // Lazy and untested
+        let calendar = Calendar.current
+        let dateFormat = DateFormatter()
+        dateFormat.timeZone = calendar.timeZone
+
         
         let yesterday = calendar.date(byAdding: .day, value: -1, to: observingFrom)!
         let tomorrow = calendar.date(byAdding: .day, value: 1, to: observingFrom)!
