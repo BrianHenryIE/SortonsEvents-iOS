@@ -20,7 +20,15 @@ class DirectoryWireframe {
         
         directoryView = storyboard.instantiateViewController(withIdentifier: "Directory") as! DirectoryViewController
         
-        // directoryView.output = DirectoryInteractor(...
+        let directoryPresenter = DirectoryPresenter(output: directoryView)
+        
+        let directoryCacheWorker = DirectoryCacheWorker()
+        let directoryNetworkWorker = DirectoryNetworkWorker()
+        
+        let directoryInteractor = DirectoryInteractor(fomoId: fomoId, presenter: directoryPresenter, cache: directoryCacheWorker, network: directoryNetworkWorker)
+        
+        directoryView.output = directoryInteractor
+
     }
     
 }
