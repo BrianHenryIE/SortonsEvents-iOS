@@ -6,21 +6,21 @@
 //  Copyright © 2016 Sortons. All rights reserved.
 //
 
-
 import UIKit
 import Foundation
 
 class DirectoryWireframe {
     
 //    let directoryView : ListEventsTableViewController!
-    let directoryView : UIViewController!
+    let directoryView: DirectoryViewController!
     
-    init(fomoId : String) {
+    init(fomoId: String) {
         
         let storyboard = UIStoryboard(name: "Directory", bundle: Bundle.main)
         
-        directoryView = storyboard.instantiateViewController(withIdentifier: "Directory")
+        directoryView = storyboard.instantiateViewController(withIdentifier: "Directory") as! DirectoryViewController
         
+        // directoryView.output = DirectoryInteractor(...
     }
     
 }

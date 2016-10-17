@@ -9,7 +9,7 @@
         <!--Directory-->
         <scene sceneID="OWZ-oL-Jnv">
             <objects>
-                <viewController restorationIdentifier="Directory" storyboardIdentifier="Directory" id="LWO-8l-cGf" userLabel="Directory" customClass="DirectoryViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="Directory" storyboardIdentifier="Directory" id="LWO-8l-cGf" userLabel="Directory" customClass="DirectoryViewController" customModule="SortonsEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zrh-od-CdU"/>
                         <viewControllerLayoutGuide type="bottom" id="xyk-cw-weA"/>
@@ -18,30 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="92q-tz-ovU">
-                                <frame key="frameInset" minY="20" width="600" height="44"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="92q-tz-ovU">
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="LWO-8l-cGf" id="jrp-H5-DKe"/>
+                                    <outlet property="delegate" destination="LWO-8l-cGf" id="Jji-Y9-HVe"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dcU-vf-qTG">
-                                <frame key="frameInset" minY="64" width="600" height="487"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dcU-vf-qTG">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="includedPageCell" id="VyN-WR-vXu" userLabel="includedPageCell" customClass="IncludedPageCell">
-                                        <rect key="frame" x="0.0" y="22" width="600" height="69"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DirectoryPageCell" id="VyN-WR-vXu" customClass="DirectoryTableViewCell" customModule="SortonsEvents" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="22" width="375" height="69"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VyN-WR-vXu" id="4Ec-ld-Mfy">
-                                            <frame key="frameInset" width="600" height="68"/>
+                                            <frame key="frameInset" width="375" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Name" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPH-3e-wtA">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Name" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPH-3e-wtA" userLabel="NameLabel">
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Nj-DL-1zw">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Nj-DL-1zw" userLabel="Image">
                                                     <frame key="frameInset" minX="12" minY="9" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -63,15 +61,15 @@
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="77" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
-                                            <outlet property="cellImage" destination="4Nj-DL-1zw" id="XEq-6m-xcr"/>
-                                            <outlet property="cellTitle" destination="UPH-3e-wtA" id="yHS-Ep-B9d"/>
-                                            <outlet property="detailsLabel" destination="xDs-OL-Wmh" id="o8Y-aG-0b2"/>
+                                            <outlet property="detailsLabel" destination="xDs-OL-Wmh" id="oYX-we-JUb"/>
+                                            <outlet property="nameLabel" destination="UPH-3e-wtA" id="DpO-lQ-vNW"/>
+                                            <outlet property="pageImage" destination="4Nj-DL-1zw" id="vlA-tH-7JF"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="LWO-8l-cGf" id="2nn-wZ-nO7"/>
-                                    <outlet property="delegate" destination="LWO-8l-cGf" id="YIg-K4-Eze"/>
+                                    <outlet property="dataSource" destination="LWO-8l-cGf" id="3zO-FH-xp7"/>
+                                    <outlet property="delegate" destination="LWO-8l-cGf" id="Ugm-EV-lO9"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -92,7 +90,8 @@
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <connections>
-                        <outlet property="tableView" destination="dcU-vf-qTG" id="pKO-AY-aHc"/>
+                        <outlet property="searchBarOutlet" destination="92q-tz-ovU" id="Pwr-Xh-PNz"/>
+                        <outlet property="tableViewOutlet" destination="dcU-vf-qTG" id="reS-Xl-q6D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RI8-gR-6eg" userLabel="First Responder" sceneMemberID="firstResponder"/>
