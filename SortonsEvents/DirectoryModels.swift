@@ -11,8 +11,8 @@ import Foundation
 struct Directory_FetchDirectory_Request {
 }
 
-struct Directory_FetchDirectorys_Response {
-    let directory: [ClientPageData]
+struct Directory_FetchDirectory_Response {
+    let directory: [SourcePage]
 }
 
 struct DirectoryViewModel {

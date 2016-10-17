@@ -14,7 +14,7 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
     @IBOutlet weak var tableViewOutlet: UITableView!
     
     var output: DirectoryViewControllerOutput!
-    var data : [DirectoryTableViewCellModel]?
+    var data: [DirectoryTableViewCellModel]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,12 +34,11 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
     }
     
 // MARK: - Table view data source
-    func numberOfSections(in tableView: UITableView) -> Int
-    {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection:Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection: Int) -> Int {
         return data!.count;
     }
     
@@ -53,10 +52,8 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         output.displaySelectedPageFrom(rowNumber: indexPath.row)
     }
-
     
-    // MARK: UISearchBar
-    
+    // MARK: UISearchBar    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         output.filterDirectoryTo(searchBarInput: searchText)
     }

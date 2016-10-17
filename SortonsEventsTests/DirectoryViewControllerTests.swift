@@ -9,14 +9,12 @@
 import XCTest
 @testable import SortonsEvents
 
-class TableViewSpy: UITableView
-{
+class TableViewSpy: UITableView {
     // MARK: Method call expectations
     var reloadDataCalled = false
     
     // MARK: Spied methods
-    override func reloadData()
-    {
+    override func reloadData() {
         reloadDataCalled = true
     }
 }

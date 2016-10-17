@@ -1,5 +1,5 @@
 //
-//  EventsCacheWorkerTests.swift
+//  DirectoryCacheWorkerTests.swift
 //  SortonsEvents
 //
 //  Created by Brian Henry on 23/05/2016.
@@ -7,10 +7,11 @@
 //
 
 import XCTest
+@testable import SortonsEvents
 
-class ClientPageDataCacheWorkerTests: XCTestCase {
+class DirectoryCacheWorkerTests: XCTestCase {
     
-    let clientPageDataCacheWorker = ClientPageDataCacheWorker()
+    let directoryCacheWorker = DirectoryCacheWorker()
     
     func testCilentPageDataCacheWorker() throws {
        
@@ -28,25 +29,14 @@ class ClientPageDataCacheWorkerTests: XCTestCase {
         let clientPageDataFromFile = try String(contentsOfFile: path)
         
         // Save using eventsCacheWorker
-        clientPageDataCacheWorker.save(clientPageDataFromFile)
-        
-        let expectation = self.expectation(description: "clientPageDataCacheWorker.fetch()")
+        directoryCacheWorker.save(clientPageDataFromFile)
         
         // Get file from cache
-        clientPageDataCacheWorker.fetch() { (clientPageData: String) in
-        
-            // Verify the saved file
-            XCTAssertEqual(clientPageDataFromFile, clientPageData)
-
-            expectation.fulfill()
+        let clientPageData = directoryCacheWorker.fetch()
             
-        }
-        
-        waitForExpectations(timeout: 5) { error in
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-            }
-        }
+        // Verify the saved file
+        XCTAssertEqual(clientPageDataFromFile, clientPageData)
+
         
         // Clean up
         do {

@@ -8,25 +8,27 @@
 
 import Foundation
 
-protocol ClientPageDataCacheWorkerProtocol {
+protocol DirectoryCacheWorkerProtocol {
     
-    func fetch(_ completionHandler: (_ clientPageData: String) -> Void)
+    func fetch() -> String?
     func save(_ latestClientPageData: String)
 }
 
-class ClientPageDataCacheWorker: ClientPageDataCacheWorkerProtocol {
+class DirectoryCacheWorker: DirectoryCacheWorkerProtocol {
     
-    let fileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("fomo.json")
+    let fileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("directory.json")
     
-    func fetch(_ completionHandler: (_ clientPageData: String) -> Void) {
+    func fetch() -> String? {
         
         // read file
         do {
             let fileFromCache = try String(contentsOf: fileURL)
-            completionHandler(fileFromCache)
+            return fileFromCache
         } catch {
             // TODO / this will throw an error already when parsing
         }
+        
+        return nil
     }
     
     func save(_ latestClientPageData: String) {

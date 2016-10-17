@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import SortonsEvents
 import ObjectMapper
 
 class ClientPageDataTest: XCTestCase {
