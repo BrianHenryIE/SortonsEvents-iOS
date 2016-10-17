@@ -19,6 +19,9 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableViewOutlet.rowHeight = UITableViewAutomaticDimension
+        tableViewOutlet.estimatedRowHeight = 140
+        
         let request = Directory_FetchDirectory_Request()
         output.fetchDirectory(withRequest: request)
     }
