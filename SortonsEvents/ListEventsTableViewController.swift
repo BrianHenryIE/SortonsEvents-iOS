@@ -36,15 +36,17 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
         data = viewModel
         tableView.reloadData()
     }
+    
+    func displayFetchEventsFetchError(viewModel: ListEventsViewModel) {
+        // TODO
+    }
 }
 
-
-
 // MARK: - Table view data source
-
 extension ListEventsTableViewController
-{    
+{
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // Not my favourite code. Revisit sometime.
         if let events = data?.discoveredEvents {
             return events.count
         }    
@@ -56,5 +58,9 @@ extension ListEventsTableViewController
         let cell = tableView.dequeueReusableCell(withIdentifier: "DiscoveredEventCell", for: indexPath) as! DiscoveredEventTableViewCell
         cell.setDiscoveredEvent(event)
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        output.displayEvent(indexPath.row)
     }
 }

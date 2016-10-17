@@ -28,7 +28,10 @@ class ListEventsNetworkWorker: ListEventsNetworkWorkerProtocol {
         
         Alamofire.request(endpoint)
             .responseString { response in
-                completionHandler(response.result.value!)
+                // Optional check to account for offline... TODO
+                if let json = response.result.value {
+                    completionHandler(json)
+                }
         }
     }
 }

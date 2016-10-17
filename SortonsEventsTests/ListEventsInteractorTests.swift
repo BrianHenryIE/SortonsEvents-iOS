@@ -37,6 +37,7 @@ class EmptyListEventsCacheWorkerSpy: ListEventsCacheWorkerProtocol {
         saveCalled = true
     }
 }
+
 class ListEventsNetworkWorkerSpy: ListEventsNetworkWorker {
     
     // MARK: Method call expectations

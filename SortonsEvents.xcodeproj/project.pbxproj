@@ -370,8 +370,8 @@
 		A69DBF371C8AD4E5005064F7 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				A69DBF431C8AD688005064F7 /* ListEventsInteractor.swift */,
 				A69DBF451C8AD68F005064F7 /* ListEventsInteractorIO.swift */,
+				A69DBF431C8AD688005064F7 /* ListEventsInteractor.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";

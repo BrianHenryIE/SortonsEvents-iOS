@@ -25,9 +25,7 @@ class ListEventsPresenter: ListEventsInteractorOutput {
         dateFormat = DateFormatter()
         dateFormat.timeZone = calendar.timeZone
     }
-    
-    // Gotta set the view controller here... router?
-    
+        
     func presentFetchedEvents(_ upcomingEvents: ListEvents_FetchEvents_Response) {
     
         let filteredEvents = filterToOngoingEvents(upcomingEvents.events, observingFrom: observingFrom)
@@ -66,13 +64,13 @@ class ListEventsPresenter: ListEventsInteractorOutput {
         
         // all day event today
         let todayAllDay = allEvents.filter({
-             $0.dateOnly && (calendar as Calendar).isDate($0.startTime as Date, equalTo: observingFrom, toGranularity: .day)
+             $0.dateOnly && calendar.isDate($0.startTime as Date, equalTo: observingFrom, toGranularity: .day)
             })
         filteredEvents.append(contentsOf: todayAllDay)
         
         // (no end time and start time today)
         let todayNoEnd = allEvents.filter({
-                 $0.endTime==nil && (calendar as Calendar).isDate($0.startTime as Date, equalTo: observingFrom, toGranularity: .day) && ($0.dateOnly == false)
+                 $0.endTime==nil && calendar.isDate($0.startTime as Date, equalTo: observingFrom, toGranularity: .day) && ($0.dateOnly == false)
             })
         filteredEvents.append(contentsOf: todayNoEnd)
         

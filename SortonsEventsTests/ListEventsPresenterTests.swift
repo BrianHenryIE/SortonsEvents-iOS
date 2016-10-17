@@ -12,9 +12,14 @@ import ObjectMapper
 class ListEventsPresenterOutputSpy: ListEventsPresenterOutput {
     
     var presentFetchedEventsCalled = false
+    var presentFetchEventsFetchError  = false
     
     func presentFetchedEvents(_ viewModel: ListEventsViewModel) {
         presentFetchedEventsCalled = true
+    }
+    
+    func displayFetchEventsFetchError(viewModel: ListEventsViewModel) {
+        presentFetchEventsFetchError = true
     }
 }
 

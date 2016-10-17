@@ -10,13 +10,19 @@ import XCTest
 @testable import SortonsEvents
 
 class ListEventsTableViewControllerOutputSpy: ListEventsTableViewControllerOutput {
-    
+
     var fetchEventsCalled = false
+    var displayEventCalled = false
 
     func fetchEvents(_ request: ListEvents_FetchEvents_Request) {
-          fetchEventsCalled = true
+        fetchEventsCalled = true
+    }
+    
+    internal func displayEvent(_ eventDataRow: Int) {
+        displayEventCalled = true
     }
 }
+
 class ListEventsTableViewControllerTests: XCTestCase {
     
     // MARK: Subject under test

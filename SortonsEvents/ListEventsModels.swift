@@ -30,4 +30,3 @@ struct DiscoveredEventCellModel {
     let location: String?
     let imageUrl: URL
 }
-
