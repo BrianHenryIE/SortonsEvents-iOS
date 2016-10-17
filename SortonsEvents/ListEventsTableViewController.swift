@@ -18,10 +18,12 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
     // MARK: Object lifecycle
 
 
-    // MARK: View lifecycle
-
+// MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 140
         
         fetchEventsOnLoad()
     }
