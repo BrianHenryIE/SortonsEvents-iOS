@@ -175,7 +175,7 @@
 		A69DBF531C8AE4D8005064F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6A675931C941D6300FAD755 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6A6759A1C943AED00FAD755 /* ListEventsCacheWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsCacheWorker.swift; sourceTree = "<group>"; };
-		A6AAD3DD1D258E570097AF22 /* ClientPageDataCacheWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientPageDataCacheWorker.swift; sourceTree = "<group>"; };
+		A6AAD3DD1D258E570097AF22 /* DirectoryCacheWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryCacheWorker.swift; sourceTree = "<group>"; };
 		A6AAD3E01D258F0D0097AF22 /* ClientPageDataTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientPageDataTest.swift; sourceTree = "<group>"; };
 		A6AAD3E21D258F8E0097AF22 /* ClientPageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientPageData.swift; sourceTree = "<group>"; };
 		A6AAD3EB1D25A3C90097AF22 /* DiscoveredEventsResponseNUIG30June16.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DiscoveredEventsResponseNUIG30June16.json; sourceTree = "<group>"; };
@@ -186,12 +186,18 @@
 		A6ABE5321D3AB60200EF3D11 /* ListEventsPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsPresenterTests.swift; sourceTree = "<group>"; };
 		A6ABE5341D3AB9A600EF3D11 /* ListEventsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsPresenter.swift; sourceTree = "<group>"; };
 		A6BDA8771AE5CA6500C1A55C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		A6C04F681DB450A40009C9BF /* DirectoryInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryInteractorTests.swift; sourceTree = "<group>"; };
+		A6C04F6B1DB452FD0009C9BF /* DirectoryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryPresenter.swift; sourceTree = "<group>"; };
+		A6C04F6D1DB4530A0009C9BF /* DirectoryInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryInteractor.swift; sourceTree = "<group>"; };
+		A6C04F711DB454730009C9BF /* DirectoryPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryPresenterTests.swift; sourceTree = "<group>"; };
+		A6C04F731DB456D90009C9BF /* DirectoryInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryInteractorOutput.swift; sourceTree = "<group>"; };
 		A6C45C061DA386E600FC57D5 /* FomoIdTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FomoIdTest.swift; sourceTree = "<group>"; };
 		A6C45C081DA3882B00FC57D5 /* FomoId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FomoId.swift; sourceTree = "<group>"; };
 		A6C6130B1A91492500A5F082 /* SortonsEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SortonsEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C6130F1A91492500A5F082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6C6131B1A91492500A5F082 /* AppImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppImages.xcassets; sourceTree = "<group>"; };
 		A6C6131E1A91492500A5F082 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreenNUIG.xib; sourceTree = "<group>"; };
+		A6E10C611DB41643007854F8 /* DirectoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryTableViewCell.swift; sourceTree = "<group>"; };
 		A6E10C631DB44F5C007854F8 /* DirectoryNetworkWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryNetworkWorker.swift; sourceTree = "<group>"; };
 		ADF337C1B6FA9DC422E3EB24 /* Pods-FOMO UCD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO UCD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO UCD/Pods-FOMO UCD.debug.xcconfig"; sourceTree = "<group>"; };
 		B36CF2249EF126ACF7C1BE04 /* Pods_FOMO_UCD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FOMO_UCD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -405,7 +411,6 @@
 			isa = PBXGroup;
 			children = (
 				A6ABE5341D3AB9A600EF3D11 /* ListEventsPresenter.swift */,
-				A68183DC1D2B009E00E45D35 /* ListEventsModels.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -429,7 +434,6 @@
 				A6C45C051DA386A600FC57D5 /* Common */,
 				A69DBF531C8AE4D8005064F7 /* Info.plist */,
 				A66DC3951CF395E000ED636B /* Tests.swift */,
-				A636D2701D0C8A1D00FB9C62 /* Model */,
 				A69FD4041DB2B86800CA8964 /* List Events */,
 				A69FD4051DB2C1A600CA8964 /* News */,
 				A69FD4061DB2C1B000CA8964 /* Directory */,
@@ -985,7 +989,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "if [[ -z ${SKIP_SWIFTCLEAN} || ${SKIP_SWIFTCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" || -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" ]]; then \n\"${LOCAL_APPS_DIR}\"/Swift-Clean.app/Contents/Resources/SwiftClean.app/Contents/MacOS/SwiftClean \"${SRCROOT}\"?@autoFix \nelse\necho \"warning: You have to install and set up Swift-Clean to use its features!\" \nfi\nfi";
+			shellScript = "if [[ -z ${SKIP_SWIFTCLEAN} || ${SKIP_SWIFTCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" || -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" ]]; then \n\"${LOCAL_APPS_DIR}\"/Swift-Clean.app/Contents/Resources/SwiftClean.app/Contents/MacOS/SwiftClean \"${SRCROOT}\"?@autoFix \nfi\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
