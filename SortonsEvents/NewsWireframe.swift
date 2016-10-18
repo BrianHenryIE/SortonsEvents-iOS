@@ -11,7 +11,6 @@ import Foundation
 
 class NewsWireframe {
     
-    
     let newsView: NewsViewController!
     
     init(fomoId: String) {
@@ -19,7 +18,11 @@ class NewsWireframe {
         let storyboard = UIStoryboard(name: "News", bundle: Bundle.main)
         
         newsView = storyboard.instantiateViewController(withIdentifier: "News") as! NewsViewController
+      
+        let newsPresenter = NewsPresenter(output: newsView)
         
+        let newsInteractor = NewsInteractor(fomoId: fomoId, output: newsPresenter)
+        
+        newsView.output = newsInteractor
     }
-    
 }

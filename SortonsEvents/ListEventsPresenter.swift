@@ -11,10 +11,10 @@ import Foundation
 class ListEventsPresenter: ListEventsInteractorOutput {
     
     let output: ListEventsPresenterOutput
-    let calendar : Calendar!
+    let calendar: Calendar!
 
     // For testing
-    init(output: ListEventsPresenterOutput, calendar : Calendar = Calendar.current){
+    init(output: ListEventsPresenterOutput, calendar: Calendar = Calendar.current){
         self.output = output
         self.calendar = calendar
     }

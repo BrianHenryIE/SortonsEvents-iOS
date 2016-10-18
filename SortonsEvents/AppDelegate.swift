@@ -35,13 +35,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let listEventsWireframe = ListEventsWireframe(fomoId: fomoId)
         let listEventsView = listEventsWireframe.listEventsView!
         
+        let newsWireframe = NewsWireframe(fomoId: fomoId)
+        let newsView = newsWireframe.newsView!
+        
         let directoryWireframe = DirectoryWireframe(fomoId: fomoId)
         let directoryView = directoryWireframe.directoryView!
         
         let tabBarController = UITabBarController()
         tabBarController.view.backgroundColor = UIColor.white
         
-        let viewControllers = [listEventsView, directoryView]
+        let viewControllers = [listEventsView, newsView, directoryView]
         
         tabBarController.viewControllers = viewControllers
         window?.rootViewController = tabBarController
@@ -55,13 +58,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             title: "Events",
             image: firstImage,
             tag: 1)
-        
-        
+     
+        newsView.tabBarItem = UITabBarItem(
+            title: "News",
+            image: secondImage,
+            tag: 2)
         
         directoryView.tabBarItem = UITabBarItem(
             title: "Directory",
             image: thirdImage,
-            tag: 2)
+            tag: 3)
         
         return true
     }
