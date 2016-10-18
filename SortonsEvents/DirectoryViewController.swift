@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITableViewDataSource, UITableViewDelegate  {
+class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate  {
 
     @IBOutlet weak var searchBarOutlet: UISearchBar!
     @IBOutlet weak var tableViewOutlet: UITableView!
@@ -22,10 +22,15 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
         tableViewOutlet.rowHeight = UITableViewAutomaticDimension
         tableViewOutlet.estimatedRowHeight = 140
         
+       //  let gestureRecognizer = UIGestureRecognizer(target: tableViewOutlet, action: #selector(DirectoryViewController.hideKeyboard))
+        let gestureRecognizer = UIGestureRecognizer()
+        tableViewOutlet.addGestureRecognizer(gestureRecognizer)
+        gestureRecognizer.delegate = self
+        
         let request = Directory_FetchDirectory_Request()
         output.fetchDirectory(withRequest: request)
     }
-
+    
 // MARK: DirectoryPresenterOutput
     func presentFetchedDirectory(viewModel: DirectoryViewModel) {
         data = viewModel.directory
@@ -58,13 +63,14 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    // MARK: UISearchBar    
+// MARK: UISearchBar
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         output.filterDirectoryTo(searchBarInput: searchText)
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        // hide the keyboard
+// MARK: UIGestureRecogniserDelegate
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         searchBarOutlet.resignFirstResponder()
+        return true
     }
 }
