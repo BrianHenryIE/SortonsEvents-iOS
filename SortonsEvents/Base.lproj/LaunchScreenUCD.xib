@@ -22,7 +22,7 @@
                     <items>
                         <tabBarItem image="ListEventsTabBarIcon" id="103-1e-OPF"/>
                         <tabBarItem title="" image="NewsTabBarIcon" id="4Lq-wN-45N"/>
-                        <tabBarItem image="DirectoryTabBarIcon" selectedImage="DirectoryTabBarIcon" id="6pb-dv-hgT"/>
+                        <tabBarItem image="DirectoryTabBarIcon" id="6pb-dv-hgT"/>
                     </items>
                 </tabBar>
             </subviews>
