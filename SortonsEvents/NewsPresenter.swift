@@ -20,7 +20,7 @@ class NewsPresenter: NewsInteractorOutput {
     
     func setFomoId(_ id: String) {
         // Move to presenter
-        let urlString = "https://sortonsevents.appspot.com/recentpostsmobile/news.html#%\(id)"
+        let urlString = "https://sortonsevents.appspot.com/recentpostsmobile/news.html#\(id)"
         let url = URL(string: urlString)!
         let urlRequest = URLRequest(url: url)
         
