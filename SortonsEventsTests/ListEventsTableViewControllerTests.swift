@@ -18,7 +18,7 @@ class ListEventsTableViewControllerOutputSpy: ListEventsTableViewControllerOutpu
         fetchEventsCalled = true
     }
     
-    internal func displayEvent(_ eventDataRow: Int) {
+    internal func displayEvent(for eventDataRow: Int) {
         displayEventCalled = true
     }
 }

@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import SortonsEvents
+import ObjectMapper
 
 class EmptyListEventsNetworkWorkerSpy: ListEventsNetworkWorker {
     
@@ -119,5 +120,129 @@ class ListEventsInteractorTests: XCTestCase {
         XCTAssert(!emptyListEventsCacheWorkerSpy.saveCalled, "If the network worker was empty, no need to save to cache (or would overwrite a possibly valid cache)")
         
         XCTAssert(!listEventsInteractorOutputSpy.presentFetchedEventsCalled, "FetchEvents() should not ask presenter to format events result")
+    }
+    
+    func testShouldDiscardEarlyEvents() {
+        var remainingEvents: [DiscoveredEvent]
+        var ourTime: Date
+        var calendar = Calendar.current
+        var dateComponents = DateComponents()
+        dateComponents.timeZone = TimeZone(abbreviation: "UTC")
+        calendar.timeZone = TimeZone(abbreviation: "UTC")!
+        
+        let listEventsInteractorOutputSpy = ListEventsInteractorOutputSpy()
+
+        let sut = ListEventsInteractor(fomoId: "", output: listEventsInteractorOutputSpy, listEventsNetworkWorker: EmptyListEventsNetworkWorkerSpy(), listEventsCacheWorker: ListEventsCacheWorkerSpy(), withDate: Date(), withCalendar: calendar)
+        
+        var getEvents: [DiscoveredEvent]!
+        
+        // Read in the file
+        let bundle = Bundle(for: self.classForCoder)
+        let path = bundle.path(forResource: "DiscoveredEventsResponseNUIG30June16", ofType: "json")!
+        
+        do {
+            let content = try String(contentsOfFile: path)
+            let nuigJun16: DiscoveredEventsResponse = Mapper<DiscoveredEventsResponse>().map(JSONString: content)!
+            getEvents = nuigJun16.data
+        } catch {
+            // stop the tests!
+        }
+        
+        let events = getEvents!
+        
+        
+        // Test data: 9 total
+        
+        // 8-endTime: 2016-07-23T20:00:00.000Z
+        // 9-startTime: 2016-09-24T09:00:00.000Z
+        
+        dateComponents.year = 2016
+        dateComponents.month = 08
+        dateComponents.day = 15
+        
+        ourTime = calendar.date(from: dateComponents)!
+        remainingEvents = sut.filterToOngoingEvents(events, observingFrom: ourTime)
+        
+        XCTAssertEqual(remainingEvents.count, 1, "the wrong number of events were filtered out")
+        
+        // Events with end times are obvious
+        dateComponents.month = 07
+        dateComponents.day = 23
+        dateComponents.hour = 19
+        dateComponents.minute = 00
+        
+        ourTime = calendar.date(from: dateComponents)!
+        remainingEvents = sut.filterToOngoingEvents(events, observingFrom: ourTime)
+        
+        XCTAssertEqual(remainingEvents.count, 2, "Was the ongoing event properly included?")
+        
+        // If the event has no end time but started before 6pm, we assume it to be over at midnight
+        // 3rd last event has no end time:
+        // "startTime": "2016-07-11T09:00:00.000Z",
+        dateComponents.day = 11
+        dateComponents.hour = 22
+        
+        ourTime = calendar.date(from: dateComponents)!
+        remainingEvents = sut.filterToOngoingEvents(events, observingFrom: ourTime)
+        
+        XCTAssertEqual(remainingEvents.count, 3, "Event starting today with no end time should be included")
+        
+        dateComponents.day = 12
+        dateComponents.hour = 05
+        
+        ourTime = calendar.date(from: dateComponents)!
+        remainingEvents = sut.filterToOngoingEvents(events, observingFrom: ourTime)
+        
+        XCTAssertEqual(remainingEvents.count, 2, "Event starting yesterday before 6pm with no end time should not be included")
+        
+        // If the event has no end time but started after 6pm, we don't remove it until 6am
+        // The choice of nighttime cutoff is arbirtary
+        // "startTime": "2016-07-23T19:00:00.000Z",
+        dateComponents.day = 24
+        dateComponents.hour = 02
+        
+        ourTime = calendar.date(from: dateComponents)!
+        remainingEvents = sut.filterToOngoingEvents(events, observingFrom: ourTime)
+        
+        XCTAssertEqual(remainingEvents.count, 2, "Event starting yesterday after 6pm with no end time should be included until 6am following")
+        
+        dateComponents.hour = 08
+        
+        ourTime = calendar.date(from: dateComponents)!
+        remainingEvents = sut.filterToOngoingEvents(events, observingFrom: ourTime)
+        
+        XCTAssertEqual(remainingEvents.count, 1, "Event starting yesteday after 6pm with no end time should not be included after 6am following")
+        
+        // Events without end times who start after the test time are just part of the first test
+        
+        // All day:
+        // "startTime": "2016-06-30T00:00:00.000Z",
+        // "dateOnly": true,
+        dateComponents.month = 06
+        dateComponents.day = 30
+        dateComponents.hour = 13
+        dateComponents.minute = 00
+        
+        ourTime = calendar.date(from: dateComponents)!
+        remainingEvents = sut.filterToOngoingEvents(events, observingFrom: ourTime)
+        
+        XCTAssertEqual(remainingEvents.count, 9, "All day events starting today should be included")
+        
+        dateComponents.month = 07
+        dateComponents.day = 01
+        
+        ourTime = calendar.date(from: dateComponents)!
+        remainingEvents = sut.filterToOngoingEvents(events, observingFrom: ourTime)
+        
+        XCTAssertEqual(remainingEvents.count, 7, "All day events starting yesterday should not be included")
+        
+        
+        dateComponents.month = 01
+        dateComponents.day = 01
+        
+        ourTime = calendar.date(from: dateComponents)!
+        remainingEvents = sut.filterToOngoingEvents(events, observingFrom: ourTime)
+        
+        XCTAssertEqual(remainingEvents.count, 9, "Everything in the future (no filter!)")
     }
 }

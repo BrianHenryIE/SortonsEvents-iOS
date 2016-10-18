@@ -19,8 +19,7 @@ protocol ListEventsCacheWorkerProtocol {
 
 class ListEventsCacheWorker: ListEventsCacheWorkerProtocol {
     
-    func fetch(_ completionHandler: (_ discoveredEvents: String) -> Void)
-    {
+    func fetch(_ completionHandler: (_ discoveredEvents: String) -> Void) {
         // read file
         
         completionHandler("{}")

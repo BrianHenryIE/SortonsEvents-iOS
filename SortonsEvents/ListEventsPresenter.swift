@@ -11,11 +11,12 @@ import Foundation
 class ListEventsPresenter: ListEventsInteractorOutput {
     
     let output: ListEventsPresenterOutput
-    
-    
+    let calendar : Calendar!
+
     // For testing
-    init(output: ListEventsPresenterOutput){
+    init(output: ListEventsPresenterOutput, calendar : Calendar = Calendar.current){
         self.output = output
+        self.calendar = calendar
     }
     
     func presentFetchedEvents(_ upcomingEvents: ListEvents_FetchEvents_Response) {
@@ -41,8 +42,6 @@ class ListEventsPresenter: ListEventsInteractorOutput {
     // Should really be an NSDate extension
     func formatFriendlyTime(_ date: Date, allDay: Bool, observingFrom: Date = Date()) -> String {
         
-        // Lazy and untested
-        let calendar = Calendar.current
         let dateFormat = DateFormatter()
         dateFormat.timeZone = calendar.timeZone
 

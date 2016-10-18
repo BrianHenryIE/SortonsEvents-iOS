@@ -34,7 +34,6 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutput {
         dateFormat.timeZone = calendar.timeZone
     }
 
-    
     func fetchEvents(_ request: ListEvents_FetchEvents_Request) {
         
         // Get from cache
