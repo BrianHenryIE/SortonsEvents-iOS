@@ -63,4 +63,8 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
         output.filterDirectoryTo(searchBarInput: searchText)
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // hide the keyboard
+        searchBarOutlet.resignFirstResponder()
+    }
 }
