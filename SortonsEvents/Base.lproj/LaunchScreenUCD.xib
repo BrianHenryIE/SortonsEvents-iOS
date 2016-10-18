@@ -20,9 +20,9 @@
                 <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Chn-Ga-5ec">
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     <items>
-                        <tabBarItem image="EventsTabBarIcon" id="103-1e-OPF"/>
+                        <tabBarItem image="ListEventsTabBarIcon" id="103-1e-OPF"/>
                         <tabBarItem title="" image="NewsTabBarIcon" id="4Lq-wN-45N"/>
-                        <tabBarItem image="DirectoryTabBarIcon" id="6pb-dv-hgT"/>
+                        <tabBarItem image="DirectoryTabBarIcon" selectedImage="DirectoryTabBarIcon" id="6pb-dv-hgT"/>
                     </items>
                 </tabBar>
             </subviews>
@@ -42,7 +42,7 @@
     </objects>
     <resources>
         <image name="DirectoryTabBarIcon" width="25" height="25"/>
-        <image name="EventsTabBarIcon" width="25" height="25"/>
+        <image name="ListEventsTabBarIcon" width="25" height="25"/>
         <image name="NewsTabBarIcon" width="25" height="25"/>
     </resources>
 </document>
