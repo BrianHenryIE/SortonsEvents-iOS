@@ -30,45 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: frame)
                
         // TODO - shouldn't be hardcoded
-        let fomoId = FomoId.numberFromBundle(bundleName: "ie.sortons.events.ucd")!
-        
-        let listEventsWireframe = ListEventsWireframe(fomoId: fomoId)
-        let listEventsView = listEventsWireframe.listEventsView!
-        
-        let newsWireframe = NewsWireframe(fomoId: fomoId)
-        let newsView = newsWireframe.newsView!
-        
-        let directoryWireframe = DirectoryWireframe(fomoId: fomoId)
-        let directoryView = directoryWireframe.directoryView!
-        
-        let tabBarController = UITabBarController()
-        tabBarController.view.backgroundColor = UIColor.white
-        
-        let viewControllers = [listEventsView, newsView, directoryView]
-        
-        tabBarController.viewControllers = viewControllers
-        window?.rootViewController = tabBarController
-        window!.makeKeyAndVisible()
-        
-        let firstImage = UIImage(named: "ListEventsTabBarIcon")
-        let secondImage = UIImage(named: "NewsTabBarIcon")
-        let thirdImage = UIImage(named: "DirectoryTabBarIcon")
-        
-        listEventsView.tabBarItem = UITabBarItem(
-            title: "Events",
-            image: firstImage,
-            tag: 1)
-     
-        newsView.tabBarItem = UITabBarItem(
-            title: "News",
-            image: secondImage,
-            tag: 2)
-        
-        directoryView.tabBarItem = UITabBarItem(
-            title: "Directory",
-            image: thirdImage,
-            tag: 3)
-        
+        let fomoId = FomoId.numberFromBundle(bundleName: "ie.sortons.events.tcd")!
+
+        _ = RootViewController(window: window!, fomoId: fomoId)
+
         return true
     }
 }

@@ -13,6 +13,7 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutput {
     
     var allUpcomingEvents = [DiscoveredEvent]()
     
+    let wireframe: ListEventsWireframe
     let fomoId: String
     let output: ListEventsInteractorOutput
     let listEventsNetworkWorker: ListEventsNetworkWorkerProtocol
@@ -22,7 +23,8 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutput {
     let dateFormat: DateFormatter
     let calendar: Calendar
 
-    init(fomoId: String, output: ListEventsInteractorOutput, listEventsNetworkWorker: ListEventsNetworkWorkerProtocol, listEventsCacheWorker: ListEventsCacheWorkerProtocol, withDate: Date = Date(), withCalendar: Calendar = Calendar.current){
+    init(wireframe: ListEventsWireframe, fomoId: String, output: ListEventsInteractorOutput, listEventsNetworkWorker: ListEventsNetworkWorkerProtocol, listEventsCacheWorker: ListEventsCacheWorkerProtocol, withDate: Date = Date(), withCalendar: Calendar = Calendar.current){
+        self.wireframe = wireframe
         self.fomoId = fomoId
         self.output = output
         self.listEventsNetworkWorker = listEventsNetworkWorker
@@ -113,5 +115,9 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutput {
         filteredEvents.append(contentsOf: lastNight)
         
         return filteredEvents
+    }
+
+    func changeToNextTabRight() {
+        wireframe.changeToNextTabRight()
     }
 }

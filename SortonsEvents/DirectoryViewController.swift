@@ -12,7 +12,7 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
 
     @IBOutlet weak var searchBarOutlet: UISearchBar!
     @IBOutlet weak var tableViewOutlet: UITableView!
-    
+
     var output: DirectoryViewControllerOutput!
     var data = [DirectoryTableViewCellModel]()
     
@@ -22,9 +22,9 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
         tableViewOutlet.rowHeight = UITableViewAutomaticDimension
         tableViewOutlet.estimatedRowHeight = 140
         
-       //  let gestureRecognizer = UIGestureRecognizer(target: tableViewOutlet, action: #selector(DirectoryViewController.hideKeyboard))
         let gestureRecognizer = UIGestureRecognizer()
         tableViewOutlet.addGestureRecognizer(gestureRecognizer)
+        
         gestureRecognizer.delegate = self
         
         let request = Directory_FetchDirectory_Request()
@@ -71,6 +71,12 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
 // MARK: UIGestureRecogniserDelegate
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         searchBarOutlet.resignFirstResponder()
+        
         return true
     }
+    
+    @IBAction func rightSwipeGesture(_ sender: Any) {
+        output.changeToNextTabLeft()
+    }
+    
 }

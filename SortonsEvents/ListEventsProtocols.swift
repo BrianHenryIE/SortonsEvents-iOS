@@ -19,4 +19,6 @@ protocol ListEventsTableViewControllerOutput {
     func fetchEvents(_ request: ListEvents_FetchEvents_Request)
     
     func displayEvent(for rowNumber: Int)
+
+    func changeToNextTabRight()
 }

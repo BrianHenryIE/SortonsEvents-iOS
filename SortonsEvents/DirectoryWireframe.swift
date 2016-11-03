@@ -13,8 +13,10 @@ class DirectoryWireframe {
     
 //    let directoryView : ListEventsTableViewController!
     let directoryView: DirectoryViewController!
+    let rootViewController : RootViewControllerProtocol
     
-    init(fomoId: String) {
+    init(rootViewController: RootViewControllerProtocol, fomoId: String) {
+        self.rootViewController = rootViewController
         
         let storyboard = UIStoryboard(name: "Directory", bundle: Bundle.main)
         
@@ -25,10 +27,12 @@ class DirectoryWireframe {
         let directoryCacheWorker = DirectoryCacheWorker()
         let directoryNetworkWorker = DirectoryNetworkWorker()
         
-        let directoryInteractor = DirectoryInteractor(fomoId: fomoId, presenter: directoryPresenter, cache: directoryCacheWorker, network: directoryNetworkWorker)
+        let directoryInteractor = DirectoryInteractor(fomoId: fomoId, wireframe: self, presenter: directoryPresenter, cache: directoryCacheWorker, network: directoryNetworkWorker)
         
         directoryView.output = directoryInteractor
-
     }
     
+    func changeToNextTabLeft() {
+        rootViewController.changeToNextTabLeft()
+    }
 }

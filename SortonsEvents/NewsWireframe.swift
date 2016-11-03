@@ -12,8 +12,10 @@ import Foundation
 class NewsWireframe {
     
     let newsView: NewsViewController!
+    let rootViewController : RootViewControllerProtocol
     
-    init(fomoId: String) {
+    init(rootViewController: RootViewControllerProtocol, fomoId: String) {
+        self.rootViewController = rootViewController
         
         let storyboard = UIStoryboard(name: "News", bundle: Bundle.main)
         
@@ -21,8 +23,16 @@ class NewsWireframe {
       
         let newsPresenter = NewsPresenter(output: newsView)
         
-        let newsInteractor = NewsInteractor(fomoId: fomoId, output: newsPresenter)
+        let newsInteractor = NewsInteractor(wireframe: self, fomoId: fomoId, output: newsPresenter)
         
         newsView.output = newsInteractor
+    }
+    
+    func changeToNextTabLeft() {
+        rootViewController.changeToNextTabLeft()
+    }
+    
+    func changeToNextTabRight() {
+        rootViewController.changeToNextTabRight()
     }
 }

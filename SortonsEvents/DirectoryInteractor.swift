@@ -11,6 +11,8 @@ import ObjectMapper
 
 class DirectoryInteractor: DirectoryViewControllerOutput {
 
+    var wireframe : DirectoryWireframe
+    
     var directory = [SourcePage]()
     var displayedDirectory = [SourcePage]()
     var currentFilter = ""
@@ -21,8 +23,9 @@ class DirectoryInteractor: DirectoryViewControllerOutput {
     var cacheWorker: DirectoryCacheWorkerProtocol!
     var networkWorker: DirectoryNetworkWorkerProtocol!
     
-    init(fomoId: String, presenter: DirectoryInteractorOutput, cache: DirectoryCacheWorkerProtocol, network: DirectoryNetworkWorkerProtocol) {
+    init(fomoId: String, wireframe: DirectoryWireframe, presenter: DirectoryInteractorOutput, cache: DirectoryCacheWorkerProtocol, network: DirectoryNetworkWorkerProtocol) {
         self.fomoId = fomoId
+        self.wireframe = wireframe
         output = presenter
         cacheWorker = cache
         networkWorker = network
@@ -80,5 +83,9 @@ class DirectoryInteractor: DirectoryViewControllerOutput {
         } else {
             UIApplication.shared.openURL(safariUrl)
         }
+    }
+    
+    func changeToNextTabLeft() {
+        wireframe.changeToNextTabLeft()
     }
 }
