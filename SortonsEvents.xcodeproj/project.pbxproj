@@ -494,11 +494,10 @@
 			isa = PBXGroup;
 			children = (
 				A6A675931C941D6300FAD755 /* AppDelegate.swift */,
-				A69DBF3D1C8AD57B005064F7 /* Resources */,
+				A6AD95FF1DCB134100CEEFAA /* View */,
 				A69FD40D1DB2C3B300CA8964 /* Workers */,
 				A66DC39D1CF3992A00ED636B /* Model */,
-				A6AD95F31DCB0AD500CEEFAA /* RootViewController.swift */,
-				A6AD95F51DCB0CB300CEEFAA /* RootViewControllerProtocol.swift */,
+				A69DBF3D1C8AD57B005064F7 /* Resources */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -730,6 +729,15 @@
 				A6C45C081DA3882B00FC57D5 /* FomoId.swift */,
 			);
 			name = Workers;
+			sourceTree = "<group>";
+		};
+		A6AD95FF1DCB134100CEEFAA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A6AD95F31DCB0AD500CEEFAA /* RootViewController.swift */,
+				A6AD95F51DCB0CB300CEEFAA /* RootViewControllerProtocol.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		A6C04F6A1DB451910009C9BF /* Model */ = {
