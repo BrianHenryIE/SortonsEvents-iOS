@@ -70,7 +70,7 @@ class DirectoryInteractor: DirectoryViewControllerOutput {
     
     func displaySelectedPageFrom(rowNumber: Int) {
         
-        let fbId = displayedDirectory[rowNumber].pageId!
+        let fbId = displayedDirectory[rowNumber].fbPageId!
         
         let appUrl = URL(string: "fb://profile/\(fbId)")!
         let safariUrl = URL(string: "https://facebook.com/\(fbId)")!

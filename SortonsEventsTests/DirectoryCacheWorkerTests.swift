@@ -25,7 +25,7 @@ class DirectoryCacheWorkerTests: XCTestCase {
         
         // Read test ClientPageData from file
         let bundle = Bundle(for: self.classForCoder)
-        let path = bundle.path(forResource: "ClientPageDataUcdEvents", ofType: "json")!
+        let path = bundle.path(forResource: "ClientPageDataTcd", ofType: "json")!
         let clientPageDataFromFile = try String(contentsOfFile: path)
         
         // Save using eventsCacheWorker

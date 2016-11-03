@@ -6,6 +6,7 @@
 //  Copyright © 2016 Sortons. All rights reserved.
 //
 
+@testable import SortonsEvents
 import XCTest
 import ObjectMapper
 

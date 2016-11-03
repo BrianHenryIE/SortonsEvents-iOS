@@ -6,8 +6,8 @@
 //  Copyright © 2016 Sortons. All rights reserved.
 //
 
-import XCTest
 @testable import SortonsEvents
+import XCTest
 import ObjectMapper
 
 class EmptyListEventsNetworkWorkerSpy: ListEventsNetworkWorker {
@@ -27,9 +27,9 @@ class EmptyListEventsCacheWorkerSpy: ListEventsCacheWorkerProtocol {
     
     var fetchCalled = false
     
-    func fetch(_ completionHandler: (_ discoveredEvents: String) -> Void) {
+    func fetch() -> String? {
         fetchCalled = true
-        completionHandler("{}") // should I bother?
+        return "{}" // should I bother?
     }
     
     var saveCalled = false
@@ -56,11 +56,11 @@ class ListEventsCacheWorkerSpy: ListEventsCacheWorkerProtocol {
     
     var fetchCalled = false
     
-    func fetch(_ completionHandler: (_ discoveredEvents: String) -> Void) {
+    func fetch() -> String? {
         fetchCalled = true
-        completionHandler("{\"data\": [{\"eventId\": \"918777258231182\",\"clientId\": \"1049082365115363\",\"sourcePages\": [{\"clientId\": \"1049082365115363\",\"id\": \"1049082365115363457660710939203\",\"about\": \"NUI Galway's Student Volunteering Programme www.nuigalway.ie/alive\",\"name\": \"Alive Nuigalway\",\"pageId\": \"457660710939203\",\"pageUrl\": \"https://www.facebook.com/alive.nuigalway\",\"street\": \"\",\"zip\": \"\",\"uid\": \"457660710939203\",\"title\": \"Alive Nuigalway\",\"subTitle\": \"\",\"friendlyLocationString\": \"\",\"searchableString\": \"Alive Nuigalway null null Alive Nuigalway null \",\"class\": \"ie.sortons.events.shared.SourcePage\"}],\"name\": \"Information Evening for Volunteering with Galway's Community Bicycle Workshop\",\"location\": \"Block R, Earls Island, University Road, Galway.\",\"startTime\": \"2016-06-30T18:00:00.000Z\",\"endTime\": \"2016-06-30T19:00:00.000Z\",\"dateOnly\": false}]}") // should I bother?
+        return "{\"data\": [{\"eventId\": \"918777258231182\",\"clientId\": \"1049082365115363\",\"sourcePages\": [{\"clientId\": \"1049082365115363\",\"id\": \"1049082365115363457660710939203\",\"about\": \"NUI Galway's Student Volunteering Programme www.nuigalway.ie/alive\",\"name\": \"Alive Nuigalway\",\"pageId\": \"457660710939203\",\"pageUrl\": \"https://www.facebook.com/alive.nuigalway\",\"street\": \"\",\"zip\": \"\",\"uid\": \"457660710939203\",\"title\": \"Alive Nuigalway\",\"subTitle\": \"\",\"friendlyLocationString\": \"\",\"searchableString\": \"Alive Nuigalway null null Alive Nuigalway null \",\"class\": \"ie.sortons.events.shared.SourcePage\"}],\"name\": \"Information Evening for Volunteering with Galway's Community Bicycle Workshop\",\"location\": \"Block R, Earls Island, University Road, Galway.\",\"startTime\": \"2016-06-30T18:00:00.000Z\",\"endTime\": \"2016-06-30T19:00:00.000Z\",\"dateOnly\": false}]}" // should I bother?
     }
-    
+
     var saveCalled = false
     
     func save(_ latestDiscoveredEvents: String) {

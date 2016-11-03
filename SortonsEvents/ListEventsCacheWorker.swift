@@ -1,5 +1,5 @@
 //
-//  EventsCacheWorker.swift
+//  ListEventsCacheWorker.swift
 //  SortonsEvents
 //
 //  Created by Brian Henry on 12/03/2016.
@@ -8,29 +8,37 @@
 
 import Foundation
 
-// Is a cache folder the best approach? i.e. if someone has low space on their 
-// phone, the cache is going to be wiped within hours... is that best for FOMO?
-
 protocol ListEventsCacheWorkerProtocol {
-
-    func fetch(_ completionHandler: (_ discoveredEvents: String) -> Void)
-    func save(_ latestDiscoveredEvents: String)
+    
+    func fetch() -> String?
+    func save(_ latestClientPageData: String)
 }
 
 class ListEventsCacheWorker: ListEventsCacheWorkerProtocol {
     
-    func fetch(_ completionHandler: (_ discoveredEvents: String) -> Void) {
+    let fileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("discoveredevents.json")
+    
+    func fetch() -> String? {
+        
         // read file
+        do {
+            let fileFromCache = try String(contentsOf: fileURL)
+            return fileFromCache
+        } catch {
+            // TODO / this will throw an error already when parsing
+        }
         
-        completionHandler("{}")
-        
-        // If no file, return...? {} ?
-        
-        // Filter to future events in presenter
+        return nil
     }
     
-    func save(_ latestEvents: String) {
+    func save(_ latestClientPageData: String) {
         
+        let data = latestClientPageData.data(using: String.Encoding.utf8)
+        
+        do {
+            try data!.write(to: fileURL, options: .atomicWrite)
+        } catch {
+            // TODO
+        }
     }
-
 }

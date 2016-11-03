@@ -45,8 +45,7 @@ class ListEventsTableViewControllerTests: XCTestCase {
     
     // MARK: Test setup
     func setupListOrdersViewController() {
-        //let bundle = NSBundle.mainBundle()
-        let bundle = Bundle(for: self.classForCoder)
+        let bundle = Bundle.main
         let storyboard = UIStoryboard(name: "ListEvents", bundle: bundle)
         sut = storyboard.instantiateViewController(withIdentifier: "ListEvents") as! ListEventsTableViewController
     }
@@ -58,15 +57,11 @@ class ListEventsTableViewControllerTests: XCTestCase {
         sut.output = listEventsViewControllerOutputSpy
         
         // When
-        loadView()
+        // Call viewDidLoad()
+        let _ = sut.view
         
         // Then
         XCTAssert(listEventsViewControllerOutputSpy.fetchEventsCalled, "Should fetch events when the view is loaded")
-    }
-    
-    func loadView() {
-        window.addSubview(sut.view)
-        RunLoop.current.run(until: Date())
     }
     
 }

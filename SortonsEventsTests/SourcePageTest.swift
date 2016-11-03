@@ -6,6 +6,7 @@
 //  Copyright © 2016 Sortons. All rights reserved.
 //
 
+@testable import SortonsEvents
 import XCTest
 import ObjectMapper
 
@@ -25,7 +26,7 @@ class SourcePageTest: XCTestCase {
         //"id": "884332671653875691002424327686",
         //"about": "The Trinity Centre Asian Studies is a teaching and research centre which offers Chinese, Korean and Japanese Studies as well as pan-Asian area studies.",
         XCTAssertEqual(tcdAsian.name, "Trinity Centre for Asian Studies")
-        XCTAssertEqual(tcdAsian.pageId, "691002424327686")
+        XCTAssertEqual(tcdAsian.fbPageId, "691002424327686")
         //"phone": "018961560",
     
         XCTAssertEqual(tcdAsian.pageUrl, "https://www.facebook.com/TCD.Asian")

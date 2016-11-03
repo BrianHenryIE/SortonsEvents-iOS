@@ -9,7 +9,7 @@
         <!--List Events Table View Controller-->
         <scene sceneID="qAl-du-ZgQ">
             <objects>
-                <tableViewController storyboardIdentifier="ListEvents" useStoryboardIdentifierAsRestorationIdentifier="YES" id="msU-ZY-gOw" customClass="ListEventsTableViewController" customModule="SortonsEvents" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="ListEvents" storyboardIdentifier="ListEvents" id="msU-ZY-gOw" customClass="ListEventsTableViewController" customModule="SortonsEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="118" sectionHeaderHeight="28" sectionFooterHeight="28" id="Tj3-QP-mGP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
