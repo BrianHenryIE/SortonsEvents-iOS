@@ -17,8 +17,6 @@ import UIKit
 //    [defaults registerDefaults:appDefaults];
 //    [defaults synchronize];
 
-// https://makeapppie.com/2014/09/09/swift-swift-using-tab-bar-controllers-in-swift/
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -28,9 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let frame = UIScreen.main.bounds
         window = UIWindow(frame: frame)
-               
-        // TODO - shouldn't be hardcoded
-        let fomoId = FomoId.numberFromBundle(bundleName: "ie.sortons.events.tcd")!
+
+        let fomoId = FomoId.numberFromBundle(bundleName: Bundle.main.bundleIdentifier!)!
 
         _ = RootViewController(window: window!, fomoId: fomoId)
 

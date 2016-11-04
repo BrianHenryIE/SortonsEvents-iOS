@@ -7,15 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A6141D561BB9F44F003150F1 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A67150C31B825D66006537B8 /* fomo.plist */; };
-		A6141D571BB9F44F003150F1 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131B1A91492500A5F082 /* AppImages.xcassets */; };
 		A6141D591BB9F44F003150F1 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
-		A6141D6A1BB9F51B003150F1 /* LaunchScreenTCD.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6141D611BB9F507003150F1 /* LaunchScreenTCD.xib */; };
-		A6141D6B1BB9F52E003150F1 /* LaunchScreenUCD.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6141D651BB9F507003150F1 /* LaunchScreenUCD.xib */; };
-		A6141D821BB9F537003150F1 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A67150C31B825D66006537B8 /* fomo.plist */; };
-		A6141D831BB9F537003150F1 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131B1A91492500A5F082 /* AppImages.xcassets */; };
 		A6141D851BB9F537003150F1 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
-		A6141D8D1BB9F55D003150F1 /* LaunchScreenUCC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6141D631BB9F507003150F1 /* LaunchScreenUCC.xib */; };
 		A618ED871DB3FE4A00281C17 /* DirectoryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A618ED861DB3FE4A00281C17 /* DirectoryViewControllerTests.swift */; };
 		A618ED891DB3FE6E00281C17 /* DirectoryViewControllerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A618ED881DB3FE6E00281C17 /* DirectoryViewControllerIO.swift */; };
 		A618ED8B1DB3FF8700281C17 /* DirectoryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A618ED8A1DB3FF8700281C17 /* DirectoryModels.swift */; };
@@ -23,16 +16,12 @@
 		A625EA7A1C8AEEAB00B35D80 /* ListEventsInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF451C8AD68F005064F7 /* ListEventsInteractorIO.swift */; };
 		A625EA7E1C8AF06E00B35D80 /* DiscoveredEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF3F1C8AD654005064F7 /* DiscoveredEvent.swift */; };
 		A625EA7F1C8AF07F00B35D80 /* ListEventsNetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF411C8AD67D005064F7 /* ListEventsNetworkWorker.swift */; };
-		A62BD62E1B9E1C4500E928E5 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A67150C31B825D66006537B8 /* fomo.plist */; };
-		A62BD62F1B9E1C4500E928E5 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131B1A91492500A5F082 /* AppImages.xcassets */; };
 		A62BD6311B9E1C4500E928E5 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
 		A63693451D3A497E00808DC5 /* DiscoveredEventsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3FF1D25B96D0097AF22 /* DiscoveredEventsResponse.swift */; };
 		A636934A1D3A4BD100808DC5 /* ListEventsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63693491D3A4BD100808DC5 /* ListEventsProtocols.swift */; };
 		A636D26D1D0C88FF00FB9C62 /* DiscoveredEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A636D26C1D0C88FF00FB9C62 /* DiscoveredEventTest.swift */; };
 		A636D26F1D0C892F00FB9C62 /* DiscoveredEventNIUGBicycleVolunteering.json in Resources */ = {isa = PBXBuildFile; fileRef = A636D26E1D0C892F00FB9C62 /* DiscoveredEventNIUGBicycleVolunteering.json */; };
 		A636D2761D0C8A9A00FB9C62 /* SourcePageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A636D2751D0C8A9A00FB9C62 /* SourcePageTest.swift */; };
-		A63B32B61C68AFA400C46020 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A67150C31B825D66006537B8 /* fomo.plist */; };
-		A63B32B71C68AFA400C46020 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131B1A91492500A5F082 /* AppImages.xcassets */; };
 		A63B32B91C68AFA400C46020 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
 		A63B94C91DB632DB00ECA301 /* FomoId.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C45C081DA3882B00FC57D5 /* FomoId.swift */; };
 		A63B94CA1DB632DB00ECA301 /* FomoId.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C45C081DA3882B00FC57D5 /* FomoId.swift */; };
@@ -174,7 +163,6 @@
 		A63B95531DB633A700ECA301 /* DirectoryImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C61D6E09E200A66C85 /* DirectoryImages.xcassets */; };
 		A63B95541DB633A800ECA301 /* DirectoryImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C61D6E09E200A66C85 /* DirectoryImages.xcassets */; };
 		A63B95551DB633A800ECA301 /* DirectoryImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C61D6E09E200A66C85 /* DirectoryImages.xcassets */; };
-		A63B955A1DB633B600ECA301 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6C6130F1A91492500A5F082 /* Info.plist */; };
 		A63B955B1DB6350100ECA301 /* NewsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C81D6E09F000A66C85 /* NewsImages.xcassets */; };
 		A63B955C1DB6350100ECA301 /* NewsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C81D6E09F000A66C85 /* NewsImages.xcassets */; };
 		A63B955D1DB6350100ECA301 /* NewsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C81D6E09F000A66C85 /* NewsImages.xcassets */; };
@@ -196,7 +184,6 @@
 		A66DC3961CF395E000ED636B /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66DC3951CF395E000ED636B /* Tests.swift */; };
 		A66DC3981CF3966700ED636B /* SourcePageTcdAsian.json in Resources */ = {isa = PBXBuildFile; fileRef = A66DC3971CF3966700ED636B /* SourcePageTcdAsian.json */; };
 		A66DC39C1CF398DB00ED636B /* DirectoryCacheWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66DC39B1CF398DB00ED636B /* DirectoryCacheWorkerTests.swift */; };
-		A67150C41B825D66006537B8 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A67150C31B825D66006537B8 /* fomo.plist */; };
 		A67796B31DADE651003FBCE6 /* NewsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B21DADE651003FBCE6 /* NewsWireframe.swift */; };
 		A67796B51DADE6B3003FBCE6 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B41DADE6B3003FBCE6 /* NewsViewController.swift */; };
 		A67796B71DADF097003FBCE6 /* DirectoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B61DADF097003FBCE6 /* DirectoryViewController.swift */; };
@@ -204,6 +191,228 @@
 		A68183D51D2ADD6200E45D35 /* ListEventsTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68183D41D2ADD6200E45D35 /* ListEventsTableViewControllerTests.swift */; };
 		A68183DA1D2AFFB900E45D35 /* ListEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68183D91D2AFFB900E45D35 /* ListEventsTableViewController.swift */; };
 		A68183DD1D2B009E00E45D35 /* ListEventsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68183DC1D2B009E00E45D35 /* ListEventsModels.swift */; };
+		A69186991DCC4E7800372A98 /* LaunchScreenNUIG.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69186901DCC4E7800372A98 /* LaunchScreenNUIG.xib */; };
+		A69186A31DCC4EB000372A98 /* LaunchScreenDCU.xib in Resources */ = {isa = PBXBuildFile; fileRef = A691868E1DCC4E7800372A98 /* LaunchScreenDCU.xib */; };
+		A69186A41DCC4EEE00372A98 /* LaunchScreenTCD.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69186921DCC4E7800372A98 /* LaunchScreenTCD.xib */; };
+		A69186A51DCC4EF800372A98 /* LaunchScreenUCC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69186931DCC4E7800372A98 /* LaunchScreenUCC.xib */; };
+		A69186A61DCC4F0200372A98 /* LaunchScreenUCD.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69186941DCC4E7800372A98 /* LaunchScreenUCD.xib */; };
+		A69186A81DCC50FA00372A98 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186A71DCC50FA00372A98 /* fomo.plist */; };
+		A69186A91DCC50FA00372A98 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186A71DCC50FA00372A98 /* fomo.plist */; };
+		A69186AA1DCC50FA00372A98 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186A71DCC50FA00372A98 /* fomo.plist */; };
+		A69186AB1DCC50FA00372A98 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186A71DCC50FA00372A98 /* fomo.plist */; };
+		A69186AC1DCC50FA00372A98 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186A71DCC50FA00372A98 /* fomo.plist */; };
+		A69186B01DCC543A00372A98 /* DirectoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C04F6B1DB452FD0009C9BF /* DirectoryPresenter.swift */; };
+		A69186B11DCC543A00372A98 /* ClientPageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3E21D258F8E0097AF22 /* ClientPageData.swift */; };
+		A69186B21DCC543A00372A98 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F31DCB0AD500CEEFAA /* RootViewController.swift */; };
+		A69186B31DCC543A00372A98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A675931C941D6300FAD755 /* AppDelegate.swift */; };
+		A69186B41DCC543A00372A98 /* RootViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F51DCB0CB300CEEFAA /* RootViewControllerProtocol.swift */; };
+		A69186B51DCC543A00372A98 /* NewsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CEE511DB5C6D00059EF52 /* NewsModels.swift */; };
+		A69186B61DCC543A00372A98 /* DirectoryCacheWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3DD1D258E570097AF22 /* DirectoryCacheWorker.swift */; };
+		A69186B71DCC543A00372A98 /* ListEventsCacheWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A6759A1C943AED00FAD755 /* ListEventsCacheWorker.swift */; };
+		A69186B81DCC543A00372A98 /* DirectoryViewControllerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A618ED881DB3FE6E00281C17 /* DirectoryViewControllerIO.swift */; };
+		A69186B91DCC543A00372A98 /* NewsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CEE471DB5C4ED0059EF52 /* NewsInteractor.swift */; };
+		A69186BA1DCC543A00372A98 /* ListEventsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ABE5341D3AB9A600EF3D11 /* ListEventsPresenter.swift */; };
+		A69186BB1DCC543A00372A98 /* ListEventsInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF451C8AD68F005064F7 /* ListEventsInteractorIO.swift */; };
+		A69186BC1DCC543A00372A98 /* DirectoryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A618ED8A1DB3FF8700281C17 /* DirectoryModels.swift */; };
+		A69186BD1DCC543A00372A98 /* ListEventsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B23C21D6E00FF00A66C85 /* ListEventsWireframe.swift */; };
+		A69186BE1DCC543A00372A98 /* DiscoveredEventsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3FF1D25B96D0097AF22 /* DiscoveredEventsResponse.swift */; };
+		A69186BF1DCC543A00372A98 /* ListEventsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63693491D3A4BD100808DC5 /* ListEventsProtocols.swift */; };
+		A69186C01DCC543A00372A98 /* NewsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CEE4F1DB5C5EF0059EF52 /* NewsInteractorOutput.swift */; };
+		A69186C11DCC543A00372A98 /* NewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CEE491DB5C4F80059EF52 /* NewsPresenter.swift */; };
+		A69186C21DCC543A00372A98 /* ListEventsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF431C8AD688005064F7 /* ListEventsInteractor.swift */; };
+		A69186C31DCC543A00372A98 /* GAEISO8601DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3F61D25B64D0097AF22 /* GAEISO8601DateTransform.swift */; };
+		A69186C41DCC543A00372A98 /* DirectoryNetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E10C631DB44F5C007854F8 /* DirectoryNetworkWorker.swift */; };
+		A69186C51DCC543A00372A98 /* DirectoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E10C611DB41643007854F8 /* DirectoryTableViewCell.swift */; };
+		A69186C61DCC543A00372A98 /* DirectoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C04F6D1DB4530A0009C9BF /* DirectoryInteractor.swift */; };
+		A69186C71DCC543A00372A98 /* DirectoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B61DADF097003FBCE6 /* DirectoryViewController.swift */; };
+		A69186C81DCC543A00372A98 /* FomoId.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C45C081DA3882B00FC57D5 /* FomoId.swift */; };
+		A69186C91DCC543A00372A98 /* ListEventsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68183DC1D2B009E00E45D35 /* ListEventsModels.swift */; };
+		A69186CA1DCC543A00372A98 /* NewsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B21DADE651003FBCE6 /* NewsWireframe.swift */; };
+		A69186CB1DCC543A00372A98 /* DiscoveredEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ABE5301D3AB12200EF3D11 /* DiscoveredEventTableViewCell.swift */; };
+		A69186CC1DCC543A00372A98 /* DiscoveredEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF3F1C8AD654005064F7 /* DiscoveredEvent.swift */; };
+		A69186CD1DCC543A00372A98 /* DirectoryWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B23CA1D6E0E1F00A66C85 /* DirectoryWireframe.swift */; };
+		A69186CE1DCC543A00372A98 /* ListEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68183D91D2AFFB900E45D35 /* ListEventsTableViewController.swift */; };
+		A69186CF1DCC543A00372A98 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B41DADE6B3003FBCE6 /* NewsViewController.swift */; };
+		A69186D01DCC543A00372A98 /* ListEventsNetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF411C8AD67D005064F7 /* ListEventsNetworkWorker.swift */; };
+		A69186D11DCC543A00372A98 /* SourcePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A636D2731D0C8A8700FB9C62 /* SourcePage.swift */; };
+		A69186D21DCC543A00372A98 /* NewsViewControllerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B81DAE03C4003FBCE6 /* NewsViewControllerIO.swift */; };
+		A69186D31DCC543A00372A98 /* DirectoryInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C04F731DB456D90009C9BF /* DirectoryInteractorOutput.swift */; };
+		A69186D51DCC543A00372A98 /* Pods_FOMO_TCD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3618116F62AC71C54B105380 /* Pods_FOMO_TCD.framework */; };
+		A69186D71DCC543A00372A98 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186A71DCC50FA00372A98 /* fomo.plist */; };
+		A69186DA1DCC543A00372A98 /* DirectoryImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C61D6E09E200A66C85 /* DirectoryImages.xcassets */; };
+		A69186DB1DCC543A00372A98 /* Directory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65B23BC1D6DFB2400A66C85 /* Directory.storyboard */; };
+		A69186DD1DCC543A00372A98 /* ListEvents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6478D171D36CE2600B6000B /* ListEvents.storyboard */; };
+		A69186DE1DCC543A00372A98 /* ListEventsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C41D6E099D00A66C85 /* ListEventsImages.xcassets */; };
+		A69186DF1DCC543A00372A98 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65B23BA1D6DFAE700A66C85 /* News.storyboard */; };
+		A69186E01DCC543A00372A98 /* NewsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C81D6E09F000A66C85 /* NewsImages.xcassets */; };
+		A69186E11DCC543A00372A98 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
+		A69186ED1DCC54BD00372A98 /* DirectoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C04F6B1DB452FD0009C9BF /* DirectoryPresenter.swift */; };
+		A69186EE1DCC54BD00372A98 /* ClientPageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3E21D258F8E0097AF22 /* ClientPageData.swift */; };
+		A69186EF1DCC54BD00372A98 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F31DCB0AD500CEEFAA /* RootViewController.swift */; };
+		A69186F01DCC54BD00372A98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A675931C941D6300FAD755 /* AppDelegate.swift */; };
+		A69186F11DCC54BD00372A98 /* RootViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F51DCB0CB300CEEFAA /* RootViewControllerProtocol.swift */; };
+		A69186F21DCC54BD00372A98 /* NewsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CEE511DB5C6D00059EF52 /* NewsModels.swift */; };
+		A69186F31DCC54BD00372A98 /* DirectoryCacheWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3DD1D258E570097AF22 /* DirectoryCacheWorker.swift */; };
+		A69186F41DCC54BD00372A98 /* ListEventsCacheWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A6759A1C943AED00FAD755 /* ListEventsCacheWorker.swift */; };
+		A69186F51DCC54BD00372A98 /* DirectoryViewControllerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A618ED881DB3FE6E00281C17 /* DirectoryViewControllerIO.swift */; };
+		A69186F61DCC54BD00372A98 /* NewsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CEE471DB5C4ED0059EF52 /* NewsInteractor.swift */; };
+		A69186F71DCC54BD00372A98 /* ListEventsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ABE5341D3AB9A600EF3D11 /* ListEventsPresenter.swift */; };
+		A69186F81DCC54BD00372A98 /* ListEventsInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF451C8AD68F005064F7 /* ListEventsInteractorIO.swift */; };
+		A69186F91DCC54BD00372A98 /* DirectoryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A618ED8A1DB3FF8700281C17 /* DirectoryModels.swift */; };
+		A69186FA1DCC54BD00372A98 /* ListEventsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B23C21D6E00FF00A66C85 /* ListEventsWireframe.swift */; };
+		A69186FB1DCC54BD00372A98 /* DiscoveredEventsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3FF1D25B96D0097AF22 /* DiscoveredEventsResponse.swift */; };
+		A69186FC1DCC54BD00372A98 /* ListEventsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63693491D3A4BD100808DC5 /* ListEventsProtocols.swift */; };
+		A69186FD1DCC54BD00372A98 /* NewsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CEE4F1DB5C5EF0059EF52 /* NewsInteractorOutput.swift */; };
+		A69186FE1DCC54BD00372A98 /* NewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CEE491DB5C4F80059EF52 /* NewsPresenter.swift */; };
+		A69186FF1DCC54BD00372A98 /* ListEventsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF431C8AD688005064F7 /* ListEventsInteractor.swift */; };
+		A69187001DCC54BD00372A98 /* GAEISO8601DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3F61D25B64D0097AF22 /* GAEISO8601DateTransform.swift */; };
+		A69187011DCC54BD00372A98 /* DirectoryNetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E10C631DB44F5C007854F8 /* DirectoryNetworkWorker.swift */; };
+		A69187021DCC54BD00372A98 /* DirectoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E10C611DB41643007854F8 /* DirectoryTableViewCell.swift */; };
+		A69187031DCC54BD00372A98 /* DirectoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C04F6D1DB4530A0009C9BF /* DirectoryInteractor.swift */; };
+		A69187041DCC54BD00372A98 /* DirectoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B61DADF097003FBCE6 /* DirectoryViewController.swift */; };
+		A69187051DCC54BD00372A98 /* FomoId.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C45C081DA3882B00FC57D5 /* FomoId.swift */; };
+		A69187061DCC54BD00372A98 /* ListEventsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68183DC1D2B009E00E45D35 /* ListEventsModels.swift */; };
+		A69187071DCC54BD00372A98 /* NewsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B21DADE651003FBCE6 /* NewsWireframe.swift */; };
+		A69187081DCC54BD00372A98 /* DiscoveredEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ABE5301D3AB12200EF3D11 /* DiscoveredEventTableViewCell.swift */; };
+		A69187091DCC54BD00372A98 /* DiscoveredEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF3F1C8AD654005064F7 /* DiscoveredEvent.swift */; };
+		A691870A1DCC54BD00372A98 /* DirectoryWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B23CA1D6E0E1F00A66C85 /* DirectoryWireframe.swift */; };
+		A691870B1DCC54BD00372A98 /* ListEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68183D91D2AFFB900E45D35 /* ListEventsTableViewController.swift */; };
+		A691870C1DCC54BD00372A98 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B41DADE6B3003FBCE6 /* NewsViewController.swift */; };
+		A691870D1DCC54BD00372A98 /* ListEventsNetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF411C8AD67D005064F7 /* ListEventsNetworkWorker.swift */; };
+		A691870E1DCC54BD00372A98 /* SourcePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A636D2731D0C8A8700FB9C62 /* SourcePage.swift */; };
+		A691870F1DCC54BD00372A98 /* NewsViewControllerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B81DAE03C4003FBCE6 /* NewsViewControllerIO.swift */; };
+		A69187101DCC54BD00372A98 /* DirectoryInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C04F731DB456D90009C9BF /* DirectoryInteractorOutput.swift */; };
+		A69187121DCC54BD00372A98 /* Pods_FOMO_TCD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3618116F62AC71C54B105380 /* Pods_FOMO_TCD.framework */; };
+		A69187141DCC54BD00372A98 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186A71DCC50FA00372A98 /* fomo.plist */; };
+		A69187171DCC54BD00372A98 /* DirectoryImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C61D6E09E200A66C85 /* DirectoryImages.xcassets */; };
+		A69187181DCC54BD00372A98 /* Directory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65B23BC1D6DFB2400A66C85 /* Directory.storyboard */; };
+		A691871A1DCC54BD00372A98 /* ListEvents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6478D171D36CE2600B6000B /* ListEvents.storyboard */; };
+		A691871B1DCC54BD00372A98 /* ListEventsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C41D6E099D00A66C85 /* ListEventsImages.xcassets */; };
+		A691871C1DCC54BD00372A98 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65B23BA1D6DFAE700A66C85 /* News.storyboard */; };
+		A691871D1DCC54BD00372A98 /* NewsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C81D6E09F000A66C85 /* NewsImages.xcassets */; };
+		A691871E1DCC54BD00372A98 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
+		A691872A1DCC551000372A98 /* NewsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CEE511DB5C6D00059EF52 /* NewsModels.swift */; };
+		A691872B1DCC551000372A98 /* DirectoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C04F6B1DB452FD0009C9BF /* DirectoryPresenter.swift */; };
+		A691872C1DCC551000372A98 /* ListEventsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF431C8AD688005064F7 /* ListEventsInteractor.swift */; };
+		A691872D1DCC551000372A98 /* NewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CEE491DB5C4F80059EF52 /* NewsPresenter.swift */; };
+		A691872E1DCC551000372A98 /* NewsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CEE471DB5C4ED0059EF52 /* NewsInteractor.swift */; };
+		A691872F1DCC551000372A98 /* NewsViewControllerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B81DAE03C4003FBCE6 /* NewsViewControllerIO.swift */; };
+		A69187301DCC551000372A98 /* ListEventsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B23C21D6E00FF00A66C85 /* ListEventsWireframe.swift */; };
+		A69187311DCC551000372A98 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B41DADE6B3003FBCE6 /* NewsViewController.swift */; };
+		A69187321DCC551000372A98 /* ClientPageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3E21D258F8E0097AF22 /* ClientPageData.swift */; };
+		A69187331DCC551000372A98 /* ListEventsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63693491D3A4BD100808DC5 /* ListEventsProtocols.swift */; };
+		A69187341DCC551000372A98 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F31DCB0AD500CEEFAA /* RootViewController.swift */; };
+		A69187351DCC551000372A98 /* DiscoveredEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF3F1C8AD654005064F7 /* DiscoveredEvent.swift */; };
+		A69187361DCC551000372A98 /* ListEventsCacheWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A6759A1C943AED00FAD755 /* ListEventsCacheWorker.swift */; };
+		A69187371DCC551000372A98 /* DirectoryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A618ED8A1DB3FF8700281C17 /* DirectoryModels.swift */; };
+		A69187381DCC551000372A98 /* DirectoryWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B23CA1D6E0E1F00A66C85 /* DirectoryWireframe.swift */; };
+		A69187391DCC551000372A98 /* ListEventsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68183DC1D2B009E00E45D35 /* ListEventsModels.swift */; };
+		A691873A1DCC551000372A98 /* DiscoveredEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ABE5301D3AB12200EF3D11 /* DiscoveredEventTableViewCell.swift */; };
+		A691873B1DCC551000372A98 /* DiscoveredEventsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3FF1D25B96D0097AF22 /* DiscoveredEventsResponse.swift */; };
+		A691873C1DCC551000372A98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A675931C941D6300FAD755 /* AppDelegate.swift */; };
+		A691873D1DCC551000372A98 /* DirectoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B61DADF097003FBCE6 /* DirectoryViewController.swift */; };
+		A691873E1DCC551000372A98 /* DirectoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C04F6D1DB4530A0009C9BF /* DirectoryInteractor.swift */; };
+		A691873F1DCC551000372A98 /* DirectoryViewControllerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A618ED881DB3FE6E00281C17 /* DirectoryViewControllerIO.swift */; };
+		A69187401DCC551000372A98 /* FomoId.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C45C081DA3882B00FC57D5 /* FomoId.swift */; };
+		A69187411DCC551000372A98 /* ListEventsNetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF411C8AD67D005064F7 /* ListEventsNetworkWorker.swift */; };
+		A69187421DCC551000372A98 /* ListEventsInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF451C8AD68F005064F7 /* ListEventsInteractorIO.swift */; };
+		A69187431DCC551000372A98 /* DirectoryCacheWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3DD1D258E570097AF22 /* DirectoryCacheWorker.swift */; };
+		A69187441DCC551000372A98 /* NewsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B21DADE651003FBCE6 /* NewsWireframe.swift */; };
+		A69187451DCC551000372A98 /* ListEventsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ABE5341D3AB9A600EF3D11 /* ListEventsPresenter.swift */; };
+		A69187461DCC551000372A98 /* RootViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F51DCB0CB300CEEFAA /* RootViewControllerProtocol.swift */; };
+		A69187471DCC551000372A98 /* SourcePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A636D2731D0C8A8700FB9C62 /* SourcePage.swift */; };
+		A69187481DCC551000372A98 /* DirectoryNetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E10C631DB44F5C007854F8 /* DirectoryNetworkWorker.swift */; };
+		A69187491DCC551000372A98 /* GAEISO8601DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3F61D25B64D0097AF22 /* GAEISO8601DateTransform.swift */; };
+		A691874A1DCC551000372A98 /* ListEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68183D91D2AFFB900E45D35 /* ListEventsTableViewController.swift */; };
+		A691874B1DCC551000372A98 /* NewsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CEE4F1DB5C5EF0059EF52 /* NewsInteractorOutput.swift */; };
+		A691874C1DCC551000372A98 /* DirectoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E10C611DB41643007854F8 /* DirectoryTableViewCell.swift */; };
+		A691874D1DCC551000372A98 /* DirectoryInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C04F731DB456D90009C9BF /* DirectoryInteractorOutput.swift */; };
+		A691874F1DCC551000372A98 /* Pods_FOMO_UCD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36CF2249EF126ACF7C1BE04 /* Pods_FOMO_UCD.framework */; };
+		A69187521DCC551000372A98 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186A71DCC50FA00372A98 /* fomo.plist */; };
+		A69187531DCC551000372A98 /* Directory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65B23BC1D6DFB2400A66C85 /* Directory.storyboard */; };
+		A69187541DCC551000372A98 /* DirectoryImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C61D6E09E200A66C85 /* DirectoryImages.xcassets */; };
+		A69187551DCC551000372A98 /* NewsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C81D6E09F000A66C85 /* NewsImages.xcassets */; };
+		A69187561DCC551000372A98 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
+		A69187581DCC551000372A98 /* LaunchScreenUCD.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69186941DCC4E7800372A98 /* LaunchScreenUCD.xib */; };
+		A69187591DCC551000372A98 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65B23BA1D6DFAE700A66C85 /* News.storyboard */; };
+		A691875A1DCC551000372A98 /* ListEvents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6478D171D36CE2600B6000B /* ListEvents.storyboard */; };
+		A691875B1DCC551000372A98 /* ListEventsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C41D6E099D00A66C85 /* ListEventsImages.xcassets */; };
+		A69187671DCC572000372A98 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69187661DCC572000372A98 /* Info.plist */; };
+		A69187681DCC572000372A98 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69187661DCC572000372A98 /* Info.plist */; };
+		A69187691DCC572000372A98 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69187661DCC572000372A98 /* Info.plist */; };
+		A691876A1DCC572000372A98 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69187661DCC572000372A98 /* Info.plist */; };
+		A691876B1DCC572000372A98 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69187661DCC572000372A98 /* Info.plist */; };
+		A691876C1DCC572000372A98 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69187661DCC572000372A98 /* Info.plist */; };
+		A691876D1DCC572000372A98 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69187661DCC572000372A98 /* Info.plist */; };
+		A691876E1DCC572000372A98 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69187661DCC572000372A98 /* Info.plist */; };
+		A69187701DCC57B200372A98 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A691876F1DCC57B200372A98 /* AppImages.xcassets */; };
+		A69187711DCC57B200372A98 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A691876F1DCC57B200372A98 /* AppImages.xcassets */; };
+		A69187721DCC57B200372A98 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A691876F1DCC57B200372A98 /* AppImages.xcassets */; };
+		A69187731DCC57B200372A98 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A691876F1DCC57B200372A98 /* AppImages.xcassets */; };
+		A69187741DCC57B200372A98 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A691876F1DCC57B200372A98 /* AppImages.xcassets */; };
+		A69187751DCC57B200372A98 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A691876F1DCC57B200372A98 /* AppImages.xcassets */; };
+		A69187761DCC57B200372A98 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A691876F1DCC57B200372A98 /* AppImages.xcassets */; };
+		A69187771DCC57B200372A98 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A691876F1DCC57B200372A98 /* AppImages.xcassets */; };
+		A691877C1DCC591E00372A98 /* DirectoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C04F6B1DB452FD0009C9BF /* DirectoryPresenter.swift */; };
+		A691877D1DCC591E00372A98 /* ClientPageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3E21D258F8E0097AF22 /* ClientPageData.swift */; };
+		A691877E1DCC591E00372A98 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F31DCB0AD500CEEFAA /* RootViewController.swift */; };
+		A691877F1DCC591E00372A98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A675931C941D6300FAD755 /* AppDelegate.swift */; };
+		A69187801DCC591E00372A98 /* RootViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F51DCB0CB300CEEFAA /* RootViewControllerProtocol.swift */; };
+		A69187811DCC591E00372A98 /* NewsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CEE511DB5C6D00059EF52 /* NewsModels.swift */; };
+		A69187821DCC591E00372A98 /* DirectoryCacheWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3DD1D258E570097AF22 /* DirectoryCacheWorker.swift */; };
+		A69187831DCC591E00372A98 /* ListEventsCacheWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A6759A1C943AED00FAD755 /* ListEventsCacheWorker.swift */; };
+		A69187841DCC591E00372A98 /* DirectoryViewControllerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A618ED881DB3FE6E00281C17 /* DirectoryViewControllerIO.swift */; };
+		A69187851DCC591E00372A98 /* NewsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CEE471DB5C4ED0059EF52 /* NewsInteractor.swift */; };
+		A69187861DCC591E00372A98 /* ListEventsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ABE5341D3AB9A600EF3D11 /* ListEventsPresenter.swift */; };
+		A69187871DCC591E00372A98 /* ListEventsInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF451C8AD68F005064F7 /* ListEventsInteractorIO.swift */; };
+		A69187881DCC591E00372A98 /* DirectoryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A618ED8A1DB3FF8700281C17 /* DirectoryModels.swift */; };
+		A69187891DCC591E00372A98 /* ListEventsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B23C21D6E00FF00A66C85 /* ListEventsWireframe.swift */; };
+		A691878A1DCC591E00372A98 /* DiscoveredEventsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3FF1D25B96D0097AF22 /* DiscoveredEventsResponse.swift */; };
+		A691878B1DCC591E00372A98 /* ListEventsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63693491D3A4BD100808DC5 /* ListEventsProtocols.swift */; };
+		A691878C1DCC591E00372A98 /* NewsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CEE4F1DB5C5EF0059EF52 /* NewsInteractorOutput.swift */; };
+		A691878D1DCC591E00372A98 /* NewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CEE491DB5C4F80059EF52 /* NewsPresenter.swift */; };
+		A691878E1DCC591E00372A98 /* ListEventsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF431C8AD688005064F7 /* ListEventsInteractor.swift */; };
+		A691878F1DCC591E00372A98 /* GAEISO8601DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3F61D25B64D0097AF22 /* GAEISO8601DateTransform.swift */; };
+		A69187901DCC591E00372A98 /* DirectoryNetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E10C631DB44F5C007854F8 /* DirectoryNetworkWorker.swift */; };
+		A69187911DCC591E00372A98 /* DirectoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E10C611DB41643007854F8 /* DirectoryTableViewCell.swift */; };
+		A69187921DCC591E00372A98 /* DirectoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C04F6D1DB4530A0009C9BF /* DirectoryInteractor.swift */; };
+		A69187931DCC591E00372A98 /* DirectoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B61DADF097003FBCE6 /* DirectoryViewController.swift */; };
+		A69187941DCC591E00372A98 /* FomoId.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C45C081DA3882B00FC57D5 /* FomoId.swift */; };
+		A69187951DCC591E00372A98 /* ListEventsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68183DC1D2B009E00E45D35 /* ListEventsModels.swift */; };
+		A69187961DCC591E00372A98 /* NewsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B21DADE651003FBCE6 /* NewsWireframe.swift */; };
+		A69187971DCC591E00372A98 /* DiscoveredEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ABE5301D3AB12200EF3D11 /* DiscoveredEventTableViewCell.swift */; };
+		A69187981DCC591E00372A98 /* DiscoveredEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF3F1C8AD654005064F7 /* DiscoveredEvent.swift */; };
+		A69187991DCC591E00372A98 /* DirectoryWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B23CA1D6E0E1F00A66C85 /* DirectoryWireframe.swift */; };
+		A691879A1DCC591E00372A98 /* ListEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68183D91D2AFFB900E45D35 /* ListEventsTableViewController.swift */; };
+		A691879B1DCC591E00372A98 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B41DADE6B3003FBCE6 /* NewsViewController.swift */; };
+		A691879C1DCC591E00372A98 /* ListEventsNetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF411C8AD67D005064F7 /* ListEventsNetworkWorker.swift */; };
+		A691879D1DCC591E00372A98 /* SourcePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A636D2731D0C8A8700FB9C62 /* SourcePage.swift */; };
+		A691879E1DCC591E00372A98 /* NewsViewControllerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B81DAE03C4003FBCE6 /* NewsViewControllerIO.swift */; };
+		A691879F1DCC591E00372A98 /* DirectoryInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C04F731DB456D90009C9BF /* DirectoryInteractorOutput.swift */; };
+		A69187A11DCC591E00372A98 /* Pods_FOMO_TCD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3618116F62AC71C54B105380 /* Pods_FOMO_TCD.framework */; };
+		A69187A31DCC591E00372A98 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186A71DCC50FA00372A98 /* fomo.plist */; };
+		A69187A41DCC591E00372A98 /* DirectoryImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C61D6E09E200A66C85 /* DirectoryImages.xcassets */; };
+		A69187A51DCC591E00372A98 /* Directory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65B23BC1D6DFB2400A66C85 /* Directory.storyboard */; };
+		A69187A71DCC591E00372A98 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A691876F1DCC57B200372A98 /* AppImages.xcassets */; };
+		A69187A81DCC591E00372A98 /* ListEvents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6478D171D36CE2600B6000B /* ListEvents.storyboard */; };
+		A69187A91DCC591E00372A98 /* ListEventsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C41D6E099D00A66C85 /* ListEventsImages.xcassets */; };
+		A69187AA1DCC591E00372A98 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69187661DCC572000372A98 /* Info.plist */; };
+		A69187AB1DCC591E00372A98 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65B23BA1D6DFAE700A66C85 /* News.storyboard */; };
+		A69187AC1DCC591E00372A98 /* NewsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C81D6E09F000A66C85 /* NewsImages.xcassets */; };
+		A69187AD1DCC591E00372A98 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
+		A69187B71DCC598800372A98 /* LaunchScreenQUB.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69187B61DCC598800372A98 /* LaunchScreenQUB.xib */; };
+		A69187B81DCC59AF00372A98 /* LaunchScreenDIT.xib in Resources */ = {isa = PBXBuildFile; fileRef = A691868F1DCC4E7800372A98 /* LaunchScreenDIT.xib */; };
+		A69187B91DCC59B800372A98 /* LaunchScreenNUIM.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69186911DCC4E7800372A98 /* LaunchScreenNUIM.xib */; };
+		A69187BA1DCC59DB00372A98 /* LaunchScreenUL.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69186951DCC4E7800372A98 /* LaunchScreenUL.xib */; };
+		A69187BB1DCC59E000372A98 /* FOMOUL.plist in Resources */ = {isa = PBXBuildFile; fileRef = A691867E1DCC4B2C00372A98 /* FOMOUL.plist */; };
+		A69187BC1DCC59E700372A98 /* FOMOUCD.plist in Resources */ = {isa = PBXBuildFile; fileRef = A691867D1DCC4B2C00372A98 /* FOMOUCD.plist */; };
+		A69187BD1DCC59EE00372A98 /* FOMOUCC.plist in Resources */ = {isa = PBXBuildFile; fileRef = A691867C1DCC4B2C00372A98 /* FOMOUCC.plist */; };
+		A69187BE1DCC59F100372A98 /* FOMOTCD.plist in Resources */ = {isa = PBXBuildFile; fileRef = A691867B1DCC4B2C00372A98 /* FOMOTCD.plist */; };
+		A69187BF1DCC59F600372A98 /* FOMOQUB.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69187781DCC591900372A98 /* FOMOQUB.plist */; };
+		A69187C01DCC59F900372A98 /* FOMONUIM.plist in Resources */ = {isa = PBXBuildFile; fileRef = A691867A1DCC4B2C00372A98 /* FOMONUIM.plist */; };
+		A69187C11DCC59FE00372A98 /* FOMODIT.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186791DCC4B2C00372A98 /* FOMODIT.plist */; };
+		A69187C21DCC5A0200372A98 /* FOMONUIG.plist in Resources */ = {isa = PBXBuildFile; fileRef = A691868B1DCC4D7D00372A98 /* FOMONUIG.plist */; };
+		A69187C31DCC5A0500372A98 /* FOMODCU.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186781DCC4B2C00372A98 /* FOMODCU.plist */; };
 		A698B6F81D2589F7003494A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A675931C941D6300FAD755 /* AppDelegate.swift */; };
 		A698B6F91D2589F7003494A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A675931C941D6300FAD755 /* AppDelegate.swift */; };
 		A698B6FA1D2589F8003494A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A675931C941D6300FAD755 /* AppDelegate.swift */; };
@@ -253,8 +462,6 @@
 		A6C04F741DB456D90009C9BF /* DirectoryInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C04F731DB456D90009C9BF /* DirectoryInteractorOutput.swift */; };
 		A6C45C071DA386E600FC57D5 /* FomoIdTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C45C061DA386E600FC57D5 /* FomoIdTest.swift */; };
 		A6C45C091DA3882B00FC57D5 /* FomoId.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C45C081DA3882B00FC57D5 /* FomoId.swift */; };
-		A6C6131C1A91492500A5F082 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131B1A91492500A5F082 /* AppImages.xcassets */; };
-		A6C6131F1A91492500A5F082 /* LaunchScreenNUIG.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131D1A91492500A5F082 /* LaunchScreenNUIG.xib */; };
 		A6D4A1E41DBF0BB90072309B /* ClientPageDataTcd.json in Resources */ = {isa = PBXBuildFile; fileRef = A6D4A1E31DBF0BB90072309B /* ClientPageDataTcd.json */; };
 		A6E10C621DB41643007854F8 /* DirectoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E10C611DB41643007854F8 /* DirectoryTableViewCell.swift */; };
 		A6E10C641DB44F5C007854F8 /* DirectoryNetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E10C631DB44F5C007854F8 /* DirectoryNetworkWorker.swift */; };
@@ -283,9 +490,6 @@
 		95CB73BEA22FC16F0073EC95 /* Pods-FOMO TCD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO TCD.release.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD.release.xcconfig"; sourceTree = "<group>"; };
 		A4B45A6EE4E167955EE9B517 /* Pods-SortonsEventsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SortonsEventsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SortonsEventsTests/Pods-SortonsEventsTests.release.xcconfig"; sourceTree = "<group>"; };
 		A6141D5F1BB9F44F003150F1 /* FOMO TCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO TCD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A6141D621BB9F507003150F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreenTCD.xib; sourceTree = "<group>"; };
-		A6141D641BB9F507003150F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreenUCC.xib; sourceTree = "<group>"; };
-		A6141D661BB9F507003150F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreenUCD.xib; sourceTree = "<group>"; };
 		A6141D8B1BB9F537003150F1 /* FOMO UCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO UCC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A618ED861DB3FE4A00281C17 /* DirectoryViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryViewControllerTests.swift; sourceTree = "<group>"; };
 		A618ED881DB3FE6E00281C17 /* DirectoryViewControllerIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryViewControllerIO.swift; sourceTree = "<group>"; };
@@ -314,7 +518,6 @@
 		A66DC3951CF395E000ED636B /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		A66DC3971CF3966700ED636B /* SourcePageTcdAsian.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SourcePageTcdAsian.json; sourceTree = "<group>"; };
 		A66DC39B1CF398DB00ED636B /* DirectoryCacheWorkerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryCacheWorkerTests.swift; sourceTree = "<group>"; };
-		A67150C31B825D66006537B8 /* fomo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fomo.plist; sourceTree = "<group>"; };
 		A67796B21DADE651003FBCE6 /* NewsWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsWireframe.swift; sourceTree = "<group>"; };
 		A67796B41DADE6B3003FBCE6 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		A67796B61DADF097003FBCE6 /* DirectoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryViewController.swift; sourceTree = "<group>"; };
@@ -322,6 +525,31 @@
 		A68183D41D2ADD6200E45D35 /* ListEventsTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsTableViewControllerTests.swift; sourceTree = "<group>"; };
 		A68183D91D2AFFB900E45D35 /* ListEventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsTableViewController.swift; sourceTree = "<group>"; };
 		A68183DC1D2B009E00E45D35 /* ListEventsModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsModels.swift; sourceTree = "<group>"; };
+		A69186781DCC4B2C00372A98 /* FOMODCU.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FOMODCU.plist; path = targets/FOMODCU.plist; sourceTree = "<group>"; };
+		A69186791DCC4B2C00372A98 /* FOMODIT.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FOMODIT.plist; path = targets/FOMODIT.plist; sourceTree = "<group>"; };
+		A691867A1DCC4B2C00372A98 /* FOMONUIM.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FOMONUIM.plist; path = targets/FOMONUIM.plist; sourceTree = "<group>"; };
+		A691867B1DCC4B2C00372A98 /* FOMOTCD.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FOMOTCD.plist; path = targets/FOMOTCD.plist; sourceTree = "<group>"; };
+		A691867C1DCC4B2C00372A98 /* FOMOUCC.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FOMOUCC.plist; path = targets/FOMOUCC.plist; sourceTree = "<group>"; };
+		A691867D1DCC4B2C00372A98 /* FOMOUCD.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FOMOUCD.plist; path = targets/FOMOUCD.plist; sourceTree = "<group>"; };
+		A691867E1DCC4B2C00372A98 /* FOMOUL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FOMOUL.plist; path = targets/FOMOUL.plist; sourceTree = "<group>"; };
+		A691868B1DCC4D7D00372A98 /* FOMONUIG.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FOMONUIG.plist; path = targets/FOMONUIG.plist; sourceTree = "<group>"; };
+		A691868E1DCC4E7800372A98 /* LaunchScreenDCU.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreenDCU.xib; path = targets/LaunchScreenDCU.xib; sourceTree = "<group>"; };
+		A691868F1DCC4E7800372A98 /* LaunchScreenDIT.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreenDIT.xib; path = targets/LaunchScreenDIT.xib; sourceTree = "<group>"; };
+		A69186901DCC4E7800372A98 /* LaunchScreenNUIG.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreenNUIG.xib; path = targets/LaunchScreenNUIG.xib; sourceTree = "<group>"; };
+		A69186911DCC4E7800372A98 /* LaunchScreenNUIM.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreenNUIM.xib; path = targets/LaunchScreenNUIM.xib; sourceTree = "<group>"; };
+		A69186921DCC4E7800372A98 /* LaunchScreenTCD.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreenTCD.xib; path = targets/LaunchScreenTCD.xib; sourceTree = "<group>"; };
+		A69186931DCC4E7800372A98 /* LaunchScreenUCC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreenUCC.xib; path = targets/LaunchScreenUCC.xib; sourceTree = "<group>"; };
+		A69186941DCC4E7800372A98 /* LaunchScreenUCD.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreenUCD.xib; path = targets/LaunchScreenUCD.xib; sourceTree = "<group>"; };
+		A69186951DCC4E7800372A98 /* LaunchScreenUL.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreenUL.xib; path = targets/LaunchScreenUL.xib; sourceTree = "<group>"; };
+		A69186A71DCC50FA00372A98 /* fomo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = fomo.plist; path = targets/fomo.plist; sourceTree = "<group>"; };
+		A69186E81DCC543A00372A98 /* FOMO NUIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO NUIM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A69187251DCC54BD00372A98 /* FOMO DIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO DIT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A69187641DCC551000372A98 /* FOMO UL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO UL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A69187661DCC572000372A98 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A691876F1DCC57B200372A98 /* AppImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = AppImages.xcassets; path = targets/AppImages.xcassets; sourceTree = "<group>"; };
+		A69187781DCC591900372A98 /* FOMOQUB.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = FOMOQUB.plist; path = targets/FOMOQUB.plist; sourceTree = "<group>"; };
+		A69187B41DCC591E00372A98 /* FOMO QUB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO QUB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A69187B61DCC598800372A98 /* LaunchScreenQUB.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreenQUB.xib; path = targets/LaunchScreenQUB.xib; sourceTree = "<group>"; };
 		A69AD4DA1DBF1474005C6CC3 /* TcdCaliforniaAlumni.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TcdCaliforniaAlumni.json; sourceTree = "<group>"; };
 		A69DBF3F1C8AD654005064F7 /* DiscoveredEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveredEvent.swift; sourceTree = "<group>"; };
 		A69DBF411C8AD67D005064F7 /* ListEventsNetworkWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsNetworkWorker.swift; sourceTree = "<group>"; };
@@ -354,9 +582,6 @@
 		A6C45C061DA386E600FC57D5 /* FomoIdTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FomoIdTest.swift; sourceTree = "<group>"; };
 		A6C45C081DA3882B00FC57D5 /* FomoId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FomoId.swift; sourceTree = "<group>"; };
 		A6C6130B1A91492500A5F082 /* SortonsEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SortonsEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A6C6130F1A91492500A5F082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A6C6131B1A91492500A5F082 /* AppImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppImages.xcassets; sourceTree = "<group>"; };
-		A6C6131E1A91492500A5F082 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreenNUIG.xib; sourceTree = "<group>"; };
 		A6D4A1E31DBF0BB90072309B /* ClientPageDataTcd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ClientPageDataTcd.json; sourceTree = "<group>"; };
 		A6E10C611DB41643007854F8 /* DirectoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryTableViewCell.swift; sourceTree = "<group>"; };
 		A6E10C631DB44F5C007854F8 /* DirectoryNetworkWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryNetworkWorker.swift; sourceTree = "<group>"; };
@@ -392,6 +617,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A69186D41DCC543A00372A98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A69186D51DCC543A00372A98 /* Pods_FOMO_TCD.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A69187111DCC54BD00372A98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A69187121DCC54BD00372A98 /* Pods_FOMO_TCD.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A691874E1DCC551000372A98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A691874F1DCC551000372A98 /* Pods_FOMO_UCD.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A69187A01DCC591E00372A98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A69187A11DCC591E00372A98 /* Pods_FOMO_TCD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,12 +869,6 @@
 		A69DBF3D1C8AD57B005064F7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A67150C31B825D66006537B8 /* fomo.plist */,
-				A6C6131B1A91492500A5F082 /* AppImages.xcassets */,
-				A6141D651BB9F507003150F1 /* LaunchScreenUCD.xib */,
-				A6C6131D1A91492500A5F082 /* LaunchScreenNUIG.xib */,
-				A6141D611BB9F507003150F1 /* LaunchScreenTCD.xib */,
-				A6141D631BB9F507003150F1 /* LaunchScreenUCC.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -805,6 +1056,10 @@
 				A6141D8B1BB9F537003150F1 /* FOMO UCC.app */,
 				A63B32BF1C68AFA400C46020 /* FOMO DCU.app */,
 				A69DBF4F1C8AE4D8005064F7 /* SortonsEventsTests.xctest */,
+				A69186E81DCC543A00372A98 /* FOMO NUIM.app */,
+				A69187251DCC54BD00372A98 /* FOMO DIT.app */,
+				A69187641DCC551000372A98 /* FOMO UL.app */,
+				A69187B41DCC591E00372A98 /* FOMO QUB.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -821,8 +1076,28 @@
 		A6C6130E1A91492500A5F082 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A691876F1DCC57B200372A98 /* AppImages.xcassets */,
+				A69187661DCC572000372A98 /* Info.plist */,
+				A69186A71DCC50FA00372A98 /* fomo.plist */,
+				A691868E1DCC4E7800372A98 /* LaunchScreenDCU.xib */,
+				A691868F1DCC4E7800372A98 /* LaunchScreenDIT.xib */,
+				A69186901DCC4E7800372A98 /* LaunchScreenNUIG.xib */,
+				A69186911DCC4E7800372A98 /* LaunchScreenNUIM.xib */,
+				A69187B61DCC598800372A98 /* LaunchScreenQUB.xib */,
+				A69186921DCC4E7800372A98 /* LaunchScreenTCD.xib */,
+				A69186931DCC4E7800372A98 /* LaunchScreenUCC.xib */,
+				A69186941DCC4E7800372A98 /* LaunchScreenUCD.xib */,
+				A69186951DCC4E7800372A98 /* LaunchScreenUL.xib */,
+				A69186781DCC4B2C00372A98 /* FOMODCU.plist */,
+				A691868B1DCC4D7D00372A98 /* FOMONUIG.plist */,
+				A69186791DCC4B2C00372A98 /* FOMODIT.plist */,
+				A691867A1DCC4B2C00372A98 /* FOMONUIM.plist */,
+				A69187781DCC591900372A98 /* FOMOQUB.plist */,
+				A691867B1DCC4B2C00372A98 /* FOMOTCD.plist */,
+				A691867C1DCC4B2C00372A98 /* FOMOUCC.plist */,
+				A691867D1DCC4B2C00372A98 /* FOMOUCD.plist */,
+				A691867E1DCC4B2C00372A98 /* FOMOUL.plist */,
 				A6BDA8771AE5CA6500C1A55C /* Settings.bundle */,
-				A6C6130F1A91492500A5F082 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -909,6 +1184,91 @@
 			productReference = A63B32BF1C68AFA400C46020 /* FOMO DCU.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A69186AD1DCC543A00372A98 /* FOMO NUIM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A69186E51DCC543A00372A98 /* Build configuration list for PBXNativeTarget "FOMO NUIM" */;
+			buildPhases = (
+				A69186AE1DCC543A00372A98 /* [CP] Check Pods Manifest.lock */,
+				A69186AF1DCC543A00372A98 /* Sources */,
+				A69186D41DCC543A00372A98 /* Frameworks */,
+				A69186D61DCC543A00372A98 /* Resources */,
+				A69186E21DCC543A00372A98 /* Swift-Clean Run Script */,
+				A69186E31DCC543A00372A98 /* [CP] Embed Pods Frameworks */,
+				A69186E41DCC543A00372A98 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FOMO NUIM";
+			productName = DublinTheatreOC;
+			productReference = A69186E81DCC543A00372A98 /* FOMO NUIM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A69186EA1DCC54BD00372A98 /* FOMO DIT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A69187221DCC54BD00372A98 /* Build configuration list for PBXNativeTarget "FOMO DIT" */;
+			buildPhases = (
+				A69186EB1DCC54BD00372A98 /* [CP] Check Pods Manifest.lock */,
+				A69186EC1DCC54BD00372A98 /* Sources */,
+				A69187111DCC54BD00372A98 /* Frameworks */,
+				A69187131DCC54BD00372A98 /* Resources */,
+				A691871F1DCC54BD00372A98 /* Swift-Clean Run Script */,
+				A69187201DCC54BD00372A98 /* [CP] Embed Pods Frameworks */,
+				A69187211DCC54BD00372A98 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FOMO DIT";
+			productName = DublinTheatreOC;
+			productReference = A69187251DCC54BD00372A98 /* FOMO DIT.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A69187271DCC551000372A98 /* FOMO UL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A69187611DCC551000372A98 /* Build configuration list for PBXNativeTarget "FOMO UL" */;
+			buildPhases = (
+				A69187281DCC551000372A98 /* [CP] Check Pods Manifest.lock */,
+				A69187291DCC551000372A98 /* Sources */,
+				A691874E1DCC551000372A98 /* Frameworks */,
+				A69187501DCC551000372A98 /* Resources */,
+				A691875D1DCC551000372A98 /* ShellScript */,
+				A691875E1DCC551000372A98 /* Swift-Clean Run Script */,
+				A691875F1DCC551000372A98 /* [CP] Embed Pods Frameworks */,
+				A69187601DCC551000372A98 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FOMO UL";
+			productName = DublinTheatreOC;
+			productReference = A69187641DCC551000372A98 /* FOMO UL.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A69187791DCC591E00372A98 /* FOMO QUB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A69187B11DCC591E00372A98 /* Build configuration list for PBXNativeTarget "FOMO QUB" */;
+			buildPhases = (
+				A691877A1DCC591E00372A98 /* [CP] Check Pods Manifest.lock */,
+				A691877B1DCC591E00372A98 /* Sources */,
+				A69187A01DCC591E00372A98 /* Frameworks */,
+				A69187A21DCC591E00372A98 /* Resources */,
+				A69187AE1DCC591E00372A98 /* Swift-Clean Run Script */,
+				A69187AF1DCC591E00372A98 /* [CP] Embed Pods Frameworks */,
+				A69187B01DCC591E00372A98 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FOMO QUB";
+			productName = DublinTheatreOC;
+			productReference = A69187B41DCC591E00372A98 /* FOMO QUB.app */;
+			productType = "com.apple.product-type.application";
+		};
 		A69DBF4E1C8AE4D8005064F7 /* SortonsEventsTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A69DBF561C8AE4D9005064F7 /* Build configuration list for PBXNativeTarget "SortonsEventsTests" */;
@@ -955,7 +1315,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Sortons;
 				TargetAttributes = {
 					A6141D401BB9F44F003150F1 = {
@@ -970,6 +1330,18 @@
 						LastSwiftMigration = 0800;
 					};
 					A63B32A01C68AFA400C46020 = {
+						DevelopmentTeam = 3RM6H33EW7;
+					};
+					A69186AD1DCC543A00372A98 = {
+						DevelopmentTeam = 3RM6H33EW7;
+					};
+					A69186EA1DCC54BD00372A98 = {
+						DevelopmentTeam = 3RM6H33EW7;
+					};
+					A69187271DCC551000372A98 = {
+						DevelopmentTeam = 3RM6H33EW7;
+					};
+					A69187791DCC591E00372A98 = {
 						DevelopmentTeam = 3RM6H33EW7;
 					};
 					A69DBF4E1C8AE4D8005064F7 = {
@@ -996,11 +1368,15 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A62BD6181B9E1C4500E928E5 /* FOMO UCD */,
+				A63B32A01C68AFA400C46020 /* FOMO DCU */,
+				A69186EA1DCC54BD00372A98 /* FOMO DIT */,
 				A6C6130A1A91492500A5F082 /* FOMO NUIG */,
+				A69186AD1DCC543A00372A98 /* FOMO NUIM */,
+				A69187791DCC591E00372A98 /* FOMO QUB */,
 				A6141D401BB9F44F003150F1 /* FOMO TCD */,
 				A6141D6C1BB9F537003150F1 /* FOMO UCC */,
-				A63B32A01C68AFA400C46020 /* FOMO DCU */,
+				A62BD6181B9E1C4500E928E5 /* FOMO UCD */,
+				A69187271DCC551000372A98 /* FOMO UL */,
 				A69DBF4E1C8AE4D8005064F7 /* SortonsEventsTests */,
 			);
 		};
@@ -1011,16 +1387,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A69186AA1DCC50FA00372A98 /* fomo.plist in Resources */,
 				A63B95531DB633A700ECA301 /* DirectoryImages.xcassets in Resources */,
 				A63B952B1DB6338000ECA301 /* Directory.storyboard in Resources */,
+				A69186A41DCC4EEE00372A98 /* LaunchScreenTCD.xib in Resources */,
+				A69187741DCC57B200372A98 /* AppImages.xcassets in Resources */,
 				A63B94DA1DB6330500ECA301 /* ListEvents.storyboard in Resources */,
-				A6141D6A1BB9F51B003150F1 /* LaunchScreenTCD.xib in Resources */,
 				A63B94FE1DB6333500ECA301 /* ListEventsImages.xcassets in Resources */,
-				A6141D561BB9F44F003150F1 /* fomo.plist in Resources */,
+				A691876B1DCC572000372A98 /* Info.plist in Resources */,
 				A63B950E1DB6336100ECA301 /* News.storyboard in Resources */,
-				A6141D571BB9F44F003150F1 /* AppImages.xcassets in Resources */,
 				A63B955C1DB6350100ECA301 /* NewsImages.xcassets in Resources */,
 				A6141D591BB9F44F003150F1 /* Settings.bundle in Resources */,
+				A69187BE1DCC59F100372A98 /* FOMOTCD.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1028,15 +1406,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A69186AB1DCC50FA00372A98 /* fomo.plist in Resources */,
 				A63B95541DB633A800ECA301 /* DirectoryImages.xcassets in Resources */,
 				A63B952D1DB6338100ECA301 /* Directory.storyboard in Resources */,
+				A69187BD1DCC59EE00372A98 /* FOMOUCC.plist in Resources */,
 				A63B94DB1DB6330600ECA301 /* ListEvents.storyboard in Resources */,
-				A6141D821BB9F537003150F1 /* fomo.plist in Resources */,
+				A69187751DCC57B200372A98 /* AppImages.xcassets in Resources */,
 				A63B94FF1DB6333600ECA301 /* ListEventsImages.xcassets in Resources */,
-				A6141D8D1BB9F55D003150F1 /* LaunchScreenUCC.xib in Resources */,
 				A63B950F1DB6336100ECA301 /* News.storyboard in Resources */,
-				A6141D831BB9F537003150F1 /* AppImages.xcassets in Resources */,
+				A691876C1DCC572000372A98 /* Info.plist in Resources */,
 				A63B955D1DB6350100ECA301 /* NewsImages.xcassets in Resources */,
+				A69186A51DCC4EF800372A98 /* LaunchScreenUCC.xib in Resources */,
 				A6141D851BB9F537003150F1 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1045,14 +1425,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A69187BC1DCC59E700372A98 /* FOMOUCD.plist in Resources */,
+				A69186A81DCC50FA00372A98 /* fomo.plist in Resources */,
 				A65B23BD1D6DFB2400A66C85 /* Directory.storyboard in Resources */,
 				A65B23C71D6E09E200A66C85 /* DirectoryImages.xcassets in Resources */,
 				A65B23C91D6E09F000A66C85 /* NewsImages.xcassets in Resources */,
-				A62BD62E1B9E1C4500E928E5 /* fomo.plist in Resources */,
-				A6141D6B1BB9F52E003150F1 /* LaunchScreenUCD.xib in Resources */,
-				A62BD62F1B9E1C4500E928E5 /* AppImages.xcassets in Resources */,
+				A69187761DCC57B200372A98 /* AppImages.xcassets in Resources */,
 				A62BD6311B9E1C4500E928E5 /* Settings.bundle in Resources */,
+				A69186A61DCC4F0200372A98 /* LaunchScreenUCD.xib in Resources */,
 				A65B23BB1D6DFAE700A66C85 /* News.storyboard in Resources */,
+				A691876D1DCC572000372A98 /* Info.plist in Resources */,
 				A6478D181D36CE2600B6000B /* ListEvents.storyboard in Resources */,
 				A65B23C51D6E099D00A66C85 /* ListEventsImages.xcassets in Resources */,
 			);
@@ -1062,16 +1444,95 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A63B32B61C68AFA400C46020 /* fomo.plist in Resources */,
+				A69187C31DCC5A0500372A98 /* FOMODCU.plist in Resources */,
+				A69186AC1DCC50FA00372A98 /* fomo.plist in Resources */,
 				A63B95101DB6336200ECA301 /* News.storyboard in Resources */,
 				A63B955E1DB6350200ECA301 /* NewsImages.xcassets in Resources */,
-				A63B955A1DB633B600ECA301 /* Info.plist in Resources */,
 				A63B952C1DB6338000ECA301 /* Directory.storyboard in Resources */,
+				A69187701DCC57B200372A98 /* AppImages.xcassets in Resources */,
 				A63B94DC1DB6330600ECA301 /* ListEvents.storyboard in Resources */,
-				A63B32B71C68AFA400C46020 /* AppImages.xcassets in Resources */,
 				A63B95001DB6333600ECA301 /* ListEventsImages.xcassets in Resources */,
+				A69187671DCC572000372A98 /* Info.plist in Resources */,
+				A69186A31DCC4EB000372A98 /* LaunchScreenDCU.xib in Resources */,
 				A63B32B91C68AFA400C46020 /* Settings.bundle in Resources */,
 				A63B95551DB633A800ECA301 /* DirectoryImages.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A69186D61DCC543A00372A98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A69186D71DCC543A00372A98 /* fomo.plist in Resources */,
+				A69187731DCC57B200372A98 /* AppImages.xcassets in Resources */,
+				A69187B91DCC59B800372A98 /* LaunchScreenNUIM.xib in Resources */,
+				A69186DA1DCC543A00372A98 /* DirectoryImages.xcassets in Resources */,
+				A69186DB1DCC543A00372A98 /* Directory.storyboard in Resources */,
+				A69186DD1DCC543A00372A98 /* ListEvents.storyboard in Resources */,
+				A69186DE1DCC543A00372A98 /* ListEventsImages.xcassets in Resources */,
+				A691876A1DCC572000372A98 /* Info.plist in Resources */,
+				A69186DF1DCC543A00372A98 /* News.storyboard in Resources */,
+				A69186E01DCC543A00372A98 /* NewsImages.xcassets in Resources */,
+				A69187C01DCC59F900372A98 /* FOMONUIM.plist in Resources */,
+				A69186E11DCC543A00372A98 /* Settings.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A69187131DCC54BD00372A98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A69187141DCC54BD00372A98 /* fomo.plist in Resources */,
+				A69187711DCC57B200372A98 /* AppImages.xcassets in Resources */,
+				A69187B81DCC59AF00372A98 /* LaunchScreenDIT.xib in Resources */,
+				A69187171DCC54BD00372A98 /* DirectoryImages.xcassets in Resources */,
+				A69187181DCC54BD00372A98 /* Directory.storyboard in Resources */,
+				A691871A1DCC54BD00372A98 /* ListEvents.storyboard in Resources */,
+				A691871B1DCC54BD00372A98 /* ListEventsImages.xcassets in Resources */,
+				A69187681DCC572000372A98 /* Info.plist in Resources */,
+				A691871C1DCC54BD00372A98 /* News.storyboard in Resources */,
+				A69187C11DCC59FE00372A98 /* FOMODIT.plist in Resources */,
+				A691871D1DCC54BD00372A98 /* NewsImages.xcassets in Resources */,
+				A691871E1DCC54BD00372A98 /* Settings.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A69187501DCC551000372A98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A69187771DCC57B200372A98 /* AppImages.xcassets in Resources */,
+				A69187521DCC551000372A98 /* fomo.plist in Resources */,
+				A69187531DCC551000372A98 /* Directory.storyboard in Resources */,
+				A69187541DCC551000372A98 /* DirectoryImages.xcassets in Resources */,
+				A69187551DCC551000372A98 /* NewsImages.xcassets in Resources */,
+				A69187561DCC551000372A98 /* Settings.bundle in Resources */,
+				A69187581DCC551000372A98 /* LaunchScreenUCD.xib in Resources */,
+				A69187BB1DCC59E000372A98 /* FOMOUL.plist in Resources */,
+				A69187591DCC551000372A98 /* News.storyboard in Resources */,
+				A691876E1DCC572000372A98 /* Info.plist in Resources */,
+				A69187BA1DCC59DB00372A98 /* LaunchScreenUL.xib in Resources */,
+				A691875A1DCC551000372A98 /* ListEvents.storyboard in Resources */,
+				A691875B1DCC551000372A98 /* ListEventsImages.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A69187A21DCC591E00372A98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A69187A31DCC591E00372A98 /* fomo.plist in Resources */,
+				A69187A41DCC591E00372A98 /* DirectoryImages.xcassets in Resources */,
+				A69187A51DCC591E00372A98 /* Directory.storyboard in Resources */,
+				A69187B71DCC598800372A98 /* LaunchScreenQUB.xib in Resources */,
+				A69187BF1DCC59F600372A98 /* FOMOQUB.plist in Resources */,
+				A69187A71DCC591E00372A98 /* AppImages.xcassets in Resources */,
+				A69187A81DCC591E00372A98 /* ListEvents.storyboard in Resources */,
+				A69187A91DCC591E00372A98 /* ListEventsImages.xcassets in Resources */,
+				A69187AA1DCC591E00372A98 /* Info.plist in Resources */,
+				A69187AB1DCC591E00372A98 /* News.storyboard in Resources */,
+				A69187AC1DCC591E00372A98 /* NewsImages.xcassets in Resources */,
+				A69187AD1DCC591E00372A98 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1091,16 +1552,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A69186A91DCC50FA00372A98 /* fomo.plist in Resources */,
 				A63B95521DB633A700ECA301 /* DirectoryImages.xcassets in Resources */,
 				A63B952A1DB6338000ECA301 /* Directory.storyboard in Resources */,
 				A63B94D91DB6330500ECA301 /* ListEvents.storyboard in Resources */,
-				A6C6131F1A91492500A5F082 /* LaunchScreenNUIG.xib in Resources */,
+				A69187C21DCC5A0200372A98 /* FOMONUIG.plist in Resources */,
+				A69187721DCC57B200372A98 /* AppImages.xcassets in Resources */,
 				A63B94FD1DB6333500ECA301 /* ListEventsImages.xcassets in Resources */,
-				A67150C41B825D66006537B8 /* fomo.plist in Resources */,
 				A63B950D1DB6336100ECA301 /* News.storyboard in Resources */,
-				A6C6131C1A91492500A5F082 /* AppImages.xcassets in Resources */,
 				A63B955B1DB6350100ECA301 /* NewsImages.xcassets in Resources */,
+				A69187691DCC572000372A98 /* Info.plist in Resources */,
 				A6BDA8781AE5CA6500C1A55C /* Settings.bundle in Resources */,
+				A69186991DCC4E7800372A98 /* LaunchScreenNUIG.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1194,6 +1657,255 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [[ -z ${SKIP_SWIFTCLEAN} || ${SKIP_SWIFTCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" || -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" ]]; then\n\"${LOCAL_APPS_DIR}\"/Swift-Clean.app/Contents/Resources/SwiftClean.app/Contents/MacOS/SwiftClean \"${SRCROOT}\"?@autoFix\nelse\necho \"warning: You have to install and set up Swift-Clean to use its features!\"\nfi\nfi";
+		};
+		A69186AE1DCC543A00372A98 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A69186E21DCC543A00372A98 /* Swift-Clean Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift-Clean Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "if [[ -z ${SKIP_SWIFTCLEAN} || ${SKIP_SWIFTCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" || -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" ]]; then \n\"${LOCAL_APPS_DIR}\"/Swift-Clean.app/Contents/Resources/SwiftClean.app/Contents/MacOS/SwiftClean \"${SRCROOT}\"?@autoFix \nfi\nfi";
+		};
+		A69186E31DCC543A00372A98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A69186E41DCC543A00372A98 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A69186EB1DCC54BD00372A98 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A691871F1DCC54BD00372A98 /* Swift-Clean Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift-Clean Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "if [[ -z ${SKIP_SWIFTCLEAN} || ${SKIP_SWIFTCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" || -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" ]]; then \n\"${LOCAL_APPS_DIR}\"/Swift-Clean.app/Contents/Resources/SwiftClean.app/Contents/MacOS/SwiftClean \"${SRCROOT}\"?@autoFix \nfi\nfi";
+		};
+		A69187201DCC54BD00372A98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A69187211DCC54BD00372A98 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A69187281DCC551000372A98 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A691875D1DCC551000372A98 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -z ${SKIP_SWIFTCLEAN} || ${SKIP_SWIFTCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" || -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" ]]; then\n\"${LOCAL_APPS_DIR}\"/Swift-Clean.app/Contents/Resources/SwiftClean.app/Contents/MacOS/SwiftClean \"${SRCROOT}\"?@autoFix\nelse\necho \"warning: You have to install and set up Swift-Clean to use its features!\"\nfi\nfi";
+		};
+		A691875E1DCC551000372A98 /* Swift-Clean Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift-Clean Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "if [[ -z ${SKIP_SWIFTCLEAN} || ${SKIP_SWIFTCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" || -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" ]]; then \n\"${LOCAL_APPS_DIR}\"/Swift-Clean.app/Contents/Resources/SwiftClean.app/Contents/MacOS/SwiftClean \"${SRCROOT}\"?@autoFix \nfi\nfi";
+		};
+		A691875F1DCC551000372A98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO UCD/Pods-FOMO UCD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A69187601DCC551000372A98 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO UCD/Pods-FOMO UCD-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A691877A1DCC591E00372A98 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A69187AE1DCC591E00372A98 /* Swift-Clean Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift-Clean Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "if [[ -z ${SKIP_SWIFTCLEAN} || ${SKIP_SWIFTCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" || -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" ]]; then \n\"${LOCAL_APPS_DIR}\"/Swift-Clean.app/Contents/Resources/SwiftClean.app/Contents/MacOS/SwiftClean \"${SRCROOT}\"?@autoFix \nfi\nfi";
+		};
+		A69187AF1DCC591E00372A98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A69187B01DCC591E00372A98 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		BBE99D1633940454CA81288B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1444,6 +2156,178 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A69186AF1DCC543A00372A98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A69186B01DCC543A00372A98 /* DirectoryPresenter.swift in Sources */,
+				A69186B11DCC543A00372A98 /* ClientPageData.swift in Sources */,
+				A69186B21DCC543A00372A98 /* RootViewController.swift in Sources */,
+				A69186B31DCC543A00372A98 /* AppDelegate.swift in Sources */,
+				A69186B41DCC543A00372A98 /* RootViewControllerProtocol.swift in Sources */,
+				A69186B51DCC543A00372A98 /* NewsModels.swift in Sources */,
+				A69186B61DCC543A00372A98 /* DirectoryCacheWorker.swift in Sources */,
+				A69186B71DCC543A00372A98 /* ListEventsCacheWorker.swift in Sources */,
+				A69186B81DCC543A00372A98 /* DirectoryViewControllerIO.swift in Sources */,
+				A69186B91DCC543A00372A98 /* NewsInteractor.swift in Sources */,
+				A69186BA1DCC543A00372A98 /* ListEventsPresenter.swift in Sources */,
+				A69186BB1DCC543A00372A98 /* ListEventsInteractorIO.swift in Sources */,
+				A69186BC1DCC543A00372A98 /* DirectoryModels.swift in Sources */,
+				A69186BD1DCC543A00372A98 /* ListEventsWireframe.swift in Sources */,
+				A69186BE1DCC543A00372A98 /* DiscoveredEventsResponse.swift in Sources */,
+				A69186BF1DCC543A00372A98 /* ListEventsProtocols.swift in Sources */,
+				A69186C01DCC543A00372A98 /* NewsInteractorOutput.swift in Sources */,
+				A69186C11DCC543A00372A98 /* NewsPresenter.swift in Sources */,
+				A69186C21DCC543A00372A98 /* ListEventsInteractor.swift in Sources */,
+				A69186C31DCC543A00372A98 /* GAEISO8601DateTransform.swift in Sources */,
+				A69186C41DCC543A00372A98 /* DirectoryNetworkWorker.swift in Sources */,
+				A69186C51DCC543A00372A98 /* DirectoryTableViewCell.swift in Sources */,
+				A69186C61DCC543A00372A98 /* DirectoryInteractor.swift in Sources */,
+				A69186C71DCC543A00372A98 /* DirectoryViewController.swift in Sources */,
+				A69186C81DCC543A00372A98 /* FomoId.swift in Sources */,
+				A69186C91DCC543A00372A98 /* ListEventsModels.swift in Sources */,
+				A69186CA1DCC543A00372A98 /* NewsWireframe.swift in Sources */,
+				A69186CB1DCC543A00372A98 /* DiscoveredEventTableViewCell.swift in Sources */,
+				A69186CC1DCC543A00372A98 /* DiscoveredEvent.swift in Sources */,
+				A69186CD1DCC543A00372A98 /* DirectoryWireframe.swift in Sources */,
+				A69186CE1DCC543A00372A98 /* ListEventsTableViewController.swift in Sources */,
+				A69186CF1DCC543A00372A98 /* NewsViewController.swift in Sources */,
+				A69186D01DCC543A00372A98 /* ListEventsNetworkWorker.swift in Sources */,
+				A69186D11DCC543A00372A98 /* SourcePage.swift in Sources */,
+				A69186D21DCC543A00372A98 /* NewsViewControllerIO.swift in Sources */,
+				A69186D31DCC543A00372A98 /* DirectoryInteractorOutput.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A69186EC1DCC54BD00372A98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A69186ED1DCC54BD00372A98 /* DirectoryPresenter.swift in Sources */,
+				A69186EE1DCC54BD00372A98 /* ClientPageData.swift in Sources */,
+				A69186EF1DCC54BD00372A98 /* RootViewController.swift in Sources */,
+				A69186F01DCC54BD00372A98 /* AppDelegate.swift in Sources */,
+				A69186F11DCC54BD00372A98 /* RootViewControllerProtocol.swift in Sources */,
+				A69186F21DCC54BD00372A98 /* NewsModels.swift in Sources */,
+				A69186F31DCC54BD00372A98 /* DirectoryCacheWorker.swift in Sources */,
+				A69186F41DCC54BD00372A98 /* ListEventsCacheWorker.swift in Sources */,
+				A69186F51DCC54BD00372A98 /* DirectoryViewControllerIO.swift in Sources */,
+				A69186F61DCC54BD00372A98 /* NewsInteractor.swift in Sources */,
+				A69186F71DCC54BD00372A98 /* ListEventsPresenter.swift in Sources */,
+				A69186F81DCC54BD00372A98 /* ListEventsInteractorIO.swift in Sources */,
+				A69186F91DCC54BD00372A98 /* DirectoryModels.swift in Sources */,
+				A69186FA1DCC54BD00372A98 /* ListEventsWireframe.swift in Sources */,
+				A69186FB1DCC54BD00372A98 /* DiscoveredEventsResponse.swift in Sources */,
+				A69186FC1DCC54BD00372A98 /* ListEventsProtocols.swift in Sources */,
+				A69186FD1DCC54BD00372A98 /* NewsInteractorOutput.swift in Sources */,
+				A69186FE1DCC54BD00372A98 /* NewsPresenter.swift in Sources */,
+				A69186FF1DCC54BD00372A98 /* ListEventsInteractor.swift in Sources */,
+				A69187001DCC54BD00372A98 /* GAEISO8601DateTransform.swift in Sources */,
+				A69187011DCC54BD00372A98 /* DirectoryNetworkWorker.swift in Sources */,
+				A69187021DCC54BD00372A98 /* DirectoryTableViewCell.swift in Sources */,
+				A69187031DCC54BD00372A98 /* DirectoryInteractor.swift in Sources */,
+				A69187041DCC54BD00372A98 /* DirectoryViewController.swift in Sources */,
+				A69187051DCC54BD00372A98 /* FomoId.swift in Sources */,
+				A69187061DCC54BD00372A98 /* ListEventsModels.swift in Sources */,
+				A69187071DCC54BD00372A98 /* NewsWireframe.swift in Sources */,
+				A69187081DCC54BD00372A98 /* DiscoveredEventTableViewCell.swift in Sources */,
+				A69187091DCC54BD00372A98 /* DiscoveredEvent.swift in Sources */,
+				A691870A1DCC54BD00372A98 /* DirectoryWireframe.swift in Sources */,
+				A691870B1DCC54BD00372A98 /* ListEventsTableViewController.swift in Sources */,
+				A691870C1DCC54BD00372A98 /* NewsViewController.swift in Sources */,
+				A691870D1DCC54BD00372A98 /* ListEventsNetworkWorker.swift in Sources */,
+				A691870E1DCC54BD00372A98 /* SourcePage.swift in Sources */,
+				A691870F1DCC54BD00372A98 /* NewsViewControllerIO.swift in Sources */,
+				A69187101DCC54BD00372A98 /* DirectoryInteractorOutput.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A69187291DCC551000372A98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A691872A1DCC551000372A98 /* NewsModels.swift in Sources */,
+				A691872B1DCC551000372A98 /* DirectoryPresenter.swift in Sources */,
+				A691872C1DCC551000372A98 /* ListEventsInteractor.swift in Sources */,
+				A691872D1DCC551000372A98 /* NewsPresenter.swift in Sources */,
+				A691872E1DCC551000372A98 /* NewsInteractor.swift in Sources */,
+				A691872F1DCC551000372A98 /* NewsViewControllerIO.swift in Sources */,
+				A69187301DCC551000372A98 /* ListEventsWireframe.swift in Sources */,
+				A69187311DCC551000372A98 /* NewsViewController.swift in Sources */,
+				A69187321DCC551000372A98 /* ClientPageData.swift in Sources */,
+				A69187331DCC551000372A98 /* ListEventsProtocols.swift in Sources */,
+				A69187341DCC551000372A98 /* RootViewController.swift in Sources */,
+				A69187351DCC551000372A98 /* DiscoveredEvent.swift in Sources */,
+				A69187361DCC551000372A98 /* ListEventsCacheWorker.swift in Sources */,
+				A69187371DCC551000372A98 /* DirectoryModels.swift in Sources */,
+				A69187381DCC551000372A98 /* DirectoryWireframe.swift in Sources */,
+				A69187391DCC551000372A98 /* ListEventsModels.swift in Sources */,
+				A691873A1DCC551000372A98 /* DiscoveredEventTableViewCell.swift in Sources */,
+				A691873B1DCC551000372A98 /* DiscoveredEventsResponse.swift in Sources */,
+				A691873C1DCC551000372A98 /* AppDelegate.swift in Sources */,
+				A691873D1DCC551000372A98 /* DirectoryViewController.swift in Sources */,
+				A691873E1DCC551000372A98 /* DirectoryInteractor.swift in Sources */,
+				A691873F1DCC551000372A98 /* DirectoryViewControllerIO.swift in Sources */,
+				A69187401DCC551000372A98 /* FomoId.swift in Sources */,
+				A69187411DCC551000372A98 /* ListEventsNetworkWorker.swift in Sources */,
+				A69187421DCC551000372A98 /* ListEventsInteractorIO.swift in Sources */,
+				A69187431DCC551000372A98 /* DirectoryCacheWorker.swift in Sources */,
+				A69187441DCC551000372A98 /* NewsWireframe.swift in Sources */,
+				A69187451DCC551000372A98 /* ListEventsPresenter.swift in Sources */,
+				A69187461DCC551000372A98 /* RootViewControllerProtocol.swift in Sources */,
+				A69187471DCC551000372A98 /* SourcePage.swift in Sources */,
+				A69187481DCC551000372A98 /* DirectoryNetworkWorker.swift in Sources */,
+				A69187491DCC551000372A98 /* GAEISO8601DateTransform.swift in Sources */,
+				A691874A1DCC551000372A98 /* ListEventsTableViewController.swift in Sources */,
+				A691874B1DCC551000372A98 /* NewsInteractorOutput.swift in Sources */,
+				A691874C1DCC551000372A98 /* DirectoryTableViewCell.swift in Sources */,
+				A691874D1DCC551000372A98 /* DirectoryInteractorOutput.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A691877B1DCC591E00372A98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A691877C1DCC591E00372A98 /* DirectoryPresenter.swift in Sources */,
+				A691877D1DCC591E00372A98 /* ClientPageData.swift in Sources */,
+				A691877E1DCC591E00372A98 /* RootViewController.swift in Sources */,
+				A691877F1DCC591E00372A98 /* AppDelegate.swift in Sources */,
+				A69187801DCC591E00372A98 /* RootViewControllerProtocol.swift in Sources */,
+				A69187811DCC591E00372A98 /* NewsModels.swift in Sources */,
+				A69187821DCC591E00372A98 /* DirectoryCacheWorker.swift in Sources */,
+				A69187831DCC591E00372A98 /* ListEventsCacheWorker.swift in Sources */,
+				A69187841DCC591E00372A98 /* DirectoryViewControllerIO.swift in Sources */,
+				A69187851DCC591E00372A98 /* NewsInteractor.swift in Sources */,
+				A69187861DCC591E00372A98 /* ListEventsPresenter.swift in Sources */,
+				A69187871DCC591E00372A98 /* ListEventsInteractorIO.swift in Sources */,
+				A69187881DCC591E00372A98 /* DirectoryModels.swift in Sources */,
+				A69187891DCC591E00372A98 /* ListEventsWireframe.swift in Sources */,
+				A691878A1DCC591E00372A98 /* DiscoveredEventsResponse.swift in Sources */,
+				A691878B1DCC591E00372A98 /* ListEventsProtocols.swift in Sources */,
+				A691878C1DCC591E00372A98 /* NewsInteractorOutput.swift in Sources */,
+				A691878D1DCC591E00372A98 /* NewsPresenter.swift in Sources */,
+				A691878E1DCC591E00372A98 /* ListEventsInteractor.swift in Sources */,
+				A691878F1DCC591E00372A98 /* GAEISO8601DateTransform.swift in Sources */,
+				A69187901DCC591E00372A98 /* DirectoryNetworkWorker.swift in Sources */,
+				A69187911DCC591E00372A98 /* DirectoryTableViewCell.swift in Sources */,
+				A69187921DCC591E00372A98 /* DirectoryInteractor.swift in Sources */,
+				A69187931DCC591E00372A98 /* DirectoryViewController.swift in Sources */,
+				A69187941DCC591E00372A98 /* FomoId.swift in Sources */,
+				A69187951DCC591E00372A98 /* ListEventsModels.swift in Sources */,
+				A69187961DCC591E00372A98 /* NewsWireframe.swift in Sources */,
+				A69187971DCC591E00372A98 /* DiscoveredEventTableViewCell.swift in Sources */,
+				A69187981DCC591E00372A98 /* DiscoveredEvent.swift in Sources */,
+				A69187991DCC591E00372A98 /* DirectoryWireframe.swift in Sources */,
+				A691879A1DCC591E00372A98 /* ListEventsTableViewController.swift in Sources */,
+				A691879B1DCC591E00372A98 /* NewsViewController.swift in Sources */,
+				A691879C1DCC591E00372A98 /* ListEventsNetworkWorker.swift in Sources */,
+				A691879D1DCC591E00372A98 /* SourcePage.swift in Sources */,
+				A691879E1DCC591E00372A98 /* NewsViewControllerIO.swift in Sources */,
+				A691879F1DCC591E00372A98 /* DirectoryInteractorOutput.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A69DBF4B1C8AE4D8005064F7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1520,41 +2404,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		A6141D611BB9F507003150F1 /* LaunchScreenTCD.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A6141D621BB9F507003150F1 /* Base */,
-			);
-			name = LaunchScreenTCD.xib;
-			sourceTree = "<group>";
-		};
-		A6141D631BB9F507003150F1 /* LaunchScreenUCC.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A6141D641BB9F507003150F1 /* Base */,
-			);
-			name = LaunchScreenUCC.xib;
-			sourceTree = "<group>";
-		};
-		A6141D651BB9F507003150F1 /* LaunchScreenUCD.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A6141D661BB9F507003150F1 /* Base */,
-			);
-			name = LaunchScreenUCD.xib;
-			sourceTree = "<group>";
-		};
-		A6C6131D1A91492500A5F082 /* LaunchScreenNUIG.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A6C6131E1A91492500A5F082 /* Base */,
-			);
-			name = LaunchScreenNUIG.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		A6141D5D1BB9F44F003150F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1569,7 +2418,7 @@
 					"COCOAPODS=1",
 					"DISABLE_PUSH_NOTIFICATIONS=1",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMOTCD.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1598,7 +2447,7 @@
 					"COCOAPODS=1",
 					"DISABLE_PUSH_NOTIFICATIONS=1",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMOTCD.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1625,7 +2474,7 @@
 					"COCOAPODS=1",
 					"DISABLE_PUSH_NOTIFICATIONS=1",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMOUCC.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1651,7 +2500,7 @@
 					"COCOAPODS=1",
 					"DISABLE_PUSH_NOTIFICATIONS=1",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMOUCC.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1670,7 +2519,7 @@
 			baseConfigurationReference = 0BDEEA26D3AA970C2A450CD6 /* Pods-FOMO UCD.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconTCD;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconUCD;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1678,7 +2527,7 @@
 					"COCOAPODS=1",
 					"DISABLE_PUSH_NOTIFICATIONS=1",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMOUCD.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1703,7 +2552,7 @@
 			baseConfigurationReference = C0F5F7CF72ADF21C40EE9530 /* Pods-FOMO UCD.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconTCD;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconUCD;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1711,7 +2560,7 @@
 					"COCOAPODS=1",
 					"DISABLE_PUSH_NOTIFICATIONS=1",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMOUCD.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1742,7 +2591,7 @@
 					"COCOAPODS=1",
 					"DISABLE_PUSH_NOTIFICATIONS=1",
 				);
-				INFOPLIST_FILE = "FOMO NUIG copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMODCU.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1769,7 +2618,7 @@
 					"COCOAPODS=1",
 					"DISABLE_PUSH_NOTIFICATIONS=1",
 				);
-				INFOPLIST_FILE = "FOMO NUIG copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMODCU.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1780,6 +2629,250 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.dcu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A69186E61DCC543A00372A98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38CDB4A6C901C83569A2270D /* Pods-FOMO TCD.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconNUIM;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3RM6H33EW7;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"DISABLE_PUSH_NOTIFICATIONS=1",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMONUIM.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.nuim;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A69186E71DCC543A00372A98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95CB73BEA22FC16F0073EC95 /* Pods-FOMO TCD.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconNUIM;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3RM6H33EW7;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"DISABLE_PUSH_NOTIFICATIONS=1",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMONUIM.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.nuim;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A69187231DCC54BD00372A98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38CDB4A6C901C83569A2270D /* Pods-FOMO TCD.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDIT;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3RM6H33EW7;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"DISABLE_PUSH_NOTIFICATIONS=1",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMODIT.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.DIT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A69187241DCC54BD00372A98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95CB73BEA22FC16F0073EC95 /* Pods-FOMO TCD.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDIT;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3RM6H33EW7;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"DISABLE_PUSH_NOTIFICATIONS=1",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMODIT.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.DIT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A69187621DCC551000372A98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BDEEA26D3AA970C2A450CD6 /* Pods-FOMO UCD.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconUL;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3RM6H33EW7;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"DISABLE_PUSH_NOTIFICATIONS=1",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMOUL.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.ul;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A69187631DCC551000372A98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0F5F7CF72ADF21C40EE9530 /* Pods-FOMO UCD.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconUL;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3RM6H33EW7;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"DISABLE_PUSH_NOTIFICATIONS=1",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMOUL.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.ul;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A69187B21DCC591E00372A98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38CDB4A6C901C83569A2270D /* Pods-FOMO TCD.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconQUB;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3RM6H33EW7;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"DISABLE_PUSH_NOTIFICATIONS=1",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMOQUB.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.qub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A69187B31DCC591E00372A98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95CB73BEA22FC16F0073EC95 /* Pods-FOMO TCD.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconQUB;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3RM6H33EW7;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"DISABLE_PUSH_NOTIFICATIONS=1",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMOQUB.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.qub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1928,7 +3021,7 @@
 					"COCOAPODS=1",
 					"DISABLE_PUSH_NOTIFICATIONS=1",
 				);
-				INFOPLIST_FILE = SortonsEvents/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMONUIG.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1954,7 +3047,7 @@
 					"COCOAPODS=1",
 					"DISABLE_PUSH_NOTIFICATIONS=1",
 				);
-				INFOPLIST_FILE = SortonsEvents/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMONUIG.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -2004,6 +3097,42 @@
 			buildConfigurations = (
 				A63B32BD1C68AFA400C46020 /* Debug */,
 				A63B32BE1C68AFA400C46020 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A69186E51DCC543A00372A98 /* Build configuration list for PBXNativeTarget "FOMO NUIM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A69186E61DCC543A00372A98 /* Debug */,
+				A69186E71DCC543A00372A98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A69187221DCC54BD00372A98 /* Build configuration list for PBXNativeTarget "FOMO DIT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A69187231DCC54BD00372A98 /* Debug */,
+				A69187241DCC54BD00372A98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A69187611DCC551000372A98 /* Build configuration list for PBXNativeTarget "FOMO UL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A69187621DCC551000372A98 /* Debug */,
+				A69187631DCC551000372A98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A69187B11DCC591E00372A98 /* Build configuration list for PBXNativeTarget "FOMO QUB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A69187B21DCC591E00372A98 /* Debug */,
+				A69187B31DCC591E00372A98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
