@@ -25,6 +25,8 @@ class NewsViewController: UIViewController, NewsPresenterOutput {
 
         let request = News.Fetch.Request()
         
+        webView.scrollView.decelerationRate = UIScrollViewDecelerationRateNormal;
+
         output.setup(request: request)
     }
 
