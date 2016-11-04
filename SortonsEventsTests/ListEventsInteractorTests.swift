@@ -85,7 +85,7 @@ class ListEventsInteractorTests: XCTestCase {
    
         let listEventsInteractorOutputSpy = ListEventsInteractorOutputSpy()
         
-        let sut = ListEventsInteractor(fomoId: "", output: listEventsInteractorOutputSpy, listEventsNetworkWorker: listEventsNetworkWorkerSpy, listEventsCacheWorker: listEventsCacheWorkerSpy)
+        let sut = ListEventsInteractor(wireframe: ListEventsWireframe(fomoId: ""), fomoId: "", output: listEventsInteractorOutputSpy, listEventsNetworkWorker: listEventsNetworkWorkerSpy, listEventsCacheWorker: listEventsCacheWorkerSpy)
         
         // When
         let request = ListEvents_FetchEvents_Request()
@@ -107,7 +107,7 @@ class ListEventsInteractorTests: XCTestCase {
 
         let listEventsInteractorOutputSpy = ListEventsInteractorOutputSpy()
         
-        let sut = ListEventsInteractor(fomoId: "", output: listEventsInteractorOutputSpy, listEventsNetworkWorker: emptyListEventsNetworkWorkerSpy, listEventsCacheWorker: emptyListEventsCacheWorkerSpy)
+        let sut = ListEventsInteractor(wireframe: ListEventsWireframe(fomoId: ""), fomoId: "", output: listEventsInteractorOutputSpy, listEventsNetworkWorker: emptyListEventsNetworkWorkerSpy, listEventsCacheWorker: emptyListEventsCacheWorkerSpy)
         
         // When
         let request = ListEvents_FetchEvents_Request()
@@ -132,7 +132,7 @@ class ListEventsInteractorTests: XCTestCase {
         
         let listEventsInteractorOutputSpy = ListEventsInteractorOutputSpy()
 
-        let sut = ListEventsInteractor(fomoId: "", output: listEventsInteractorOutputSpy, listEventsNetworkWorker: EmptyListEventsNetworkWorkerSpy(), listEventsCacheWorker: ListEventsCacheWorkerSpy(), withDate: Date(), withCalendar: calendar)
+        let sut = ListEventsInteractor(wireframe: ListEventsWireframe(fomoId: ""), fomoId: "", output: listEventsInteractorOutputSpy, listEventsNetworkWorker: EmptyListEventsNetworkWorkerSpy(), listEventsCacheWorker: ListEventsCacheWorkerSpy(), withDate: Date(), withCalendar: calendar)
         
         var getEvents: [DiscoveredEvent]!
         

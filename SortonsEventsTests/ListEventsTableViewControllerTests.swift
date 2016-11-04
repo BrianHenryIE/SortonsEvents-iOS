@@ -13,6 +13,7 @@ class ListEventsTableViewControllerOutputSpy: ListEventsTableViewControllerOutpu
 
     var fetchEventsCalled = false
     var displayEventCalled = false
+    var changeToNextTabRightCalled = false
 
     func fetchEvents(_ request: ListEvents_FetchEvents_Request) {
         fetchEventsCalled = true
@@ -20,6 +21,10 @@ class ListEventsTableViewControllerOutputSpy: ListEventsTableViewControllerOutpu
     
     internal func displayEvent(for eventDataRow: Int) {
         displayEventCalled = true
+    }
+    
+    func changeToNextTabRight() {
+        changeToNextTabRightCalled = true
     }
 }
 

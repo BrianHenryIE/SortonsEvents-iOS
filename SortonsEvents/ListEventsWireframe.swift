@@ -12,11 +12,9 @@ import Foundation
 class ListEventsWireframe {
 
     let listEventsView: ListEventsTableViewController!
-    let rootViewController : RootViewControllerProtocol
+    var rootViewController : RootViewControllerProtocol?
     
-    init(rootViewController: RootViewControllerProtocol, fomoId: String) {
-        self.rootViewController = rootViewController
-        
+    init(fomoId: String) {
         let storyboard = UIStoryboard(name: "ListEvents", bundle: Bundle.main)
         
         listEventsView = storyboard.instantiateViewController(withIdentifier: "ListEvents") as! ListEventsTableViewController
@@ -26,10 +24,11 @@ class ListEventsWireframe {
         let listEventsInteractor = ListEventsInteractor(wireframe: self, fomoId: fomoId, output: listEventsPresenter, listEventsNetworkWorker: ListEventsNetworkWorker(), listEventsCacheWorker: ListEventsCacheWorker())
         
         listEventsView.output = listEventsInteractor
-     
     }
     
     func changeToNextTabRight() {
-        rootViewController.changeToNextTabRight()
+        if let rootViewController = rootViewController {
+            rootViewController.changeToNextTabRight()
+        }
     }
 }

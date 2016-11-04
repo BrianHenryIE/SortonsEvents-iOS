@@ -15,13 +15,16 @@ class RootViewController: RootViewControllerProtocol {
     
     init(window: UIWindow, fomoId: String) {
         
-        let listEventsWireframe = ListEventsWireframe(rootViewController: self, fomoId: fomoId)
+        let listEventsWireframe = ListEventsWireframe(fomoId: fomoId)
+        listEventsWireframe.rootViewController = self
         let listEventsView = listEventsWireframe.listEventsView!
         
-        let newsWireframe = NewsWireframe(rootViewController: self, fomoId: fomoId)
+        let newsWireframe = NewsWireframe(fomoId: fomoId)
+        newsWireframe.rootViewController = self
         let newsView = newsWireframe.newsView!
         
-        let directoryWireframe = DirectoryWireframe(rootViewController: self, fomoId: fomoId)
+        let directoryWireframe = DirectoryWireframe(fomoId: fomoId)
+        directoryWireframe.rootViewController = self
         let directoryView = directoryWireframe.directoryView!
         
         

@@ -85,7 +85,7 @@ class DirectoryInteractorTests: XCTestCase {
         cacheWorkerSpy = DirectoryCacheWorkerSpy()
         networkWorkerSpy = DirectoryNetworkWorkerSpy()
         
-        sut = DirectoryInteractor(fomoId: fomoId, presenter: presenterSpy, cache: cacheWorkerSpy, network: networkWorkerSpy)
+        sut = DirectoryInteractor(fomoId: fomoId, wireframe: DirectoryWireframe(fomoId: fomoId), presenter: presenterSpy, cache: cacheWorkerSpy, network: networkWorkerSpy)
     }
   
     func testFetchDirectory() {

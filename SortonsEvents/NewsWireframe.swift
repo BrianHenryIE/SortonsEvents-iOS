@@ -12,11 +12,9 @@ import Foundation
 class NewsWireframe {
     
     let newsView: NewsViewController!
-    let rootViewController : RootViewControllerProtocol
+    var rootViewController : RootViewControllerProtocol?
     
-    init(rootViewController: RootViewControllerProtocol, fomoId: String) {
-        self.rootViewController = rootViewController
-        
+    init(fomoId: String) {
         let storyboard = UIStoryboard(name: "News", bundle: Bundle.main)
         
         newsView = storyboard.instantiateViewController(withIdentifier: "News") as! NewsViewController
@@ -29,10 +27,14 @@ class NewsWireframe {
     }
     
     func changeToNextTabLeft() {
-        rootViewController.changeToNextTabLeft()
+        if let rootViewController = rootViewController {
+            rootViewController.changeToNextTabLeft()
+        }
     }
     
     func changeToNextTabRight() {
-        rootViewController.changeToNextTabRight()
+        if let rootViewController = rootViewController {
+            rootViewController.changeToNextTabRight()
+        }
     }
 }

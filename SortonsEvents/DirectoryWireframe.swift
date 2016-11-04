@@ -11,13 +11,10 @@ import Foundation
 
 class DirectoryWireframe {
     
-//    let directoryView : ListEventsTableViewController!
     let directoryView: DirectoryViewController!
-    let rootViewController : RootViewControllerProtocol
+    var rootViewController : RootViewControllerProtocol?
     
-    init(rootViewController: RootViewControllerProtocol, fomoId: String) {
-        self.rootViewController = rootViewController
-        
+    init(fomoId: String) {
         let storyboard = UIStoryboard(name: "Directory", bundle: Bundle.main)
         
         directoryView = storyboard.instantiateViewController(withIdentifier: "Directory") as! DirectoryViewController
@@ -33,6 +30,8 @@ class DirectoryWireframe {
     }
     
     func changeToNextTabLeft() {
-        rootViewController.changeToNextTabLeft()
+        if let rootViewController = rootViewController {
+            rootViewController.changeToNextTabLeft()
+        }
     }
 }
