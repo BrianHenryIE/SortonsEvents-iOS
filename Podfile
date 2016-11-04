@@ -4,11 +4,20 @@ platform :ios, '9.0'
 
 project 'SortonsEvents'
 
-target 'FOMO UCD' do
-    pod 'ObjectMapper', '~> 2.0'
+def all_pods
+    pod 'ObjectMapper', '~> 2.2'
     pod 'Alamofire', '~> 4.0'
-    pod 'AlamofireImage', '~> 3.0'
+    pod 'AlamofireImage', '~> 3.1'
 end
+
+target 'FOMO UCD' do
+    all_pods
+end
+
+target 'FOMO TCD' do
+    all_pods
+end
+
 
 # Figure out which are really needed in the test classes – get @import testable working
 target 'SortonsEventsTests' do

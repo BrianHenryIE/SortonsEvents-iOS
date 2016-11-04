@@ -93,7 +93,6 @@
 		A6AAD3F31D25A6620097AF22 /* DiscoveredEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF3F1C8AD654005064F7 /* DiscoveredEvent.swift */; };
 		A6AAD3F41D25A6620097AF22 /* DiscoveredEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF3F1C8AD654005064F7 /* DiscoveredEvent.swift */; };
 		A6AAD3F51D25A6630097AF22 /* DiscoveredEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF3F1C8AD654005064F7 /* DiscoveredEvent.swift */; };
-		A6AAD3F71D25B64D0097AF22 /* GAEISO8601DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3F61D25B64D0097AF22 /* GAEISO8601DateTransform.swift */; };
 		A6AAD3F81D25B6D10097AF22 /* GAEISO8601DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3F61D25B64D0097AF22 /* GAEISO8601DateTransform.swift */; };
 		A6AAD3F91D25B6D10097AF22 /* GAEISO8601DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3F61D25B64D0097AF22 /* GAEISO8601DateTransform.swift */; };
 		A6AAD3FA1D25B6D20097AF22 /* GAEISO8601DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3F61D25B64D0097AF22 /* GAEISO8601DateTransform.swift */; };
@@ -118,6 +117,7 @@
 		A6C6131F1A91492500A5F082 /* LaunchScreenNUIG.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6C6131D1A91492500A5F082 /* LaunchScreenNUIG.xib */; };
 		A6E10C621DB41643007854F8 /* DirectoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E10C611DB41643007854F8 /* DirectoryTableViewCell.swift */; };
 		A6E10C641DB44F5C007854F8 /* DirectoryNetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E10C631DB44F5C007854F8 /* DirectoryNetworkWorker.swift */; };
+		C2F9477F494F325B086B494C /* Pods_FOMO_TCD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1BB84D9EAF62FF65E4EC36 /* Pods_FOMO_TCD.framework */; };
 		D2D5217499F6B04417B4EB64 /* Pods_FOMO_UCD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36CF2249EF126ACF7C1BE04 /* Pods_FOMO_UCD.framework */; };
 		E9CD01A61FFB1A86A2ACC763 /* Pods_SortonsEventsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE0A1C3BF300FB4A0A7584E /* Pods_SortonsEventsTests.framework */; };
 /* End PBXBuildFile section */
@@ -134,8 +134,11 @@
 
 /* Begin PBXFileReference section */
 		1AE0A1C3BF300FB4A0A7584E /* Pods_SortonsEventsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SortonsEventsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DF12D1ADBB52DB83901E1BB /* Pods-FOMO TCD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO TCD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD.debug.xcconfig"; sourceTree = "<group>"; };
 		4698B2409D034D0FB9B0DC9D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		786DDF9E2A825C011E1D3806 /* Pods-SortonsEventsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SortonsEventsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SortonsEventsTests/Pods-SortonsEventsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8B1BB84D9EAF62FF65E4EC36 /* Pods_FOMO_TCD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FOMO_TCD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9385620069947B3A99FA5A85 /* Pods-FOMO TCD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO TCD.release.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD.release.xcconfig"; sourceTree = "<group>"; };
 		A4B45A6EE4E167955EE9B517 /* Pods-SortonsEventsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SortonsEventsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SortonsEventsTests/Pods-SortonsEventsTests.release.xcconfig"; sourceTree = "<group>"; };
 		A6141D5F1BB9F44F003150F1 /* FOMO TCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO TCD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6141D621BB9F507003150F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreenTCD.xib; sourceTree = "<group>"; };
@@ -221,6 +224,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2F9477F494F325B086B494C /* Pods_FOMO_TCD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +275,8 @@
 				BBB7A952895502086AFADDB9 /* Pods-FOMO UCD.release.xcconfig */,
 				786DDF9E2A825C011E1D3806 /* Pods-SortonsEventsTests.debug.xcconfig */,
 				A4B45A6EE4E167955EE9B517 /* Pods-SortonsEventsTests.release.xcconfig */,
+				3DF12D1ADBB52DB83901E1BB /* Pods-FOMO TCD.debug.xcconfig */,
+				9385620069947B3A99FA5A85 /* Pods-FOMO TCD.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -281,6 +287,7 @@
 				4698B2409D034D0FB9B0DC9D /* Pods.framework */,
 				B36CF2249EF126ACF7C1BE04 /* Pods_FOMO_UCD.framework */,
 				1AE0A1C3BF300FB4A0A7584E /* Pods_SortonsEventsTests.framework */,
+				8B1BB84D9EAF62FF65E4EC36 /* Pods_FOMO_TCD.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -670,10 +677,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6141D5C1BB9F44F003150F1 /* Build configuration list for PBXNativeTarget "FOMO TCD" */;
 			buildPhases = (
+				A8F34305BF77D64828C4F7CB /* [CP] Check Pods Manifest.lock */,
 				A6141D421BB9F44F003150F1 /* Sources */,
 				A6141D521BB9F44F003150F1 /* Frameworks */,
 				A6141D541BB9F44F003150F1 /* Resources */,
 				SWIFCLEANCUSTOMRUNSCRIPT /* Swift-Clean Run Script */,
+				41EB909615067C2FA1ADB294 /* [CP] Embed Pods Frameworks */,
+				145354D56939AA13F4BA14C6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -793,6 +803,7 @@
 				TargetAttributes = {
 					A6141D401BB9F44F003150F1 = {
 						DevelopmentTeam = 3RM6H33EW7;
+						LastSwiftMigration = 0810;
 					};
 					A6141D6C1BB9F537003150F1 = {
 						DevelopmentTeam = 3RM6H33EW7;
@@ -916,6 +927,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		145354D56939AA13F4BA14C6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41EB909615067C2FA1ADB294 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7A03B37A066E1EFEBA2DBFE0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -973,6 +1014,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [[ -z ${SKIP_SWIFTCLEAN} || ${SKIP_SWIFTCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" || -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" ]]; then\n\"${LOCAL_APPS_DIR}\"/Swift-Clean.app/Contents/Resources/SwiftClean.app/Contents/MacOS/SwiftClean \"${SRCROOT}\"?@autoFix\nelse\necho \"warning: You have to install and set up Swift-Clean to use its features!\"\nfi\nfi";
+		};
+		A8F34305BF77D64828C4F7CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 		BBE99D1633940454CA81288B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1115,7 +1171,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A625EA801C8AF09200B35D80 /* ListEventsNetworkWorker.swift in Sources */,
-				A6AAD3F71D25B64D0097AF22 /* GAEISO8601DateTransform.swift in Sources */,
 				A68183D51D2ADD6200E45D35 /* ListEventsTableViewControllerTests.swift in Sources */,
 				A6C45C0A1DA3898C00FC57D5 /* FomoId.swift in Sources */,
 				A68183DE1D2B009E00E45D35 /* ListEventsModels.swift in Sources */,
@@ -1205,6 +1260,7 @@
 /* Begin XCBuildConfiguration section */
 		A6141D5D1BB9F44F003150F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DF12D1ADBB52DB83901E1BB /* Pods-FOMO TCD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconTCD;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1224,12 +1280,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.tcd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		A6141D5E1BB9F44F003150F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9385620069947B3A99FA5A85 /* Pods-FOMO TCD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconTCD;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1249,6 +1307,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.tcd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
