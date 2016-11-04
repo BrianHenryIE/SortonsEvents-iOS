@@ -5,16 +5,6 @@
 	<key>PreferenceSpecifiers</key>
 	<array>
 		<dict>
-			<key>DefaultValue</key>
-			<false/>
-			<key>Key</key>
-			<string>launch_native_apps_toggle</string>
-			<key>Title</key>
-			<string>Launch native apps</string>
-			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
-		</dict>
-		<dict>
 			<key>Title</key>
 			<string>info@sortons.ie</string>
 			<key>Type</key>

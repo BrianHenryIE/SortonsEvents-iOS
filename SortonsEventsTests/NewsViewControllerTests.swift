@@ -11,8 +11,19 @@ import XCTest
 
 class NewsViewControllerOutputSpy: NewsViewControllerOutput {
     var setupCalled = false
+    var changeToNextTabLeftCalled = false
+    var changeToNextTabRightCalled = false
+    
     func setup(request: News.Fetch.Request) {
         setupCalled = true
+    }
+    
+    func changeToNextTabLeft() {
+        changeToNextTabLeftCalled = true
+    }
+    
+    func changeToNextTabRight() {
+        changeToNextTabRightCalled = true
     }
 }
 

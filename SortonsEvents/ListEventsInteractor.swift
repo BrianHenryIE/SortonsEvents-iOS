@@ -13,6 +13,7 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutput {
     
     var allUpcomingEvents = [DiscoveredEvent]()
     
+    let wireframe: ListEventsWireframe
     let fomoId: String
     let output: ListEventsInteractorOutput
     let listEventsNetworkWorker: ListEventsNetworkWorkerProtocol
@@ -22,7 +23,8 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutput {
     let dateFormat: DateFormatter
     let calendar: Calendar
 
-    init(fomoId: String, output: ListEventsInteractorOutput, listEventsNetworkWorker: ListEventsNetworkWorkerProtocol, listEventsCacheWorker: ListEventsCacheWorkerProtocol, withDate: Date = Date(), withCalendar: Calendar = Calendar.current){
+    init(wireframe: ListEventsWireframe, fomoId: String, output: ListEventsInteractorOutput, listEventsNetworkWorker: ListEventsNetworkWorkerProtocol, listEventsCacheWorker: ListEventsCacheWorkerProtocol, withDate: Date = Date(), withCalendar: Calendar = Calendar.current){
+        self.wireframe = wireframe
         self.fomoId = fomoId
         self.output = output
         self.listEventsNetworkWorker = listEventsNetworkWorker
@@ -37,11 +39,11 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutput {
     func fetchEvents(_ request: ListEvents_FetchEvents_Request) {
         
         // Get from cache
-        listEventsCacheWorker.fetch { (cacheString) -> Void in
-            let eventsFromCache: DiscoveredEventsResponse = Mapper<DiscoveredEventsResponse>().map(JSONString: cacheString)!
+        let eventsFromCacheString = listEventsCacheWorker.fetch()
+        if let eventsFromCacheString = eventsFromCacheString {
+            let eventsFromCache: DiscoveredEventsResponse = Mapper<DiscoveredEventsResponse>().map(JSONString: eventsFromCacheString)!
             if let data = eventsFromCache.data {
                 allUpcomingEvents = filterToOngoingEvents(data, observingFrom: observingFrom)
-                
                 let response = ListEvents_FetchEvents_Response(events: allUpcomingEvents)
                 self.output.presentFetchedEvents(response)
             }
@@ -113,5 +115,9 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutput {
         filteredEvents.append(contentsOf: lastNight)
         
         return filteredEvents
+    }
+
+    func changeToNextTabRight() {
+        wireframe.changeToNextTabRight()
     }
 }

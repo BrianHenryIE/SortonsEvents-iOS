@@ -38,6 +38,10 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
         output.fetchEvents(request)
     }
 
+    @IBAction func changeToNextTabRight(_ sender: Any) {
+        output.changeToNextTabRight()
+    }
+
 // MARK: Display logic ListEventsPresenterOutput
     func presentFetchedEvents(_ viewModel: ListEventsViewModel) {
         data = viewModel

@@ -13,20 +13,32 @@ import ObjectMapper
 class ClientPageDataTest: XCTestCase {
 
     func testClientPageDataParsing() throws {
-
+        
         // Read in the file
         let bundle = Bundle(for: self.classForCoder)
-        let path = bundle.path(forResource: "ClientPageDataUcdEvents", ofType: "json")!
+        let path = bundle.path(forResource: "ClientPageDataTcd", ofType: "json")!
         
         let content = try String(contentsOfFile: path)
         
         // Use objectmapper
-        let ucdEvents: ClientPageData = Mapper<ClientPageData>().map(JSONString: content)!
+        let tcdEvents: ClientPageData = Mapper<ClientPageData>().map(JSONString: content)!
         
-        XCTAssertEqual(ucdEvents.clientPageId, "197528567092983")
-        XCTAssertEqual(ucdEvents.clientPage.pageId, "197528567092983")
-        
-        XCTAssertEqual(ucdEvents.includedPages.count, 307)
-       
+        XCTAssertEqual(tcdEvents.includedPages.count, 325)
     }
+    
+    func testCaliforniaNil() throws {
+        
+        // Read in the file
+        let bundle = Bundle(for: self.classForCoder)
+        let path = bundle.path(forResource: "TcdCaliforniaAlumni", ofType: "json")!
+        
+        let content = try String(contentsOfFile: path)
+        
+        // Use objectmapper
+        let california: SourcePage = Mapper<SourcePage>().map(JSONString: content)!
+        
+        
+        XCTAssertEqual(california.fbPageId, "1538569619693874")
+    }
+    
 }

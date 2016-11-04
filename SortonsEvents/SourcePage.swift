@@ -14,7 +14,7 @@ import ObjectMapper
 class SourcePage: Mappable {
     
     var name: String!
-    var pageId: String!
+    var fbPageId: String!
     var pageUrl: String!
     var street: String?
     var city: String?
@@ -31,7 +31,7 @@ class SourcePage: Mappable {
     // Mappable
     func mapping(map: Map) {
         name <- map["name"]
-        pageId <- map["pageId"]
+        fbPageId <- map["fbPageId"]
         pageUrl <- map["pageUrl"]
         street <- map["street"]
         city  <- map["city"]

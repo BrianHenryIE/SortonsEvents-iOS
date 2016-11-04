@@ -13,6 +13,7 @@ class ListEventsTableViewControllerOutputSpy: ListEventsTableViewControllerOutpu
 
     var fetchEventsCalled = false
     var displayEventCalled = false
+    var changeToNextTabRightCalled = false
 
     func fetchEvents(_ request: ListEvents_FetchEvents_Request) {
         fetchEventsCalled = true
@@ -20,6 +21,10 @@ class ListEventsTableViewControllerOutputSpy: ListEventsTableViewControllerOutpu
     
     internal func displayEvent(for eventDataRow: Int) {
         displayEventCalled = true
+    }
+    
+    func changeToNextTabRight() {
+        changeToNextTabRightCalled = true
     }
 }
 
@@ -45,8 +50,7 @@ class ListEventsTableViewControllerTests: XCTestCase {
     
     // MARK: Test setup
     func setupListOrdersViewController() {
-        //let bundle = NSBundle.mainBundle()
-        let bundle = Bundle(for: self.classForCoder)
+        let bundle = Bundle.main
         let storyboard = UIStoryboard(name: "ListEvents", bundle: bundle)
         sut = storyboard.instantiateViewController(withIdentifier: "ListEvents") as! ListEventsTableViewController
     }
@@ -58,15 +62,11 @@ class ListEventsTableViewControllerTests: XCTestCase {
         sut.output = listEventsViewControllerOutputSpy
         
         // When
-        loadView()
+        // Call viewDidLoad()
+        let _ = sut.view
         
         // Then
         XCTAssert(listEventsViewControllerOutputSpy.fetchEventsCalled, "Should fetch events when the view is loaded")
-    }
-    
-    func loadView() {
-        window.addSubview(sut.view)
-        RunLoop.current.run(until: Date())
     }
     
 }

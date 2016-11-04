@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 // View input
 protocol DirectoryPresenterOutput {
@@ -21,4 +22,6 @@ protocol DirectoryViewControllerOutput {
     func filterDirectoryTo(searchBarInput: String)
     
     func displaySelectedPageFrom(rowNumber: Int)
+    
+    func changeToNextTabLeft()
 }
