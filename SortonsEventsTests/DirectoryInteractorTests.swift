@@ -30,7 +30,7 @@ class DirectoryCacheWorkerSpy: DirectoryCacheWorkerProtocol {
         fetchCalled = true
         
         let bundle = Bundle(for: DirectoryCacheWorkerSpy.self)
-        let path = bundle.path(forResource: "ClientPageDataUcdEvents", ofType: "json")!
+        let path = bundle.path(forResource: "ClientPageDataTcd", ofType: "json")!
         
         var content = ""
         
@@ -55,7 +55,7 @@ class DirectoryNetworkWorkerSpy: DirectoryNetworkWorkerProtocol {
         fetchCalled = true
         
         let bundle = Bundle(for: DirectoryCacheWorkerSpy.self)
-        let path = bundle.path(forResource: "ClientPageDataUcdEvents", ofType: "json")!
+        let path = bundle.path(forResource: "ClientPageDataTcd", ofType: "json")!
         
         var content = ""
         
@@ -85,7 +85,7 @@ class DirectoryInteractorTests: XCTestCase {
         cacheWorkerSpy = DirectoryCacheWorkerSpy()
         networkWorkerSpy = DirectoryNetworkWorkerSpy()
         
-        sut = DirectoryInteractor(fomoId: fomoId, presenter: presenterSpy, cache: cacheWorkerSpy, network: networkWorkerSpy)
+        sut = DirectoryInteractor(fomoId: fomoId, wireframe: DirectoryWireframe(fomoId: fomoId), presenter: presenterSpy, cache: cacheWorkerSpy, network: networkWorkerSpy)
     }
   
     func testFetchDirectory() {
@@ -97,12 +97,13 @@ class DirectoryInteractorTests: XCTestCase {
         
         XCTAssert(cacheWorkerSpy.fetchCalled, "Cache worker not called by Interactor")
         // Actually is being called but assessing too late
-        //        XCTAssertEqual(presenterSpy.presentFetchedDirectoryCalled, 1, "Directory presenter not called after cache")
+//        XCTAssertEqual(presenterSpy.presentFetchedDirectoryCalled, 1, "Directory presenter not called after cache")
         
         XCTAssert(networkWorkerSpy.fetchCalled, "Network worker not called by Interactor")
-        
-        XCTAssertEqual(presenterSpy.presentFetchedDirectoryCalled, 2, "Directory Presenter not called after Network Worker")
-        XCTAssert(cacheWorkerSpy.saveCalled, "New events not saved to cache")
+      
+        XCTAssertEqual(self.presenterSpy.presentFetchedDirectoryCalled, 2, "Directory Presenter not called after Network Worker")
+        XCTAssert(self.cacheWorkerSpy.saveCalled, "New events not saved to cache")
+       
     }
     
     func testFilterDirectoryTo() {
@@ -114,7 +115,7 @@ class DirectoryInteractorTests: XCTestCase {
         
         sut.filterDirectoryTo(searchBarInput: "music")
         
-        XCTAssertEqual(5, presenterSpy.sourcePagesCount, "Post filter count incorrect")
+        XCTAssertEqual(6, presenterSpy.sourcePagesCount, "Post filter count incorrect")
     }
     
     func displaySelectedPageFrom(rowNumber: Int) {

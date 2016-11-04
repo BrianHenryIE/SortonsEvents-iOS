@@ -9,6 +9,10 @@
 
 protocol NewsViewControllerOutput {
     func setup(request: News.Fetch.Request)
+    
+    func changeToNextTabLeft()
+    
+    func changeToNextTabRight()
 }
 
 protocol NewsPresenterOutput {

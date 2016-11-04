@@ -24,6 +24,7 @@ class DirectoryViewControllerOutputSpy: DirectoryViewControllerOutput {
     var fetchDirectoryCalled = false
     var filterDirectoryToCalled = false
     var displaySelectedPageCalled = false
+    var changeToNextTabLeftCalled = false
     
     func fetchDirectory(withRequest: Directory_FetchDirectory_Request) {
         fetchDirectoryCalled = true
@@ -35,6 +36,10 @@ class DirectoryViewControllerOutputSpy: DirectoryViewControllerOutput {
     
     func displaySelectedPageFrom(rowNumber: Int) {
         displaySelectedPageCalled = true
+    }
+    
+    func changeToNextTabLeft() {
+        changeToNextTabLeftCalled = true
     }
 }
 
@@ -123,5 +128,18 @@ class DirectoryViewControllerTests: XCTestCase {
         sut.searchBar(searchBar!, textDidChange: searchText)
         
         XCTAssert(spy.filterDirectoryToCalled, "search bar not working")
+    }
+    
+    func testSearchBarDisappearsOnScroll() {
+        
+    }
+    
+    
+    func testChangeToLeftTabOnSwipe() {
+
+        sut.rightSwipeGesture(self)
+        
+        XCTAssert(spy.changeToNextTabLeftCalled, "Swipe right didn't hit output")
+        
     }
 }

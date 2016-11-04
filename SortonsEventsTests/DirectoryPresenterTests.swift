@@ -41,19 +41,19 @@ class DirectoryPresenterTests: XCTestCase {
         
         // Get some test data
         let bundle = Bundle(for: self.classForCoder)
-        let path = bundle.path(forResource: "ClientPageDataUcdEvents", ofType: "json")!
+        let path = bundle.path(forResource: "ClientPageDataTcd", ofType: "json")!
         var content = "{}"
         do {
             content = try String(contentsOfFile: path)
         } catch {
         }
-        let ucdEvents: ClientPageData = Mapper<ClientPageData>().map(JSONString: content)!
+        let tcdEvents: ClientPageData = Mapper<ClientPageData>().map(JSONString: content)!
         
-        sut.presentFetchedDirectory(directory: Directory_FetchDirectory_Response(directory: ucdEvents.includedPages))
+        sut.presentFetchedDirectory(directory: Directory_FetchDirectory_Response(directory: tcdEvents.includedPages))
         
         XCTAssert(spy.presentFetchedDirectoryCalled, "Presenter did not pass anything to view")
         
-        XCTAssertEqual(307, spy.viewModel?.directory.count, "Error building viewmodel in presenter")
+        XCTAssertEqual(325, spy.viewModel?.directory.count, "Error building viewmodel in presenter")
     }
 
 //    func testDisplayFetchDirectoryFetchError() {

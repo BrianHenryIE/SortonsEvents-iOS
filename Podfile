@@ -18,12 +18,9 @@ target 'FOMO TCD' do
     all_pods
 end
 
-
 # Figure out which are really needed in the test classes – get @import testable working
 target 'SortonsEventsTests' do
-    pod 'Alamofire', '~> 4.0'
-    pod 'ObjectMapper', '~> 2.0'
-    pod 'AlamofireImage', '~> 3.0'
+    all_pods
 end
 
 

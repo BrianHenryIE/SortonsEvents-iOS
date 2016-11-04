@@ -10,16 +10,25 @@ import Foundation
 
 class NewsInteractor: NewsViewControllerOutput {
     
-    let output: NewsInteractorOutput!
+    let wireframe : NewsWireframe
+    let fomoId: String
+    let output: NewsInteractorOutput
     
-    let fomoId: String!
-    
-    init(fomoId: String, output: NewsInteractorOutput) {
+    init(wireframe: NewsWireframe, fomoId: String, output: NewsInteractorOutput) {
+        self.wireframe = wireframe
         self.fomoId = fomoId
         self.output = output
     }
     
     func setup(request: News.Fetch.Request) {
         output.setFomoId(fomoId)
+    }
+    
+    func changeToNextTabLeft() {
+        wireframe.changeToNextTabLeft()
+    }
+    
+    func changeToNextTabRight() {
+        wireframe.changeToNextTabRight()
     }
 }

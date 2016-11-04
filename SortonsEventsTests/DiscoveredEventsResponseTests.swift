@@ -6,12 +6,13 @@
 //  Copyright © 2016 Sortons. All rights reserved.
 //
 
+@testable import SortonsEvents
 import XCTest
 import ObjectMapper
 
 class DiscoveredEventsResponseTests: XCTestCase {
 
-    func testExample() throws {
+    func testParseDiscoveredEventsJson() throws {
         
         // Read in the file
         let bundle = Bundle(for: self.classForCoder)
