@@ -72,7 +72,7 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         searchBarOutlet.resignFirstResponder()
         
-        return true
+        return false
     }
     
     @IBAction func rightSwipeGesture(_ sender: Any) {
