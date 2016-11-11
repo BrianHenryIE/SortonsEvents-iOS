@@ -54,7 +54,7 @@ class DirectoryViewControllerTests: XCTestCase {
 
         let bundle = Bundle.main
         let storyboard = UIStoryboard(name: "Directory", bundle: bundle)
-        sut = storyboard.instantiateViewController(withIdentifier: "Directory") as! DirectoryViewController
+        sut = storyboard.instantiateViewController(withIdentifier: "Directory") as? DirectoryViewController
         
         sut.output = spy
         

@@ -45,7 +45,7 @@ class NewsViewControllerTests: XCTestCase {
         
         let bundle = Bundle.main
         let storyboard = UIStoryboard(name: "News", bundle: bundle)
-        sut = storyboard.instantiateViewController(withIdentifier: "News") as! NewsViewController
+        sut = storyboard.instantiateViewController(withIdentifier: "News") as? NewsViewController
         
         sut.output = vcSpy
         

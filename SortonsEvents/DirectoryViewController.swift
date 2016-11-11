@@ -14,7 +14,7 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
     @IBOutlet weak var tableViewOutlet: UITableView!
 
     var output: DirectoryViewControllerOutput!
-    var data = [DirectoryTableViewCellModel]()
+    var data: [Directory.TableViewCellModel]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,17 +27,17 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
         
         gestureRecognizer.delegate = self
         
-        let request = Directory_FetchDirectory_Request()
+        let request = Directory.Fetch.Request()
         output.fetchDirectory(withRequest: request)
     }
     
 // MARK: DirectoryPresenterOutput
-    func presentFetchedDirectory(viewModel: DirectoryViewModel) {
+    func presentFetchedDirectory(viewModel: Directory.ViewModel) {
         data = viewModel.directory
         tableViewOutlet.reloadData()
     }
     
-    func displayFetchDirectoryFetchError(viewModel: DirectoryViewModel) {
+    func displayFetchDirectoryFetchError(viewModel: Directory.ViewModel) {
         
     }
     
@@ -52,9 +52,9 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let sourcePage = data[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DirectoryPageCell", for: indexPath) as! DirectoryTableViewCell
-        cell.setDirectorySourcePage(directoryPage: sourcePage)
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DirectoryPageCell", for: indexPath) as? DirectoryTableViewCell
+        cell!.setDirectorySourcePage(directoryPage: sourcePage)
+        return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

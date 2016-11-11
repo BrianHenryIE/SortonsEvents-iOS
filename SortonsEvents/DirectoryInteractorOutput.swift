@@ -9,6 +9,5 @@
 import Foundation
 
 protocol DirectoryInteractorOutput {
-    
-    func presentFetchedDirectory(directory: Directory_FetchDirectory_Response)
+    func presentFetchedDirectory(directory: Directory.Fetch.Response)
 }

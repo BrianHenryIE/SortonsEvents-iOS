@@ -17,7 +17,7 @@ class DirectoryWireframe {
     init(fomoId: String) {
         let storyboard = UIStoryboard(name: "Directory", bundle: Bundle.main)
         
-        directoryView = storyboard.instantiateViewController(withIdentifier: "Directory") as! DirectoryViewController
+        directoryView = storyboard.instantiateViewController(withIdentifier: "Directory") as? DirectoryViewController
         
         let directoryPresenter = DirectoryPresenter(output: directoryView)
         

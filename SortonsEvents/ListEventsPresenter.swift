@@ -19,7 +19,7 @@ class ListEventsPresenter: ListEventsInteractorOutput {
         self.calendar = calendar
     }
     
-    func presentFetchedEvents(_ upcomingEvents: ListEvents_FetchEvents_Response) {
+    func presentFetchedEvents(_ upcomingEvents: ListEvents.Fetch.Response) {
         
         if(!upcomingEvents.events.isEmpty) {
             
@@ -30,10 +30,16 @@ class ListEventsPresenter: ListEventsInteractorOutput {
                 let appUrl = URL(string: "fb://profile/\($0.eventId!)/")!
                 let imageUrl = URL(string: "https://graph.facebook.com/\($0.eventId!)/picture?type=square")!
                 
-                return DiscoveredEventCellModel(webUrl: webUrl, appUrl: appUrl, name: $0.name, startTime: formatFriendlyTime($0.startTime, allDay: $0.dateOnly), location: $0.location, imageUrl: imageUrl)
+                return DiscoveredEventCellModel(webUrl: webUrl,
+                                                appUrl: appUrl,
+                                                name: $0.name,
+                                                startTime:
+                    formatFriendlyTime($0.startTime, allDay: $0.dateOnly),
+                                                location: $0.location,
+                                                imageUrl: imageUrl)
             })
             
-            let viewModel = ListEventsViewModel(discoveredEvents: cellModels)
+            let viewModel = ListEvents.ViewModel(discoveredEvents: cellModels)
             
             output.presentFetchedEvents(viewModel)
         }

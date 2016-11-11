@@ -31,7 +31,7 @@ class DirectoryInteractor: DirectoryViewControllerOutput {
         networkWorker = network
     }
     
-    func fetchDirectory(withRequest: Directory_FetchDirectory_Request) {
+    func fetchDirectory(withRequest: Directory.Fetch.Request) {
         
         if let cacheString = cacheWorker.fetch() {
             let directoryFromCache: ClientPageData = Mapper<ClientPageData>().map(JSONString: cacheString)!
@@ -67,7 +67,7 @@ class DirectoryInteractor: DirectoryViewControllerOutput {
             displayedDirectory = directory
         }
         
-        let response = Directory_FetchDirectory_Response(directory: displayedDirectory)
+        let response = Directory.Fetch.Response(directory: displayedDirectory)
         self.output.presentFetchedDirectory(directory: response)
     }
     

@@ -16,13 +16,13 @@ class DirectoryPresenter: DirectoryInteractorOutput {
         self.output = output
     }
     
-    func presentFetchedDirectory(directory: Directory_FetchDirectory_Response) {
+    func presentFetchedDirectory(directory: Directory.Fetch.Response) {
         
         let viewModelDirectory = directory.directory.map({
-            DirectoryTableViewCellModel(name: $0.name, details: $0.friendlyLocationString, imageUrl: URL(string: "https://graph.facebook.com/\($0.fbPageId!)/picture?type=square")!)
+            Directory.TableViewCellModel(name: $0.name, details: $0.friendlyLocationString, imageUrl: URL(string: "https://graph.facebook.com/\($0.fbPageId!)/picture?type=square")!)
         })
         
-        let viewModel = DirectoryViewModel(directory: viewModelDirectory)
+        let viewModel = Directory.ViewModel(directory: viewModelDirectory)
         
         output?.presentFetchedDirectory(viewModel: viewModel)
     }

@@ -17,7 +17,7 @@ class DirectoryTableViewCell: UITableViewCell {
     @IBOutlet weak var detailsLabel: UILabel!
     @IBOutlet weak var pageImage: UIImageView!
     
-    func setDirectorySourcePage(directoryPage: DirectoryTableViewCellModel) {
+    func setDirectorySourcePage(directoryPage: Directory.TableViewCellModel) {
 //        pageImage.image = placeholderImage
         nameLabel.text = directoryPage.name
         detailsLabel.text = directoryPage.details

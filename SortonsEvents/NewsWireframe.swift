@@ -17,9 +17,9 @@ class NewsWireframe {
     init(fomoId: String) {
         let storyboard = UIStoryboard(name: "News", bundle: Bundle.main)
         
-        newsView = storyboard.instantiateViewController(withIdentifier: "News") as! NewsViewController
+        newsView = storyboard.instantiateViewController(withIdentifier: "News") as? NewsViewController
       
-        let newsPresenter = NewsPresenter(output: newsView)
+        let newsPresenter = NewsPresenter(output: newsView!)
         
         let newsInteractor = NewsInteractor(wireframe: self, fomoId: fomoId, output: newsPresenter)
         

@@ -13,7 +13,7 @@ import UIKit
 
 class ListEventsTableViewController: UITableViewController, ListEventsPresenterOutput {
     var output: ListEventsTableViewControllerOutput!
-    var data: ListEventsViewModel?
+    var data: ListEvents.ViewModel?
 
     // MARK: Object lifecycle
 
@@ -34,7 +34,7 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
     }
 
     func fetchEventsOnLoad() {
-        let request = ListEvents_FetchEvents_Request()
+        let request = ListEvents.Fetch.Request()
         output.fetchEvents(request)
     }
 
@@ -43,12 +43,12 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
     }
 
 // MARK: Display logic ListEventsPresenterOutput
-    func presentFetchedEvents(_ viewModel: ListEventsViewModel) {
+    func presentFetchedEvents(_ viewModel: ListEvents.ViewModel) {
         data = viewModel
         tableView.reloadData()
     }
     
-    func displayFetchEventsFetchError(viewModel: ListEventsViewModel) {
+    func displayFetchEventsFetchError(viewModel: ListEvents.ViewModel) {
         // TODO
     }
 }
@@ -66,9 +66,9 @@ extension ListEventsTableViewController
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let event = data!.discoveredEvents[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DiscoveredEventCell", for: indexPath) as! DiscoveredEventTableViewCell
-        cell.setDiscoveredEvent(event)
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DiscoveredEventCell", for: indexPath) as? DiscoveredEventTableViewCell
+        cell!.setDiscoveredEvent(event)
+        return cell!
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

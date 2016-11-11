@@ -52,7 +52,7 @@ class ListEventsTableViewControllerTests: XCTestCase {
     func setupListOrdersViewController() {
         let bundle = Bundle.main
         let storyboard = UIStoryboard(name: "ListEvents", bundle: bundle)
-        sut = storyboard.instantiateViewController(withIdentifier: "ListEvents") as! ListEventsTableViewController
+        sut = storyboard.instantiateViewController(withIdentifier: "ListEvents") as? ListEventsTableViewController
     }
     
     func testShouldFetchOrdersWhenViewIsLoaded() {

@@ -23,7 +23,13 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutput {
     let dateFormat: DateFormatter
     let calendar: Calendar
 
-    init(wireframe: ListEventsWireframe, fomoId: String, output: ListEventsInteractorOutput, listEventsNetworkWorker: ListEventsNetworkWorkerProtocol, listEventsCacheWorker: ListEventsCacheWorkerProtocol, withDate: Date = Date(), withCalendar: Calendar = Calendar.current){
+    init(wireframe: ListEventsWireframe,
+         fomoId: String,
+         output: ListEventsInteractorOutput,
+         listEventsNetworkWorker: ListEventsNetworkWorkerProtocol,
+         listEventsCacheWorker: ListEventsCacheWorkerProtocol,
+         withDate: Date = Date(),
+         withCalendar: Calendar = Calendar.current){
         self.wireframe = wireframe
         self.fomoId = fomoId
         self.output = output
@@ -36,7 +42,7 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutput {
         dateFormat.timeZone = calendar.timeZone
     }
 
-    func fetchEvents(_ request: ListEvents_FetchEvents_Request) {
+    func fetchEvents(_ request: ListEvents.Fetch.Request) {
         
         // Get from cache
         let eventsFromCacheString = listEventsCacheWorker.fetch()
@@ -44,7 +50,7 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutput {
             let eventsFromCache: DiscoveredEventsResponse = Mapper<DiscoveredEventsResponse>().map(JSONString: eventsFromCacheString)!
             if let data = eventsFromCache.data {
                 allUpcomingEvents = filterToOngoingEvents(data, observingFrom: observingFrom)
-                let response = ListEvents_FetchEvents_Response(events: allUpcomingEvents)
+                let response = ListEvents.Fetch.Response(events: allUpcomingEvents)
                 self.output.presentFetchedEvents(response)
             }
         }
@@ -61,7 +67,7 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutput {
                 // save to cache
                 self.listEventsCacheWorker.save(discoveredEventsJsonPage)
                 
-                let response = ListEvents_FetchEvents_Response(events: self.allUpcomingEvents)
+                let response = ListEvents.Fetch.Response(events: self.allUpcomingEvents)
                 self.output.presentFetchedEvents(response)
             }
         }
@@ -110,7 +116,10 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutput {
         
         // if the current time is before 6am and the event started yesterday evening and had no end time
         let lastNight = allEvents.filter({
-            observingFrom.compare(today6am).rawValue < 0 && (calendar as NSCalendar).isDate($0.startTime as Date, equalTo: yesterday, toUnitGranularity: .day) && $0.startTime.compare(yesterday6pm).rawValue > 0 && $0.endTime==nil
+            observingFrom.compare(today6am).rawValue < 0
+                && (calendar as NSCalendar).isDate($0.startTime as Date, equalTo: yesterday, toUnitGranularity: .day)
+                && $0.startTime.compare(yesterday6pm).rawValue > 0
+                && $0.endTime==nil
         })
         filteredEvents.append(contentsOf: lastNight)
         
