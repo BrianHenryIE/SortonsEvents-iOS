@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CD497EC7F7B421D16F30E87 /* Pods_FOMO_UCD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36CF2249EF126ACF7C1BE04 /* Pods_FOMO_UCD.framework */; };
+		656414DB16D6EB63CEFE9085 /* Pods_FOMO_TCD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3618116F62AC71C54B105380 /* Pods_FOMO_TCD.framework */; };
 		A6141D591BB9F44F003150F1 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
 		A6141D851BB9F537003150F1 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
 		A618ED871DB3FE4A00281C17 /* DirectoryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A618ED861DB3FE4A00281C17 /* DirectoryViewControllerTests.swift */; };
@@ -237,7 +239,6 @@
 		A69186D11DCC543A00372A98 /* SourcePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A636D2731D0C8A8700FB9C62 /* SourcePage.swift */; };
 		A69186D21DCC543A00372A98 /* NewsViewControllerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B81DAE03C4003FBCE6 /* NewsViewControllerIO.swift */; };
 		A69186D31DCC543A00372A98 /* DirectoryInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C04F731DB456D90009C9BF /* DirectoryInteractorOutput.swift */; };
-		A69186D51DCC543A00372A98 /* Pods_FOMO_TCD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3618116F62AC71C54B105380 /* Pods_FOMO_TCD.framework */; };
 		A69186D71DCC543A00372A98 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186A71DCC50FA00372A98 /* fomo.plist */; };
 		A69186DA1DCC543A00372A98 /* DirectoryImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C61D6E09E200A66C85 /* DirectoryImages.xcassets */; };
 		A69186DB1DCC543A00372A98 /* Directory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65B23BC1D6DFB2400A66C85 /* Directory.storyboard */; };
@@ -282,7 +283,6 @@
 		A691870E1DCC54BD00372A98 /* SourcePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A636D2731D0C8A8700FB9C62 /* SourcePage.swift */; };
 		A691870F1DCC54BD00372A98 /* NewsViewControllerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B81DAE03C4003FBCE6 /* NewsViewControllerIO.swift */; };
 		A69187101DCC54BD00372A98 /* DirectoryInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C04F731DB456D90009C9BF /* DirectoryInteractorOutput.swift */; };
-		A69187121DCC54BD00372A98 /* Pods_FOMO_TCD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3618116F62AC71C54B105380 /* Pods_FOMO_TCD.framework */; };
 		A69187141DCC54BD00372A98 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186A71DCC50FA00372A98 /* fomo.plist */; };
 		A69187171DCC54BD00372A98 /* DirectoryImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C61D6E09E200A66C85 /* DirectoryImages.xcassets */; };
 		A69187181DCC54BD00372A98 /* Directory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65B23BC1D6DFB2400A66C85 /* Directory.storyboard */; };
@@ -327,7 +327,6 @@
 		A691874B1DCC551000372A98 /* NewsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CEE4F1DB5C5EF0059EF52 /* NewsInteractorOutput.swift */; };
 		A691874C1DCC551000372A98 /* DirectoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E10C611DB41643007854F8 /* DirectoryTableViewCell.swift */; };
 		A691874D1DCC551000372A98 /* DirectoryInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C04F731DB456D90009C9BF /* DirectoryInteractorOutput.swift */; };
-		A691874F1DCC551000372A98 /* Pods_FOMO_UCD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36CF2249EF126ACF7C1BE04 /* Pods_FOMO_UCD.framework */; };
 		A69187521DCC551000372A98 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186A71DCC50FA00372A98 /* fomo.plist */; };
 		A69187531DCC551000372A98 /* Directory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65B23BC1D6DFB2400A66C85 /* Directory.storyboard */; };
 		A69187541DCC551000372A98 /* DirectoryImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C61D6E09E200A66C85 /* DirectoryImages.xcassets */; };
@@ -389,7 +388,6 @@
 		A691879D1DCC591E00372A98 /* SourcePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A636D2731D0C8A8700FB9C62 /* SourcePage.swift */; };
 		A691879E1DCC591E00372A98 /* NewsViewControllerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B81DAE03C4003FBCE6 /* NewsViewControllerIO.swift */; };
 		A691879F1DCC591E00372A98 /* DirectoryInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C04F731DB456D90009C9BF /* DirectoryInteractorOutput.swift */; };
-		A69187A11DCC591E00372A98 /* Pods_FOMO_TCD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3618116F62AC71C54B105380 /* Pods_FOMO_TCD.framework */; };
 		A69187A31DCC591E00372A98 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186A71DCC50FA00372A98 /* fomo.plist */; };
 		A69187A41DCC591E00372A98 /* DirectoryImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C61D6E09E200A66C85 /* DirectoryImages.xcassets */; };
 		A69187A51DCC591E00372A98 /* Directory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65B23BC1D6DFB2400A66C85 /* Directory.storyboard */; };
@@ -481,13 +479,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BDEEA26D3AA970C2A450CD6 /* Pods-FOMO UCD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO UCD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO UCD/Pods-FOMO UCD.debug.xcconfig"; sourceTree = "<group>"; };
 		1AE0A1C3BF300FB4A0A7584E /* Pods_SortonsEventsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SortonsEventsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F158784AB10985A6D867B91 /* Pods-FOMO UCD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO UCD.release.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO UCD/Pods-FOMO UCD.release.xcconfig"; sourceTree = "<group>"; };
 		3618116F62AC71C54B105380 /* Pods_FOMO_TCD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FOMO_TCD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		38CDB4A6C901C83569A2270D /* Pods-FOMO TCD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO TCD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD.debug.xcconfig"; sourceTree = "<group>"; };
 		4698B2409D034D0FB9B0DC9D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BD25BE71C9C157420C7DB02 /* Pods-FOMO UCD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO UCD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO UCD/Pods-FOMO UCD.debug.xcconfig"; sourceTree = "<group>"; };
+		676AE7F75C85DD3D40CC62B9 /* Pods-FOMO TCD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO TCD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD.debug.xcconfig"; sourceTree = "<group>"; };
 		786DDF9E2A825C011E1D3806 /* Pods-SortonsEventsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SortonsEventsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SortonsEventsTests/Pods-SortonsEventsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		95CB73BEA22FC16F0073EC95 /* Pods-FOMO TCD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO TCD.release.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD.release.xcconfig"; sourceTree = "<group>"; };
 		A4B45A6EE4E167955EE9B517 /* Pods-SortonsEventsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SortonsEventsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SortonsEventsTests/Pods-SortonsEventsTests.release.xcconfig"; sourceTree = "<group>"; };
 		A6141D5F1BB9F44F003150F1 /* FOMO TCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO TCD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6141D8B1BB9F537003150F1 /* FOMO UCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO UCC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -586,7 +584,7 @@
 		A6E10C611DB41643007854F8 /* DirectoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryTableViewCell.swift; sourceTree = "<group>"; };
 		A6E10C631DB44F5C007854F8 /* DirectoryNetworkWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryNetworkWorker.swift; sourceTree = "<group>"; };
 		B36CF2249EF126ACF7C1BE04 /* Pods_FOMO_UCD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FOMO_UCD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0F5F7CF72ADF21C40EE9530 /* Pods-FOMO UCD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO UCD.release.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO UCD/Pods-FOMO UCD.release.xcconfig"; sourceTree = "<group>"; };
+		BF815C8B5C943A016518E066 /* Pods-FOMO TCD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO TCD.release.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -595,6 +593,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBDBCE0503E60E29966304F1 /* Pods_FOMO_TCD.framework in Frameworks */,
+				656414DB16D6EB63CEFE9085 /* Pods_FOMO_TCD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,6 +609,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEE3A7AAA7AE77B15B4F1409 /* Pods_FOMO_UCD.framework in Frameworks */,
+				2CD497EC7F7B421D16F30E87 /* Pods_FOMO_UCD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,7 +624,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A69186D51DCC543A00372A98 /* Pods_FOMO_TCD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,7 +631,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A69187121DCC54BD00372A98 /* Pods_FOMO_TCD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,7 +638,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A691874F1DCC551000372A98 /* Pods_FOMO_UCD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,7 +645,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A69187A11DCC591E00372A98 /* Pods_FOMO_TCD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,10 +671,10 @@
 			children = (
 				786DDF9E2A825C011E1D3806 /* Pods-SortonsEventsTests.debug.xcconfig */,
 				A4B45A6EE4E167955EE9B517 /* Pods-SortonsEventsTests.release.xcconfig */,
-				38CDB4A6C901C83569A2270D /* Pods-FOMO TCD.debug.xcconfig */,
-				95CB73BEA22FC16F0073EC95 /* Pods-FOMO TCD.release.xcconfig */,
-				0BDEEA26D3AA970C2A450CD6 /* Pods-FOMO UCD.debug.xcconfig */,
-				C0F5F7CF72ADF21C40EE9530 /* Pods-FOMO UCD.release.xcconfig */,
+				676AE7F75C85DD3D40CC62B9 /* Pods-FOMO TCD.debug.xcconfig */,
+				BF815C8B5C943A016518E066 /* Pods-FOMO TCD.release.xcconfig */,
+				5BD25BE71C9C157420C7DB02 /* Pods-FOMO UCD.debug.xcconfig */,
+				1F158784AB10985A6D867B91 /* Pods-FOMO UCD.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1113,7 +1109,7 @@
 				A6141D421BB9F44F003150F1 /* Sources */,
 				A6141D521BB9F44F003150F1 /* Frameworks */,
 				A6141D541BB9F44F003150F1 /* Resources */,
-				SWIFCLEANCUSTOMRUNSCRIPT /* Swift-Clean Run Script */,
+				SWIFCLEANCUSTOMRUNSCRIPT /* Code formatting */,
 				DE49FEAB7DE8B19DD9416EB4 /* [CP] Embed Pods Frameworks */,
 				9D0C33B60488317A32CF499F /* [CP] Copy Pods Resources */,
 			);
@@ -1133,7 +1129,7 @@
 				A6141D6E1BB9F537003150F1 /* Sources */,
 				A6141D7E1BB9F537003150F1 /* Frameworks */,
 				A6141D801BB9F537003150F1 /* Resources */,
-				SWIFCLEANCUSTOMRUNSCRIPT /* Swift-Clean Run Script */,
+				SWIFCLEANCUSTOMRUNSCRIPT /* Code formatting */,
 			);
 			buildRules = (
 			);
@@ -1153,7 +1149,7 @@
 				A62BD62A1B9E1C4500E928E5 /* Frameworks */,
 				A62BD62C1B9E1C4500E928E5 /* Resources */,
 				A632F9E81DB04CA200B23A76 /* ShellScript */,
-				SWIFCLEANCUSTOMRUNSCRIPT /* Swift-Clean Run Script */,
+				SWIFCLEANCUSTOMRUNSCRIPT /* Code formatting */,
 				2A57D2A3817DA056AB080CA9 /* [CP] Embed Pods Frameworks */,
 				5DB778E1477F85C47F567ACE /* [CP] Copy Pods Resources */,
 			);
@@ -1173,7 +1169,7 @@
 				A63B32A21C68AFA400C46020 /* Sources */,
 				A63B32B21C68AFA400C46020 /* Frameworks */,
 				A63B32B41C68AFA400C46020 /* Resources */,
-				SWIFCLEANCUSTOMRUNSCRIPT /* Swift-Clean Run Script */,
+				SWIFCLEANCUSTOMRUNSCRIPT /* Code formatting */,
 			);
 			buildRules = (
 			);
@@ -1188,13 +1184,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A69186E51DCC543A00372A98 /* Build configuration list for PBXNativeTarget "FOMO NUIM" */;
 			buildPhases = (
-				A69186AE1DCC543A00372A98 /* [CP] Check Pods Manifest.lock */,
 				A69186AF1DCC543A00372A98 /* Sources */,
 				A69186D41DCC543A00372A98 /* Frameworks */,
 				A69186D61DCC543A00372A98 /* Resources */,
-				A69186E21DCC543A00372A98 /* Swift-Clean Run Script */,
-				A69186E31DCC543A00372A98 /* [CP] Embed Pods Frameworks */,
-				A69186E41DCC543A00372A98 /* [CP] Copy Pods Resources */,
+				A69186E21DCC543A00372A98 /* Code formatting */,
 			);
 			buildRules = (
 			);
@@ -1209,13 +1202,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A69187221DCC54BD00372A98 /* Build configuration list for PBXNativeTarget "FOMO DIT" */;
 			buildPhases = (
-				A69186EB1DCC54BD00372A98 /* [CP] Check Pods Manifest.lock */,
 				A69186EC1DCC54BD00372A98 /* Sources */,
 				A69187111DCC54BD00372A98 /* Frameworks */,
 				A69187131DCC54BD00372A98 /* Resources */,
 				A691871F1DCC54BD00372A98 /* Swift-Clean Run Script */,
-				A69187201DCC54BD00372A98 /* [CP] Embed Pods Frameworks */,
-				A69187211DCC54BD00372A98 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1230,14 +1220,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A69187611DCC551000372A98 /* Build configuration list for PBXNativeTarget "FOMO UL" */;
 			buildPhases = (
-				A69187281DCC551000372A98 /* [CP] Check Pods Manifest.lock */,
 				A69187291DCC551000372A98 /* Sources */,
 				A691874E1DCC551000372A98 /* Frameworks */,
 				A69187501DCC551000372A98 /* Resources */,
 				A691875D1DCC551000372A98 /* ShellScript */,
-				A691875E1DCC551000372A98 /* Swift-Clean Run Script */,
-				A691875F1DCC551000372A98 /* [CP] Embed Pods Frameworks */,
-				A69187601DCC551000372A98 /* [CP] Copy Pods Resources */,
+				A691875E1DCC551000372A98 /* Code formatting */,
 			);
 			buildRules = (
 			);
@@ -1252,13 +1239,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A69187B11DCC591E00372A98 /* Build configuration list for PBXNativeTarget "FOMO QUB" */;
 			buildPhases = (
-				A691877A1DCC591E00372A98 /* [CP] Check Pods Manifest.lock */,
 				A691877B1DCC591E00372A98 /* Sources */,
 				A69187A01DCC591E00372A98 /* Frameworks */,
 				A69187A21DCC591E00372A98 /* Resources */,
-				A69187AE1DCC591E00372A98 /* Swift-Clean Run Script */,
-				A69187AF1DCC591E00372A98 /* [CP] Embed Pods Frameworks */,
-				A69187B01DCC591E00372A98 /* [CP] Copy Pods Resources */,
+				A69187AE1DCC591E00372A98 /* Code formatting */,
 			);
 			buildRules = (
 			);
@@ -1297,7 +1281,7 @@
 				A6C613071A91492500A5F082 /* Sources */,
 				A6C613081A91492500A5F082 /* Frameworks */,
 				A6C613091A91492500A5F082 /* Resources */,
-				SWIFCLEANCUSTOMRUNSCRIPT /* Swift-Clean Run Script */,
+				SWIFCLEANCUSTOMRUNSCRIPT /* Code formatting */,
 			);
 			buildRules = (
 			);
@@ -1658,79 +1642,19 @@
 			shellPath = /bin/sh;
 			shellScript = "if [[ -z ${SKIP_SWIFTCLEAN} || ${SKIP_SWIFTCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" || -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" ]]; then\n\"${LOCAL_APPS_DIR}\"/Swift-Clean.app/Contents/Resources/SwiftClean.app/Contents/MacOS/SwiftClean \"${SRCROOT}\"?@autoFix\nelse\necho \"warning: You have to install and set up Swift-Clean to use its features!\"\nfi\nfi";
 		};
-		A69186AE1DCC543A00372A98 /* [CP] Check Pods Manifest.lock */ = {
+		A69186E21DCC543A00372A98 /* Code formatting */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		A69186E21DCC543A00372A98 /* Swift-Clean Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Swift-Clean Run Script";
+			name = "Code formatting";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "if [[ -z ${SKIP_SWIFTCLEAN} || ${SKIP_SWIFTCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" || -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" ]]; then \n\"${LOCAL_APPS_DIR}\"/Swift-Clean.app/Contents/Resources/SwiftClean.app/Contents/MacOS/SwiftClean \"${SRCROOT}\"?@autoFix \nfi\nfi";
-		};
-		A69186E31DCC543A00372A98 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A69186E41DCC543A00372A98 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A69186EB1DCC54BD00372A98 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		A691871F1DCC54BD00372A98 /* Swift-Clean Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1744,52 +1668,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "if [[ -z ${SKIP_SWIFTCLEAN} || ${SKIP_SWIFTCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" || -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" ]]; then \n\"${LOCAL_APPS_DIR}\"/Swift-Clean.app/Contents/Resources/SwiftClean.app/Contents/MacOS/SwiftClean \"${SRCROOT}\"?@autoFix \nfi\nfi";
-		};
-		A69187201DCC54BD00372A98 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A69187211DCC54BD00372A98 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A69187281DCC551000372A98 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		A691875D1DCC551000372A98 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1804,108 +1683,33 @@
 			shellPath = /bin/sh;
 			shellScript = "if [[ -z ${SKIP_SWIFTCLEAN} || ${SKIP_SWIFTCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" || -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" ]]; then\n\"${LOCAL_APPS_DIR}\"/Swift-Clean.app/Contents/Resources/SwiftClean.app/Contents/MacOS/SwiftClean \"${SRCROOT}\"?@autoFix\nelse\necho \"warning: You have to install and set up Swift-Clean to use its features!\"\nfi\nfi";
 		};
-		A691875E1DCC551000372A98 /* Swift-Clean Run Script */ = {
+		A691875E1DCC551000372A98 /* Code formatting */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Swift-Clean Run Script";
+			name = "Code formatting";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "if [[ -z ${SKIP_SWIFTCLEAN} || ${SKIP_SWIFTCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" || -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" ]]; then \n\"${LOCAL_APPS_DIR}\"/Swift-Clean.app/Contents/Resources/SwiftClean.app/Contents/MacOS/SwiftClean \"${SRCROOT}\"?@autoFix \nfi\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
-		A691875F1DCC551000372A98 /* [CP] Embed Pods Frameworks */ = {
+		A69187AE1DCC591E00372A98 /* Code formatting */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO UCD/Pods-FOMO UCD-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A69187601DCC551000372A98 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO UCD/Pods-FOMO UCD-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A691877A1DCC591E00372A98 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		A69187AE1DCC591E00372A98 /* Swift-Clean Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Swift-Clean Run Script";
+			name = "Code formatting";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "if [[ -z ${SKIP_SWIFTCLEAN} || ${SKIP_SWIFTCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" || -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" ]]; then \n\"${LOCAL_APPS_DIR}\"/Swift-Clean.app/Contents/Resources/SwiftClean.app/Contents/MacOS/SwiftClean \"${SRCROOT}\"?@autoFix \nfi\nfi";
-		};
-		A69187AF1DCC591E00372A98 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A69187B01DCC591E00372A98 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD-resources.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		BBE99D1633940454CA81288B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1967,19 +1771,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		SWIFCLEANCUSTOMRUNSCRIPT /* Swift-Clean Run Script */ = {
+		SWIFCLEANCUSTOMRUNSCRIPT /* Code formatting */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Swift-Clean Run Script";
+			name = "Code formatting";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "if [[ -z ${SKIP_SWIFTCLEAN} || ${SKIP_SWIFTCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" || -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" ]]; then \n\"${LOCAL_APPS_DIR}\"/Swift-Clean.app/Contents/Resources/SwiftClean.app/Contents/MacOS/SwiftClean \"${SRCROOT}\"?@autoFix \nfi\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2407,7 +2211,7 @@
 /* Begin XCBuildConfiguration section */
 		A6141D5D1BB9F44F003150F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38CDB4A6C901C83569A2270D /* Pods-FOMO TCD.debug.xcconfig */;
+			baseConfigurationReference = 676AE7F75C85DD3D40CC62B9 /* Pods-FOMO TCD.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconTCD;
@@ -2436,7 +2240,7 @@
 		};
 		A6141D5E1BB9F44F003150F1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95CB73BEA22FC16F0073EC95 /* Pods-FOMO TCD.release.xcconfig */;
+			baseConfigurationReference = BF815C8B5C943A016518E066 /* Pods-FOMO TCD.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconTCD;
@@ -2516,7 +2320,7 @@
 		};
 		A62BD6351B9E1C4500E928E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BDEEA26D3AA970C2A450CD6 /* Pods-FOMO UCD.debug.xcconfig */;
+			baseConfigurationReference = 5BD25BE71C9C157420C7DB02 /* Pods-FOMO UCD.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconUCD;
@@ -2549,7 +2353,7 @@
 		};
 		A62BD6361B9E1C4500E928E5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0F5F7CF72ADF21C40EE9530 /* Pods-FOMO UCD.release.xcconfig */;
+			baseConfigurationReference = 1F158784AB10985A6D867B91 /* Pods-FOMO UCD.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconUCD;
@@ -2635,7 +2439,6 @@
 		};
 		A69186E61DCC543A00372A98 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38CDB4A6C901C83569A2270D /* Pods-FOMO TCD.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconNUIM;
@@ -2665,7 +2468,6 @@
 		};
 		A69186E71DCC543A00372A98 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95CB73BEA22FC16F0073EC95 /* Pods-FOMO TCD.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconNUIM;
@@ -2694,7 +2496,6 @@
 		};
 		A69187231DCC54BD00372A98 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38CDB4A6C901C83569A2270D /* Pods-FOMO TCD.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDIT;
@@ -2724,7 +2525,6 @@
 		};
 		A69187241DCC54BD00372A98 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95CB73BEA22FC16F0073EC95 /* Pods-FOMO TCD.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDIT;
@@ -2753,7 +2553,6 @@
 		};
 		A69187621DCC551000372A98 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BDEEA26D3AA970C2A450CD6 /* Pods-FOMO UCD.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconUL;
@@ -2787,7 +2586,6 @@
 		};
 		A69187631DCC551000372A98 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0F5F7CF72ADF21C40EE9530 /* Pods-FOMO UCD.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconUL;
@@ -2820,7 +2618,6 @@
 		};
 		A69187B21DCC591E00372A98 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38CDB4A6C901C83569A2270D /* Pods-FOMO TCD.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconQUB;
@@ -2850,7 +2647,6 @@
 		};
 		A69187B31DCC591E00372A98 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95CB73BEA22FC16F0073EC95 /* Pods-FOMO TCD.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconQUB;
