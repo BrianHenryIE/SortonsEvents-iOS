@@ -5,22 +5,22 @@ platform :ios, '9.0'
 project 'SortonsEvents'
 
 target 'FOMO UCD' do
-    pod 'ObjectMapper', '~> 2.2.1'
-    pod 'Alamofire', '~> 4.0'
-    pod 'AlamofireImage', '~> 3.1'
+    pod 'ObjectMapper', '= 2.2.1'
+    pod 'Alamofire', '= 4.0'
+    pod 'AlamofireImage', '= 3.1'
 end
 
 target 'FOMO TCD' do
-    pod 'ObjectMapper', '~> 2.2.1'
-    pod 'Alamofire', '~> 4.0'
-    pod 'AlamofireImage', '~> 3.1'
+    pod 'ObjectMapper', '= 2.2.1'
+    pod 'Alamofire', '= 4.0'
+    pod 'AlamofireImage', '= 3.1'
 end
 
 # Figure out which are really needed in the test classes – get @import testable working
 target 'SortonsEventsTests' do
-    pod 'Alamofire', '~> 4.0'
-    pod 'ObjectMapper', '~> 2.2.1'
-    pod 'AlamofireImage', '~> 3.1'
+    pod 'Alamofire', '= 4.0'
+    pod 'ObjectMapper', '= 2.2.1'
+    pod 'AlamofireImage', '= 3.1'
 end
 
 
