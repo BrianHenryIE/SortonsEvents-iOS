@@ -19,7 +19,7 @@ end
 # Figure out which are really needed in the test classes – get @import testable working
 target 'SortonsEventsTests' do
     pod 'Alamofire', '~> 4.0'
-    pod 'ObjectMapper', '~> 2.2'
+    pod 'ObjectMapper', '~> 2.2.1'
     pod 'AlamofireImage', '~> 3.1'
 end
 
