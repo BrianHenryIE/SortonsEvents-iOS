@@ -1,6 +1,5 @@
 before_install:
     - rvm use system
-    - sudo gem install cocoapods -v '1.0.1'  
 language: objective-c
 osx_image: xcode8
 xcode_project: SortonsEvents.xcodeproj
