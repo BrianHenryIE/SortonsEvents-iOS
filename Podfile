@@ -4,23 +4,23 @@ platform :ios, '9.0'
 
 project 'SortonsEvents'
 
+def common_pods
+    pod 'ObjectMapper', :git => 'https://github.com/Hearst-DD/ObjectMapper.git'
+    pod 'Alamofire',   :git => 'https://github.com/Alamofire/Alamofire.git'
+    pod 'AlamofireImage', :git => 'https://github.com/Alamofire/AlamofireImage.git'
+end
+
 target 'FOMO UCD' do
-    pod 'ObjectMapper', '= 2.2.1'
-    pod 'Alamofire', '= 4.0'
-    pod 'AlamofireImage', '= 3.1'
+    common_pods
 end
 
 target 'FOMO TCD' do
-    pod 'ObjectMapper', '= 2.2.1'
-    pod 'Alamofire', '= 4.0'
-    pod 'AlamofireImage', '= 3.1'
+    common_pods
 end
 
 # Figure out which are really needed in the test classes – get @import testable working
 target 'SortonsEventsTests' do
-    pod 'Alamofire', '= 4.0'
-    pod 'ObjectMapper', '= 2.2.1'
-    pod 'AlamofireImage', '= 3.1'
+    common_pods
 end
 
 
