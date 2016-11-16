@@ -1,4 +1,5 @@
-
+before_install:
+  - pod repo update
 language: objective-c
 osx_image: xcode8
 xcode_project: SortonsEvents.xcodeproj
