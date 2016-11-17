@@ -23,6 +23,9 @@ class RootViewController: RootViewControllerProtocol {
         newsWireframe.rootViewController = self
         let newsView = newsWireframe.newsView!
         
+        // Preload the webview
+        let _ = newsView.view
+        
         let directoryWireframe = DirectoryWireframe(fomoId: fomoId)
         directoryWireframe.rootViewController = self
         let directoryView = directoryWireframe.directoryView!
