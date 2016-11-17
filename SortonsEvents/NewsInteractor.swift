@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import WebKit
 
 class NewsInteractor: NewsViewControllerOutput {
     
@@ -18,6 +19,10 @@ class NewsInteractor: NewsViewControllerOutput {
         self.wireframe = wireframe
         self.fomoId = fomoId
         self.output = output
+    }
+    
+    func openUrl(url: URL) {
+        UIApplication.shared.openURL(url)
     }
     
     func setup(request: News.Fetch.Request) {

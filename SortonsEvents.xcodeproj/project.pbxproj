@@ -523,6 +523,7 @@
 		A68183D41D2ADD6200E45D35 /* ListEventsTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsTableViewControllerTests.swift; sourceTree = "<group>"; };
 		A68183D91D2AFFB900E45D35 /* ListEventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsTableViewController.swift; sourceTree = "<group>"; };
 		A68183DC1D2B009E00E45D35 /* ListEventsModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsModels.swift; sourceTree = "<group>"; };
+		A68A546C1DDD7E6100AF2E35 /* NewsInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsInteractorTests.swift; sourceTree = "<group>"; };
 		A69186781DCC4B2C00372A98 /* FOMODCU.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FOMODCU.plist; path = targets/FOMODCU.plist; sourceTree = "<group>"; };
 		A69186791DCC4B2C00372A98 /* FOMODIT.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FOMODIT.plist; path = targets/FOMODIT.plist; sourceTree = "<group>"; };
 		A691867A1DCC4B2C00372A98 /* FOMONUIM.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FOMONUIM.plist; path = targets/FOMONUIM.plist; sourceTree = "<group>"; };
@@ -899,6 +900,7 @@
 			children = (
 				A65CEE451DB5C4790059EF52 /* NewsViewControllerTests.swift */,
 				A65CEE4D1DB5C56B0059EF52 /* NewsPresenterTests.swift */,
+				A68A546C1DDD7E6100AF2E35 /* NewsInteractorTests.swift */,
 			);
 			name = News;
 			sourceTree = "<group>";
@@ -2141,6 +2143,7 @@
 				A618ED871DB3FE4A00281C17 /* DirectoryViewControllerTests.swift in Sources */,
 				A65CEE4E1DB5C56B0059EF52 /* NewsPresenterTests.swift in Sources */,
 				A6AAD3FE1D25B7E90097AF22 /* DiscoveredEventsResponseTests.swift in Sources */,
+				A68A546D1DDD7E6100AF2E35 /* NewsInteractorTests.swift in Sources */,
 				A6C45C071DA386E600FC57D5 /* FomoIdTest.swift in Sources */,
 				A6C04F721DB454730009C9BF /* DirectoryPresenterTests.swift in Sources */,
 				A69DBF591C8AE8E3005064F7 /* ListEventsInteractorTests.swift in Sources */,

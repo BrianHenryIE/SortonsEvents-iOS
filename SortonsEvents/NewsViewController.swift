@@ -16,17 +16,19 @@ import UIKit
 
 class NewsViewController: UIViewController, NewsPresenterOutput {
 
-    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var webview: UIWebView!
     
     var output: NewsViewControllerOutput!
+    var newsUrl: URLRequest!
    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let request = News.Fetch.Request()
-        
-        webView.scrollView.decelerationRate = UIScrollViewDecelerationRateNormal;
 
+        webview.delegate = self
+        webview.scrollView.decelerationRate = UIScrollViewDecelerationRateNormal;
+        
         output.setup(request: request)
     }
 
@@ -35,7 +37,8 @@ class NewsViewController: UIViewController, NewsPresenterOutput {
     }
     
     func display(viewModel: News.ViewModel) {
-        webView.loadRequest(viewModel.newsUrl)
+        newsUrl = viewModel.newsUrl
+        webview.loadRequest(newsUrl)
     }
 
     @IBAction func changeToNextTabLeft(_ sender: Any) {
@@ -45,5 +48,17 @@ class NewsViewController: UIViewController, NewsPresenterOutput {
     @IBAction func changeToNextTabRight(_ sender: Any) {
         output.changeToNextTabRight()
     }
+}
+
+extension NewsViewController: UIWebViewDelegate {
     
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        switch navigationType {
+        case .linkClicked:
+            output.openUrl(url: request.url!)
+            return false
+        default:
+            return true
+        }
+    }
 }
