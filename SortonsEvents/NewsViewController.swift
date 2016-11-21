@@ -29,14 +29,14 @@ class NewsViewController: UIViewController, NewsPresenterOutput {
         webview.delegate = self
         webview.scrollView.decelerationRate = UIScrollViewDecelerationRateNormal;
         
-        output.setup(request: request)
+        output.setup(request)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    func display(viewModel: News.ViewModel) {
+    func display(_ viewModel: News.ViewModel) {
         newsUrl = viewModel.newsUrl
         webview.loadRequest(newsUrl)
     }
@@ -55,7 +55,7 @@ extension NewsViewController: UIWebViewDelegate {
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         switch navigationType {
         case .linkClicked:
-            output.openUrl(url: request.url!)
+            output.openUrl(request.url!)
             return false
         default:
             return true

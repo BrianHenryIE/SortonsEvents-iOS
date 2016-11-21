@@ -8,9 +8,9 @@
 import WebKit
 
 protocol NewsViewControllerOutput {
-    func openUrl(url: URL)
+    func openUrl(_ url: URL)
     
-    func setup(request: News.Fetch.Request)
+    func setup(_ request: News.Fetch.Request)
     
     func changeToNextTabLeft()
     
@@ -18,5 +18,5 @@ protocol NewsViewControllerOutput {
 }
 
 protocol NewsPresenterOutput {
-    func display(viewModel: News.ViewModel)
+    func display(_ viewModel: News.ViewModel)
 }

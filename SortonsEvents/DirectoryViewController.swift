@@ -28,16 +28,16 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
         gestureRecognizer.delegate = self
         
         let request = Directory_FetchDirectory_Request()
-        output.fetchDirectory(withRequest: request)
+        output.fetchDirectory(request)
     }
     
 // MARK: DirectoryPresenterOutput
-    func presentFetchedDirectory(viewModel: DirectoryViewModel) {
+    func presentFetchedDirectory(_ viewModel: DirectoryViewModel) {
         data = viewModel.directory
         tableViewOutlet.reloadData()
     }
     
-    func displayFetchDirectoryFetchError(viewModel: DirectoryViewModel) {
+    func displayFetchDirectoryFetchError(_ viewModel: DirectoryViewModel) {
         
     }
     
@@ -53,19 +53,19 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let sourcePage = data[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "DirectoryPageCell", for: indexPath) as! DirectoryTableViewCell
-        cell.setDirectorySourcePage(directoryPage: sourcePage)
+        cell.setDirectorySourcePage(sourcePage)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = indexPath.row
-        output.displaySelectedPageFrom(rowNumber: row)
+        output.displaySelectedPageFrom(row)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
 // MARK: UISearchBar
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        output.filterDirectoryTo(searchBarInput: searchText)
+        output.filterDirectoryTo(searchText)
     }
     
 // MARK: UIGestureRecogniserDelegate

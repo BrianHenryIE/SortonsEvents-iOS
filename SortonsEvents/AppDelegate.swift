@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let frame = UIScreen.main.bounds
         window = UIWindow(frame: frame)
 
-        let fomoId = FomoId.numberFromBundle(bundleName: Bundle.main.bundleIdentifier!)!
+        let fomoId = FomoId()
 
         _ = RootViewController(window: window!, fomoId: fomoId)
 

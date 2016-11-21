@@ -13,7 +13,7 @@ class RootViewController: RootViewControllerProtocol {
     
     let tabBarController = UITabBarController()
     
-    init(window: UIWindow, fomoId: String) {
+    init(window: UIWindow, fomoId: FomoId) {
         
         let listEventsWireframe = ListEventsWireframe(fomoId: fomoId)
         listEventsWireframe.rootViewController = self
@@ -30,10 +30,13 @@ class RootViewController: RootViewControllerProtocol {
         directoryWireframe.rootViewController = self
         let directoryView = directoryWireframe.directoryView!
         
+        let metaWireframe = MetaWireframe(fomoId: fomoId)
+        metaWireframe.rootViewController = self
+        let metaView = metaWireframe.metaView!
         
         tabBarController.view.backgroundColor = UIColor.white
         
-        let viewControllers = [listEventsView, newsView, directoryView]
+        let viewControllers = [listEventsView, newsView, directoryView, metaView]
         
         tabBarController.viewControllers = viewControllers
         window.rootViewController = tabBarController
@@ -42,6 +45,7 @@ class RootViewController: RootViewControllerProtocol {
         let firstImage = UIImage(named: "ListEventsTabBarIcon")
         let secondImage = UIImage(named: "NewsTabBarIcon")
         let thirdImage = UIImage(named: "DirectoryTabBarIcon")
+        let metaImage = UIImage(named: "MetaTabBarIcon")
         
         listEventsView.tabBarItem = UITabBarItem(
             title: "Events",
@@ -58,6 +62,10 @@ class RootViewController: RootViewControllerProtocol {
             image: thirdImage,
             tag: 3)
         
+        metaView.tabBarItem = UITabBarItem(
+            title: "About",
+            image: metaImage,
+            tag: 4)
     }
     
     func changeToNextTabLeft() {

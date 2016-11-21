@@ -8,26 +8,17 @@
 
 import UIKit
 
-class FomoId: NSObject {
+struct FomoId {
 
-    class func numberFromBundle(bundleName: String) -> String? {
-        
-        // fomo.plist
-        // root/clientpages/ucd
-        
-        if let path = Bundle.main.path(forResource: "fomo", ofType: "plist"), let dict = NSDictionary(contentsOfFile: path) as? [String: AnyObject] {
-            
-            let clientPages: [String: String] = dict["clientpages"] as! [String: String]
-
-            let tlaArray = bundleName.characters.split{$0 == "."}.map(String.init)
-            
-            let tla = tlaArray[3]
-            
-            return clientPages[tla]!
-            
-        }
-        
-        return nil
-    }
+    let id: String
+    let name: String
+    let shortName: String
+    let appStoreId: String
     
+    init() {
+        id = Bundle.main.infoDictionary?["FomoId"] as! String
+        name = Bundle.main.infoDictionary?["FomoName"] as! String
+        shortName = Bundle.main.infoDictionary?["ShortName"] as! String
+        appStoreId = Bundle.main.infoDictionary?["AppStoreId"] as! String
+    }
 }

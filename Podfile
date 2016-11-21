@@ -18,6 +18,10 @@ target 'FOMO TCD' do
     all_pods
 end
 
+target 'FOMO DCU' do
+    all_pods
+end
+
 # Figure out which are really needed in the test classes – get @import testable working
 target 'SortonsEventsTests' do
     all_pods

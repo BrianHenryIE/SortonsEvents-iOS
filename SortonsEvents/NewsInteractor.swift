@@ -21,11 +21,11 @@ class NewsInteractor: NewsViewControllerOutput {
         self.output = output
     }
     
-    func openUrl(url: URL) {
+    func openUrl(_ url: URL) {
         UIApplication.shared.openURL(url)
     }
     
-    func setup(request: News.Fetch.Request) {
+    func setup(_ request: News.Fetch.Request) {
         output.setFomoId(fomoId)
     }
     
