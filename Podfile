@@ -22,6 +22,12 @@ target 'FOMO DCU' do
     all_pods
 end
 
+target 'FOMO TCD' do
+    pod 'ObjectMapper', '~> 2.0'
+    pod 'Alamofire', '~> 4.0'
+    pod 'AlamofireImage', '~> 3.0'
+end
+
 # Figure out which are really needed in the test classes – get @import testable working
 target 'SortonsEventsTests' do
     all_pods

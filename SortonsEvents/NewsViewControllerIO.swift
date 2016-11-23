@@ -9,11 +9,11 @@ import WebKit
 
 protocol NewsViewControllerOutput {
     func openUrl(_ url: URL)
-    
+
     func setup(_ request: News.Fetch.Request)
-    
+
     func changeToNextTabLeft()
-    
+
     func changeToNextTabRight()
 }
 

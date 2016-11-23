@@ -60,5 +60,5 @@ extension NewsViewController: UIWebViewDelegate {
         default:
             return true
         }
-    }
+    }    
 }

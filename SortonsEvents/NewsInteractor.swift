@@ -22,6 +22,9 @@ class NewsInteractor: NewsViewControllerOutput {
     }
     
     func openUrl(_ url: URL) {
+        
+        NSLog("url: \(url.absoluteString)")
+        
         UIApplication.shared.openURL(url)
     }
     

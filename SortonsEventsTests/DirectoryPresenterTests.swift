@@ -15,12 +15,12 @@ class ViewControllerSpy: DirectoryPresenterOutput {
     var viewModel: DirectoryViewModel?
     var presentFetchedDirectoryCalled = false
     
-    func presentFetchedDirectory(viewModel: DirectoryViewModel) {
+    func presentFetchedDirectory(_ viewModel: DirectoryViewModel) {
         presentFetchedDirectoryCalled = true
         self.viewModel = viewModel
     }
     
-    func displayFetchDirectoryFetchError(viewModel: DirectoryViewModel) {
+    func displayFetchDirectoryFetchError(_ viewModel: DirectoryViewModel) {
         // TODO
     }
 }
@@ -49,7 +49,7 @@ class DirectoryPresenterTests: XCTestCase {
         }
         let tcdEvents: ClientPageData = Mapper<ClientPageData>().map(JSONString: content)!
         
-        sut.presentFetchedDirectory(directory: Directory_FetchDirectory_Response(directory: tcdEvents.includedPages))
+        sut.presentFetchedDirectory(Directory_FetchDirectory_Response(directory: tcdEvents.includedPages))
         
         XCTAssert(spy.presentFetchedDirectoryCalled, "Presenter did not pass anything to view")
         
