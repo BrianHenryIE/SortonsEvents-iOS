@@ -26,11 +26,11 @@ class DirectoryViewControllerOutputSpy: DirectoryViewControllerOutput {
     var displaySelectedPageCalled = false
     var changeToNextTabLeftCalled = false
     
-    func fetchDirectory(withRequest: Directory_FetchDirectory_Request) {
+    func fetchDirectory(_ withRequest: Directory_FetchDirectory_Request) {
         fetchDirectoryCalled = true
     }
     
-    func filterDirectoryTo(searchBarInput: String) {
+    func filterDirectoryTo(_ searchBarInput: String) {
         filterDirectoryToCalled = true
     }
     

@@ -28,6 +28,7 @@
                         <tabBarItem image="ListEventsTabBarIcon" id="103-1e-OPF"/>
                         <tabBarItem title="" image="NewsTabBarIcon" id="4Lq-wN-45N"/>
                         <tabBarItem image="DirectoryTabBarIcon" id="6pb-dv-hgT"/>
+                        <tabBarItem title="" image="MetaTabBarIcon" id="yeZ-OB-BUM"/>
                     </items>
                 </tabBar>
             </subviews>
@@ -48,6 +49,7 @@
     <resources>
         <image name="DirectoryTabBarIcon" width="25" height="25"/>
         <image name="ListEventsTabBarIcon" width="25" height="25"/>
+        <image name="MetaTabBarIcon" width="25" height="25"/>
         <image name="NewsTabBarIcon" width="25" height="25"/>
     </resources>
 </document>

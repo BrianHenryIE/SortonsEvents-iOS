@@ -13,7 +13,7 @@ class NewsPresenterOutputSpy: NewsPresenterOutput {
     
     var displayCalled = false
     var url: String?
-    func display(viewModel: News.ViewModel) {
+    func display(_ viewModel: News.ViewModel) {
         displayCalled = true
         url = viewModel.newsUrl.url?.absoluteString
     }

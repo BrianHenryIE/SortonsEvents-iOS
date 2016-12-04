@@ -26,7 +26,7 @@ class NewsPresenter: NewsInteractorOutput {
         
         let viewModel = News.ViewModel(newsUrl: urlRequest)
         
-        output.display(viewModel: viewModel)
+        output.display(viewModel)
         
         // When the view is preloaded, the content is loaded at the wrong width, so I'm hiding the view until I've told it to refresh (and it will at least be cached)
         //        self.webView.hidden = YES;

@@ -31,7 +31,7 @@ class DirectoryInteractor: DirectoryViewControllerOutput {
         networkWorker = network
     }
     
-    func fetchDirectory(withRequest: Directory_FetchDirectory_Request) {
+    func fetchDirectory(_ withRequest: Directory_FetchDirectory_Request) {
         
         if let cacheString = cacheWorker.fetch() {
             let directoryFromCache: ClientPageData = Mapper<ClientPageData>().map(JSONString: cacheString)!
@@ -51,15 +51,15 @@ class DirectoryInteractor: DirectoryViewControllerOutput {
         })
     }
 
-    func filterDirectoryTo(searchBarInput: String) {
+    func filterDirectoryTo(_ searchBarInput: String) {
         currentFilter = searchBarInput.lowercased()
         outputDirectoryToPresenter()
     }
     
-    private func outputDirectoryToPresenter() {
+    fileprivate func outputDirectoryToPresenter() {
         // filter directory using currentfilter and save to displayedDirectory
         
-        if currentFilter.trimmingCharacters(in: NSCharacterSet.whitespaces) != "" {
+        if currentFilter.trimmingCharacters(in: CharacterSet.whitespaces) != "" {
                 displayedDirectory = directory.filter({
                     ($0.name.lowercased()).contains(currentFilter)
                 })
@@ -68,10 +68,10 @@ class DirectoryInteractor: DirectoryViewControllerOutput {
         }
         
         let response = Directory_FetchDirectory_Response(directory: displayedDirectory)
-        self.output.presentFetchedDirectory(directory: response)
+        self.output.presentFetchedDirectory(response)
     }
     
-    func displaySelectedPageFrom(rowNumber: Int) {
+    func displaySelectedPageFrom(_ rowNumber: Int) {
         
         let fbId = displayedDirectory[rowNumber].fbPageId!
         

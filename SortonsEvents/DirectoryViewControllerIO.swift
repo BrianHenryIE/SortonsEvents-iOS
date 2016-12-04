@@ -11,17 +11,17 @@ import UIKit
 
 // View input
 protocol DirectoryPresenterOutput {
-    func presentFetchedDirectory(viewModel: DirectoryViewModel)
-    
-    func displayFetchDirectoryFetchError(viewModel: DirectoryViewModel)
+    func presentFetchedDirectory(_ viewModel: DirectoryViewModel)
+
+    func displayFetchDirectoryFetchError(_ viewModel: DirectoryViewModel)
 }
 
 protocol DirectoryViewControllerOutput {
-    func fetchDirectory(withRequest: Directory_FetchDirectory_Request)
-    
-    func filterDirectoryTo(searchBarInput: String)
-    
-    func displaySelectedPageFrom(rowNumber: Int)
-    
+    func fetchDirectory(_ withRequest: Directory_FetchDirectory_Request)
+
+    func filterDirectoryTo(_ searchBarInput: String)
+
+    func displaySelectedPageFrom(_ rowNumber: Int)
+
     func changeToNextTabLeft()
 }
