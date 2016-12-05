@@ -42,14 +42,14 @@ class MetaWireframe: NSObject{
         metaView.childViewControllers[0].navigationController?.pushViewController(metaWebView, animated: true)
     }
     
-    func share(objectsToShare: [Any]) {
+    func share(_ objectsToShare: [Any]) {
         let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
         activityVC.popoverPresentationController?.sourceView = nil
         metaView.present(activityVC, animated: true, completion: nil)
     }
     
     // https://www.andrewcbancroft.com/2014/08/25/send-email-in-app-using-mfmailcomposeviewcontroller-with-swift/
-    func sendFeedbackEmail(subject: String) {
+    func sendFeedbackEmail(_ subject: String) {
         
         let mailComposerVC = MFMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {

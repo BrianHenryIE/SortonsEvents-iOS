@@ -21,13 +21,13 @@ class NewsInteractor: NewsViewControllerOutput {
         self.output = output
     }
     
-    func open(url: URL) {
+    func open(_ url: URL) {
 
         let urlString = url.absoluteString
         
         let facebookUrl = FacebookUrl(from: urlString)
 
-        wireframe.openUrl(url: facebookUrl)
+        wireframe.openUrl(facebookUrl)
     }
     
     func setup(_ request: News.Fetch.Request) {

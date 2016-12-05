@@ -56,7 +56,7 @@ class MetaInteractor: MetaViewControllerOutput {
         
         let objectsToShare = [shareText, appStoreLink] as [Any]
         
-        wireframe.share(objectsToShare: objectsToShare)
+        wireframe.share(objectsToShare)
     }
     
     func sendFeedback(for type: FeedbackType) {
@@ -69,7 +69,7 @@ class MetaInteractor: MetaViewControllerOutput {
         case .suggestion:
             subject = "Suggestion"
         }
-        wireframe.sendFeedbackEmail(subject: subject)
+        wireframe.sendFeedbackEmail(subject)
     }
     
     func openIosSettings() {

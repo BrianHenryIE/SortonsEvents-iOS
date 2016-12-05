@@ -32,7 +32,7 @@ class DirectoryInteractor: DirectoryViewControllerOutput {
     }
     
 
-    func fetchDirectory(withRequest: Directory.Fetch.Request) {
+    func fetchDirectory(_ withRequest: Directory.Fetch.Request) {
         
         if let cacheString = cacheWorker.fetch() {
             let directoryFromCache: ClientPageData = Mapper<ClientPageData>().map(JSONString: cacheString)!
@@ -52,7 +52,7 @@ class DirectoryInteractor: DirectoryViewControllerOutput {
         })
     }
 
-    func filterDirectoryTo(searchBarInput: String) {
+    func filterDirectoryTo(_ searchBarInput: String) {
         currentFilter = searchBarInput.lowercased()
         outputDirectoryToPresenter()
     }
@@ -70,10 +70,10 @@ class DirectoryInteractor: DirectoryViewControllerOutput {
         
 
         let response = Directory.Fetch.Response(directory: displayedDirectory)
-        self.output.presentFetchedDirectory(directory: response)
+        self.output.presentFetchedDirectory(response)
     }
     
-    func displaySelectedPageFrom(rowNumber: Int) {
+    func displaySelectedPageFrom(_ rowNumber: Int) {
         
         let fbId = displayedDirectory[rowNumber].fbPageId!
         

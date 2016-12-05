@@ -26,7 +26,7 @@ class NewsWireframe {
         newsView.output = newsInteractor
     }
     
-    func openUrl(url: FacebookUrl) {
+    func openUrl(_ url: FacebookUrl) {
         if url.appUrl != nil && UIApplication.shared.canOpenURL(url.appUrl!) {
             UIApplication.shared.openURL(url.appUrl!)
         } else {

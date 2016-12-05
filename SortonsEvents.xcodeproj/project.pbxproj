@@ -1494,6 +1494,7 @@
 					};
 					A6141D6C1BB9F537003150F1 = {
 						DevelopmentTeam = 3RM6H33EW7;
+						LastSwiftMigration = 0810;
 					};
 					A62BD6181B9E1C4500E928E5 = {
 						DevelopmentTeam = 3RM6H33EW7;
@@ -1501,18 +1502,23 @@
 					};
 					A63B32A01C68AFA400C46020 = {
 						DevelopmentTeam = 3RM6H33EW7;
+						LastSwiftMigration = 0810;
 					};
 					A69186AD1DCC543A00372A98 = {
 						DevelopmentTeam = 3RM6H33EW7;
+						LastSwiftMigration = 0810;
 					};
 					A69186EA1DCC54BD00372A98 = {
 						DevelopmentTeam = 3RM6H33EW7;
+						LastSwiftMigration = 0810;
 					};
 					A69187271DCC551000372A98 = {
 						DevelopmentTeam = 3RM6H33EW7;
+						LastSwiftMigration = 0810;
 					};
 					A69187791DCC591E00372A98 = {
 						DevelopmentTeam = 3RM6H33EW7;
+						LastSwiftMigration = 0810;
 					};
 					A69DBF4E1C8AE4D8005064F7 = {
 						CreatedOnToolsVersion = 7.2;
@@ -1522,6 +1528,7 @@
 					A6C6130A1A91492500A5F082 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = 3RM6H33EW7;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -2863,6 +2870,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.ucc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2890,6 +2898,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.ucc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -2984,6 +2993,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.dcu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3013,6 +3023,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.dcu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -3418,6 +3429,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.nuig;
 				PRODUCT_NAME = SortonsEvents;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3445,6 +3457,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.nuig;
 				PRODUCT_NAME = SortonsEvents;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

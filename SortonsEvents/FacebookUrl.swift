@@ -28,7 +28,7 @@ struct FacebookUrl {
         }
 
         // A redirect URL
-        let redirectUrls = inputUrl.matchingStrings(regex: redirectRegex)
+        let redirectUrls = inputUrl.matchingStrings(redirectRegex)
         if redirectUrls.count > 0 {
             let cleanUrlString = redirectUrls[0][1].removingPercentEncoding!
             safariUrl = URL(string: cleanUrlString)
@@ -40,7 +40,7 @@ struct FacebookUrl {
         
         
         // comments
-        let postUrls = inputUrl.matchingStrings(regex: postRegex)
+        let postUrls = inputUrl.matchingStrings(postRegex)
         if postUrls.count > 0 {
             let cleanUrlString = "fb://profile/\(postUrls[0][1])"
             appUrl = URL(string: cleanUrlString)
@@ -49,7 +49,7 @@ struct FacebookUrl {
         }
 
         // event
-        let eventUrls = inputUrl.matchingStrings(regex: eventRegex)
+        let eventUrls = inputUrl.matchingStrings(eventRegex)
         if eventUrls.count > 0 {
             let cleanUrlString = "fb://profile/\(eventUrls[0][1])"
             appUrl = URL(string: cleanUrlString)
@@ -58,7 +58,7 @@ struct FacebookUrl {
         }
         
         // photo
-        let photoUrls = inputUrl.matchingStrings(regex: photoRegex)
+        let photoUrls = inputUrl.matchingStrings(photoRegex)
         if photoUrls.count > 0 {
             let cleanUrlString = "fb://profile/\(photoUrls[0][1])"
             appUrl = URL(string: cleanUrlString)
@@ -70,7 +70,7 @@ struct FacebookUrl {
         safariUrl = URL(string: inputUrl)
     }
     
-    func facebookUrlToAppUrl(url: String) -> (url: String, appUrl: String?) {
+    func facebookUrlToAppUrl(_ url: String) -> (url: String, appUrl: String?) {
         
         guard url.hasPrefix("https://www.facebook.com") || url.hasPrefix("https://m.facebook.com") else { return (url: url, appUrl: nil) }
         
@@ -87,7 +87,7 @@ struct FacebookUrl {
 
 // http://stackoverflow.com/questions/27880650/swift-extract-regex-matches
 extension String {
-    func matchingStrings(regex: String) -> [[String]] {
+    func matchingStrings(_ regex: String) -> [[String]] {
         guard let regex = try? NSRegularExpression(pattern: regex, options: []) else { return [] }
         let nsString = self as NSString
         let results  = regex.matches(in: self, options: [], range: NSMakeRange(0, nsString.length))

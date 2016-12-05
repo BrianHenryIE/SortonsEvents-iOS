@@ -12,7 +12,7 @@ import Foundation
 protocol ListEventsPresenterOutput {
     func presentFetchedEvents(_ viewModel: ListEvents.ViewModel)
     
-    func displayFetchEventsFetchError(viewModel: ListEvents.ViewModel)
+    func displayFetchEventsFetchError(_ viewModel: ListEvents.ViewModel)
 }
 
 protocol ListEventsTableViewControllerOutput {

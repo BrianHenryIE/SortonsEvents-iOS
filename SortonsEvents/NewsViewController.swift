@@ -55,7 +55,7 @@ extension NewsViewController: UIWebViewDelegate {
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         switch navigationType {
         case .linkClicked:
-            output.open(url: request.url!)
+            output.open(request.url!)
             return false
         default:
             return true

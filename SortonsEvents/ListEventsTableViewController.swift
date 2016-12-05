@@ -48,7 +48,7 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
         tableView.reloadData()
     }
     
-    func displayFetchEventsFetchError(viewModel: ListEvents.ViewModel) {
+    func displayFetchEventsFetchError(_ viewModel: ListEvents.ViewModel) {
 
         // TODO
     }
