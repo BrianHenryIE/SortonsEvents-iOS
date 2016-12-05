@@ -15,11 +15,11 @@ struct Directory {
             let directory: [SourcePage]
         }
     }
-    
+
     struct ViewModel {
         let directory: [Directory.TableViewCellModel]
     }
-    
+
     struct TableViewCellModel {
         let name: String
         let details: String?

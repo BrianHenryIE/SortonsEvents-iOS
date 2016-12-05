@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate  {
+class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var searchBarOutlet: UISearchBar!
     @IBOutlet weak var tableViewOutlet: UITableView!
@@ -26,7 +26,7 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
         tableViewOutlet.addGestureRecognizer(gestureRecognizer)
 
         gestureRecognizer.delegate = self
-        
+
         let request = Directory.Fetch.Request()
         output.fetchDirectory(request)
     }
@@ -37,9 +37,9 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
         data = viewModel.directory
         tableViewOutlet.reloadData()
     }
-    
+
     func displayFetchDirectoryFetchError(_ viewModel: Directory.ViewModel) {
-        
+
     }
 
 // MARK: - Table view data source
@@ -48,7 +48,7 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection: Int) -> Int {
-        return data == nil ? 0 : data.count;
+        return data == nil ? 0 : data.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

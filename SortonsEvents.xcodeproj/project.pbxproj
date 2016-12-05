@@ -1435,6 +1435,7 @@
 				A69DBF4D1C8AE4D8005064F7 /* Resources */,
 				A54E92CAE79F499470A0ACFE /* [CP] Embed Pods Frameworks */,
 				E13262D15D034E5AC25C7C59 /* [CP] Copy Pods Resources */,
+				A67DF55A1DF547EF00D351FD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -2056,7 +2057,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ -z ${SKIP_SWIFTCLEAN} || ${SKIP_SWIFTCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" || -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" ]]; then\n\"${LOCAL_APPS_DIR}\"/Swift-Clean.app/Contents/Resources/SwiftClean.app/Contents/MacOS/SwiftClean \"${SRCROOT}\"?@autoFix\nelse\necho \"warning: You have to install and set up Swift-Clean to use its features!\"\nfi\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		A67DF55A1DF547EF00D351FD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		A69186E21DCC543A00372A98 /* Code formatting */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2097,7 +2111,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ -z ${SKIP_SWIFTCLEAN} || ${SKIP_SWIFTCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" || -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" ]]; then\n\"${LOCAL_APPS_DIR}\"/Swift-Clean.app/Contents/Resources/SwiftClean.app/Contents/MacOS/SwiftClean \"${SRCROOT}\"?@autoFix\nelse\necho \"warning: You have to install and set up Swift-Clean to use its features!\"\nfi\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		A691875E1DCC551000372A98 /* Code formatting */ = {
 			isa = PBXShellScriptBuildPhase;

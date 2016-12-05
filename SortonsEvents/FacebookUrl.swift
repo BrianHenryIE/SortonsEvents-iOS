@@ -9,17 +9,17 @@
 import Foundation
 
 struct FacebookUrl {
-    
+
     let appUrl: URL?
     let safariUrl: URL?
-    
+
     let redirectRegex = "https://www.facebook.com/l.php\\?u=(.*)&h="
     let postRegex = "https://.*.facebook.com/.*/posts/(\\d*)"
     let eventRegex = "https://.*.facebook.com/events/(\\d*)"
     let photoRegex = "/(\\d*)/\\?"
-    
+
     init(from inputUrl: String) {
-        
+
         // Non-Facebook URL
         guard inputUrl.hasPrefix("https://www.facebook.com") || inputUrl.hasPrefix("https://m.facebook.com") else {
             appUrl = nil
@@ -35,10 +35,9 @@ struct FacebookUrl {
             appUrl = nil
             return
         }
-        
+
         //
-        
-        
+
         // comments
         let postUrls = inputUrl.matchingStrings(postRegex)
         if postUrls.count > 0 {
@@ -56,7 +55,7 @@ struct FacebookUrl {
             safariUrl = URL(string: inputUrl)
             return
         }
-        
+
         // photo
         let photoUrls = inputUrl.matchingStrings(photoRegex)
         if photoUrls.count > 0 {
@@ -65,22 +64,21 @@ struct FacebookUrl {
             safariUrl = URL(string: inputUrl)
             return
         }
-        
+
         appUrl = nil
         safariUrl = URL(string: inputUrl)
     }
-    
+
     func facebookUrlToAppUrl(_ url: String) -> (url: String, appUrl: String?) {
-        
+
         guard url.hasPrefix("https://www.facebook.com") || url.hasPrefix("https://m.facebook.com") else { return (url: url, appUrl: nil) }
-        
+
         // remove from &refsrc=
-        
+
         // facebook.com/events/12345676/?a=
-        
+
         // photos!
-        
-        
+
         return (url: url, appUrl: "fb://profile")
     }
 }

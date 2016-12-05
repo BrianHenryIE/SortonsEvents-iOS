@@ -15,7 +15,7 @@ class NewsViewControllerOutputSpy: NewsViewControllerOutput {
     var changeToNextTabLeftCalled = false
     var changeToNextTabRightCalled = false
 
-    func open(url: URL) {
+    func open(_ url: URL) {
 
         openUrlCalled = true
     }
@@ -53,7 +53,7 @@ class NewsViewControllerTests: XCTestCase {
         let storyboard = UIStoryboard(name: "News", bundle: bundle)
 
         sut = storyboard.instantiateViewController(withIdentifier: "News") as? NewsViewController
-        
+
         sut.output = outputSpy
 
         // Call viewDidLoad()

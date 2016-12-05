@@ -10,9 +10,9 @@ import Foundation
 import ObjectMapper
 
 class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutput {
-    
+
     var allUpcomingEvents = [DiscoveredEvent]()
-    
+
     let wireframe: ListEventsWireframe
     let fomoId: String
     let output: ListEventsInteractorOutput
@@ -29,13 +29,13 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutput {
          listEventsNetworkWorker: ListEventsNetworkWorkerProtocol,
          listEventsCacheWorker: ListEventsCacheWorkerProtocol,
          withDate: Date = Date(),
-         withCalendar: Calendar = Calendar.current){
+         withCalendar: Calendar = Calendar.current) {
         self.wireframe = wireframe
         self.fomoId = fomoId
         self.output = output
         self.listEventsNetworkWorker = listEventsNetworkWorker
         self.listEventsCacheWorker = listEventsCacheWorker
-        
+
         observingFrom = withDate
         self.calendar = withCalendar
         dateFormat = DateFormatter()
@@ -43,7 +43,7 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutput {
     }
 
     func fetchEvents(_ request: ListEvents.Fetch.Request) {
-        
+
         // Get from cache
         let eventsFromCacheString = listEventsCacheWorker.fetch()
         if let eventsFromCacheString = eventsFromCacheString {
@@ -54,66 +54,65 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutput {
                 self.output.presentFetchedEvents(response)
             }
         }
-        
+
         // Get from network
         listEventsNetworkWorker.fetchEvents(fomoId) { (discoveredEventsJsonPage) -> Void in
-            
+
             // parse from json
             let discoveredEventsResponse: DiscoveredEventsResponse = Mapper<DiscoveredEventsResponse>().map(JSONString: discoveredEventsJsonPage)!
-            
+
             if let data = discoveredEventsResponse.data {
                 self.allUpcomingEvents = data
-                
+
                 // save to cache
                 self.listEventsCacheWorker.save(discoveredEventsJsonPage)
-                
+
                 let response = ListEvents.Fetch.Response(events: self.allUpcomingEvents)
                 self.output.presentFetchedEvents(response)
             }
         }
     }
-    
+
     func displayEvent(for rowNumber: Int) {
-        
+
         let fbId = allUpcomingEvents[rowNumber].eventId!
-        
+
         let appUrl = URL(string: "fb://profile/\(fbId)")!
         let safariUrl = URL(string: "https://facebook.com/\(fbId)")!
-        
+
         if UIApplication.shared.canOpenURL(appUrl) {
             UIApplication.shared.openURL(appUrl)
         } else {
             UIApplication.shared.openURL(safariUrl)
         }
     }
-    
+
     // I think the latest FB API means all events have an end time TODO
     func filterToOngoingEvents(_ allEvents: [DiscoveredEvent], observingFrom: Date) -> [DiscoveredEvent] {
-        
+
         let yesterday = calendar.date(byAdding: .day, value: -1, to: observingFrom)!
         let yesterday6pm = calendar.date(bySettingHour: 18, minute: 0, second: 0, of: yesterday)!
         let today6am = calendar.date(bySettingHour: 6, minute: 0, second: 0, of: observingFrom)!
-        
+
         var filteredEvents = [DiscoveredEvent]()
-        
+
         // Events with a start or end time in the future
-        let ongoingEvents = allEvents.filter(
-            { ($0.endTime != nil && $0.endTime!.compare(observingFrom).rawValue > 0) || $0.startTime.compare(observingFrom).rawValue > 0 }
+        let ongoingEvents = allEvents.filter({ ($0.endTime != nil && $0.endTime!.compare(observingFrom).rawValue > 0) || $0.startTime.compare(observingFrom).rawValue > 0 }
         )
         filteredEvents.append(contentsOf: ongoingEvents)
-        
+
         // all day event today
         let todayAllDay = allEvents.filter({
             $0.dateOnly && calendar.isDate($0.startTime as Date, equalTo: observingFrom, toGranularity: .day)
         })
         filteredEvents.append(contentsOf: todayAllDay)
-        
+
         // (no end time and start time today)
         let todayNoEnd = allEvents.filter({
             $0.endTime==nil && calendar.isDate($0.startTime as Date, equalTo: observingFrom, toGranularity: .day) && ($0.dateOnly == false)
         })
         filteredEvents.append(contentsOf: todayNoEnd)
-        
+
         // if the current time is before 6am and the event started yesterday evening and had no end time
         let lastNight = allEvents.filter({
             observingFrom.compare(today6am).rawValue < 0
@@ -122,7 +121,7 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutput {
                 && $0.endTime==nil
         })
         filteredEvents.append(contentsOf: lastNight)
-        
+
         return filteredEvents
     }
 

@@ -10,7 +10,7 @@ import XCTest
 @testable import SortonsEvents
 
 class NewsPresenterOutputSpy: NewsPresenterOutput {
-    
+
     var displayCalled = false
     var url: String?
     func display(_ viewModel: News.ViewModel) {
@@ -20,22 +20,22 @@ class NewsPresenterOutputSpy: NewsPresenterOutput {
 }
 
 class NewsPresenterTests: XCTestCase {
-    
+
     let spy = NewsPresenterOutputSpy()
     var sut: NewsPresenter!
-    
+
     override func setUp() {
         super.setUp()
-       
+
         sut = NewsPresenter(output: spy)
     }
-    
+
     func testPresenterOutput() {
-        
+
         sut.setFomoId("123")
-        
+
         XCTAssert(spy.displayCalled, "display not called by presenter")
         XCTAssertEqual(spy.url, "https://sortonsevents.appspot.com/recentpostsmobile/news.html#123", "incorrect URL built by presenter")
     }
-    
+
 }

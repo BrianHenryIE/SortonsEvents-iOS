@@ -9,17 +9,17 @@
 import Foundation
 
 protocol ListEventsCacheWorkerProtocol {
-    
+
     func fetch() -> String?
     func save(_ latestClientPageData: String)
 }
 
 class ListEventsCacheWorker: ListEventsCacheWorkerProtocol {
-    
+
     let fileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("discoveredevents.json")
-    
+
     func fetch() -> String? {
-        
+
         // read file
         do {
             let fileFromCache = try String(contentsOf: fileURL)
@@ -27,14 +27,14 @@ class ListEventsCacheWorker: ListEventsCacheWorkerProtocol {
         } catch {
             // TODO / this will throw an error already when parsing
         }
-        
+
         return nil
     }
-    
+
     func save(_ latestClientPageData: String) {
-        
+
         let data = latestClientPageData.data(using: String.Encoding.utf8)
-        
+
         do {
             try data!.write(to: fileURL, options: .atomicWrite)
         } catch {

@@ -15,7 +15,7 @@ struct ListEvents {
     struct Fetch {
         struct Request {
         }
-    
+
         struct Response {
             let events: [DiscoveredEvent]
         }

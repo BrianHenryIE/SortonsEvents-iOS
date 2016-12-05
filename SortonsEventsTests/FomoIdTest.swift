@@ -11,7 +11,7 @@ import XCTest
 @testable import SortonsEvents
 
 class FomoIdTest: XCTestCase {
-    
+
 //    func testFomoId() {
 //   
 //        var actual: String
@@ -38,5 +38,5 @@ class FomoIdTest: XCTestCase {
 //        XCTAssertEqual(expected, actual)
 //        
 //    }
-        
+
 }
