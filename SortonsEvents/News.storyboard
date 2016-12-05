@@ -44,7 +44,7 @@
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <connections>
-                        <outlet property="webView" destination="bfR-F3-lBt" id="gkU-Jx-wgD"/>
+                        <outlet property="webview" destination="bfR-F3-lBt" id="VCH-lz-ZED"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNH-s6-4VY" userLabel="First Responder" sceneMemberID="firstResponder"/>

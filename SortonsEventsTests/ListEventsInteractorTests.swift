@@ -81,13 +81,15 @@ class ListEventsInteractorOutputSpy: ListEventsInteractorOutput {
 
 class ListEventsInteractorTests: XCTestCase {
     
+    let fomoId = FomoId(id: "id", name: "name", shortName: "shortName", appStoreId: "appStoreId")
+    
     func testFetchEventsShouldAskEventsNetworkWorkerToFetchEventsAndPresenterToFormatResult() {
         let listEventsNetworkWorkerSpy = ListEventsNetworkWorkerSpy()
         let listEventsCacheWorkerSpy = ListEventsCacheWorkerSpy()
    
         let listEventsInteractorOutputSpy = ListEventsInteractorOutputSpy()
         
-        let sut = ListEventsInteractor(wireframe: ListEventsWireframe(fomoId: ""),
+        let sut = ListEventsInteractor(wireframe: ListEventsWireframe(fomoId: fomoId),
                                        fomoId: "",
                                        output: listEventsInteractorOutputSpy,
                                        listEventsNetworkWorker: listEventsNetworkWorkerSpy,
@@ -113,7 +115,7 @@ class ListEventsInteractorTests: XCTestCase {
 
         let listEventsInteractorOutputSpy = ListEventsInteractorOutputSpy()
         
-        let sut = ListEventsInteractor(wireframe: ListEventsWireframe(fomoId: ""),
+        let sut = ListEventsInteractor(wireframe: ListEventsWireframe(fomoId: fomoId),
                                        fomoId: "",
                                        output: listEventsInteractorOutputSpy,
                                        listEventsNetworkWorker: emptyListEventsNetworkWorkerSpy,
@@ -142,7 +144,7 @@ class ListEventsInteractorTests: XCTestCase {
         
         let listEventsInteractorOutputSpy = ListEventsInteractorOutputSpy()
 
-        let sut = ListEventsInteractor(wireframe: ListEventsWireframe(fomoId: ""),
+        let sut = ListEventsInteractor(wireframe: ListEventsWireframe(fomoId: fomoId),
                                        fomoId: "",
                                        output: listEventsInteractorOutputSpy,
                                        listEventsNetworkWorker: EmptyListEventsNetworkWorkerSpy(),

@@ -10,25 +10,25 @@ import UIKit
 import Foundation
 
 class DirectoryWireframe {
-    
+
     let directoryView: DirectoryViewController!
     var rootViewController : RootViewControllerProtocol?
-    
-    init(fomoId: String) {
+
+    init(fomoId: FomoId) {
         let storyboard = UIStoryboard(name: "Directory", bundle: Bundle.main)
-        
+
         directoryView = storyboard.instantiateViewController(withIdentifier: "Directory") as? DirectoryViewController
         
         let directoryPresenter = DirectoryPresenter(output: directoryView)
-        
+
         let directoryCacheWorker = DirectoryCacheWorker()
         let directoryNetworkWorker = DirectoryNetworkWorker()
         
-        let directoryInteractor = DirectoryInteractor(fomoId: fomoId, wireframe: self, presenter: directoryPresenter, cache: directoryCacheWorker, network: directoryNetworkWorker)
-        
+        let directoryInteractor = DirectoryInteractor(fomoId: fomoId.id, wireframe: self, presenter: directoryPresenter, cache: directoryCacheWorker, network: directoryNetworkWorker)
+
         directoryView.output = directoryInteractor
     }
-    
+
     func changeToNextTabLeft() {
         if let rootViewController = rootViewController {
             rootViewController.changeToNextTabLeft()

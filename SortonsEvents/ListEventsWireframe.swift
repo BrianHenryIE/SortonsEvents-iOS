@@ -14,19 +14,20 @@ class ListEventsWireframe {
     let listEventsView: ListEventsTableViewController!
     var rootViewController : RootViewControllerProtocol?
     
-    init(fomoId: String) {
+    init(fomoId: FomoId) {
         let storyboard = UIStoryboard(name: "ListEvents", bundle: Bundle.main)
         
         listEventsView = storyboard.instantiateViewController(withIdentifier: "ListEvents") as? ListEventsTableViewController
      
         let listEventsPresenter = ListEventsPresenter(output: listEventsView)
 
+
         let listEventsInteractor = ListEventsInteractor(wireframe: self,
-                                                        fomoId: fomoId,
+                                                        fomoId: fomoId.id,
                                                         output: listEventsPresenter,
                                                         listEventsNetworkWorker: ListEventsNetworkWorker(),
                                                         listEventsCacheWorker: ListEventsCacheWorker())
-        
+
         listEventsView.output = listEventsInteractor
     }
     

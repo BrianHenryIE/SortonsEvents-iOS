@@ -11,6 +11,7 @@ import UIKit
 
 // View input
 protocol DirectoryPresenterOutput {
+
     func presentFetchedDirectory(viewModel: Directory.ViewModel)
     
     func displayFetchDirectoryFetchError(viewModel: Directory.ViewModel)

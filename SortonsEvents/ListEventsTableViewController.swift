@@ -49,6 +49,7 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
     }
     
     func displayFetchEventsFetchError(viewModel: ListEvents.ViewModel) {
+
         // TODO
     }
 }

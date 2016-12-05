@@ -35,27 +35,27 @@
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DirectoryPageCell" id="VyN-WR-vXu" customClass="DirectoryTableViewCell" customModule="SortonsEvents" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="22" width="375" height="69"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VyN-WR-vXu" id="4Ec-ld-Mfy">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="VyN-WR-vXu" id="4Ec-ld-Mfy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Name" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPH-3e-wtA" userLabel="NameLabel">
-                                                    <rect key="frame" x="63" y="8" width="304" height="23"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Nj-DL-1zw" userLabel="Image">
-                                                    <rect key="frame" x="8" y="8" width="50" height="50"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Nj-DL-1zw" userLabel="Image">
+                                                    <rect key="frame" x="8" y="-2" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="LXc-6j-BvM"/>
                                                         <constraint firstAttribute="width" constant="50" id="m1d-qT-mMw"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDs-OL-Wmh" userLabel="Details">
-                                                    <rect key="frame" x="63" y="33" width="304" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="752" ambiguous="YES" text="Name" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPH-3e-wtA" userLabel="NameLabel">
+                                                    <rect key="frame" x="63" y="8" width="304" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Details" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDs-OL-Wmh" userLabel="Details">
+                                                    <rect key="frame" x="63" y="28.5" width="304" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                                    <color key="textColor" red="0.56470588239999997" green="0.58039215690000001" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -65,11 +65,11 @@
                                                 <constraint firstItem="xDs-OL-Wmh" firstAttribute="leading" secondItem="UPH-3e-wtA" secondAttribute="leading" id="CF7-Pq-ZIr"/>
                                                 <constraint firstItem="4Nj-DL-1zw" firstAttribute="leading" secondItem="4Ec-ld-Mfy" secondAttribute="leadingMargin" id="DYF-9L-7Z4"/>
                                                 <constraint firstItem="xDs-OL-Wmh" firstAttribute="top" secondItem="UPH-3e-wtA" secondAttribute="bottom" constant="2" id="GSE-VU-mri"/>
+                                                <constraint firstAttribute="topMargin" secondItem="4Nj-DL-1zw" secondAttribute="top" constant="-2" id="N5f-cx-xcw"/>
                                                 <constraint firstItem="UPH-3e-wtA" firstAttribute="leading" secondItem="4Nj-DL-1zw" secondAttribute="trailing" constant="5" id="OTD-Y6-n9L"/>
                                                 <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="4Nj-DL-1zw" secondAttribute="bottom" constant="2" id="XAu-0M-Hcu"/>
                                                 <constraint firstItem="UPH-3e-wtA" firstAttribute="top" secondItem="4Ec-ld-Mfy" secondAttribute="topMargin" id="ce3-t8-Sed"/>
                                                 <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="xDs-OL-Wmh" secondAttribute="bottom" constant="2" id="gbm-p2-3Ow"/>
-                                                <constraint firstItem="4Nj-DL-1zw" firstAttribute="top" secondItem="UPH-3e-wtA" secondAttribute="top" id="sBN-68-dbm"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="77" minY="0.0" maxX="0.0" maxY="0.0"/>

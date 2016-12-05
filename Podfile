@@ -10,7 +10,20 @@ def common_pods
     pod 'AlamofireImage', :git => 'https://github.com/Alamofire/AlamofireImage.git'
 end
 
-target 'FOMO UCD' do
+target 'FOMO DCU' do
+    common_pods
+end
+target 'FOMO DIT' do
+    common_pods
+end
+target 'FOMO NUIG' do
+    common_pods
+end
+target 'FOMO NUIM' do
+    common_pods
+end
+
+target 'FOMO QUB' do
     common_pods
 end
 
@@ -18,11 +31,22 @@ target 'FOMO TCD' do
     common_pods
 end
 
+target 'FOMO UCC' do
+    common_pods
+end
+
+target 'FOMO UCD' do
+    common_pods
+end
+
+target 'FOMO UL' do
+    common_pods
+end
+
 # Figure out which are really needed in the test classes – get @import testable working
 target 'SortonsEventsTests' do
     common_pods
 end
-
 
 post_install do |installer|
     installer.pods_project.targets.each do |target|

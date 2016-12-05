@@ -31,6 +31,7 @@ class DirectoryInteractor: DirectoryViewControllerOutput {
         networkWorker = network
     }
     
+
     func fetchDirectory(withRequest: Directory.Fetch.Request) {
         
         if let cacheString = cacheWorker.fetch() {
@@ -56,10 +57,10 @@ class DirectoryInteractor: DirectoryViewControllerOutput {
         outputDirectoryToPresenter()
     }
     
-    private func outputDirectoryToPresenter() {
+    fileprivate func outputDirectoryToPresenter() {
         // filter directory using currentfilter and save to displayedDirectory
         
-        if currentFilter.trimmingCharacters(in: NSCharacterSet.whitespaces) != "" {
+        if currentFilter.trimmingCharacters(in: CharacterSet.whitespaces) != "" {
                 displayedDirectory = directory.filter({
                     ($0.name.lowercased()).contains(currentFilter)
                 })
@@ -67,6 +68,7 @@ class DirectoryInteractor: DirectoryViewControllerOutput {
             displayedDirectory = directory
         }
         
+
         let response = Directory.Fetch.Response(directory: displayedDirectory)
         self.output.presentFetchedDirectory(directory: response)
     }

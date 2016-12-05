@@ -15,6 +15,7 @@ class ViewControllerSpy: DirectoryPresenterOutput {
     var viewModel: Directory.ViewModel?
     var presentFetchedDirectoryCalled = false
     
+
     func presentFetchedDirectory(viewModel: Directory.ViewModel) {
         presentFetchedDirectoryCalled = true
         self.viewModel = viewModel

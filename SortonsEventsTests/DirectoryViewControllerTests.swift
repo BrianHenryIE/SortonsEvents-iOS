@@ -27,6 +27,7 @@ class DirectoryViewControllerOutputSpy: DirectoryViewControllerOutput {
     var changeToNextTabLeftCalled = false
     
     func fetchDirectory(withRequest: Directory.Fetch.Request) {
+
         fetchDirectoryCalled = true
     }
     

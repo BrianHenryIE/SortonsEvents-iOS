@@ -76,16 +76,16 @@ class DirectoryInteractorTests: XCTestCase {
     var cacheWorkerSpy: DirectoryCacheWorkerSpy!
     var networkWorkerSpy: DirectoryNetworkWorkerSpy!
     
+    let fomoId = FomoId(id: "id", name: "name", shortName: "shortName", appStoreId: "appStoreId")
+    
     override func setUp() {
         super.setUp()
-        
-        let fomoId = "123"
         
         presenterSpy = DirectoryPresenterSpy()
         cacheWorkerSpy = DirectoryCacheWorkerSpy()
         networkWorkerSpy = DirectoryNetworkWorkerSpy()
         
-        sut = DirectoryInteractor(fomoId: fomoId, wireframe: DirectoryWireframe(fomoId: fomoId), presenter: presenterSpy, cache: cacheWorkerSpy, network: networkWorkerSpy)
+        sut = DirectoryInteractor(fomoId: fomoId.id, wireframe: DirectoryWireframe(fomoId: fomoId), presenter: presenterSpy, cache: cacheWorkerSpy, network: networkWorkerSpy)
     }
   
     func testFetchDirectory() {

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import WebKit
 
 class NewsInteractor: NewsViewControllerOutput {
     
@@ -20,7 +21,14 @@ class NewsInteractor: NewsViewControllerOutput {
         self.output = output
     }
     
-    func setup(request: News.Fetch.Request) {
+    func open(url: URL) {
+        
+        NSLog("url: \(url.absoluteString)")
+        
+        UIApplication.shared.openURL(url)
+    }
+    
+    func setup(_ request: News.Fetch.Request) {
         output.setFomoId(fomoId)
     }
     
