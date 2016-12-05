@@ -21,11 +21,13 @@ class NewsInteractor: NewsViewControllerOutput {
         self.output = output
     }
     
-    func openUrl(_ url: URL) {
+    func open(url: URL) {
+
+        let urlString = url.absoluteString
         
-        NSLog("url: \(url.absoluteString)")
-        
-        UIApplication.shared.openURL(url)
+        let facebookUrl = FacebookUrl(from: urlString)
+
+        wireframe.openUrl(url: facebookUrl)
     }
     
     func setup(_ request: News.Fetch.Request) {
@@ -40,3 +42,4 @@ class NewsInteractor: NewsViewControllerOutput {
         wireframe.changeToNextTabRight()
     }
 }
+

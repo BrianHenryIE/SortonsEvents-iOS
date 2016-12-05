@@ -25,6 +25,14 @@ class NewsWireframe {
 
         newsView.output = newsInteractor
     }
+    
+    func openUrl(url: FacebookUrl) {
+        if url.appUrl != nil && UIApplication.shared.canOpenURL(url.appUrl!) {
+            UIApplication.shared.openURL(url.appUrl!)
+        } else {
+            UIApplication.shared.openURL(url.safariUrl!)
+        }
+    }
 
     func changeToNextTabLeft() {
         if let rootViewController = rootViewController {

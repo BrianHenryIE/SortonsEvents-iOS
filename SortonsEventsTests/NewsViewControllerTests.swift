@@ -15,11 +15,11 @@ class NewsViewControllerOutputSpy: NewsViewControllerOutput {
     var changeToNextTabLeftCalled = false
     var changeToNextTabRightCalled = false
 
-    func openUrl(url: URL) {
+    func open(url: URL) {
         openUrlCalled = true
     }
 
-    func setup(request: News.Fetch.Request) {
+    func setup(_ request: News.Fetch.Request) {
         setupCalled = true
     }
 
@@ -74,7 +74,7 @@ class NewsViewControllerTests: XCTestCase {
         let urlRequest = URLRequest(url: url)
         let viewModel = News.ViewModel(newsUrl: urlRequest)
 
-        sut.display(viewModel: viewModel)
+        sut.display(viewModel)
 
         XCTAssert(webViewSpy.loadRequestCalled, "web view not initialised properly")
     }
