@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03A27D8415DF3AAE4FE6419B /* Pods_FOMO_DCU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75693CB5A902F3AB50B59FEF /* Pods_FOMO_DCU.framework */; };
+		0A6A66029A0973617EE0862E /* Pods_FOMO_DIT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53758BD505E55471D2B6557 /* Pods_FOMO_DIT.framework */; };
 		2CD497EC7F7B421D16F30E87 /* Pods_FOMO_UCD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36CF2249EF126ACF7C1BE04 /* Pods_FOMO_UCD.framework */; };
+		401F7CD815CDEFC7ADC0AB5D /* Pods_FOMO_QUB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC3714A0D31113C8D0729DE /* Pods_FOMO_QUB.framework */; };
+		4F28A9AF78802111DCAF2FB5 /* Pods_FOMO_UL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F604AEE0BAF446DB4898192B /* Pods_FOMO_UL.framework */; };
 		656414DB16D6EB63CEFE9085 /* Pods_FOMO_TCD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3618116F62AC71C54B105380 /* Pods_FOMO_TCD.framework */; };
 		A6141D591BB9F44F003150F1 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
 		A6141D851BB9F537003150F1 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
@@ -253,6 +257,16 @@
 		A67796B51DADE6B3003FBCE6 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B41DADE6B3003FBCE6 /* NewsViewController.swift */; };
 		A67796B71DADF097003FBCE6 /* DirectoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B61DADF097003FBCE6 /* DirectoryViewController.swift */; };
 		A67796B91DAE03C4003FBCE6 /* NewsViewControllerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B81DAE03C4003FBCE6 /* NewsViewControllerIO.swift */; };
+		A67DF54F1DF53A6C00D351FD /* FacebookUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67DF54E1DF53A6C00D351FD /* FacebookUrl.swift */; };
+		A67DF5501DF53A6C00D351FD /* FacebookUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67DF54E1DF53A6C00D351FD /* FacebookUrl.swift */; };
+		A67DF5511DF53A6C00D351FD /* FacebookUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67DF54E1DF53A6C00D351FD /* FacebookUrl.swift */; };
+		A67DF5521DF53A6C00D351FD /* FacebookUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67DF54E1DF53A6C00D351FD /* FacebookUrl.swift */; };
+		A67DF5531DF53A6C00D351FD /* FacebookUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67DF54E1DF53A6C00D351FD /* FacebookUrl.swift */; };
+		A67DF5541DF53A6C00D351FD /* FacebookUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67DF54E1DF53A6C00D351FD /* FacebookUrl.swift */; };
+		A67DF5551DF53A6C00D351FD /* FacebookUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67DF54E1DF53A6C00D351FD /* FacebookUrl.swift */; };
+		A67DF5561DF53A6C00D351FD /* FacebookUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67DF54E1DF53A6C00D351FD /* FacebookUrl.swift */; };
+		A67DF5571DF53A6C00D351FD /* FacebookUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67DF54E1DF53A6C00D351FD /* FacebookUrl.swift */; };
+		A67DF5591DF53A7B00D351FD /* FacebookUrlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67DF5581DF53A7B00D351FD /* FacebookUrlTests.swift */; };
 		A68183D51D2ADD6200E45D35 /* ListEventsTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68183D41D2ADD6200E45D35 /* ListEventsTableViewControllerTests.swift */; };
 		A68183DA1D2AFFB900E45D35 /* ListEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68183D91D2AFFB900E45D35 /* ListEventsTableViewController.swift */; };
 		A68183DD1D2B009E00E45D35 /* ListEventsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68183DC1D2B009E00E45D35 /* ListEventsModels.swift */; };
@@ -527,8 +541,11 @@
 		A6E10C621DB41643007854F8 /* DirectoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E10C611DB41643007854F8 /* DirectoryTableViewCell.swift */; };
 		A6E10C641DB44F5C007854F8 /* DirectoryNetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E10C631DB44F5C007854F8 /* DirectoryNetworkWorker.swift */; };
 		AEE3A7AAA7AE77B15B4F1409 /* Pods_FOMO_UCD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36CF2249EF126ACF7C1BE04 /* Pods_FOMO_UCD.framework */; };
+		CA2B0568B519269B705A070D /* Pods_FOMO_NUIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65891C3F708DA63C4671C2D /* Pods_FOMO_NUIM.framework */; };
 		CBDBCE0503E60E29966304F1 /* Pods_FOMO_TCD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3618116F62AC71C54B105380 /* Pods_FOMO_TCD.framework */; };
 		E9CD01A61FFB1A86A2ACC763 /* Pods_SortonsEventsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE0A1C3BF300FB4A0A7584E /* Pods_SortonsEventsTests.framework */; };
+		EDADD10F1FC3BC809E5B3303 /* Pods_FOMO_NUIG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB415CD7483CD7E91440E065 /* Pods_FOMO_NUIG.framework */; };
+		EF6400046D290CB9E2F307C7 /* Pods_FOMO_UCC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64787CFEB78364B0FFD1AA0 /* Pods_FOMO_UCC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -543,12 +560,24 @@
 
 /* Begin PBXFileReference section */
 		1AE0A1C3BF300FB4A0A7584E /* Pods_SortonsEventsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SortonsEventsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EA26ED2DAE640FF96C9C8E6 /* Pods-FOMO NUIG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO NUIG.release.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO NUIG/Pods-FOMO NUIG.release.xcconfig"; sourceTree = "<group>"; };
 		1F158784AB10985A6D867B91 /* Pods-FOMO UCD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO UCD.release.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO UCD/Pods-FOMO UCD.release.xcconfig"; sourceTree = "<group>"; };
+		2256E0674B03AA642A083565 /* Pods-FOMO NUIM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO NUIM.release.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO NUIM/Pods-FOMO NUIM.release.xcconfig"; sourceTree = "<group>"; };
+		22B88667AC47715DFD5F0603 /* Pods-FOMO QUB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO QUB.release.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO QUB/Pods-FOMO QUB.release.xcconfig"; sourceTree = "<group>"; };
+		263AE60363AE71CC78FDCF68 /* Pods-FOMO UCC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO UCC.release.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO UCC/Pods-FOMO UCC.release.xcconfig"; sourceTree = "<group>"; };
+		276E1E2F4BFB21CACE3BC829 /* Pods-FOMO NUIG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO NUIG.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO NUIG/Pods-FOMO NUIG.debug.xcconfig"; sourceTree = "<group>"; };
 		3618116F62AC71C54B105380 /* Pods_FOMO_TCD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FOMO_TCD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4698B2409D034D0FB9B0DC9D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BD25BE71C9C157420C7DB02 /* Pods-FOMO UCD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO UCD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO UCD/Pods-FOMO UCD.debug.xcconfig"; sourceTree = "<group>"; };
+		60B1D78B957094D28620247E /* Pods-FOMO UL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO UL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO UL/Pods-FOMO UL.debug.xcconfig"; sourceTree = "<group>"; };
 		676AE7F75C85DD3D40CC62B9 /* Pods-FOMO TCD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO TCD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD.debug.xcconfig"; sourceTree = "<group>"; };
+		75693CB5A902F3AB50B59FEF /* Pods_FOMO_DCU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FOMO_DCU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		786DDF9E2A825C011E1D3806 /* Pods-SortonsEventsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SortonsEventsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SortonsEventsTests/Pods-SortonsEventsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		86C4D503BF874FC2107C8A4C /* Pods-FOMO DCU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO DCU.release.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO DCU/Pods-FOMO DCU.release.xcconfig"; sourceTree = "<group>"; };
+		89FCEDB6A3948FDAAA17FEB9 /* Pods-FOMO DIT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO DIT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO DIT/Pods-FOMO DIT.debug.xcconfig"; sourceTree = "<group>"; };
+		9AC3714A0D31113C8D0729DE /* Pods_FOMO_QUB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FOMO_QUB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F62310E5D670C12A757B5DE /* Pods-FOMO NUIM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO NUIM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO NUIM/Pods-FOMO NUIM.debug.xcconfig"; sourceTree = "<group>"; };
+		A19CAD7B611D163EDD8FC88E /* Pods-FOMO DIT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO DIT.release.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO DIT/Pods-FOMO DIT.release.xcconfig"; sourceTree = "<group>"; };
 		A4B45A6EE4E167955EE9B517 /* Pods-SortonsEventsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SortonsEventsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SortonsEventsTests/Pods-SortonsEventsTests.release.xcconfig"; sourceTree = "<group>"; };
 		A6141D5F1BB9F44F003150F1 /* FOMO TCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO TCD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6141D8B1BB9F537003150F1 /* FOMO UCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO UCC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -591,6 +620,8 @@
 		A67796B41DADE6B3003FBCE6 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		A67796B61DADF097003FBCE6 /* DirectoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryViewController.swift; sourceTree = "<group>"; };
 		A67796B81DAE03C4003FBCE6 /* NewsViewControllerIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewControllerIO.swift; sourceTree = "<group>"; };
+		A67DF54E1DF53A6C00D351FD /* FacebookUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookUrl.swift; sourceTree = "<group>"; };
+		A67DF5581DF53A7B00D351FD /* FacebookUrlTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookUrlTests.swift; sourceTree = "<group>"; };
 		A68183D41D2ADD6200E45D35 /* ListEventsTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsTableViewControllerTests.swift; sourceTree = "<group>"; };
 		A68183D91D2AFFB900E45D35 /* ListEventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsTableViewController.swift; sourceTree = "<group>"; };
 		A68183DC1D2B009E00E45D35 /* ListEventsModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsModels.swift; sourceTree = "<group>"; };
@@ -654,8 +685,17 @@
 		A6D4A1E31DBF0BB90072309B /* ClientPageDataTcd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ClientPageDataTcd.json; sourceTree = "<group>"; };
 		A6E10C611DB41643007854F8 /* DirectoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryTableViewCell.swift; sourceTree = "<group>"; };
 		A6E10C631DB44F5C007854F8 /* DirectoryNetworkWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryNetworkWorker.swift; sourceTree = "<group>"; };
+		B18394CE0C5847826B51D9BD /* Pods-FOMO QUB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO QUB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO QUB/Pods-FOMO QUB.debug.xcconfig"; sourceTree = "<group>"; };
 		B36CF2249EF126ACF7C1BE04 /* Pods_FOMO_UCD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FOMO_UCD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B53758BD505E55471D2B6557 /* Pods_FOMO_DIT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FOMO_DIT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B65891C3F708DA63C4671C2D /* Pods_FOMO_NUIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FOMO_NUIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF815C8B5C943A016518E066 /* Pods-FOMO TCD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO TCD.release.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD.release.xcconfig"; sourceTree = "<group>"; };
+		C3415D2C1CA1ECA25DE250C1 /* Pods-FOMO DCU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO DCU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO DCU/Pods-FOMO DCU.debug.xcconfig"; sourceTree = "<group>"; };
+		C75C244C099B183296C1C251 /* Pods-FOMO UL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO UL.release.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO UL/Pods-FOMO UL.release.xcconfig"; sourceTree = "<group>"; };
+		E23067C8B0CCF4CE58B143B0 /* Pods-FOMO UCC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO UCC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO UCC/Pods-FOMO UCC.debug.xcconfig"; sourceTree = "<group>"; };
+		EB415CD7483CD7E91440E065 /* Pods_FOMO_NUIG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FOMO_NUIG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F604AEE0BAF446DB4898192B /* Pods_FOMO_UL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FOMO_UL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F64787CFEB78364B0FFD1AA0 /* Pods_FOMO_UCC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FOMO_UCC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -672,6 +712,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF6400046D290CB9E2F307C7 /* Pods_FOMO_UCC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,6 +729,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03A27D8415DF3AAE4FE6419B /* Pods_FOMO_DCU.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,6 +737,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA2B0568B519269B705A070D /* Pods_FOMO_NUIM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,6 +745,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A6A66029A0973617EE0862E /* Pods_FOMO_DIT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,6 +753,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F28A9AF78802111DCAF2FB5 /* Pods_FOMO_UL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,6 +761,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				401F7CD815CDEFC7ADC0AB5D /* Pods_FOMO_QUB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,6 +777,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDADD10F1FC3BC809E5B3303 /* Pods_FOMO_NUIG.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,6 +793,20 @@
 				BF815C8B5C943A016518E066 /* Pods-FOMO TCD.release.xcconfig */,
 				5BD25BE71C9C157420C7DB02 /* Pods-FOMO UCD.debug.xcconfig */,
 				1F158784AB10985A6D867B91 /* Pods-FOMO UCD.release.xcconfig */,
+				C3415D2C1CA1ECA25DE250C1 /* Pods-FOMO DCU.debug.xcconfig */,
+				86C4D503BF874FC2107C8A4C /* Pods-FOMO DCU.release.xcconfig */,
+				89FCEDB6A3948FDAAA17FEB9 /* Pods-FOMO DIT.debug.xcconfig */,
+				A19CAD7B611D163EDD8FC88E /* Pods-FOMO DIT.release.xcconfig */,
+				276E1E2F4BFB21CACE3BC829 /* Pods-FOMO NUIG.debug.xcconfig */,
+				1EA26ED2DAE640FF96C9C8E6 /* Pods-FOMO NUIG.release.xcconfig */,
+				9F62310E5D670C12A757B5DE /* Pods-FOMO NUIM.debug.xcconfig */,
+				2256E0674B03AA642A083565 /* Pods-FOMO NUIM.release.xcconfig */,
+				B18394CE0C5847826B51D9BD /* Pods-FOMO QUB.debug.xcconfig */,
+				22B88667AC47715DFD5F0603 /* Pods-FOMO QUB.release.xcconfig */,
+				E23067C8B0CCF4CE58B143B0 /* Pods-FOMO UCC.debug.xcconfig */,
+				263AE60363AE71CC78FDCF68 /* Pods-FOMO UCC.release.xcconfig */,
+				60B1D78B957094D28620247E /* Pods-FOMO UL.debug.xcconfig */,
+				C75C244C099B183296C1C251 /* Pods-FOMO UL.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -757,6 +818,13 @@
 				B36CF2249EF126ACF7C1BE04 /* Pods_FOMO_UCD.framework */,
 				1AE0A1C3BF300FB4A0A7584E /* Pods_SortonsEventsTests.framework */,
 				3618116F62AC71C54B105380 /* Pods_FOMO_TCD.framework */,
+				75693CB5A902F3AB50B59FEF /* Pods_FOMO_DCU.framework */,
+				B53758BD505E55471D2B6557 /* Pods_FOMO_DIT.framework */,
+				EB415CD7483CD7E91440E065 /* Pods_FOMO_NUIG.framework */,
+				B65891C3F708DA63C4671C2D /* Pods_FOMO_NUIM.framework */,
+				9AC3714A0D31113C8D0729DE /* Pods_FOMO_QUB.framework */,
+				F64787CFEB78364B0FFD1AA0 /* Pods_FOMO_UCC.framework */,
+				F604AEE0BAF446DB4898192B /* Pods_FOMO_UL.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -796,6 +864,7 @@
 		A65CEE4B1DB5C5000059EF52 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				A67DF54E1DF53A6C00D351FD /* FacebookUrl.swift */,
 				A65CEE471DB5C4ED0059EF52 /* NewsInteractor.swift */,
 				A65CEE4F1DB5C5EF0059EF52 /* NewsInteractorOutput.swift */,
 			);
@@ -992,6 +1061,7 @@
 		A69FD4051DB2C1A600CA8964 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				A67DF5581DF53A7B00D351FD /* FacebookUrlTests.swift */,
 				A65CEE451DB5C4790059EF52 /* NewsViewControllerTests.swift */,
 				A65CEE4D1DB5C56B0059EF52 /* NewsPresenterTests.swift */,
 			);
@@ -1221,10 +1291,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6141D881BB9F537003150F1 /* Build configuration list for PBXNativeTarget "FOMO UCC" */;
 			buildPhases = (
+				908E3A1DE4B3B0DAC1D15B77 /* [CP] Check Pods Manifest.lock */,
 				A6141D6E1BB9F537003150F1 /* Sources */,
 				A6141D7E1BB9F537003150F1 /* Frameworks */,
 				A6141D801BB9F537003150F1 /* Resources */,
 				SWIFCLEANCUSTOMRUNSCRIPT /* Code formatting */,
+				B12C61968D9BDA934E09212A /* [CP] Embed Pods Frameworks */,
+				24B40B9293D9CF86BD5F0C37 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1261,10 +1334,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A63B32BC1C68AFA400C46020 /* Build configuration list for PBXNativeTarget "FOMO DCU" */;
 			buildPhases = (
+				A2ED084B73901F0863E1CCE1 /* [CP] Check Pods Manifest.lock */,
 				A63B32A21C68AFA400C46020 /* Sources */,
 				A63B32B21C68AFA400C46020 /* Frameworks */,
 				A63B32B41C68AFA400C46020 /* Resources */,
 				SWIFCLEANCUSTOMRUNSCRIPT /* Code formatting */,
+				40E14C6093F1A0977E4746B4 /* [CP] Embed Pods Frameworks */,
+				F72AF937C35A01D37DA91592 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1279,10 +1355,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A69186E51DCC543A00372A98 /* Build configuration list for PBXNativeTarget "FOMO NUIM" */;
 			buildPhases = (
+				2DDA7638F6054AD94FF613EB /* [CP] Check Pods Manifest.lock */,
 				A69186AF1DCC543A00372A98 /* Sources */,
 				A69186D41DCC543A00372A98 /* Frameworks */,
 				A69186D61DCC543A00372A98 /* Resources */,
 				A69186E21DCC543A00372A98 /* Code formatting */,
+				99E5CD255883B8AAE09C952C /* [CP] Embed Pods Frameworks */,
+				C0B0767734CF15085C4EABBA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1297,10 +1376,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A69187221DCC54BD00372A98 /* Build configuration list for PBXNativeTarget "FOMO DIT" */;
 			buildPhases = (
+				31BA920908C930DB6260C660 /* [CP] Check Pods Manifest.lock */,
 				A69186EC1DCC54BD00372A98 /* Sources */,
 				A69187111DCC54BD00372A98 /* Frameworks */,
 				A69187131DCC54BD00372A98 /* Resources */,
 				A691871F1DCC54BD00372A98 /* Swift-Clean Run Script */,
+				6C0DD5E8E189A6700E54ACCE /* [CP] Embed Pods Frameworks */,
+				F99C360AF713B818CC463E08 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1315,11 +1397,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A69187611DCC551000372A98 /* Build configuration list for PBXNativeTarget "FOMO UL" */;
 			buildPhases = (
+				A2271F8A0004836D3C422882 /* [CP] Check Pods Manifest.lock */,
 				A69187291DCC551000372A98 /* Sources */,
 				A691874E1DCC551000372A98 /* Frameworks */,
 				A69187501DCC551000372A98 /* Resources */,
 				A691875D1DCC551000372A98 /* ShellScript */,
 				A691875E1DCC551000372A98 /* Code formatting */,
+				987B320EFAA2400530306DDA /* [CP] Embed Pods Frameworks */,
+				A60AE13AF202C213787C0201 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1334,10 +1419,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A69187B11DCC591E00372A98 /* Build configuration list for PBXNativeTarget "FOMO QUB" */;
 			buildPhases = (
+				49F4C9FEC679F65981084A13 /* [CP] Check Pods Manifest.lock */,
 				A691877B1DCC591E00372A98 /* Sources */,
 				A69187A01DCC591E00372A98 /* Frameworks */,
 				A69187A21DCC591E00372A98 /* Resources */,
 				A69187AE1DCC591E00372A98 /* Code formatting */,
+				C289B5AB2AF7084599579B58 /* [CP] Embed Pods Frameworks */,
+				11615604614A5CC946C84CAB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1373,10 +1461,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6C6132E1A91492500A5F082 /* Build configuration list for PBXNativeTarget "FOMO NUIG" */;
 			buildPhases = (
+				2BC68A277B2BD3F790C8EAFE /* [CP] Check Pods Manifest.lock */,
 				A6C613071A91492500A5F082 /* Sources */,
 				A6C613081A91492500A5F082 /* Frameworks */,
 				A6C613091A91492500A5F082 /* Resources */,
 				SWIFCLEANCUSTOMRUNSCRIPT /* Code formatting */,
+				78B0DE62EE9BA133722C4745 /* [CP] Embed Pods Frameworks */,
+				BA7F02105B1F378A4F46BD5A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1667,6 +1758,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		11615604614A5CC946C84CAB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO QUB/Pods-FOMO QUB-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		24B40B9293D9CF86BD5F0C37 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO UCC/Pods-FOMO UCC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2A57D2A3817DA056AB080CA9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1680,6 +1801,81 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO UCD/Pods-FOMO UCD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2BC68A277B2BD3F790C8EAFE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2DDA7638F6054AD94FF613EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		31BA920908C930DB6260C660 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		40E14C6093F1A0977E4746B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO DCU/Pods-FOMO DCU-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49F4C9FEC679F65981084A13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		5DB778E1477F85C47F567ACE /* [CP] Copy Pods Resources */ = {
@@ -1712,6 +1908,81 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		6C0DD5E8E189A6700E54ACCE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO DIT/Pods-FOMO DIT-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78B0DE62EE9BA133722C4745 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO NUIG/Pods-FOMO NUIG-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		908E3A1DE4B3B0DAC1D15B77 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		987B320EFAA2400530306DDA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO UL/Pods-FOMO UL-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99E5CD255883B8AAE09C952C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO NUIM/Pods-FOMO NUIM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9D0C33B60488317A32CF499F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1727,6 +1998,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A2271F8A0004836D3C422882 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A2ED084B73901F0863E1CCE1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		A54E92CAE79F499470A0ACFE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1740,6 +2041,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SortonsEventsTests/Pods-SortonsEventsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A60AE13AF202C213787C0201 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO UL/Pods-FOMO UL-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A632F9E81DB04CA200B23A76 /* ShellScript */ = {
@@ -1824,6 +2140,36 @@
 			shellPath = /bin/bash;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
+		B12C61968D9BDA934E09212A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO UCC/Pods-FOMO UCC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA7F02105B1F378A4F46BD5A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO NUIG/Pods-FOMO NUIG-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BBE99D1633940454CA81288B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1837,6 +2183,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C0B0767734CF15085C4EABBA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO NUIM/Pods-FOMO NUIM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C289B5AB2AF7084599579B58 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO QUB/Pods-FOMO QUB-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DE49FEAB7DE8B19DD9416EB4 /* [CP] Embed Pods Frameworks */ = {
@@ -1882,6 +2258,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F72AF937C35A01D37DA91592 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO DCU/Pods-FOMO DCU-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F99C360AF713B818CC463E08 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FOMO DIT/Pods-FOMO DIT-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		SWIFCLEANCUSTOMRUNSCRIPT /* Code formatting */ = {
@@ -1942,6 +2348,7 @@
 				A63B94D61DB6330000ECA301 /* ListEventsTableViewController.swift in Sources */,
 				A643EB951DF4F7240005E769 /* MetaWireframe.swift in Sources */,
 				A63B95061DB6335900ECA301 /* NewsViewController.swift in Sources */,
+				A67DF5541DF53A6C00D351FD /* FacebookUrl.swift in Sources */,
 				A63B94EE1DB6331D00ECA301 /* ListEventsNetworkWorker.swift in Sources */,
 				A6AAD3EE1D25A5E80097AF22 /* SourcePage.swift in Sources */,
 				A63B950A1DB6335D00ECA301 /* NewsViewControllerIO.swift in Sources */,
@@ -1990,6 +2397,7 @@
 				A63B94D71DB6330000ECA301 /* ListEventsTableViewController.swift in Sources */,
 				A643EB961DF4F7240005E769 /* MetaWireframe.swift in Sources */,
 				A63B95071DB6335900ECA301 /* NewsViewController.swift in Sources */,
+				A67DF5551DF53A6C00D351FD /* FacebookUrl.swift in Sources */,
 				A63B94EF1DB6331D00ECA301 /* ListEventsNetworkWorker.swift in Sources */,
 				A6AAD3EF1D25A5E80097AF22 /* SourcePage.swift in Sources */,
 				A63B950C1DB6335E00ECA301 /* NewsViewControllerIO.swift in Sources */,
@@ -2038,6 +2446,7 @@
 				A6E10C641DB44F5C007854F8 /* DirectoryNetworkWorker.swift in Sources */,
 				A643EB971DF4F7240005E769 /* MetaWireframe.swift in Sources */,
 				A6AAD3FC1D25B6D30097AF22 /* GAEISO8601DateTransform.swift in Sources */,
+				A67DF5561DF53A6C00D351FD /* FacebookUrl.swift in Sources */,
 				A68183DA1D2AFFB900E45D35 /* ListEventsTableViewController.swift in Sources */,
 				A65CEE501DB5C5EF0059EF52 /* NewsInteractorOutput.swift in Sources */,
 				A6E10C621DB41643007854F8 /* DirectoryTableViewCell.swift in Sources */,
@@ -2086,6 +2495,7 @@
 				A63B94D81DB6330100ECA301 /* ListEventsTableViewController.swift in Sources */,
 				A643EB901DF4F7240005E769 /* MetaWireframe.swift in Sources */,
 				A63B95081DB6335A00ECA301 /* NewsViewController.swift in Sources */,
+				A67DF54F1DF53A6C00D351FD /* FacebookUrl.swift in Sources */,
 				A63B94F01DB6331E00ECA301 /* ListEventsNetworkWorker.swift in Sources */,
 				A6AAD3F01D25A5E90097AF22 /* SourcePage.swift in Sources */,
 				A63B950B1DB6335E00ECA301 /* NewsViewControllerIO.swift in Sources */,
@@ -2134,6 +2544,7 @@
 				A69186CE1DCC543A00372A98 /* ListEventsTableViewController.swift in Sources */,
 				A643EB931DF4F7240005E769 /* MetaWireframe.swift in Sources */,
 				A69186CF1DCC543A00372A98 /* NewsViewController.swift in Sources */,
+				A67DF5521DF53A6C00D351FD /* FacebookUrl.swift in Sources */,
 				A69186D01DCC543A00372A98 /* ListEventsNetworkWorker.swift in Sources */,
 				A69186D11DCC543A00372A98 /* SourcePage.swift in Sources */,
 				A69186D21DCC543A00372A98 /* NewsViewControllerIO.swift in Sources */,
@@ -2182,6 +2593,7 @@
 				A691870B1DCC54BD00372A98 /* ListEventsTableViewController.swift in Sources */,
 				A643EB911DF4F7240005E769 /* MetaWireframe.swift in Sources */,
 				A691870C1DCC54BD00372A98 /* NewsViewController.swift in Sources */,
+				A67DF5501DF53A6C00D351FD /* FacebookUrl.swift in Sources */,
 				A691870D1DCC54BD00372A98 /* ListEventsNetworkWorker.swift in Sources */,
 				A691870E1DCC54BD00372A98 /* SourcePage.swift in Sources */,
 				A691870F1DCC54BD00372A98 /* NewsViewControllerIO.swift in Sources */,
@@ -2230,6 +2642,7 @@
 				A69187481DCC551000372A98 /* DirectoryNetworkWorker.swift in Sources */,
 				A643EB981DF4F7240005E769 /* MetaWireframe.swift in Sources */,
 				A69187491DCC551000372A98 /* GAEISO8601DateTransform.swift in Sources */,
+				A67DF5571DF53A6C00D351FD /* FacebookUrl.swift in Sources */,
 				A691874A1DCC551000372A98 /* ListEventsTableViewController.swift in Sources */,
 				A691874B1DCC551000372A98 /* NewsInteractorOutput.swift in Sources */,
 				A691874C1DCC551000372A98 /* DirectoryTableViewCell.swift in Sources */,
@@ -2278,6 +2691,7 @@
 				A691879A1DCC591E00372A98 /* ListEventsTableViewController.swift in Sources */,
 				A643EB941DF4F7240005E769 /* MetaWireframe.swift in Sources */,
 				A691879B1DCC591E00372A98 /* NewsViewController.swift in Sources */,
+				A67DF5531DF53A6C00D351FD /* FacebookUrl.swift in Sources */,
 				A691879C1DCC591E00372A98 /* ListEventsNetworkWorker.swift in Sources */,
 				A691879D1DCC591E00372A98 /* SourcePage.swift in Sources */,
 				A691879E1DCC591E00372A98 /* NewsViewControllerIO.swift in Sources */,
@@ -2299,6 +2713,7 @@
 				A69DBF591C8AE8E3005064F7 /* ListEventsInteractorTests.swift in Sources */,
 				A6AAD3E11D258F0D0097AF22 /* ClientPageDataTest.swift in Sources */,
 				A65CEE461DB5C4790059EF52 /* NewsViewControllerTests.swift in Sources */,
+				A67DF5591DF53A7B00D351FD /* FacebookUrlTests.swift in Sources */,
 				A6B7D6A01DBC156A00578C3C /* ListEventsCacheWorkerTests.swift in Sources */,
 				A6C04F691DB450A40009C9BF /* DirectoryInteractorTests.swift in Sources */,
 				A66DC3961CF395E000ED636B /* Tests.swift in Sources */,
@@ -2349,6 +2764,7 @@
 				A63B94D51DB632FF00ECA301 /* ListEventsTableViewController.swift in Sources */,
 				A643EB921DF4F7240005E769 /* MetaWireframe.swift in Sources */,
 				A63B95051DB6335800ECA301 /* NewsViewController.swift in Sources */,
+				A67DF5511DF53A6C00D351FD /* FacebookUrl.swift in Sources */,
 				A63B94ED1DB6331D00ECA301 /* ListEventsNetworkWorker.swift in Sources */,
 				A6AAD3ED1D25A5E80097AF22 /* SourcePage.swift in Sources */,
 				A63B95091DB6335C00ECA301 /* NewsViewControllerIO.swift in Sources */,
@@ -2426,6 +2842,7 @@
 		};
 		A6141D891BB9F537003150F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E23067C8B0CCF4CE58B143B0 /* Pods-FOMO UCC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconUCC;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2452,6 +2869,7 @@
 		};
 		A6141D8A1BB9F537003150F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 263AE60363AE71CC78FDCF68 /* Pods-FOMO UCC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconUCC;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2543,6 +2961,7 @@
 		};
 		A63B32BD1C68AFA400C46020 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3415D2C1CA1ECA25DE250C1 /* Pods-FOMO DCU.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDCU;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2571,6 +2990,7 @@
 		};
 		A63B32BE1C68AFA400C46020 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86C4D503BF874FC2107C8A4C /* Pods-FOMO DCU.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDCU;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2599,6 +3019,7 @@
 		};
 		A69186E61DCC543A00372A98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F62310E5D670C12A757B5DE /* Pods-FOMO NUIM.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconNUIM;
@@ -2628,6 +3049,7 @@
 		};
 		A69186E71DCC543A00372A98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2256E0674B03AA642A083565 /* Pods-FOMO NUIM.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconNUIM;
@@ -2656,6 +3078,7 @@
 		};
 		A69187231DCC54BD00372A98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89FCEDB6A3948FDAAA17FEB9 /* Pods-FOMO DIT.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDIT;
@@ -2685,6 +3108,7 @@
 		};
 		A69187241DCC54BD00372A98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A19CAD7B611D163EDD8FC88E /* Pods-FOMO DIT.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDIT;
@@ -2713,6 +3137,7 @@
 		};
 		A69187621DCC551000372A98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60B1D78B957094D28620247E /* Pods-FOMO UL.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconUL;
@@ -2746,6 +3171,7 @@
 		};
 		A69187631DCC551000372A98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C75C244C099B183296C1C251 /* Pods-FOMO UL.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconUL;
@@ -2778,6 +3204,7 @@
 		};
 		A69187B21DCC591E00372A98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B18394CE0C5847826B51D9BD /* Pods-FOMO QUB.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconQUB;
@@ -2807,6 +3234,7 @@
 		};
 		A69187B31DCC591E00372A98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22B88667AC47715DFD5F0603 /* Pods-FOMO QUB.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconQUB;
@@ -2969,6 +3397,7 @@
 		};
 		A6C6132F1A91492500A5F082 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 276E1E2F4BFB21CACE3BC829 /* Pods-FOMO NUIG.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconNUIG;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2995,6 +3424,7 @@
 		};
 		A6C613301A91492500A5F082 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EA26ED2DAE640FF96C9C8E6 /* Pods-FOMO NUIG.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconNUIG;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
