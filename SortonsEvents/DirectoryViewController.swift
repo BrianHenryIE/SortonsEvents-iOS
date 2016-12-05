@@ -48,7 +48,7 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection: Int) -> Int {
-        return data.count;
+        return data == nil ? 0 : data.count;
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
