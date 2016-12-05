@@ -275,11 +275,6 @@
 		A69186A41DCC4EEE00372A98 /* LaunchScreenTCD.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69186921DCC4E7800372A98 /* LaunchScreenTCD.xib */; };
 		A69186A51DCC4EF800372A98 /* LaunchScreenUCC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69186931DCC4E7800372A98 /* LaunchScreenUCC.xib */; };
 		A69186A61DCC4F0200372A98 /* LaunchScreenUCD.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69186941DCC4E7800372A98 /* LaunchScreenUCD.xib */; };
-		A69186A81DCC50FA00372A98 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186A71DCC50FA00372A98 /* fomo.plist */; };
-		A69186A91DCC50FA00372A98 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186A71DCC50FA00372A98 /* fomo.plist */; };
-		A69186AA1DCC50FA00372A98 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186A71DCC50FA00372A98 /* fomo.plist */; };
-		A69186AB1DCC50FA00372A98 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186A71DCC50FA00372A98 /* fomo.plist */; };
-		A69186AC1DCC50FA00372A98 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186A71DCC50FA00372A98 /* fomo.plist */; };
 		A69186B01DCC543A00372A98 /* DirectoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C04F6B1DB452FD0009C9BF /* DirectoryPresenter.swift */; };
 		A69186B11DCC543A00372A98 /* ClientPageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3E21D258F8E0097AF22 /* ClientPageData.swift */; };
 		A69186B21DCC543A00372A98 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F31DCB0AD500CEEFAA /* RootViewController.swift */; };
@@ -316,7 +311,6 @@
 		A69186D11DCC543A00372A98 /* SourcePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A636D2731D0C8A8700FB9C62 /* SourcePage.swift */; };
 		A69186D21DCC543A00372A98 /* NewsViewControllerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B81DAE03C4003FBCE6 /* NewsViewControllerIO.swift */; };
 		A69186D31DCC543A00372A98 /* DirectoryInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C04F731DB456D90009C9BF /* DirectoryInteractorOutput.swift */; };
-		A69186D71DCC543A00372A98 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186A71DCC50FA00372A98 /* fomo.plist */; };
 		A69186DA1DCC543A00372A98 /* DirectoryImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C61D6E09E200A66C85 /* DirectoryImages.xcassets */; };
 		A69186DB1DCC543A00372A98 /* Directory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65B23BC1D6DFB2400A66C85 /* Directory.storyboard */; };
 		A69186DD1DCC543A00372A98 /* ListEvents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6478D171D36CE2600B6000B /* ListEvents.storyboard */; };
@@ -360,7 +354,6 @@
 		A691870E1DCC54BD00372A98 /* SourcePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A636D2731D0C8A8700FB9C62 /* SourcePage.swift */; };
 		A691870F1DCC54BD00372A98 /* NewsViewControllerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B81DAE03C4003FBCE6 /* NewsViewControllerIO.swift */; };
 		A69187101DCC54BD00372A98 /* DirectoryInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C04F731DB456D90009C9BF /* DirectoryInteractorOutput.swift */; };
-		A69187141DCC54BD00372A98 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186A71DCC50FA00372A98 /* fomo.plist */; };
 		A69187171DCC54BD00372A98 /* DirectoryImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C61D6E09E200A66C85 /* DirectoryImages.xcassets */; };
 		A69187181DCC54BD00372A98 /* Directory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65B23BC1D6DFB2400A66C85 /* Directory.storyboard */; };
 		A691871A1DCC54BD00372A98 /* ListEvents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6478D171D36CE2600B6000B /* ListEvents.storyboard */; };
@@ -404,7 +397,6 @@
 		A691874B1DCC551000372A98 /* NewsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CEE4F1DB5C5EF0059EF52 /* NewsInteractorOutput.swift */; };
 		A691874C1DCC551000372A98 /* DirectoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E10C611DB41643007854F8 /* DirectoryTableViewCell.swift */; };
 		A691874D1DCC551000372A98 /* DirectoryInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C04F731DB456D90009C9BF /* DirectoryInteractorOutput.swift */; };
-		A69187521DCC551000372A98 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186A71DCC50FA00372A98 /* fomo.plist */; };
 		A69187531DCC551000372A98 /* Directory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65B23BC1D6DFB2400A66C85 /* Directory.storyboard */; };
 		A69187541DCC551000372A98 /* DirectoryImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C61D6E09E200A66C85 /* DirectoryImages.xcassets */; };
 		A69187551DCC551000372A98 /* NewsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C81D6E09F000A66C85 /* NewsImages.xcassets */; };
@@ -465,7 +457,6 @@
 		A691879D1DCC591E00372A98 /* SourcePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A636D2731D0C8A8700FB9C62 /* SourcePage.swift */; };
 		A691879E1DCC591E00372A98 /* NewsViewControllerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B81DAE03C4003FBCE6 /* NewsViewControllerIO.swift */; };
 		A691879F1DCC591E00372A98 /* DirectoryInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C04F731DB456D90009C9BF /* DirectoryInteractorOutput.swift */; };
-		A69187A31DCC591E00372A98 /* fomo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186A71DCC50FA00372A98 /* fomo.plist */; };
 		A69187A41DCC591E00372A98 /* DirectoryImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C61D6E09E200A66C85 /* DirectoryImages.xcassets */; };
 		A69187A51DCC591E00372A98 /* Directory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65B23BC1D6DFB2400A66C85 /* Directory.storyboard */; };
 		A69187A71DCC591E00372A98 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A691876F1DCC57B200372A98 /* AppImages.xcassets */; };
@@ -641,7 +632,6 @@
 		A69186931DCC4E7800372A98 /* LaunchScreenUCC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreenUCC.xib; path = targets/LaunchScreenUCC.xib; sourceTree = "<group>"; };
 		A69186941DCC4E7800372A98 /* LaunchScreenUCD.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreenUCD.xib; path = targets/LaunchScreenUCD.xib; sourceTree = "<group>"; };
 		A69186951DCC4E7800372A98 /* LaunchScreenUL.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreenUL.xib; path = targets/LaunchScreenUL.xib; sourceTree = "<group>"; };
-		A69186A71DCC50FA00372A98 /* fomo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = fomo.plist; path = targets/fomo.plist; sourceTree = "<group>"; };
 		A69186E81DCC543A00372A98 /* FOMO NUIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO NUIM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69187251DCC54BD00372A98 /* FOMO DIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO DIT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69187641DCC551000372A98 /* FOMO UL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO UL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1239,7 +1229,6 @@
 				A64DF46F1DDC25D700A102E0 /* .travis.yml */,
 				A691876F1DCC57B200372A98 /* AppImages.xcassets */,
 				A69187661DCC572000372A98 /* Info.plist */,
-				A69186A71DCC50FA00372A98 /* fomo.plist */,
 				A691868E1DCC4E7800372A98 /* LaunchScreenDCU.xib */,
 				A691868F1DCC4E7800372A98 /* LaunchScreenDIT.xib */,
 				A69186901DCC4E7800372A98 /* LaunchScreenNUIG.xib */,
@@ -1564,7 +1553,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A69186AA1DCC50FA00372A98 /* fomo.plist in Resources */,
 				A63B95531DB633A700ECA301 /* DirectoryImages.xcassets in Resources */,
 				A643EB5F1DF4F7240005E769 /* Meta.storyboard in Resources */,
 				A63B952B1DB6338000ECA301 /* Directory.storyboard in Resources */,
@@ -1585,7 +1573,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A69186AB1DCC50FA00372A98 /* fomo.plist in Resources */,
 				A63B95541DB633A800ECA301 /* DirectoryImages.xcassets in Resources */,
 				A643EB601DF4F7240005E769 /* Meta.storyboard in Resources */,
 				A63B952D1DB6338100ECA301 /* Directory.storyboard in Resources */,
@@ -1607,7 +1594,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A69187BC1DCC59E700372A98 /* FOMOUCD.plist in Resources */,
-				A69186A81DCC50FA00372A98 /* fomo.plist in Resources */,
 				A643EB611DF4F7240005E769 /* Meta.storyboard in Resources */,
 				A65B23BD1D6DFB2400A66C85 /* Directory.storyboard in Resources */,
 				A65B23C71D6E09E200A66C85 /* DirectoryImages.xcassets in Resources */,
@@ -1628,7 +1614,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A69187C31DCC5A0500372A98 /* FOMODCU.plist in Resources */,
-				A69186AC1DCC50FA00372A98 /* fomo.plist in Resources */,
 				A643EB5A1DF4F7240005E769 /* Meta.storyboard in Resources */,
 				A63B95101DB6336200ECA301 /* News.storyboard in Resources */,
 				A63B955E1DB6350200ECA301 /* NewsImages.xcassets in Resources */,
@@ -1648,7 +1633,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A69186D71DCC543A00372A98 /* fomo.plist in Resources */,
 				A69187731DCC57B200372A98 /* AppImages.xcassets in Resources */,
 				A643EB5D1DF4F7240005E769 /* Meta.storyboard in Resources */,
 				A69187B91DCC59B800372A98 /* LaunchScreenNUIM.xib in Resources */,
@@ -1669,7 +1653,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A69187141DCC54BD00372A98 /* fomo.plist in Resources */,
 				A69187711DCC57B200372A98 /* AppImages.xcassets in Resources */,
 				A643EB5B1DF4F7240005E769 /* Meta.storyboard in Resources */,
 				A69187B81DCC59AF00372A98 /* LaunchScreenDIT.xib in Resources */,
@@ -1692,7 +1675,6 @@
 			files = (
 				A643EB6B1DF4F7240005E769 /* MetaImages.xcassets in Resources */,
 				A69187771DCC57B200372A98 /* AppImages.xcassets in Resources */,
-				A69187521DCC551000372A98 /* fomo.plist in Resources */,
 				A69187531DCC551000372A98 /* Directory.storyboard in Resources */,
 				A69187541DCC551000372A98 /* DirectoryImages.xcassets in Resources */,
 				A69187551DCC551000372A98 /* NewsImages.xcassets in Resources */,
@@ -1712,7 +1694,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A69187A31DCC591E00372A98 /* fomo.plist in Resources */,
 				A69187A41DCC591E00372A98 /* DirectoryImages.xcassets in Resources */,
 				A643EB5E1DF4F7240005E769 /* Meta.storyboard in Resources */,
 				A69187A51DCC591E00372A98 /* Directory.storyboard in Resources */,
@@ -1745,7 +1726,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A69186A91DCC50FA00372A98 /* fomo.plist in Resources */,
 				A63B95521DB633A700ECA301 /* DirectoryImages.xcassets in Resources */,
 				A643EB5C1DF4F7240005E769 /* Meta.storyboard in Resources */,
 				A63B952A1DB6338000ECA301 /* Directory.storyboard in Resources */,
