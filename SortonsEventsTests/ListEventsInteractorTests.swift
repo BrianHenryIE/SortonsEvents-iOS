@@ -74,7 +74,7 @@ class ListEventsInteractorOutputSpy: ListEventsInteractorOutput {
     
     var presentFetchedEventsCalled = false
     
-    func presentFetchedEvents(_ upcomingEvents: ListEvents_FetchEvents_Response) {
+    func presentFetchedEvents(_ upcomingEvents: ListEvents.Fetch.Response) {
         presentFetchedEventsCalled = true
     }
 }
@@ -94,7 +94,7 @@ class ListEventsInteractorTests: XCTestCase {
                                        listEventsCacheWorker: listEventsCacheWorkerSpy)
         
         // When
-        let request = ListEvents_FetchEvents_Request()
+        let request = ListEvents.Fetch.Request()
         sut.fetchEvents(request)
         
         // Then
@@ -120,7 +120,7 @@ class ListEventsInteractorTests: XCTestCase {
                                        listEventsCacheWorker: emptyListEventsCacheWorkerSpy)
         
         // When
-        let request = ListEvents_FetchEvents_Request()
+        let request = ListEvents.Fetch.Request()
         sut.fetchEvents(request)
         
         // Then

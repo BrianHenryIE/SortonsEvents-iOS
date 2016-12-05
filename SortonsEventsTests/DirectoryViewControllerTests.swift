@@ -26,7 +26,7 @@ class DirectoryViewControllerOutputSpy: DirectoryViewControllerOutput {
     var displaySelectedPageCalled = false
     var changeToNextTabLeftCalled = false
     
-    func fetchDirectory(withRequest: Directory_FetchDirectory_Request) {
+    func fetchDirectory(withRequest: Directory.Fetch.Request) {
         fetchDirectoryCalled = true
     }
     
@@ -47,7 +47,7 @@ class DirectoryViewControllerTests: XCTestCase {
     
     var sut: DirectoryViewController!
     let spy = DirectoryViewControllerOutputSpy()
-    var directoryViewModel: DirectoryViewModel!
+    var directoryViewModel: Directory.ViewModel!
     
     override func setUp() {
         super.setUp()
@@ -63,9 +63,9 @@ class DirectoryViewControllerTests: XCTestCase {
         
         // TODO change URL to local so tests don't need network
         let sampleImageUrl: URL = URL(string: "https://graph.facebook.com/206961869324550/picture?type=square")!
-        let sampleDirectoryEntry = DirectoryTableViewCellModel(name: "test entry", details: "no details", imageUrl: sampleImageUrl)
+        let sampleDirectoryEntry = Directory.TableViewCellModel(name: "test entry", details: "no details", imageUrl: sampleImageUrl)
         let sampleDirectoryModel = [sampleDirectoryEntry]
-        directoryViewModel = DirectoryViewModel(directory: sampleDirectoryModel)
+        directoryViewModel = Directory.ViewModel(directory: sampleDirectoryModel)
     }
 
     func testViewDidLoadShouldCallFetchDirectory() {

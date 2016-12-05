@@ -15,11 +15,11 @@ class ListEventsPresenterOutputSpy: ListEventsPresenterOutput {
     var presentFetchedEventsCalled = false
     var presentFetchEventsFetchError  = false
     
-    func presentFetchedEvents(_ viewModel: ListEventsViewModel) {
+    func presentFetchedEvents(_ viewModel: ListEvents.ViewModel) {
         presentFetchedEventsCalled = true
     }
     
-    func displayFetchEventsFetchError(viewModel: ListEventsViewModel) {
+    func displayFetchEventsFetchError(viewModel: ListEvents.ViewModel) {
         presentFetchEventsFetchError = true
     }
 }
@@ -50,7 +50,7 @@ class ListEventsPresenterTests: XCTestCase {
         
         events.append(anEvent)
         
-        sut.presentFetchedEvents(ListEvents_FetchEvents_Response(events: events))
+        sut.presentFetchedEvents(ListEvents.Fetch.Response(events: events))
         
         XCTAssertTrue(spy.presentFetchedEventsCalled)
     }
@@ -62,7 +62,7 @@ class ListEventsPresenterTests: XCTestCase {
         
         let empty = [DiscoveredEvent]()
         
-        sut.presentFetchedEvents(ListEvents_FetchEvents_Response(events: empty))
+        sut.presentFetchedEvents(ListEvents.Fetch.Response(events: empty))
         
         XCTAssertFalse(spy.presentFetchedEventsCalled)
         

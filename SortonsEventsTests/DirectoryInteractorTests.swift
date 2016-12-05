@@ -15,7 +15,7 @@ class DirectoryPresenterSpy: DirectoryInteractorOutput {
     var presentFetchedDirectoryCalled = 0
     var sourcePagesCount = 0
     
-    func presentFetchedDirectory(directory: Directory_FetchDirectory_Response) {
+    func presentFetchedDirectory(directory: Directory.Fetch.Response) {
         presentFetchedDirectoryCalled += 1
         sourcePagesCount = directory.directory.count
     }
@@ -91,7 +91,7 @@ class DirectoryInteractorTests: XCTestCase {
     func testFetchDirectory() {
         // Should hit the cache, save to variable, send to presenter, 
         // then hit the network, save to variable, send to presenter
-        let request = Directory_FetchDirectory_Request()
+        let request = Directory.Fetch.Request()
     
         sut.fetchDirectory(withRequest: request)
         
@@ -110,7 +110,7 @@ class DirectoryInteractorTests: XCTestCase {
         // should save filter to variable in case cache is searched then overwritten by network
 
         // let it request data from the other spies!
-        let request = Directory_FetchDirectory_Request()
+        let request = Directory.Fetch.Request()
         sut.fetchDirectory(withRequest: request)
         
         sut.filterDirectoryTo(searchBarInput: "music")
