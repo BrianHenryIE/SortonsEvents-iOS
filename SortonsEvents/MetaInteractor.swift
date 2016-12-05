@@ -43,7 +43,7 @@ class MetaInteractor: MetaViewControllerOutput {
         case .changelog:
             url = "http://sortons.ie/events/changelog.html#\(fomoId.shortName)"
         case .privacyPolicy:
-             url = "http://sortons.ie/events/privacypolicy.html#\(fomoId.shortName)"
+            url = "http://sortons.ie/events/privacypolicy.html#\(fomoId.shortName)"
         }
         wireframe.presentWebView(for: url)
     }
