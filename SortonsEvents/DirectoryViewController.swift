@@ -8,13 +8,13 @@
 
 import UIKit
 
-class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate  {
+class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var searchBarOutlet: UISearchBar!
     @IBOutlet weak var tableViewOutlet: UITableView!
 
     var output: DirectoryViewControllerOutput!
-    var data = [DirectoryTableViewCellModel]()
+    var data: [Directory.TableViewCellModel]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,17 +27,18 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
 
         gestureRecognizer.delegate = self
 
-        let request = Directory_FetchDirectory_Request()
+        let request = Directory.Fetch.Request()
         output.fetchDirectory(request)
     }
 
 // MARK: DirectoryPresenterOutput
-    func presentFetchedDirectory(_ viewModel: DirectoryViewModel) {
+
+    func presentFetchedDirectory(_ viewModel: Directory.ViewModel) {
         data = viewModel.directory
         tableViewOutlet.reloadData()
     }
 
-    func displayFetchDirectoryFetchError(_ viewModel: DirectoryViewModel) {
+    func displayFetchDirectoryFetchError(_ viewModel: Directory.ViewModel) {
 
     }
 
@@ -47,14 +48,16 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection: Int) -> Int {
-        return data.count;
+        return data == nil ? 0 : data.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let sourcePage = data[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DirectoryPageCell", for: indexPath) as! DirectoryTableViewCell
-        cell.setDirectorySourcePage(sourcePage)
-        return cell
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DirectoryPageCell", for: indexPath) as? DirectoryTableViewCell
+        cell!.setDirectorySourcePage(sourcePage)
+        return cell!
+
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

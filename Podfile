@@ -4,35 +4,49 @@ platform :ios, '9.0'
 
 project 'SortonsEvents'
 
-def all_pods
-    pod 'ObjectMapper', '~> 2.2'
-    pod 'Alamofire', '~> 4.0'
-    pod 'AlamofireImage', '~> 3.1'
-end
-
-target 'FOMO UCD' do
-    all_pods
-end
-
-target 'FOMO TCD' do
-    all_pods
+def common_pods
+    pod 'ObjectMapper', :git => 'https://github.com/Hearst-DD/ObjectMapper.git'
+    pod 'Alamofire',   :git => 'https://github.com/Alamofire/Alamofire.git'
+    pod 'AlamofireImage', :git => 'https://github.com/Alamofire/AlamofireImage.git'
 end
 
 target 'FOMO DCU' do
-    all_pods
+    common_pods
+end
+target 'FOMO DIT' do
+    common_pods
+end
+target 'FOMO NUIG' do
+    common_pods
+end
+target 'FOMO NUIM' do
+    common_pods
+end
+
+target 'FOMO QUB' do
+    common_pods
 end
 
 target 'FOMO TCD' do
-    pod 'ObjectMapper', '~> 2.0'
-    pod 'Alamofire', '~> 4.0'
-    pod 'AlamofireImage', '~> 3.0'
+    common_pods
+end
+
+target 'FOMO UCC' do
+    common_pods
+end
+
+target 'FOMO UCD' do
+    common_pods
+end
+
+target 'FOMO UL' do
+    common_pods
 end
 
 # Figure out which are really needed in the test classes – get @import testable working
 target 'SortonsEventsTests' do
-    all_pods
+    common_pods
 end
-
 
 post_install do |installer|
     installer.pods_project.targets.each do |target|

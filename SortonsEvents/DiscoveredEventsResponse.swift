@@ -12,13 +12,13 @@ import ObjectMapper
 
 // This whole object is because Google App Engine can't straight return Lists<>
 class DiscoveredEventsResponse: Mappable {
-    
+
     var data: [DiscoveredEvent]!
-    
+
     required init?(map _: Map) {
-        
+
     }
-    
+
     // Mappable
     func mapping(map: Map) {
         data <- map["data"]

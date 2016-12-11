@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 class DiscoveredEvent: Mappable {
-    
+
     var eventId: String!
     var clientId: String!
     var sourcePages: [SourcePage]!
@@ -19,11 +19,11 @@ class DiscoveredEvent: Mappable {
     var startTime: Date!
     var endTime: Date?
     var dateOnly: Bool!
-    
+
     required init?(map _: Map) {
-        
+
     }
-    
+
     // Mappable
     func mapping(map: Map) {
         eventId <- map["eventId"]

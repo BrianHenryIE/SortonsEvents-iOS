@@ -15,11 +15,12 @@ class NewsViewControllerOutputSpy: NewsViewControllerOutput {
     var changeToNextTabLeftCalled = false
     var changeToNextTabRightCalled = false
 
-    func openUrl(url: URL) {
+    func open(_ url: URL) {
+
         openUrlCalled = true
     }
 
-    func setup(request: News.Fetch.Request) {
+    func setup(_ request: News.Fetch.Request) {
         setupCalled = true
     }
 
@@ -50,7 +51,8 @@ class NewsViewControllerTests: XCTestCase {
 
         let bundle = Bundle.main
         let storyboard = UIStoryboard(name: "News", bundle: bundle)
-        sut = storyboard.instantiateViewController(withIdentifier: "News") as! NewsViewController
+
+        sut = storyboard.instantiateViewController(withIdentifier: "News") as? NewsViewController
 
         sut.output = outputSpy
 
@@ -74,7 +76,7 @@ class NewsViewControllerTests: XCTestCase {
         let urlRequest = URLRequest(url: url)
         let viewModel = News.ViewModel(newsUrl: urlRequest)
 
-        sut.display(viewModel: viewModel)
+        sut.display(viewModel)
 
         XCTAssert(webViewSpy.loadRequestCalled, "web view not initialised properly")
     }

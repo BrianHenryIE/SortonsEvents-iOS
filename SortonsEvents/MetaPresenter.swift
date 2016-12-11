@@ -11,22 +11,22 @@ import UIKit
 import MessageUI
 
 protocol MetaPresenterOutput {
-    
+
 }
 
 class MetaPresenter: MetaInteractorOutput {
-    
+
     let output: MetaPresenterOutput
-    
+
     init(output: MetaPresenterOutput) {
         self.output = output
     }
-    
+
     func openIosSettings() {
         UIApplication.shared.openURL(URL(string:UIApplicationOpenSettingsURLString)!)
     }
-    
-    func reviewOnAppStore(_ link: String){
+
+    func reviewOnAppStore(_ link: String) {
         UIApplication.shared.openURL(URL(string: link)!)
     }
 

@@ -13,15 +13,15 @@ import ObjectMapper
 class DiscoveredEventTest: XCTestCase {
 
     func testDiscoveredEventParsing() throws {
-        
+
         // Read in the file
         let bundle = Bundle(for: self.classForCoder)
         let path = bundle.path(forResource: "DiscoveredEventNIUGBicycleVolunteering", ofType: "json")!
         let content = try String(contentsOfFile: path)
-      
+
         // Use objectmapper
         let nuigCycling: DiscoveredEvent = Mapper<DiscoveredEvent>().map(JSONString: content)!
-        
+
         // Verify
         XCTAssertEqual(nuigCycling.eventId, "918777258231182")
         XCTAssertEqual(nuigCycling.clientId, "1049082365115363")
@@ -31,7 +31,7 @@ class DiscoveredEventTest: XCTestCase {
         XCTAssertEqual(nuigCycling.location, "Block R, Earls Island, University Road, Galway.")
 
         let calendar = Calendar.current
-        
+
         var dateComponents = DateComponents()
         dateComponents.year = 2016
         dateComponents.month = 06
@@ -39,17 +39,17 @@ class DiscoveredEventTest: XCTestCase {
         dateComponents.timeZone = TimeZone(abbreviation: "UTC")
         dateComponents.hour = 18
         dateComponents.minute = 00
-        
+
         // "startTime": "2016-06-30T18:00:00.000Z",
         let startTime = calendar.date(from: dateComponents)
         XCTAssertEqual(nuigCycling.startTime, startTime)
-        
+
         // "endTime": "2016-06-30T19:00:00.000Z",
         dateComponents.hour = 19
         let endTime = calendar.date(from: dateComponents)
         XCTAssertEqual(nuigCycling.endTime, endTime)
-        
+
         XCTAssertEqual(nuigCycling.dateOnly, false)
-        
+
     }
 }

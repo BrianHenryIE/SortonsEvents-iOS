@@ -1,4 +1,4 @@
-    //
+//
 //  DirectoryPresenter.swift
 //  SortonsEvents
 //
@@ -11,19 +11,21 @@ import UIKit
 class DirectoryPresenter: DirectoryInteractorOutput {
 
     var output: DirectoryPresenterOutput?
-    
+
     init(output: DirectoryPresenterOutput) {
         self.output = output
     }
-    
-    func presentFetchedDirectory(_ directory: Directory_FetchDirectory_Response) {
-        
+
+    func presentFetchedDirectory(_ directory: Directory.Fetch.Response) {
+
         let viewModelDirectory = directory.directory.map({
-            DirectoryTableViewCellModel(name: $0.name, details: $0.friendlyLocationString, imageUrl: URL(string: "https://graph.facebook.com/\($0.fbPageId!)/picture?type=square")!)
+            Directory.TableViewCellModel(name: $0.name,
+                                      details: $0.friendlyLocationString,
+                                     imageUrl: URL(string: "https://graph.facebook.com/\($0.fbPageId!)/picture?type=square")!)
         })
-        
-        let viewModel = DirectoryViewModel(directory: viewModelDirectory)
-        
+
+        let viewModel = Directory.ViewModel(directory: viewModelDirectory)
+
         output?.presentFetchedDirectory(viewModel)
     }
 }

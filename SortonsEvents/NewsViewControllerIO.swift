@@ -8,7 +8,7 @@
 import WebKit
 
 protocol NewsViewControllerOutput {
-    func openUrl(_ url: URL)
+    func open(_ url: URL)
 
     func setup(_ request: News.Fetch.Request)
 

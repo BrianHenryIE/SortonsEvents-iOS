@@ -1,4 +1,3 @@
-
 //
 //  SourcePage.swift
 //  SortonsEvents
@@ -12,7 +11,7 @@ import ObjectMapper
 
 // should be struct!? (...but ObjectMapper) //TODO
 class SourcePage: Mappable {
-    
+
     var name: String!
     var fbPageId: String!
     var pageUrl: String!
@@ -23,11 +22,11 @@ class SourcePage: Mappable {
     var longitude: Double?
     var zip: String?
     var friendlyLocationString: String?
-    
+
     required init?(map _: Map) {
-        
+
     }
-    
+
     // Mappable
     func mapping(map: Map) {
         name <- map["name"]

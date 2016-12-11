@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>ShortName</key>
+	<string>TCD</string>
+	<key>FomoName</key>
+	<string>FOMO TCD</string>
+	<key>FomoId</key>
+	<string>884332671653875</string>
 	<key>AppStoreId</key>
 	<string>1035135187</string>
 	<key>CFBundleDevelopmentRegion</key>

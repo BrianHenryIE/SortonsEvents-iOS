@@ -1,19 +1,38 @@
 PODS:
-  - Alamofire (4.0.1)
-  - AlamofireImage (3.1.0):
-    - Alamofire (~> 4.0)
+  - Alamofire (4.2.0)
+  - AlamofireImage (3.2.0):
+    - Alamofire (~> 4.1)
   - ObjectMapper (2.2.1)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.0)
-  - AlamofireImage (~> 3.1)
-  - ObjectMapper (~> 2.2)
+  - Alamofire (from `https://github.com/Alamofire/Alamofire.git`)
+  - AlamofireImage (from `https://github.com/Alamofire/AlamofireImage.git`)
+  - ObjectMapper (from `https://github.com/Hearst-DD/ObjectMapper.git`)
+
+EXTERNAL SOURCES:
+  Alamofire:
+    :git: https://github.com/Alamofire/Alamofire.git
+  AlamofireImage:
+    :git: https://github.com/Alamofire/AlamofireImage.git
+  ObjectMapper:
+    :git: https://github.com/Hearst-DD/ObjectMapper.git
+
+CHECKOUT OPTIONS:
+  Alamofire:
+    :commit: 7a17b1d4b558a172d571a9d2b1cd81e190586027
+    :git: https://github.com/Alamofire/Alamofire.git
+  AlamofireImage:
+    :commit: a4d4c0e36c3f17a80ad89687348bedbc523bba11
+    :git: https://github.com/Alamofire/AlamofireImage.git
+  ObjectMapper:
+    :commit: 5d821dce17e903c812e0d0f56f70bfc9eeed13f6
+    :git: https://github.com/Hearst-DD/ObjectMapper.git
 
 SPEC CHECKSUMS:
-  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
-  AlamofireImage: bb8c8351c51cb1633bb6be69b6dbbaff37ce65b7
+  Alamofire: 26d8877ec03b4e6e6cbfbf7c03924b4844a2d453
+  AlamofireImage: 0ff319da83d6abb78a661d7296e742e7f65e15f5
   ObjectMapper: 41e43e1a89f8060ef5ea5d04ba852e269a621d68
 
-PODFILE CHECKSUM: 3056c6c83a61fec4d9a00bab9481b42d42155984
+PODFILE CHECKSUM: ad14587e0b62d674cad183a46a74225f7b596def
 
 COCOAPODS: 1.0.1

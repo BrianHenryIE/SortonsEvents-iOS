@@ -11,13 +11,14 @@ import UIKit
 
 // View input
 protocol DirectoryPresenterOutput {
-    func presentFetchedDirectory(_ viewModel: DirectoryViewModel)
 
-    func displayFetchDirectoryFetchError(_ viewModel: DirectoryViewModel)
+    func presentFetchedDirectory(_ viewModel: Directory.ViewModel)
+
+    func displayFetchDirectoryFetchError(_ viewModel: Directory.ViewModel)
 }
 
 protocol DirectoryViewControllerOutput {
-    func fetchDirectory(_ withRequest: Directory_FetchDirectory_Request)
+    func fetchDirectory(_ withRequest: Directory.Fetch.Request)
 
     func filterDirectoryTo(_ searchBarInput: String)
 

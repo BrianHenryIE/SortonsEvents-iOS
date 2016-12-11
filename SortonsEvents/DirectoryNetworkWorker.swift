@@ -14,13 +14,13 @@ protocol DirectoryNetworkWorkerProtocol {
 }
 
 class DirectoryNetworkWorker: DirectoryNetworkWorkerProtocol {
-    
+
     let baseUrl = "https://sortonsevents.appspot.com/_ah/api/clientdata/v1/clientpagedata/"
-    
+
     func fetchDirectory(_ fomoId: String, completionHandler: @escaping (_ discoveredEventsJsonPage: String) -> Void) {
-        
+
         let endpoint = "\(baseUrl)\(fomoId)"
-        
+
         Alamofire.request(endpoint)
             .responseString { response in
                 // TODO: return an 'offline' message if nothing returned

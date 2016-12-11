@@ -11,15 +11,20 @@
 
 import UIKit
 
-struct ListEvents_FetchEvents_Request {
-}
+struct ListEvents {
+    struct Fetch {
+        struct Request {
+        }
 
-struct ListEvents_FetchEvents_Response {
-    let events: [DiscoveredEvent]
-}
+        struct Response {
+            let events: [DiscoveredEvent]
+        }
+    }
 
-struct ListEventsViewModel {
-    let discoveredEvents: [DiscoveredEventCellModel]
+    struct ViewModel {
+        let discoveredEvents: [DiscoveredEventCellModel]
+    }
+
 }
 
 struct DiscoveredEventCellModel {

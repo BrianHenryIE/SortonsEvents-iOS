@@ -1,4 +1,3 @@
-
 //
 //  tests.swift
 //  SortonsEvents
@@ -19,4 +18,3 @@ import Foundation
 
 // can get data from endpoint
 // data from endpoint validates with struct model
-

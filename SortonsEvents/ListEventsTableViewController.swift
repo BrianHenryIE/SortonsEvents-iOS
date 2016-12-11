@@ -13,28 +13,27 @@ import UIKit
 
 class ListEventsTableViewController: UITableViewController, ListEventsPresenterOutput {
     var output: ListEventsTableViewControllerOutput!
-    var data: ListEventsViewModel?
+    var data: ListEvents.ViewModel?
 
     // MARK: Object lifecycle
-
 
 // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Start content below (not beneath) the status bar
         let top = UIApplication.shared.statusBarFrame.size.height
-        self.tableView.contentInset = UIEdgeInsetsMake(top, 0, 0, 0);
-        
+        self.tableView.contentInset = UIEdgeInsets(top: top, left: 0, bottom: 0, right: 0)
+
         // Autosizing cell heights
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
-        
+
         fetchEventsOnLoad()
     }
 
     func fetchEventsOnLoad() {
-        let request = ListEvents_FetchEvents_Request()
+        let request = ListEvents.Fetch.Request()
         output.fetchEvents(request)
     }
 
@@ -43,34 +42,34 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
     }
 
 // MARK: Display logic ListEventsPresenterOutput
-    func presentFetchedEvents(_ viewModel: ListEventsViewModel) {
+    func presentFetchedEvents(_ viewModel: ListEvents.ViewModel) {
         data = viewModel
         tableView.reloadData()
     }
-    
-    func displayFetchEventsFetchError(_ viewModel: ListEventsViewModel) {
+
+    func displayFetchEventsFetchError(_ viewModel: ListEvents.ViewModel) {
+
         // TODO
     }
 }
 
 // MARK: - Table view data source
-extension ListEventsTableViewController
-{
+extension ListEventsTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Not my favourite code. Revisit sometime.
         if let events = data?.discoveredEvents {
             return events.count
-        }    
+        }
         return 0
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let event = data!.discoveredEvents[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DiscoveredEventCell", for: indexPath) as! DiscoveredEventTableViewCell
-        cell.setDiscoveredEvent(event)
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DiscoveredEventCell", for: indexPath) as? DiscoveredEventTableViewCell
+        cell!.setDiscoveredEvent(event)
+        return cell!
     }
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         output.displayEvent(for: indexPath.row)
         tableView.deselectRow(at: indexPath, animated: true)

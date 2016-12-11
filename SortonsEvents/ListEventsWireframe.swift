@@ -12,20 +12,24 @@ import Foundation
 class ListEventsWireframe {
 
     let listEventsView: ListEventsTableViewController!
-    var rootViewController : RootViewControllerProtocol?
-    
+    var rootViewController: RootViewControllerProtocol?
+
     init(fomoId: FomoId) {
         let storyboard = UIStoryboard(name: "ListEvents", bundle: Bundle.main)
-        
-        listEventsView = storyboard.instantiateViewController(withIdentifier: "ListEvents") as! ListEventsTableViewController
-     
+
+        listEventsView = storyboard.instantiateViewController(withIdentifier: "ListEvents") as? ListEventsTableViewController
+
         let listEventsPresenter = ListEventsPresenter(output: listEventsView)
 
-        let listEventsInteractor = ListEventsInteractor(wireframe: self, fomoId: fomoId.id, output: listEventsPresenter, listEventsNetworkWorker: ListEventsNetworkWorker(), listEventsCacheWorker: ListEventsCacheWorker())
-        
+        let listEventsInteractor = ListEventsInteractor(wireframe: self,
+                                                        fomoId: fomoId.id,
+                                                        output: listEventsPresenter,
+                                                        listEventsNetworkWorker: ListEventsNetworkWorker(),
+                                                        listEventsCacheWorker: ListEventsCacheWorker())
+
         listEventsView.output = listEventsInteractor
     }
-    
+
     func changeToNextTabRight() {
         if let rootViewController = rootViewController {
             rootViewController.changeToNextTabRight()

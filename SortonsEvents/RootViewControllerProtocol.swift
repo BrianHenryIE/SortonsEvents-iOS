@@ -10,6 +10,6 @@ import Foundation
 
 protocol RootViewControllerProtocol {
     func changeToNextTabLeft()
-    
+
     func changeToNextTabRight()
 }
