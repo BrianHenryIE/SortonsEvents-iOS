@@ -8,7 +8,7 @@ An events and news aggregator released for Irish universities.
 
 Sortons, from the French verb sortir (/soɾˈtiɾ/) to go out. Nous sortons – we are going out.
 
-Originally written as a [Java web-app](https://github.com/BrianHenryIE/Sortons-Events) to be used as a Facebook Page tab, the backed runs on Google App Engine. Later an [Objective-C client](https://github.com/BrianHenryIE/SortonsEvents-iOS/tree/52227492fc7abce797a3b009a13ccbd471f40457/SortonsEvents) was written which has since been rewritten in Swift from scratch using a TDD approach as described by [Clean Swift](http://clean-swift.com/).
+Originally written as a [Java web-app](https://github.com/BrianHenryIE/Sortons-Events) to be used as a Facebook Page tab, the backend runs on Google App Engine. Later an [Objective-C client](https://github.com/BrianHenryIE/SortonsEvents-iOS/tree/52227492fc7abce797a3b009a13ccbd471f40457/SortonsEvents) was written which has since been rewritten in Swift from scratch using a TDD approach as described by [Clean Swift](http://clean-swift.com/).
 ![](http://www.sortons.ie/events/github/sortonseventsiphonerender.png)
 Check it out on the App Store for:
 
@@ -72,7 +72,7 @@ This is a tool I wrote myself especially for this README. The badges at the top 
 
 * [Travis CI](https://travis-ci.org/)
 
-I set up continuous integration as a prerequisite to the next tool!
+I set up continuous integration as a prerequisite for the next tool!
 
 * [Codecov](https://codecov.io/)
 
