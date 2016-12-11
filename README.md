@@ -6,7 +6,7 @@
 
 An events and news aggregator released for Irish universities.
 
-Sortons, from the French verb sortir (/soɾˈtiɾ/) to go out. Nous sortons – we are going out.
+Sortons, from the French verb sortir (/soɾˈtiɾ/) to go out. Nous sortons – we are going out!
 
 Originally written as a [Java web-app](https://github.com/BrianHenryIE/Sortons-Events) to be used as a Facebook Page tab, the backend runs on Google App Engine. Later an [Objective-C client](https://github.com/BrianHenryIE/SortonsEvents-iOS/tree/52227492fc7abce797a3b009a13ccbd471f40457/SortonsEvents) was written which has since been rewritten in Swift from scratch using a TDD approach as described by [Clean Swift](http://clean-swift.com/).
 ![](http://www.sortons.ie/events/github/sortonseventsiphonerender.png)
@@ -18,7 +18,7 @@ Check it out on the App Store for:
 
 ## Views
 
-There are four views: Events, News, Directory, About.
+There are four views: Events, News, Directory, About. Events shows a list of upcoming events that were created or posted by Facebook pages related to the university. The News view is a merged newsfeed of all posts made by the related pages. Directory is that list of pages. About is meta, contact and sharing.
 
 ### Events
 
@@ -101,8 +101,8 @@ I think a weekly push notification of what's coming up would be nice, and a lock
 
 ### UX Improvements
 
-* This only refreshes data when first loaded. 
-* Swiping between tabs is currently a bit harsh. 
+* Currently only refreshes data when first loaded. 
+* Swiping between tabs is a bit harsh. 
 * The Events view should show which club/society the event is related to. 
 * The News view's performance is terrible.
 
