@@ -6,6 +6,8 @@
 
 An events and news aggregator released for Irish universities.
 
+Sortons, from the French verb sortir (/soɾˈtiɾ/) to go out. Nous sortons – we are going out.
+
 Originally written as a [Java web-app](https://github.com/BrianHenryIE/Sortons-Events) to be used as a Facebook Page tab, the backed runs on Google App Engine. Later an [Objective-C client](https://github.com/BrianHenryIE/SortonsEvents-iOS/tree/52227492fc7abce797a3b009a13ccbd471f40457/SortonsEvents) was written which has since been rewritten in Swift from scratch using a TDD approach as described by [Clean Swift](http://clean-swift.com/).
 ![](http://www.sortons.ie/events/github/sortonseventsiphonerender.png)
 Check it out on the App Store for:
@@ -26,7 +28,7 @@ Events is pretty straightforward. It pulls JSON from GAE using [Alamofire](https
 
 The news view wasn't part of the original plan, but in order to find all the events a Facebook Page has posted, I needed to read its wall. I saved the post ids and used a UIWebView to display a merged newsfeed of all the relevant pages with the [Facebook Embedded Posts widget](https://developers.facebook.com/docs/plugins/embedded-posts). This has terrible performance, so this view is loaded immediately when the app is opened. Then as the user scrolls, it loads further posts.
 
-All link clicks are intercepted and opened in the Facebook app or Safari. The URLs are parsed to remove Facebook redirects which were showing a security warning and to covert http facebook URLs into the Facebook app's URL scheme.
+All link clicks are intercepted and opened in the Facebook app or Safari. The URLs are parsed to remove Facebook redirects which were showing a security warning and to convert http Facebook URLs into the Facebook app's URL scheme.
 
 ### Directory
 
@@ -34,7 +36,7 @@ The Directory is again a UITableViewController with a pretty straightforward sea
 
 ### About
 
-The About tab was added so people can communicate with me. The app stopped working for a few weeks when Facebook deprecated an API I was using. Nobody told me! The view is a static UITableView show basic About, Changelog, and Privacy Policy information in a UIWebView, and now people can email me feedback (MFMailComposeViewController), share the app (UIActivityViewController) and rate the app (UIApplication.shared.openURL!).
+The About tab was added so people can communicate with me. The app stopped working for a few weeks when Facebook deprecated an API I was using. Nobody told me! The view is a static UITableView showing basic About, Changelog, and Privacy Policy information in a UIWebView, and now people can email me feedback (MFMailComposeViewController), share the app (UIActivityViewController) and rate the app (UIApplication.shared.openURL!).
 
 ## Resources 
 
@@ -62,7 +64,7 @@ mergepbx addresses git merge problems on Xcode .pbxproj files.
 
 * [Regex Pal](http://www.regexpal.com/)
 
-Handy page for figuring out the correct regular expressions needed. I used it here when parsing the URLs from the news view but it's a tool I find myself using regularly.
+Handy page for figuring out the correct regular expressions needed. I used it here when parsing the URLs from the News view but it's a tool I find myself using regularly.
 
 * [iTunesConnect App Installs Badge](https://github.com/BrianHenryIE/iTunesConnect-App-Installs-Badge/)
 
@@ -113,6 +115,8 @@ I'm a little disappointed in the number of installs. When the above few points a
 I'm not yet dealing with dead events or pages, so I should write a cron for that.
 
 Finding new pages to add to each directory is currently manual. A list of suggestions is built from the likes of the currently included pages. I'd like a weekly email telling me what new pages might be relevant, possibly with a confidence threshold that would automatically add them.
+
+The server code is all at [BrianHenryIE/Sortons-Events](https://github.com/BrianHenryIE/Sortons-Events). 
 
 ## Contact
 
