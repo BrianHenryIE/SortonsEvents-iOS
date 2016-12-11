@@ -68,19 +68,6 @@ struct FacebookUrl {
         appUrl = nil
         safariUrl = URL(string: inputUrl)
     }
-
-    func facebookUrlToAppUrl(_ url: String) -> (url: String, appUrl: String?) {
-
-        guard url.hasPrefix("https://www.facebook.com") || url.hasPrefix("https://m.facebook.com") else { return (url: url, appUrl: nil) }
-
-        // remove from &refsrc=
-
-        // facebook.com/events/12345676/?a=
-
-        // photos!
-
-        return (url: url, appUrl: "fb://profile")
-    }
 }
 
 // http://stackoverflow.com/questions/27880650/swift-extract-regex-matches
