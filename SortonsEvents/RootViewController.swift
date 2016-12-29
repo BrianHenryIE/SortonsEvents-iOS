@@ -23,7 +23,7 @@ class RootViewController: RootViewControllerProtocol {
         let newsView = newsWireframe.newsView!
 
         // Preload the webview
-        let _ = newsView.view
+        _ = newsView.view
 
         let directoryWireframe = DirectoryWireframe(fomoId: fomoId)
         directoryWireframe.rootViewController = self
@@ -68,14 +68,14 @@ class RootViewController: RootViewControllerProtocol {
     }
 
     func changeToNextTabLeft() {
-        if(tabBarController.selectedIndex > 0) {
-            tabBarController.selectedIndex = tabBarController.selectedIndex - 1
+        if tabBarController.selectedIndex > 0 {
+            tabBarController.selectedIndex -= 1
         }
     }
 
     func changeToNextTabRight() {
-        if(tabBarController.selectedIndex < (tabBarController.customizableViewControllers?.count)! - 1 ) {
-            tabBarController.selectedIndex = tabBarController.selectedIndex + 1
+        if tabBarController.selectedIndex < (tabBarController.customizableViewControllers?.count)! - 1  {
+            tabBarController.selectedIndex += 1
         }
     }
 }

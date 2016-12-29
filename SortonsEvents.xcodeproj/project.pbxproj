@@ -901,9 +901,7 @@
 			children = (
 				A6A675931C941D6300FAD755 /* AppDelegate.swift */,
 				A6AD95FF1DCB134100CEEFAA /* View */,
-				A69FD40D1DB2C3B300CA8964 /* Workers */,
 				A66DC39D1CF3992A00ED636B /* Model */,
-				A69DBF3D1C8AD57B005064F7 /* Resources */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -1016,13 +1014,6 @@
 			name = Presenter;
 			sourceTree = "<group>";
 		};
-		A69DBF3D1C8AD57B005064F7 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		A69DBF501C8AE4D8005064F7 /* SortonsEventsTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -1124,13 +1115,6 @@
 				A6AAD3E21D258F8E0097AF22 /* ClientPageData.swift */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		A69FD40D1DB2C3B300CA8964 /* Workers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Workers;
 			sourceTree = "<group>";
 		};
 		A6AD95FF1DCB134100CEEFAA /* View */ = {

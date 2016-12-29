@@ -35,14 +35,14 @@ class NewsWireframe {
     }
 
     func changeToNextTabLeft() {
-        if let rootViewController = rootViewController {
-            rootViewController.changeToNextTabLeft()
-        }
+
+        rootViewController?.changeToNextTabLeft()
+
     }
 
     func changeToNextTabRight() {
-        if let rootViewController = rootViewController {
-            rootViewController.changeToNextTabRight()
-        }
+
+        rootViewController?.changeToNextTabRight()
+
     }
 }

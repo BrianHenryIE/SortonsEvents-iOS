@@ -34,8 +34,8 @@ class DirectoryWireframe {
     }
 
     func changeToNextTabLeft() {
-        if let rootViewController = rootViewController {
-            rootViewController.changeToNextTabLeft()
-        }
+        
+        rootViewController?.changeToNextTabLeft()
+        
     }
 }
