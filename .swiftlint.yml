@@ -1,2 +1,5 @@
 excluded:
   - Pods
+disabled_rules:
+  - nesting
+line_length: 120
