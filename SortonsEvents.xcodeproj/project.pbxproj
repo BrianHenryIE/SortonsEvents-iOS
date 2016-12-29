@@ -237,6 +237,7 @@
 		A643EB971DF4F7240005E769 /* MetaWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A643EB591DF4F7240005E769 /* MetaWireframe.swift */; };
 		A643EB981DF4F7240005E769 /* MetaWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A643EB591DF4F7240005E769 /* MetaWireframe.swift */; };
 		A6478D181D36CE2600B6000B /* ListEvents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6478D171D36CE2600B6000B /* ListEvents.storyboard */; };
+		A6595E9E1E14DC8600AA1CE1 /* SortonsEventsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6595E9D1E14DC8600AA1CE1 /* SortonsEventsUITests.swift */; };
 		A65B23BB1D6DFAE700A66C85 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65B23BA1D6DFAE700A66C85 /* News.storyboard */; };
 		A65B23BD1D6DFB2400A66C85 /* Directory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65B23BC1D6DFB2400A66C85 /* Directory.storyboard */; };
 		A65B23C31D6E00FF00A66C85 /* ListEventsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B23C21D6E00FF00A66C85 /* ListEventsWireframe.swift */; };
@@ -540,6 +541,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A6595EA01E14DC8600AA1CE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6C613031A91492500A5F082 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6141D401BB9F44F003150F1;
+			remoteInfo = "FOMO TCD";
+		};
 		A69DBF541C8AE4D8005064F7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A6C613031A91492500A5F082 /* Project object */;
@@ -591,6 +599,9 @@
 		A643EB591DF4F7240005E769 /* MetaWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaWireframe.swift; sourceTree = "<group>"; };
 		A6478D171D36CE2600B6000B /* ListEvents.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListEvents.storyboard; sourceTree = "<group>"; };
 		A64DF46F1DDC25D700A102E0 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = SOURCE_ROOT; };
+		A6595E9B1E14DC8500AA1CE1 /* Sortons Events UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sortons Events UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6595E9D1E14DC8600AA1CE1 /* SortonsEventsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortonsEventsUITests.swift; sourceTree = "<group>"; };
+		A6595E9F1E14DC8600AA1CE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A65B23BA1D6DFAE700A66C85 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		A65B23BC1D6DFB2400A66C85 /* Directory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Directory.storyboard; sourceTree = "<group>"; };
 		A65B23C21D6E00FF00A66C85 /* ListEventsWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsWireframe.swift; sourceTree = "<group>"; };
@@ -724,6 +735,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A6595E981E14DC8500AA1CE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A69186D41DCC543A00372A98 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -850,6 +868,16 @@
 			children = (
 			);
 			name = Meta;
+			sourceTree = "<group>";
+		};
+		A6595E9C1E14DC8600AA1CE1 /* SortonsEventsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A6595E9D1E14DC8600AA1CE1 /* SortonsEventsUITests.swift */,
+				A6595E9F1E14DC8600AA1CE1 /* Info.plist */,
+			);
+			name = SortonsEventsUITests;
+			path = "Sortons Events UITests";
 			sourceTree = "<group>";
 		};
 		A65CEE4B1DB5C5000059EF52 /* Interactor */ = {
@@ -1176,6 +1204,7 @@
 			children = (
 				A6C6130D1A91492500A5F082 /* SortonsEvents */,
 				A69DBF501C8AE4D8005064F7 /* SortonsEventsTests */,
+				A6595E9C1E14DC8600AA1CE1 /* SortonsEventsUITests */,
 				A6C6130C1A91492500A5F082 /* Products */,
 				7ED8EBE8F8E37C0B2B3A2F16 /* Frameworks */,
 				353A73FF40F3D0AD1A553132 /* Pods */,
@@ -1195,6 +1224,7 @@
 				A69187251DCC54BD00372A98 /* FOMO DIT.app */,
 				A69187641DCC551000372A98 /* FOMO UL.app */,
 				A69187B41DCC591E00372A98 /* FOMO QUB.app */,
+				A6595E9B1E14DC8500AA1CE1 /* Sortons Events UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1329,6 +1359,25 @@
 			productName = DublinTheatreOC;
 			productReference = A63B32BF1C68AFA400C46020 /* FOMO DCU.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A6595E9A1E14DC8500AA1CE1 /* Sortons Events UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6595EA21E14DC8600AA1CE1 /* Build configuration list for PBXNativeTarget "Sortons Events UITests" */;
+			buildPhases = (
+				A6595E971E14DC8500AA1CE1 /* Sources */,
+				A6595E981E14DC8500AA1CE1 /* Frameworks */,
+				A6595E991E14DC8500AA1CE1 /* Resources */,
+				A6595EA51E14EA6900AA1CE1 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6595EA11E14DC8600AA1CE1 /* PBXTargetDependency */,
+			);
+			name = "Sortons Events UITests";
+			productName = "Sortons Events UITests";
+			productReference = A6595E9B1E14DC8500AA1CE1 /* Sortons Events UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		A69186AD1DCC543A00372A98 /* FOMO NUIM */ = {
 			isa = PBXNativeTarget;
@@ -1469,7 +1518,7 @@
 		A6C613031A91492500A5F082 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Sortons;
 				TargetAttributes = {
@@ -1488,6 +1537,12 @@
 					A63B32A01C68AFA400C46020 = {
 						DevelopmentTeam = 3RM6H33EW7;
 						LastSwiftMigration = 0810;
+					};
+					A6595E9A1E14DC8500AA1CE1 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 3RM6H33EW7;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A6141D401BB9F44F003150F1;
 					};
 					A69186AD1DCC543A00372A98 = {
 						DevelopmentTeam = 3RM6H33EW7;
@@ -1540,6 +1595,7 @@
 				A62BD6181B9E1C4500E928E5 /* FOMO UCD */,
 				A69187271DCC551000372A98 /* FOMO UL */,
 				A69DBF4E1C8AE4D8005064F7 /* SortonsEventsTests */,
+				A6595E9A1E14DC8500AA1CE1 /* Sortons Events UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1622,6 +1678,13 @@
 				A69186A31DCC4EB000372A98 /* LaunchScreenDCU.xib in Resources */,
 				A63B32B91C68AFA400C46020 /* Settings.bundle in Resources */,
 				A63B95551DB633A800ECA301 /* DirectoryImages.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6595E991E14DC8500AA1CE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2171,6 +2234,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" f9ecb642fdd37585f3a9283eb05f86381d870012 5272df7e21b8c5a5296bc66602dfae598473416d91d97d0f616e8a56f77de434 ";
 		};
+		A6595EA51E14EA6900AA1CE1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nswiftlint\nfi";
+		};
 		A67DF55A1DF547EF00D351FD /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2616,6 +2692,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A6595E971E14DC8500AA1CE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6595E9E1E14DC8600AA1CE1 /* SortonsEventsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A69186AF1DCC543A00372A98 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2888,6 +2972,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A6595EA11E14DC8600AA1CE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6141D401BB9F44F003150F1 /* FOMO TCD */;
+			targetProxy = A6595EA01E14DC8600AA1CE1 /* PBXContainerItemProxy */;
+		};
 		A69DBF551C8AE4D8005064F7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A62BD6181B9E1C4500E928E5 /* FOMO UCD */;
@@ -3131,6 +3220,42 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A6595EA31E14DC8600AA1CE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 3RM6H33EW7;
+				INFOPLIST_FILE = "Sortons Events UITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ie.sortons.Sortons-Events-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "FOMO TCD";
+			};
+			name = Debug;
+		};
+		A6595EA41E14DC8600AA1CE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3RM6H33EW7;
+				INFOPLIST_FILE = "Sortons Events UITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ie.sortons.Sortons-Events-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "FOMO TCD";
 			};
 			name = Release;
 		};
@@ -3606,6 +3731,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A6595EA21E14DC8600AA1CE1 /* Build configuration list for PBXNativeTarget "Sortons Events UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6595EA31E14DC8600AA1CE1 /* Debug */,
+				A6595EA41E14DC8600AA1CE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		A69186E51DCC543A00372A98 /* Build configuration list for PBXNativeTarget "FOMO NUIM" */ = {
 			isa = XCConfigurationList;
