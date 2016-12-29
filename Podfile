@@ -8,6 +8,9 @@ def common_pods
     pod 'ObjectMapper', :git => 'https://github.com/Hearst-DD/ObjectMapper.git'
     pod 'Alamofire',   :git => 'https://github.com/Alamofire/Alamofire.git'
     pod 'AlamofireImage', :git => 'https://github.com/Alamofire/AlamofireImage.git'
+    pod 'Fabric'
+    pod 'Crashlytics'
+    
 end
 
 target 'FOMO DCU' do

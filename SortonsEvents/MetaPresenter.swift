@@ -22,12 +22,4 @@ class MetaPresenter: MetaInteractorOutput {
         self.output = output
     }
 
-    func openIosSettings() {
-        UIApplication.shared.openURL(URL(string:UIApplicationOpenSettingsURLString)!)
-    }
-
-    func reviewOnAppStore(_ link: String) {
-        UIApplication.shared.openURL(URL(string: link)!)
-    }
-
 }

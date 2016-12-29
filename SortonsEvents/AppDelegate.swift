@@ -7,15 +7,8 @@
 //
 
 import UIKit
-
-//    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-//
-//    // Set the application defaults
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    NSDictionary *appDefaults = [NSDictionary dictionaryWithObject:@"YES"
-//    forKey:@"launch_native_apps_toggle"];
-//    [defaults registerDefaults:appDefaults];
-//    [defaults synchronize];
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let fomoId = FomoId()
 
         _ = RootViewController(window: window!, fomoId: fomoId)
+
+        Fabric.with([Crashlytics.self])
 
         return true
     }

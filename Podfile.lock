@@ -2,11 +2,16 @@ PODS:
   - Alamofire (4.2.0)
   - AlamofireImage (3.2.0):
     - Alamofire (~> 4.1)
+  - Crashlytics (3.8.3):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.11)
   - ObjectMapper (2.2.1)
 
 DEPENDENCIES:
   - Alamofire (from `https://github.com/Alamofire/Alamofire.git`)
   - AlamofireImage (from `https://github.com/Alamofire/AlamofireImage.git`)
+  - Crashlytics
+  - Fabric
   - ObjectMapper (from `https://github.com/Hearst-DD/ObjectMapper.git`)
 
 EXTERNAL SOURCES:
@@ -31,8 +36,10 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 26d8877ec03b4e6e6cbfbf7c03924b4844a2d453
   AlamofireImage: 0ff319da83d6abb78a661d7296e742e7f65e15f5
+  Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   ObjectMapper: 41e43e1a89f8060ef5ea5d04ba852e269a621d68
 
-PODFILE CHECKSUM: ad14587e0b62d674cad183a46a74225f7b596def
+PODFILE CHECKSUM: 73df1ba8667249f0fb15da971857cbb392090c37
 
 COCOAPODS: 1.0.1

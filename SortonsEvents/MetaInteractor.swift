@@ -10,8 +10,6 @@ import Foundation
 
 protocol MetaInteractorOutput {
 
-    func reviewOnAppStore(_ link: String)
-    func openIosSettings()
 }
 
 enum SettingsPage {
@@ -73,11 +71,11 @@ class MetaInteractor: MetaViewControllerOutput {
     }
 
     func openIosSettings() {
-        presenter.openIosSettings()
+        wireframe.openIosSettings()
     }
 
     func rateInAppStore() {
         let appStoreReviewLink = "itms-apps://itunes.apple.com/app/viewContentsUserReviews?id=\(fomoId.appStoreId)"
-        presenter.reviewOnAppStore(appStoreReviewLink)
+        wireframe.reviewOnAppStore(appStoreReviewLink)
     }
 }

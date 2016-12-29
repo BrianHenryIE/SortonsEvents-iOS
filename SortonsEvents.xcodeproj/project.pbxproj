@@ -835,12 +835,12 @@
 			isa = PBXGroup;
 			children = (
 				A643EB531DF4F7240005E769 /* Meta.storyboard */,
-				A643EB541DF4F7240005E769 /* MetaImages.xcassets */,
-				A643EB551DF4F7240005E769 /* MetaInteractor.swift */,
-				A643EB561DF4F7240005E769 /* MetaPresenter.swift */,
 				A643EB571DF4F7240005E769 /* MetaViewController.swift */,
 				A643EB581DF4F7240005E769 /* MetaWebViewController.swift */,
+				A643EB561DF4F7240005E769 /* MetaPresenter.swift */,
+				A643EB551DF4F7240005E769 /* MetaInteractor.swift */,
 				A643EB591DF4F7240005E769 /* MetaWireframe.swift */,
+				A643EB541DF4F7240005E769 /* MetaImages.xcassets */,
 			);
 			name = Meta;
 			sourceTree = "<group>";
@@ -1252,6 +1252,7 @@
 				SWIFCLEANCUSTOMRUNSCRIPT /* Code formatting */,
 				DE49FEAB7DE8B19DD9416EB4 /* [CP] Embed Pods Frameworks */,
 				9D0C33B60488317A32CF499F /* [CP] Copy Pods Resources */,
+				A6595E8E1E14CD2800AA1CE1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1273,6 +1274,7 @@
 				SWIFCLEANCUSTOMRUNSCRIPT /* Code formatting */,
 				B12C61968D9BDA934E09212A /* [CP] Embed Pods Frameworks */,
 				24B40B9293D9CF86BD5F0C37 /* [CP] Copy Pods Resources */,
+				A6595E8F1E14CD7200AA1CE1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1295,6 +1297,7 @@
 				SWIFCLEANCUSTOMRUNSCRIPT /* Code formatting */,
 				2A57D2A3817DA056AB080CA9 /* [CP] Embed Pods Frameworks */,
 				5DB778E1477F85C47F567ACE /* [CP] Copy Pods Resources */,
+				A6595E901E14CD8200AA1CE1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1316,6 +1319,7 @@
 				SWIFCLEANCUSTOMRUNSCRIPT /* Code formatting */,
 				40E14C6093F1A0977E4746B4 /* [CP] Embed Pods Frameworks */,
 				F72AF937C35A01D37DA91592 /* [CP] Copy Pods Resources */,
+				A6595E961E14CDAF00AA1CE1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1337,6 +1341,7 @@
 				A69186E21DCC543A00372A98 /* Code formatting */,
 				99E5CD255883B8AAE09C952C /* [CP] Embed Pods Frameworks */,
 				C0B0767734CF15085C4EABBA /* [CP] Copy Pods Resources */,
+				A6595E931E14CD9F00AA1CE1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1358,6 +1363,7 @@
 				A691871F1DCC54BD00372A98 /* Swift-Clean Run Script */,
 				6C0DD5E8E189A6700E54ACCE /* [CP] Embed Pods Frameworks */,
 				F99C360AF713B818CC463E08 /* [CP] Copy Pods Resources */,
+				A6595E951E14CDAB00AA1CE1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1380,6 +1386,7 @@
 				A691875E1DCC551000372A98 /* Code formatting */,
 				987B320EFAA2400530306DDA /* [CP] Embed Pods Frameworks */,
 				A60AE13AF202C213787C0201 /* [CP] Copy Pods Resources */,
+				A6595E911E14CD8D00AA1CE1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1401,6 +1408,7 @@
 				A69187AE1DCC591E00372A98 /* Code formatting */,
 				C289B5AB2AF7084599579B58 /* [CP] Embed Pods Frameworks */,
 				11615604614A5CC946C84CAB /* [CP] Copy Pods Resources */,
+				A6595E921E14CD9900AA1CE1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1444,6 +1452,7 @@
 				SWIFCLEANCUSTOMRUNSCRIPT /* Code formatting */,
 				78B0DE62EE9BA133722C4745 /* [CP] Embed Pods Frameworks */,
 				BA7F02105B1F378A4F46BD5A /* [CP] Copy Pods Resources */,
+				A6595E941E14CDA500AA1CE1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -2044,6 +2053,123 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		A6595E8E1E14CD2800AA1CE1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" f9ecb642fdd37585f3a9283eb05f86381d870012 5272df7e21b8c5a5296bc66602dfae598473416d91d97d0f616e8a56f77de434";
+		};
+		A6595E8F1E14CD7200AA1CE1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" f9ecb642fdd37585f3a9283eb05f86381d870012 5272df7e21b8c5a5296bc66602dfae598473416d91d97d0f616e8a56f77de434 ";
+		};
+		A6595E901E14CD8200AA1CE1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" f9ecb642fdd37585f3a9283eb05f86381d870012 5272df7e21b8c5a5296bc66602dfae598473416d91d97d0f616e8a56f77de434 ";
+		};
+		A6595E911E14CD8D00AA1CE1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" f9ecb642fdd37585f3a9283eb05f86381d870012 5272df7e21b8c5a5296bc66602dfae598473416d91d97d0f616e8a56f77de434 ";
+		};
+		A6595E921E14CD9900AA1CE1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" f9ecb642fdd37585f3a9283eb05f86381d870012 5272df7e21b8c5a5296bc66602dfae598473416d91d97d0f616e8a56f77de434 ";
+		};
+		A6595E931E14CD9F00AA1CE1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" f9ecb642fdd37585f3a9283eb05f86381d870012 5272df7e21b8c5a5296bc66602dfae598473416d91d97d0f616e8a56f77de434 ";
+		};
+		A6595E941E14CDA500AA1CE1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" f9ecb642fdd37585f3a9283eb05f86381d870012 5272df7e21b8c5a5296bc66602dfae598473416d91d97d0f616e8a56f77de434 ";
+		};
+		A6595E951E14CDAB00AA1CE1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" f9ecb642fdd37585f3a9283eb05f86381d870012 5272df7e21b8c5a5296bc66602dfae598473416d91d97d0f616e8a56f77de434 ";
+		};
+		A6595E961E14CDAF00AA1CE1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" f9ecb642fdd37585f3a9283eb05f86381d870012 5272df7e21b8c5a5296bc66602dfae598473416d91d97d0f616e8a56f77de434 ";
 		};
 		A67DF55A1DF547EF00D351FD /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
