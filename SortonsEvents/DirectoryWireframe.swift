@@ -19,7 +19,7 @@ class DirectoryWireframe {
 
         directoryView = storyboard.instantiateViewController(withIdentifier: "Directory") as? DirectoryViewController
 
-        let directoryPresenter = DirectoryPresenter(output: directoryView)
+        let directoryPresenter = DirectoryPresenter(output: directoryView, fomoCensor: fomoId.fomoCensor)
 
         let directoryCacheWorker = DirectoryCacheWorker()
         let directoryNetworkWorker = DirectoryNetworkWorker()
@@ -34,8 +34,8 @@ class DirectoryWireframe {
     }
 
     func changeToNextTabLeft() {
-        
+
         rootViewController?.changeToNextTabLeft()
-        
+
     }
 }

@@ -40,12 +40,12 @@ class SortonsEventsUITests: XCTestCase {
 
         // hopefuly by now the news tab will have loaded (or a newer version will have better performance)
         app.tabBars.buttons["News"].tap()
-        
+
         table.swipeUp()
         // take a screenshot
 
         // switch to meta
-        
+
         // what about the uitabbar replacement we want to use?!
 
     }

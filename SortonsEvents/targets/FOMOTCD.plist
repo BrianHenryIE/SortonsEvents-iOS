@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>FomoCensor</key>
+	<array>
+		<string>Tcd</string>
+		<string>Trinity</string>
+		<string>Trinity College Dublin</string>
+		<string>TCD</string>
+		<string>DU</string>
+	</array>
 	<key>AppStoreId</key>
 	<string>1035135187</string>
 	<key>CFBundleDevelopmentRegion</key>
