@@ -31,8 +31,8 @@ class ListEventsWireframe {
     }
 
     func changeToNextTabRight() {
-        
+
         rootViewController?.changeToNextTabRight()
-        
+
     }
 }

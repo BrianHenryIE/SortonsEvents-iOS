@@ -74,7 +74,7 @@ class RootViewController: RootViewControllerProtocol {
     }
 
     func changeToNextTabRight() {
-        if tabBarController.selectedIndex < (tabBarController.customizableViewControllers?.count)! - 1  {
+        if tabBarController.selectedIndex < (tabBarController.customizableViewControllers?.count)! - 1 {
             tabBarController.selectedIndex += 1
         }
     }

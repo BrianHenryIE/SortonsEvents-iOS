@@ -63,25 +63,25 @@ class MetaWireframe: NSObject {
             //  TODO          output.showSendMailErrorAlert()
         }
     }
-    
+
     func openIosSettings() {
         UIApplication.shared.openURL(URL(string:UIApplicationOpenSettingsURLString)!)
     }
-    
+
     func reviewOnAppStore(_ link: String) {
         UIApplication.shared.openURL(URL(string: link)!)
     }
 
     func changeToNextTabLeft() {
-        
+
         rootViewController?.changeToNextTabLeft()
-        
+
     }
 
     func changeToNextTabRight() {
-        
+
         rootViewController?.changeToNextTabRight()
-        
+
     }
 }
 
