@@ -17,37 +17,40 @@ class SortonsEventsUITests: XCTestCase {
 
         continueAfterFailure = false
 
-        app.launchArguments = [ "USE_PRESENTER_FILTER" ]
+        setupSnapshot(app)
 
-        // open the app
         app.launch()
     }
 
     func testScreenshots() {
 
-        let tablesQuery: XCUIElementQuery = self.app.tables
-        let table: XCUIElement = tablesQuery.element
-        // TODO wait for data to load
+        var tablesQuery: XCUIElementQuery = self.app.tables
+        var table: XCUIElement = tablesQuery.element
+
+        // TODO NB Wait for data to load
+        // On first load, there's no cache
+        // (though it seems like that after multiple runson device!)
+
+        sleep(5)
 
         table.swipeUp()
+        snapshot("0ListEvents")
 
-        // take screenshot
-
-        // with a UI test presenter, whose purpose it is to scrub DCU from society names
         app.tabBars.buttons["Directory"].tap()
-        // in the directory tab, scroll down a little
-        // take screenshot
+
+        tablesQuery = self.app.tables
+        table = tablesQuery.element
+        table.swipeUp()
+        snapshot("0Directory")
 
         // hopefuly by now the news tab will have loaded (or a newer version will have better performance)
         app.tabBars.buttons["News"].tap()
 
-        table.swipeUp()
-        // take a screenshot
+        app.windows.element(boundBy: 0) .swipeUp()
 
-        // switch to meta
+        snapshot("0News")
 
-        // what about the uitabbar replacement we want to use?!
-
+        XCTAssert(true)
     }
 
     override func tearDown() {
