@@ -281,7 +281,6 @@
 		A69186B11DCC543A00372A98 /* ClientPageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3E21D258F8E0097AF22 /* ClientPageData.swift */; };
 		A69186B21DCC543A00372A98 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F31DCB0AD500CEEFAA /* RootViewController.swift */; };
 		A69186B31DCC543A00372A98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A675931C941D6300FAD755 /* AppDelegate.swift */; };
-		A69186B41DCC543A00372A98 /* RootViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F51DCB0CB300CEEFAA /* RootViewControllerProtocol.swift */; };
 		A69186B51DCC543A00372A98 /* NewsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CEE511DB5C6D00059EF52 /* NewsModels.swift */; };
 		A69186B61DCC543A00372A98 /* DirectoryCacheWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3DD1D258E570097AF22 /* DirectoryCacheWorker.swift */; };
 		A69186B71DCC543A00372A98 /* ListEventsCacheWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A6759A1C943AED00FAD755 /* ListEventsCacheWorker.swift */; };
@@ -324,7 +323,6 @@
 		A69186EE1DCC54BD00372A98 /* ClientPageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3E21D258F8E0097AF22 /* ClientPageData.swift */; };
 		A69186EF1DCC54BD00372A98 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F31DCB0AD500CEEFAA /* RootViewController.swift */; };
 		A69186F01DCC54BD00372A98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A675931C941D6300FAD755 /* AppDelegate.swift */; };
-		A69186F11DCC54BD00372A98 /* RootViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F51DCB0CB300CEEFAA /* RootViewControllerProtocol.swift */; };
 		A69186F21DCC54BD00372A98 /* NewsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CEE511DB5C6D00059EF52 /* NewsModels.swift */; };
 		A69186F31DCC54BD00372A98 /* DirectoryCacheWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3DD1D258E570097AF22 /* DirectoryCacheWorker.swift */; };
 		A69186F41DCC54BD00372A98 /* ListEventsCacheWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A6759A1C943AED00FAD755 /* ListEventsCacheWorker.swift */; };
@@ -391,7 +389,6 @@
 		A69187431DCC551000372A98 /* DirectoryCacheWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3DD1D258E570097AF22 /* DirectoryCacheWorker.swift */; };
 		A69187441DCC551000372A98 /* NewsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B21DADE651003FBCE6 /* NewsWireframe.swift */; };
 		A69187451DCC551000372A98 /* ListEventsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ABE5341D3AB9A600EF3D11 /* ListEventsPresenter.swift */; };
-		A69187461DCC551000372A98 /* RootViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F51DCB0CB300CEEFAA /* RootViewControllerProtocol.swift */; };
 		A69187471DCC551000372A98 /* SourcePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A636D2731D0C8A8700FB9C62 /* SourcePage.swift */; };
 		A69187481DCC551000372A98 /* DirectoryNetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E10C631DB44F5C007854F8 /* DirectoryNetworkWorker.swift */; };
 		A69187491DCC551000372A98 /* GAEISO8601DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3F61D25B64D0097AF22 /* GAEISO8601DateTransform.swift */; };
@@ -427,7 +424,6 @@
 		A691877D1DCC591E00372A98 /* ClientPageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3E21D258F8E0097AF22 /* ClientPageData.swift */; };
 		A691877E1DCC591E00372A98 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F31DCB0AD500CEEFAA /* RootViewController.swift */; };
 		A691877F1DCC591E00372A98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A675931C941D6300FAD755 /* AppDelegate.swift */; };
-		A69187801DCC591E00372A98 /* RootViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F51DCB0CB300CEEFAA /* RootViewControllerProtocol.swift */; };
 		A69187811DCC591E00372A98 /* NewsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CEE511DB5C6D00059EF52 /* NewsModels.swift */; };
 		A69187821DCC591E00372A98 /* DirectoryCacheWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AAD3DD1D258E570097AF22 /* DirectoryCacheWorker.swift */; };
 		A69187831DCC591E00372A98 /* ListEventsCacheWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A6759A1C943AED00FAD755 /* ListEventsCacheWorker.swift */; };
@@ -512,11 +508,6 @@
 		A6ABE5331D3AB60200EF3D11 /* ListEventsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ABE5321D3AB60200EF3D11 /* ListEventsPresenterTests.swift */; };
 		A6ABE5351D3AB9A600EF3D11 /* ListEventsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ABE5341D3AB9A600EF3D11 /* ListEventsPresenter.swift */; };
 		A6AD95F41DCB0AD500CEEFAA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F31DCB0AD500CEEFAA /* RootViewController.swift */; };
-		A6AD95F61DCB0CB300CEEFAA /* RootViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F51DCB0CB300CEEFAA /* RootViewControllerProtocol.swift */; };
-		A6AD95F71DCB0CB300CEEFAA /* RootViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F51DCB0CB300CEEFAA /* RootViewControllerProtocol.swift */; };
-		A6AD95F81DCB0CB300CEEFAA /* RootViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F51DCB0CB300CEEFAA /* RootViewControllerProtocol.swift */; };
-		A6AD95F91DCB0CB300CEEFAA /* RootViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F51DCB0CB300CEEFAA /* RootViewControllerProtocol.swift */; };
-		A6AD95FA1DCB0CB300CEEFAA /* RootViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F51DCB0CB300CEEFAA /* RootViewControllerProtocol.swift */; };
 		A6AD95FB1DCB0CBA00CEEFAA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F31DCB0AD500CEEFAA /* RootViewController.swift */; };
 		A6AD95FC1DCB0CBB00CEEFAA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F31DCB0AD500CEEFAA /* RootViewController.swift */; };
 		A6AD95FD1DCB0CBB00CEEFAA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F31DCB0AD500CEEFAA /* RootViewController.swift */; };
@@ -675,7 +666,6 @@
 		A6ABE5321D3AB60200EF3D11 /* ListEventsPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsPresenterTests.swift; sourceTree = "<group>"; };
 		A6ABE5341D3AB9A600EF3D11 /* ListEventsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsPresenter.swift; sourceTree = "<group>"; };
 		A6AD95F31DCB0AD500CEEFAA /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		A6AD95F51DCB0CB300CEEFAA /* RootViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerProtocol.swift; sourceTree = "<group>"; };
 		A6B7D69F1DBC156A00578C3C /* ListEventsCacheWorkerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsCacheWorkerTests.swift; sourceTree = "<group>"; };
 		A6BDA8771AE5CA6500C1A55C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		A6C04F681DB450A40009C9BF /* DirectoryInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryInteractorTests.swift; sourceTree = "<group>"; };
@@ -1153,7 +1143,6 @@
 			isa = PBXGroup;
 			children = (
 				A6AD95F31DCB0AD500CEEFAA /* RootViewController.swift */,
-				A6AD95F51DCB0CB300CEEFAA /* RootViewControllerProtocol.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1866,7 +1855,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		2DDA7638F6054AD94FF613EB /* [CP] Check Pods Manifest.lock */ = {
@@ -1881,7 +1870,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		31BA920908C930DB6260C660 /* [CP] Check Pods Manifest.lock */ = {
@@ -1896,7 +1885,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		40E14C6093F1A0977E4746B4 /* [CP] Embed Pods Frameworks */ = {
@@ -1926,7 +1915,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		5DB778E1477F85C47F567ACE /* [CP] Copy Pods Resources */ = {
@@ -1956,7 +1945,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		6C0DD5E8E189A6700E54ACCE /* [CP] Embed Pods Frameworks */ = {
@@ -2001,7 +1990,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		987B320EFAA2400530306DDA /* [CP] Embed Pods Frameworks */ = {
@@ -2061,7 +2050,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A2ED084B73901F0863E1CCE1 /* [CP] Check Pods Manifest.lock */ = {
@@ -2076,7 +2065,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A54E92CAE79F499470A0ACFE /* [CP] Embed Pods Frameworks */ = {
@@ -2376,7 +2365,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C0B0767734CF15085C4EABBA /* [CP] Copy Pods Resources */ = {
@@ -2451,7 +2440,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F72AF937C35A01D37DA91592 /* [CP] Copy Pods Resources */ = {
@@ -2496,7 +2485,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nswiftlint\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2509,7 +2498,6 @@
 				A63B954F1DB633A300ECA301 /* ClientPageData.swift in Sources */,
 				A6AD95FC1DCB0CBB00CEEFAA /* RootViewController.swift in Sources */,
 				A698B6F91D2589F7003494A3 /* AppDelegate.swift in Sources */,
-				A6AD95F81DCB0CB300CEEFAA /* RootViewControllerProtocol.swift in Sources */,
 				A63B951F1DB6337300ECA301 /* NewsModels.swift in Sources */,
 				A63B95431DB6339800ECA301 /* DirectoryCacheWorker.swift in Sources */,
 				A63B94F21DB6332200ECA301 /* ListEventsCacheWorker.swift in Sources */,
@@ -2558,7 +2546,6 @@
 				A63B95501DB633A400ECA301 /* ClientPageData.swift in Sources */,
 				A6AD95FD1DCB0CBB00CEEFAA /* RootViewController.swift in Sources */,
 				A698B6FA1D2589F8003494A3 /* AppDelegate.swift in Sources */,
-				A6AD95F91DCB0CB300CEEFAA /* RootViewControllerProtocol.swift in Sources */,
 				A63B95201DB6337300ECA301 /* NewsModels.swift in Sources */,
 				A63B95441DB6339800ECA301 /* DirectoryCacheWorker.swift in Sources */,
 				A63B94F31DB6332200ECA301 /* ListEventsCacheWorker.swift in Sources */,
@@ -2635,7 +2622,6 @@
 				A643EB851DF4F7240005E769 /* MetaViewController.swift in Sources */,
 				A67796B31DADE651003FBCE6 /* NewsWireframe.swift in Sources */,
 				A6ABE5351D3AB9A600EF3D11 /* ListEventsPresenter.swift in Sources */,
-				A6AD95F61DCB0CB300CEEFAA /* RootViewControllerProtocol.swift in Sources */,
 				A6AAD3E41D258FD80097AF22 /* SourcePage.swift in Sources */,
 				A6E10C641DB44F5C007854F8 /* DirectoryNetworkWorker.swift in Sources */,
 				A643EB971DF4F7240005E769 /* MetaWireframe.swift in Sources */,
@@ -2656,7 +2642,6 @@
 				A63B95511DB633A400ECA301 /* ClientPageData.swift in Sources */,
 				A6AD95FE1DCB0CBB00CEEFAA /* RootViewController.swift in Sources */,
 				A698B6FB1D2589F8003494A3 /* AppDelegate.swift in Sources */,
-				A6AD95FA1DCB0CB300CEEFAA /* RootViewControllerProtocol.swift in Sources */,
 				A63B95211DB6337400ECA301 /* NewsModels.swift in Sources */,
 				A63B95451DB6339900ECA301 /* DirectoryCacheWorker.swift in Sources */,
 				A63B94F41DB6332200ECA301 /* ListEventsCacheWorker.swift in Sources */,
@@ -2714,7 +2699,6 @@
 				A69186B11DCC543A00372A98 /* ClientPageData.swift in Sources */,
 				A69186B21DCC543A00372A98 /* RootViewController.swift in Sources */,
 				A69186B31DCC543A00372A98 /* AppDelegate.swift in Sources */,
-				A69186B41DCC543A00372A98 /* RootViewControllerProtocol.swift in Sources */,
 				A69186B51DCC543A00372A98 /* NewsModels.swift in Sources */,
 				A69186B61DCC543A00372A98 /* DirectoryCacheWorker.swift in Sources */,
 				A69186B71DCC543A00372A98 /* ListEventsCacheWorker.swift in Sources */,
@@ -2763,7 +2747,6 @@
 				A69186EE1DCC54BD00372A98 /* ClientPageData.swift in Sources */,
 				A69186EF1DCC54BD00372A98 /* RootViewController.swift in Sources */,
 				A69186F01DCC54BD00372A98 /* AppDelegate.swift in Sources */,
-				A69186F11DCC54BD00372A98 /* RootViewControllerProtocol.swift in Sources */,
 				A69186F21DCC54BD00372A98 /* NewsModels.swift in Sources */,
 				A69186F31DCC54BD00372A98 /* DirectoryCacheWorker.swift in Sources */,
 				A69186F41DCC54BD00372A98 /* ListEventsCacheWorker.swift in Sources */,
@@ -2840,7 +2823,6 @@
 				A643EB861DF4F7240005E769 /* MetaViewController.swift in Sources */,
 				A69187441DCC551000372A98 /* NewsWireframe.swift in Sources */,
 				A69187451DCC551000372A98 /* ListEventsPresenter.swift in Sources */,
-				A69187461DCC551000372A98 /* RootViewControllerProtocol.swift in Sources */,
 				A69187471DCC551000372A98 /* SourcePage.swift in Sources */,
 				A69187481DCC551000372A98 /* DirectoryNetworkWorker.swift in Sources */,
 				A643EB981DF4F7240005E769 /* MetaWireframe.swift in Sources */,
@@ -2861,7 +2843,6 @@
 				A691877D1DCC591E00372A98 /* ClientPageData.swift in Sources */,
 				A691877E1DCC591E00372A98 /* RootViewController.swift in Sources */,
 				A691877F1DCC591E00372A98 /* AppDelegate.swift in Sources */,
-				A69187801DCC591E00372A98 /* RootViewControllerProtocol.swift in Sources */,
 				A69187811DCC591E00372A98 /* NewsModels.swift in Sources */,
 				A69187821DCC591E00372A98 /* DirectoryCacheWorker.swift in Sources */,
 				A69187831DCC591E00372A98 /* ListEventsCacheWorker.swift in Sources */,
@@ -2934,7 +2915,6 @@
 				A63B954E1DB633A300ECA301 /* ClientPageData.swift in Sources */,
 				A6AD95FB1DCB0CBA00CEEFAA /* RootViewController.swift in Sources */,
 				A698B6F81D2589F7003494A3 /* AppDelegate.swift in Sources */,
-				A6AD95F71DCB0CB300CEEFAA /* RootViewControllerProtocol.swift in Sources */,
 				A63B951E1DB6337300ECA301 /* NewsModels.swift in Sources */,
 				A63B95421DB6339800ECA301 /* DirectoryCacheWorker.swift in Sources */,
 				A63B94F11DB6332100ECA301 /* ListEventsCacheWorker.swift in Sources */,
@@ -3745,6 +3725,7 @@
 				A6595EA41E14DC8600AA1CE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A69186E51DCC543A00372A98 /* Build configuration list for PBXNativeTarget "FOMO NUIM" */ = {
 			isa = XCConfigurationList;

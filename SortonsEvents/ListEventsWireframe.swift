@@ -12,7 +12,6 @@ import Foundation
 class ListEventsWireframe {
 
     let listEventsView: ListEventsTableViewController!
-    var rootViewController: RootViewControllerProtocol?
 
     init(fomoId: FomoId) {
         let storyboard = UIStoryboard(name: "ListEvents", bundle: Bundle.main)
@@ -28,11 +27,5 @@ class ListEventsWireframe {
                                                         listEventsCacheWorker: ListEventsCacheWorker())
 
         listEventsView.output = listEventsInteractor
-    }
-
-    func changeToNextTabRight() {
-
-        rootViewController?.changeToNextTabRight()
-
     }
 }

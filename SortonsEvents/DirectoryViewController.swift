@@ -77,9 +77,4 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
 
         return false
     }
-
-    @IBAction func rightSwipeGesture(_ sender: Any) {
-        output.changeToNextTabLeft()
-    }
-
 }

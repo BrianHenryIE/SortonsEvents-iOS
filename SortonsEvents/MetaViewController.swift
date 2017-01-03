@@ -39,6 +39,10 @@ class MetaViewController: UITableViewController, MetaPresenterOutput {
     @IBOutlet weak var openIosSettingsCell: UITableViewCell!
     @IBOutlet weak var rateInTheAppStoreCell: UITableViewCell!
 
+    override func viewDidLoad() {
+        self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 49, right: 0)
+    }
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         let selectedCell = tableView.cellForRow(at: indexPath)! as UITableViewCell

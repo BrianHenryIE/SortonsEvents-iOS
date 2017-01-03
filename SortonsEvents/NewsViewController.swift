@@ -40,14 +40,6 @@ class NewsViewController: UIViewController, NewsPresenterOutput {
         newsUrl = viewModel.newsUrl
         webview.loadRequest(newsUrl)
     }
-
-    @IBAction func changeToNextTabLeft(_ sender: Any) {
-        output.changeToNextTabLeft()
-    }
-
-    @IBAction func changeToNextTabRight(_ sender: Any) {
-        output.changeToNextTabRight()
-    }
 }
 
 extension NewsViewController: UIWebViewDelegate {

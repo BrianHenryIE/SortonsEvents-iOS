@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,7 +29,7 @@
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dcU-vf-qTG">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DirectoryPageCell" id="VyN-WR-vXu" customClass="DirectoryTableViewCell" customModule="SortonsEvents" customModuleProvider="target">
@@ -89,7 +89,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="xyk-cw-weA" firstAttribute="top" secondItem="dcU-vf-qTG" secondAttribute="bottom" id="DGz-CL-QNI"/>
+                            <constraint firstItem="xyk-cw-weA" firstAttribute="top" secondItem="dcU-vf-qTG" secondAttribute="bottom" constant="49" id="DGz-CL-QNI"/>
                             <constraint firstItem="92q-tz-ovU" firstAttribute="top" secondItem="zrh-od-CdU" secondAttribute="bottom" id="EQw-4Y-Z7F"/>
                             <constraint firstItem="dcU-vf-qTG" firstAttribute="top" secondItem="92q-tz-ovU" secondAttribute="bottom" id="Mt9-XU-kEC"/>
                             <constraint firstItem="92q-tz-ovU" firstAttribute="width" secondItem="HPZ-wl-kr2" secondAttribute="width" id="gV0-z2-Nta"/>
@@ -97,9 +97,6 @@
                             <constraint firstAttribute="centerX" secondItem="92q-tz-ovU" secondAttribute="centerX" id="ice-Vt-jvI"/>
                             <constraint firstItem="dcU-vf-qTG" firstAttribute="width" secondItem="HPZ-wl-kr2" secondAttribute="width" id="mAr-u1-xYH"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="q8i-gy-X8X" appends="YES" id="MaV-I3-6xt"/>
-                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Directory" image="DirectoryTabBarIcon" id="WDl-EB-POw">
                         <userDefinedRuntimeAttributes>
@@ -112,11 +109,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RI8-gR-6eg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="q8i-gy-X8X">
-                    <connections>
-                        <action selector="rightSwipeGesture:" destination="LWO-8l-cGf" id="GnT-u3-R0G"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-399.19999999999999" y="-294.60269865067471"/>
         </scene>

@@ -15,7 +15,6 @@ class MetaWireframe: NSObject {
     let storyboard = UIStoryboard(name: "Meta", bundle: Bundle.main)
 
     let metaView: UIViewController!
-    var rootViewController: RootViewControllerProtocol?
 
     init(fomoId: FomoId) {
 
@@ -70,18 +69,6 @@ class MetaWireframe: NSObject {
 
     func reviewOnAppStore(_ link: String) {
         UIApplication.shared.openURL(URL(string: link)!)
-    }
-
-    func changeToNextTabLeft() {
-
-        rootViewController?.changeToNextTabLeft()
-
-    }
-
-    func changeToNextTabRight() {
-
-        rootViewController?.changeToNextTabRight()
-
     }
 }
 

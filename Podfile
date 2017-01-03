@@ -10,7 +10,7 @@ def common_pods
     pod 'AlamofireImage', :git => 'https://github.com/Alamofire/AlamofireImage.git'
     pod 'Fabric'
     pod 'Crashlytics'
-    
+    pod 'SLPagingViewSwift-Swift3', :git => 'https://github.com/davidseek/SLPagingViewSwift-Swift-3-Tinder-Twitter.git'
 end
 
 target 'FOMO DCU' do
