@@ -11,7 +11,7 @@ import UIKit
 import MessageUI
 
 protocol MetaPresenterOutput {
-
+    func showErrorAlert(title: String, message: String)
 }
 
 class MetaPresenter: MetaInteractorOutput {
@@ -20,6 +20,16 @@ class MetaPresenter: MetaInteractorOutput {
 
     init(output: MetaPresenterOutput) {
         self.output = output
+    }
+
+    func showSendMailErrorAlert() {
+
+        let title = "Cannot send mail"
+        let message = "Maybe you don't have the Mail app set up. You can always send feedback to info@sortons.ie"
+
+        output.showErrorAlert(title: title,
+                            message: message)
+
     }
 
 }

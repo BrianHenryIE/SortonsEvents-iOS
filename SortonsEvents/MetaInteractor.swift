@@ -9,7 +9,7 @@
 import Foundation
 
 protocol MetaInteractorOutput {
-
+    func showSendMailErrorAlert()
 }
 
 enum SettingsPage {
@@ -68,6 +68,10 @@ class MetaInteractor: MetaViewControllerOutput {
             subject = "Suggestion"
         }
         wireframe.sendFeedbackEmail(subject)
+    }
+
+    func showSendMailErrorAlert() {
+        presenter.showSendMailErrorAlert()
     }
 
     func openIosSettings() {

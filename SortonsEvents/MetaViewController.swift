@@ -39,6 +39,8 @@ class MetaViewController: UITableViewController, MetaPresenterOutput {
     @IBOutlet weak var openIosSettingsCell: UITableViewCell!
     @IBOutlet weak var rateInTheAppStoreCell: UITableViewCell!
 
+    var alert: UIAlertController!
+
     override func viewDidLoad() {
         self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 49, right: 0)
     }
@@ -70,7 +72,7 @@ class MetaViewController: UITableViewController, MetaPresenterOutput {
     }
 
     func showFeedbackTypeAlert() {
-        let alert = UIAlertController(title: nil,
+        alert = UIAlertController(title: nil,
                                       message: "What is the feedback about?",
                                       preferredStyle: .actionSheet)
         let praiseAction = UIAlertAction(title: "Praise!",
@@ -90,7 +92,35 @@ class MetaViewController: UITableViewController, MetaPresenterOutput {
         alert.addAction(complaintAction)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(cancelAction)
+
+        alert.modalPresentationStyle = .popover
+
+        let alertOrigin = CGPoint(x: self.view.frame.width / 2 - 160,
+                                  y: self.view.frame.height / 2 - 100)
+
+        let alertSize = CGSize(width: 320, height: 200)
+
+        alert.popoverPresentationController?.sourceRect = CGRect(origin: alertOrigin,
+                                                                   size: alertSize)
+        alert.popoverPresentationController?.sourceView = self.view
+        alert.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
+
         present(alert, animated: true, completion:nil)
     }
 
+    func showErrorAlert(title: String, message: String) {
+
+        let alertController = UIAlertController(title: title,
+                                                message: message,
+                                                preferredStyle: .alert)
+
+        let okAction = UIAlertAction(title: "OK", style: .default) { action in
+            // ...
+        }
+        alertController.addAction(okAction)
+
+        self.present(alertController, animated: true) {
+            // ...
+        }
+    }
 }
