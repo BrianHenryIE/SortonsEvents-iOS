@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A6595E9A1E14DC8500AA1CE1"
+               BuildableName = "Sortons Events UITests.xctest"
+               BlueprintName = "Sortons Events UITests"
+               ReferencedContainer = "container:SortonsEvents.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A69187271DCC551000372A98"
+            BuildableName = "FOMO UL.app"
+            BlueprintName = "FOMO UL"
+            ReferencedContainer = "container:SortonsEvents.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

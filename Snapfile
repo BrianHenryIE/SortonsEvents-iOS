@@ -3,31 +3,31 @@
 # A list of devices you want to take the screenshots from
 devices([
   "iPhone 6",
-#   "iPhone 6 Plus",
-#   "iPhone 5",
-#   "iPad Pro (12.9 inch)",
-#   "iPad Pro (9.7 inch)",
-#   "Apple TV 1080p"
+   "iPhone 6 Plus",
+   "iPhone 5",
+   "iPad Pro (12.9 inch)",
+   "iPad Pro (9.7 inch)"
 ])
 
 languages([
-  "en-US"
+  "en-GB"
 ])
 
 # The name of the scheme which contains the UI Tests
-scheme "FOMO TCD"
+scheme "FOMO DCU"
 
 # Where should the resulting screenshots be stored?
 # output_directory "./screenshots"
 
-# clear_previous_screenshots true # remove the '#' to clear all previously generated screenshots before creating new ones
+clear_previous_screenshots true
 
 # Choose which project/workspace to use
-# project "./Project.xcodeproj"
-# workspace "./Project.xcworkspace"
+workspace "./SortonsEvents.xcworkspace"
 
 # Arguments to pass to the app on launch. See https://github.com/fastlane/snapshot#launch-arguments
 # launch_arguments(["-favColor red"])
 
 # For more information about all available options run
 # snapshot --help
+
+# launch_arguments(["-username Felix"])

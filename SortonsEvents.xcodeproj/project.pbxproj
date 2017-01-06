@@ -547,6 +547,13 @@
 			remoteGlobalIDString = A62BD6181B9E1C4500E928E5;
 			remoteInfo = "FOMO UCD";
 		};
+		A6A672E01E1F912A003AB89A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6C613031A91492500A5F082 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A63B32A01C68AFA400C46020;
+			remoteInfo = "FOMO DCU";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -590,7 +597,7 @@
 		A643EB581DF4F7240005E769 /* MetaWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaWebViewController.swift; sourceTree = "<group>"; };
 		A643EB591DF4F7240005E769 /* MetaWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaWireframe.swift; sourceTree = "<group>"; };
 		A6478D171D36CE2600B6000B /* ListEvents.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListEvents.storyboard; sourceTree = "<group>"; };
-		A64AE8861E1CF61F0077A9AB /* Framefile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Framefile.json; path = screenshots/Framefile.json; sourceTree = SOURCE_ROOT; };
+		A64AE8861E1CF61F0077A9AB /* Framefile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Framefile.json; path = screenshots/Framefile.json; sourceTree = SOURCE_ROOT; };
 		A64DF46F1DDC25D700A102E0 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = SOURCE_ROOT; };
 		A6595E9B1E14DC8500AA1CE1 /* Sortons Events UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sortons Events UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6595E9D1E14DC8600AA1CE1 /* SortonsEventsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortonsEventsUITests.swift; sourceTree = "<group>"; };
@@ -935,6 +942,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		A69CA9771E1F70D7006BE647 /* fastlane */ = {
+			isa = PBXGroup;
+			children = (
+				A6595EA81E14FCC800AA1CE1 /* Snapfile */,
+				A64AE8861E1CF61F0077A9AB /* Framefile.json */,
+			);
+			name = fastlane;
+			sourceTree = "<group>";
+		};
 		A69DBF2D1C8AD441005064F7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -1263,8 +1279,7 @@
 				A64AE8851E1CF5620077A9AB /* Colleges */,
 				A6D2212E1DFDFFD4003E2285 /* .swiftlint.yml */,
 				A64DF46F1DDC25D700A102E0 /* .travis.yml */,
-				A6595EA81E14FCC800AA1CE1 /* Snapfile */,
-				A64AE8861E1CF61F0077A9AB /* Framefile.json */,
+				A69CA9771E1F70D7006BE647 /* fastlane */,
 				A691876F1DCC57B200372A98 /* AppImages.xcassets */,
 				A69187661DCC572000372A98 /* Info.plist */,
 				A6BDA8771AE5CA6500C1A55C /* Settings.bundle */,
@@ -1377,6 +1392,7 @@
 			);
 			dependencies = (
 				A6595EA11E14DC8600AA1CE1 /* PBXTargetDependency */,
+				A6A672E11E1F912A003AB89A /* PBXTargetDependency */,
 			);
 			name = "Sortons Events UITests";
 			productName = "Sortons Events UITests";
@@ -1546,7 +1562,7 @@
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 3RM6H33EW7;
 						ProvisioningStyle = Automatic;
-						TestTargetID = A6141D401BB9F44F003150F1;
+						TestTargetID = A63B32A01C68AFA400C46020;
 					};
 					A69186AD1DCC543A00372A98 = {
 						DevelopmentTeam = 3RM6H33EW7;
@@ -2978,6 +2994,11 @@
 			target = A62BD6181B9E1C4500E928E5 /* FOMO UCD */;
 			targetProxy = A69DBF541C8AE4D8005064F7 /* PBXContainerItemProxy */;
 		};
+		A6A672E11E1F912A003AB89A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A63B32A01C68AFA400C46020 /* FOMO DCU */;
+			targetProxy = A6A672E01E1F912A003AB89A /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -3233,7 +3254,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "FOMO TCD";
+				TEST_TARGET_NAME = "FOMO DCU";
 			};
 			name = Debug;
 		};
@@ -3251,7 +3272,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ie.sortons.Sortons-Events-UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "FOMO TCD";
+				TEST_TARGET_NAME = "FOMO DCU";
 			};
 			name = Release;
 		};

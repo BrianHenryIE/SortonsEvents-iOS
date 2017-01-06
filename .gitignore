@@ -27,4 +27,6 @@ Pods
 Pods/
 pods
 .DS_Store
-screenshots
+screenshots/*.png
+screenshots/*/*.png
+screenshots/screenshots.html
