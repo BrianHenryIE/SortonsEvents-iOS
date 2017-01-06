@@ -4,12 +4,6 @@
 <dict>
 	<key>AppStoreId</key>
 	<string></string>
-	<key>ShortName</key>
-	<string>DIT</string>
-	<key>FomoName</key>
-	<string>FOMO DIT</string>
-	<key>FomoId</key>
-	<string>1484790081833630</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -25,7 +19,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.2</string>
+	<string>2.3</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -38,11 +32,15 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>13</string>
+	<string>14</string>
 	<key>FacebookAppID</key>
 	<string>123069381111681</string>
 	<key>FacebookDisplayName</key>
 	<string>Sortons Events</string>
+	<key>FomoId</key>
+	<string>1484790081833630</string>
+	<key>FomoName</key>
+	<string>FOMO DIT</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.entertainment</string>
 	<key>LSApplicationQueriesSchemes</key>
@@ -56,6 +54,8 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>ShortName</key>
+	<string>DIT</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreenDIT</string>
 	<key>UIRequiredDeviceCapabilities</key>
