@@ -13,7 +13,7 @@ class DirectoryPresenter: DirectoryInteractorOutput {
     var output: DirectoryPresenterOutput?
     let fomoCensor: [String]
 
-    init(output: DirectoryPresenterOutput, fomoCensor: [String]) {
+    init(output: DirectoryPresenterOutput, fomoCensor: [String] = [String]()) {
         self.output = output
         self.fomoCensor = fomoCensor
     }

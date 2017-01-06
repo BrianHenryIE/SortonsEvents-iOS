@@ -81,7 +81,7 @@ class ListEventsInteractorOutputSpy: ListEventsInteractorOutput {
 
 class ListEventsInteractorTests: XCTestCase {
 
-    let fomoId = FomoId(id: "id", name: "name", shortName: "shortName", appStoreId: "appStoreId")
+    let fomoId = FomoId(id: "id", name: "name", shortName: "shortName", appStoreId: "appStoreId", censor: [String]())
 
     func testFetchEventsShouldAskEventsNetworkWorkerToFetchEventsAndPresenterToFormatResult() {
         let listEventsNetworkWorkerSpy = ListEventsNetworkWorkerSpy()

@@ -134,12 +134,4 @@ class DirectoryViewControllerTests: XCTestCase {
     func testSearchBarDisappearsOnScroll() {
 
     }
-
-    func testChangeToLeftTabOnSwipe() {
-
-        sut.rightSwipeGesture(self)
-
-        XCTAssert(spy.changeToNextTabLeftCalled, "Swipe right didn't hit output")
-
-    }
 }

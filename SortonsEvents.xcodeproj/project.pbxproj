@@ -590,6 +590,7 @@
 		A643EB581DF4F7240005E769 /* MetaWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaWebViewController.swift; sourceTree = "<group>"; };
 		A643EB591DF4F7240005E769 /* MetaWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaWireframe.swift; sourceTree = "<group>"; };
 		A6478D171D36CE2600B6000B /* ListEvents.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListEvents.storyboard; sourceTree = "<group>"; };
+		A64AE8861E1CF61F0077A9AB /* Framefile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Framefile.json; path = screenshots/Framefile.json; sourceTree = SOURCE_ROOT; };
 		A64DF46F1DDC25D700A102E0 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = SOURCE_ROOT; };
 		A6595E9B1E14DC8500AA1CE1 /* Sortons Events UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sortons Events UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6595E9D1E14DC8600AA1CE1 /* SortonsEventsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortonsEventsUITests.swift; sourceTree = "<group>"; };
@@ -861,6 +862,31 @@
 			children = (
 			);
 			name = Meta;
+			sourceTree = "<group>";
+		};
+		A64AE8851E1CF5620077A9AB /* Colleges */ = {
+			isa = PBXGroup;
+			children = (
+				A691868E1DCC4E7800372A98 /* LaunchScreenDCU.xib */,
+				A691868F1DCC4E7800372A98 /* LaunchScreenDIT.xib */,
+				A69186901DCC4E7800372A98 /* LaunchScreenNUIG.xib */,
+				A69186911DCC4E7800372A98 /* LaunchScreenNUIM.xib */,
+				A69187B61DCC598800372A98 /* LaunchScreenQUB.xib */,
+				A69186921DCC4E7800372A98 /* LaunchScreenTCD.xib */,
+				A69186931DCC4E7800372A98 /* LaunchScreenUCC.xib */,
+				A69186941DCC4E7800372A98 /* LaunchScreenUCD.xib */,
+				A69186951DCC4E7800372A98 /* LaunchScreenUL.xib */,
+				A69186781DCC4B2C00372A98 /* FOMODCU.plist */,
+				A69186791DCC4B2C00372A98 /* FOMODIT.plist */,
+				A691868B1DCC4D7D00372A98 /* FOMONUIG.plist */,
+				A691867A1DCC4B2C00372A98 /* FOMONUIM.plist */,
+				A69187781DCC591900372A98 /* FOMOQUB.plist */,
+				A691867B1DCC4B2C00372A98 /* FOMOTCD.plist */,
+				A691867C1DCC4B2C00372A98 /* FOMOUCC.plist */,
+				A691867D1DCC4B2C00372A98 /* FOMOUCD.plist */,
+				A691867E1DCC4B2C00372A98 /* FOMOUL.plist */,
+			);
+			name = Colleges;
 			sourceTree = "<group>";
 		};
 		A6595E9C1E14DC8600AA1CE1 /* SortonsEventsUITests */ = {
@@ -1234,29 +1260,13 @@
 		A6C6130E1A91492500A5F082 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A64AE8851E1CF5620077A9AB /* Colleges */,
 				A6D2212E1DFDFFD4003E2285 /* .swiftlint.yml */,
 				A64DF46F1DDC25D700A102E0 /* .travis.yml */,
 				A6595EA81E14FCC800AA1CE1 /* Snapfile */,
+				A64AE8861E1CF61F0077A9AB /* Framefile.json */,
 				A691876F1DCC57B200372A98 /* AppImages.xcassets */,
 				A69187661DCC572000372A98 /* Info.plist */,
-				A691868E1DCC4E7800372A98 /* LaunchScreenDCU.xib */,
-				A691868F1DCC4E7800372A98 /* LaunchScreenDIT.xib */,
-				A69186901DCC4E7800372A98 /* LaunchScreenNUIG.xib */,
-				A69186911DCC4E7800372A98 /* LaunchScreenNUIM.xib */,
-				A69187B61DCC598800372A98 /* LaunchScreenQUB.xib */,
-				A69186921DCC4E7800372A98 /* LaunchScreenTCD.xib */,
-				A69186931DCC4E7800372A98 /* LaunchScreenUCC.xib */,
-				A69186941DCC4E7800372A98 /* LaunchScreenUCD.xib */,
-				A69186951DCC4E7800372A98 /* LaunchScreenUL.xib */,
-				A69186781DCC4B2C00372A98 /* FOMODCU.plist */,
-				A69186791DCC4B2C00372A98 /* FOMODIT.plist */,
-				A691868B1DCC4D7D00372A98 /* FOMONUIG.plist */,
-				A691867A1DCC4B2C00372A98 /* FOMONUIM.plist */,
-				A69187781DCC591900372A98 /* FOMOQUB.plist */,
-				A691867B1DCC4B2C00372A98 /* FOMOTCD.plist */,
-				A691867C1DCC4B2C00372A98 /* FOMOUCC.plist */,
-				A691867D1DCC4B2C00372A98 /* FOMOUCD.plist */,
-				A691867E1DCC4B2C00372A98 /* FOMOUL.plist */,
 				A6BDA8771AE5CA6500C1A55C /* Settings.bundle */,
 			);
 			name = "Supporting Files";

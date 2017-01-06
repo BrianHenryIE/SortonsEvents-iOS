@@ -14,7 +14,7 @@ struct FomoId {
     let name: String
     let shortName: String
     let appStoreId: String
-    let fomoCensor: [String]
+    let censor: [String]
 }
 extension FomoId {
     init() {
@@ -23,6 +23,6 @@ extension FomoId {
         name = Bundle.main.infoDictionary?["FomoName"] as! String
         shortName = Bundle.main.infoDictionary?["ShortName"] as! String
         appStoreId = Bundle.main.infoDictionary?["AppStoreId"] as! String
-        fomoCensor = Bundle.main.infoDictionary?["FomoCensor"] as! [String]
+        censor = Bundle.main.infoDictionary?["FomoCensor"] as! [String]
     }
 }

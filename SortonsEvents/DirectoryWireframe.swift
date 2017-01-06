@@ -18,7 +18,7 @@ class DirectoryWireframe {
 
         directoryView = storyboard.instantiateViewController(withIdentifier: "Directory") as? DirectoryViewController
 
-        let directoryPresenter = DirectoryPresenter(output: directoryView, fomoCensor: fomoId.fomoCensor)
+        let directoryPresenter = DirectoryPresenter(output: directoryView, fomoCensor: fomoId.censor)
 
         let directoryCacheWorker = DirectoryCacheWorker()
         let directoryNetworkWorker = DirectoryNetworkWorker()
