@@ -11,14 +11,14 @@ import AlamofireImage
 
 class DirectoryTableViewCell: UITableViewCell {
 
-//    let placeholderImage = UIImage(named: "PagePlaceholder")!
+    let placeholderImage = UIImage(named: "PagePlaceholder")!
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var detailsLabel: UILabel!
     @IBOutlet weak var pageImage: UIImageView!
 
     func setDirectorySourcePage(_ directoryPage: Directory.TableViewCellModel) {
-//        pageImage.image = placeholderImage
+        pageImage.image = placeholderImage
         nameLabel.text = directoryPage.name
         detailsLabel.text = directoryPage.details
         pageImage.af_setImage(withURL: directoryPage.imageUrl)

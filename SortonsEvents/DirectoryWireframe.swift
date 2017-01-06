@@ -12,14 +12,13 @@ import Foundation
 class DirectoryWireframe {
 
     let directoryView: DirectoryViewController!
-    var rootViewController: RootViewControllerProtocol?
 
     init(fomoId: FomoId) {
         let storyboard = UIStoryboard(name: "Directory", bundle: Bundle.main)
 
         directoryView = storyboard.instantiateViewController(withIdentifier: "Directory") as? DirectoryViewController
 
-        let directoryPresenter = DirectoryPresenter(output: directoryView)
+        let directoryPresenter = DirectoryPresenter(output: directoryView, fomoCensor: fomoId.censor)
 
         let directoryCacheWorker = DirectoryCacheWorker()
         let directoryNetworkWorker = DirectoryNetworkWorker()
@@ -31,11 +30,5 @@ class DirectoryWireframe {
                                                      network: directoryNetworkWorker)
 
         directoryView.output = directoryInteractor
-    }
-
-    func changeToNextTabLeft() {
-        
-        rootViewController?.changeToNextTabLeft()
-        
     }
 }
