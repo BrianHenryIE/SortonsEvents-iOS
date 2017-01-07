@@ -38,6 +38,13 @@ The Directory is again a UITableViewController with a pretty straightforward sea
 
 The About tab was added so people can communicate with me. The app stopped working for a few weeks when Facebook deprecated an API I was using. Nobody told me! The view is a static UITableView showing basic About, Changelog, and Privacy Policy information in a UIWebView, and now people can email me feedback (MFMailComposeViewController), share the app (UIActivityViewController) and rate the app (UIApplication.shared.openURL!).
 
+
+## Story Time
+
+In March 2016 I was living in Dublin on the route of the St. Patrick's Day Parade. Naturally, we were watching it and once it was over we invited some Americans into the apartment for drinks and fun. Some of them were studying in University College Dublin so I started talking about this app. One of the girls already had it installed on her phone! 
+
+One of the main things I've learned through this and other events apps I've made is that people don't care about them. I think most people's lives are too busy for them to need to go looking for things to do.
+
 ## Resources 
 
 Some tools I used as I built this.
