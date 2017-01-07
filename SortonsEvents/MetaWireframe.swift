@@ -15,7 +15,13 @@ class MetaWireframe: NSObject {
     let storyboard = UIStoryboard(name: "Meta", bundle: Bundle.main)
 
     let metaView: UIViewController!
-    var rootViewController: RootViewControllerProtocol?
+    var metaInteractor: MetaInteractor!
+
+    // After App Review rejection crash
+    // http://stackoverflow.com/questions/30201016/why-is-mfmailcomposeviewcontroller-crashing-on-ios-8-3
+    // "Keep a strong reference to the mail controller until the final delegate callback."
+    lazy var mailComposerVC = MFMailComposeViewController()
+    var activityVC: UIActivityViewController!
 
     init(fomoId: FomoId) {
 
@@ -28,57 +34,69 @@ class MetaWireframe: NSObject {
 
         super.init()
 
-        let metaInteractor = MetaInteractor(wireframe: self, fomoId: fomoId, presenter: metaPresenter)
+        metaInteractor = MetaInteractor(wireframe: self, fomoId: fomoId, presenter: metaPresenter)
 
         metaMainView.output = metaInteractor
     }
 
     func presentWebView(for url: String) {
-        // swiftlint:disable:next force_cast
-        let metaWebView = storyboard.instantiateViewController(withIdentifier: "MetaWebViewController") as! MetaWebViewController
 
+        let metaWebVC = storyboard.instantiateViewController(withIdentifier: "MetaWebViewController")
+            as? MetaWebViewController
+
+        guard let metaWebView = metaWebVC else {
+            return
+        }
         metaWebView.url = url
 
         metaView.childViewControllers[0].navigationController?.pushViewController(metaWebView, animated: true)
     }
 
     func share(_ objectsToShare: [Any]) {
-        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-        activityVC.popoverPresentationController?.sourceView = nil
+        activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+
+        activityVC.popoverPresentationController?.sourceView = metaView.view
+        activityVC.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
+
+        let alertOrigin = CGPoint(x: metaView.view.frame.width / 2 - 160,
+                                  y: metaView.view.frame.height / 2 - 100)
+
+        let alertSize = CGSize(width: 320, height: 200)
+
+        activityVC.popoverPresentationController?.sourceRect = CGRect(origin: alertOrigin,
+                                                                        size: alertSize)
+
         metaView.present(activityVC, animated: true, completion: nil)
     }
 
     // https://www.andrewcbancroft.com/2014/08/25/send-email-in-app-using-mfmailcomposeviewcontroller-with-swift/
     func sendFeedbackEmail(_ subject: String) {
 
-        let mailComposerVC = MFMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {
-
             mailComposerVC.mailComposeDelegate = self
             mailComposerVC.setToRecipients(["info@sortons.ie"])
             mailComposerVC.setSubject(subject)
 
             metaView.present(mailComposerVC, animated: true, completion: nil)
         } else {
-            //  TODO          output.showSendMailErrorAlert()
+            // TODO Log error
+            metaInteractor.showSendMailErrorAlert()
         }
     }
 
-    func changeToNextTabLeft() {
-        
-        rootViewController?.changeToNextTabLeft()
-        
+    func openIosSettings() {
+        UIApplication.shared.openURL(URL(string:UIApplicationOpenSettingsURLString)!)
     }
 
-    func changeToNextTabRight() {
-        
-        rootViewController?.changeToNextTabRight()
-        
+    func reviewOnAppStore(_ link: String) {
+        UIApplication.shared.openURL(URL(string: link)!)
     }
 }
 
 extension MetaWireframe: MFMailComposeViewControllerDelegate {
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    func mailComposeController(_ controller: MFMailComposeViewController,
+                       didFinishWith result: MFMailComposeResult,
+                                      error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
 }

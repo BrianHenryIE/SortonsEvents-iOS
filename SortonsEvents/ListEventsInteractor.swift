@@ -124,8 +124,4 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutput {
 
         return filteredEvents
     }
-
-    func changeToNextTabRight() {
-        wireframe.changeToNextTabRight()
-    }
 }

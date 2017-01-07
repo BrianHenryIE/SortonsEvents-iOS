@@ -2,6 +2,19 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>FomoCensor</key>
+	<array>
+		<string>NUIM</string>
+		<string>Maynooth University</string>
+		<string>National University of Ireland</string>
+		<string>Maynooth</string>
+		<string>MU</string>
+		<string>Nuim</string>
+	</array>
+	<key>ShortName</key>
+	<string>NUIM</string>
+	<key>FomoName</key>
+	<string>FOMO NUIM</string>
 	<key>AppStoreId</key>
 	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -37,10 +50,27 @@
 	<string>123069381111681</string>
 	<key>FacebookDisplayName</key>
 	<string>Sortons Events</string>
+<<<<<<< HEAD
 	<key>FomoId</key>
 	<string>1487418558237191</string>
 	<key>FomoName</key>
 	<string>FOMO NUIM</string>
+=======
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>f9ecb642fdd37585f3a9283eb05f86381d870012</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+	</dict>
+>>>>>>> origin/dev
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.entertainment</string>
 	<key>LSApplicationQueriesSchemes</key>

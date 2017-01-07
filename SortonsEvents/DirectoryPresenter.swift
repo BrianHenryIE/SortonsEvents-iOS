@@ -11,17 +11,29 @@ import UIKit
 class DirectoryPresenter: DirectoryInteractorOutput {
 
     var output: DirectoryPresenterOutput?
+    let fomoCensor: [String]
 
-    init(output: DirectoryPresenterOutput) {
+    init(output: DirectoryPresenterOutput, fomoCensor: [String] = [String]()) {
         self.output = output
+        self.fomoCensor = fomoCensor
     }
 
     func presentFetchedDirectory(_ directory: Directory.Fetch.Response) {
 
-        let viewModelDirectory = directory.directory.map({
-            Directory.TableViewCellModel(name: $0.name,
-                                      details: $0.friendlyLocationString,
-                                     imageUrl: URL(string: "https://graph.facebook.com/\($0.fbPageId!)/picture?type=square")!)
+        let viewModelDirectory = directory.directory.map({ (sourcePage) -> Directory.TableViewCellModel in
+            var name = sourcePage.name!
+            // Remove references to the college so Apple doesn't say we're protrouding to be them
+            if TARGET_IPHONE_SIMULATOR == 1 {
+                for censor in fomoCensor {
+                    name = name.replacingOccurrences(of: "\(censor) ", with: "", options: .literal, range: nil)
+                    name = name.replacingOccurrences(of: censor, with: "", options: .literal, range: nil)
+                }
+            }
+            let details = sourcePage.friendlyLocationString!
+            let imageUrl = URL(string: "https://graph.facebook.com/\(sourcePage.fbPageId!)/picture?type=square")!
+            return Directory.TableViewCellModel(name: name,
+                                             details: details,
+                                            imageUrl: imageUrl)
         })
 
         let viewModel = Directory.ViewModel(directory: viewModelDirectory)

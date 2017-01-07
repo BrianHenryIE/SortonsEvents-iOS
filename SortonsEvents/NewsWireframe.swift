@@ -12,7 +12,6 @@ import Foundation
 class NewsWireframe {
 
     let newsView: NewsViewController!
-    var rootViewController: RootViewControllerProtocol?
 
     init(fomoId: FomoId) {
         let storyboard = UIStoryboard(name: "News", bundle: Bundle.main)
@@ -32,17 +31,5 @@ class NewsWireframe {
         } else {
             UIApplication.shared.openURL(url.safariUrl!)
         }
-    }
-
-    func changeToNextTabLeft() {
-
-        rootViewController?.changeToNextTabLeft()
-
-    }
-
-    func changeToNextTabRight() {
-
-        rootViewController?.changeToNextTabRight()
-
     }
 }

@@ -13,7 +13,9 @@ struct FacebookUrl {
     let appUrl: URL?
     let safariUrl: URL?
 
-    let redirectRegex = "https://www.facebook.com/l.php\\?u=(.*)&h="
+    let facebookUrlRegex = "https://.*\\.facebook\\.com/"
+
+    let redirectRegex = "https://.*\\.facebook\\.com/l.php\\?u=(.*)&h="
     let postRegex = "https://.*.facebook.com/.*/posts/(\\d*)"
     let eventRegex = "https://.*.facebook.com/events/(\\d*)"
     let photoRegex = "/(\\d*)/\\?"
@@ -21,7 +23,7 @@ struct FacebookUrl {
     init(from inputUrl: String) {
 
         // Non-Facebook URL
-        guard inputUrl.hasPrefix("https://www.facebook.com") || inputUrl.hasPrefix("https://m.facebook.com") else {
+        guard inputUrl.matchingStrings(facebookUrlRegex).count > 0 else {
             appUrl = nil
             safariUrl = URL(string: inputUrl)
             return
@@ -35,8 +37,6 @@ struct FacebookUrl {
             appUrl = nil
             return
         }
-
-        //
 
         // comments
         let postUrls = inputUrl.matchingStrings(postRegex)

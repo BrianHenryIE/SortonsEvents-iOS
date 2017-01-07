@@ -2,6 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>FomoCensor</key>
+	<array>
+		<string>Trinity College, Dublin</string>
+		<string>Trinity College Dublin</string>
+		<string>Trinity</string>
+		<string>TCD</string>
+		<string>Tcd</string>
+		<string>DU</string>
+	</array>
 	<key>AppStoreId</key>
 	<string>1035135187</string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -32,7 +41,25 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
+<<<<<<< HEAD
 	<string>14</string>
+=======
+	<string>13</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>f9ecb642fdd37585f3a9283eb05f86381d870012</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+	</dict>
+>>>>>>> origin/dev
 	<key>FacebookAppID</key>
 	<string>123069381111681</string>
 	<key>FacebookDisplayName</key>

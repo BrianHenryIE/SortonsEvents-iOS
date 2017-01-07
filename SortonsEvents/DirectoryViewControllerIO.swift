@@ -23,6 +23,4 @@ protocol DirectoryViewControllerOutput {
     func filterDirectoryTo(_ searchBarInput: String)
 
     func displaySelectedPageFrom(_ rowNumber: Int)
-
-    func changeToNextTabLeft()
 }

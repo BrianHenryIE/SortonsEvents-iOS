@@ -84,8 +84,4 @@ class DirectoryInteractor: DirectoryViewControllerOutput {
             UIApplication.shared.openURL(safariUrl)
         }
     }
-
-    func changeToNextTabLeft() {
-        wireframe.changeToNextTabLeft()
-    }
 }

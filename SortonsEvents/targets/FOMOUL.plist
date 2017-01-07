@@ -2,6 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>FomoCensor</key>
+	<array>
+		<string>UL</string>
+		<string>University of Limerick</string>
+	</array>
 	<key>AppStoreId</key>
 	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -41,6 +46,20 @@
 	<string>864582240244269</string>
 	<key>FomoName</key>
 	<string>FOMO UL</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>f9ecb642fdd37585f3a9283eb05f86381d870012</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+	</dict>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.entertainment</string>
 	<key>LSApplicationQueriesSchemes</key>
