@@ -31,5 +31,4 @@ class MetaPresenter: MetaInteractorOutput {
                             message: message)
 
     }
-
 }

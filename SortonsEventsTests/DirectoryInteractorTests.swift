@@ -76,7 +76,11 @@ class DirectoryInteractorTests: XCTestCase {
     var cacheWorkerSpy: DirectoryCacheWorkerSpy!
     var networkWorkerSpy: DirectoryNetworkWorkerSpy!
 
-    let fomoId = FomoId(id: "id", name: "name", shortName: "shortName", appStoreId: "appStoreId", censor: [String]())
+    let fomoId = FomoId(id: "id",
+                      name: "name",
+                 shortName: "shortName",
+                  longName: "longName",
+                appStoreId: "appStoreId", censor: [String]())
 
     override func setUp() {
         super.setUp()

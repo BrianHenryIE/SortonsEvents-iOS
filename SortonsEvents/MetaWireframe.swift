@@ -14,6 +14,8 @@ class MetaWireframe: NSObject {
 
     let storyboard = UIStoryboard(name: "Meta", bundle: Bundle.main)
 
+    let fomoId: FomoId
+
     let metaView: UIViewController!
     var metaInteractor: MetaInteractor!
 
@@ -24,6 +26,8 @@ class MetaWireframe: NSObject {
     var activityVC: UIActivityViewController!
 
     init(fomoId: FomoId) {
+
+        self.fomoId = fomoId
 
         // swiftlint:disable:next force_cast
         let metaMainView = storyboard.instantiateViewController(withIdentifier: "Meta") as! MetaViewController
@@ -44,12 +48,20 @@ class MetaWireframe: NSObject {
         let metaWebVC = storyboard.instantiateViewController(withIdentifier: "MetaWebViewController")
             as? MetaWebViewController
 
-        guard let metaWebView = metaWebVC else {
+        guard let metaWebViewController = metaWebVC else {
             return
         }
-        metaWebView.url = url
 
-        metaView.childViewControllers[0].navigationController?.pushViewController(metaWebView, animated: true)
+        let metaWebViewPresenter = MetaWebViewPresenter(with: metaWebViewController,
+                                                      fomoId: fomoId)
+
+        let metaWebViewInteractor = MetaWebViewInteractor(with: metaWebViewPresenter,
+                                                           for: url)
+
+        metaWebViewController.output = metaWebViewInteractor
+
+        metaView.childViewControllers[0].navigationController?.pushViewController(metaWebViewController,
+                                                                                  animated: true)
     }
 
     func share(_ objectsToShare: [Any]) {
