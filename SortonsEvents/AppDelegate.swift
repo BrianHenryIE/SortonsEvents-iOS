@@ -7,29 +7,29 @@
 //
 
 import UIKit
-
-//    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-//
-//    // Set the application defaults
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    NSDictionary *appDefaults = [NSDictionary dictionaryWithObject:@"YES"
-//    forKey:@"launch_native_apps_toggle"];
-//    [defaults registerDefaults:appDefaults];
-//    [defaults synchronize];
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication,
+         didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         let frame = UIScreen.main.bounds
         window = UIWindow(frame: frame)
+        window!.screen = UIScreen.main
 
         let fomoId = FomoId()
 
-        _ = RootViewController(window: window!, fomoId: fomoId)
+        let rvc = RootViewController(fomoId: fomoId)
+
+        window!.rootViewController = rvc
+        window!.makeKeyAndVisible()
+
+        Fabric.with([Crashlytics.self])
 
         return true
     }

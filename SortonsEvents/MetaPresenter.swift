@@ -11,7 +11,7 @@ import UIKit
 import MessageUI
 
 protocol MetaPresenterOutput {
-
+    func showErrorAlert(title: String, message: String)
 }
 
 class MetaPresenter: MetaInteractorOutput {
@@ -22,12 +22,13 @@ class MetaPresenter: MetaInteractorOutput {
         self.output = output
     }
 
-    func openIosSettings() {
-        UIApplication.shared.openURL(URL(string:UIApplicationOpenSettingsURLString)!)
-    }
+    func showSendMailErrorAlert() {
 
-    func reviewOnAppStore(_ link: String) {
-        UIApplication.shared.openURL(URL(string: link)!)
-    }
+        let title = "Cannot send mail"
+        let message = "Maybe you don't have the Mail app set up. You can always send feedback to info@sortons.ie"
 
+        output.showErrorAlert(title: title,
+                            message: message)
+
+    }
 }

@@ -9,9 +9,7 @@
 import Foundation
 
 protocol MetaInteractorOutput {
-
-    func reviewOnAppStore(_ link: String)
-    func openIosSettings()
+    func showSendMailErrorAlert()
 }
 
 enum SettingsPage {
@@ -72,12 +70,16 @@ class MetaInteractor: MetaViewControllerOutput {
         wireframe.sendFeedbackEmail(subject)
     }
 
+    func showSendMailErrorAlert() {
+        presenter.showSendMailErrorAlert()
+    }
+
     func openIosSettings() {
-        presenter.openIosSettings()
+        wireframe.openIosSettings()
     }
 
     func rateInAppStore() {
         let appStoreReviewLink = "itms-apps://itunes.apple.com/app/viewContentsUserReviews?id=\(fomoId.appStoreId)"
-        presenter.reviewOnAppStore(appStoreReviewLink)
+        wireframe.reviewOnAppStore(appStoreReviewLink)
     }
 }

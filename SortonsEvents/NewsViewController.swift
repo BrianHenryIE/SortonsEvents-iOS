@@ -21,6 +21,8 @@ class NewsViewController: UIViewController, NewsPresenterOutput {
     var output: NewsViewControllerOutput!
     var newsUrl: URLRequest!
 
+    var initialViewportSet = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,14 +41,23 @@ class NewsViewController: UIViewController, NewsPresenterOutput {
     func display(_ viewModel: News.ViewModel) {
         newsUrl = viewModel.newsUrl
         webview.loadRequest(newsUrl)
+
     }
 
-    @IBAction func changeToNextTabLeft(_ sender: Any) {
-        output.changeToNextTabLeft()
+    func setViewPort() {
+        webview.stringByEvaluatingJavaScript(from: "setViewPortSizeAndRefresh( \(self.view.bounds.width) )")
+        // aka
+        // javascript:setViewPortSizeAndRefresh(1000)
     }
 
-    @IBAction func changeToNextTabRight(_ sender: Any) {
-        output.changeToNextTabRight()
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        webview.isHidden = true
+
+        coordinator.animate(alongsideTransition: nil,
+                            completion: { _ in
+                                self.setViewPort()
+                                self.webview.isHidden = false
+        })
     }
 }
 
@@ -60,5 +71,14 @@ extension NewsViewController: UIWebViewDelegate {
         default:
             return true
         }
+    }
+
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+
+        if !initialViewportSet {
+            setViewPort()
+            initialViewportSet = true
+        }
+
     }
 }

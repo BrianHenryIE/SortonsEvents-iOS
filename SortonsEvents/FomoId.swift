@@ -13,21 +13,18 @@ struct FomoId {
     let id: String
     let name: String
     let shortName: String
+    let longName: String
     let appStoreId: String
-
+    let censor: [String]
+}
+extension FomoId {
     init() {
         // swiftlint:disable force_cast
         id = Bundle.main.infoDictionary?["FomoId"] as! String
         name = Bundle.main.infoDictionary?["FomoName"] as! String
         shortName = Bundle.main.infoDictionary?["ShortName"] as! String
+        longName = Bundle.main.infoDictionary?["LongName"] as! String
         appStoreId = Bundle.main.infoDictionary?["AppStoreId"] as! String
-    }
-
-    // for testing
-    init(id: String, name: String, shortName: String, appStoreId: String) {
-        self.id = id
-        self.name = name
-        self.shortName = shortName
-        self.appStoreId = appStoreId
+        censor = Bundle.main.infoDictionary?["FomoCensor"] as! [String]
     }
 }

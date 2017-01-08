@@ -20,7 +20,7 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
         super.viewDidLoad()
 
         tableViewOutlet.rowHeight = UITableViewAutomaticDimension
-        tableViewOutlet.estimatedRowHeight = 140
+        tableViewOutlet.estimatedRowHeight = 80
 
         let gestureRecognizer = UIGestureRecognizer()
         tableViewOutlet.addGestureRecognizer(gestureRecognizer)
@@ -77,9 +77,4 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
 
         return false
     }
-
-    @IBAction func rightSwipeGesture(_ sender: Any) {
-        output.changeToNextTabLeft()
-    }
-
 }

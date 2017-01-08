@@ -23,7 +23,7 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
 
         // Start content below (not beneath) the status bar
         let top = UIApplication.shared.statusBarFrame.size.height
-        self.tableView.contentInset = UIEdgeInsets(top: top, left: 0, bottom: 0, right: 0)
+        self.tableView.contentInset = UIEdgeInsets(top: top, left: 0, bottom: 49, right: 0)
 
         // Autosizing cell heights
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -35,10 +35,6 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
     func fetchEventsOnLoad() {
         let request = ListEvents.Fetch.Request()
         output.fetchEvents(request)
-    }
-
-    @IBAction func changeToNextTabRight(_ sender: Any) {
-        output.changeToNextTabRight()
     }
 
 // MARK: Display logic ListEventsPresenterOutput

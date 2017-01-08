@@ -33,12 +33,4 @@ class NewsInteractor: NewsViewControllerOutput {
     func setup(_ request: News.Fetch.Request) {
         output.setFomoId(fomoId)
     }
-
-    func changeToNextTabLeft() {
-        wireframe.changeToNextTabLeft()
-    }
-
-    func changeToNextTabRight() {
-        wireframe.changeToNextTabRight()
-    }
 }

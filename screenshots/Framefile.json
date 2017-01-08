@@ -1,0 +1,29 @@
+{
+    "device_frame_version": "latest",
+    "default": {
+        "title": {
+            "color": "#545454"
+        },
+        "background": "./background.jpg",
+        "padding": 50,
+        "show_complete_frame": false
+    },
+    "data": [{
+             "filter": "ListEvents",
+             "keyword": {
+             "color": "#d21559"
+             }
+             },
+             {
+             "filter": "Directory",
+             "keyword": {
+             "color": "#d21559"
+             }
+             },
+             {
+             "filter": "News",
+             "keyword": {
+             "color": "#d21559"
+             }
+             }]
+}

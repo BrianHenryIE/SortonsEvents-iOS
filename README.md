@@ -38,6 +38,13 @@ The Directory is again a UITableViewController with a pretty straightforward sea
 
 The About tab was added so people can communicate with me. The app stopped working for a few weeks when Facebook deprecated an API I was using. Nobody told me! The view is a static UITableView showing basic About, Changelog, and Privacy Policy information in a UIWebView, and now people can email me feedback (MFMailComposeViewController), share the app (UIActivityViewController) and rate the app (UIApplication.shared.openURL!).
 
+
+## Story Time
+
+In March 2016 I was living in Dublin on the route of the St. Patrick's Day Parade. Naturally, we were watching it and once it was over we invited some Americans into the apartment for drinks and fun. Some of them were studying in University College Dublin so I started talking about this app. One of the girls already had it installed on her phone! 
+
+One of the main things I've learned through this and other events apps I've made is that people don't care about them. I think most people's lives are too busy for them to need to go looking for things to do.
+
 ## Resources 
 
 Some tools I used as I built this.
@@ -86,24 +93,28 @@ The other badges at the top are made by Shields IO with a simple configurable UR
 
 The angled phone picture above was created on MockuPhone. I'm going to replace this with a gif eventually.
 
+* [Fabric](https://fabric.io)
+
+Fabric is a five minute install (pod, build script and two lines) which provides usage data and crash reports.
+
+* [FastLane](https://fastlane.tools/)
+
+Part of Fabric, I've set up FastLane to automatically take app screenshots in order to ease submitting the different versions of the app for different colleges.
+
+* [SLPagingViewSwift](https://github.com/StefanLage/SLPagingViewSwift)
+
+I had implemented my own gesture recognisers to swipe between tabs but it wasn't as smooth an experience as is typical of other apps. This library made it easy to implement an improved UX.
 
 ## Roadmap
 
-### Fabric
-I've currently no analytics beyond Apple provided and App Engine's logs. I'd like to have an understanding of how often, how long, etc. users are using the app. I've used Twitter's [Fabric](https://fabric.io) with [Answers](https://fabric.io/kits/ios/answers) and [Crashlytics](https://fabric.io/kits/ios/crashlytics) elsewhere so will add them here soon.
-
-### FastLane
-Also part of Fabric, I'd like to set up [FastLane](https://fastlane.tools/), particularly to ease submitting versions of the app for different colleges, without me having to go through the Xcode/iTunesConnnect process each time.
-
 ### Push Notifications / Widget
 
-I think a weekly push notification of what's coming up would be nice, and a lock screen widget would be an appropriate UI.
+I think a weekly push notification of what's coming up would be nice, and a "Today" app extension (lock screen widget) would be an appropriate UI.
 
 ### UX Improvements
 
 * Currently only refreshes data when first loaded. 
-* Swiping between tabs is a bit harsh. 
-* The Events view should show which club/society the event is related to. 
+* The Events view should show which clubs/societies the event is related to. Particularly, there's plenty of space for this on iPad. 
 * The News view's performance is terrible.
 
 ### Facebook Ads
