@@ -35,7 +35,7 @@ class NewsPresenterTests: XCTestCase {
         sut.setFomoId("123")
 
         XCTAssert(spy.displayCalled, "display not called by presenter")
-        XCTAssertEqual(spy.url, "https://sortonsevents.appspot.com/recentpostsmobile/news.html#123", "incorrect URL built by presenter")
+        XCTAssertEqual(spy.url, "http://sortons.ie/events/recentpostsmobile/news.html#123", "incorrect URL built by presenter")
     }
 
 }
