@@ -26,22 +26,24 @@ class NewsViewController: UIViewController, NewsPresenterOutput {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let request = News.Fetch.Request()
-
         webview.delegate = self
         webview.scrollView.decelerationRate = UIScrollViewDecelerationRateNormal
 
-        output.setup(request)
+        fetchNews()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
+    func fetchNews() {
+        let request = News.Fetch.Request()
+        output.setup(request)
+    }
+
     func display(_ viewModel: News.ViewModel) {
         newsUrl = viewModel.newsUrl
         webview.loadRequest(newsUrl)
-
     }
 
     func setViewPort(width: CGFloat) {

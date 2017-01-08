@@ -18,8 +18,11 @@ class RootViewController: SLPagingViewSwift, UITabBarDelegate {
     var viewControllers: [UIViewController]!
 
     var newsView: NewsViewController!
+    var listEventsView: ListEventsTableViewController!
 
     var metaWireframe: MetaWireframe!
+
+    var lastOpenedDate = Date()
 
     convenience init(fomoId: FomoId) {
         let listEventsWireframe = ListEventsWireframe(fomoId: fomoId)
@@ -38,6 +41,7 @@ class RootViewController: SLPagingViewSwift, UITabBarDelegate {
 
         self.init(controllers: vcs, showPageControl: true)
 
+        self.listEventsView = listEventsView
         self.newsView = newsView
         self.metaWireframe = metaWireframe
         self.viewControllers = vcs
@@ -87,6 +91,21 @@ class RootViewController: SLPagingViewSwift, UITabBarDelegate {
             }
         }
 
+        // TODO: bother removing the observer?
+        NotificationCenter.default.addObserver(self,
+                                           selector: #selector(self.willEnterForeground(notification:)),
+                                         name: NSNotification.Name.UIApplicationWillEnterForeground,
+                                         object: nil)
+    }
+
+    func willEnterForeground(notification: NSNotification!) {
+        let now = Date()
+        let timeSinceLastOpened = now.timeIntervalSince(lastOpenedDate)
+        if timeSinceLastOpened > TimeInterval(15*60) {
+            newsView.fetchNews()
+            listEventsView.fetchEventsOnLoad()
+        }
+        lastOpenedDate = now
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -145,7 +164,7 @@ class RootViewController: SLPagingViewSwift, UITabBarDelegate {
         }
 
     }
-    
+
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         setCurrentIndex(item.tag, animated: true)
     }
