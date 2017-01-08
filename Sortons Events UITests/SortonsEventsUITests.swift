@@ -31,7 +31,7 @@ class SortonsEventsUITests: XCTestCase {
         // On first load, there's no cache
         // (though it seems like that after multiple runson device!)
 
-        sleep(5)
+        sleep(10)
 
         table.swipeUp()
         snapshot("ListEvents")

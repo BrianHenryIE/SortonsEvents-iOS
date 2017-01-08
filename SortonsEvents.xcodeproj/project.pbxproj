@@ -555,6 +555,13 @@
 			remoteGlobalIDString = A63B32A01C68AFA400C46020;
 			remoteInfo = "FOMO DCU";
 		};
+		A6A6732C1E20E452003AB89A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6C613031A91492500A5F082 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6141D6C1BB9F537003150F1;
+			remoteInfo = "FOMO UCC";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -1396,6 +1403,7 @@
 			dependencies = (
 				A6595EA11E14DC8600AA1CE1 /* PBXTargetDependency */,
 				A6A672E11E1F912A003AB89A /* PBXTargetDependency */,
+				A6A6732D1E20E452003AB89A /* PBXTargetDependency */,
 			);
 			name = "Sortons Events UITests";
 			productName = "Sortons Events UITests";
@@ -1565,7 +1573,7 @@
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 3RM6H33EW7;
 						ProvisioningStyle = Automatic;
-						TestTargetID = A63B32A01C68AFA400C46020;
+						TestTargetID = A6141D6C1BB9F537003150F1;
 					};
 					A69186AD1DCC543A00372A98 = {
 						DevelopmentTeam = 3RM6H33EW7;
@@ -3003,6 +3011,11 @@
 			target = A63B32A01C68AFA400C46020 /* FOMO DCU */;
 			targetProxy = A6A672E01E1F912A003AB89A /* PBXContainerItemProxy */;
 		};
+		A6A6732D1E20E452003AB89A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6141D6C1BB9F537003150F1 /* FOMO UCC */;
+			targetProxy = A6A6732C1E20E452003AB89A /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -3258,7 +3271,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "FOMO DCU";
+				TEST_TARGET_NAME = "FOMO UCC";
 			};
 			name = Debug;
 		};
@@ -3276,7 +3289,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ie.sortons.Sortons-Events-UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "FOMO DCU";
+				TEST_TARGET_NAME = "FOMO UCC";
 			};
 			name = Release;
 		};
