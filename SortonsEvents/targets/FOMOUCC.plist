@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>LongName</key>
+	<string>University College Cork</string>
 	<key>FomoCensor</key>
 	<array>
 		<string>UCC</string>
@@ -49,12 +51,6 @@
 	<string>123069381111681</string>
 	<key>FacebookDisplayName</key>
 	<string>Sortons Events</string>
-<<<<<<< HEAD
-	<key>FomoId</key>
-	<string>160571590941928</string>
-	<key>FomoName</key>
-	<string>FOMO UCC</string>
-=======
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
@@ -69,7 +65,6 @@
 			</dict>
 		</array>
 	</dict>
->>>>>>> origin/dev
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.entertainment</string>
 	<key>LSApplicationQueriesSchemes</key>
@@ -83,8 +78,6 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>ShortName</key>
-	<string>UCC</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreenUCC</string>
 	<key>UIRequiredDeviceCapabilities</key>
