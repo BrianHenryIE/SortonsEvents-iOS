@@ -26,44 +26,50 @@ class NewsViewController: UIViewController, NewsPresenterOutput {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let request = News.Fetch.Request()
-
         webview.delegate = self
         webview.scrollView.decelerationRate = UIScrollViewDecelerationRateNormal
 
-        output.setup(request)
+        fetchNews()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
+    func fetchNews() {
+        let request = News.Fetch.Request()
+        output.setup(request)
+    }
+
     func display(_ viewModel: News.ViewModel) {
         newsUrl = viewModel.newsUrl
         webview.loadRequest(newsUrl)
-
     }
 
-    func setViewPort() {
-        webview.stringByEvaluatingJavaScript(from: "setViewPortSizeAndRefresh( \(self.view.bounds.width) )")
+    func setViewPort(width: CGFloat) {
+        webview.stringByEvaluatingJavaScript(from: "setViewPortSizeAndRefresh( \(width) )")
         // aka
         // javascript:setViewPortSizeAndRefresh(1000)
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        webview.isHidden = true
+        super.viewWillTransition(to: size, with: coordinator)
+
+        self.webview.isHidden = true
+        self.setViewPort(width: size.width)
 
         coordinator.animate(alongsideTransition: nil,
                             completion: { _ in
-                                self.setViewPort()
-                                self.webview.isHidden = false
-        })
+                                     self.webview.isHidden = false
+                            })
     }
 }
 
 extension NewsViewController: UIWebViewDelegate {
 
-    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+    func webView(_ webView: UIWebView,
+                 shouldStartLoadWith request: URLRequest,
+                 navigationType: UIWebViewNavigationType) -> Bool {
         switch navigationType {
         case .linkClicked:
             output.open(request.url!)
@@ -76,7 +82,7 @@ extension NewsViewController: UIWebViewDelegate {
     func webViewDidFinishLoad(_ webView: UIWebView) {
 
         if !initialViewportSet {
-            setViewPort()
+            setViewPort(width: view.frame.width)
             initialViewportSet = true
         }
 
