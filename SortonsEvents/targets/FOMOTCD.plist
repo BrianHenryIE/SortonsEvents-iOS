@@ -2,17 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>LongName</key>
-	<string>Trinity College, Dublin</string>
-	<key>FomoCensor</key>
-	<array>
-		<string>Trinity College, Dublin</string>
-		<string>Trinity College Dublin</string>
-		<string>Trinity</string>
-		<string>TCD</string>
-		<string>Tcd</string>
-		<string>DU</string>
-	</array>
 	<key>AppStoreId</key>
 	<string>1035135187</string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -30,7 +19,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.3</string>
+	<string>2.3.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -43,7 +32,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>14</string>
+	<string>15</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
@@ -62,6 +51,15 @@
 	<string>123069381111681</string>
 	<key>FacebookDisplayName</key>
 	<string>Sortons Events</string>
+	<key>FomoCensor</key>
+	<array>
+		<string>Trinity College, Dublin</string>
+		<string>Trinity College Dublin</string>
+		<string>Trinity</string>
+		<string>TCD</string>
+		<string>Tcd</string>
+		<string>DU</string>
+	</array>
 	<key>FomoId</key>
 	<string>884332671653875</string>
 	<key>FomoName</key>
@@ -74,6 +72,8 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>LongName</key>
+	<string>Trinity College, Dublin</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
