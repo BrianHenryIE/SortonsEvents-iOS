@@ -26,6 +26,10 @@ class NewsViewController: UIViewController, NewsPresenterOutput {
 
         self.view.addSubview(webView)
 
+        fetchNews()
+    }
+
+    func fetchNews() {
         let request = News.Fetch.Request()
         output.setup(request)
     }
