@@ -2,21 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>LongName</key>
-	<string>University College Dublin</string>
-	<key>FomoCensor</key>
-	<array>
-		<string>UCD</string>
-		<string>University College Dublin</string>
-		<string>ucd</string>
-		<string>Ucd</string>
-	</array>
-	<key>ShortName</key>
-	<string>UCD</string>
-	<key>FomoName</key>
-	<string>FOMO UCD</string>
-	<key>FomoId</key>
-	<string>428055040731753</string>
 	<key>AppStoreId</key>
 	<string>977641745</string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -34,7 +19,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.3</string>
+	<string>2.3.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -47,11 +32,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>14</string>
-	<key>FacebookAppID</key>
-	<string>123069381111681</string>
-	<key>FacebookDisplayName</key>
-	<string>Sortons Events</string>
+	<string>15</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
@@ -66,6 +47,21 @@
 			</dict>
 		</array>
 	</dict>
+	<key>FacebookAppID</key>
+	<string>123069381111681</string>
+	<key>FacebookDisplayName</key>
+	<string>Sortons Events</string>
+	<key>FomoCensor</key>
+	<array>
+		<string>UCD</string>
+		<string>University College Dublin</string>
+		<string>ucd</string>
+		<string>Ucd</string>
+	</array>
+	<key>FomoId</key>
+	<string>428055040731753</string>
+	<key>FomoName</key>
+	<string>FOMO UCD</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.entertainment</string>
 	<key>LSApplicationQueriesSchemes</key>
@@ -74,11 +70,15 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>LongName</key>
+	<string>University College Dublin</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>ShortName</key>
+	<string>UCD</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreenUCD</string>
 	<key>UIRequiredDeviceCapabilities</key>

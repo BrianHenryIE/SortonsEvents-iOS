@@ -27,13 +27,10 @@ class SortonsEventsUITests: XCTestCase {
         var tablesQuery: XCUIElementQuery = self.app.tables
         var table: XCUIElement = tablesQuery.element
 
-        // TODO NB Wait for data to load
-        // On first load, there's no cache
-        // (though it seems like that after multiple runson device!)
-
         sleep(10)
 
         table.swipeUp()
+        sleep(3)
         snapshot("ListEvents")
 
         app.tabBars.buttons["Directory"].tap()
@@ -41,13 +38,14 @@ class SortonsEventsUITests: XCTestCase {
         tablesQuery = self.app.tables
         table = tablesQuery.element
         table.swipeUp()
+        sleep(3)
         snapshot("Directory")
 
         // hopefuly by now the news tab will have loaded (or a newer version will have better performance)
         app.tabBars.buttons["News"].tap()
 
-        app.windows.element(boundBy: 0) .swipeUp()
-
+        app.windows.element(boundBy: 0).swipeUp()
+        sleep(3)
         snapshot("News")
 
         XCTAssert(true)
