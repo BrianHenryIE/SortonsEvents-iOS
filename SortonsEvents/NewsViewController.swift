@@ -21,11 +21,21 @@ class NewsViewController: UIViewController, NewsPresenterOutput {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupView()
+
+        fetchNews()
+    }
+
+    func setupView() {
+
         webView = WKWebView(frame: self.view.frame)
+
         webView.navigationDelegate = self
 
-        self.view.addSubview(webView)
+        view.addSubview(webView)
+    }
 
+    func fetchNews() {
         let request = News.Fetch.Request()
         output.setup(request)
     }
@@ -39,16 +49,23 @@ class NewsViewController: UIViewController, NewsPresenterOutput {
         _ = webView.load(newsUrl)
     }
 
-    func setViewPort() {
-        webView.evaluateJavaScript("setViewPortSizeAndRefresh( \(self.view.bounds.width) )", completionHandler: nil)
+    func setViewPort(width: CGFloat) {
+        webView.evaluateJavaScript("setViewPortSizeAndRefresh( \(width) )",
+                                   completionHandler: nil)
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         webView.isHidden = true
+        self.setViewPort(width: size.width)
 
-        coordinator.animate(alongsideTransition: nil,
+        coordinator.animate(alongsideTransition: { _ in
+            // TODO: do this with autolayout!
+            self.webView.frame = CGRect(x: 0,
+                                        y: 0,
+                                    width: size.width,
+                                   height: size.height)
+        },
                             completion: { _ in
-                                self.setViewPort()
                                 self.webView.isHidden = false
         })
     }
@@ -66,7 +83,7 @@ extension NewsViewController: WKNavigationDelegate {
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         if !initialViewportSet {
-            setViewPort()
+            setViewPort(width: self.view.bounds.width)
             initialViewportSet = true
         }
     }
