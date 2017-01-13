@@ -40,10 +40,6 @@ class NewsViewController: UIViewController, NewsPresenterOutput {
         output.setup(request)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
     func display(_ viewModel: News.ViewModel) {
         newsUrl = viewModel.newsUrl
         _ = webView.load(newsUrl)
