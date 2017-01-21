@@ -6,8 +6,9 @@
 //  Copyright © 2016 Sortons. All rights reserved.
 //
 
-import XCTest
 @testable import SortonsEvents
+
+import XCTest
 
 class FacebookUrlTests: XCTestCase {
 
@@ -88,6 +89,8 @@ class FacebookUrlTests: XCTestCase {
     }
 
     func testRedirect() {
+
+        // swiftlint:disable:next line_length
         let testUrl = "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.futurelearn.com%2Fcourses%2Fexercise-prescription%2F3&h=ATOUjWnxzolALe5qru7UaS8HfapY4BHBRZvsx5xF4eXyx3zUyck4AGzbY4XyUYQmixrY3NFML2cMrdX8qvs1H9VfjJgjYm2LlqfBIdBJ6YFNsyOuTRDBxRvFFt3K4OjmBPiVelE&enc=AZMYaBtFyZ3GKZkONX8Z4t0gXwJTe2nKisOW8Q22MDh411BBGW7lCnf6IwAKefQSLSlUPh9AERwafPjnMw1T0F5Z-uQVvOgnMxud3Qu4j1bKpwMue-ygopH4LULtuauUeFxm8DLvG3-no3WKuRzHNSnL77i2NykPA0giWnRVE96LTCgzd8UDoZ8Ak6bY7O6AbNnUs2mbyE6z7Fttg5ZHgqSS&s=1"
 
         let externalUrl = "https://www.futurelearn.com/courses/exercise-prescription/3"
@@ -99,7 +102,10 @@ class FacebookUrlTests: XCTestCase {
         XCTAssertEqual(output.safariUrl!, safariUrl)
         XCTAssertEqual(output.appUrl, nil)
     }
+
     func testAnotherRedirect() {
+
+        // swiftlint:disable:next line_length
         let testUrl = "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.futurelearn.com%2Fcourses%2Fexercise-prescription%2F3&h=ATM2y9zZZQpFg8sfwtvF8IlEOUdJO4PXPV12Y-ojVow1Ffn9Ge0jXN9wCKLbM46j4fQs9d7_DWdF1GLTDbbryhX5rkAQLuqf1zWWKn2vbCz1mLR7Z7iJzOr_j7nMGBfxrFS8XZM&enc=AZPTFUbXYRnKe2XYF6K4FDokA1R7-m6pTx3YbztylWV96tJnk7vTswSb5w8GTLmOrJdbZ_DaRSh5dbAtEpK9Gwf-Oyv39NBPguOCBQlyBMcKsTEGqPHSaHqR7Il6SXLNptpFz5tX23Dqc3MPMUJYNhJWBfOFFnOrC31glBuml0WsiX4uWO4jhGQWPUeG0JwxlJulTlqyRfHxMtVKfWFCPefR&s=1"
 
         let externalUrl = "https://www.futurelearn.com/courses/exercise-prescription/3"
@@ -117,6 +123,7 @@ class FacebookUrlTests: XCTestCase {
 
     func testShareButton() {
 
+        // swiftlint:disable:next line_length
 //        let shareButtton = "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2Fevents%2F224228118004603%2F&display=popup&ref=plugin&src=post"
 //        let shareButttonUrl = URL(string: shareButtton)
 //        

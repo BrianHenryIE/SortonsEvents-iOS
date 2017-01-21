@@ -6,11 +6,12 @@
 //  Copyright © 2016 Sortons. All rights reserved.
 //
 
-import XCTest
 @testable import SortonsEvents
 
+import XCTest
+
 // This is easier in Java!
-class DirectoryPresenterSpy: DirectoryInteractorOutput {
+fileprivate class PresenterSpy: DirectoryInteractorOutputProtocol {
 
     var presentFetchedDirectoryCalled = 0
     var sourcePagesCount = 0
@@ -21,7 +22,7 @@ class DirectoryPresenterSpy: DirectoryInteractorOutput {
     }
 }
 
-class DirectoryCacheWorkerSpy: DirectoryCacheWorkerProtocol {
+fileprivate class CacheSpy: DirectoryCacheProtocol {
 
     var fetchCalled = false
     var saveCalled = false
@@ -29,16 +30,10 @@ class DirectoryCacheWorkerSpy: DirectoryCacheWorkerProtocol {
     func fetch() -> String? {
         fetchCalled = true
 
-        let bundle = Bundle(for: DirectoryCacheWorkerSpy.self)
+        let bundle = Bundle(for: CacheSpy.self)
         let path = bundle.path(forResource: "ClientPageDataTcd", ofType: "json")!
 
-        var content = ""
-
-        do {
-            content = try String(contentsOfFile: path)
-        } catch {
-            // TODO / this will throw an error already when parsing
-        }
+        let content = try? String(contentsOfFile: path)
 
         return content
     }
@@ -48,22 +43,20 @@ class DirectoryCacheWorkerSpy: DirectoryCacheWorkerProtocol {
     }
 }
 
-class DirectoryNetworkWorkerSpy: DirectoryNetworkWorkerProtocol {
+fileprivate class NetworkSpy: DirectoryNetworkProtocol {
     var fetchCalled = false
 
     func fetchDirectory(_ fomoId: String, completionHandler: @escaping (_ discoveredEventsJsonPage: String) -> Void) {
         fetchCalled = true
 
-        let bundle = Bundle(for: DirectoryCacheWorkerSpy.self)
+        let bundle = Bundle(for: NetworkSpy.self)
         let path = bundle.path(forResource: "ClientPageDataTcd", ofType: "json")!
 
-        var content = ""
-
-        do {
-            content = try String(contentsOfFile: path)
-        } catch {
-            // TODO / this will throw an error already when parsing
+        guard let content = try? String(contentsOfFile: path) else {
+            XCTFail()
+            return
         }
+
         completionHandler(content)
     }
 }
@@ -72,41 +65,46 @@ class DirectoryInteractorTests: XCTestCase {
 
     var sut: DirectoryInteractor!
 
-    var presenterSpy: DirectoryPresenterSpy!
-    var cacheWorkerSpy: DirectoryCacheWorkerSpy!
-    var networkWorkerSpy: DirectoryNetworkWorkerSpy!
+    fileprivate var presenterSpy: PresenterSpy!
+    fileprivate var cacheSpy: CacheSpy!
+    fileprivate var networkSpy: NetworkSpy!
 
-    let fomoId = FomoId(id: "id",
-                      name: "name",
-                 shortName: "shortName",
-                  longName: "longName",
-                appStoreId: "appStoreId", censor: [String]())
+    let fomoId = FomoId(fomoIdNumber: "id",
+                                name: "name",
+                           shortName: "shortName",
+                            longName: "longName",
+                          appStoreId: "appStoreId", censor: [String]())
 
     override func setUp() {
         super.setUp()
 
-        presenterSpy = DirectoryPresenterSpy()
-        cacheWorkerSpy = DirectoryCacheWorkerSpy()
-        networkWorkerSpy = DirectoryNetworkWorkerSpy()
+        presenterSpy = PresenterSpy()
+        cacheSpy = CacheSpy()
+        networkSpy = NetworkSpy()
 
-        sut = DirectoryInteractor(fomoId: fomoId.id, wireframe: DirectoryWireframe(fomoId: fomoId), presenter: presenterSpy, cache: cacheWorkerSpy, network: networkWorkerSpy)
+        sut = DirectoryInteractor(fomoIdNumber: fomoId.fomoIdNumber,
+                                     wireframe: DirectoryWireframe(fomoId: fomoId),
+                                     presenter: presenterSpy,
+                                         cache: cacheSpy,
+                                       network: networkSpy)
     }
 
     func testFetchDirectory() {
         // Should hit the cache, save to variable, send to presenter, 
         // then hit the network, save to variable, send to presenter
-        let request = Directory.Fetch.Request()
+        let request = Directory.Request()
 
         sut.fetchDirectory(request)
 
-        XCTAssert(cacheWorkerSpy.fetchCalled, "Cache worker not called by Interactor")
+        XCTAssert(cacheSpy.fetchCalled, "Cache worker not called by Interactor")
         // Actually is being called but assessing too late
 //        XCTAssertEqual(presenterSpy.presentFetchedDirectoryCalled, 1, "Directory presenter not called after cache")
 
-        XCTAssert(networkWorkerSpy.fetchCalled, "Network worker not called by Interactor")
+        XCTAssert(networkSpy.fetchCalled, "Network worker not called by Interactor")
 
-        XCTAssertEqual(self.presenterSpy.presentFetchedDirectoryCalled, 2, "Directory Presenter not called after Network Worker")
-        XCTAssert(self.cacheWorkerSpy.saveCalled, "New events not saved to cache")
+        XCTAssertEqual(self.presenterSpy.presentFetchedDirectoryCalled, 2,
+                       "Directory Presenter not called after Network Worker")
+        XCTAssert(self.cacheSpy.saveCalled, "New events not saved to cache")
 
     }
 
@@ -114,7 +112,7 @@ class DirectoryInteractorTests: XCTestCase {
         // should save filter to variable in case cache is searched then overwritten by network
 
         // let it request data from the other spies!
-        let request = Directory.Fetch.Request()
+        let request = Directory.Request()
         sut.fetchDirectory(request)
 
         sut.filterDirectoryTo("music")

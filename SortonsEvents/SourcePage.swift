@@ -27,7 +27,6 @@ class SourcePage: Mappable {
 
     }
 
-    // Mappable
     func mapping(map: Map) {
         name <- map["name"]
         fbPageId <- map["fbPageId"]

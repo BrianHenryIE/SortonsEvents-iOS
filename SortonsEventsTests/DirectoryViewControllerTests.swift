@@ -6,10 +6,11 @@
 //  Copyright © 2016 Sortons. All rights reserved.
 //
 
-import XCTest
 @testable import SortonsEvents
 
-class TableViewSpy: UITableView {
+import XCTest
+
+fileprivate class TableViewSpy: UITableView {
     // MARK: Method call expectations
     var reloadDataCalled = false
 
@@ -18,7 +19,7 @@ class TableViewSpy: UITableView {
         reloadDataCalled = true
     }
 }
-class DirectoryViewControllerOutputSpy: DirectoryViewControllerOutput {
+fileprivate class OutputSpy: DirectoryViewControllerOutputProtocol {
 
     // MARK: Method call expectations
     var fetchDirectoryCalled = false
@@ -26,7 +27,7 @@ class DirectoryViewControllerOutputSpy: DirectoryViewControllerOutput {
     var displaySelectedPageCalled = false
     var changeToNextTabLeftCalled = false
 
-    func fetchDirectory(_ withRequest: Directory.Fetch.Request) {
+    func fetchDirectory(_ withRequest: Directory.Request) {
 
         fetchDirectoryCalled = true
     }
@@ -47,7 +48,7 @@ class DirectoryViewControllerOutputSpy: DirectoryViewControllerOutput {
 class DirectoryViewControllerTests: XCTestCase {
 
     var sut: DirectoryViewController!
-    let spy = DirectoryViewControllerOutputSpy()
+    fileprivate let outputSpy = OutputSpy()
     var directoryViewModel: Directory.ViewModel!
 
     override func setUp() {
@@ -57,20 +58,22 @@ class DirectoryViewControllerTests: XCTestCase {
         let storyboard = UIStoryboard(name: "Directory", bundle: bundle)
         sut = storyboard.instantiateViewController(withIdentifier: "Directory") as? DirectoryViewController
 
-        sut.output = spy
+        sut.output = outputSpy
 
         // Call viewDidLoad()
         let _ = sut.view
 
         // TODO change URL to local so tests don't need network
         let sampleImageUrl: URL = URL(string: "https://graph.facebook.com/206961869324550/picture?type=square")!
-        let sampleDirectoryEntry = Directory.TableViewCellModel(name: "test entry", details: "no details", imageUrl: sampleImageUrl)
+        let sampleDirectoryEntry = Directory.TableViewCellModel(name: "test entry",
+                                                             details: "no details",
+                                                            imageUrl: sampleImageUrl)
         let sampleDirectoryModel = [sampleDirectoryEntry]
         directoryViewModel = Directory.ViewModel(directory: sampleDirectoryModel)
     }
 
     func testViewDidLoadShouldCallFetchDirectory() {
-        XCTAssert(spy.fetchDirectoryCalled, "View not initializing as expected – should fetch directory on load")
+        XCTAssert(outputSpy.fetchDirectoryCalled, "View not initializing as expected – should fetch directory on load")
     }
 
     func testNumberOfSectionsInTableViewShouldAlwaysBeOne() {
@@ -118,7 +121,7 @@ class DirectoryViewControllerTests: XCTestCase {
         sut.tableView(tableView!, didSelectRowAt: indexPath)
 
         // Then
-        XCTAssert(spy.displaySelectedPageCalled, "output didSelectRow not called")
+        XCTAssert(outputSpy.displaySelectedPageCalled, "output didSelectRow not called")
     }
 
     func testSearchBarSeeksUpdate() {
@@ -128,7 +131,7 @@ class DirectoryViewControllerTests: XCTestCase {
 
         sut.searchBar(searchBar!, textDidChange: searchText)
 
-        XCTAssert(spy.filterDirectoryToCalled, "search bar not working")
+        XCTAssert(outputSpy.filterDirectoryToCalled, "search bar not working")
     }
 
     func testSearchBarDisappearsOnScroll() {

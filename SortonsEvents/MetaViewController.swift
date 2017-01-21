@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol MetaViewControllerOutput {
+protocol MetaViewControllerOutputProtocol {
 
     func showWebView(for page: SettingsPage)
 
@@ -21,9 +21,9 @@ protocol MetaViewControllerOutput {
     func rateInAppStore()
 }
 
-class MetaViewController: UITableViewController, MetaPresenterOutput {
+class MetaViewController: UITableViewController, MetaPresenterOutputProtocol {
 
-    var output: MetaViewControllerOutput!
+    var output: MetaViewControllerOutputProtocol!
 
     @IBOutlet var tableview: UITableView!
 

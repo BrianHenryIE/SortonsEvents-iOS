@@ -10,17 +10,19 @@ import UIKit
 
 struct FomoId {
 
-    let id: String
+    let fomoIdNumber: String
     let name: String
     let shortName: String
     let longName: String
     let appStoreId: String
     let censor: [String]
 }
+
 extension FomoId {
     init() {
+        // TODO Change to failable initializer and handle in AppDelegate
         // swiftlint:disable force_cast
-        id = Bundle.main.infoDictionary?["FomoId"] as! String
+        fomoIdNumber = Bundle.main.infoDictionary?["FomoId"] as! String
         name = Bundle.main.infoDictionary?["FomoName"] as! String
         shortName = Bundle.main.infoDictionary?["ShortName"] as! String
         longName = Bundle.main.infoDictionary?["LongName"] as! String

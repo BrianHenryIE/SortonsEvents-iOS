@@ -7,38 +7,32 @@
 //
 
 import Foundation
+import ObjectMapper
 
-protocol ListEventsCacheWorkerProtocol {
+protocol ListEventsCacheProtocol {
 
-    func fetch() -> String?
-    func save(_ latestClientPageData: String)
+    func fetch() -> [DiscoveredEvent]?
+    func save(_ latestClientPageData: [DiscoveredEvent]?)
 }
 
-class ListEventsCacheWorker: ListEventsCacheWorkerProtocol {
+class ListEventsCacheWorker: ListEventsCacheProtocol {
 
-    let fileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("discoveredevents.json")
+    private let fileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("discoveredevents.json")
 
-    func fetch() -> String? {
+    func fetch() -> [DiscoveredEvent]? {
 
-        // read file
-        do {
-            let fileFromCache = try String(contentsOf: fileURL)
-            return fileFromCache
-        } catch {
-            // TODO / this will throw an error already when parsing
+        // TODO test data with some good objects and some incomplete
+        if let fileFromCache = try? String(contentsOf: fileURL) {
+            let eventsFromCache = try? Mapper<DiscoveredEvent>().mapArray(JSONString: fileFromCache)
+            return eventsFromCache
         }
-
         return nil
     }
 
-    func save(_ latestClientPageData: String) {
+    func save(_ freshEventsData: [DiscoveredEvent]?) {
 
-        let data = latestClientPageData.data(using: String.Encoding.utf8)
+        let data = freshEventsData?.toJSONString(prettyPrint: false)
 
-        do {
-            try data!.write(to: fileURL, options: .atomicWrite)
-        } catch {
-            // TODO
-        }
+        try? data?.write(to: fileURL, atomically: true, encoding: .utf8)
     }
 }

@@ -9,13 +9,25 @@
 import Foundation
 import WebKit
 
-class NewsInteractor: NewsViewControllerOutput {
+struct News {
+    struct Fetch {
+        struct Response {
+            let fomoId: String
+        }
+    }
+}
+
+protocol NewsInteractorOutputProtocol {
+    func setFomoId(_ fomoIdNumber: String)
+}
+
+class NewsInteractor: NewsViewControllerOutputProtocol {
 
     let wireframe: NewsWireframe
     let fomoId: String
-    let output: NewsInteractorOutput
+    let output: NewsInteractorOutputProtocol
 
-    init(wireframe: NewsWireframe, fomoId: String, output: NewsInteractorOutput) {
+    init(wireframe: NewsWireframe, fomoId: String, output: NewsInteractorOutputProtocol) {
         self.wireframe = wireframe
         self.fomoId = fomoId
         self.output = output
@@ -30,7 +42,7 @@ class NewsInteractor: NewsViewControllerOutput {
         wireframe.openUrl(facebookUrl)
     }
 
-    func setup(_ request: News.Fetch.Request) {
+    func setup(_ request: News.Request) {
         output.setFomoId(fomoId)
     }
 }

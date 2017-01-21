@@ -16,15 +16,16 @@ class ListEventsWireframe {
     init(fomoId: FomoId) {
         let storyboard = UIStoryboard(name: "ListEvents", bundle: Bundle.main)
 
-        listEventsView = storyboard.instantiateViewController(withIdentifier: "ListEvents") as? ListEventsTableViewController
+        listEventsView = storyboard.instantiateViewController(withIdentifier: "ListEvents")
+            as? ListEventsTableViewController
 
         let listEventsPresenter = ListEventsPresenter(output: listEventsView)
 
         let listEventsInteractor = ListEventsInteractor(wireframe: self,
-                                                        fomoId: fomoId.id,
-                                                        output: listEventsPresenter,
-                                                        listEventsNetworkWorker: ListEventsNetworkWorker(),
-                                                        listEventsCacheWorker: ListEventsCacheWorker())
+                                                           fomoId: fomoId.fomoIdNumber,
+                                                           output: listEventsPresenter,
+                                          listEventsNetworkWorker: ListEventsNetworkWorker(),
+                                            listEventsCacheWorker: ListEventsCacheWorker())
 
         listEventsView.output = listEventsInteractor
     }

@@ -7,6 +7,7 @@
 //
 
 @testable import SortonsEvents
+
 import XCTest
 import ObjectMapper
 
@@ -21,8 +22,17 @@ class DiscoveredEventsResponseTests: XCTestCase {
         let content = try String(contentsOfFile: path)
 
         // Use objectmapper
-        let nuigJun16: DiscoveredEventsResponse = Mapper<DiscoveredEventsResponse>().map(JSONString: content)!
+        guard let nuigJun16 = try? Mapper<DiscoveredEventsResponse>().map(JSONString: content) else {
+            XCTFail("File error")
+            return
+        }
 
-        XCTAssertEqual(nuigJun16.data.count, 9)
+        guard let data = nuigJun16.data else {
+            XCTFail("File error")
+            return
+        }
+
+        XCTAssertEqual(data.count, 9)
+
     }
 }

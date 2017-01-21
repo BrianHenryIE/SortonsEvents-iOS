@@ -9,11 +9,11 @@
 import Foundation
 import Alamofire
 
-protocol DirectoryNetworkWorkerProtocol {
+protocol DirectoryNetworkProtocol {
     func fetchDirectory(_ fomoId: String, completionHandler: @escaping (_ discoveredEventsJsonPage: String) -> Void)
 }
 
-class DirectoryNetworkWorker: DirectoryNetworkWorkerProtocol {
+class DirectoryNetworkWorker: DirectoryNetworkProtocol {
 
     let baseUrl = "https://sortonsevents.appspot.com/_ah/api/clientdata/v1/clientpagedata/"
 

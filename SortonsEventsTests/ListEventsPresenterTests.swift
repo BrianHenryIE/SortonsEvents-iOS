@@ -6,11 +6,12 @@
 //  Copyright © 2016 Sortons. All rights reserved.
 //
 
-import XCTest
 @testable import SortonsEvents
+
+import XCTest
 import ObjectMapper
 
-class ListEventsPresenterOutputSpy: ListEventsPresenterOutput {
+fileprivate class OutputSpy: ListEventsPresenterOutputProtocol {
 
     var presentFetchedEventsCalled = false
     var presentFetchEventsFetchError  = false
@@ -27,7 +28,7 @@ class ListEventsPresenterOutputSpy: ListEventsPresenterOutput {
 class ListEventsPresenterTests: XCTestCase {
 
     var sut: ListEventsPresenter!
-    let spy = ListEventsPresenterOutputSpy()
+    fileprivate let outputSpy = OutputSpy()
     var events = [DiscoveredEvent]()
 
     override func setUp() {
@@ -35,7 +36,7 @@ class ListEventsPresenterTests: XCTestCase {
 
         var calendar = Calendar.current
         calendar.timeZone = TimeZone(abbreviation: "UTC")!
-        sut = ListEventsPresenter(output: spy, calendar: calendar)
+        sut = ListEventsPresenter(output: outputSpy, calendar: calendar)
     }
 
     func testPresentFetchedEvents() throws {
@@ -46,27 +47,24 @@ class ListEventsPresenterTests: XCTestCase {
         let content = try String(contentsOfFile: path)
 
         // Use objectmapper
-        let anEvent: DiscoveredEvent = Mapper<DiscoveredEvent>().map(JSONString: content)!
+        guard let anEvent: DiscoveredEvent = try? Mapper<DiscoveredEvent>().map(JSONString: content) else {
+            XCTFail()
+            return
+        }
 
         events.append(anEvent)
 
         sut.presentFetchedEvents(ListEvents.Fetch.Response(events: events))
 
-        XCTAssertTrue(spy.presentFetchedEventsCalled)
+        XCTAssertTrue(outputSpy.presentFetchedEventsCalled)
     }
 
     func testPresentEmptyFetchedEvents() {
         // If there are no events found, it should not push to the next layer
         // becuase it's crashing
         // TODO: ultimately, it should show a polite message
-
-        let empty = [DiscoveredEvent]()
-
-        sut.presentFetchedEvents(ListEvents.Fetch.Response(events: empty))
-
-        XCTAssertFalse(spy.presentFetchedEventsCalled)
-
     }
+
     // Move to NSDate extension
     func testFormatFriendlyTime() {
 

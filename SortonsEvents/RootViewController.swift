@@ -67,8 +67,8 @@ class RootViewController: SLPagingViewSwift, UITabBarDelegate {
 
         tabBar = UITabBar(frame: CGRect(x: 0,
                                         y: self.view.bounds.height - 49,
-                                        width: self.view.bounds.width,
-                                        height: 49))
+                                    width: self.view.bounds.width,
+                                   height: 49))
 
         tabBar.items = [firstTabBarItem, secondTabBarItem, thirdTabBarItem, fourthTabBarItem]
 
@@ -91,11 +91,10 @@ class RootViewController: SLPagingViewSwift, UITabBarDelegate {
             }
         }
 
-        // TODO: bother removing the observer?
         NotificationCenter.default.addObserver(self,
                                            selector: #selector(self.willEnterForeground(notification:)),
-                                         name: NSNotification.Name.UIApplicationWillEnterForeground,
-                                         object: nil)
+                                               name: NSNotification.Name.UIApplicationWillEnterForeground,
+                                             object: nil)
     }
 
     func willEnterForeground(notification: NSNotification!) {
@@ -152,10 +151,10 @@ class RootViewController: SLPagingViewSwift, UITabBarDelegate {
             }
                 self.tabBar.frame = CGRect(x: 0,
                                            y: size.height - 49,
-                                           width: size.width,
-                                           height: 49)
+                                       width: size.width,
+                                      height: 49)
         }, completion: { _ in
-                                self.setCurrentIndex(self.tabBar.selectedItem!.tag, animated: true)
+            self.setCurrentIndex(self.tabBar.selectedItem!.tag, animated: true)
 
         })
 

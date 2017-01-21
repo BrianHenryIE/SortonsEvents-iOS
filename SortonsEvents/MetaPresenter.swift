@@ -10,15 +10,15 @@ import Foundation
 import UIKit
 import MessageUI
 
-protocol MetaPresenterOutput {
+protocol MetaPresenterOutputProtocol {
     func showErrorAlert(title: String, message: String)
 }
 
-class MetaPresenter: MetaInteractorOutput {
+class MetaPresenter: MetaInteractorOutputProtocol {
 
-    let output: MetaPresenterOutput
+    let output: MetaPresenterOutputProtocol
 
-    init(output: MetaPresenterOutput) {
+    init(output: MetaPresenterOutputProtocol) {
         self.output = output
     }
 

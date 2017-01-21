@@ -5,9 +5,10 @@ platform :ios, '9.0'
 project 'SortonsEvents'
 
 def common_pods
-    pod 'ObjectMapper', :git => 'https://github.com/Hearst-DD/ObjectMapper.git'
     pod 'Alamofire',   :git => 'https://github.com/Alamofire/Alamofire.git'
     pod 'AlamofireImage', :git => 'https://github.com/Alamofire/AlamofireImage.git'
+    pod 'AlamofireObjectMapper', :git => 'https://github.com/tristanhimmelman/AlamofireObjectMapper'
+    pod 'ObjectMapper', :git => 'https://github.com/Hearst-DD/ObjectMapper.git'
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'SLPagingViewSwift-Swift3', :git => 'https://github.com/davidseek/SLPagingViewSwift-Swift-3-Tinder-Twitter.git'
@@ -49,6 +50,9 @@ end
 # Figure out which are really needed in the test classes – get @import testable working
 target 'SortonsEventsTests' do
     common_pods
+    pod 'Mockingjay', :git => 'https://github.com/kylef/Mockingjay.git'
+    # pod 'Quick', :git => 'https://github.com/Quick/Quick.git'
+    # pod 'Nimble', :git => 'https://github.com/Quick/Nimble.git'
 end
 
 post_install do |installer|

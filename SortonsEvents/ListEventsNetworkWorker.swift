@@ -1,5 +1,5 @@
 //
-//  EventsDataManager.swift
+//  ListEventsNetworkWorker.swift
 //  Sortons Events
 //
 //  Created by Brian Henry on 05/03/2016.
@@ -7,31 +7,42 @@
 //
 
 import Foundation
+import ObjectMapper
 import Alamofire
+import AlamofireObjectMapper
 
-protocol ListEventsNetworkWorkerProtocol {
-    func fetchEvents(_ fomoId: String, completionHandler: @escaping (_ discoveredEventsJsonPage: String) -> Void)
+// TODO change fomoId to fomoIdNumber
+protocol ListEventsNetworkProtocol {
+    func fetchEvents(_ fomoId: String, completionHandler: @escaping (_ result: Result<[DiscoveredEvent]>) -> Void)
 }
 
-class ListEventsNetworkWorker: ListEventsNetworkWorkerProtocol {
+class ListEventsNetworkWorker: ListEventsNetworkProtocol {
 
-    // What's the correct thing to do if there's no network?
-    // i.e. how to pass back exceptions to UI and handle repeating
-
-    // Should this be in a plist?
-    // Ideally it can be changed OTA
     let baseUrl = "https://sortonsevents.appspot.com/_ah/api/upcomingEvents/v1/discoveredeventsresponse/"
 
-    func fetchEvents(_ fomoId: String, completionHandler: @escaping (_ discoveredEventsJsonPage: String) -> Void) {
+    func fetchEvents(_ fomoId: String, completionHandler: @escaping (Result<[DiscoveredEvent]>) -> Void) {
 
         let endpoint = "\(baseUrl)\(fomoId)"
 
+        // TODO: see if AlamofireObjectMapper works with immutable 
+//        Alamofire.request(endpoint).responseArray(keyPath: "data") { (response: DataResponse<[DiscoveredEvent]>) in
+//
+//                completionHandler(response.result)
+//        }
+
         Alamofire.request(endpoint)
             .responseString { response in
-                // Optional check to account for offline... TODO
+
                 if let json = response.result.value {
-                    completionHandler(json)
+
+                    if let gaeResponse = try? Mapper<DiscoveredEventsResponse>().map(JSONString: json) {
+
+                        completionHandler(Result<[DiscoveredEvent]>.success(gaeResponse.data!))
+
+                    }
                 }
+                // TOOD;;;
         }
+
     }
 }

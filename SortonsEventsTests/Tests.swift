@@ -6,6 +6,8 @@
 //  Copyright © 2016 Sortons. All rights reserved.
 //
 
+@testable import SortonsEvents
+
 import Foundation
 
 // Unit Tests //

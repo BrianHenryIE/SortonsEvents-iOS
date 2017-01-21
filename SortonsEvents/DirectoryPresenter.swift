@@ -8,12 +8,31 @@
 
 import UIKit
 
-class DirectoryPresenter: DirectoryInteractorOutput {
+extension Directory {
+    struct ViewModel {
+        let directory: [Directory.TableViewCellModel]
+    }
 
-    var output: DirectoryPresenterOutput?
+    struct TableViewCellModel {
+        let name: String
+        let details: String?
+        let imageUrl: URL
+    }
+}
+
+protocol DirectoryPresenterOutputProtocol {
+
+    func presentFetchedDirectory(_ viewModel: Directory.ViewModel)
+
+    func displayFetchDirectoryFetchError(_ viewModel: Directory.ViewModel)
+}
+
+class DirectoryPresenter: DirectoryInteractorOutputProtocol {
+
+    var output: DirectoryPresenterOutputProtocol?
     let fomoCensor: [String]
 
-    init(output: DirectoryPresenterOutput, fomoCensor: [String] = [String]()) {
+    init(output: DirectoryPresenterOutputProtocol, fomoCensor: [String] = [String]()) {
         self.output = output
         self.fomoCensor = fomoCensor
     }
@@ -22,7 +41,7 @@ class DirectoryPresenter: DirectoryInteractorOutput {
 
         let viewModelDirectory = directory.directory.map({ (sourcePage) -> Directory.TableViewCellModel in
             var name = sourcePage.name!
-            // Remove references to the college so Apple doesn't say we're protrouding to be them
+            // Remove references to the college so Apple doesn't say we're pretending to be them
             if TARGET_IPHONE_SIMULATOR == 1 {
                 for censor in fomoCensor {
                     name = name.replacingOccurrences(of: "\(censor) ", with: "", options: .literal, range: nil)

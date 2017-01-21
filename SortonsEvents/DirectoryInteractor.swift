@@ -9,7 +9,20 @@
 import UIKit
 import ObjectMapper
 
-class DirectoryInteractor: DirectoryViewControllerOutput {
+struct Directory {
+    struct Fetch {
+        struct Response {
+            let directory: [SourcePage]
+        }
+    }
+}
+
+protocol DirectoryInteractorOutputProtocol {
+    func presentFetchedDirectory(_ directory: Directory.Fetch.Response)
+
+}
+
+class DirectoryInteractor: DirectoryViewControllerOutputProtocol {
 
     var wireframe: DirectoryWireframe
 
@@ -17,21 +30,25 @@ class DirectoryInteractor: DirectoryViewControllerOutput {
     var displayedDirectory = [SourcePage]()
     var currentFilter = ""
 
-    var fomoId: String
-    var output: DirectoryInteractorOutput!
+    var fomoIdNumber: String
+    var output: DirectoryInteractorOutputProtocol!
 
-    var cacheWorker: DirectoryCacheWorkerProtocol!
-    var networkWorker: DirectoryNetworkWorkerProtocol!
+    var cacheWorker: DirectoryCacheProtocol!
+    var networkWorker: DirectoryNetworkProtocol!
 
-    init(fomoId: String, wireframe: DirectoryWireframe, presenter: DirectoryInteractorOutput, cache: DirectoryCacheWorkerProtocol, network: DirectoryNetworkWorkerProtocol) {
-        self.fomoId = fomoId
+    init(fomoIdNumber: String,
+            wireframe: DirectoryWireframe,
+            presenter: DirectoryInteractorOutputProtocol,
+                cache: DirectoryCacheProtocol,
+              network: DirectoryNetworkProtocol) {
+        self.fomoIdNumber = fomoIdNumber
         self.wireframe = wireframe
         output = presenter
         cacheWorker = cache
         networkWorker = network
     }
 
-    func fetchDirectory(_ withRequest: Directory.Fetch.Request) {
+    func fetchDirectory(_ withRequest: Directory.Request) {
 
         if let cacheString = cacheWorker.fetch() {
             let directoryFromCache: ClientPageData = Mapper<ClientPageData>().map(JSONString: cacheString)!
@@ -41,14 +58,14 @@ class DirectoryInteractor: DirectoryViewControllerOutput {
             }
         }
 
-        networkWorker.fetchDirectory(fomoId, completionHandler: {(networkString) -> Void in
+        networkWorker.fetchDirectory(fomoIdNumber) {(networkString) -> Void in
             let directoryFromNetwork: ClientPageData = Mapper<ClientPageData>().map(JSONString: networkString)!
             if let data = directoryFromNetwork.includedPages {
                 self.directory = data
                 self.cacheWorker.save(networkString)
                 self.outputDirectoryToPresenter()
             }
-        })
+        }
     }
 
     func filterDirectoryTo(_ searchBarInput: String) {

@@ -6,8 +6,9 @@
 //  Copyright © 2017 Sortons. All rights reserved.
 //
 
-import XCTest
 @testable import SortonsEvents
+
+import XCTest
 
 fileprivate class PresenterOuputMock: MetaWebViewPresenterOuput {
     var displayInWebViewHit = false
@@ -36,20 +37,22 @@ class MetaWebViewTests: XCTestCase {
 
         presenterOuputMock = PresenterOuputMock()
 
-        fomoId = FomoId(id: "160571590941928",
-                      name: "FOMO UCC",
-                 shortName: "UCC",
-                  longName: "University College Cork",
-                appStoreId: "1035132261",
-                    censor: [""])
+        fomoId = FomoId(fomoIdNumber: "160571590941928",
+                                name: "FOMO UCC",
+                           shortName: "UCC",
+                            longName: "University College Cork",
+                          appStoreId: "1035132261",
+                              censor: [""])
 
         presenterUnderTest = MetaWebViewPresenter(with: presenterOuputMock, fomoId: fomoId)
     }
 
     func testPresenterStringReplacement() {
 
+        // swiftlint:disable:next line_length
         let testStringBefore = "<p>Events and news aggregator for <fomo:longName>. Don't miss out!</p><p>Compiles all the latest events and posts from over 350 <fomo:shortName> Facebook pages.</p>"
 
+        // swiftlint:disable:next line_length
         let testStringAfter = "<p>Events and news aggregator for University College Cork. Don't miss out!</p><p>Compiles all the latest events and posts from over 350 UCC Facebook pages.</p>"
 
         let processedFromBefore = presenterUnderTest.replaceFomoNameIn(html: testStringBefore,

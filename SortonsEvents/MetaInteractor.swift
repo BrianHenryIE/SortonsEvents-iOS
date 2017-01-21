@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol MetaInteractorOutput {
+protocol MetaInteractorOutputProtocol {
     func showSendMailErrorAlert()
 }
 
@@ -20,14 +20,14 @@ enum FeedbackType {
     case suggestion, praise, complaint
 }
 
-class MetaInteractor: MetaViewControllerOutput {
+class MetaInteractor: MetaViewControllerOutputProtocol {
 
-    let presenter: MetaInteractorOutput
+    let presenter: MetaInteractorOutputProtocol
 
     let fomoId: FomoId
     let wireframe: MetaWireframe
 
-    init(wireframe: MetaWireframe, fomoId: FomoId, presenter: MetaInteractorOutput) {
+    init(wireframe: MetaWireframe, fomoId: FomoId, presenter: MetaInteractorOutputProtocol) {
         self.presenter = presenter
         self.fomoId = fomoId
         self.wireframe = wireframe

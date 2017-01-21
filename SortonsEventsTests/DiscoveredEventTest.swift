@@ -6,7 +6,12 @@
 //  Copyright © 2016 Sortons. All rights reserved.
 //
 
+// NOT PART OF TEST TARGET
+// ObjectMapper should be tested already
+// DiscoveredEvent should get hit enough times anyway
+
 @testable import SortonsEvents
+
 import XCTest
 import ObjectMapper
 
@@ -19,15 +24,18 @@ class DiscoveredEventTest: XCTestCase {
         let path = bundle.path(forResource: "DiscoveredEventNIUGBicycleVolunteering", ofType: "json")!
         let content = try String(contentsOfFile: path)
 
-        // Use objectmapper
-        let nuigCycling: DiscoveredEvent = Mapper<DiscoveredEvent>().map(JSONString: content)!
+        guard let nuigCycling = try? Mapper<DiscoveredEvent>().map(JSONString: content) else {
+            XCTFail()
+            return
+        }
 
         // Verify
         XCTAssertEqual(nuigCycling.eventId, "918777258231182")
         XCTAssertEqual(nuigCycling.clientId, "1049082365115363")
         XCTAssertEqual(nuigCycling.sourcePages.count, 1)
         XCTAssertEqual(nuigCycling.sourcePages[0].name, "Alive Nuigalway")
-        XCTAssertEqual(nuigCycling.name, "Information Evening for Volunteering with Galway's Community Bicycle Workshop")
+        XCTAssertEqual(nuigCycling.name,
+                       "Information Evening for Volunteering with Galway's Community Bicycle Workshop")
         XCTAssertEqual(nuigCycling.location, "Block R, Earls Island, University Road, Galway.")
 
         let calendar = Calendar.current

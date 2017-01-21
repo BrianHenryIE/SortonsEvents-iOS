@@ -6,8 +6,9 @@
 //  Copyright © 2016 Sortons. All rights reserved.
 //
 
-import XCTest
 @testable import SortonsEvents
+
+import XCTest
 import ObjectMapper
 
 class ClientPageDataTest: XCTestCase {

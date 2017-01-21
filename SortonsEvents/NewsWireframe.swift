@@ -20,14 +20,16 @@ class NewsWireframe {
 
         let newsPresenter = NewsPresenter(output: newsView!)
 
-        let newsInteractor = NewsInteractor(wireframe: self, fomoId: fomoId.id, output: newsPresenter)
+        let newsInteractor = NewsInteractor(wireframe: self,
+                                               fomoId: fomoId.fomoIdNumber,
+                                               output: newsPresenter)
 
         newsView.output = newsInteractor
     }
 
     func openUrl(_ url: FacebookUrl) {
-        if url.appUrl != nil && UIApplication.shared.canOpenURL(url.appUrl!) {
-            UIApplication.shared.openURL(url.appUrl!)
+        if let appUrl = url.appUrl, UIApplication.shared.canOpenURL(appUrl) {
+            UIApplication.shared.openURL(appUrl)
         } else {
             UIApplication.shared.openURL(url.safariUrl!)
         }

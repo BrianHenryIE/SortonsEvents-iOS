@@ -8,28 +8,33 @@
 
 import Foundation
 
-// Overkill! lolz
+extension News {
+    struct ViewModel {
+        let newsUrl: URLRequest
+    }
+}
 
-class NewsPresenter: NewsInteractorOutput {
+protocol NewsPresenterOutputProtocol {
+    func display(_ viewModel: News.ViewModel)
+}
 
-    let output: NewsPresenterOutput!
+class NewsPresenter: NewsInteractorOutputProtocol {
 
-    init(output: NewsPresenterOutput) {
+    let output: NewsPresenterOutputProtocol
+
+    init(output: NewsPresenterOutputProtocol) {
         self.output = output
     }
 
-    func setFomoId(_ id: String) {
+    func setFomoId(_ fomoId: String) {
 
-        let urlString = "http://sortons.ie/events/recentpostsmobile/news.html#\(id)"
+        let urlString = "http://sortons.ie/events/recentpostsmobile/news.html#\(fomoId)"
         let url = URL(string: urlString)!
         let urlRequest = URLRequest(url: url)
 
         let viewModel = News.ViewModel(newsUrl: urlRequest)
 
         output.display(viewModel)
-
-        // When the view is preloaded, the content is loaded at the wrong width, so I'm hiding the view until I've told it to refresh (and it will at least be cached)
-        //        self.webView.hidden = YES;
     }
 
 }

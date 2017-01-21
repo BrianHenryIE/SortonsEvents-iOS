@@ -11,8 +11,14 @@
 
 import UIKit
 
-class ListEventsTableViewController: UITableViewController, ListEventsPresenterOutput {
-    var output: ListEventsTableViewControllerOutput!
+protocol ListEventsTableViewControllerOutputProtocol {
+    func fetchEvents(_ request: ListEvents.Fetch.Request)
+
+    func displayEvent(for rowNumber: Int)
+}
+
+class ListEventsTableViewController: UITableViewController, ListEventsPresenterOutputProtocol {
+    var output: ListEventsTableViewControllerOutputProtocol!
     var data: ListEvents.ViewModel?
 
     // MARK: Object lifecycle
@@ -61,7 +67,8 @@ extension ListEventsTableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let event = data!.discoveredEvents[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DiscoveredEventCell", for: indexPath) as? DiscoveredEventTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DiscoveredEventCell", for: indexPath)
+            as? ListEventsTableViewCell
         cell!.setDiscoveredEvent(event)
         return cell!
     }

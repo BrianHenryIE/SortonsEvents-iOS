@@ -6,12 +6,13 @@
 //  Copyright © 2016 Sortons. All rights reserved.
 //
 
-import XCTest
 @testable import SortonsEvents
 
-class DirectoryCacheWorkerTests: XCTestCase {
+import XCTest
 
-    let directoryCacheWorker = DirectoryCacheWorker()
+class DirectoryCacheTests: XCTestCase {
+
+    let cacheWorker = DirectoryCacheWorker()
 
     func testCilentPageDataCacheWorker() throws {
 
@@ -29,10 +30,10 @@ class DirectoryCacheWorkerTests: XCTestCase {
         let clientPageDataFromFile = try String(contentsOfFile: path)
 
         // Save using eventsCacheWorker
-        directoryCacheWorker.save(clientPageDataFromFile)
+        cacheWorker.save(clientPageDataFromFile)
 
         // Get file from cache
-        let clientPageData = directoryCacheWorker.fetch()
+        let clientPageData = cacheWorker.fetch()
 
         // Verify the saved file
         XCTAssertEqual(clientPageDataFromFile, clientPageData)

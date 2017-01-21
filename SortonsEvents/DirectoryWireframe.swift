@@ -23,11 +23,11 @@ class DirectoryWireframe {
         let directoryCacheWorker = DirectoryCacheWorker()
         let directoryNetworkWorker = DirectoryNetworkWorker()
 
-        let directoryInteractor = DirectoryInteractor(fomoId: fomoId.id,
-                                                   wireframe: self,
-                                                   presenter: directoryPresenter,
-                                                       cache: directoryCacheWorker,
-                                                     network: directoryNetworkWorker)
+        let directoryInteractor = DirectoryInteractor(fomoIdNumber: fomoId.fomoIdNumber,
+                                                         wireframe: self,
+                                                         presenter: directoryPresenter,
+                                                             cache: directoryCacheWorker,
+                                                           network: directoryNetworkWorker)
 
         directoryView.output = directoryInteractor
     }

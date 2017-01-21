@@ -8,13 +8,13 @@
 
 import Foundation
 
-protocol DirectoryCacheWorkerProtocol {
+protocol DirectoryCacheProtocol {
 
     func fetch() -> String?
     func save(_ latestClientPageData: String)
 }
 
-class DirectoryCacheWorker: DirectoryCacheWorkerProtocol {
+class DirectoryCacheWorker: DirectoryCacheProtocol {
 
     let fileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("directory.json")
 

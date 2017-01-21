@@ -42,7 +42,8 @@ open class Snapshot: NSObject {
 
         do {
             let trimCharacterSet = CharacterSet.whitespacesAndNewlines
-            deviceLanguage = try NSString(contentsOfFile: path, encoding: String.Encoding.utf8.rawValue).trimmingCharacters(in: trimCharacterSet) as String
+            deviceLanguage = try NSString(contentsOfFile: path, encoding: .utf8.rawValue)
+                .trimmingCharacters(in: trimCharacterSet) as String
             app.launchArguments += ["-AppleLanguages", "(\(deviceLanguage))"]
         } catch {
             print("Couldn't detect/set language...")
@@ -58,7 +59,8 @@ open class Snapshot: NSObject {
 
         do {
             let trimCharacterSet = CharacterSet.whitespacesAndNewlines
-            locale = try NSString(contentsOfFile: path, encoding: String.Encoding.utf8.rawValue).trimmingCharacters(in: trimCharacterSet) as String
+            locale = try NSString(contentsOfFile: path, encoding: .utf8.rawValue)
+                .trimmingCharacters(in: trimCharacterSet) as String
         } catch {
             print("Couldn't detect/set locale...")
         }
@@ -77,9 +79,11 @@ open class Snapshot: NSObject {
         app.launchArguments += ["-FASTLANE_SNAPSHOT", "YES", "-ui_testing"]
 
         do {
-            let launchArguments = try NSString(contentsOfFile: path, encoding: String.Encoding.utf8.rawValue) as String
+            let launchArguments = try NSString(contentsOfFile: path, encoding: .utf8.rawValue) as String
             let regex = try NSRegularExpression(pattern: "(\\\".+?\\\"|\\S+)", options: [])
-            let matches = regex.matches(in: launchArguments, options: [], range: NSRange(location:0, length:launchArguments.characters.count))
+            let matches = regex.matches(in: launchArguments,
+                                        options: [],
+                                        range: NSRange(location:0, length:launchArguments.characters.count))
             let results = matches.map { result -> String in
                 (launchArguments as NSString).substring(with: result.range)
             }
@@ -94,7 +98,9 @@ open class Snapshot: NSObject {
             waitForLoadingIndicatorToDisappear()
         }
 
-        print("snapshot: \(name)") // more information about this, check out https://github.com/fastlane/fastlane/tree/master/snapshot#how-does-it-work
+        // more information about this, check out
+        // https://github.com/fastlane/fastlane/tree/master/snapshot#how-does-it-work
+        print("snapshot: \(name)")
 
         sleep(1) // Waiting for the animation to be finished (kind of)
 
@@ -110,7 +116,9 @@ open class Snapshot: NSObject {
             return
         #endif
 
-        let query = XCUIApplication().statusBars.children(matching: .other).element(boundBy: 1).children(matching: .other)
+        let query = XCUIApplication()
+                        .statusBars.children(matching: .other)
+                        .element(boundBy: 1).children(matching: .other)
 
         while (0..<query.count).map({ query.element(boundBy: $0) }).contains(where: { $0.isLoadingIndicator }) {
             sleep(1)

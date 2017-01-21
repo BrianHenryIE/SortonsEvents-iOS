@@ -15,10 +15,8 @@ class ClientPageData: Mappable {
     var includedPages: [SourcePage]!
 
     required init?(map _: Map) {
-
     }
 
-    // Mappable
     func mapping(map: Map) {
         clientPageId <- map["clientPageId"]
         clientPage <- map["clientPage"]

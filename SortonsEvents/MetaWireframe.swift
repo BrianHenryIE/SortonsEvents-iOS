@@ -19,10 +19,8 @@ class MetaWireframe: NSObject {
     let metaView: UIViewController!
     var metaInteractor: MetaInteractor!
 
-    // After App Review rejection crash
-    // http://stackoverflow.com/questions/30201016/why-is-mfmailcomposeviewcontroller-crashing-on-ios-8-3
-    // "Keep a strong reference to the mail controller until the final delegate callback."
-    lazy var mailComposerVC = MFMailComposeViewController()
+    var mailComposerVC = MFMailComposeViewController()
+
     var activityVC: UIActivityViewController!
 
     init(fomoId: FomoId) {

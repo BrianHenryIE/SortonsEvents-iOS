@@ -6,10 +6,11 @@
 //  Copyright © 2016 Sortons. All rights reserved.
 //
 
-import XCTest
 @testable import SortonsEvents
 
-class NewsPresenterOutputSpy: NewsPresenterOutput {
+import XCTest
+
+fileprivate class OutputSpy: NewsPresenterOutputProtocol {
 
     var displayCalled = false
     var url: String?
@@ -21,21 +22,23 @@ class NewsPresenterOutputSpy: NewsPresenterOutput {
 
 class NewsPresenterTests: XCTestCase {
 
-    let spy = NewsPresenterOutputSpy()
+    fileprivate let outputSpy = OutputSpy()
     var sut: NewsPresenter!
 
     override func setUp() {
         super.setUp()
 
-        sut = NewsPresenter(output: spy)
+        sut = NewsPresenter(output: outputSpy)
     }
 
     func testPresenterOutput() {
 
         sut.setFomoId("123")
 
-        XCTAssert(spy.displayCalled, "display not called by presenter")
-        XCTAssertEqual(spy.url, "http://sortons.ie/events/recentpostsmobile/news.html#123", "incorrect URL built by presenter")
+        XCTAssert(outputSpy.displayCalled, "display not called by presenter")
+        XCTAssertEqual(outputSpy.url,
+                       "http://sortons.ie/events/recentpostsmobile/news.html#123",
+                       "incorrect URL built by presenter")
     }
 
 }
