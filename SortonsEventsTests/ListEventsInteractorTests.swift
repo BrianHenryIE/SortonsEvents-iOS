@@ -23,18 +23,18 @@ fileprivate class EmptyNetworkSpy: ListEventsNetworkProtocol {
     }
 }
 
-fileprivate class EmptyCacheSpy: ListEventsCacheProtocol {
+fileprivate class EmptyCacheSpy<T: ImmutableMappable>: CacheProtocol {
 
     var fetchCalled = false
 
-    func fetch() -> [DiscoveredEvent]? {
+    func fetch<T: ImmutableMappable>() -> [T]? {
         fetchCalled = true
         return nil
     }
 
     var saveCalled = false
 
-    func save(_ latestDiscoveredEvents: [DiscoveredEvent]?) {
+    func save<T: ImmutableMappable>(_ latestDiscoveredEvents: [T]?) {
         saveCalled = true
     }
 }
@@ -60,22 +60,22 @@ fileprivate class NetworkSpy: ListEventsNetworkProtocol {
     }
 }
 
-fileprivate class CacheSpy: ListEventsCacheProtocol {
+fileprivate class CacheSpy<T: ImmutableMappable>: CacheProtocol {
 
     var fetchCalled = false
 
-    func fetch() -> [DiscoveredEvent]? {
+    func fetch<T: ImmutableMappable>() -> [T]? {
         fetchCalled = true
 
         // swiftlint:disable:next line_length
         let dataString = "[{\"eventId\": \"918777258231182\",\"clientId\": \"1049082365115363\",\"sourcePages\": [{\"clientId\": \"1049082365115363\",\"id\": \"1049082365115363457660710939203\",\"about\": \"NUI Galway's Student Volunteering Programme www.nuigalway.ie/alive\",\"name\": \"Alive Nuigalway\",\"pageId\": \"457660710939203\",\"pageUrl\": \"https://www.facebook.com/alive.nuigalway\",\"street\": \"\",\"zip\": \"\",\"uid\": \"457660710939203\",\"title\": \"Alive Nuigalway\",\"subTitle\": \"\",\"friendlyLocationString\": \"\",\"searchableString\": \"Alive Nuigalway null null Alive Nuigalway null \",\"class\": \"ie.sortons.events.shared.SourcePage\"}],\"name\": \"Information Evening for Volunteering with Galway's Community Bicycle Workshop\",\"location\": \"Block R, Earls Island, University Road, Galway.\",\"startTime\": \"2016-06-30T18:00:00.000Z\",\"endTime\": \"2016-06-30T19:00:00.000Z\",\"dateOnly\": false}]"
-        let dataObjects = try? Mapper<DiscoveredEvent>().mapArray(JSONString: dataString)
+        let dataObjects = try? Mapper<T>().mapArray(JSONString: dataString)
         return dataObjects
     }
 
     var saveCalled = false
 
-    func save(_ latestClientPageData: [DiscoveredEvent]?) {
+    func save<T: ImmutableMappable>(_ latestClientPageData: [T]?) {
         saveCalled = true
     }
 }
@@ -100,7 +100,7 @@ class ListEventsInteractorTests: XCTestCase {
 
     func testFetchEventsShouldAskEventsNetworkWorkerToFetchEventsAndPresenterToFormatResult() {
         let networkSpy = NetworkSpy()
-        let cacheSpy = CacheSpy()
+        let cacheSpy = CacheSpy<DiscoveredEvent>()
 
         let interactorOutputSpy = OutputSpy()
 
@@ -130,7 +130,7 @@ class ListEventsInteractorTests: XCTestCase {
 
     func testEmptyFetchEventsShouldNotHitPresenter() {
         let emptyNetworkSpy = EmptyNetworkSpy()
-        let emptyCacheSpy = EmptyCacheSpy()
+        let emptyCacheSpy = EmptyCacheSpy<DiscoveredEvent>()
 
         let interactorOutputSpy = OutputSpy()
 
@@ -172,7 +172,7 @@ class ListEventsInteractorTests: XCTestCase {
                                        fomoId: "",
                                        output: interactorOutputSpy,
                                        listEventsNetworkWorker: EmptyNetworkSpy(),
-                                       listEventsCacheWorker: CacheSpy(),
+                                       listEventsCacheWorker: CacheSpy<DiscoveredEvent>(),
                                        withDate: Date(),
                                        withCalendar: calendar)
 

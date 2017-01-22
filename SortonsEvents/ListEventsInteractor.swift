@@ -22,7 +22,6 @@ struct ListEvents {
     struct ViewModel {
         let discoveredEvents: [ListEventsCellViewModel]
     }
-
 }
 
 protocol ListEventsInteractorOutputProtocol {
@@ -38,7 +37,7 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtoco
     let fomoId: String
     let output: ListEventsInteractorOutputProtocol
     let listEventsNetworkWorker: ListEventsNetworkProtocol
-    let listEventsCacheWorker: ListEventsCacheProtocol
+    let cacheWorker: CacheProtocol
 
     let observingFrom: Date!
     let dateFormat: DateFormatter
@@ -48,14 +47,14 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtoco
             fomoId: String,
             output: ListEventsInteractorOutputProtocol,
          listEventsNetworkWorker: ListEventsNetworkProtocol,
-           listEventsCacheWorker: ListEventsCacheProtocol,
+           listEventsCacheWorker: CacheProtocol,
                         withDate: Date = Date(),
                     withCalendar: Calendar = Calendar.current) {
         self.wireframe = wireframe
         self.fomoId = fomoId
         self.output = output
         self.listEventsNetworkWorker = listEventsNetworkWorker
-        self.listEventsCacheWorker = listEventsCacheWorker
+        self.cacheWorker = listEventsCacheWorker
 
         observingFrom = withDate
         self.calendar = withCalendar
@@ -66,7 +65,7 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtoco
     func fetchEvents(_ request: ListEvents.Fetch.Request) {
 
         // Get from cache
-        if let eventsFromCache = listEventsCacheWorker.fetch() {
+        if let eventsFromCache: [DiscoveredEvent] = cacheWorker.fetch() {
             allUpcomingEvents = filterToOngoingEvents(eventsFromCache, observingFrom: observingFrom)
             let response = ListEvents.Fetch.Response(events: allUpcomingEvents)
             output.presentFetchedEvents(response)
@@ -80,7 +79,7 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtoco
 
                 if let allUpcomingEvents = self.filterToOngoingEvents(networkData).nilEmpty() {
 
-                    self.listEventsCacheWorker.save(allUpcomingEvents)
+                    self.cacheWorker.save(allUpcomingEvents)
 
                     let response = ListEvents.Fetch.Response(events: allUpcomingEvents)
 

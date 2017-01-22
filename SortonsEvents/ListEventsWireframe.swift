@@ -25,7 +25,7 @@ class ListEventsWireframe {
                                                            fomoId: fomoId.fomoIdNumber,
                                                            output: listEventsPresenter,
                                           listEventsNetworkWorker: ListEventsNetworkWorker(),
-                                            listEventsCacheWorker: ListEventsCacheWorker())
+                                            listEventsCacheWorker: CacheWorker<DiscoveredEvent>())
 
         listEventsView.output = listEventsInteractor
     }

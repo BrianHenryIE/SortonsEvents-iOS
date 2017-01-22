@@ -13,12 +13,14 @@ import ObjectMapper
 
 class ListEventsCacheTests: XCTestCase {
 
-    var cacheWorker: ListEventsCacheProtocol!
+    var cacheWorker: CacheProtocol!
     var testBundle: Bundle!
+    let fileManager = FileManager.default
+    let fileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("DiscoveredEvent.json")
 
     override func setUp() {
         super.setUp()
-        cacheWorker = ListEventsCacheWorker()
+        cacheWorker = CacheWorker<DiscoveredEvent>()
 
         testBundle = Bundle(for: self.classForCoder)
     }
@@ -28,7 +30,7 @@ class ListEventsCacheTests: XCTestCase {
         guard let discoveredEventsFileData = try? String(contentsOfFile: path) else {
             continueAfterFailure = false
             XCTFail("File error")
-            return "" // I don't like this, but it will never reach this code
+            return "" // Unreachable
         }
 
         return discoveredEventsFileData
@@ -47,43 +49,40 @@ class ListEventsCacheTests: XCTestCase {
         return discoveredEvents
     }
 
-    func testWrite() throws {
-
-        let dataObjects = readDataObjects()
-
-        cacheWorker.save(dataObjects)
-
-        // Get cache file
-        let fileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("discoveredevents.json")
-        guard let discoveredEventsCachedFile = try? String(contentsOf: fileURL) else {
-            XCTFail()
-            return
-        }
-
-        // Verify the saved file
-        let parsedNewFile = try? Mapper<DiscoveredEvent>().mapArray(JSONString: discoveredEventsCachedFile)
-
-        XCTAssertNotNil(parsedNewFile)
-    }
-
     func testWriteNil() {
 
         let nilEvents: [DiscoveredEvent]? = nil
 
         cacheWorker.save(nilEvents)
 
-        let fileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("discoveredevents.json")
         let fileFromCache = try? String(contentsOf: fileURL)
 
         XCTAssertNil(fileFromCache)
     }
 
-    func testRead() {
+    func testWrite() throws {
+
+        let dataObjects = readDataObjects()
+
+        cacheWorker.save(dataObjects)
+
+        guard let fileFromCache = try? String(contentsOf: fileURL) else {
+            XCTFail()
+            return
+        }
+
+        // Verify the saved file
+        let parsedNewFile = try? Mapper<DiscoveredEvent>().mapArray(JSONString: fileFromCache)
+
+        XCTAssertNotNil(parsedNewFile)
+    }
+
+    func testFetch() {
         let discoveredEvents = readDataObjects()
 
         cacheWorker.save(discoveredEvents)
 
-        guard let eventsFromCache = cacheWorker.fetch() else {
+        guard let eventsFromCache: [DiscoveredEvent] = cacheWorker.fetch() else {
             XCTFail()
             return
         }
@@ -92,7 +91,14 @@ class ListEventsCacheTests: XCTestCase {
     }
 
     func testReadNoPreviousCache() {
-        let previousCache = cacheWorker.fetch()
+
+        let cacheFileExistsPath = fileManager.fileExists(atPath: fileURL.path)
+        XCTAssertFalse(cacheFileExistsPath)
+
+        let cacheFileExistsAbs = fileManager.fileExists(atPath: fileURL.absoluteString)
+        XCTAssertFalse(cacheFileExistsAbs)
+
+        let previousCache: [DiscoveredEvent]? = cacheWorker.fetch()
 
         XCTAssertNil(previousCache)
     }
@@ -100,11 +106,14 @@ class ListEventsCacheTests: XCTestCase {
     override func tearDown() {
 
         // Clear the cache
-        let fileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("discoveredevents.json")
         try? FileManager.default.removeItem(at: fileURL)
-
-        // guard let justWritten = testBundle.path(forResource: "discoveredevents", ofType: "json") 
 
         super.tearDown()
     }
+
+    // TODO test with data array containing
+    // some good objects and some incomplete
+    // Test with an array of mixed ImmutableMappable -
+    // might write but not read!
+
 }
