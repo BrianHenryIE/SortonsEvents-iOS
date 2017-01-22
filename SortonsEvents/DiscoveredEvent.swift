@@ -27,7 +27,7 @@ struct DiscoveredEvent: ImmutableMappable {
     let name: String
     let location: String?
     let startTime: Date
-    let endTime: Date? //TODO
+    let endTime: Date?
     let dateOnly: Bool
 
     init(map: Map) throws {

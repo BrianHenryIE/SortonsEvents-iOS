@@ -63,7 +63,6 @@ class DirectoryViewControllerTests: XCTestCase {
         // Call viewDidLoad()
         let _ = sut.view
 
-        // TODO change URL to local so tests don't need network
         let sampleImageUrl: URL = URL(string: "https://graph.facebook.com/206961869324550/picture?type=square")!
         let sampleDirectoryEntry = Directory.TableViewCellModel(name: "test entry",
                                                              details: "no details",
@@ -107,8 +106,6 @@ class DirectoryViewControllerTests: XCTestCase {
 
         XCTAssertEqual(numberOfRows, 1, "Error in number of rows")
     }
-
-    // TODO func displayFetchDirectoryFetchError(viewModel: DirectoryViewModel)
 
     // displayPage should be called when selected
     func testDisplayPageCallWhenRowSelected() {

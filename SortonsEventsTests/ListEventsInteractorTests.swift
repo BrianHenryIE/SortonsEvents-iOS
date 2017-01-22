@@ -118,14 +118,9 @@ class ListEventsInteractorTests: XCTestCase {
         XCTAssert(cacheSpy.fetchCalled, "Fetch() should ask cacheWorker to fetch events")
         XCTAssert(networkSpy.fetchEventsCalled, "FetchEvents() should ask EventsNetworkWorker to fetch events")
 
-        // TODO: This is failing because the test data is filtered and there are no upcoming events in it
-//        XCTAssert(cacheSpy.saveCalled, "When network worker returns new data, the cache save() should be called")
-
         // This only gets called when there are events to return... test for both scenarios!
         XCTAssert(interactorOutputSpy.presentFetchedEventsCalled,
                   "FetchEvents() should ask presenter to format events result")
-
-        // TODO: probably don't know here if the cache or network caleld present
     }
 
     func testEmptyFetchEventsShouldNotHitPresenter() {

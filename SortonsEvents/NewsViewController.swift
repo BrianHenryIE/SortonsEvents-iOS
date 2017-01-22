@@ -65,7 +65,7 @@ class NewsViewController: UIViewController, NewsPresenterOutputProtocol {
         self.setViewPort(width: size.width)
 
         coordinator.animate(alongsideTransition: { _ in
-            // TODO: try do this with autolayout!
+
             self.webview.frame = CGRect(x: 0,
                                         y: 0,
                                     width: size.width,

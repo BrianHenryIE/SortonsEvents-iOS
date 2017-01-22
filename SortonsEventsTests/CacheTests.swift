@@ -49,17 +49,6 @@ class ListEventsCacheTests: XCTestCase {
         return discoveredEvents
     }
 
-    func testWriteNil() {
-
-        let nilEvents: [DiscoveredEvent]? = nil
-
-        cacheWorker.save(nilEvents)
-
-        let fileFromCache = try? String(contentsOf: fileURL)
-
-        XCTAssertNil(fileFromCache)
-    }
-
     func testWrite() throws {
 
         let dataObjects = readDataObjects()
@@ -77,6 +66,17 @@ class ListEventsCacheTests: XCTestCase {
         XCTAssertNotNil(parsedNewFile)
     }
 
+    func testWriteNil() {
+
+        let nilEvents: [DiscoveredEvent]? = nil
+
+        cacheWorker.save(nilEvents)
+
+        let fileFromCache = try? String(contentsOf: fileURL)
+
+        XCTAssertNil(fileFromCache)
+    }
+
     func testFetch() {
         let discoveredEvents = readDataObjects()
 
@@ -90,7 +90,7 @@ class ListEventsCacheTests: XCTestCase {
         XCTAssertEqual(discoveredEvents.toJSONString(), eventsFromCache.toJSONString())
     }
 
-    func testReadNoPreviousCache() {
+    func testFetchNoPreviousCache() {
 
         let cacheFileExistsPath = fileManager.fileExists(atPath: fileURL.path)
         XCTAssertFalse(cacheFileExistsPath)
@@ -103,6 +103,13 @@ class ListEventsCacheTests: XCTestCase {
         XCTAssertNil(previousCache)
     }
 
+    func testMixedMappableArrayBehaviour() {
+        // test with data array containing
+        // some good objects and some incomplete
+        // Test with an array of mixed ImmutableMappable -
+        // might write but not read!
+    }
+
     override func tearDown() {
 
         // Clear the cache
@@ -110,10 +117,5 @@ class ListEventsCacheTests: XCTestCase {
 
         super.tearDown()
     }
-
-    // TODO test with data array containing
-    // some good objects and some incomplete
-    // Test with an array of mixed ImmutableMappable -
-    // might write but not read!
 
 }

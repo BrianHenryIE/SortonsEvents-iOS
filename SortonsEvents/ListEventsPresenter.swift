@@ -54,7 +54,6 @@ class ListEventsPresenter: ListEventsInteractorOutputProtocol {
         output.presentFetchedEvents(viewModel)
     }
 
-    // TODO Should really be an NSDate extension
     func formatFriendlyTime(_ date: Date, allDay: Bool, observingFrom: Date = Date()) -> String {
 
         let dateFormat = DateFormatter()

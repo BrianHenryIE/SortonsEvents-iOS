@@ -89,7 +89,6 @@ class MetaWireframe: NSObject {
 
             metaView.present(mailComposerVC, animated: true, completion: nil)
         } else {
-            // TODO Log error
             metaInteractor.showSendMailErrorAlert()
         }
     }

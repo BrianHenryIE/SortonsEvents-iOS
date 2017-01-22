@@ -32,7 +32,7 @@ class FacebookUrlTests: XCTestCase {
         let output = FacebookUrl(from: facebookLink)
 
         XCTAssertEqual(output.safariUrl!, facebookLinkUrl)
-        XCTAssertNil(output.appUrl) // TODO: nil for now, but an async graph call in future
+        XCTAssertNil(output.appUrl)
     }
 
     func testHashtag() {

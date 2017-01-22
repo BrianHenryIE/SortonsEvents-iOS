@@ -98,7 +98,7 @@ class MetaWebViewInteractor {
 
             output.displayHtml(html: htmlString)
         } catch {
-            // TODO show/log error
+
         }
     }
 }

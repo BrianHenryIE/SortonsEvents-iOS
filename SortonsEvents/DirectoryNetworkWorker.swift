@@ -23,8 +23,6 @@ class DirectoryNetworkWorker: DirectoryNetworkProtocol {
 
         Alamofire.request(endpoint)
             .responseString { response in
-                // TODO: return an 'offline' message if nothing returned
-                // Server down, no coverage...
                 if let json = response.result.value {
                     completionHandler(json)
                 }

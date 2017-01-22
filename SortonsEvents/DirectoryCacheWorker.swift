@@ -25,7 +25,7 @@ class DirectoryCacheWorker: DirectoryCacheProtocol {
             let fileFromCache = try String(contentsOf: fileURL)
             return fileFromCache
         } catch {
-            // TODO / this will throw an error already when parsing
+
         }
 
         return nil
@@ -38,7 +38,7 @@ class DirectoryCacheWorker: DirectoryCacheProtocol {
         do {
             try data!.write(to: fileURL, options: .atomicWrite)
         } catch {
-            // TODO
+
         }
     }
 }

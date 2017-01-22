@@ -22,7 +22,7 @@ fileprivate class OutputSpy: DirectoryPresenterOutputProtocol {
     }
 
     func displayFetchDirectoryFetchError(_ viewModel: Directory.ViewModel) {
-        // TODO
+
     }
 }
 

@@ -11,7 +11,6 @@ import ObjectMapper
 import Alamofire
 import AlamofireObjectMapper
 
-// TODO change fomoId to fomoIdNumber
 protocol ListEventsNetworkProtocol {
     func fetchEvents(_ fomoId: String, completionHandler: @escaping (_ result: Result<[DiscoveredEvent]>) -> Void)
 }
@@ -24,7 +23,6 @@ class ListEventsNetworkWorker: ListEventsNetworkProtocol {
 
         let endpoint = "\(baseUrl)\(fomoId)"
 
-        // TODO: see if AlamofireObjectMapper works with immutable 
 //        Alamofire.request(endpoint).responseArray(keyPath: "data") { (response: DataResponse<[DiscoveredEvent]>) in
 //
 //                completionHandler(response.result)

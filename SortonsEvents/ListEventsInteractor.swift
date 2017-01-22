@@ -108,7 +108,6 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtoco
         }
     }
 
-    // I think the latest FB API means all events have an end time TODO
     func filterToOngoingEvents(_ allEvents: [DiscoveredEvent], observingFrom: Date = Date()) -> [DiscoveredEvent] {
 
         let yesterday = calendar.date(byAdding: .day, value: -1, to: observingFrom)!

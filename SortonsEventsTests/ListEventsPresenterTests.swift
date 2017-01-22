@@ -60,9 +60,7 @@ class ListEventsPresenterTests: XCTestCase {
     }
 
     func testPresentEmptyFetchedEvents() {
-        // If there are no events found, it should not push to the next layer
-        // becuase it's crashing
-        // TODO: ultimately, it should show a polite message
+
     }
 
     // Move to NSDate extension
