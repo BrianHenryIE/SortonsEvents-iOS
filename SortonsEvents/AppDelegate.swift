@@ -22,9 +22,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: frame)
         window!.screen = UIScreen.main
 
-        let fomoId = FomoId()
-
-        let rvc = RootViewController(fomoId: fomoId)
+        let rvc: UIViewController
+        if let fomoId = FomoId() {
+            rvc = RootViewController(fomoId: fomoId)
+        } else {
+            let storyboard = UIStoryboard(name: "Common", bundle: Bundle.main)
+            rvc = storyboard.instantiateViewController(withIdentifier: "MissingFomoConfig")
+        }
 
         window!.rootViewController = rvc
         window!.makeKeyAndVisible()
