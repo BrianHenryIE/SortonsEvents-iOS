@@ -8,18 +8,21 @@
 
 import ObjectMapper
 
-class ClientPageData: Mappable {
+struct ClientPageData: ImmutableMappable {
 
-    var clientPageId: String!
-    var clientPage: SourcePage!
-    var includedPages: [SourcePage]!
+    let clientPageId: String
+    let clientPage: SourcePage
+    let includedPages: [SourcePage]
 
-    required init?(map _: Map) {
+    init(map: Map) throws {
+        clientPageId = try map.value("clientPageId")
+        clientPage = try map.value("clientPage")
+        includedPages = try map.value("includedPages")
     }
 
     func mapping(map: Map) {
-        clientPageId <- map["clientPageId"]
-        clientPage <- map["clientPage"]
-        includedPages <- map["includedPages"]
+        clientPageId >>> map["clientPageId"]
+        clientPage >>> map["clientPage"]
+        includedPages >>> map["includedPages"]
     }
 }

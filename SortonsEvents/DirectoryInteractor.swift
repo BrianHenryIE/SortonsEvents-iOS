@@ -51,16 +51,16 @@ class DirectoryInteractor: DirectoryViewControllerOutputProtocol {
     func fetchDirectory(_ withRequest: Directory.Request) {
 
         if let cacheString = cacheWorker.fetch() {
-            let directoryFromCache: ClientPageData = Mapper<ClientPageData>().map(JSONString: cacheString)!
-            if let data = directoryFromCache.includedPages {
+            if let directoryFromCache: ClientPageData = try? Mapper<ClientPageData>().map(JSONString: cacheString) {
+                let data = directoryFromCache.includedPages
                 directory = data
                 self.outputDirectoryToPresenter()
             }
         }
 
         networkWorker.fetchDirectory(fomoIdNumber) {(networkString) -> Void in
-            let directoryFromNetwork: ClientPageData = Mapper<ClientPageData>().map(JSONString: networkString)!
-            if let data = directoryFromNetwork.includedPages {
+            if let directoryFromNetwork: ClientPageData = try? Mapper<ClientPageData>().map(JSONString: networkString) {
+                let data = directoryFromNetwork.includedPages
                 self.directory = data
                 self.cacheWorker.save(networkString)
                 self.outputDirectoryToPresenter()
@@ -90,7 +90,7 @@ class DirectoryInteractor: DirectoryViewControllerOutputProtocol {
 
     func displaySelectedPageFrom(_ rowNumber: Int) {
 
-        let fbId = displayedDirectory[rowNumber].fbPageId!
+        let fbId = displayedDirectory[rowNumber].fbPageId
 
         let appUrl = URL(string: "fb://profile/\(fbId)")!
         let safariUrl = URL(string: "https://facebook.com/\(fbId)")!

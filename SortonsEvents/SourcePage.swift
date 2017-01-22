@@ -9,34 +9,42 @@
 import Foundation
 import ObjectMapper
 
-// should be struct!? (...but ObjectMapper) //TODO
-class SourcePage: Mappable {
+struct SourcePage: ImmutableMappable {
 
-    var name: String!
-    var fbPageId: String!
-    var pageUrl: String!
-    var street: String?
-    var city: String?
-    var country: String?
-    var latitude: Double?
-    var longitude: Double?
-    var zip: String?
-    var friendlyLocationString: String?
+    let name: String
+    let fbPageId: String
+    let pageUrl: String
+    let street: String?
+    let city: String?
+    let country: String?
+    let latitude: Double?
+    let longitude: Double?
+    let zip: String?
+    let friendlyLocationString: String?
 
-    required init?(map _: Map) {
-
+    init(map: Map) throws {
+        name = try map.value("name")
+        fbPageId = try map.value("fbPageId")
+        pageUrl = try map.value("pageUrl")
+        street = try? map.value("street")
+        city = try? map.value("city")
+        country = try? map.value("country")
+        latitude = try? map.value("latitude")
+        longitude = try? map.value("longitude")
+        zip = try? map.value("zip")
+        friendlyLocationString = try? map.value("friendlyLocationString")
     }
 
     func mapping(map: Map) {
-        name <- map["name"]
-        fbPageId <- map["fbPageId"]
-        pageUrl <- map["pageUrl"]
-        street <- map["street"]
-        city  <- map["city"]
-        country <- map["country"]
-        latitude <- map["latitude"]
-        longitude <- map["longitude"]
-        zip <- map["zip"]
-        friendlyLocationString <- map["friendlyLocationString"]
+        name >>> map["name"]
+        fbPageId >>> map["fbPageId"]
+        pageUrl >>> map["pageUrl"]
+        street >>> map["street"]
+        city >>> map["city"]
+        country >>> map["country"]
+        latitude >>> map["latitude"]
+        longitude >>> map["longitude"]
+        zip >>> map["zip"]
+        friendlyLocationString >>> map["friendlyLocationString"]
     }
 }

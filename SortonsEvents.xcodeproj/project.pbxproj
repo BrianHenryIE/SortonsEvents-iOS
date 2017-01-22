@@ -428,15 +428,6 @@
 		A6C02AC71E2F595000A80799 /* SortonsEventsTests-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = A6EC83101E2F4E3800EFE12C /* SortonsEventsTests-Bridging-Header.h */; };
 		A6C02AD81E33312A00A80799 /* ListEventsCacheTestsData.json in Resources */ = {isa = PBXBuildFile; fileRef = A6C02AD71E33312A00A80799 /* ListEventsCacheTestsData.json */; };
 		A6C02ADC1E333E1A00A80799 /* ListEventsNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C02ADB1E333E1A00A80799 /* ListEventsNetworkTests.swift */; };
-		A6C02AE11E33E41F00A80799 /* DiscoveredEventsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C02AE01E33E41F00A80799 /* DiscoveredEventsResponse.swift */; };
-		A6C02AE21E33E41F00A80799 /* DiscoveredEventsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C02AE01E33E41F00A80799 /* DiscoveredEventsResponse.swift */; };
-		A6C02AE31E33E41F00A80799 /* DiscoveredEventsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C02AE01E33E41F00A80799 /* DiscoveredEventsResponse.swift */; };
-		A6C02AE41E33E41F00A80799 /* DiscoveredEventsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C02AE01E33E41F00A80799 /* DiscoveredEventsResponse.swift */; };
-		A6C02AE51E33E41F00A80799 /* DiscoveredEventsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C02AE01E33E41F00A80799 /* DiscoveredEventsResponse.swift */; };
-		A6C02AE61E33E41F00A80799 /* DiscoveredEventsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C02AE01E33E41F00A80799 /* DiscoveredEventsResponse.swift */; };
-		A6C02AE71E33E41F00A80799 /* DiscoveredEventsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C02AE01E33E41F00A80799 /* DiscoveredEventsResponse.swift */; };
-		A6C02AE81E33E41F00A80799 /* DiscoveredEventsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C02AE01E33E41F00A80799 /* DiscoveredEventsResponse.swift */; };
-		A6C02AE91E33E41F00A80799 /* DiscoveredEventsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C02AE01E33E41F00A80799 /* DiscoveredEventsResponse.swift */; };
 		A6C02AEB1E33F5CC00A80799 /* Array+NilEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C02AEA1E33F5CC00A80799 /* Array+NilEmpty.swift */; };
 		A6C02AEC1E33F5CC00A80799 /* Array+NilEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C02AEA1E33F5CC00A80799 /* Array+NilEmpty.swift */; };
 		A6C02AED1E33F5CC00A80799 /* Array+NilEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C02AEA1E33F5CC00A80799 /* Array+NilEmpty.swift */; };
@@ -615,7 +606,6 @@
 		A6BDA8771AE5CA6500C1A55C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		A6C02AD71E33312A00A80799 /* ListEventsCacheTestsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ListEventsCacheTestsData.json; sourceTree = "<group>"; };
 		A6C02ADB1E333E1A00A80799 /* ListEventsNetworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsNetworkTests.swift; sourceTree = "<group>"; };
-		A6C02AE01E33E41F00A80799 /* DiscoveredEventsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveredEventsResponse.swift; sourceTree = "<group>"; };
 		A6C02AEA1E33F5CC00A80799 /* Array+NilEmpty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+NilEmpty.swift"; sourceTree = "<group>"; };
 		A6C04F681DB450A40009C9BF /* DirectoryInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryInteractorTests.swift; sourceTree = "<group>"; };
 		A6C04F6B1DB452FD0009C9BF /* DirectoryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryPresenter.swift; sourceTree = "<group>"; };
@@ -838,7 +828,6 @@
 		A66DC39D1CF3992A00ED636B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A6C02AE01E33E41F00A80799 /* DiscoveredEventsResponse.swift */,
 				A6AAD3E21D258F8E0097AF22 /* ClientPageData.swift */,
 				A69DBF3F1C8AD654005064F7 /* DiscoveredEvent.swift */,
 				A636D2731D0C8A8700FB9C62 /* SourcePage.swift */,
@@ -2373,7 +2362,6 @@
 				A6AD95FC1DCB0CBB00CEEFAA /* RootViewController.swift in Sources */,
 				A698B6F91D2589F7003494A3 /* AppDelegate.swift in Sources */,
 				A63B95431DB6339800ECA301 /* DirectoryCacheWorker.swift in Sources */,
-				A6C02AE61E33E41F00A80799 /* DiscoveredEventsResponse.swift in Sources */,
 				A63B94F21DB6332200ECA301 /* CacheWorker.swift in Sources */,
 				A63B95171DB6336A00ECA301 /* NewsInteractor.swift in Sources */,
 				A63B94E21DB6330F00ECA301 /* ListEventsPresenter.swift in Sources */,
@@ -2413,7 +2401,6 @@
 				A6AD95FD1DCB0CBB00CEEFAA /* RootViewController.swift in Sources */,
 				A698B6FA1D2589F8003494A3 /* AppDelegate.swift in Sources */,
 				A63B95441DB6339800ECA301 /* DirectoryCacheWorker.swift in Sources */,
-				A6C02AE71E33E41F00A80799 /* DiscoveredEventsResponse.swift in Sources */,
 				A63B94F31DB6332200ECA301 /* CacheWorker.swift in Sources */,
 				A63B95181DB6336B00ECA301 /* NewsInteractor.swift in Sources */,
 				A63B94E31DB6330F00ECA301 /* ListEventsPresenter.swift in Sources */,
@@ -2453,7 +2440,6 @@
 				A65CEE4A1DB5C4F80059EF52 /* NewsPresenter.swift in Sources */,
 				A65CEE481DB5C4ED0059EF52 /* NewsInteractor.swift in Sources */,
 				A65B23C31D6E00FF00A66C85 /* ListEventsWireframe.swift in Sources */,
-				A6C02AE81E33E41F00A80799 /* DiscoveredEventsResponse.swift in Sources */,
 				A67796B51DADE6B3003FBCE6 /* NewsViewController.swift in Sources */,
 				A6AAD3E31D258F8E0097AF22 /* ClientPageData.swift in Sources */,
 				A6AD95F41DCB0AD500CEEFAA /* RootViewController.swift in Sources */,
@@ -2493,7 +2479,6 @@
 				A6AD95FE1DCB0CBB00CEEFAA /* RootViewController.swift in Sources */,
 				A698B6FB1D2589F8003494A3 /* AppDelegate.swift in Sources */,
 				A63B95451DB6339900ECA301 /* DirectoryCacheWorker.swift in Sources */,
-				A6C02AE11E33E41F00A80799 /* DiscoveredEventsResponse.swift in Sources */,
 				A63B94F41DB6332200ECA301 /* CacheWorker.swift in Sources */,
 				A63B95191DB6336C00ECA301 /* NewsInteractor.swift in Sources */,
 				A63B94E41DB6331000ECA301 /* ListEventsPresenter.swift in Sources */,
@@ -2542,7 +2527,6 @@
 				A69186B21DCC543A00372A98 /* RootViewController.swift in Sources */,
 				A69186B31DCC543A00372A98 /* AppDelegate.swift in Sources */,
 				A69186B61DCC543A00372A98 /* DirectoryCacheWorker.swift in Sources */,
-				A6C02AE41E33E41F00A80799 /* DiscoveredEventsResponse.swift in Sources */,
 				A69186B71DCC543A00372A98 /* CacheWorker.swift in Sources */,
 				A69186B91DCC543A00372A98 /* NewsInteractor.swift in Sources */,
 				A69186BA1DCC543A00372A98 /* ListEventsPresenter.swift in Sources */,
@@ -2582,7 +2566,6 @@
 				A69186EF1DCC54BD00372A98 /* RootViewController.swift in Sources */,
 				A69186F01DCC54BD00372A98 /* AppDelegate.swift in Sources */,
 				A69186F31DCC54BD00372A98 /* DirectoryCacheWorker.swift in Sources */,
-				A6C02AE21E33E41F00A80799 /* DiscoveredEventsResponse.swift in Sources */,
 				A69186F41DCC54BD00372A98 /* CacheWorker.swift in Sources */,
 				A69186F61DCC54BD00372A98 /* NewsInteractor.swift in Sources */,
 				A69186F71DCC54BD00372A98 /* ListEventsPresenter.swift in Sources */,
@@ -2622,7 +2605,6 @@
 				A691872D1DCC551000372A98 /* NewsPresenter.swift in Sources */,
 				A691872E1DCC551000372A98 /* NewsInteractor.swift in Sources */,
 				A69187301DCC551000372A98 /* ListEventsWireframe.swift in Sources */,
-				A6C02AE91E33E41F00A80799 /* DiscoveredEventsResponse.swift in Sources */,
 				A69187311DCC551000372A98 /* NewsViewController.swift in Sources */,
 				A69187321DCC551000372A98 /* ClientPageData.swift in Sources */,
 				A69187341DCC551000372A98 /* RootViewController.swift in Sources */,
@@ -2662,7 +2644,6 @@
 				A691877E1DCC591E00372A98 /* RootViewController.swift in Sources */,
 				A691877F1DCC591E00372A98 /* AppDelegate.swift in Sources */,
 				A69187821DCC591E00372A98 /* DirectoryCacheWorker.swift in Sources */,
-				A6C02AE51E33E41F00A80799 /* DiscoveredEventsResponse.swift in Sources */,
 				A69187831DCC591E00372A98 /* CacheWorker.swift in Sources */,
 				A69187851DCC591E00372A98 /* NewsInteractor.swift in Sources */,
 				A69187861DCC591E00372A98 /* ListEventsPresenter.swift in Sources */,
@@ -2728,7 +2709,6 @@
 				A6AD95FB1DCB0CBA00CEEFAA /* RootViewController.swift in Sources */,
 				A698B6F81D2589F7003494A3 /* AppDelegate.swift in Sources */,
 				A63B95421DB6339800ECA301 /* DirectoryCacheWorker.swift in Sources */,
-				A6C02AE31E33E41F00A80799 /* DiscoveredEventsResponse.swift in Sources */,
 				A63B94F11DB6332100ECA301 /* CacheWorker.swift in Sources */,
 				A63B95161DB6336A00ECA301 /* NewsInteractor.swift in Sources */,
 				A63B94E11DB6330F00ECA301 /* ListEventsPresenter.swift in Sources */,

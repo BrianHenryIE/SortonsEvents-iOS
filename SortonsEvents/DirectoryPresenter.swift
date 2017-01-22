@@ -40,7 +40,7 @@ class DirectoryPresenter: DirectoryInteractorOutputProtocol {
     func presentFetchedDirectory(_ directory: Directory.Fetch.Response) {
 
         let viewModelDirectory = directory.directory.map({ (sourcePage) -> Directory.TableViewCellModel in
-            var name = sourcePage.name!
+            var name = sourcePage.name
             // Remove references to the college so Apple doesn't say we're pretending to be them
             if TARGET_IPHONE_SIMULATOR == 1 {
                 for censor in fomoCensor {
@@ -49,7 +49,7 @@ class DirectoryPresenter: DirectoryInteractorOutputProtocol {
                 }
             }
             let details = sourcePage.friendlyLocationString!
-            let imageUrl = URL(string: "https://graph.facebook.com/\(sourcePage.fbPageId!)/picture?type=square")!
+            let imageUrl = URL(string: "https://graph.facebook.com/\(sourcePage.fbPageId)/picture?type=square")!
             return Directory.TableViewCellModel(name: name,
                                              details: details,
                                             imageUrl: imageUrl)
