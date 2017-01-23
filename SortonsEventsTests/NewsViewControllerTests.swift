@@ -37,8 +37,25 @@ fileprivate class OutputSpy: NewsViewControllerOutputProtocol {
 
 class WebViewSpy: WKWebView {
     var loadRequestCalled = false
-    func load(_ request: URLRequest) {
+    override func load(_ request: URLRequest) -> WKNavigation? {
         loadRequestCalled = true
+        return nil
+    }
+}
+
+private class WKNavigationActionMock: WKNavigationAction {
+    override var request: URLRequest {
+        return mockRequest
+    }
+    override var navigationType: WKNavigationType {
+        return mockNavigationType
+    }
+    let mockRequest: URLRequest
+    let mockNavigationType: WKNavigationType
+    init(mockRequest: URLRequest, mockNavigationType: WKNavigationType) {
+        self.mockRequest = mockRequest
+        self.mockNavigationType = mockNavigationType
+        super.init()
     }
 }
 
@@ -70,36 +87,31 @@ class NewsViewControllerTests: XCTestCase {
         XCTAssert(sut.webview.navigationDelegate != nil, "Webview delegate not set")
     }
 
-//    func testWebViewSetProperly() {
-//        sut.webview = webViewSpy
-//
-//        let urlString = "https://www.sortons.ie"
-//        let url = URL(string: urlString)!
-//        let urlRequest = URLRequest(url: url)
-//        let viewModel = News.ViewModel(newsUrl: urlRequest)
-//
-//        sut.display(viewModel)
-//
-//        XCTAssert(webViewSpy.loadRequestCalled, "web view not initialised properly")
-//    }
+    func testWebViewSetProperly() {
+        sut.webview = webViewSpy
 
-//    func testShouldCallOpenUrlWhenLinkClicked() {
-//
-//        let urlString = "https://www.sortons.ie"
-//        let url = URL(string: urlString)!
-//        let urlRequest = URLRequest(url: url)
-//
-//        let action = WKNavigationAction()
-//
-//        print(action.testBool)
-//
-//        action.navigationType = .linkActivated
-//        action.request = urlRequest
-//
-//        sut.webView(sut.webview,
-//                    decidePolicyFor: action,
-//                    decisionHandler: {_ in })
-//
-//        XCTAssertTrue(outputSpy.openUrlCalled, "interactor should be called when a link is clicked")
-//    }
+        let urlString = "https://www.sortons.ie"
+        let url = URL(string: urlString)!
+        let urlRequest = URLRequest(url: url)
+        let viewModel = News.ViewModel(newsUrl: urlRequest)
+
+        sut.display(viewModel)
+
+        XCTAssert(webViewSpy.loadRequestCalled, "web view not initialised properly")
+    }
+
+    func testShouldCallOpenUrlWhenLinkClicked() {
+
+        let urlString = "https://www.sortons.ie"
+        let url = URL(string: urlString)!
+        let urlRequest = URLRequest(url: url)
+
+        let action = WKNavigationActionMock(mockRequest: urlRequest, mockNavigationType: .linkActivated)
+
+        sut.webView(sut.webview,
+                    decidePolicyFor: action,
+                    decisionHandler: {_ in })
+
+        XCTAssertTrue(outputSpy.openUrlCalled, "interactor should be called when a link is clicked")
+    }
 }
