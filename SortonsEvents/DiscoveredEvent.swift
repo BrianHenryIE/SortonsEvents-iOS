@@ -11,7 +11,7 @@ import ObjectMapper
 
 // This whole object is because Google App Engine can't straight return Lists<>
 // AlamofireObjectMapper addresses using keypath but gotta check if immutable works
-final class DiscoveredEventsResponse: ImmutableMappable {
+struct DiscoveredEventsResponse: ImmutableMappable {
 
     var data: [DiscoveredEvent]?
     init(map: Map) throws {
@@ -23,22 +23,17 @@ struct DiscoveredEvent: ImmutableMappable {
 
     let eventId: String
     let clientId: String
-//    let sourcePages: [SourcePage]
+    let sourcePages: [SourcePage]
     let name: String
     let location: String?
     let startTime: Date
-        let endTime: Date?
-        let dateOnly: Bool
-
-    let sourcePages: [SourcePage] = [SourcePage]()
-//    let clientId: String = ""
-//    let endTime: Date? = nil
-//    let dateOnly: Bool = true
+    let endTime: Date?
+    let dateOnly: Bool
 
     init(map: Map) throws {
         eventId = try map.value("eventId")
         clientId = try map.value("clientId")
-//        sourcePages = try map.value("sourcePages")
+        sourcePages = try map.value("sourcePages")
         name = try map.value("name")
         location = try? map.value("location")
         startTime = try map.value("startTime", using: GAEISO8601DateTransform())

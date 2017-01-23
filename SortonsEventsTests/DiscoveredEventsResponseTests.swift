@@ -18,12 +18,8 @@ class DiscoveredEventsResponseTests: XCTestCase {
         let content = readJsonFile(filename: "DiscoveredEventsResponseNUIG30June16")
 
         // Use objectmapper
-        guard let nuigJun16 = try? Mapper<DiscoveredEventsResponse>().map(JSONString: content) else {
-            XCTFail("Parse error")
-            return
-        }
-
-        guard let data = nuigJun16.data else {
+        guard let nuigJun16 = try? Mapper<DiscoveredEventsResponse>().map(JSONString: content),
+            let data = nuigJun16.data else {
             XCTFail("")
             return
         }
