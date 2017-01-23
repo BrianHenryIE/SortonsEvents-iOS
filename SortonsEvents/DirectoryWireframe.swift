@@ -20,7 +20,7 @@ class DirectoryWireframe {
 
         let directoryPresenter = DirectoryPresenter(output: directoryView, fomoCensor: fomoId.censor)
 
-        let directoryCacheWorker = DirectoryCacheWorker()
+        let directoryCacheWorker = CacheWorker<ClientPageData>()
         let directoryNetworkWorker = DirectoryNetworkWorker()
 
         let directoryInteractor = DirectoryInteractor(fomoIdNumber: fomoId.fomoIdNumber,

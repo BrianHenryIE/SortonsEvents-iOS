@@ -33,13 +33,13 @@ class DirectoryInteractor: DirectoryViewControllerOutputProtocol {
     var fomoIdNumber: String
     var output: DirectoryInteractorOutputProtocol!
 
-    var cacheWorker: DirectoryCacheProtocol!
+    var cacheWorker: CacheProtocol
     var networkWorker: DirectoryNetworkProtocol!
 
     init(fomoIdNumber: String,
             wireframe: DirectoryWireframe,
             presenter: DirectoryInteractorOutputProtocol,
-                cache: DirectoryCacheProtocol,
+                cache: CacheProtocol,
               network: DirectoryNetworkProtocol) {
         self.fomoIdNumber = fomoIdNumber
         self.wireframe = wireframe
@@ -50,19 +50,17 @@ class DirectoryInteractor: DirectoryViewControllerOutputProtocol {
 
     func fetchDirectory(_ withRequest: Directory.Request) {
 
-        if let cacheString = cacheWorker.fetch() {
-            if let directoryFromCache: ClientPageData = try? Mapper<ClientPageData>().map(JSONString: cacheString) {
-                let data = directoryFromCache.includedPages
-                directory = data
-                self.outputDirectoryToPresenter()
-            }
+        if let directoryFromCache: [SourcePage] = cacheWorker.fetch() {
+
+            directory = directoryFromCache
+            self.outputDirectoryToPresenter()
         }
 
         networkWorker.fetchDirectory(fomoIdNumber) {(networkString) -> Void in
-            if let directoryFromNetwork: ClientPageData = try? Mapper<ClientPageData>().map(JSONString: networkString) {
+            if let directoryFromNetwork = try? Mapper<ClientPageData>().map(JSONString: networkString) {
                 let data = directoryFromNetwork.includedPages
                 self.directory = data
-                self.cacheWorker.save(networkString)
+                self.cacheWorker.save(data)
                 self.outputDirectoryToPresenter()
             }
         }
