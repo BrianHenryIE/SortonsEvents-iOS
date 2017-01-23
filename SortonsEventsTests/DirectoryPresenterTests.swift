@@ -39,14 +39,8 @@ class DirectoryPresenterTests: XCTestCase {
 
     func testPresentFetchedDirectory() {
 
-        // Get some test data
-        let bundle = Bundle(for: self.classForCoder)
-        let path = bundle.path(forResource: "ClientPageDataTcd", ofType: "json")!
-        var content = "{}"
-        do {
-            content = try String(contentsOfFile: path)
-        } catch {
-        }
+        let content = readJsonFile(filename: "ClientPageDataTcd")
+
         guard let tcdEvents: ClientPageData = try? Mapper<ClientPageData>().map(JSONString: content) else {
             XCTFail()
             return

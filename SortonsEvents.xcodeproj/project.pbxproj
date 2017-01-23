@@ -33,6 +33,7 @@
 		A636D26F1D0C892F00FB9C62 /* DiscoveredEventNIUGBicycleVolunteering.json in Resources */ = {isa = PBXBuildFile; fileRef = A636D26E1D0C892F00FB9C62 /* DiscoveredEventNIUGBicycleVolunteering.json */; };
 		A636D2761D0C8A9A00FB9C62 /* SourcePageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A636D2751D0C8A9A00FB9C62 /* SourcePageTest.swift */; };
 		A638BD5F1E3580CD0011380C /* SourcePageNUIGRugbyAcademy.json in Resources */ = {isa = PBXBuildFile; fileRef = A638BD5E1E3580CD0011380C /* SourcePageNUIGRugbyAcademy.json */; };
+		A638BD611E35872C0011380C /* XCTTestCase+JsonFromFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A638BD601E35872C0011380C /* XCTTestCase+JsonFromFile.swift */; };
 		A63B32B91C68AFA400C46020 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
 		A63B94C91DB632DB00ECA301 /* FomoId.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C45C081DA3882B00FC57D5 /* FomoId.swift */; };
 		A63B94CA1DB632DB00ECA301 /* FomoId.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C45C081DA3882B00FC57D5 /* FomoId.swift */; };
@@ -534,6 +535,7 @@
 		A636D2731D0C8A8700FB9C62 /* SourcePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourcePage.swift; sourceTree = "<group>"; };
 		A636D2751D0C8A9A00FB9C62 /* SourcePageTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourcePageTest.swift; sourceTree = "<group>"; };
 		A638BD5E1E3580CD0011380C /* SourcePageNUIGRugbyAcademy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SourcePageNUIGRugbyAcademy.json; sourceTree = "<group>"; };
+		A638BD601E35872C0011380C /* XCTTestCase+JsonFromFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTTestCase+JsonFromFile.swift"; sourceTree = "<group>"; };
 		A63B32BF1C68AFA400C46020 /* FOMO DCU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO DCU.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A643EB531DF4F7240005E769 /* Meta.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Meta.storyboard; sourceTree = "<group>"; };
 		A643EB541DF4F7240005E769 /* MetaImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MetaImages.xcassets; sourceTree = "<group>"; };
@@ -946,6 +948,7 @@
 				A69FD4051DB2C1A600CA8964 /* News */,
 				A69FD4061DB2C1B000CA8964 /* Directory */,
 				A643EB991DF4F75D0005E769 /* Meta */,
+				A638BD601E35872C0011380C /* XCTTestCase+JsonFromFile.swift */,
 			);
 			path = SortonsEventsTests;
 			sourceTree = "<group>";
@@ -2705,6 +2708,7 @@
 				A6A6732B1E20CEA7003AB89A /* MetaWebViewTests.swift in Sources */,
 				A67DF5591DF53A7B00D351FD /* FacebookUrlTests.swift in Sources */,
 				A6B7D6A01DBC156A00578C3C /* CacheTests.swift in Sources */,
+				A638BD611E35872C0011380C /* XCTTestCase+JsonFromFile.swift in Sources */,
 				A6C04F691DB450A40009C9BF /* DirectoryInteractorTests.swift in Sources */,
 				A66DC3961CF395E000ED636B /* Tests.swift in Sources */,
 				A636D2761D0C8A9A00FB9C62 /* SourcePageTest.swift in Sources */,

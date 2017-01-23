@@ -15,11 +15,7 @@ class ClientPageDataTest: XCTestCase {
 
     func testClientPageDataParsing() throws {
 
-        // Read in the file
-        let bundle = Bundle(for: self.classForCoder)
-        let path = bundle.path(forResource: "ClientPageDataTcd", ofType: "json")!
-
-        let content = try String(contentsOfFile: path)
+        let content = readJsonFile(filename: "ClientPageDataTcd")
 
         // Use objectmapper
         guard let tcdEvents = try? Mapper<ClientPageData>().map(JSONString: content) else {

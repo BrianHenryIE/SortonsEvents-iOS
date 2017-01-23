@@ -31,9 +31,10 @@ fileprivate class CacheSpy: DirectoryCacheProtocol {
         fetchCalled = true
 
         let bundle = Bundle(for: CacheSpy.self)
-        let path = bundle.path(forResource: "ClientPageDataTcd", ofType: "json")!
-
-        let content = try? String(contentsOfFile: path)
+        guard let path = bundle.path(forResource: "ClientPageDataTcd", ofType: "json"),
+            let content = try? String(contentsOfFile: path) else {
+                return nil
+        }
 
         return content
     }

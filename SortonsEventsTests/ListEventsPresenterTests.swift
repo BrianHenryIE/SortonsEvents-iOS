@@ -41,10 +41,7 @@ class ListEventsPresenterTests: XCTestCase {
 
     func testPresentFetchedEvents() throws {
 
-        // Read in the file
-        let bundle = Bundle(for: self.classForCoder)
-        let path = bundle.path(forResource: "DiscoveredEventNIUGBicycleVolunteering", ofType: "json")!
-        let content = try String(contentsOfFile: path)
+        let content = readJsonFile(filename: "DiscoveredEventNIUGBicycleVolunteering")
 
         // Use objectmapper
         guard let anEvent: DiscoveredEvent = try? Mapper<DiscoveredEvent>().map(JSONString: content) else {

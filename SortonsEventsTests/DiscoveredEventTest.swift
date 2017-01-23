@@ -15,11 +15,9 @@ class DiscoveredEventTest: XCTestCase {
 
     func testDiscoveredEventParsing() {
 
-        // Read in the file
-        let bundle = Bundle(for: self.classForCoder)
-        guard let path = bundle.path(forResource: "DiscoveredEventNIUGBicycleVolunteering", ofType: "json"),
-            let content = try? String(contentsOfFile: path),
-            let nuigCycling = try? Mapper<DiscoveredEvent>().map(JSONString: content) else {
+        let content = readJsonFile(filename: "DiscoveredEventNIUGBicycleVolunteering")
+
+        guard let nuigCycling = try? Mapper<DiscoveredEvent>().map(JSONString: content) else {
             XCTFail()
             return
         }

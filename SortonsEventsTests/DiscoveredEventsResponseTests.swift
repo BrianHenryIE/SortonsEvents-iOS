@@ -15,20 +15,16 @@ class DiscoveredEventsResponseTests: XCTestCase {
 
     func testParseDiscoveredEventsJson() throws {
 
-        // Read in the file
-        let bundle = Bundle(for: self.classForCoder)
-        let path = bundle.path(forResource: "DiscoveredEventsResponseNUIG30June16", ofType: "json")!
-
-        let content = try String(contentsOfFile: path)
+        let content = readJsonFile(filename: "DiscoveredEventsResponseNUIG30June16")
 
         // Use objectmapper
         guard let nuigJun16 = try? Mapper<DiscoveredEventsResponse>().map(JSONString: content) else {
-            XCTFail("File error")
+            XCTFail("Parse error")
             return
         }
 
         guard let data = nuigJun16.data else {
-            XCTFail("File error")
+            XCTFail("")
             return
         }
 

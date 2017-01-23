@@ -169,14 +169,11 @@ class ListEventsInteractorTests: XCTestCase {
                                        withDate: Date(),
                                        withCalendar: calendar)
 
-        // Read in the file
-        let bundle = Bundle(for: self.classForCoder)
-        let path = bundle.path(forResource: "DiscoveredEventsResponseNUIG30June16", ofType: "json")!
+        let content = readJsonFile(filename: "DiscoveredEventsResponseNUIG30June16")
 
-        guard let content = try? String(contentsOfFile: path),
-            let nuigJun16 = try? Mapper<DiscoveredEventsResponse>().map(JSONString: content),
+        guard let nuigJun16 = try? Mapper<DiscoveredEventsResponse>().map(JSONString: content),
             let events = nuigJun16.data else {
-            XCTFail("Error reading test data")
+            XCTFail("Error parsing test data")
                 return
         }
 

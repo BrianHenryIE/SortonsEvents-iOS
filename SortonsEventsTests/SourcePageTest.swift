@@ -47,6 +47,7 @@ class SourcePageTest: XCTestCase {
 
         XCTAssertEqual(tcdCalifornia.name, "Trinity College Dublin California Alumni.")
         XCTAssertEqual(tcdCalifornia.fbPageId, "1538569619693874")
+        // swiftlint:disable:next line_length
         XCTAssertEqual(tcdCalifornia.pageUrl, "https://www.facebook.com/Trinity-College-Dublin-California-Alumni-1538569619693874/")
 
         XCTAssertEqual(tcdCalifornia.friendlyLocationString, "")
@@ -80,23 +81,5 @@ class SourcePageTest: XCTestCase {
         }
 
         XCTAssertEqual(california.fbPageId, "1538569619693874")
-    }
-}
-
-extension XCTestCase {
-
-    /**
-     * Reads filename of type json
-     * Fails and stops the test if the file can't be read
-     */
-    func readJsonFile(filename: String) -> String {
-        let bundle = Bundle(for: self.classForCoder)
-        guard let path = bundle.path(forResource: filename, ofType: "json"),
-            let content = try? String(contentsOfFile: path) else {
-                continueAfterFailure = false
-                XCTFail("File error")
-                return ""
-        }
-        return content
     }
 }

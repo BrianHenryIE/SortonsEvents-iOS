@@ -25,20 +25,10 @@ class ListEventsCacheTests: XCTestCase {
         testBundle = Bundle(for: self.classForCoder)
     }
 
-    func readDataFile() -> String {
-        let path = testBundle.path(forResource: "ListEventsCacheTestsData", ofType: "json")!
-        guard let discoveredEventsFileData = try? String(contentsOfFile: path) else {
-            continueAfterFailure = false
-            XCTFail("File error")
-            return "" // Unreachable
-        }
-
-        return discoveredEventsFileData
-    }
-
     func readDataObjects(fileData: String? = nil) -> [DiscoveredEvent] {
 
-        let discoveredEventsFile = fileData ?? readDataFile()
+        let discoveredEventsFile = fileData
+            ?? readJsonFile(filename: "ListEventsCacheTestsData")
 
         guard let discoveredEvents = try? Mapper<DiscoveredEvent>().mapArray(JSONString: discoveredEventsFile) else {
             continueAfterFailure = false

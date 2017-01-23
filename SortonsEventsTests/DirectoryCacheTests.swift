@@ -18,16 +18,9 @@ class DirectoryCacheTests: XCTestCase {
 
         // Clear the cache
         let fileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("fomo.json")
-        do {
-            try FileManager.default.removeItem(at: fileURL)
-        } catch {
-            // ...
-        }
+        try? FileManager.default.removeItem(at: fileURL)
 
-        // Read test ClientPageData from file
-        let bundle = Bundle(for: self.classForCoder)
-        let path = bundle.path(forResource: "ClientPageDataTcd", ofType: "json")!
-        let clientPageDataFromFile = try String(contentsOfFile: path)
+        let clientPageDataFromFile = readJsonFile(filename: "ClientPageDataTcd")
 
         // Save using eventsCacheWorker
         cacheWorker.save(clientPageDataFromFile)
