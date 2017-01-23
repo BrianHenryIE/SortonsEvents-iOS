@@ -47,7 +47,10 @@ class DirectoryPresenterTests: XCTestCase {
             content = try String(contentsOfFile: path)
         } catch {
         }
-        let tcdEvents: ClientPageData = Mapper<ClientPageData>().map(JSONString: content)!
+        guard let tcdEvents: ClientPageData = try? Mapper<ClientPageData>().map(JSONString: content) else {
+            XCTFail()
+            return
+        }
 
         sut.presentFetchedDirectory(Directory.Fetch.Response(directory: tcdEvents.includedPages))
 

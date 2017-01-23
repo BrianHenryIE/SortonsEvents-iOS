@@ -54,8 +54,6 @@ fileprivate class NetworkSpy: ListEventsNetworkProtocol {
         if let dataObjects = try? Mapper<DiscoveredEvent>().mapArray(JSONString: dataString) {
             let result = Result<[DiscoveredEvent]>.success(dataObjects)
             completionHandler(result)
-        } else {
-            XCTFail()
         }
     }
 }
@@ -171,21 +169,16 @@ class ListEventsInteractorTests: XCTestCase {
                                        withDate: Date(),
                                        withCalendar: calendar)
 
-        var getEvents: [DiscoveredEvent]!
-
         // Read in the file
         let bundle = Bundle(for: self.classForCoder)
         let path = bundle.path(forResource: "DiscoveredEventsResponseNUIG30June16", ofType: "json")!
 
-        do {
-            let content = try String(contentsOfFile: path)
-            let nuigJun16 = try? Mapper<DiscoveredEventsResponse>().map(JSONString: content)
-            getEvents = nuigJun16?.data
-        } catch {
-            // stop the tests!
+        guard let content = try? String(contentsOfFile: path),
+            let nuigJun16 = try? Mapper<DiscoveredEventsResponse>().map(JSONString: content),
+            let events = nuigJun16.data else {
+            XCTFail("Error reading test data")
+                return
         }
-
-        let events = getEvents!
 
         // Test data: 9 total
 

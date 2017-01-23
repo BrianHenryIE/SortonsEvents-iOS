@@ -23,17 +23,22 @@ struct DiscoveredEvent: ImmutableMappable {
 
     let eventId: String
     let clientId: String
-    let sourcePages: [SourcePage]
+//    let sourcePages: [SourcePage]
     let name: String
     let location: String?
     let startTime: Date
-    let endTime: Date?
-    let dateOnly: Bool
+        let endTime: Date?
+        let dateOnly: Bool
+
+    let sourcePages: [SourcePage] = [SourcePage]()
+//    let clientId: String = ""
+//    let endTime: Date? = nil
+//    let dateOnly: Bool = true
 
     init(map: Map) throws {
         eventId = try map.value("eventId")
         clientId = try map.value("clientId")
-        sourcePages = try map.value("sourcePages")
+//        sourcePages = try map.value("sourcePages")
         name = try map.value("name")
         location = try? map.value("location")
         startTime = try map.value("startTime", using: GAEISO8601DateTransform())
