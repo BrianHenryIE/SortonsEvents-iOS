@@ -12,6 +12,7 @@ extension XCTestCase {
 
     /**
      * Reads filename of type json
+     * Returns as a String
      * Fails and stops the test if the file can't be read
      */
     func readJsonFile(filename: String) -> String {
@@ -24,4 +25,21 @@ extension XCTestCase {
         }
         return content
     }
+
+    /**
+     * Reads filename of type json
+     * Returns as Data
+     * Fails and stops the test if the file can't be read
+     */
+    func readJsonData(filename: String) -> Data {
+        let bundle = Bundle(for: self.classForCoder)
+        guard let path = bundle.path(forResource: filename, ofType: "json"),
+            let jsonFromFile = NSData(contentsOfFile: path) as? Data else {
+                continueAfterFailure = false
+                XCTFail("File error")
+                return Data()
+        }
+        return jsonFromFile
+    }
+
 }

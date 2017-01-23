@@ -9,28 +9,45 @@
 @testable import SortonsEvents
 
 import XCTest
+import Mockingjay
+import Alamofire
 
 class ListEventsNetworkTests: XCTestCase {
 
+    var worker: ListEventsNetworkWorker!
+
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+
+        worker = ListEventsNetworkWorker()
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
+    func testNetworkFetch() {
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+        let asyncExpectation = expectation(description: "ListEventsNetworkTests")
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        let responseBody = readJsonData(filename: "ListEventsNetworkTestsData")
+
+        // swiftlint:disable:next line_length
+        stub(uri("https://sortonsevents.appspot.com/_ah/api/upcomingEvents/v1/discoveredeventsresponse/fomoId"), jsonData(responseBody))
+
+        worker.fetchEvents("fomoId") {
+            (result: Result<[DiscoveredEvent]>) in
+
+            switch result {
+            case .success:
+                XCTAssert(true)
+            default:
+                XCTFail()
+            }
+
+            asyncExpectation.fulfill()
+
+        }
+
+        self.waitForExpectations(timeout: 5) { error in
+
+            XCTAssertNil(error, "Something went horribly wrong")
         }
     }
 

@@ -25,7 +25,7 @@ class ListEventsNetworkWorker: ListEventsNetworkProtocol {
 
 //        Alamofire.request(endpoint).responseArray(keyPath: "data") { (response: DataResponse<[DiscoveredEvent]>) in
 //
-//                completionHandler(response.result)
+//            completionHandler(response.result)
 //        }
 
         Alamofire.request(endpoint)
@@ -34,12 +34,12 @@ class ListEventsNetworkWorker: ListEventsNetworkProtocol {
                 if let json = response.result.value {
 
                     if let gaeResponse = try? Mapper<DiscoveredEventsResponse>().map(JSONString: json) {
+                        let events = gaeResponse.data!
 
-                        completionHandler(Result<[DiscoveredEvent]>.success(gaeResponse.data!))
+                        completionHandler(Result<[DiscoveredEvent]>.success(events))
 
                     }
                 }
-                // TOOD;;;
         }
 
     }

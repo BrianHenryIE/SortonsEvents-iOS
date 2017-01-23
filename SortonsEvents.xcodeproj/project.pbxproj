@@ -35,6 +35,7 @@
 		A638BD5F1E3580CD0011380C /* SourcePageNUIGRugbyAcademy.json in Resources */ = {isa = PBXBuildFile; fileRef = A638BD5E1E3580CD0011380C /* SourcePageNUIGRugbyAcademy.json */; };
 		A638BD611E35872C0011380C /* XCTTestCase+JsonFromFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A638BD601E35872C0011380C /* XCTTestCase+JsonFromFile.swift */; };
 		A638BD631E359CBD0011380C /* DirectoryInteractorTestsCacheDummyData.json in Resources */ = {isa = PBXBuildFile; fileRef = A638BD621E359CBD0011380C /* DirectoryInteractorTestsCacheDummyData.json */; };
+		A638BD981E35A7BB0011380C /* ListEventsNetworkTestsData.json in Resources */ = {isa = PBXBuildFile; fileRef = A638BD971E35A7BB0011380C /* ListEventsNetworkTestsData.json */; };
 		A63B32B91C68AFA400C46020 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
 		A63B94C91DB632DB00ECA301 /* FomoId.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C45C081DA3882B00FC57D5 /* FomoId.swift */; };
 		A63B94CA1DB632DB00ECA301 /* FomoId.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C45C081DA3882B00FC57D5 /* FomoId.swift */; };
@@ -528,6 +529,7 @@
 		A638BD5E1E3580CD0011380C /* SourcePageNUIGRugbyAcademy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SourcePageNUIGRugbyAcademy.json; sourceTree = "<group>"; };
 		A638BD601E35872C0011380C /* XCTTestCase+JsonFromFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTTestCase+JsonFromFile.swift"; sourceTree = "<group>"; };
 		A638BD621E359CBD0011380C /* DirectoryInteractorTestsCacheDummyData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DirectoryInteractorTestsCacheDummyData.json; sourceTree = "<group>"; };
+		A638BD971E35A7BB0011380C /* ListEventsNetworkTestsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ListEventsNetworkTestsData.json; sourceTree = "<group>"; };
 		A63B32BF1C68AFA400C46020 /* FOMO DCU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO DCU.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A643EB531DF4F7240005E769 /* Meta.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Meta.storyboard; sourceTree = "<group>"; };
 		A643EB541DF4F7240005E769 /* MetaImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MetaImages.xcassets; sourceTree = "<group>"; };
@@ -948,8 +950,8 @@
 				A68183D41D2ADD6200E45D35 /* ListEventsTableViewControllerTests.swift */,
 				A6ABE5321D3AB60200EF3D11 /* ListEventsPresenterTests.swift */,
 				A69DBF481C8AD738005064F7 /* ListEventsInteractorTests.swift */,
-				A6C02AD71E33312A00A80799 /* ListEventsCacheTestsData.json */,
 				A6C02ADB1E333E1A00A80799 /* ListEventsNetworkTests.swift */,
+				A638BD971E35A7BB0011380C /* ListEventsNetworkTestsData.json */,
 			);
 			name = "List Events";
 			sourceTree = "<group>";
@@ -1058,6 +1060,7 @@
 			children = (
 				A6C04F751DB4590A0009C9BF /* Model */,
 				A6B7D69F1DBC156A00578C3C /* CacheTests.swift */,
+				A6C02AD71E33312A00A80799 /* ListEventsCacheTestsData.json */,
 				A6C45C061DA386E600FC57D5 /* FomoIdTest.swift */,
 			);
 			name = Common;
@@ -1634,6 +1637,7 @@
 			files = (
 				A6C02AD81E33312A00A80799 /* ListEventsCacheTestsData.json in Resources */,
 				A636D26F1D0C892F00FB9C62 /* DiscoveredEventNIUGBicycleVolunteering.json in Resources */,
+				A638BD981E35A7BB0011380C /* ListEventsNetworkTestsData.json in Resources */,
 				A69AD4DB1DBF1474005C6CC3 /* SourcePageTcdCaliforniaAlumni.json in Resources */,
 				A638BD631E359CBD0011380C /* DirectoryInteractorTestsCacheDummyData.json in Resources */,
 				A66DC3981CF3966700ED636B /* SourcePageTcdAsian.json in Resources */,
