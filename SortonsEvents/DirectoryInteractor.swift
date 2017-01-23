@@ -8,6 +8,7 @@
 
 import UIKit
 import ObjectMapper
+import Alamofire
 
 struct Directory {
     struct Fetch {
@@ -34,13 +35,13 @@ class DirectoryInteractor: DirectoryViewControllerOutputProtocol {
     var output: DirectoryInteractorOutputProtocol!
 
     var cacheWorker: CacheProtocol
-    var networkWorker: DirectoryNetworkProtocol!
+    let networkWorker: NetworkProtocol
 
     init(fomoIdNumber: String,
             wireframe: DirectoryWireframe,
             presenter: DirectoryInteractorOutputProtocol,
                 cache: CacheProtocol,
-              network: DirectoryNetworkProtocol) {
+              network: NetworkProtocol) {
         self.fomoIdNumber = fomoIdNumber
         self.wireframe = wireframe
         output = presenter
@@ -56,12 +57,14 @@ class DirectoryInteractor: DirectoryViewControllerOutputProtocol {
             self.outputDirectoryToPresenter()
         }
 
-        networkWorker.fetchDirectory(fomoIdNumber) {(networkString) -> Void in
-            if let directoryFromNetwork = try? Mapper<ClientPageData>().map(JSONString: networkString) {
-                let data = directoryFromNetwork.includedPages
-                self.directory = data
-                self.cacheWorker.save(data)
+        networkWorker.fetch(fomoIdNumber) {(result: Result<[SourcePage]>) -> Void in
+            switch result {
+            case .success(let sourcePages):
+                self.directory = sourcePages
+                self.cacheWorker.save(sourcePages)
                 self.outputDirectoryToPresenter()
+            case .failure(let error):
+                break
             }
         }
     }

@@ -9,7 +9,10 @@
 import Foundation
 import ObjectMapper
 
-struct SourcePage: ImmutableMappable {
+struct SourcePage: SortonsNW, ImmutableMappable {
+
+    static let endpointBase = "https://sortonsevents.appspot.com/_ah/api/upcomingEvents/v1/discoveredeventsresponse/"
+    static let keyPath = "includedPages"
 
     let name: String
     let fbPageId: String

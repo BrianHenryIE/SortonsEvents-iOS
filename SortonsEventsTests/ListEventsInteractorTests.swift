@@ -12,14 +12,16 @@ import XCTest
 import ObjectMapper
 import Alamofire
 
-fileprivate class EmptyNetworkSpy: ListEventsNetworkProtocol {
+fileprivate class EmptyNetworkSpy: NetworkProtocol {
 
-    var fetchEventsCalled = false
+    var fetchCalled = false
 
-    func fetchEvents(_ fomoId: String, completionHandler: @escaping (_ result: Result<[DiscoveredEvent]>) -> Void) {
+    func fetch<T: SortonsNW & ImmutableMappable>
+        (_ fomoId: String,
+         completionHandler: @escaping (_ result: Result<[T]>) -> Void) {
 
-        fetchEventsCalled = true
-        completionHandler(Result.success([DiscoveredEvent]()))
+        fetchCalled = true
+        completionHandler(Result.success([T]()))
     }
 }
 
@@ -39,20 +41,19 @@ fileprivate class EmptyCacheSpy<T: ImmutableMappable>: CacheProtocol {
     }
 }
 
-fileprivate class NetworkSpy: ListEventsNetworkProtocol {
+fileprivate class NetworkSpy: NetworkProtocol {
 
-    // MARK: Method call expectations
     var fetchEventsCalled = false
 
-    // MARK: Spied methods
-    func fetchEvents(_ fomoId: String, completionHandler: @escaping (_ result: Result<[DiscoveredEvent]>) -> Void) {
+    func fetch<T: SortonsNW & ImmutableMappable>(_ fomoId: String,
+               completionHandler: @escaping (_ result: Result<[T]>) -> Void) {
         fetchEventsCalled = true
 
         // swiftlint:disable:next line_length
         let dataString = "[{\"eventId\": \"918777258231182\",\"clientId\": \"1049082365115363\",\"sourcePages\": [{\"clientId\": \"1049082365115363\",\"id\": \"1049082365115363457660710939203\",\"about\": \"NUI Galway's Student Volunteering Programme www.nuigalway.ie/alive\",\"name\": \"Alive Nuigalway\",\"pageId\": \"457660710939203\",\"pageUrl\": \"https://www.facebook.com/alive.nuigalway\",\"street\": \"\",\"zip\": \"\",\"uid\": \"457660710939203\",\"title\": \"Alive Nuigalway\",\"subTitle\": \"\",\"friendlyLocationString\": \"\",\"searchableString\": \"Alive Nuigalway null null Alive Nuigalway null \",\"class\": \"ie.sortons.events.shared.SourcePage\"}],\"name\": \"Information Evening for Volunteering with Galway's Community Bicycle Workshop\",\"location\": \"Block R, Earls Island, University Road, Galway.\",\"startTime\": \"2016-06-30T18:00:00.000Z\",\"endTime\": \"2016-06-30T19:00:00.000Z\",\"dateOnly\": false}]"
 
-        if let dataObjects = try? Mapper<DiscoveredEvent>().mapArray(JSONString: dataString) {
-            let result = Result<[DiscoveredEvent]>.success(dataObjects)
+        if let dataObjects = try? Mapper<T>().mapArray(JSONString: dataString) {
+            let result = Result<[T]>.success(dataObjects)
             completionHandler(result)
         }
     }
@@ -139,7 +140,7 @@ class ListEventsInteractorTests: XCTestCase {
 
         // Then
         XCTAssert(emptyCacheSpy.fetchCalled, "Fetch() should ask cacheWorker to fetch events")
-        XCTAssert(emptyNetworkSpy.fetchEventsCalled, "FetchEvents() should ask EventsNetworkWorker to fetch events")
+        XCTAssert(emptyNetworkSpy.fetchCalled, "FetchEvents() should ask EventsNetworkWorker to fetch events")
 
         XCTAssertFalse(emptyCacheSpy.saveCalled,
                        "If the network worker was empty, no need to save to cache"

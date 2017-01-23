@@ -10,6 +10,7 @@
 
 import XCTest
 import ObjectMapper
+import Alamofire
 
 // This is easier in Java!
 fileprivate class PresenterSpy: DirectoryInteractorOutputProtocol {
@@ -37,14 +38,10 @@ fileprivate class CacheSpy<T: ImmutableMappable>: CacheProtocol {
     func fetch<T: ImmutableMappable>() -> [T]? {
         fetchCalled = true
 
-        guard let path = bundle.path(forResource: "DirectoryInteractorTestsCacheDummyData", ofType: "json") else {
-            return nil
-        }
-
-        guard let content = try? String(contentsOfFile: path) else {
-            return nil
-        }
-        guard let cacheDummyPages = try? Mapper<T>().mapArray(JSONString: content) else {
+        guard let path = bundle.path(forResource: "DirectoryInteractorTestsDummyData",
+                                          ofType: "json"),
+            let content = try? String(contentsOfFile: path),
+            let cacheDummyPages = try? Mapper<T>().mapArray(JSONString: content) else {
                 return nil
         }
 
@@ -56,22 +53,29 @@ fileprivate class CacheSpy<T: ImmutableMappable>: CacheProtocol {
     }
 }
 
-fileprivate class NetworkSpy: DirectoryNetworkProtocol {
+fileprivate class NetworkSpy<T: SortonsNW & ImmutableMappable>: NetworkProtocol {
     var fetchCalled = false
 
-    func fetchDirectory(_ fomoId: String,
-               completionHandler: @escaping (_ discoveredEventsJsonPage: String) -> Void) {
+    let bundle: Bundle
+
+    init(with bundle: Bundle) {
+        self.bundle = bundle
+    }
+
+    func fetch<T: SortonsNW & ImmutableMappable>
+        (_ fomoId: String,
+         completionHandler: @escaping (_ result: Result<[T]>) -> Void) {
         fetchCalled = true
 
-        let bundle = Bundle(for: NetworkSpy.self)
-        let path = bundle.path(forResource: "ClientPageDataTcd", ofType: "json")!
-
-        guard let content = try? String(contentsOfFile: path) else {
+        guard let path = bundle.path(forResource: "DirectoryInteractorTestsDummyData",
+                                          ofType: "json"),
+            let content = try? String(contentsOfFile: path),
+            let networkDummyPages = try? Mapper<T>().mapArray(JSONString: content) else {
             XCTFail()
             return
         }
 
-        completionHandler(content)
+        completionHandler(Result<[T]>.success(networkDummyPages))
     }
 }
 
@@ -81,7 +85,7 @@ class DirectoryInteractorTests: XCTestCase {
 
     fileprivate var presenterSpy: PresenterSpy!
     fileprivate var cacheSpy: CacheSpy<SourcePage>!
-    fileprivate var networkSpy: NetworkSpy!
+    fileprivate var networkSpy: NetworkSpy<SourcePage>!
 
     let fomoId = FomoId(fomoIdNumber: "id",
                                 name: "name",
@@ -97,7 +101,7 @@ class DirectoryInteractorTests: XCTestCase {
 
         presenterSpy = PresenterSpy()
         cacheSpy = CacheSpy<SourcePage>(with: bundle)
-        networkSpy = NetworkSpy()
+        networkSpy = NetworkSpy<SourcePage>(with: bundle)
 
         sut = DirectoryInteractor(fomoIdNumber: fomoId.fomoIdNumber,
                                      wireframe: DirectoryWireframe(fomoId: fomoId),
@@ -132,7 +136,7 @@ class DirectoryInteractorTests: XCTestCase {
 
         sut.filterDirectoryTo("music")
 
-        XCTAssertEqual(6, presenterSpy.sourcePagesCount, "Post filter count incorrect")
+        XCTAssertEqual(4, presenterSpy.sourcePagesCount, "Post filter count incorrect")
     }
 
     func displaySelectedPageFrom(rowNumber: Int) {

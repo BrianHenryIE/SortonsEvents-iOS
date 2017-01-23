@@ -21,11 +21,14 @@ class ListEventsWireframe {
 
         let listEventsPresenter = ListEventsPresenter(output: listEventsView)
 
+        let networkWorker = NetworkWorker<DiscoveredEvent>()
+        let cacheWorker = CacheWorker<DiscoveredEvent>()
+
         let listEventsInteractor = ListEventsInteractor(wireframe: self,
                                                            fomoId: fomoId.fomoIdNumber,
                                                            output: listEventsPresenter,
-                                          listEventsNetworkWorker: ListEventsNetworkWorker(),
-                                            listEventsCacheWorker: CacheWorker<DiscoveredEvent>())
+                                          listEventsNetworkWorker: networkWorker,
+                                            listEventsCacheWorker: cacheWorker)
 
         listEventsView.output = listEventsInteractor
     }

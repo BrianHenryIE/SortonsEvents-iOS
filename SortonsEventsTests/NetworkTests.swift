@@ -14,24 +14,24 @@ import Alamofire
 
 class ListEventsNetworkTests: XCTestCase {
 
-    var worker: ListEventsNetworkWorker!
+    var worker: NetworkProtocol!
 
     override func setUp() {
         super.setUp()
 
-        worker = ListEventsNetworkWorker()
+        worker = NetworkWorker<DiscoveredEvent>()
     }
 
     func testNetworkFetch() {
 
-        let asyncExpectation = expectation(description: "ListEventsNetworkTests")
+        let asyncExpectation = expectation(description: "NetworkTests")
 
-        let responseBody = readJsonData(filename: "ListEventsNetworkTestsData")
+        let responseBody = readJsonData(filename: "NetworkTestsData")
 
         // swiftlint:disable:next line_length
         stub(uri("https://sortonsevents.appspot.com/_ah/api/upcomingEvents/v1/discoveredeventsresponse/fomoId"), jsonData(responseBody))
 
-        worker.fetchEvents("fomoId") {
+        worker.fetch("fomoId") {
             (result: Result<[DiscoveredEvent]>) in
 
             switch result {

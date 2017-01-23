@@ -36,7 +36,7 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtoco
     let wireframe: ListEventsWireframe
     let fomoId: String
     let output: ListEventsInteractorOutputProtocol
-    let listEventsNetworkWorker: ListEventsNetworkProtocol
+    let listEventsNetworkWorker: NetworkProtocol
     let cacheWorker: CacheProtocol
 
     let observingFrom: Date!
@@ -46,7 +46,7 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtoco
     init(wireframe: ListEventsWireframe,
             fomoId: String,
             output: ListEventsInteractorOutputProtocol,
-         listEventsNetworkWorker: ListEventsNetworkProtocol,
+         listEventsNetworkWorker: NetworkProtocol,
            listEventsCacheWorker: CacheProtocol,
                         withDate: Date = Date(),
                     withCalendar: Calendar = Calendar.current) {
@@ -72,7 +72,7 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtoco
         }
 
         // Get from network
-        listEventsNetworkWorker.fetchEvents(fomoId) { (response: Result<[DiscoveredEvent]>) -> Void in
+        listEventsNetworkWorker.fetch(fomoId) { (response: Result<[DiscoveredEvent]>) -> Void in
 
             switch response {
             case .success(let networkData):
