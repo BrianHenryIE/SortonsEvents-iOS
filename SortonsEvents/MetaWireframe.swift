@@ -16,27 +16,37 @@ class MetaWireframe: NSObject {
 
     let fomoId: FomoId
 
-    let metaView: UIViewController!
-    var metaInteractor: MetaInteractor!
+    var metaNavigationView: UIViewController?
+
+    var metaMainView: MetaViewController?
+
+    var metaInteractor: MetaInteractor?
 
     var mailComposerVC = MFMailComposeViewController()
 
-    var activityVC: UIActivityViewController!
+    var activityVC: UIActivityViewController?
 
     init(fomoId: FomoId) {
 
         self.fomoId = fomoId
 
-        // swiftlint:disable:next force_cast
-        let metaMainView = storyboard.instantiateViewController(withIdentifier: "Meta") as! MetaViewController
+        metaMainView = storyboard.instantiateViewController(withIdentifier: "Meta")
+            as? MetaViewController
+
+        guard let metaMainView = metaMainView else {
+            super.init()
+            return
+        }
+
+        metaNavigationView = UINavigationController(rootViewController: metaMainView)
 
         let metaPresenter = MetaPresenter(output: metaMainView)
 
-        metaView = UINavigationController(rootViewController: metaMainView)
-
         super.init()
 
-        metaInteractor = MetaInteractor(wireframe: self, fomoId: fomoId, presenter: metaPresenter)
+        metaInteractor = MetaInteractor(wireframe: self,
+                                           fomoId: fomoId,
+                                        presenter: metaPresenter)
 
         metaMainView.output = metaInteractor
     }
@@ -58,25 +68,29 @@ class MetaWireframe: NSObject {
 
         metaWebViewController.output = metaWebViewInteractor
 
-        metaView.childViewControllers[0].navigationController?.pushViewController(metaWebViewController,
+        metaNavigationView?.childViewControllers[0].navigationController?.pushViewController(metaWebViewController,
                                                                                   animated: true)
     }
 
     func share(_ objectsToShare: [Any]) {
         activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
 
-        activityVC.popoverPresentationController?.sourceView = metaView.view
+        guard let activityVC = activityVC else {
+            return
+        }
+
+        activityVC.popoverPresentationController?.sourceView = metaNavigationView?.view
         activityVC.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
 
-        let alertOrigin = CGPoint(x: metaView.view.frame.width / 2 - 160,
-                                  y: metaView.view.frame.height / 2 - 100)
+        let alertOrigin = CGPoint(x: (metaNavigationView?.view.frame.width ?? 1 / 2 - 160),
+                                  y: (metaNavigationView?.view.frame.height ?? 1 / 2 - 100))
 
         let alertSize = CGSize(width: 320, height: 200)
 
         activityVC.popoverPresentationController?.sourceRect = CGRect(origin: alertOrigin,
                                                                         size: alertSize)
 
-        metaView.present(activityVC, animated: true, completion: nil)
+        metaNavigationView?.present(activityVC, animated: true, completion: nil)
     }
 
     // https://www.andrewcbancroft.com/2014/08/25/send-email-in-app-using-mfmailcomposeviewcontroller-with-swift/
@@ -87,9 +101,9 @@ class MetaWireframe: NSObject {
             mailComposerVC.setToRecipients(["info@sortons.ie"])
             mailComposerVC.setSubject(subject)
 
-            metaView.present(mailComposerVC, animated: true, completion: nil)
+            metaNavigationView?.present(mailComposerVC, animated: true, completion: nil)
         } else {
-            metaInteractor.showSendMailErrorAlert()
+            metaInteractor?.showSendMailErrorAlert()
         }
     }
 

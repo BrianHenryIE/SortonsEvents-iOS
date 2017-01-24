@@ -11,20 +11,20 @@ import Foundation
 
 class NewsWireframe {
 
-    let newsView: NewsViewController!
+    let newsView: NewsViewController?
 
     init(fomoId: FomoId) {
         let storyboard = UIStoryboard(name: "News", bundle: Bundle.main)
 
         newsView = storyboard.instantiateViewController(withIdentifier: "News") as? NewsViewController
 
-        let newsPresenter = NewsPresenter(output: newsView!)
+        let newsPresenter = NewsPresenter(output: newsView)
 
         let newsInteractor = NewsInteractor(wireframe: self,
                                                fomoId: fomoId.fomoIdNumber,
                                                output: newsPresenter)
 
-        newsView.output = newsInteractor
+        newsView?.output = newsInteractor
     }
 
     func openUrl(_ url: FacebookUrl) {

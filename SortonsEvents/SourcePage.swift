@@ -11,7 +11,7 @@ import ObjectMapper
 
 struct SourcePage: SortonsNW, ImmutableMappable {
 
-    static let endpointBase = "https://sortonsevents.appspot.com/_ah/api/upcomingEvents/v1/discoveredeventsresponse/"
+    static let endpointBase = "https://sortonsevents.appspot.com/_ah/api/clientdata/v1/clientpagedata/"
     static let keyPath = "includedPages"
 
     let name: String

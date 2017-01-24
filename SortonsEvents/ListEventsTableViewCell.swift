@@ -11,7 +11,7 @@ import AlamofireImage
 
 class ListEventsTableViewCell: UITableViewCell {
 
-    let placeholderImage = UIImage(named: "EventPlaceholder")!
+    let placeholderImage = UIImage(named: "EventPlaceholder")
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var startTimeLabel: UILabel!
@@ -23,6 +23,8 @@ class ListEventsTableViewCell: UITableViewCell {
         nameLabel.text = event.name
         startTimeLabel.text = event.startTime
         locationLabel.text = event.location
-        eventImage.af_setImage(withURL: event.imageUrl)
+        if let imageUrl = event.imageUrl {
+            eventImage.af_setImage(withURL: imageUrl)
+        }
     }
 }

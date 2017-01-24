@@ -20,7 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let frame = UIScreen.main.bounds
         window = UIWindow(frame: frame)
-        window!.screen = UIScreen.main
+
+        guard let window = window else {
+            return false
+        }
+        window.screen = UIScreen.main
 
         let rvc: UIViewController
         if let fomoId = FomoId() {
@@ -30,8 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             rvc = storyboard.instantiateViewController(withIdentifier: "MissingFomoConfig")
         }
 
-        window!.rootViewController = rvc
-        window!.makeKeyAndVisible()
+        window.rootViewController = rvc
+        window.makeKeyAndVisible()
 
         Fabric.with([Crashlytics.self])
 

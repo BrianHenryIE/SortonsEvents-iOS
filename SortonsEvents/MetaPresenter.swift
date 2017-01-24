@@ -16,9 +16,9 @@ protocol MetaPresenterOutputProtocol {
 
 class MetaPresenter: MetaInteractorOutputProtocol {
 
-    let output: MetaPresenterOutputProtocol
+    let output: MetaPresenterOutputProtocol?
 
-    init(output: MetaPresenterOutputProtocol) {
+    init(output: MetaPresenterOutputProtocol?) {
         self.output = output
     }
 
@@ -27,7 +27,7 @@ class MetaPresenter: MetaInteractorOutputProtocol {
         let title = "Cannot send mail"
         let message = "Maybe you don't have the Mail app set up. You can always send feedback to info@sortons.ie"
 
-        output.showErrorAlert(title: title,
+        output?.showErrorAlert(title: title,
                             message: message)
 
     }

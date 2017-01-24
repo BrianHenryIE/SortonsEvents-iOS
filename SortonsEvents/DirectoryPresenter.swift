@@ -32,7 +32,7 @@ class DirectoryPresenter: DirectoryInteractorOutputProtocol {
     var output: DirectoryPresenterOutputProtocol?
     let fomoCensor: [String]
 
-    init(output: DirectoryPresenterOutputProtocol, fomoCensor: [String] = [String]()) {
+    init(output: DirectoryPresenterOutputProtocol?, fomoCensor: [String] = [String]()) {
         self.output = output
         self.fomoCensor = fomoCensor
     }

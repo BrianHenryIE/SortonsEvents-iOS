@@ -20,21 +20,23 @@ protocol NewsPresenterOutputProtocol {
 
 class NewsPresenter: NewsInteractorOutputProtocol {
 
-    let output: NewsPresenterOutputProtocol
+    let output: NewsPresenterOutputProtocol?
 
-    init(output: NewsPresenterOutputProtocol) {
+    init(output: NewsPresenterOutputProtocol?) {
         self.output = output
     }
 
     func setFomoId(_ fomoId: String) {
 
         let urlString = "http://sortons.ie/events/recentpostsmobile/news.html#\(fomoId)"
-        let url = URL(string: urlString)!
+        guard let url = URL(string: urlString) else {
+            return
+        }
         let urlRequest = URLRequest(url: url)
 
         let viewModel = News.ViewModel(newsUrl: urlRequest)
 
-        output.display(viewModel)
+        output?.display(viewModel)
     }
 
 }

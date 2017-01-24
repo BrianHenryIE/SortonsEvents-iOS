@@ -25,7 +25,7 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutputProtoco
     @IBOutlet weak var searchBarOutlet: UISearchBar!
     @IBOutlet weak var tableViewOutlet: UITableView!
 
-    var output: DirectoryViewControllerOutputProtocol!
+    var output: DirectoryViewControllerOutputProtocol?
     var data: [Directory.TableViewCellModel]!
 
     override func viewDidLoad() {
@@ -40,7 +40,7 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutputProtoco
         gestureRecognizer.delegate = self
 
         let request = Directory.Request()
-        output.fetchDirectory(request)
+        output?.fetchDirectory(request)
     }
 
 // MARK: DirectoryPresenterOutput
@@ -56,7 +56,7 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutputProtoco
 
     // MARK: UISearchBar
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        output.filterDirectoryTo(searchText)
+        output?.filterDirectoryTo(searchText)
     }
 }
 
@@ -75,14 +75,14 @@ extension DirectoryViewController: UITableViewDataSource, UITableViewDelegate {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "DirectoryPageCell",
                                                             for: indexPath) as? DirectoryTableViewCell
-        cell!.setDirectorySourcePage(sourcePage)
-        return cell!
+        cell?.setDirectorySourcePage(sourcePage)
 
+        return cell ?? UITableViewCell()
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = indexPath.row
-        output.displaySelectedPageFrom(row)
+        output?.displaySelectedPageFrom(row)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

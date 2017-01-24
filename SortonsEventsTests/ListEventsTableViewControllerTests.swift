@@ -56,7 +56,7 @@ class ListEventsTableViewControllerTests: XCTestCase {
         sut = storyboard.instantiateViewController(withIdentifier: "ListEvents") as? ListEventsTableViewController
     }
 
-    func testShouldFetchOrdersWhenViewIsLoaded() {
+    func testShouldFetchEventsWhenViewIsLoaded() {
         // Given
         let outputSpy = OutputSpy()
 

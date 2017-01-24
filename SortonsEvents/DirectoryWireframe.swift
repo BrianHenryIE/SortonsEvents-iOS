@@ -11,14 +11,15 @@ import Foundation
 
 class DirectoryWireframe {
 
-    let directoryView: DirectoryViewController!
+    let directoryView: DirectoryViewController?
 
     init(fomoId: FomoId) {
         let storyboard = UIStoryboard(name: "Directory", bundle: Bundle.main)
 
         directoryView = storyboard.instantiateViewController(withIdentifier: "Directory") as? DirectoryViewController
 
-        let directoryPresenter = DirectoryPresenter(output: directoryView, fomoCensor: fomoId.censor)
+        let directoryPresenter = DirectoryPresenter(output: directoryView,
+                                                fomoCensor: fomoId.censor)
 
         let directoryCacheWorker = CacheWorker<SourcePage>()
         let directoryNetworkWorker = NetworkWorker<SourcePage>()
@@ -29,6 +30,6 @@ class DirectoryWireframe {
                                                              cache: directoryCacheWorker,
                                                            network: directoryNetworkWorker)
 
-        directoryView.output = directoryInteractor
+        directoryView?.output = directoryInteractor
     }
 }

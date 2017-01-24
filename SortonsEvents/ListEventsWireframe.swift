@@ -11,7 +11,7 @@ import Foundation
 
 class ListEventsWireframe {
 
-    let listEventsView: ListEventsTableViewController!
+    let listEventsView: ListEventsTableViewController?
 
     init(fomoId: FomoId) {
         let storyboard = UIStoryboard(name: "ListEvents", bundle: Bundle.main)
@@ -30,6 +30,6 @@ class ListEventsWireframe {
                                           listEventsNetworkWorker: networkWorker,
                                             listEventsCacheWorker: cacheWorker)
 
-        listEventsView.output = listEventsInteractor
+        listEventsView?.output = listEventsInteractor
     }
 }

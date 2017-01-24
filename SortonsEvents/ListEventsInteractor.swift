@@ -39,7 +39,7 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtoco
     let listEventsNetworkWorker: NetworkProtocol
     let cacheWorker: CacheProtocol
 
-    let observingFrom: Date!
+    let observingFrom: Date
     let dateFormat: DateFormatter
     let calendar: Calendar
 
@@ -98,8 +98,10 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtoco
 
         let fbId = allUpcomingEvents[rowNumber].eventId
 
-        let appUrl = URL(string: "fb://profile/\(fbId)")!
-        let safariUrl = URL(string: "https://facebook.com/\(fbId)")!
+        guard let appUrl = URL(string: "fb://profile/\(fbId)"),
+            let safariUrl = URL(string: "https://facebook.com/\(fbId)") else {
+            return
+        }
 
         if UIApplication.shared.canOpenURL(appUrl) {
             UIApplication.shared.openURL(appUrl)
@@ -110,9 +112,11 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtoco
 
     func filterToOngoingEvents(_ allEvents: [DiscoveredEvent], observingFrom: Date = Date()) -> [DiscoveredEvent] {
 
-        let yesterday = calendar.date(byAdding: .day, value: -1, to: observingFrom)!
-        let yesterday6pm = calendar.date(bySettingHour: 18, minute: 0, second: 0, of: yesterday)!
-        let today6am = calendar.date(bySettingHour: 6, minute: 0, second: 0, of: observingFrom)!
+        guard let yesterday = calendar.date(byAdding: .day, value: -1, to: observingFrom),
+            let yesterday6pm = calendar.date(bySettingHour: 18, minute: 0, second: 0, of: yesterday),
+            let today6am = calendar.date(bySettingHour: 6, minute: 0, second: 0, of: observingFrom) else {
+                return allEvents
+        }
 
         var filteredEvents = [DiscoveredEvent]()
 

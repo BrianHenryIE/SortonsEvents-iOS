@@ -9,12 +9,12 @@
 import Foundation
 
 struct ListEventsCellViewModel {
-    let webUrl: URL
-    let appUrl: URL
+//    let webUrl: URL
+//    let appUrl: URL
     let name: String
     let startTime: String
     let location: String?
-    let imageUrl: URL
+    let imageUrl: URL?
 }
 
 protocol ListEventsPresenterOutputProtocol {
@@ -25,11 +25,11 @@ protocol ListEventsPresenterOutputProtocol {
 
 class ListEventsPresenter: ListEventsInteractorOutputProtocol {
 
-    let output: ListEventsPresenterOutputProtocol
-    let calendar: Calendar!
+    let output: ListEventsPresenterOutputProtocol?
+    let calendar: Calendar
 
     // For testing
-    init(output: ListEventsPresenterOutputProtocol, calendar: Calendar = Calendar.current) {
+    init(output: ListEventsPresenterOutputProtocol?, calendar: Calendar = Calendar.current) {
         self.output = output
         self.calendar = calendar
     }
@@ -37,21 +37,19 @@ class ListEventsPresenter: ListEventsInteractorOutputProtocol {
     func presentFetchedEvents(_ upcomingEvents: ListEvents.Fetch.Response) {
 
         let cellModels: [ListEventsCellViewModel] = upcomingEvents.events.map({
-                let webUrl = URL(string: "https://facebook.com/events/\($0.eventId)/")!
-                let appUrl = URL(string: "fb://profile/\($0.eventId)/")!
-                let imageUrl = URL(string: "https://graph.facebook.com/\($0.eventId)/picture?type=square")!
+//                let webUrl = URL(string: "https://facebook.com/events/\($0.eventId)/")
+//                let appUrl = URL(string: "fb://profile/\($0.eventId)/")
+                let imageUrl = URL(string: "https://graph.facebook.com/\($0.eventId)/picture?type=square")
 
-                return ListEventsCellViewModel(webUrl: webUrl,
-                                               appUrl: appUrl,
-                                                 name: $0.name,
-                                            startTime: formatFriendlyTime($0.startTime, allDay: $0.dateOnly),
-                                             location: $0.location,
-                                             imageUrl: imageUrl)
+                return ListEventsCellViewModel(name: $0.name,
+                                          startTime: formatFriendlyTime($0.startTime, allDay: $0.dateOnly),
+                                           location: $0.location,
+                                           imageUrl: imageUrl)
         })
 
         let viewModel = ListEvents.ViewModel(discoveredEvents: cellModels)
 
-        output.presentFetchedEvents(viewModel)
+        output?.presentFetchedEvents(viewModel)
     }
 
     func formatFriendlyTime(_ date: Date, allDay: Bool, observingFrom: Date = Date()) -> String {

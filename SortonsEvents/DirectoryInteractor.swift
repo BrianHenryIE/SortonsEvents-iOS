@@ -32,7 +32,7 @@ class DirectoryInteractor: DirectoryViewControllerOutputProtocol {
     var currentFilter = ""
 
     var fomoIdNumber: String
-    var output: DirectoryInteractorOutputProtocol!
+    var output: DirectoryInteractorOutputProtocol?
 
     var cacheWorker: CacheProtocol
     let networkWorker: NetworkProtocol
@@ -86,14 +86,14 @@ class DirectoryInteractor: DirectoryViewControllerOutputProtocol {
         }
 
         let response = Directory.Fetch.Response(directory: displayedDirectory)
-        self.output.presentFetchedDirectory(response)
+        output?.presentFetchedDirectory(response)
     }
 
     func displaySelectedPageFrom(_ rowNumber: Int) {
 
         let fbId = displayedDirectory[rowNumber].fbPageId
 
-        let appUrl = URL(string: "fb://profile/\(fbId)")!
+        let appUrl = URL(string: "fb://profile/\(fbId)")! // TOD  extension?
         let safariUrl = URL(string: "https://facebook.com/\(fbId)")!
 
         if UIApplication.shared.canOpenURL(appUrl) {
