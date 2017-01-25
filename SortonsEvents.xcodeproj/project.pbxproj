@@ -2764,10 +2764,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMOTCD.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.tcd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -2793,10 +2789,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMOTCD.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.tcd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -2821,10 +2813,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMOUCC.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.ucc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -2849,10 +2837,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMOUCC.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.ucc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -2877,14 +2861,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMOUCD.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
-				"LIBRARY_SEARCH_PATHS[arch=*]" = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.ucd;
 				PRODUCT_NAME = "FOMO UCD";
 				PROVISIONING_PROFILE = "";
@@ -2910,14 +2886,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMOUCD.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
-				"LIBRARY_SEARCH_PATHS[arch=*]" = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.ucd;
 				PRODUCT_NAME = "FOMO UCD";
 				PROVISIONING_PROFILE = "";
@@ -2943,11 +2911,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMODCU.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
-				"LIBRARY_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.dcu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -2973,11 +2936,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMODCU.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
-				"LIBRARY_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.dcu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -3039,10 +2997,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMONUIM.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.nuim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -3069,10 +3023,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMONUIM.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.nuim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -3098,10 +3048,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMODIT.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.DIT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -3128,10 +3074,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMODIT.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.DIT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -3157,14 +3099,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMOUL.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
-				"LIBRARY_SEARCH_PATHS[arch=*]" = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.ul;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -3191,14 +3125,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMOUL.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
-				"LIBRARY_SEARCH_PATHS[arch=*]" = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.ul;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -3224,10 +3150,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMOQUB.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.qub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -3254,10 +3176,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMOQUB.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.qub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -3419,11 +3337,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMONUIG.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
-				"LIBRARY_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.nuig;
 				PRODUCT_NAME = SortonsEvents;
 				PROVISIONING_PROFILE = "";
@@ -3447,11 +3360,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SortonsEvents/targets/FOMONUIG.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
-				"LIBRARY_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.events.nuig;
 				PRODUCT_NAME = SortonsEvents;
 				PROVISIONING_PROFILE = "";
