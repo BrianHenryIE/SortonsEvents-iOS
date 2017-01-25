@@ -20,6 +20,7 @@ class MetaWebViewController: UIViewController, MetaWebViewPresenterOuput {
 
     @IBOutlet weak var webview: UIWebView!
 
+    var rootViewController: UIViewController?
     var output: MetaWebViewInteractor!
 
     override func viewDidLoad() {

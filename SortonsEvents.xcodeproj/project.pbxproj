@@ -26,6 +26,9 @@
 		A6141D591BB9F44F003150F1 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
 		A6141D851BB9F537003150F1 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
 		A618ED871DB3FE4A00281C17 /* DirectoryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A618ED861DB3FE4A00281C17 /* DirectoryViewControllerTests.swift */; };
+		A62439191E3881D000FB16AE /* MetaInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62439181E3881D000FB16AE /* MetaInteractorTests.swift */; };
+		A624391B1E3881DE00FB16AE /* MetaViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A624391A1E3881DE00FB16AE /* MetaViewControllerTests.swift */; };
+		A624391D1E3881EE00FB16AE /* MetaPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A624391C1E3881EE00FB16AE /* MetaPresenterTests.swift */; };
 		A625EA791C8AEEA800B35D80 /* ListEventsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF431C8AD688005064F7 /* ListEventsInteractor.swift */; };
 		A625EA7E1C8AF06E00B35D80 /* DiscoveredEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF3F1C8AD654005064F7 /* DiscoveredEvent.swift */; };
 		A625EA7F1C8AF07F00B35D80 /* NetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DBF411C8AD67D005064F7 /* NetworkWorker.swift */; };
@@ -521,6 +524,9 @@
 		A6141D5F1BB9F44F003150F1 /* FOMO TCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO TCD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6141D8B1BB9F537003150F1 /* FOMO UCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO UCC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A618ED861DB3FE4A00281C17 /* DirectoryViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryViewControllerTests.swift; sourceTree = "<group>"; };
+		A62439181E3881D000FB16AE /* MetaInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaInteractorTests.swift; sourceTree = "<group>"; };
+		A624391A1E3881DE00FB16AE /* MetaViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaViewControllerTests.swift; sourceTree = "<group>"; };
+		A624391C1E3881EE00FB16AE /* MetaPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaPresenterTests.swift; sourceTree = "<group>"; };
 		A62BD6371B9E1C4500E928E5 /* FOMO UCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO UCD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A636D26C1D0C88FF00FB9C62 /* DiscoveredEventTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveredEventTest.swift; sourceTree = "<group>"; };
 		A636D26E1D0C892F00FB9C62 /* DiscoveredEventNIUGBicycleVolunteering.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DiscoveredEventNIUGBicycleVolunteering.json; sourceTree = "<group>"; };
@@ -802,6 +808,9 @@
 		A643EB991DF4F75D0005E769 /* Meta */ = {
 			isa = PBXGroup;
 			children = (
+				A62439181E3881D000FB16AE /* MetaInteractorTests.swift */,
+				A624391A1E3881DE00FB16AE /* MetaViewControllerTests.swift */,
+				A624391C1E3881EE00FB16AE /* MetaPresenterTests.swift */,
 				A6A6732A1E20CEA7003AB89A /* MetaWebViewTests.swift */,
 			);
 			name = Meta;
@@ -2682,11 +2691,14 @@
 			files = (
 				A6C02AC71E2F595000A80799 /* SortonsEventsTests-Bridging-Header.h in Sources */,
 				A68183D51D2ADD6200E45D35 /* ListEventsTableViewControllerTests.swift in Sources */,
+				A624391D1E3881EE00FB16AE /* MetaPresenterTests.swift in Sources */,
 				A618ED871DB3FE4A00281C17 /* DirectoryViewControllerTests.swift in Sources */,
+				A624391B1E3881DE00FB16AE /* MetaViewControllerTests.swift in Sources */,
 				A65CEE4E1DB5C56B0059EF52 /* NewsPresenterTests.swift in Sources */,
 				A6AAD3FE1D25B7E90097AF22 /* DiscoveredEventsResponseTests.swift in Sources */,
 				A6C45C071DA386E600FC57D5 /* FomoIdTest.swift in Sources */,
 				A6C04F721DB454730009C9BF /* DirectoryPresenterTests.swift in Sources */,
+				A62439191E3881D000FB16AE /* MetaInteractorTests.swift in Sources */,
 				A69DBF591C8AE8E3005064F7 /* ListEventsInteractorTests.swift in Sources */,
 				A6C02ADC1E333E1A00A80799 /* NetworkTests.swift in Sources */,
 				A6AAD3E11D258F0D0097AF22 /* ClientPageDataTest.swift in Sources */,

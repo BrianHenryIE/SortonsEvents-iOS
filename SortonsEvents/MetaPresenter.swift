@@ -8,18 +8,54 @@
 
 import Foundation
 import UIKit
-import MessageUI
 
 protocol MetaPresenterOutputProtocol {
+    func showFeedbackTypeAlert()
     func showErrorAlert(title: String, message: String)
+    func share(_ objectsToShare:[Any])
+    func sendFeedbackEmail(to address: String, with subject: String)
 }
 
 class MetaPresenter: MetaInteractorOutputProtocol {
 
+    let fomoId: FomoId
     let output: MetaPresenterOutputProtocol?
 
-    init(output: MetaPresenterOutputProtocol?) {
+    init(fomoId: FomoId,
+         output: MetaPresenterOutputProtocol?) {
+        self.fomoId = fomoId
         self.output = output
+    }
+
+    func share() {
+        let shareText = "Check out \(fomoId.name) on the App Store"
+        let url = "https://itunes.apple.com/app/id\(fomoId.appStoreId)"
+
+        guard let appStoreLink = URL(string: url) else { return }
+
+        let objectsToShare = [shareText, appStoreLink] as [Any]
+
+        output?.share(objectsToShare)
+    }
+
+    func showFeedbackTypeAlert() {
+        output?.showFeedbackTypeAlert()
+    }
+
+    func sendFeedback(for type: FeedbackType) {
+        let subject: String
+        switch type {
+        case .complaint:
+            subject = "Complaint"
+        case .praise:
+            subject = "Praise"
+        case .suggestion:
+            subject = "Suggestion"
+        }
+
+        let address = "info@sortons.ie"
+
+        output?.sendFeedbackEmail(to: address, with: subject)
     }
 
     func showSendMailErrorAlert() {

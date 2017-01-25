@@ -153,13 +153,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="fRF-sd-wOp"/>
                     <connections>
-                        <outlet property="aboutCell" destination="gPd-Br-fd3" id="qEi-Dr-B2u"/>
-                        <outlet property="changeLogCell" destination="kQP-OD-P0X" id="aAf-uD-LLs"/>
-                        <outlet property="openIosSettingsCell" destination="J2T-Cx-N5F" id="tBX-sF-aqb"/>
-                        <outlet property="privacyPolicyCell" destination="ERn-VW-hcZ" id="pUa-1y-vjz"/>
-                        <outlet property="rateInTheAppStoreCell" destination="00j-VW-WoV" id="gMI-Kx-Lae"/>
-                        <outlet property="sendFeedbackCell" destination="62q-Go-tQY" id="Eox-qL-eLa"/>
-                        <outlet property="shareCell" destination="PTX-DL-sF3" id="3n3-Rk-oM9"/>
                         <outlet property="tableview" destination="8AO-0R-wkW" id="EeI-1n-Tcf"/>
                     </connections>
                 </tableViewController>

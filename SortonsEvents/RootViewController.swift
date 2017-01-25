@@ -39,6 +39,8 @@ class RootViewController: SLPagingViewSwift, UITabBarDelegate {
 
         self.init(controllers: vcs, showPageControl: true)
 
+        metaWireframe.rootViewController = self
+
         self.listEventsView = listEventsView
         self.newsView = newsView
 

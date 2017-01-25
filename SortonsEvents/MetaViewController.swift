@@ -7,37 +7,23 @@
 //
 
 import UIKit
+import MessageUI
 
 protocol MetaViewControllerOutputProtocol {
 
-    func showWebView(for page: SettingsPage)
-
-    func share()
-
     func sendFeedback(for type: FeedbackType)
 
-    func openIosSettings()
-
-    func rateInAppStore()
+    func selectedCell(at indexPath: IndexPath)
 }
 
 class MetaViewController: UITableViewController, MetaPresenterOutputProtocol {
 
-    var output: MetaViewControllerOutputProtocol!
+    var rootViewController: UIViewController?
+    var output: MetaViewControllerOutputProtocol?
+
+    var activityVC: UIActivityViewController?
 
     @IBOutlet var tableview: UITableView!
-
-    @IBOutlet weak var aboutCell: UITableViewCell!
-    @IBOutlet weak var changeLogCell: UITableViewCell!
-    @IBOutlet weak var privacyPolicyCell: UITableViewCell!
-
-    // Log in/out of Facebook
-    // Configure notifications
-
-    @IBOutlet weak var shareCell: UITableViewCell!
-    @IBOutlet weak var sendFeedbackCell: UITableViewCell!
-    @IBOutlet weak var openIosSettingsCell: UITableViewCell!
-    @IBOutlet weak var rateInTheAppStoreCell: UITableViewCell!
 
     var alert: UIAlertController!
 
@@ -47,27 +33,7 @@ class MetaViewController: UITableViewController, MetaPresenterOutputProtocol {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        let selectedCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
-        switch  selectedCell {
-        case aboutCell:
-            output.showWebView(for:.about)
-        case changeLogCell:
-            output.showWebView(for: .changelog)
-        case privacyPolicyCell:
-            output.showWebView(for: .privacyPolicy)
-        case shareCell:
-            output.share()
-        case sendFeedbackCell:
-            showFeedbackTypeAlert()
-        case openIosSettingsCell:
-            output.openIosSettings()
-        case rateInTheAppStoreCell:
-            output.rateInAppStore()
-        default:
-            NSLog("unexpected cell: \(selectedCell.textLabel?.text)")
-            break
-        }
-
+        output?.selectedCell(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
@@ -77,20 +43,22 @@ class MetaViewController: UITableViewController, MetaPresenterOutputProtocol {
                                       preferredStyle: .actionSheet)
         let praiseAction = UIAlertAction(title: "Praise!",
                                         style: .default) { (alert: UIAlertAction!) -> Void in
-                                            self.output.sendFeedback(for: .praise)
+                                            self.output?.sendFeedback(for: .praise)
         }
         let suggestionAction = UIAlertAction(title: "Suggestion",
                                             style: .default) { (alert: UIAlertAction!) -> Void in
-                                                self.output.sendFeedback(for: .suggestion)
+                                                self.output?.sendFeedback(for: .suggestion)
         }
         let complaintAction = UIAlertAction(title: "Complaint",
                                             style: .default) { (alert: UIAlertAction!) -> Void in
-                                                self.output.sendFeedback(for: .complaint)
+                                                self.output?.sendFeedback(for: .complaint)
         }
         alert.addAction(suggestionAction)
         alert.addAction(praiseAction)
         alert.addAction(complaintAction)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                         style: .cancel,
+                                       handler: nil)
         alert.addAction(cancelAction)
 
         alert.modalPresentationStyle = .popover
@@ -105,14 +73,14 @@ class MetaViewController: UITableViewController, MetaPresenterOutputProtocol {
         alert.popoverPresentationController?.sourceView = self.view
         alert.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
 
-        present(alert, animated: true, completion:nil)
+        rootViewController?.present(alert, animated: true, completion:nil)
     }
 
     func showErrorAlert(title: String, message: String) {
 
         let alertController = UIAlertController(title: title,
-                                                message: message,
-                                                preferredStyle: .alert)
+                                              message: message,
+                                       preferredStyle: .alert)
 
         let okAction = UIAlertAction(title: "OK", style: .default) { action in
             // ...
@@ -122,5 +90,41 @@ class MetaViewController: UITableViewController, MetaPresenterOutputProtocol {
         self.present(alertController, animated: true) {
             // ...
         }
+    }
+
+    func share(_ objectsToShare: [Any]) {
+        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+
+        activityVC.popoverPresentationController?.sourceView = view
+        activityVC.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
+
+        let alertOrigin = CGPoint(x: (view.frame.width / 2 - 160),
+                                  y: (view.frame.height / 2 - 100))
+
+        let alertSize = CGSize(width: 320, height: 200)
+
+        activityVC.popoverPresentationController?.sourceRect = CGRect(origin: alertOrigin,
+                                                                      size: alertSize)
+
+        rootViewController?.present(activityVC, animated: true, completion: nil)
+    }
+
+    func sendFeedbackEmail(to address: String, with subject: String) {
+
+        let mailComposerVC = MFMailComposeViewController()
+
+        mailComposerVC.mailComposeDelegate = self
+        mailComposerVC.setToRecipients([address])
+        mailComposerVC.setSubject(subject)
+
+        rootViewController?.present(mailComposerVC, animated: true, completion: nil)
+    }
+}
+
+extension MetaViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController,
+                               didFinishWith result: MFMailComposeResult,
+                               error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }

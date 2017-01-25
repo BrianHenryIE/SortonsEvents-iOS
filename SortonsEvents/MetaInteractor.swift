@@ -7,20 +7,24 @@
 //
 
 import Foundation
+import MessageUI
 
 protocol MetaInteractorOutputProtocol {
     func showSendMailErrorAlert()
+    func showFeedbackTypeAlert()
+    func sendFeedback(for type: FeedbackType)
+    func share()
 }
 
-enum SettingsPage {
-    case about, changelog, privacyPolicy
+enum SettingsPage: Int {
+    case about = 0, changelog, privacyPolicy
 }
 
 enum FeedbackType {
     case suggestion, praise, complaint
 }
 
-class MetaInteractor: MetaViewControllerOutputProtocol {
+class MetaInteractor: NSObject, MetaViewControllerOutputProtocol {
 
     let presenter: MetaInteractorOutputProtocol
 
@@ -33,7 +37,33 @@ class MetaInteractor: MetaViewControllerOutputProtocol {
         self.wireframe = wireframe
     }
 
-    func showWebView(for page: SettingsPage) {
+    func selectedCell(at indexPath: IndexPath) {
+
+        switch indexPath.section {
+        case 0:
+            guard let page = SettingsPage(rawValue: indexPath.row) else {
+                return
+            }
+            showWebView(for: page)
+        case 1:
+            switch indexPath.row {
+            case 0:
+                presenter.share()
+            case 1:
+                presenter.showFeedbackTypeAlert()
+            case 2:
+                openIosSettings()
+            case 3:
+                rateInAppStore()
+            default:
+                break
+            }
+        default:
+            break
+        }
+    }
+
+    private func showWebView(for page: SettingsPage) {
         let url: String
         switch page {
         case .about:
@@ -46,39 +76,20 @@ class MetaInteractor: MetaViewControllerOutputProtocol {
         wireframe.presentWebView(for: url)
     }
 
-    func share() {
-        let shareText = "Check out \(fomoId.name) on the App Store"
-        let url = "https://itunes.apple.com/app/id\(fomoId.appStoreId)"
-
-        let appStoreLink = URL(string: url)!
-
-        let objectsToShare = [shareText, appStoreLink] as [Any]
-
-        wireframe.share(objectsToShare)
-    }
-
+    // https://www.andrewcbancroft.com/2014/08/25/send-email-in-app-using-mfmailcomposeviewcontroller-with-swift/
     func sendFeedback(for type: FeedbackType) {
-        let subject: String
-        switch type {
-        case .complaint:
-            subject = "Complaint"
-        case .praise:
-            subject = "Praise"
-        case .suggestion:
-            subject = "Suggestion"
+        if MFMailComposeViewController.canSendMail() {
+            presenter.sendFeedback(for: type)
+        } else {
+            presenter.showSendMailErrorAlert()
         }
-        wireframe.sendFeedbackEmail(subject)
     }
 
-    func showSendMailErrorAlert() {
-        presenter.showSendMailErrorAlert()
-    }
-
-    func openIosSettings() {
+    private func openIosSettings() {
         wireframe.openIosSettings()
     }
 
-    func rateInAppStore() {
+    private func rateInAppStore() {
         let appStoreReviewLink = "itms-apps://itunes.apple.com/app/viewContentsUserReviews?id=\(fomoId.appStoreId)"
         wireframe.reviewOnAppStore(appStoreReviewLink)
     }
