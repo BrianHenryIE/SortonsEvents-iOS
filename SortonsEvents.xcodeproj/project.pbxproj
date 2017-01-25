@@ -335,14 +335,6 @@
 		A69187591DCC551000372A98 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65B23BA1D6DFAE700A66C85 /* News.storyboard */; };
 		A691875A1DCC551000372A98 /* ListEvents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6478D171D36CE2600B6000B /* ListEvents.storyboard */; };
 		A691875B1DCC551000372A98 /* ListEventsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C41D6E099D00A66C85 /* ListEventsImages.xcassets */; };
-		A69187671DCC572000372A98 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69187661DCC572000372A98 /* Info.plist */; };
-		A69187681DCC572000372A98 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69187661DCC572000372A98 /* Info.plist */; };
-		A69187691DCC572000372A98 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69187661DCC572000372A98 /* Info.plist */; };
-		A691876A1DCC572000372A98 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69187661DCC572000372A98 /* Info.plist */; };
-		A691876B1DCC572000372A98 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69187661DCC572000372A98 /* Info.plist */; };
-		A691876C1DCC572000372A98 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69187661DCC572000372A98 /* Info.plist */; };
-		A691876D1DCC572000372A98 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69187661DCC572000372A98 /* Info.plist */; };
-		A691876E1DCC572000372A98 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69187661DCC572000372A98 /* Info.plist */; };
 		A69187701DCC57B200372A98 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A691876F1DCC57B200372A98 /* AppImages.xcassets */; };
 		A69187711DCC57B200372A98 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A691876F1DCC57B200372A98 /* AppImages.xcassets */; };
 		A69187721DCC57B200372A98 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A691876F1DCC57B200372A98 /* AppImages.xcassets */; };
@@ -379,7 +371,6 @@
 		A69187A71DCC591E00372A98 /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A691876F1DCC57B200372A98 /* AppImages.xcassets */; };
 		A69187A81DCC591E00372A98 /* ListEvents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6478D171D36CE2600B6000B /* ListEvents.storyboard */; };
 		A69187A91DCC591E00372A98 /* ListEventsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C41D6E099D00A66C85 /* ListEventsImages.xcassets */; };
-		A69187AA1DCC591E00372A98 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69187661DCC572000372A98 /* Info.plist */; };
 		A69187AB1DCC591E00372A98 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65B23BA1D6DFAE700A66C85 /* News.storyboard */; };
 		A69187AC1DCC591E00372A98 /* NewsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65B23C81D6E09F000A66C85 /* NewsImages.xcassets */; };
 		A69187AD1DCC591E00372A98 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
@@ -387,15 +378,7 @@
 		A69187B81DCC59AF00372A98 /* LaunchScreenDIT.xib in Resources */ = {isa = PBXBuildFile; fileRef = A691868F1DCC4E7800372A98 /* LaunchScreenDIT.xib */; };
 		A69187B91DCC59B800372A98 /* LaunchScreenNUIM.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69186911DCC4E7800372A98 /* LaunchScreenNUIM.xib */; };
 		A69187BA1DCC59DB00372A98 /* LaunchScreenUL.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69186951DCC4E7800372A98 /* LaunchScreenUL.xib */; };
-		A69187BB1DCC59E000372A98 /* FOMOUL.plist in Resources */ = {isa = PBXBuildFile; fileRef = A691867E1DCC4B2C00372A98 /* FOMOUL.plist */; };
-		A69187BC1DCC59E700372A98 /* FOMOUCD.plist in Resources */ = {isa = PBXBuildFile; fileRef = A691867D1DCC4B2C00372A98 /* FOMOUCD.plist */; };
 		A69187BD1DCC59EE00372A98 /* FOMOUCC.plist in Resources */ = {isa = PBXBuildFile; fileRef = A691867C1DCC4B2C00372A98 /* FOMOUCC.plist */; };
-		A69187BE1DCC59F100372A98 /* FOMOTCD.plist in Resources */ = {isa = PBXBuildFile; fileRef = A691867B1DCC4B2C00372A98 /* FOMOTCD.plist */; };
-		A69187BF1DCC59F600372A98 /* FOMOQUB.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69187781DCC591900372A98 /* FOMOQUB.plist */; };
-		A69187C01DCC59F900372A98 /* FOMONUIM.plist in Resources */ = {isa = PBXBuildFile; fileRef = A691867A1DCC4B2C00372A98 /* FOMONUIM.plist */; };
-		A69187C11DCC59FE00372A98 /* FOMODIT.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186791DCC4B2C00372A98 /* FOMODIT.plist */; };
-		A69187C21DCC5A0200372A98 /* FOMONUIG.plist in Resources */ = {isa = PBXBuildFile; fileRef = A691868B1DCC4D7D00372A98 /* FOMONUIG.plist */; };
-		A69187C31DCC5A0500372A98 /* FOMODCU.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69186781DCC4B2C00372A98 /* FOMODCU.plist */; };
 		A698B6F81D2589F7003494A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A675931C941D6300FAD755 /* AppDelegate.swift */; };
 		A698B6F91D2589F7003494A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A675931C941D6300FAD755 /* AppDelegate.swift */; };
 		A698B6FA1D2589F8003494A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A675931C941D6300FAD755 /* AppDelegate.swift */; };
@@ -592,7 +575,6 @@
 		A69186E81DCC543A00372A98 /* FOMO NUIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO NUIM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69187251DCC54BD00372A98 /* FOMO DIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO DIT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69187641DCC551000372A98 /* FOMO UL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO UL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A69187661DCC572000372A98 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A691876F1DCC57B200372A98 /* AppImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = AppImages.xcassets; path = targets/AppImages.xcassets; sourceTree = "<group>"; };
 		A69187781DCC591900372A98 /* FOMOQUB.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = FOMOQUB.plist; path = targets/FOMOQUB.plist; sourceTree = "<group>"; };
 		A69187B41DCC591E00372A98 /* FOMO QUB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO QUB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -819,7 +801,7 @@
 		A64AE8851E1CF5620077A9AB /* Colleges */ = {
 			isa = PBXGroup;
 			children = (
-				A6C02ADF1E33D09600A80799 /* Config */,
+				A6C02ADF1E33D09600A80799 /* Info.plist */,
 				A6C02ADE1E33D08B00A80799 /* LaunchScreens */,
 			);
 			name = Colleges;
@@ -1029,7 +1011,7 @@
 			name = LaunchScreens;
 			sourceTree = "<group>";
 		};
-		A6C02ADF1E33D09600A80799 /* Config */ = {
+		A6C02ADF1E33D09600A80799 /* Info.plist */ = {
 			isa = PBXGroup;
 			children = (
 				A69186781DCC4B2C00372A98 /* FOMODCU.plist */,
@@ -1042,7 +1024,7 @@
 				A691867D1DCC4B2C00372A98 /* FOMOUCD.plist */,
 				A691867E1DCC4B2C00372A98 /* FOMOUL.plist */,
 			);
-			name = Config;
+			name = Info.plist;
 			sourceTree = "<group>";
 		};
 		A6C04F751DB4590A0009C9BF /* Model */ = {
@@ -1122,7 +1104,6 @@
 				A64DF46F1DDC25D700A102E0 /* .travis.yml */,
 				A69CA9771E1F70D7006BE647 /* fastlane */,
 				A691876F1DCC57B200372A98 /* AppImages.xcassets */,
-				A69187661DCC572000372A98 /* Info.plist */,
 				A6BDA8771AE5CA6500C1A55C /* Settings.bundle */,
 			);
 			name = "Supporting Files";
@@ -1476,12 +1457,10 @@
 				A609A09D1E3546170058D613 /* Common.storyboard in Resources */,
 				A63B94DA1DB6330500ECA301 /* ListEvents.storyboard in Resources */,
 				A63B94FE1DB6333500ECA301 /* ListEventsImages.xcassets in Resources */,
-				A691876B1DCC572000372A98 /* Info.plist in Resources */,
 				A63B950E1DB6336100ECA301 /* News.storyboard in Resources */,
 				A643EB681DF4F7240005E769 /* MetaImages.xcassets in Resources */,
 				A63B955C1DB6350100ECA301 /* NewsImages.xcassets in Resources */,
 				A6141D591BB9F44F003150F1 /* Settings.bundle in Resources */,
-				A69187BE1DCC59F100372A98 /* FOMOTCD.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1498,7 +1477,6 @@
 				A69187751DCC57B200372A98 /* AppImages.xcassets in Resources */,
 				A63B94FF1DB6333600ECA301 /* ListEventsImages.xcassets in Resources */,
 				A63B950F1DB6336100ECA301 /* News.storyboard in Resources */,
-				A691876C1DCC572000372A98 /* Info.plist in Resources */,
 				A643EB691DF4F7240005E769 /* MetaImages.xcassets in Resources */,
 				A63B955D1DB6350100ECA301 /* NewsImages.xcassets in Resources */,
 				A69186A51DCC4EF800372A98 /* LaunchScreenUCC.xib in Resources */,
@@ -1510,7 +1488,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A69187BC1DCC59E700372A98 /* FOMOUCD.plist in Resources */,
 				A643EB611DF4F7240005E769 /* Meta.storyboard in Resources */,
 				A65B23BD1D6DFB2400A66C85 /* Directory.storyboard in Resources */,
 				A65B23C71D6E09E200A66C85 /* DirectoryImages.xcassets in Resources */,
@@ -1521,7 +1498,6 @@
 				A69186A61DCC4F0200372A98 /* LaunchScreenUCD.xib in Resources */,
 				A65B23BB1D6DFAE700A66C85 /* News.storyboard in Resources */,
 				A643EB6A1DF4F7240005E769 /* MetaImages.xcassets in Resources */,
-				A691876D1DCC572000372A98 /* Info.plist in Resources */,
 				A6478D181D36CE2600B6000B /* ListEvents.storyboard in Resources */,
 				A65B23C51D6E099D00A66C85 /* ListEventsImages.xcassets in Resources */,
 			);
@@ -1531,7 +1507,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A69187C31DCC5A0500372A98 /* FOMODCU.plist in Resources */,
 				A643EB5A1DF4F7240005E769 /* Meta.storyboard in Resources */,
 				A63B95101DB6336200ECA301 /* News.storyboard in Resources */,
 				A63B955E1DB6350200ECA301 /* NewsImages.xcassets in Resources */,
@@ -1540,7 +1515,6 @@
 				A69187701DCC57B200372A98 /* AppImages.xcassets in Resources */,
 				A63B94DC1DB6330600ECA301 /* ListEvents.storyboard in Resources */,
 				A63B95001DB6333600ECA301 /* ListEventsImages.xcassets in Resources */,
-				A69187671DCC572000372A98 /* Info.plist in Resources */,
 				A643EB631DF4F7240005E769 /* MetaImages.xcassets in Resources */,
 				A69186A31DCC4EB000372A98 /* LaunchScreenDCU.xib in Resources */,
 				A63B32B91C68AFA400C46020 /* Settings.bundle in Resources */,
@@ -1567,11 +1541,9 @@
 				A609A09B1E3546170058D613 /* Common.storyboard in Resources */,
 				A69186DD1DCC543A00372A98 /* ListEvents.storyboard in Resources */,
 				A69186DE1DCC543A00372A98 /* ListEventsImages.xcassets in Resources */,
-				A691876A1DCC572000372A98 /* Info.plist in Resources */,
 				A69186DF1DCC543A00372A98 /* News.storyboard in Resources */,
 				A643EB661DF4F7240005E769 /* MetaImages.xcassets in Resources */,
 				A69186E01DCC543A00372A98 /* NewsImages.xcassets in Resources */,
-				A69187C01DCC59F900372A98 /* FOMONUIM.plist in Resources */,
 				A69186E11DCC543A00372A98 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1588,10 +1560,8 @@
 				A609A0991E3546170058D613 /* Common.storyboard in Resources */,
 				A691871A1DCC54BD00372A98 /* ListEvents.storyboard in Resources */,
 				A691871B1DCC54BD00372A98 /* ListEventsImages.xcassets in Resources */,
-				A69187681DCC572000372A98 /* Info.plist in Resources */,
 				A691871C1DCC54BD00372A98 /* News.storyboard in Resources */,
 				A643EB641DF4F7240005E769 /* MetaImages.xcassets in Resources */,
-				A69187C11DCC59FE00372A98 /* FOMODIT.plist in Resources */,
 				A691871D1DCC54BD00372A98 /* NewsImages.xcassets in Resources */,
 				A691871E1DCC54BD00372A98 /* Settings.bundle in Resources */,
 			);
@@ -1608,9 +1578,7 @@
 				A69187551DCC551000372A98 /* NewsImages.xcassets in Resources */,
 				A69187561DCC551000372A98 /* Settings.bundle in Resources */,
 				A69187581DCC551000372A98 /* LaunchScreenUCD.xib in Resources */,
-				A69187BB1DCC59E000372A98 /* FOMOUL.plist in Resources */,
 				A69187591DCC551000372A98 /* News.storyboard in Resources */,
-				A691876E1DCC572000372A98 /* Info.plist in Resources */,
 				A69187BA1DCC59DB00372A98 /* LaunchScreenUL.xib in Resources */,
 				A643EB621DF4F7240005E769 /* Meta.storyboard in Resources */,
 				A691875A1DCC551000372A98 /* ListEvents.storyboard in Resources */,
@@ -1627,12 +1595,10 @@
 				A643EB5E1DF4F7240005E769 /* Meta.storyboard in Resources */,
 				A69187A51DCC591E00372A98 /* Directory.storyboard in Resources */,
 				A69187B71DCC598800372A98 /* LaunchScreenQUB.xib in Resources */,
-				A69187BF1DCC59F600372A98 /* FOMOQUB.plist in Resources */,
 				A609A09C1E3546170058D613 /* Common.storyboard in Resources */,
 				A69187A71DCC591E00372A98 /* AppImages.xcassets in Resources */,
 				A69187A81DCC591E00372A98 /* ListEvents.storyboard in Resources */,
 				A69187A91DCC591E00372A98 /* ListEventsImages.xcassets in Resources */,
-				A69187AA1DCC591E00372A98 /* Info.plist in Resources */,
 				A643EB671DF4F7240005E769 /* MetaImages.xcassets in Resources */,
 				A69187AB1DCC591E00372A98 /* News.storyboard in Resources */,
 				A69187AC1DCC591E00372A98 /* NewsImages.xcassets in Resources */,
@@ -1664,14 +1630,12 @@
 				A643EB5C1DF4F7240005E769 /* Meta.storyboard in Resources */,
 				A63B952A1DB6338000ECA301 /* Directory.storyboard in Resources */,
 				A63B94D91DB6330500ECA301 /* ListEvents.storyboard in Resources */,
-				A69187C21DCC5A0200372A98 /* FOMONUIG.plist in Resources */,
 				A609A09A1E3546170058D613 /* Common.storyboard in Resources */,
 				A69187721DCC57B200372A98 /* AppImages.xcassets in Resources */,
 				A63B94FD1DB6333500ECA301 /* ListEventsImages.xcassets in Resources */,
 				A63B950D1DB6336100ECA301 /* News.storyboard in Resources */,
 				A63B955B1DB6350100ECA301 /* NewsImages.xcassets in Resources */,
 				A643EB651DF4F7240005E769 /* MetaImages.xcassets in Resources */,
-				A69187691DCC572000372A98 /* Info.plist in Resources */,
 				A6BDA8781AE5CA6500C1A55C /* Settings.bundle in Resources */,
 				A69186991DCC4E7800372A98 /* LaunchScreenNUIG.xib in Resources */,
 			);
