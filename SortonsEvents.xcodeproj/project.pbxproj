@@ -9,10 +9,8 @@
 /* Begin PBXBuildFile section */
 		03A27D8415DF3AAE4FE6419B /* Pods_FOMO_DCU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75693CB5A902F3AB50B59FEF /* Pods_FOMO_DCU.framework */; };
 		0A6A66029A0973617EE0862E /* Pods_FOMO_DIT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53758BD505E55471D2B6557 /* Pods_FOMO_DIT.framework */; };
-		2CD497EC7F7B421D16F30E87 /* Pods_FOMO_UCD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36CF2249EF126ACF7C1BE04 /* Pods_FOMO_UCD.framework */; };
 		401F7CD815CDEFC7ADC0AB5D /* Pods_FOMO_QUB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC3714A0D31113C8D0729DE /* Pods_FOMO_QUB.framework */; };
 		4F28A9AF78802111DCAF2FB5 /* Pods_FOMO_UL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F604AEE0BAF446DB4898192B /* Pods_FOMO_UL.framework */; };
-		656414DB16D6EB63CEFE9085 /* Pods_FOMO_TCD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3618116F62AC71C54B105380 /* Pods_FOMO_TCD.framework */; };
 		A609A0981E3546170058D613 /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A609A0971E3546170058D613 /* Common.storyboard */; };
 		A609A0991E3546170058D613 /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A609A0971E3546170058D613 /* Common.storyboard */; };
 		A609A09A1E3546170058D613 /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A609A0971E3546170058D613 /* Common.storyboard */; };
@@ -378,7 +376,6 @@
 		A69187B81DCC59AF00372A98 /* LaunchScreenDIT.xib in Resources */ = {isa = PBXBuildFile; fileRef = A691868F1DCC4E7800372A98 /* LaunchScreenDIT.xib */; };
 		A69187B91DCC59B800372A98 /* LaunchScreenNUIM.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69186911DCC4E7800372A98 /* LaunchScreenNUIM.xib */; };
 		A69187BA1DCC59DB00372A98 /* LaunchScreenUL.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69186951DCC4E7800372A98 /* LaunchScreenUL.xib */; };
-		A69187BD1DCC59EE00372A98 /* FOMOUCC.plist in Resources */ = {isa = PBXBuildFile; fileRef = A691867C1DCC4B2C00372A98 /* FOMOUCC.plist */; };
 		A698B6F81D2589F7003494A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A675931C941D6300FAD755 /* AppDelegate.swift */; };
 		A698B6F91D2589F7003494A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A675931C941D6300FAD755 /* AppDelegate.swift */; };
 		A698B6FA1D2589F8003494A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A675931C941D6300FAD755 /* AppDelegate.swift */; };
@@ -416,7 +413,6 @@
 		A6AD95FE1DCB0CBB00CEEFAA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD95F31DCB0AD500CEEFAA /* RootViewController.swift */; };
 		A6B7D6A01DBC156A00578C3C /* CacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B7D69F1DBC156A00578C3C /* CacheTests.swift */; };
 		A6BDA8781AE5CA6500C1A55C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6BDA8771AE5CA6500C1A55C /* Settings.bundle */; };
-		A6C02AC71E2F595000A80799 /* SortonsEventsTests-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = A6EC83101E2F4E3800EFE12C /* SortonsEventsTests-Bridging-Header.h */; };
 		A6C02AD81E33312A00A80799 /* ListEventsCacheTestsData.json in Resources */ = {isa = PBXBuildFile; fileRef = A6C02AD71E33312A00A80799 /* ListEventsCacheTestsData.json */; };
 		A6C02ADC1E333E1A00A80799 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C02ADB1E333E1A00A80799 /* NetworkTests.swift */; };
 		A6C02AEB1E33F5CC00A80799 /* Array+NilEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C02AEA1E33F5CC00A80799 /* Array+NilEmpty.swift */; };
@@ -613,7 +609,6 @@
 		A6D2212E1DFDFFD4003E2285 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		A6D4A1E31DBF0BB90072309B /* ClientPageDataTcd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ClientPageDataTcd.json; sourceTree = "<group>"; };
 		A6E10C611DB41643007854F8 /* DirectoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryTableViewCell.swift; sourceTree = "<group>"; };
-		A6EC83101E2F4E3800EFE12C /* SortonsEventsTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SortonsEventsTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		B18394CE0C5847826B51D9BD /* Pods-FOMO QUB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO QUB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO QUB/Pods-FOMO QUB.debug.xcconfig"; sourceTree = "<group>"; };
 		B36CF2249EF126ACF7C1BE04 /* Pods_FOMO_UCD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FOMO_UCD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53758BD505E55471D2B6557 /* Pods_FOMO_DIT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FOMO_DIT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -633,7 +628,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBDBCE0503E60E29966304F1 /* Pods_FOMO_TCD.framework in Frameworks */,
-				656414DB16D6EB63CEFE9085 /* Pods_FOMO_TCD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,7 +644,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEE3A7AAA7AE77B15B4F1409 /* Pods_FOMO_UCD.framework in Frameworks */,
-				2CD497EC7F7B421D16F30E87 /* Pods_FOMO_UCD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -922,7 +915,6 @@
 		A69DBF501C8AE4D8005064F7 /* SortonsEventsTests */ = {
 			isa = PBXGroup;
 			children = (
-				A6EC83101E2F4E3800EFE12C /* SortonsEventsTests-Bridging-Header.h */,
 				A6C45C051DA386A600FC57D5 /* Common */,
 				A69DBF531C8AE4D8005064F7 /* Info.plist */,
 				A66DC3951CF395E000ED636B /* Tests.swift */,
@@ -1363,7 +1355,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Sortons;
 				TargetAttributes = {
 					A6141D401BB9F44F003150F1 = {
@@ -1471,7 +1463,6 @@
 				A63B95541DB633A800ECA301 /* DirectoryImages.xcassets in Resources */,
 				A643EB601DF4F7240005E769 /* Meta.storyboard in Resources */,
 				A63B952D1DB6338100ECA301 /* Directory.storyboard in Resources */,
-				A69187BD1DCC59EE00372A98 /* FOMOUCC.plist in Resources */,
 				A63B94DB1DB6330600ECA301 /* ListEvents.storyboard in Resources */,
 				A609A09E1E3546170058D613 /* Common.storyboard in Resources */,
 				A69187751DCC57B200372A98 /* AppImages.xcassets in Resources */,
@@ -2653,7 +2644,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6C02AC71E2F595000A80799 /* SortonsEventsTests-Bridging-Header.h in Sources */,
 				A68183D51D2ADD6200E45D35 /* ListEventsTableViewControllerTests.swift in Sources */,
 				A624391D1E3881EE00FB16AE /* MetaPresenterTests.swift in Sources */,
 				A618ED871DB3FE4A00281C17 /* DirectoryViewControllerTests.swift in Sources */,
@@ -2752,7 +2742,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 676AE7F75C85DD3D40CC62B9 /* Pods-FOMO TCD.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconTCD;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -2777,7 +2767,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BF815C8B5C943A016518E066 /* Pods-FOMO TCD.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconTCD;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -2801,6 +2791,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E23067C8B0CCF4CE58B143B0 /* Pods-FOMO UCC.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconUCC;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -2825,6 +2816,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 263AE60363AE71CC78FDCF68 /* Pods-FOMO UCC.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconUCC;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -2849,7 +2841,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5BD25BE71C9C157420C7DB02 /* Pods-FOMO UCD.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconUCD;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -2874,7 +2866,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1F158784AB10985A6D867B91 /* Pods-FOMO UCD.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconUCD;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -2898,6 +2890,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C3415D2C1CA1ECA25DE250C1 /* Pods-FOMO DCU.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDCU;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -2923,6 +2916,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 86C4D503BF874FC2107C8A4C /* Pods-FOMO DCU.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDCU;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -2984,7 +2978,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9F62310E5D670C12A757B5DE /* Pods-FOMO NUIM.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconNUIM;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -3010,7 +3004,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2256E0674B03AA642A083565 /* Pods-FOMO NUIM.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconNUIM;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -3035,7 +3029,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89FCEDB6A3948FDAAA17FEB9 /* Pods-FOMO DIT.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDIT;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -3061,7 +3055,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A19CAD7B611D163EDD8FC88E /* Pods-FOMO DIT.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDIT;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -3086,7 +3080,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 60B1D78B957094D28620247E /* Pods-FOMO UL.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconUL;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -3112,7 +3106,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C75C244C099B183296C1C251 /* Pods-FOMO UL.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconUL;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -3137,7 +3131,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B18394CE0C5847826B51D9BD /* Pods-FOMO QUB.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconQUB;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -3163,7 +3157,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 22B88667AC47715DFD5F0603 /* Pods-FOMO QUB.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconQUB;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -3188,7 +3182,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 786DDF9E2A825C011E1D3806 /* Pods-SortonsEventsTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -3199,7 +3193,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.SortonsEventsTests;
 				PRODUCT_MODULE_NAME = SortonsEventsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SortonsEventsTests/SortonsEventsTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FOMO UCD.app/FOMO UCD";
@@ -3210,7 +3204,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A4B45A6EE4E167955EE9B517 /* Pods-SortonsEventsTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -3222,7 +3216,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ie.sortons.SortonsEventsTests;
 				PRODUCT_MODULE_NAME = SortonsEventsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SortonsEventsTests/SortonsEventsTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FOMO UCD.app/FOMO UCD";
 			};
@@ -3326,6 +3320,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 276E1E2F4BFB21CACE3BC829 /* Pods-FOMO NUIG.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconNUIG;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -3349,6 +3344,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1EA26ED2DAE640FF96C9C8E6 /* Pods-FOMO NUIG.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconNUIG;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
