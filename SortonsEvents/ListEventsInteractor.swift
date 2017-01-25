@@ -87,7 +87,7 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtoco
                 }
                 break
 
-            case .failure(let error):
+            case .failure( _):
 
                 break
             }
