@@ -63,7 +63,7 @@ class DirectoryInteractor: DirectoryViewControllerOutputProtocol {
                 self.directory = sourcePages
                 self.cacheWorker.save(sourcePages)
                 self.outputDirectoryToPresenter()
-            case .failure(let error):
+            case .failure( _):
                 break
             }
         }
