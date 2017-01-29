@@ -9,8 +9,8 @@
 import Foundation
 import XCTest
 
-var deviceLanguage = ""
-var locale = ""
+var deviceLanguage: String = ""
+var locale: String = ""
 
 @available(*, deprecated, message: "use setupSnapshot: instead")
 func setLanguage(_ app: XCUIApplication) {
@@ -42,7 +42,7 @@ open class Snapshot: NSObject {
 
         do {
             let trimCharacterSet = CharacterSet.whitespacesAndNewlines
-            deviceLanguage = try NSString(contentsOfFile: path, encoding: .utf8.rawValue)
+            deviceLanguage = try String(contentsOfFile: path, encoding: .utf8)
                 .trimmingCharacters(in: trimCharacterSet) as String
             app.launchArguments += ["-AppleLanguages", "(\(deviceLanguage))"]
         } catch {
@@ -59,7 +59,7 @@ open class Snapshot: NSObject {
 
         do {
             let trimCharacterSet = CharacterSet.whitespacesAndNewlines
-            locale = try NSString(contentsOfFile: path, encoding: .utf8.rawValue)
+            locale = try String(contentsOfFile: path, encoding: .utf8)
                 .trimmingCharacters(in: trimCharacterSet) as String
         } catch {
             print("Couldn't detect/set locale...")
@@ -79,7 +79,7 @@ open class Snapshot: NSObject {
         app.launchArguments += ["-FASTLANE_SNAPSHOT", "YES", "-ui_testing"]
 
         do {
-            let launchArguments = try NSString(contentsOfFile: path, encoding: .utf8.rawValue) as String
+            let launchArguments: String = try String(contentsOfFile: path, encoding: .utf8)
             let regex = try NSRegularExpression(pattern: "(\\\".+?\\\"|\\S+)", options: [])
             let matches = regex.matches(in: launchArguments,
                                         options: [],

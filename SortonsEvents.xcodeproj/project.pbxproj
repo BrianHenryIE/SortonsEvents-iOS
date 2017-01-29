@@ -451,40 +451,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A6595EA01E14DC8600AA1CE1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A6C613031A91492500A5F082 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A6141D401BB9F44F003150F1;
-			remoteInfo = "FOMO TCD";
-		};
-		A67993B91E2233B00074A5A7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A6C613031A91492500A5F082 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A62BD6181B9E1C4500E928E5;
-			remoteInfo = "FOMO UCD";
-		};
 		A69DBF541C8AE4D8005064F7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A6C613031A91492500A5F082 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A62BD6181B9E1C4500E928E5;
 			remoteInfo = "FOMO UCD";
-		};
-		A6A672E01E1F912A003AB89A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A6C613031A91492500A5F082 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A63B32A01C68AFA400C46020;
-			remoteInfo = "FOMO DCU";
-		};
-		A6A6732C1E20E452003AB89A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A6C613031A91492500A5F082 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A6141D6C1BB9F537003150F1;
-			remoteInfo = "FOMO UCC";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -1119,6 +1091,7 @@
 			isa = PBXGroup;
 			children = (
 				A6FF8A821E3DADDB00EB9766 /* SLPagingViewSwift.swift */,
+				A693BBED1E3DE54800EB002A /* SLPagingViewSwift.swift */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1222,15 +1195,10 @@
 				A6595E971E14DC8500AA1CE1 /* Sources */,
 				A6595E981E14DC8500AA1CE1 /* Frameworks */,
 				A6595E991E14DC8500AA1CE1 /* Resources */,
-				A6595EA51E14EA6900AA1CE1 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A6595EA11E14DC8600AA1CE1 /* PBXTargetDependency */,
-				A6A672E11E1F912A003AB89A /* PBXTargetDependency */,
-				A6A6732D1E20E452003AB89A /* PBXTargetDependency */,
-				A67993BA1E2233B00074A5A7 /* PBXTargetDependency */,
 			);
 			name = "Sortons Events UITests";
 			productName = "Sortons Events UITests";
@@ -1400,7 +1368,6 @@
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 3RM6H33EW7;
 						ProvisioningStyle = Automatic;
-						TestTargetID = A63B32A01C68AFA400C46020;
 					};
 					A69186AD1DCC543A00372A98 = {
 						DevelopmentTeam = 3RM6H33EW7;
@@ -2088,19 +2055,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" f9ecb642fdd37585f3a9283eb05f86381d870012 5272df7e21b8c5a5296bc66602dfae598473416d91d97d0f616e8a56f77de434 ";
 		};
-		A6595EA51E14EA6900AA1CE1 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nswiftlint\nfi";
-		};
 		A67DF55A1DF547EF00D351FD /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2742,30 +2696,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A6595EA11E14DC8600AA1CE1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A6141D401BB9F44F003150F1 /* FOMO TCD */;
-			targetProxy = A6595EA01E14DC8600AA1CE1 /* PBXContainerItemProxy */;
-		};
-		A67993BA1E2233B00074A5A7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A62BD6181B9E1C4500E928E5 /* FOMO UCD */;
-			targetProxy = A67993B91E2233B00074A5A7 /* PBXContainerItemProxy */;
-		};
 		A69DBF551C8AE4D8005064F7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A62BD6181B9E1C4500E928E5 /* FOMO UCD */;
 			targetProxy = A69DBF541C8AE4D8005064F7 /* PBXContainerItemProxy */;
-		};
-		A6A672E11E1F912A003AB89A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A63B32A01C68AFA400C46020 /* FOMO DCU */;
-			targetProxy = A6A672E01E1F912A003AB89A /* PBXContainerItemProxy */;
-		};
-		A6A6732D1E20E452003AB89A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A6141D6C1BB9F537003150F1 /* FOMO UCC */;
-			targetProxy = A6A6732C1E20E452003AB89A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2982,9 +2916,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ie.sortons.Sortons-Events-UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "FOMO DCU";
 			};
 			name = Debug;
 		};
@@ -3001,8 +2935,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ie.sortons.Sortons-Events-UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "FOMO DCU";
 			};
 			name = Release;
 		};
