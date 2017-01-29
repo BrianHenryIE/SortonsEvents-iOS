@@ -55,6 +55,26 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
     func displayFetchEventsFetchError(_ viewModel: ListEvents.ViewModel) {
 
     }
+
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+
+        let topVisibleRow = tableView.indexPathsForVisibleRows?[0]
+
+        coordinator.animate(alongsideTransition: { context in
+
+            let top = UIApplication.shared.statusBarFrame.size.height
+            self.tableView.contentInset = UIEdgeInsets(top: top,
+                                                       left: 0,
+                                                       bottom: 49,
+                                                       right: 0)
+
+        }, completion: { _ in
+            if let topVisibleRow = topVisibleRow {
+                self.tableView.scrollToRow(at: topVisibleRow, at: .top, animated: true)
+            }
+        })
+    }
 }
 
 // MARK: - Table view data source

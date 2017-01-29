@@ -8,6 +8,50 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="NZx-cO-qtH">
+            <objects>
+                <viewController storyboardIdentifier="RootViewController" id="SHA-2t-BC9" customClass="RootViewController" customModule="SortonsEvents" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HJr-Uk-VTP"/>
+                        <viewControllerLayoutGuide type="bottom" id="o8q-qk-zfF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nis-6m-HT0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afG-DP-yFZ">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="4lK-oF-ZLP"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem title="Events" image="ListEventsTabBarIcon" selectedImage="ListEventsTabBarIconFilled" id="fXI-Dd-CAS"/>
+                                    <tabBarItem tag="1" title="News" image="NewsTabBarIcon" selectedImage="NewsTabBarIconFilled" id="QfQ-YN-LtX"/>
+                                    <tabBarItem tag="2" title="Directory" image="DirectoryTabBarIcon" selectedImage="DirectoryTabBarIconFilled" id="Epj-Bo-Nsp"/>
+                                    <tabBarItem tag="3" title="About" image="MetaTabBarIcon" selectedImage="MetaTabBarIconFilled" id="Ab3-UV-Au1"/>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="SHA-2t-BC9" id="apx-4y-xb5"/>
+                                </connections>
+                            </tabBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o8q-qk-zfF" firstAttribute="top" secondItem="afG-DP-yFZ" secondAttribute="bottom" id="Ilr-gI-NGX"/>
+                            <constraint firstItem="afG-DP-yFZ" firstAttribute="width" secondItem="Nis-6m-HT0" secondAttribute="width" id="ew4-Jh-d65"/>
+                            <constraint firstItem="afG-DP-yFZ" firstAttribute="centerX" secondItem="Nis-6m-HT0" secondAttribute="centerX" id="gug-VX-zsE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tabBar" destination="afG-DP-yFZ" id="SEB-6n-5Y2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yeg-Dl-eQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1395" y="-360"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="vTt-me-pni">
             <objects>
@@ -54,8 +98,12 @@
     </scenes>
     <resources>
         <image name="DirectoryTabBarIcon" width="25" height="25"/>
+        <image name="DirectoryTabBarIconFilled" width="25" height="25"/>
         <image name="ListEventsTabBarIcon" width="25" height="25"/>
+        <image name="ListEventsTabBarIconFilled" width="25" height="25"/>
         <image name="MetaTabBarIcon" width="25" height="25"/>
+        <image name="MetaTabBarIconFilled" width="25" height="25"/>
         <image name="NewsTabBarIcon" width="25" height="25"/>
+        <image name="NewsTabBarIconFilled" width="25" height="25"/>
     </resources>
 </document>

@@ -51,7 +51,7 @@ class NewsViewController: UIViewController, NewsPresenterOutputProtocol {
     }
 
     func display(_ viewModel: News.ViewModel) {
-        newsUrl = viewModel.newsUrl
+        newsUrl = viewModel.newsUrlRequest
         _ = webview?.load(newsUrl)
     }
 

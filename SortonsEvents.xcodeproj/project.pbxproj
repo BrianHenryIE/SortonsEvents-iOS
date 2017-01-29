@@ -433,6 +433,15 @@
 		A6C45C091DA3882B00FC57D5 /* FomoId.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C45C081DA3882B00FC57D5 /* FomoId.swift */; };
 		A6D4A1E41DBF0BB90072309B /* ClientPageDataTcd.json in Resources */ = {isa = PBXBuildFile; fileRef = A6D4A1E31DBF0BB90072309B /* ClientPageDataTcd.json */; };
 		A6E10C621DB41643007854F8 /* DirectoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E10C611DB41643007854F8 /* DirectoryTableViewCell.swift */; };
+		A6FF8A831E3DADDB00EB9766 /* SLPagingViewSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FF8A821E3DADDB00EB9766 /* SLPagingViewSwift.swift */; };
+		A6FF8A841E3DAE4200EB9766 /* SLPagingViewSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FF8A821E3DADDB00EB9766 /* SLPagingViewSwift.swift */; };
+		A6FF8A851E3DAE4200EB9766 /* SLPagingViewSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FF8A821E3DADDB00EB9766 /* SLPagingViewSwift.swift */; };
+		A6FF8A861E3DAE4300EB9766 /* SLPagingViewSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FF8A821E3DADDB00EB9766 /* SLPagingViewSwift.swift */; };
+		A6FF8A871E3DAE4300EB9766 /* SLPagingViewSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FF8A821E3DADDB00EB9766 /* SLPagingViewSwift.swift */; };
+		A6FF8A881E3DAE4400EB9766 /* SLPagingViewSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FF8A821E3DADDB00EB9766 /* SLPagingViewSwift.swift */; };
+		A6FF8A891E3DAE4400EB9766 /* SLPagingViewSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FF8A821E3DADDB00EB9766 /* SLPagingViewSwift.swift */; };
+		A6FF8A8A1E3DAE4400EB9766 /* SLPagingViewSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FF8A821E3DADDB00EB9766 /* SLPagingViewSwift.swift */; };
+		A6FF8A8B1E3DAE4500EB9766 /* SLPagingViewSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FF8A821E3DADDB00EB9766 /* SLPagingViewSwift.swift */; };
 		AEE3A7AAA7AE77B15B4F1409 /* Pods_FOMO_UCD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36CF2249EF126ACF7C1BE04 /* Pods_FOMO_UCD.framework */; };
 		CA2B0568B519269B705A070D /* Pods_FOMO_NUIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65891C3F708DA63C4671C2D /* Pods_FOMO_NUIM.framework */; };
 		CBDBCE0503E60E29966304F1 /* Pods_FOMO_TCD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3618116F62AC71C54B105380 /* Pods_FOMO_TCD.framework */; };
@@ -611,6 +620,7 @@
 		A6D2212E1DFDFFD4003E2285 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		A6D4A1E31DBF0BB90072309B /* ClientPageDataTcd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ClientPageDataTcd.json; sourceTree = "<group>"; };
 		A6E10C611DB41643007854F8 /* DirectoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryTableViewCell.swift; sourceTree = "<group>"; };
+		A6FF8A821E3DADDB00EB9766 /* SLPagingViewSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLPagingViewSwift.swift; sourceTree = "<group>"; };
 		B18394CE0C5847826B51D9BD /* Pods-FOMO QUB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO QUB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO QUB/Pods-FOMO QUB.debug.xcconfig"; sourceTree = "<group>"; };
 		B36CF2249EF126ACF7C1BE04 /* Pods_FOMO_UCD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FOMO_UCD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53758BD505E55471D2B6557 /* Pods_FOMO_DIT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FOMO_DIT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1094,6 +1104,7 @@
 		A6C6130E1A91492500A5F082 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A6FF8A811E3DADB800EB9766 /* Libraries */,
 				A64AE8851E1CF5620077A9AB /* Colleges */,
 				A6D2212E1DFDFFD4003E2285 /* .swiftlint.yml */,
 				A64DF46F1DDC25D700A102E0 /* .travis.yml */,
@@ -1102,6 +1113,14 @@
 				A6BDA8771AE5CA6500C1A55C /* Settings.bundle */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A6FF8A811E3DADB800EB9766 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				A6FF8A821E3DADDB00EB9766 /* SLPagingViewSwift.swift */,
+			);
+			name = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2350,6 +2369,7 @@
 				A63B94EA1DB6331900ECA301 /* ListEventsInteractor.swift in Sources */,
 				A6AAD3FA1D25B6D20097AF22 /* GAEISO8601DateTransform.swift in Sources */,
 				A643EB7A1DF4F7240005E769 /* MetaPresenter.swift in Sources */,
+				A6FF8A881E3DAE4400EB9766 /* SLPagingViewSwift.swift in Sources */,
 				A63B95331DB6338700ECA301 /* DirectoryTableViewCell.swift in Sources */,
 				A63B953B1DB6338F00ECA301 /* DirectoryInteractor.swift in Sources */,
 				A6C02AF01E33F5CC00A80799 /* Array+NilEmpty.swift in Sources */,
@@ -2388,6 +2408,7 @@
 				A63B94EB1DB6331900ECA301 /* ListEventsInteractor.swift in Sources */,
 				A6AAD3F91D25B6D10097AF22 /* GAEISO8601DateTransform.swift in Sources */,
 				A643EB7B1DF4F7240005E769 /* MetaPresenter.swift in Sources */,
+				A6FF8A891E3DAE4400EB9766 /* SLPagingViewSwift.swift in Sources */,
 				A63B95341DB6338800ECA301 /* DirectoryTableViewCell.swift in Sources */,
 				A63B953C1DB6339000ECA301 /* DirectoryInteractor.swift in Sources */,
 				A6C02AF11E33F5CC00A80799 /* Array+NilEmpty.swift in Sources */,
@@ -2426,6 +2447,7 @@
 				A6ABE5311D3AB12200EF3D11 /* ListEventsTableViewCell.swift in Sources */,
 				A643EB8E1DF4F7240005E769 /* MetaWebView.swift in Sources */,
 				A643EB731DF4F7240005E769 /* MetaInteractor.swift in Sources */,
+				A6FF8A8A1E3DAE4400EB9766 /* SLPagingViewSwift.swift in Sources */,
 				A6A675941C941D6300FAD755 /* AppDelegate.swift in Sources */,
 				A67796B71DADF097003FBCE6 /* DirectoryViewController.swift in Sources */,
 				A643EB7C1DF4F7240005E769 /* MetaPresenter.swift in Sources */,
@@ -2464,6 +2486,7 @@
 				A63B94EC1DB6331A00ECA301 /* ListEventsInteractor.swift in Sources */,
 				A6AAD3F81D25B6D10097AF22 /* GAEISO8601DateTransform.swift in Sources */,
 				A643EB751DF4F7240005E769 /* MetaPresenter.swift in Sources */,
+				A6FF8A831E3DADDB00EB9766 /* SLPagingViewSwift.swift in Sources */,
 				A63B95351DB6338800ECA301 /* DirectoryTableViewCell.swift in Sources */,
 				A63B953D1DB6339100ECA301 /* DirectoryInteractor.swift in Sources */,
 				A6C02AEB1E33F5CC00A80799 /* Array+NilEmpty.swift in Sources */,
@@ -2511,6 +2534,7 @@
 				A69186C21DCC543A00372A98 /* ListEventsInteractor.swift in Sources */,
 				A69186C31DCC543A00372A98 /* GAEISO8601DateTransform.swift in Sources */,
 				A643EB781DF4F7240005E769 /* MetaPresenter.swift in Sources */,
+				A6FF8A861E3DAE4300EB9766 /* SLPagingViewSwift.swift in Sources */,
 				A69186C51DCC543A00372A98 /* DirectoryTableViewCell.swift in Sources */,
 				A69186C61DCC543A00372A98 /* DirectoryInteractor.swift in Sources */,
 				A6C02AEE1E33F5CC00A80799 /* Array+NilEmpty.swift in Sources */,
@@ -2549,6 +2573,7 @@
 				A69186FF1DCC54BD00372A98 /* ListEventsInteractor.swift in Sources */,
 				A69187001DCC54BD00372A98 /* GAEISO8601DateTransform.swift in Sources */,
 				A643EB761DF4F7240005E769 /* MetaPresenter.swift in Sources */,
+				A6FF8A841E3DAE4200EB9766 /* SLPagingViewSwift.swift in Sources */,
 				A69187021DCC54BD00372A98 /* DirectoryTableViewCell.swift in Sources */,
 				A69187031DCC54BD00372A98 /* DirectoryInteractor.swift in Sources */,
 				A6C02AEC1E33F5CC00A80799 /* Array+NilEmpty.swift in Sources */,
@@ -2587,6 +2612,7 @@
 				A691873A1DCC551000372A98 /* ListEventsTableViewCell.swift in Sources */,
 				A643EB8F1DF4F7240005E769 /* MetaWebView.swift in Sources */,
 				A643EB741DF4F7240005E769 /* MetaInteractor.swift in Sources */,
+				A6FF8A8B1E3DAE4500EB9766 /* SLPagingViewSwift.swift in Sources */,
 				A691873C1DCC551000372A98 /* AppDelegate.swift in Sources */,
 				A691873D1DCC551000372A98 /* DirectoryViewController.swift in Sources */,
 				A643EB7D1DF4F7240005E769 /* MetaPresenter.swift in Sources */,
@@ -2625,6 +2651,7 @@
 				A691878E1DCC591E00372A98 /* ListEventsInteractor.swift in Sources */,
 				A691878F1DCC591E00372A98 /* GAEISO8601DateTransform.swift in Sources */,
 				A643EB791DF4F7240005E769 /* MetaPresenter.swift in Sources */,
+				A6FF8A871E3DAE4300EB9766 /* SLPagingViewSwift.swift in Sources */,
 				A69187911DCC591E00372A98 /* DirectoryTableViewCell.swift in Sources */,
 				A69187921DCC591E00372A98 /* DirectoryInteractor.swift in Sources */,
 				A6C02AEF1E33F5CC00A80799 /* Array+NilEmpty.swift in Sources */,
@@ -2692,6 +2719,7 @@
 				A63B94E91DB6331900ECA301 /* ListEventsInteractor.swift in Sources */,
 				A6AAD3FB1D25B6D20097AF22 /* GAEISO8601DateTransform.swift in Sources */,
 				A643EB771DF4F7240005E769 /* MetaPresenter.swift in Sources */,
+				A6FF8A851E3DAE4200EB9766 /* SLPagingViewSwift.swift in Sources */,
 				A63B95321DB6338700ECA301 /* DirectoryTableViewCell.swift in Sources */,
 				A63B953A1DB6338F00ECA301 /* DirectoryInteractor.swift in Sources */,
 				A6C02AED1E33F5CC00A80799 /* Array+NilEmpty.swift in Sources */,

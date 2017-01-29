@@ -1,5 +1,6 @@
 excluded:
   - Pods
+  - SortonsEvents/SLPagingViewSwift.swift
 disabled_rules:
   - nesting
 line_length: 120

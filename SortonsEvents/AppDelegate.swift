@@ -26,11 +26,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         window.screen = UIScreen.main
 
+        let storyboard = UIStoryboard(name: "Common", bundle: Bundle.main)
         let rvc: UIViewController
-        if let fomoId = FomoId() {
-            rvc = RootViewController(fomoId: fomoId)
+        if let fomoId = FomoId(),
+            let pagingViewController = storyboard.instantiateViewController(withIdentifier: "RootViewController")
+                as? RootViewController,
+            let listEventsViewController = ListEventsWireframe(fomoId: fomoId).listEventsView,
+            let newsViewController = NewsWireframe(fomoId: fomoId).newsView,
+            let directoryViewController = DirectoryWireframe(fomoId: fomoId).directoryView,
+            let metaViewController = MetaWireframe(fomoId: fomoId).metaMainView {
+
+            let vcs = [listEventsViewController,
+                       newsViewController,
+                       directoryViewController,
+                       metaViewController]
+
+            pagingViewController.viewControllers = vcs
+
+            rvc = pagingViewController as UIViewController
+
         } else {
-            let storyboard = UIStoryboard(name: "Common", bundle: Bundle.main)
+
             rvc = storyboard.instantiateViewController(withIdentifier: "MissingFomoConfig")
         }
 

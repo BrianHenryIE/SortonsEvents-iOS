@@ -16,7 +16,6 @@ PODS:
   - Mockingjay/XCTest (2.0.0):
     - Mockingjay/Core
   - ObjectMapper (2.2.2)
-  - SLPagingViewSwift-Swift3 (1.0.0)
   - URITemplate (2.0.0)
 
 DEPENDENCIES:
@@ -27,7 +26,6 @@ DEPENDENCIES:
   - Fabric
   - Mockingjay (from `https://github.com/kylef/Mockingjay.git`)
   - ObjectMapper (from `https://github.com/Hearst-DD/ObjectMapper.git`)
-  - SLPagingViewSwift-Swift3 (from `https://github.com/davidseek/SLPagingViewSwift-Swift-3-Tinder-Twitter.git`)
 
 EXTERNAL SOURCES:
   Alamofire:
@@ -40,8 +38,6 @@ EXTERNAL SOURCES:
     :git: https://github.com/kylef/Mockingjay.git
   ObjectMapper:
     :git: https://github.com/Hearst-DD/ObjectMapper.git
-  SLPagingViewSwift-Swift3:
-    :git: https://github.com/davidseek/SLPagingViewSwift-Swift-3-Tinder-Twitter.git
 
 CHECKOUT OPTIONS:
   Alamofire:
@@ -59,9 +55,6 @@ CHECKOUT OPTIONS:
   ObjectMapper:
     :commit: 5133efa3bc4be1a49c83fa8d2bff10b580e6937d
     :git: https://github.com/Hearst-DD/ObjectMapper.git
-  SLPagingViewSwift-Swift3:
-    :commit: 6314e85721f0bb17217aab16cad3fca2026065a8
-    :git: https://github.com/davidseek/SLPagingViewSwift-Swift-3-Tinder-Twitter.git
 
 SPEC CHECKSUMS:
   Alamofire: 1f72088aff8f6b40828dadd61be2e9a31beca01e
@@ -71,9 +64,8 @@ SPEC CHECKSUMS:
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   Mockingjay: 95a5fbe594f963f7536d3975739df39f1366f4d1
   ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
-  SLPagingViewSwift-Swift3: 52ccbe21930f5700f5eacccafff0a712f57d8d67
   URITemplate: a5acb3f76c6a2338116fde88b658d83f91bbac45
 
-PODFILE CHECKSUM: c9731ea70aa5979a50459cd663d81193645ae5d8
+PODFILE CHECKSUM: 395d4d5f46609f01e2a6f227962ac5d426d90bd9
 
 COCOAPODS: 1.1.1

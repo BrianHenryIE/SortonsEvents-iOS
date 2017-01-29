@@ -10,7 +10,7 @@ import Foundation
 
 extension News {
     struct ViewModel {
-        let newsUrl: URLRequest
+        let newsUrlRequest: URLRequest
     }
 }
 
@@ -29,12 +29,10 @@ class NewsPresenter: NewsInteractorOutputProtocol {
     func setFomoId(_ fomoId: String) {
 
         let urlString = "http://sortons.ie/events/recentpostsmobile/news.html#\(fomoId)"
-        guard let url = URL(string: urlString) else {
-            return
-        }
+        let url = URL(string: urlString)!
         let urlRequest = URLRequest(url: url)
 
-        let viewModel = News.ViewModel(newsUrl: urlRequest)
+        let viewModel = News.ViewModel(newsUrlRequest: urlRequest)
 
         output?.display(viewModel)
     }
