@@ -93,7 +93,7 @@ class NewsViewControllerTests: XCTestCase {
         let urlString = "https://www.sortons.ie"
         let url = URL(string: urlString)!
         let urlRequest = URLRequest(url: url)
-        let viewModel = News.ViewModel(newsUrl: urlRequest)
+        let viewModel = News.ViewModel(newsUrlRequest: urlRequest)
 
         sut.display(viewModel)
 

@@ -16,7 +16,7 @@ fileprivate class OutputSpy: NewsPresenterOutputProtocol {
     var url: String?
     func display(_ viewModel: News.ViewModel) {
         displayCalled = true
-        url = viewModel.newsUrl.url?.absoluteString
+        url = viewModel.newsUrlRequest.url?.absoluteString
     }
 }
 
