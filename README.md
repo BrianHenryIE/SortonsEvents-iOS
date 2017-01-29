@@ -16,6 +16,10 @@ Check it out on the App Store for:
 |---|---|---|---|
 |[Dublin City University](https://itunes.apple.com/ie/app/fomo-dcu/id1037323967?mt=8)|[Trinity College Dublin](https://itunes.apple.com/ie/app/fomo-tcd/id1035135187?mt=8)|[University College Dublin](https://itunes.apple.com/ie/app/fomo-ucd/id977641745?mt=8)|
 
+## Build
+
+Clone, run `pod install`, open `SortonsEvents.xcworkspace` and remember to set the Signing Team under one of the targets. There are no API keys to set.
+
 ## Views
 
 There are four views: Events, News, Directory, About. Events shows a list of upcoming events that were created or posted by Facebook pages related to the university. The News view is a merged newsfeed of all posts made by the related pages. Directory is that list of pages. About is meta, contact and sharing.
@@ -26,13 +30,13 @@ Events is pretty straightforward. It pulls JSON from GAE using [Alamofire](https
 
 ### News
 
-The news view wasn't part of the original plan, but in order to find all the events a Facebook Page has posted, I needed to read its wall. I saved the post ids and used a UIWebView to display a merged newsfeed of all the relevant pages with the [Facebook Embedded Posts widget](https://developers.facebook.com/docs/plugins/embedded-posts). This has terrible performance, so this view is loaded immediately when the app is opened. Then as the user scrolls, it loads further posts.
+The news view wasn't part of the original plan, but in order to find all the events a Facebook Page has posted, I needed to read its wall. I save the post ids and use a WKWebView to display a merged newsfeed of all the relevant pages with the [Facebook Embedded Posts widget](https://developers.facebook.com/docs/plugins/embedded-posts), loading more as the users scrolls.
 
 All link clicks are intercepted and opened in the Facebook app or Safari. The URLs are parsed to remove Facebook redirects which were showing a security warning and to convert http Facebook URLs into the Facebook app's URL scheme.
 
 ### Directory
 
-The Directory is again a UITableViewController with a pretty straightforward search. I had an update to the app rejected by Apple for creating "a misleading association with DCU" – the screenshot had a list with the word "DCU" in it too many times. The president of DCU has installed and tried the app, so I think they're ok with it.
+The Directory is again a UITableView with a pretty straightforward search. I had an update to the app rejected by Apple for creating "a misleading association with DCU" – the screenshot had a list with the word "DCU" in it too many times. The president of DCU has installed and tried the app, so I think they're ok with it. I now take the screenshots using [Fastlane Snapshot](https://github.com/fastlane/fastlane/tree/master/snapshot) and the app detects when it is being run in a simulator and filters out terms such as "DCU".
 
 ### About
 
@@ -103,23 +107,23 @@ Part of Fabric, I've set up FastLane to automatically take app screenshots in or
 
 * [SLPagingViewSwift](https://github.com/StefanLage/SLPagingViewSwift)
 
-I had implemented my own gesture recognisers to swipe between tabs but it wasn't as smooth an experience as is typical of other apps. This library made it easy to implement an improved UX.
+I had implemented my own gesture recognisers to swipe between tabs but it wasn't as smooth an experience as is typical of other apps. This library made it easy to implement an improved UX. I've needed to make a few changes to this class as its properties were often marked as fileprivate which impeded subclassing.
 
 ## Roadmap
+
+### UX Improvements
+
+* Loading/error messages
+* The Events view should show which clubs/societies the event is related to. Particularly, there's plenty of space for this on iPad. 
+* The News view's performance needs attention.
 
 ### Push Notifications / Widget
 
 I think a weekly push notification of what's coming up would be nice, and a "Today" app extension (lock screen widget) would be an appropriate UI.
 
-### UX Improvements
-
-* Currently only refreshes data when first loaded. 
-* The Events view should show which clubs/societies the event is related to. Particularly, there's plenty of space for this on iPad. 
-* The News view's performance is terrible.
-
 ### Facebook Ads
 
-I'm a little disappointed in the number of installs. When the above few points are complete, I'll take out some ads on Facebook to get the word out.
+I'm a little disappointed with the number of users. When the above few points are complete, I'll take out some ads on Facebook to get the word out.
 
 ### Server Updates
 
