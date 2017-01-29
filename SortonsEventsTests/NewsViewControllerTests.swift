@@ -84,7 +84,7 @@ class NewsViewControllerTests: XCTestCase {
     }
 
     func testWebviewDelegateShouldBeSet() {
-        XCTAssert(sut.webview.navigationDelegate != nil, "Webview delegate not set")
+        XCTAssert(sut.webview?.navigationDelegate != nil, "Webview delegate not set")
     }
 
     func testWebViewSetProperly() {
@@ -108,7 +108,7 @@ class NewsViewControllerTests: XCTestCase {
 
         let action = WKNavigationActionMock(mockRequest: urlRequest, mockNavigationType: .linkActivated)
 
-        sut.webView(sut.webview,
+        sut.webView(sut.webview!,
                     decidePolicyFor: action,
                     decisionHandler: {_ in })
 

@@ -93,7 +93,7 @@ class DirectoryInteractor: DirectoryViewControllerOutputProtocol {
 
         let fbId = displayedDirectory[rowNumber].fbPageId
 
-        let appUrl = URL(string: "fb://profile/\(fbId)")! // TOD  extension?
+        let appUrl = URL(string: "fb://profile/\(fbId)")!
         let safariUrl = URL(string: "https://facebook.com/\(fbId)")!
 
         if UIApplication.shared.canOpenURL(appUrl) {

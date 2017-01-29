@@ -21,12 +21,12 @@ class MetaWebViewController: UIViewController, MetaWebViewPresenterOuput {
     @IBOutlet weak var webview: UIWebView!
 
     var rootViewController: UIViewController?
-    var output: MetaWebViewInteractor!
+    var output: MetaWebViewInteractor?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        output.loadHtml()
+        output?.loadHtml()
 
         webview.delegate = self
     }
@@ -43,7 +43,9 @@ extension MetaWebViewController: UIWebViewDelegate {
                  navigationType: UIWebViewNavigationType) -> Bool {
         switch navigationType {
         case .linkClicked:
-            UIApplication.shared.openURL(request.url!)
+            if let url = request.url {
+                UIApplication.shared.openURL(url)
+            }
             return false
         default:
             return true

@@ -26,7 +26,7 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutputProtoco
     @IBOutlet weak var tableViewOutlet: UITableView!
 
     var output: DirectoryViewControllerOutputProtocol?
-    var data: [Directory.TableViewCellModel]!
+    var data: [Directory.TableViewCellModel]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,11 +67,11 @@ extension DirectoryViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection: Int) -> Int {
-        return data == nil ? 0 : data.count
+        return data?.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let sourcePage = data[indexPath.row]
+        guard let sourcePage = data?[indexPath.row] else { return UITableViewCell() }
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "DirectoryPageCell",
                                                             for: indexPath) as? DirectoryTableViewCell

@@ -48,7 +48,7 @@ class DirectoryPresenter: DirectoryInteractorOutputProtocol {
                     name = name.replacingOccurrences(of: censor, with: "", options: .literal, range: nil)
                 }
             }
-            let details = sourcePage.friendlyLocationString!
+            let details = sourcePage.friendlyLocationString
             let imageUrl = URL(string: "https://graph.facebook.com/\(sourcePage.fbPageId)/picture?type=square")!
             return Directory.TableViewCellModel(name: name,
                                              details: details,

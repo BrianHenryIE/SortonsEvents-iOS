@@ -47,7 +47,7 @@ class MetaViewController: UITableViewController, MetaPresenterOutputProtocol {
         }
         let suggestionAction = UIAlertAction(title: "Suggestion",
                                             style: .default) { (alert: UIAlertAction!) -> Void in
-                                                self.output?.sendFeedback(for: .suggestion)
+                                            self.output?.sendFeedback(for: .suggestion)
         }
         let complaintAction = UIAlertAction(title: "Complaint",
                                             style: .default) { (alert: UIAlertAction!) -> Void in

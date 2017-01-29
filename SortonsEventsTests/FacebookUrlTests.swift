@@ -20,7 +20,7 @@ class FacebookUrlTests: XCTestCase {
 
         let output = FacebookUrl(from: regular)
 
-        XCTAssertEqual(output.safariUrl!, regularUrl)
+        XCTAssertEqual(output.safariUrl, regularUrl)
         XCTAssertNil(output.appUrl)
     }
 
@@ -31,7 +31,7 @@ class FacebookUrlTests: XCTestCase {
 
         let output = FacebookUrl(from: facebookLink)
 
-        XCTAssertEqual(output.safariUrl!, facebookLinkUrl)
+        XCTAssertEqual(output.safariUrl, facebookLinkUrl)
         XCTAssertNil(output.appUrl)
     }
 
@@ -42,7 +42,7 @@ class FacebookUrlTests: XCTestCase {
 
         let output = FacebookUrl(from: hashtag)
 
-        XCTAssertEqual(output.safariUrl!, hashtagUrl)
+        XCTAssertEqual(output.safariUrl, hashtagUrl)
         XCTAssertNil(output.appUrl)
     }
 
@@ -56,7 +56,7 @@ class FacebookUrlTests: XCTestCase {
 
         let output = FacebookUrl(from: comment)
 
-        XCTAssertEqual(output.safariUrl!, commentSafariUrl)
+        XCTAssertEqual(output.safariUrl, commentSafariUrl)
         XCTAssertEqual(output.appUrl!, commentAppUrl)
     }
 
@@ -70,7 +70,7 @@ class FacebookUrlTests: XCTestCase {
 
         let output = FacebookUrl(from: event)
 
-        XCTAssertEqual(output.safariUrl!, eventSafariUrl)
+        XCTAssertEqual(output.safariUrl, eventSafariUrl)
         XCTAssertEqual(output.appUrl!, eventAppUrl)
     }
 
@@ -84,7 +84,7 @@ class FacebookUrlTests: XCTestCase {
 
         let output = FacebookUrl(from: photo)
 
-        XCTAssertEqual(output.safariUrl!, photoSafariUrl)
+        XCTAssertEqual(output.safariUrl, photoSafariUrl)
         XCTAssertEqual(output.appUrl!, photoAppUrl)
     }
 
@@ -99,7 +99,7 @@ class FacebookUrlTests: XCTestCase {
 
         let output = FacebookUrl(from: testUrl)
 
-        XCTAssertEqual(output.safariUrl!, safariUrl)
+        XCTAssertEqual(output.safariUrl, safariUrl)
         XCTAssertEqual(output.appUrl, nil)
     }
 
@@ -114,7 +114,7 @@ class FacebookUrlTests: XCTestCase {
 
         let output = FacebookUrl(from: testUrl)
 
-        XCTAssertEqual(output.safariUrl!, safariUrl)
+        XCTAssertEqual(output.safariUrl, safariUrl)
         XCTAssertEqual(output.appUrl, nil)
 
     }
