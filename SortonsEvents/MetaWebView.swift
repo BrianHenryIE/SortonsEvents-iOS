@@ -20,12 +20,13 @@ class MetaWebViewController: UIViewController, MetaWebViewPresenterOuput {
 
     @IBOutlet weak var webview: UIWebView!
 
-    var output: MetaWebViewInteractor!
+    var rootViewController: UIViewController?
+    var output: MetaWebViewInteractor?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        output.loadHtml()
+        output?.loadHtml()
 
         webview.delegate = self
     }
@@ -37,10 +38,14 @@ class MetaWebViewController: UIViewController, MetaWebViewPresenterOuput {
 
 extension MetaWebViewController: UIWebViewDelegate {
 
-    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+    func webView(_ webView: UIWebView,
+                 shouldStartLoadWith request: URLRequest,
+                 navigationType: UIWebViewNavigationType) -> Bool {
         switch navigationType {
         case .linkClicked:
-            UIApplication.shared.openURL(request.url!)
+            if let url = request.url {
+                UIApplication.shared.openURL(url)
+            }
             return false
         default:
             return true
@@ -70,7 +75,8 @@ class MetaWebViewPresenter: MetaWebViewInteractorOuput {
 
         var stringWithReplacements = html.replacingOccurrences(of: "<fomo:longName>", with: fomoId.longName)
 
-        stringWithReplacements = stringWithReplacements.replacingOccurrences(of: "<fomo:shortName>", with: fomoId.shortName)
+        stringWithReplacements = stringWithReplacements.replacingOccurrences(of: "<fomo:shortName>",
+                                                                             with: fomoId.shortName)
 
         return stringWithReplacements
     }
@@ -95,7 +101,7 @@ class MetaWebViewInteractor {
 
             output.displayHtml(html: htmlString)
         } catch {
-            // TODO show/log error
+
         }
     }
 }

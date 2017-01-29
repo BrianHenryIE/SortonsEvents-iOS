@@ -8,13 +8,25 @@
 
 import UIKit
 
-class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate {
+extension Directory {
+    struct Request {}
+}
+
+protocol DirectoryViewControllerOutputProtocol {
+    func fetchDirectory(_ withRequest: Directory.Request)
+
+    func filterDirectoryTo(_ searchBarInput: String)
+
+    func displaySelectedPageFrom(_ rowNumber: Int)
+}
+
+class DirectoryViewController: UIViewController, DirectoryPresenterOutputProtocol {
 
     @IBOutlet weak var searchBarOutlet: UISearchBar!
     @IBOutlet weak var tableViewOutlet: UITableView!
 
-    var output: DirectoryViewControllerOutput!
-    var data: [Directory.TableViewCellModel]!
+    var output: DirectoryViewControllerOutputProtocol?
+    var data: [Directory.TableViewCellModel]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +39,8 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
 
         gestureRecognizer.delegate = self
 
-        let request = Directory.Fetch.Request()
-        output.fetchDirectory(request)
+        let request = Directory.Request()
+        output?.fetchDirectory(request)
     }
 
 // MARK: DirectoryPresenterOutput
@@ -42,37 +54,43 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutput, UITab
 
     }
 
+    // MARK: UISearchBar
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        output?.filterDirectoryTo(searchText)
+    }
+}
+
+extension DirectoryViewController: UITableViewDataSource, UITableViewDelegate {
 // MARK: - Table view data source
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection: Int) -> Int {
-        return data == nil ? 0 : data.count
+        return data?.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let sourcePage = data[indexPath.row]
+        guard let sourcePage = data?[indexPath.row] else { return UITableViewCell() }
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DirectoryPageCell", for: indexPath) as? DirectoryTableViewCell
-        cell!.setDirectorySourcePage(sourcePage)
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DirectoryPageCell",
+                                                            for: indexPath) as? DirectoryTableViewCell
+        cell?.setDirectorySourcePage(sourcePage)
 
+        return cell ?? UITableViewCell()
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = indexPath.row
-        output.displaySelectedPageFrom(row)
+        output?.displaySelectedPageFrom(row)
         tableView.deselectRow(at: indexPath, animated: true)
     }
+}
 
-// MARK: UISearchBar
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        output.filterDirectoryTo(searchText)
-    }
-
+extension DirectoryViewController: UIGestureRecognizerDelegate {
 // MARK: UIGestureRecogniserDelegate
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
+                           shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         searchBarOutlet.resignFirstResponder()
 
         return false

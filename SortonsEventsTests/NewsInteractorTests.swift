@@ -17,7 +17,7 @@ class NewsWireframeSpy: NewsWireframe {
 }
 
 class NewsInteractorOutputSpy: NewsInteractorOutput {
-    func setFomoId(_ id: String) {
+    func setFomoId(_ idNumber: String) {
     }
 }
 

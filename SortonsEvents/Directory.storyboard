@@ -12,7 +12,7 @@
         <!--Directory-->
         <scene sceneID="OWZ-oL-Jnv">
             <objects>
-                <viewController restorationIdentifier="Directory" storyboardIdentifier="Directory" id="LWO-8l-cGf" userLabel="Directory" customClass="DirectoryViewController" customModule="SortonsEvents" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Directory" id="LWO-8l-cGf" userLabel="Directory" customClass="DirectoryViewController" customModule="SortonsEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zrh-od-CdU"/>
                         <viewControllerLayoutGuide type="bottom" id="xyk-cw-weA"/>
@@ -39,8 +39,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Nj-DL-1zw" userLabel="Image">
-                                                    <rect key="frame" x="8" y="6" width="50" height="50"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Nj-DL-1zw" userLabel="Image">
+                                                    <rect key="frame" x="8" y="8" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="LXc-6j-BvM"/>
                                                         <constraint firstAttribute="width" constant="50" id="m1d-qT-mMw"/>

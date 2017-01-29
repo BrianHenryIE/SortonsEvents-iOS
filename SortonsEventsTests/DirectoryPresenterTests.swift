@@ -6,11 +6,12 @@
 //  Copyright © 2016 Sortons. All rights reserved.
 //
 
-import XCTest
 @testable import SortonsEvents
+
+import XCTest
 import ObjectMapper
 
-class ViewControllerSpy: DirectoryPresenterOutput {
+fileprivate class OutputSpy: DirectoryPresenterOutputProtocol {
 
     var viewModel: Directory.ViewModel?
     var presentFetchedDirectoryCalled = false
@@ -21,38 +22,35 @@ class ViewControllerSpy: DirectoryPresenterOutput {
     }
 
     func displayFetchDirectoryFetchError(_ viewModel: Directory.ViewModel) {
-        // TODO
+
     }
 }
 
 class DirectoryPresenterTests: XCTestCase {
 
-    var spy = ViewControllerSpy()
-    var sut: DirectoryInteractorOutput!
+    fileprivate var outputSpy = OutputSpy()
+    var sut: DirectoryInteractorOutputProtocol!
 
     override func setUp() {
         super.setUp()
 
-        sut = DirectoryPresenter(output: spy)
+        sut = DirectoryPresenter(output: outputSpy)
     }
 
     func testPresentFetchedDirectory() {
 
-        // Get some test data
-        let bundle = Bundle(for: self.classForCoder)
-        let path = bundle.path(forResource: "ClientPageDataTcd", ofType: "json")!
-        var content = "{}"
-        do {
-            content = try String(contentsOfFile: path)
-        } catch {
+        let content = readJsonFile(filename: "ClientPageDataTcd")
+
+        guard let tcdEvents: ClientPageData = try? Mapper<ClientPageData>().map(JSONString: content) else {
+            XCTFail()
+            return
         }
-        let tcdEvents: ClientPageData = Mapper<ClientPageData>().map(JSONString: content)!
 
         sut.presentFetchedDirectory(Directory.Fetch.Response(directory: tcdEvents.includedPages))
 
-        XCTAssert(spy.presentFetchedDirectoryCalled, "Presenter did not pass anything to view")
+        XCTAssert(outputSpy.presentFetchedDirectoryCalled, "Presenter did not pass anything to view")
 
-        XCTAssertEqual(325, spy.viewModel?.directory.count, "Error building viewmodel in presenter")
+        XCTAssertEqual(325, outputSpy.viewModel?.directory.count, "Error building viewmodel in presenter")
     }
 
 //    func testDisplayFetchDirectoryFetchError() {

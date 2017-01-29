@@ -1,53 +1,71 @@
 PODS:
-  - Alamofire (4.2.0)
+  - Alamofire (4.3.0)
   - AlamofireImage (3.2.0):
     - Alamofire (~> 4.1)
+  - AlamofireObjectMapper (4.0.1):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 2.0)
   - Crashlytics (3.8.3):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.11)
-  - ObjectMapper (2.2.1)
-  - SLPagingViewSwift-Swift3 (1.0.0)
+  - Mockingjay (2.0.0):
+    - Mockingjay/Core (= 2.0.0)
+    - Mockingjay/XCTest (= 2.0.0)
+  - Mockingjay/Core (2.0.0):
+    - URITemplate (~> 2.0)
+  - Mockingjay/XCTest (2.0.0):
+    - Mockingjay/Core
+  - ObjectMapper (2.2.2)
+  - URITemplate (2.0.0)
 
 DEPENDENCIES:
   - Alamofire (from `https://github.com/Alamofire/Alamofire.git`)
   - AlamofireImage (from `https://github.com/Alamofire/AlamofireImage.git`)
+  - AlamofireObjectMapper (from `https://github.com/tristanhimmelman/AlamofireObjectMapper`)
   - Crashlytics
   - Fabric
+  - Mockingjay (from `https://github.com/kylef/Mockingjay.git`)
   - ObjectMapper (from `https://github.com/Hearst-DD/ObjectMapper.git`)
-  - SLPagingViewSwift-Swift3 (from `https://github.com/davidseek/SLPagingViewSwift-Swift-3-Tinder-Twitter.git`)
 
 EXTERNAL SOURCES:
   Alamofire:
     :git: https://github.com/Alamofire/Alamofire.git
   AlamofireImage:
     :git: https://github.com/Alamofire/AlamofireImage.git
+  AlamofireObjectMapper:
+    :git: https://github.com/tristanhimmelman/AlamofireObjectMapper
+  Mockingjay:
+    :git: https://github.com/kylef/Mockingjay.git
   ObjectMapper:
     :git: https://github.com/Hearst-DD/ObjectMapper.git
-  SLPagingViewSwift-Swift3:
-    :git: https://github.com/davidseek/SLPagingViewSwift-Swift-3-Tinder-Twitter.git
 
 CHECKOUT OPTIONS:
   Alamofire:
-    :commit: 7a17b1d4b558a172d571a9d2b1cd81e190586027
+    :commit: c9c9d091b308a57ff9a744be4f2537ac9c5b4c0b
     :git: https://github.com/Alamofire/Alamofire.git
   AlamofireImage:
     :commit: a4d4c0e36c3f17a80ad89687348bedbc523bba11
     :git: https://github.com/Alamofire/AlamofireImage.git
+  AlamofireObjectMapper:
+    :commit: 10cefce003fb2cd0e9e2f6bfefc7380fae21bc29
+    :git: https://github.com/tristanhimmelman/AlamofireObjectMapper
+  Mockingjay:
+    :commit: a2ac2bf71b797314b4f958619963617103445ed7
+    :git: https://github.com/kylef/Mockingjay.git
   ObjectMapper:
-    :commit: 5d821dce17e903c812e0d0f56f70bfc9eeed13f6
+    :commit: 5133efa3bc4be1a49c83fa8d2bff10b580e6937d
     :git: https://github.com/Hearst-DD/ObjectMapper.git
-  SLPagingViewSwift-Swift3:
-    :commit: 6314e85721f0bb17217aab16cad3fca2026065a8
-    :git: https://github.com/davidseek/SLPagingViewSwift-Swift-3-Tinder-Twitter.git
 
 SPEC CHECKSUMS:
-  Alamofire: 26d8877ec03b4e6e6cbfbf7c03924b4844a2d453
+  Alamofire: 1f72088aff8f6b40828dadd61be2e9a31beca01e
   AlamofireImage: 0ff319da83d6abb78a661d7296e742e7f65e15f5
+  AlamofireObjectMapper: 842d2eed43a4d0593ff0110d54ac86a170c4519c
   Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
-  ObjectMapper: 41e43e1a89f8060ef5ea5d04ba852e269a621d68
-  SLPagingViewSwift-Swift3: 52ccbe21930f5700f5eacccafff0a712f57d8d67
+  Mockingjay: 95a5fbe594f963f7536d3975739df39f1366f4d1
+  ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
+  URITemplate: a5acb3f76c6a2338116fde88b658d83f91bbac45
 
-PODFILE CHECKSUM: c8e17820ce1122854505c6b30878ccffaa149237
+PODFILE CHECKSUM: 395d4d5f46609f01e2a6f227962ac5d426d90bd9
 
 COCOAPODS: 1.1.1

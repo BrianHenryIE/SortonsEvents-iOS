@@ -20,14 +20,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let frame = UIScreen.main.bounds
         window = UIWindow(frame: frame)
-        window!.screen = UIScreen.main
 
-        let fomoId = FomoId()
+        guard let window = window else {
+            return false
+        }
+        window.screen = UIScreen.main
 
-        let rvc = RootViewController(fomoId: fomoId)
+        let storyboard = UIStoryboard(name: "Common", bundle: Bundle.main)
+        let rvc: UIViewController
+        if let fomoId = FomoId(),
+            let pagingViewController = storyboard.instantiateViewController(withIdentifier: "RootViewController")
+                as? RootViewController,
+            let listEventsViewController = ListEventsWireframe(fomoId: fomoId).listEventsView,
+            let newsViewController = NewsWireframe(fomoId: fomoId).newsView,
+            let directoryViewController = DirectoryWireframe(fomoId: fomoId).directoryView,
+            let metaViewController = MetaWireframe(fomoId: fomoId).metaMainView {
 
-        window!.rootViewController = rvc
-        window!.makeKeyAndVisible()
+            let vcs = [listEventsViewController,
+                       newsViewController,
+                       directoryViewController,
+                       metaViewController]
+
+            pagingViewController.viewControllers = vcs
+
+            rvc = pagingViewController as UIViewController
+
+        } else {
+
+            rvc = storyboard.instantiateViewController(withIdentifier: "MissingFomoConfig")
+        }
+
+        window.rootViewController = rvc
+        window.makeKeyAndVisible()
 
         Fabric.with([Crashlytics.self])
 

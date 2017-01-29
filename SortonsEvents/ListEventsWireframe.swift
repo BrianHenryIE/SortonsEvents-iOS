@@ -11,21 +11,25 @@ import Foundation
 
 class ListEventsWireframe {
 
-    let listEventsView: ListEventsTableViewController!
+    let listEventsView: ListEventsTableViewController?
 
     init(fomoId: FomoId) {
         let storyboard = UIStoryboard(name: "ListEvents", bundle: Bundle.main)
 
-        listEventsView = storyboard.instantiateViewController(withIdentifier: "ListEvents") as? ListEventsTableViewController
+        listEventsView = storyboard.instantiateViewController(withIdentifier: "ListEvents")
+            as? ListEventsTableViewController
 
         let listEventsPresenter = ListEventsPresenter(output: listEventsView)
 
-        let listEventsInteractor = ListEventsInteractor(wireframe: self,
-                                                        fomoId: fomoId.id,
-                                                        output: listEventsPresenter,
-                                                        listEventsNetworkWorker: ListEventsNetworkWorker(),
-                                                        listEventsCacheWorker: ListEventsCacheWorker())
+        let networkWorker = NetworkWorker<DiscoveredEvent>()
+        let cacheWorker = CacheWorker<DiscoveredEvent>()
 
-        listEventsView.output = listEventsInteractor
+        let listEventsInteractor = ListEventsInteractor(wireframe: self,
+                                                           fomoId: fomoId.fomoIdNumber,
+                                                           output: listEventsPresenter,
+                                          listEventsNetworkWorker: networkWorker,
+                                            listEventsCacheWorker: cacheWorker)
+
+        listEventsView?.output = listEventsInteractor
     }
 }

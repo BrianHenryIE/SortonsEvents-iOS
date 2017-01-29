@@ -9,11 +9,21 @@
 import UIKit
 import WebKit
 
-class NewsViewController: UIViewController, NewsPresenterOutput {
+extension News {
+    struct Request {}
+}
 
-    var webView: WKWebView!
+protocol NewsViewControllerOutputProtocol {
+    func open(_ url: URL)
 
-    var output: NewsViewControllerOutput!
+    func setup(_ request: News.Request)
+}
+
+class NewsViewController: UIViewController, NewsPresenterOutputProtocol {
+
+    var webview: WKWebView?
+
+    var output: NewsViewControllerOutputProtocol?
     var newsUrl: URLRequest!
 
     var initialViewportSet = false
@@ -28,58 +38,46 @@ class NewsViewController: UIViewController, NewsPresenterOutput {
 
     func setupView() {
 
-        webView = WKWebView(frame: self.view.frame)
+        webview = WKWebView(frame: self.view.frame)
 
-        webView.navigationDelegate = self
+        webview?.navigationDelegate = self
 
-        view.addSubview(webView)
+        view.addSubview(webview!)
     }
 
     func fetchNews() {
-        let request = News.Fetch.Request()
-        output.setup(request)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        let request = News.Request()
+        output?.setup(request)
     }
 
     func display(_ viewModel: News.ViewModel) {
-        newsUrl = viewModel.newsUrl
-        _ = webView.load(newsUrl)
+        newsUrl = viewModel.newsUrlRequest
+        _ = webview?.load(newsUrl)
     }
 
     func setViewPort(width: CGFloat) {
-        webView.evaluateJavaScript("setViewPortSizeAndRefresh( \(width) )",
+        webview?.evaluateJavaScript("setViewPortSizeAndRefresh( \(width) )",
                                    completionHandler: nil)
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        webView.isHidden = true
+        webview?.isHidden = true
         self.setViewPort(width: size.width)
 
         coordinator.animate(alongsideTransition: { _ in
-            // TODO: do this with autolayout!
-            self.webView.frame = CGRect(x: 0,
+
+            self.webview?.frame = CGRect(x: 0,
                                         y: 0,
                                     width: size.width,
                                    height: size.height)
         },
                             completion: { _ in
-                                self.webView.isHidden = false
+                                self.webview?.isHidden = false
         })
     }
 }
 
 extension NewsViewController: WKNavigationDelegate {
-
-    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
-        print(error.localizedDescription)
-    }
-
-    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        print("Start to load")
-    }
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         if !initialViewportSet {
@@ -94,7 +92,9 @@ extension NewsViewController: WKNavigationDelegate {
 
         switch navigationAction.navigationType {
         case .linkActivated:
-            output.open(navigationAction.request.urlRequest!.url!)
+            if let url = navigationAction.request.urlRequest?.url {
+                output?.open(url)
+            }
             decisionHandler(.cancel)
             break
         default:

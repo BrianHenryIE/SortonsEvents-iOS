@@ -6,38 +6,24 @@
 //  Copyright © 2016 Sortons. All rights reserved.
 //
 
-import XCTest
 @testable import SortonsEvents
+
+import XCTest
 import ObjectMapper
 
 class ClientPageDataTest: XCTestCase {
 
     func testClientPageDataParsing() throws {
 
-        // Read in the file
-        let bundle = Bundle(for: self.classForCoder)
-        let path = bundle.path(forResource: "ClientPageDataTcd", ofType: "json")!
-
-        let content = try String(contentsOfFile: path)
+        let content = readJsonFile(filename: "ClientPageDataTcd")
 
         // Use objectmapper
-        let tcdEvents: ClientPageData = Mapper<ClientPageData>().map(JSONString: content)!
+        guard let tcdEvents = try? Mapper<ClientPageData>().map(JSONString: content) else {
+            XCTFail()
+            return
+        }
 
         XCTAssertEqual(tcdEvents.includedPages.count, 325)
-    }
-
-    func testCaliforniaNil() throws {
-
-        // Read in the file
-        let bundle = Bundle(for: self.classForCoder)
-        let path = bundle.path(forResource: "TcdCaliforniaAlumni", ofType: "json")!
-
-        let content = try String(contentsOfFile: path)
-
-        // Use objectmapper
-        let california: SourcePage = Mapper<SourcePage>().map(JSONString: content)!
-
-        XCTAssertEqual(california.fbPageId, "1538569619693874")
     }
 
 }

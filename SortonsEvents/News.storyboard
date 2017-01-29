@@ -11,7 +11,7 @@
         <!--News-->
         <scene sceneID="MRg-ny-UE2">
             <objects>
-                <viewController restorationIdentifier="News" storyboardIdentifier="News" id="JH1-J5-feI" userLabel="News" customClass="NewsViewController" customModule="SortonsEvents" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="News" id="JH1-J5-feI" userLabel="News" customClass="NewsViewController" customModule="SortonsEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ia6-iz-Wx4"/>
                         <viewControllerLayoutGuide type="bottom" id="7Vf-l2-k1z"/>

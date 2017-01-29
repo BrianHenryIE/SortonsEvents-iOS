@@ -9,30 +9,49 @@
 import Foundation
 import ObjectMapper
 
-class DiscoveredEvent: Mappable {
+// This whole object is because Google App Engine can't straight return Lists<>
+// AlamofireObjectMapper addresses using keypath but gotta check if immutable works
+struct DiscoveredEventsResponse: ImmutableMappable {
 
-    var eventId: String!
-    var clientId: String!
-    var sourcePages: [SourcePage]!
-    var name: String!
-    var location: String?
-    var startTime: Date!
-    var endTime: Date?
-    var dateOnly: Bool!
+    var data: [DiscoveredEvent]?
+    init(map: Map) throws {
+        data = try? map.value("data")
+    }
+}
 
-    required init?(map _: Map) {
+struct DiscoveredEvent: SortonsNW, ImmutableMappable {
 
+    static let endpointBase = "https://sortonsevents.appspot.com/_ah/api/upcomingEvents/v1/discoveredeventsresponse/"
+    static let keyPath = "data"
+
+    let eventId: String
+    let clientId: String
+    let sourcePages: [SourcePage]
+    let name: String
+    let location: String?
+    let startTime: Date
+    let endTime: Date?
+    let dateOnly: Bool
+
+    init(map: Map) throws {
+        eventId = try map.value("eventId")
+        clientId = try map.value("clientId")
+        sourcePages = try map.value("sourcePages")
+        name = try map.value("name")
+        location = try? map.value("location")
+        startTime = try map.value("startTime", using: GAEISO8601DateTransform())
+        endTime = try? map.value("endTime", using: GAEISO8601DateTransform())
+        dateOnly = try map.value("dateOnly")
     }
 
-    // Mappable
     func mapping(map: Map) {
-        eventId <- map["eventId"]
-        clientId <- map["clientId"]
-        sourcePages <- map["sourcePages"]
-        name <- map["name"]
-        location <- map["location"]
-        startTime  <- (map["startTime"], GAEISO8601DateTransform())
-        endTime <- (map["endTime"], GAEISO8601DateTransform())
-        dateOnly <- map["dateOnly"]
+        eventId >>> map["eventId"]
+        clientId >>> map["clientId"]
+        sourcePages >>> map["sourcePages"]
+        name >>> map["name"]
+        location >>> map["location"]
+        startTime >>> (map["startTime"], GAEISO8601DateTransform())
+        endTime >>> (map["endTime"], GAEISO8601DateTransform())
+        dateOnly >>> map["dateOnly"]
     }
 }

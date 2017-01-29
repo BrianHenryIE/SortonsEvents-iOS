@@ -1,5 +1,7 @@
+line_length: 120
 excluded:
+  - Libraries
   - Pods
 disabled_rules:
   - nesting
-line_length: 120
+
