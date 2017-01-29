@@ -40,9 +40,7 @@ class ListEventsNetworkTests: XCTestCase {
             default:
                 XCTFail()
             }
-
             asyncExpectation.fulfill()
-
         }
 
         self.waitForExpectations(timeout: 5) { error in
@@ -51,4 +49,31 @@ class ListEventsNetworkTests: XCTestCase {
         }
     }
 
+    func testMalformedJsonShouldFail() {
+
+        let asyncExpectation = expectation(description: "NetworkTestsMalformed")
+
+        let responseBody = readJsonData(filename: "NetworkTestsDataMalformed")
+
+        // swiftlint:disable:next line_length
+        stub(uri("https://sortonsevents.appspot.com/_ah/api/upcomingEvents/v1/discoveredeventsresponse/fomoId"), jsonData(responseBody))
+
+        worker.fetch("fomoId") {
+            (result: Result<[DiscoveredEvent]>) in
+
+            switch result {
+            case .failure(let error):
+                print(error)
+                XCTAssert(true)
+            default:
+                XCTFail()
+            }
+            asyncExpectation.fulfill()
+        }
+
+        self.waitForExpectations(timeout: 5) { error in
+
+            XCTAssertNil(error, "Something went horribly wrong")
+        }
+    }
 }

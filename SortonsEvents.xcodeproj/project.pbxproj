@@ -222,6 +222,7 @@
 		A65CEE4E1DB5C56B0059EF52 /* NewsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CEE4D1DB5C56B0059EF52 /* NewsPresenterTests.swift */; };
 		A66DC3961CF395E000ED636B /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66DC3951CF395E000ED636B /* Tests.swift */; };
 		A66DC3981CF3966700ED636B /* SourcePageTcdAsian.json in Resources */ = {isa = PBXBuildFile; fileRef = A66DC3971CF3966700ED636B /* SourcePageTcdAsian.json */; };
+		A66E37631E3D79850021C769 /* NetworkTestsDataMalformed.json in Resources */ = {isa = PBXBuildFile; fileRef = A66E37621E3D79850021C769 /* NetworkTestsDataMalformed.json */; };
 		A67796B31DADE651003FBCE6 /* NewsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B21DADE651003FBCE6 /* NewsWireframe.swift */; };
 		A67796B51DADE6B3003FBCE6 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B41DADE6B3003FBCE6 /* NewsViewController.swift */; };
 		A67796B71DADF097003FBCE6 /* DirectoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67796B61DADF097003FBCE6 /* DirectoryViewController.swift */; };
@@ -545,6 +546,7 @@
 		A65CEE4D1DB5C56B0059EF52 /* NewsPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsPresenterTests.swift; sourceTree = "<group>"; };
 		A66DC3951CF395E000ED636B /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		A66DC3971CF3966700ED636B /* SourcePageTcdAsian.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SourcePageTcdAsian.json; sourceTree = "<group>"; };
+		A66E37621E3D79850021C769 /* NetworkTestsDataMalformed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NetworkTestsDataMalformed.json; sourceTree = "<group>"; };
 		A67796B21DADE651003FBCE6 /* NewsWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsWireframe.swift; sourceTree = "<group>"; };
 		A67796B41DADE6B3003FBCE6 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		A67796B61DADF097003FBCE6 /* DirectoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryViewController.swift; sourceTree = "<group>"; };
@@ -1044,6 +1046,7 @@
 				A6C02AD71E33312A00A80799 /* ListEventsCacheTestsData.json */,
 				A6C02ADB1E333E1A00A80799 /* NetworkTests.swift */,
 				A638BD971E35A7BB0011380C /* NetworkTestsData.json */,
+				A66E37621E3D79850021C769 /* NetworkTestsDataMalformed.json */,
 				A6C45C061DA386E600FC57D5 /* FomoIdTest.swift */,
 			);
 			name = Common;
@@ -1601,6 +1604,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A66E37631E3D79850021C769 /* NetworkTestsDataMalformed.json in Resources */,
 				A6C02AD81E33312A00A80799 /* ListEventsCacheTestsData.json in Resources */,
 				A636D26F1D0C892F00FB9C62 /* DiscoveredEventNIUGBicycleVolunteering.json in Resources */,
 				A638BD981E35A7BB0011380C /* NetworkTestsData.json in Resources */,
