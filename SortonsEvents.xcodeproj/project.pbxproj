@@ -482,6 +482,7 @@
 		A19CAD7B611D163EDD8FC88E /* Pods-FOMO DIT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO DIT.release.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO DIT/Pods-FOMO DIT.release.xcconfig"; sourceTree = "<group>"; };
 		A4B45A6EE4E167955EE9B517 /* Pods-SortonsEventsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SortonsEventsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SortonsEventsTests/Pods-SortonsEventsTests.release.xcconfig"; sourceTree = "<group>"; };
 		A60013D51E3DEBCA00F4FE02 /* SLPagingViewSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SLPagingViewSwift.swift; path = Libraries/SLPagingViewSwift.swift; sourceTree = SOURCE_ROOT; };
+		A60013E11E3DF44200F4FE02 /* codecov.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = codecov.yml; sourceTree = SOURCE_ROOT; };
 		A609A0971E3546170058D613 /* Common.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Common.storyboard; sourceTree = "<group>"; };
 		A6141D5F1BB9F44F003150F1 /* FOMO TCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO TCD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6141D8B1BB9F537003150F1 /* FOMO UCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO UCC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1080,6 +1081,7 @@
 				A64AE8851E1CF5620077A9AB /* Colleges */,
 				A6D2212E1DFDFFD4003E2285 /* .swiftlint.yml */,
 				A64DF46F1DDC25D700A102E0 /* .travis.yml */,
+				A60013E11E3DF44200F4FE02 /* codecov.yml */,
 				A69CA9771E1F70D7006BE647 /* fastlane */,
 				A691876F1DCC57B200372A98 /* AppImages.xcassets */,
 				A6BDA8771AE5CA6500C1A55C /* Settings.bundle */,
