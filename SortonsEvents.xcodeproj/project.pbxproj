@@ -537,6 +537,7 @@
 		A67DF5581DF53A7B00D351FD /* FacebookUrlTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookUrlTests.swift; sourceTree = "<group>"; };
 		A68183D41D2ADD6200E45D35 /* ListEventsTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsTableViewControllerTests.swift; sourceTree = "<group>"; };
 		A68183D91D2AFFB900E45D35 /* ListEventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsTableViewController.swift; sourceTree = "<group>"; };
+		A69065DB1E3EE18300CA4C3B /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = SOURCE_ROOT; };
 		A69186781DCC4B2C00372A98 /* FOMODCU.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FOMODCU.plist; path = targets/FOMODCU.plist; sourceTree = "<group>"; };
 		A69186791DCC4B2C00372A98 /* FOMODIT.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FOMODIT.plist; path = targets/FOMODIT.plist; sourceTree = "<group>"; };
 		A691867A1DCC4B2C00372A98 /* FOMONUIM.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FOMONUIM.plist; path = targets/FOMONUIM.plist; sourceTree = "<group>"; };
@@ -1079,6 +1080,7 @@
 			children = (
 				A6FF8A811E3DADB800EB9766 /* Libraries */,
 				A64AE8851E1CF5620077A9AB /* Colleges */,
+				A69065DB1E3EE18300CA4C3B /* .gitattributes */,
 				A6D2212E1DFDFFD4003E2285 /* .swiftlint.yml */,
 				A64DF46F1DDC25D700A102E0 /* .travis.yml */,
 				A60013E11E3DF44200F4FE02 /* codecov.yml */,
