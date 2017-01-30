@@ -27,6 +27,15 @@ Pods
 Pods/
 pods
 .DS_Store
-screenshots/*.png
-screenshots/*/*.png
+fastlane/**/*.png
 screenshots/screenshots.html
+fastlane/test_output/
+fastlane/report.xml
+
+*.cer
+
+*.mobileprovision
+
+Preview.html
+
+*.zip

@@ -1,0 +1,101 @@
+# Customise this file, documentation can be found here:
+# https://github.com/fastlane/fastlane/tree/master/fastlane/docs
+# All available actions: https://docs.fastlane.tools/actions
+# can also be listed using the `fastlane actions` command
+
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+# If you want to automatically update fastlane if a new version is available:
+# update_fastlane
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "2.12.0"
+
+default_platform :ios
+
+schemeName = "FOMO UCC"
+
+platform :ios do
+  before_all do
+    
+  end
+
+  desc "Runs all the tests"
+  lane :test do
+	cocoapods
+        scan(scheme: schemeName)
+  end
+
+  # 1
+   desc "Creating a code signing certificate and provisioning profile"
+   # 2
+   lane :provision do
+     # 3
+     produce(
+       app_name: 'FOMO UCC',
+       language: 'English',
+       app_version: '2.4',
+       sku: 'ie.sortons.events.ucc'
+     )
+     # 4
+     cert
+     # 5
+     sigh(force: true)
+   end
+
+
+  desc "Submit a new Beta Build to Apple TestFlight"
+  desc "This will also make sure the profile is up to date"
+  lane :beta do
+    # match(type: "appstore") # more information: https://codesigning.guide
+    gym(scheme: schemeName) # Build your app - more options available
+    pilot
+
+    # sh "your_script.sh"
+    # You can also use other beta testing services here (run `fastlane actions`)
+  end
+
+  desc "Increment build number and generate IPA"
+  lane :build_for_release do
+	cocoapods
+	increment_build_number
+	gym(scheme: schemeName)
+  end
+
+  desc "Deploy previously built IPA and metadata to the App Store"
+  lane :release do
+    deliver(force: true, submit_for_review: true)
+  end
+
+  desc "Deploy a new version to the App Store"
+  lane :build_and_release do
+    	# build_for_release
+	# release
+  end
+
+  # You can define as many lanes as you want
+
+  after_all do |lane|
+    # This block is called, only if the executed lane was successful
+
+    # slack(
+    #   message: "Successfully deployed new App Update."
+    # )
+  end
+
+  error do |lane, exception|
+    # slack(
+    #   message: exception.message,
+    #   success: false
+    # )
+  end
+end
+
+
+# More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
+# All available actions: https://docs.fastlane.tools/actions
+
+# fastlane reports which actions are used
+# No personal data is recorded. Learn more at https://github.com/fastlane/enhancer

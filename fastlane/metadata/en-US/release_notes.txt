@@ -1,0 +1,5 @@
+Events and directory work offline.
+Improvements to News view UX.
+New section with information, settings and sharing.
+Analytics and crash reporting added.
+Completely rewritten in Swift.
