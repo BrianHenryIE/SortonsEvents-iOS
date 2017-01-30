@@ -1,0 +1,5 @@
+Events and news aggregator for University College Cork. Don't miss out!
+
+Compiles all the latest events and posts from over 400 UCC Facebook pages.
+
+No association with UCC or Facebook.
