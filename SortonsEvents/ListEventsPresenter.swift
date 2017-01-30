@@ -8,43 +8,50 @@
 
 import Foundation
 
-class ListEventsPresenter: ListEventsInteractorOutput {
+struct ListEventsCellViewModel {
+//    let webUrl: URL
+//    let appUrl: URL
+    let name: String
+    let startTime: String
+    let location: String?
+    let imageUrl: URL?
+}
 
-    let output: ListEventsPresenterOutput
-    let calendar: Calendar!
+protocol ListEventsPresenterOutputProtocol {
+    func presentFetchedEvents(_ viewModel: ListEvents.ViewModel)
+
+    func displayFetchEventsFetchError(_ viewModel: ListEvents.ViewModel)
+}
+
+class ListEventsPresenter: ListEventsInteractorOutputProtocol {
+
+    let output: ListEventsPresenterOutputProtocol?
+    let calendar: Calendar
 
     // For testing
-    init(output: ListEventsPresenterOutput, calendar: Calendar = Calendar.current) {
+    init(output: ListEventsPresenterOutputProtocol?, calendar: Calendar = Calendar.current) {
         self.output = output
         self.calendar = calendar
     }
 
     func presentFetchedEvents(_ upcomingEvents: ListEvents.Fetch.Response) {
 
-        if(!upcomingEvents.events.isEmpty) {
+        let cellModels: [ListEventsCellViewModel] = upcomingEvents.events.map({
+//                let webUrl = URL(string: "https://facebook.com/events/\($0.eventId)/")
+//                let appUrl = URL(string: "fb://profile/\($0.eventId)/")
+                let imageUrl = URL(string: "https://graph.facebook.com/\($0.eventId)/picture?type=square")
 
-            // TODO This should maybe be outside this function. 
-            // Test were failing test here 
-            let cellModels: [DiscoveredEventCellModel] = upcomingEvents.events.map({
-                let webUrl = URL(string: "https://facebook.com/events/\($0.eventId!)/")!
-                let appUrl = URL(string: "fb://profile/\($0.eventId!)/")!
-                let imageUrl = URL(string: "https://graph.facebook.com/\($0.eventId!)/picture?type=square")!
+                return ListEventsCellViewModel(name: $0.name,
+                                          startTime: formatFriendlyTime($0.startTime, allDay: $0.dateOnly),
+                                           location: $0.location,
+                                           imageUrl: imageUrl)
+        })
 
-                return DiscoveredEventCellModel(webUrl: webUrl,
-                                                appUrl: appUrl,
-                                                name: $0.name,
-                                                startTime: formatFriendlyTime($0.startTime, allDay: $0.dateOnly),
-                                                location: $0.location,
-                                                imageUrl: imageUrl)
-            })
+        let viewModel = ListEvents.ViewModel(discoveredEvents: cellModels)
 
-            let viewModel = ListEvents.ViewModel(discoveredEvents: cellModels)
-
-            output.presentFetchedEvents(viewModel)
-        }
+        output?.presentFetchedEvents(viewModel)
     }
 
-    // Should really be an NSDate extension
     func formatFriendlyTime(_ date: Date, allDay: Bool, observingFrom: Date = Date()) -> String {
 
         let dateFormat = DateFormatter()
@@ -66,7 +73,7 @@ class ListEventsPresenter: ListEventsInteractorOutput {
             format = "EEEE dd MMMM"
         }
 
-        if(!allDay) {
+        if !allDay {
             format = "\(format) 'at' HH:mm"
         }
 

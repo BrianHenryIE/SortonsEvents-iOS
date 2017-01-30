@@ -6,10 +6,11 @@
 //  Copyright © 2016 Sortons. All rights reserved.
 //
 
-import XCTest
 @testable import SortonsEvents
 
-class ListEventsTableViewControllerOutputSpy: ListEventsTableViewControllerOutput {
+import XCTest
+
+fileprivate class OutputSpy: ListEventsTableViewControllerOutputProtocol {
 
     var fetchEventsCalled = false
     var displayEventCalled = false
@@ -55,18 +56,18 @@ class ListEventsTableViewControllerTests: XCTestCase {
         sut = storyboard.instantiateViewController(withIdentifier: "ListEvents") as? ListEventsTableViewController
     }
 
-    func testShouldFetchOrdersWhenViewIsLoaded() {
+    func testShouldFetchEventsWhenViewIsLoaded() {
         // Given
-        let listEventsViewControllerOutputSpy = ListEventsTableViewControllerOutputSpy()
+        let outputSpy = OutputSpy()
 
-        sut.output = listEventsViewControllerOutputSpy
+        sut.output = outputSpy
 
         // When
         // Call viewDidLoad()
         let _ = sut.view
 
         // Then
-        XCTAssert(listEventsViewControllerOutputSpy.fetchEventsCalled, "Should fetch events when the view is loaded")
+        XCTAssert(outputSpy.fetchEventsCalled, "Should fetch events when the view is loaded")
     }
 
 }

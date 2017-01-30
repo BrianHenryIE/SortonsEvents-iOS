@@ -2,19 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>LongName</key>
-	<string>Queen&apos;s University Belfast</string>
-	<key>FomoCensor</key>
-	<array>
-		<string>Queen&apos;s University Belfast</string>
-		<string>Queens University Belfast</string>
-		<string>Qub</string>
-		<string>QUB</string>
-	</array>
-	<key>ShortName</key>
-	<string>QUB</string>
-	<key>FomoName</key>
-	<string>FOMO QUB</string>
 	<key>AppStoreId</key>
 	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -32,7 +19,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.3</string>
+	<string>2.4</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -45,13 +32,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>14</string>
-	<key>FacebookAppID</key>
-	<string>123069381111681</string>
-	<key>FacebookDisplayName</key>
-	<string>Sortons Events</string>
-	<key>FomoId</key>
-	<string>481772365334307</string>
+	<string>16</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
@@ -66,6 +47,21 @@
 			</dict>
 		</array>
 	</dict>
+	<key>FacebookAppID</key>
+	<string>123069381111681</string>
+	<key>FacebookDisplayName</key>
+	<string>Sortons Events</string>
+	<key>FomoCensor</key>
+	<array>
+		<string>Queen's University Belfast</string>
+		<string>Queens University Belfast</string>
+		<string>Qub</string>
+		<string>QUB</string>
+	</array>
+	<key>FomoId</key>
+	<string>481772365334307</string>
+	<key>FomoName</key>
+	<string>FOMO QUB</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.entertainment</string>
 	<key>LSApplicationQueriesSchemes</key>
@@ -74,11 +70,15 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>LongName</key>
+	<string>Queen's University Belfast</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>ShortName</key>
+	<string>QUB</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreenQUB</string>
 	<key>UIRequiredDeviceCapabilities</key>

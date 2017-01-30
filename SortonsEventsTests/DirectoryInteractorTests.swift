@@ -6,11 +6,14 @@
 //  Copyright © 2016 Sortons. All rights reserved.
 //
 
-import XCTest
 @testable import SortonsEvents
 
+import XCTest
+import ObjectMapper
+import Alamofire
+
 // This is easier in Java!
-class DirectoryPresenterSpy: DirectoryInteractorOutput {
+fileprivate class PresenterSpy: DirectoryInteractorOutputProtocol {
 
     var presentFetchedDirectoryCalled = 0
     var sourcePagesCount = 0
@@ -21,50 +24,58 @@ class DirectoryPresenterSpy: DirectoryInteractorOutput {
     }
 }
 
-class DirectoryCacheWorkerSpy: DirectoryCacheWorkerProtocol {
+fileprivate class CacheSpy<T: ImmutableMappable>: CacheProtocol {
 
     var fetchCalled = false
     var saveCalled = false
 
-    func fetch() -> String? {
-        fetchCalled = true
+    let bundle: Bundle
 
-        let bundle = Bundle(for: DirectoryCacheWorkerSpy.self)
-        let path = bundle.path(forResource: "ClientPageDataTcd", ofType: "json")!
-
-        var content = ""
-
-        do {
-            content = try String(contentsOfFile: path)
-        } catch {
-            // TODO / this will throw an error already when parsing
-        }
-
-        return content
+    init(with bundle: Bundle) {
+        self.bundle = bundle
     }
 
-    func save(_ latestClientPageData: String) {
+    func fetch<T: ImmutableMappable>() -> [T]? {
+        fetchCalled = true
+
+        guard let path = bundle.path(forResource: "DirectoryInteractorTestsDummyData",
+                                          ofType: "json"),
+            let content = try? String(contentsOfFile: path),
+            let cacheDummyPages = try? Mapper<T>().mapArray(JSONString: content) else {
+                return nil
+        }
+
+        return cacheDummyPages
+    }
+
+    func save<T: ImmutableMappable>(_ latestData: [T]?) {
         saveCalled = true
     }
 }
 
-class DirectoryNetworkWorkerSpy: DirectoryNetworkWorkerProtocol {
+fileprivate class NetworkSpy<T: SortonsNW & ImmutableMappable>: NetworkProtocol {
     var fetchCalled = false
 
-    func fetchDirectory(_ fomoId: String, completionHandler: @escaping (_ discoveredEventsJsonPage: String) -> Void) {
+    let bundle: Bundle
+
+    init(with bundle: Bundle) {
+        self.bundle = bundle
+    }
+
+    func fetch<T: SortonsNW & ImmutableMappable>
+        (_ fomoId: String,
+         completionHandler: @escaping (_ result: Result<[T]>) -> Void) {
         fetchCalled = true
 
-        let bundle = Bundle(for: DirectoryCacheWorkerSpy.self)
-        let path = bundle.path(forResource: "ClientPageDataTcd", ofType: "json")!
-
-        var content = ""
-
-        do {
-            content = try String(contentsOfFile: path)
-        } catch {
-            // TODO / this will throw an error already when parsing
+        guard let path = bundle.path(forResource: "DirectoryInteractorTestsDummyData",
+                                          ofType: "json"),
+            let content = try? String(contentsOfFile: path),
+            let networkDummyPages = try? Mapper<T>().mapArray(JSONString: content) else {
+            XCTFail()
+            return
         }
-        completionHandler(content)
+
+        completionHandler(Result<[T]>.success(networkDummyPages))
     }
 }
 
@@ -72,41 +83,47 @@ class DirectoryInteractorTests: XCTestCase {
 
     var sut: DirectoryInteractor!
 
-    var presenterSpy: DirectoryPresenterSpy!
-    var cacheWorkerSpy: DirectoryCacheWorkerSpy!
-    var networkWorkerSpy: DirectoryNetworkWorkerSpy!
+    fileprivate var presenterSpy: PresenterSpy!
+    fileprivate var cacheSpy: CacheSpy<SourcePage>!
+    fileprivate var networkSpy: NetworkSpy<SourcePage>!
 
-    let fomoId = FomoId(id: "id",
-                      name: "name",
-                 shortName: "shortName",
-                  longName: "longName",
-                appStoreId: "appStoreId", censor: [String]())
+    let fomoId = FomoId(fomoIdNumber: "id",
+                                name: "name",
+                           shortName: "shortName",
+                            longName: "longName",
+                          appStoreId: "appStoreId",
+                              censor: [String]())
 
     override func setUp() {
         super.setUp()
 
-        presenterSpy = DirectoryPresenterSpy()
-        cacheWorkerSpy = DirectoryCacheWorkerSpy()
-        networkWorkerSpy = DirectoryNetworkWorkerSpy()
+        let bundle = Bundle(for: self.classForCoder)
 
-        sut = DirectoryInteractor(fomoId: fomoId.id, wireframe: DirectoryWireframe(fomoId: fomoId), presenter: presenterSpy, cache: cacheWorkerSpy, network: networkWorkerSpy)
+        presenterSpy = PresenterSpy()
+        cacheSpy = CacheSpy<SourcePage>(with: bundle)
+        networkSpy = NetworkSpy<SourcePage>(with: bundle)
+
+        sut = DirectoryInteractor(fomoIdNumber: fomoId.fomoIdNumber,
+                                     wireframe: DirectoryWireframe(fomoId: fomoId),
+                                     presenter: presenterSpy,
+                                         cache: cacheSpy,
+                                       network: networkSpy)
     }
 
     func testFetchDirectory() {
         // Should hit the cache, save to variable, send to presenter, 
         // then hit the network, save to variable, send to presenter
-        let request = Directory.Fetch.Request()
+        let request = Directory.Request()
 
         sut.fetchDirectory(request)
 
-        XCTAssert(cacheWorkerSpy.fetchCalled, "Cache worker not called by Interactor")
-        // Actually is being called but assessing too late
-//        XCTAssertEqual(presenterSpy.presentFetchedDirectoryCalled, 1, "Directory presenter not called after cache")
+        XCTAssert(cacheSpy.fetchCalled, "Cache worker not called by Interactor")
 
-        XCTAssert(networkWorkerSpy.fetchCalled, "Network worker not called by Interactor")
+        XCTAssert(networkSpy.fetchCalled, "Network worker not called by Interactor")
 
-        XCTAssertEqual(self.presenterSpy.presentFetchedDirectoryCalled, 2, "Directory Presenter not called after Network Worker")
-        XCTAssert(self.cacheWorkerSpy.saveCalled, "New events not saved to cache")
+        XCTAssertEqual(self.presenterSpy.presentFetchedDirectoryCalled, 2,
+                       "Directory Presenter not called after cache, network Worker")
+        XCTAssert(self.cacheSpy.saveCalled, "New events not saved to cache")
 
     }
 
@@ -114,12 +131,12 @@ class DirectoryInteractorTests: XCTestCase {
         // should save filter to variable in case cache is searched then overwritten by network
 
         // let it request data from the other spies!
-        let request = Directory.Fetch.Request()
+        let request = Directory.Request()
         sut.fetchDirectory(request)
 
         sut.filterDirectoryTo("music")
 
-        XCTAssertEqual(6, presenterSpy.sourcePagesCount, "Post filter count incorrect")
+        XCTAssertEqual(4, presenterSpy.sourcePagesCount, "Post filter count incorrect")
     }
 
     func displaySelectedPageFrom(rowNumber: Int) {

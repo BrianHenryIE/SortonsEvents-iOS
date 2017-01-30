@@ -11,7 +11,7 @@
         <!--News-->
         <scene sceneID="MRg-ny-UE2">
             <objects>
-                <viewController restorationIdentifier="News" storyboardIdentifier="News" id="JH1-J5-feI" userLabel="News" customClass="NewsViewController" customModule="SortonsEvents" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="News" id="JH1-J5-feI" userLabel="News" customClass="NewsViewController" customModule="SortonsEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ia6-iz-Wx4"/>
                         <viewControllerLayoutGuide type="bottom" id="7Vf-l2-k1z"/>
@@ -19,33 +19,17 @@
                     <view key="view" contentMode="scaleToFill" id="447-wI-2SS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfR-F3-lBt">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <gestureRecognizers/>
-                            </webView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="7Vf-l2-k1z" firstAttribute="top" secondItem="bfR-F3-lBt" secondAttribute="bottom" constant="49" id="FxP-rB-O85"/>
-                            <constraint firstItem="bfR-F3-lBt" firstAttribute="top" secondItem="ia6-iz-Wx4" secondAttribute="bottom" id="GYl-yu-VzX"/>
-                            <constraint firstAttribute="centerX" secondItem="bfR-F3-lBt" secondAttribute="centerX" id="JfS-EP-NbN"/>
-                            <constraint firstItem="bfR-F3-lBt" firstAttribute="width" secondItem="447-wI-2SS" secondAttribute="width" id="rBc-ky-ygQ"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="News" image="NewsTabBarIcon" id="29B-NB-HPO">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="NewsTabBarIconFilled"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
-                    <connections>
-                        <outlet property="webview" destination="bfR-F3-lBt" id="VCH-lz-ZED"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNH-s6-4VY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1138" y="-277"/>
+            <point key="canvasLocation" x="-1138.4000000000001" y="-277.51124437781112"/>
         </scene>
     </scenes>
     <resources>

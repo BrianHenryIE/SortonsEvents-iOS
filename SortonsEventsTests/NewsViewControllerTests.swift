@@ -6,10 +6,12 @@
 //  Copyright © 2016 Sortons. All rights reserved.
 //
 
-import XCTest
 @testable import SortonsEvents
 
-class NewsViewControllerOutputSpy: NewsViewControllerOutput {
+import XCTest
+import WebKit
+
+fileprivate class OutputSpy: NewsViewControllerOutputProtocol {
     var openUrlCalled = true
     var setupCalled = false
     var changeToNextTabLeftCalled = false
@@ -20,7 +22,7 @@ class NewsViewControllerOutputSpy: NewsViewControllerOutput {
         openUrlCalled = true
     }
 
-    func setup(_ request: News.Fetch.Request) {
+    func setup(_ request: News.Request) {
         setupCalled = true
     }
 
@@ -33,17 +35,34 @@ class NewsViewControllerOutputSpy: NewsViewControllerOutput {
     }
 }
 
-class WebViewSpy: UIWebView {
+class WebViewSpy: WKWebView {
     var loadRequestCalled = false
-    override func loadRequest(_ request: URLRequest) {
+    override func load(_ request: URLRequest) -> WKNavigation? {
         loadRequestCalled = true
+        return nil
+    }
+}
+
+private class WKNavigationActionMock: WKNavigationAction {
+    override var request: URLRequest {
+        return mockRequest
+    }
+    override var navigationType: WKNavigationType {
+        return mockNavigationType
+    }
+    let mockRequest: URLRequest
+    let mockNavigationType: WKNavigationType
+    init(mockRequest: URLRequest, mockNavigationType: WKNavigationType) {
+        self.mockRequest = mockRequest
+        self.mockNavigationType = mockNavigationType
+        super.init()
     }
 }
 
 class NewsViewControllerTests: XCTestCase {
 
     var sut: NewsViewController!
-    let outputSpy = NewsViewControllerOutputSpy()
+    fileprivate let outputSpy = OutputSpy()
     let webViewSpy = WebViewSpy()
 
     override func setUp() {
@@ -65,7 +84,7 @@ class NewsViewControllerTests: XCTestCase {
     }
 
     func testWebviewDelegateShouldBeSet() {
-        XCTAssert(sut.webview.delegate != nil, "Webview delegate not set")
+        XCTAssert(sut.webview?.navigationDelegate != nil, "Webview delegate not set")
     }
 
     func testWebViewSetProperly() {
@@ -74,7 +93,7 @@ class NewsViewControllerTests: XCTestCase {
         let urlString = "https://www.sortons.ie"
         let url = URL(string: urlString)!
         let urlRequest = URLRequest(url: url)
-        let viewModel = News.ViewModel(newsUrl: urlRequest)
+        let viewModel = News.ViewModel(newsUrlRequest: urlRequest)
 
         sut.display(viewModel)
 
@@ -87,10 +106,12 @@ class NewsViewControllerTests: XCTestCase {
         let url = URL(string: urlString)!
         let urlRequest = URLRequest(url: url)
 
-        XCTAssertTrue(sut.webView(sut.webview, shouldStartLoadWith: urlRequest, navigationType: .other))
+        let action = WKNavigationActionMock(mockRequest: urlRequest, mockNavigationType: .linkActivated)
 
-        XCTAssertFalse(sut.webView(sut.webview, shouldStartLoadWith: urlRequest, navigationType: .linkClicked))
+        sut.webView(sut.webview!,
+                    decidePolicyFor: action,
+                    decisionHandler: {_ in })
 
-        XCTAssert(outputSpy.openUrlCalled, "interactor should be called when a link is clicked")
+        XCTAssertTrue(outputSpy.openUrlCalled, "interactor should be called when a link is clicked")
     }
 }

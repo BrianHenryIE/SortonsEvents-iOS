@@ -11,7 +11,7 @@ import Foundation
 struct FacebookUrl {
 
     let appUrl: URL?
-    let safariUrl: URL?
+    let safariUrl: URL
 
     let facebookUrlRegex = "https://.*\\.facebook\\.com/"
 
@@ -25,15 +25,16 @@ struct FacebookUrl {
         // Non-Facebook URL
         guard inputUrl.matchingStrings(facebookUrlRegex).count > 0 else {
             appUrl = nil
-            safariUrl = URL(string: inputUrl)
+            safariUrl = URL(string: inputUrl)!
             return
         }
 
         // A redirect URL
         let redirectUrls = inputUrl.matchingStrings(redirectRegex)
         if redirectUrls.count > 0 {
+            // http://stackoverflow.com/a/33558934/
             let cleanUrlString = redirectUrls[0][1].removingPercentEncoding!
-            safariUrl = URL(string: cleanUrlString)
+            safariUrl = URL(string: cleanUrlString)!
             appUrl = nil
             return
         }
@@ -43,7 +44,7 @@ struct FacebookUrl {
         if postUrls.count > 0 {
             let cleanUrlString = "fb://profile/\(postUrls[0][1])"
             appUrl = URL(string: cleanUrlString)
-            safariUrl = URL(string: inputUrl)
+            safariUrl = URL(string: inputUrl)!
             return
         }
 
@@ -52,7 +53,7 @@ struct FacebookUrl {
         if eventUrls.count > 0 {
             let cleanUrlString = "fb://profile/\(eventUrls[0][1])"
             appUrl = URL(string: cleanUrlString)
-            safariUrl = URL(string: inputUrl)
+            safariUrl = URL(string: inputUrl)!
             return
         }
 
@@ -61,12 +62,12 @@ struct FacebookUrl {
         if photoUrls.count > 0 {
             let cleanUrlString = "fb://profile/\(photoUrls[0][1])"
             appUrl = URL(string: cleanUrlString)
-            safariUrl = URL(string: inputUrl)
+            safariUrl = URL(string: inputUrl)!
             return
         }
 
         appUrl = nil
-        safariUrl = URL(string: inputUrl)
+        safariUrl = URL(string: inputUrl)!
     }
 }
 
@@ -75,7 +76,7 @@ extension String {
     func matchingStrings(_ regex: String) -> [[String]] {
         guard let regex = try? NSRegularExpression(pattern: regex, options: []) else { return [] }
         let nsString = self as NSString
-        let results  = regex.matches(in: self, options: [], range: NSMakeRange(0, nsString.length))
+        let results  = regex.matches(in: self, range: NSRange(location: 0, length: nsString.length))
         return results.map { result in
             (0..<result.numberOfRanges).map { result.rangeAt($0).location != NSNotFound
                 ? nsString.substring(with: result.rangeAt($0))

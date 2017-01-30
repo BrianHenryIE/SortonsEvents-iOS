@@ -7,6 +7,7 @@
 //
 
 @testable import SortonsEvents
+
 import XCTest
 import ObjectMapper
 
@@ -14,15 +15,16 @@ class DiscoveredEventsResponseTests: XCTestCase {
 
     func testParseDiscoveredEventsJson() throws {
 
-        // Read in the file
-        let bundle = Bundle(for: self.classForCoder)
-        let path = bundle.path(forResource: "DiscoveredEventsResponseNUIG30June16", ofType: "json")!
-
-        let content = try String(contentsOfFile: path)
+        let content = readJsonFile(filename: "DiscoveredEventsResponseNUIG30June16")
 
         // Use objectmapper
-        let nuigJun16: DiscoveredEventsResponse = Mapper<DiscoveredEventsResponse>().map(JSONString: content)!
+        guard let nuigJun16 = try? Mapper<DiscoveredEventsResponse>().map(JSONString: content),
+            let data = nuigJun16.data else {
+            XCTFail("")
+            return
+        }
 
-        XCTAssertEqual(nuigJun16.data.count, 9)
+        XCTAssertEqual(data.count, 9)
+
     }
 }

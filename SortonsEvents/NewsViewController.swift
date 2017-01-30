@@ -7,18 +7,23 @@
 //
 
 import UIKit
+import WebKit
 
-//Important
-//Before releasing an instance of UIWebView for which you have set a delegate, 
-//you must first set the UIWebView delegate property to nil before disposing 
-//of the UIWebView instance. This can be done, for example, in the dealloc 
-//method where you dispose of the UIWebView.
+extension News {
+    struct Request {}
+}
 
-class NewsViewController: UIViewController, NewsPresenterOutput {
+protocol NewsViewControllerOutputProtocol {
+    func open(_ url: URL)
 
-    @IBOutlet weak var webview: UIWebView!
+    func setup(_ request: News.Request)
+}
 
-    var output: NewsViewControllerOutput!
+class NewsViewController: UIViewController, NewsPresenterOutputProtocol {
+
+    var webview: WKWebView?
+
+    var output: NewsViewControllerOutputProtocol?
     var newsUrl: URLRequest!
 
     var initialViewportSet = false
@@ -26,65 +31,75 @@ class NewsViewController: UIViewController, NewsPresenterOutput {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        webview.delegate = self
-        webview.scrollView.decelerationRate = UIScrollViewDecelerationRateNormal
+        setupView()
 
         fetchNews()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    func setupView() {
+
+        webview = WKWebView(frame: self.view.frame)
+
+        webview?.navigationDelegate = self
+
+        view.addSubview(webview!)
     }
 
     func fetchNews() {
-        let request = News.Fetch.Request()
-        output.setup(request)
+        let request = News.Request()
+        output?.setup(request)
     }
 
     func display(_ viewModel: News.ViewModel) {
-        newsUrl = viewModel.newsUrl
-        webview.loadRequest(newsUrl)
+        newsUrl = viewModel.newsUrlRequest
+        _ = webview?.load(newsUrl)
     }
 
     func setViewPort(width: CGFloat) {
-        webview.stringByEvaluatingJavaScript(from: "setViewPortSizeAndRefresh( \(width) )")
-        // aka
-        // javascript:setViewPortSizeAndRefresh(1000)
+        webview?.evaluateJavaScript("setViewPortSizeAndRefresh( \(width) )",
+                                   completionHandler: nil)
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-
-        self.webview.isHidden = true
+        webview?.isHidden = true
         self.setViewPort(width: size.width)
 
-        coordinator.animate(alongsideTransition: nil,
+        coordinator.animate(alongsideTransition: { _ in
+
+            self.webview?.frame = CGRect(x: 0,
+                                        y: 0,
+                                    width: size.width,
+                                   height: size.height)
+        },
                             completion: { _ in
-                                     self.webview.isHidden = false
-                            })
+                                self.webview?.isHidden = false
+        })
     }
 }
 
-extension NewsViewController: UIWebViewDelegate {
+extension NewsViewController: WKNavigationDelegate {
 
-    func webView(_ webView: UIWebView,
-                 shouldStartLoadWith request: URLRequest,
-                 navigationType: UIWebViewNavigationType) -> Bool {
-        switch navigationType {
-        case .linkClicked:
-            output.open(request.url!)
-            return false
-        default:
-            return true
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        if !initialViewportSet {
+            setViewPort(width: self.view.bounds.width)
+            initialViewportSet = true
         }
     }
 
-    func webViewDidFinishLoad(_ webView: UIWebView) {
+    func webView(_ webView: WKWebView,
+                 decidePolicyFor navigationAction: WKNavigationAction,
+                 decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
 
-        if !initialViewportSet {
-            setViewPort(width: view.frame.width)
-            initialViewportSet = true
+        switch navigationAction.navigationType {
+        case .linkActivated:
+            if let url = navigationAction.request.urlRequest?.url {
+                output?.open(url)
+            }
+            decisionHandler(.cancel)
+            break
+        default:
+            decisionHandler(.allow)
+            break
         }
-
     }
 }
