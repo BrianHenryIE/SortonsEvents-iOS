@@ -42,15 +42,15 @@ class MetaViewController: UITableViewController, MetaPresenterOutputProtocol {
                                       message: "What is the feedback about?",
                                       preferredStyle: .actionSheet)
         let praiseAction = UIAlertAction(title: "Praise!",
-                                        style: .default) { (alert: UIAlertAction!) -> Void in
+                                        style: .default) { (_) -> Void in
                                             self.output?.sendFeedback(for: .praise)
         }
         let suggestionAction = UIAlertAction(title: "Suggestion",
-                                            style: .default) { (alert: UIAlertAction!) -> Void in
+                                            style: .default) { (_) -> Void in
                                             self.output?.sendFeedback(for: .suggestion)
         }
         let complaintAction = UIAlertAction(title: "Complaint",
-                                            style: .default) { (alert: UIAlertAction!) -> Void in
+                                            style: .default) { (_) -> Void in
                                                 self.output?.sendFeedback(for: .complaint)
         }
         alert.addAction(suggestionAction)
@@ -82,7 +82,7 @@ class MetaViewController: UITableViewController, MetaPresenterOutputProtocol {
                                               message: message,
                                        preferredStyle: .alert)
 
-        let okAction = UIAlertAction(title: "OK", style: .default) { action in
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             // ...
         }
         alertController.addAction(okAction)

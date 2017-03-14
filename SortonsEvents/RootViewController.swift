@@ -39,7 +39,7 @@ class RootViewController: SLPagingViewSwift, UITabBarDelegate {
         // The first tab isn't highlighted naturally
         tabBar?.selectedItem = self.tabBar?.items?[0]
 
-        didChangedPage = {(_ currentPage: Int)-> () in
+        didChangedPage = {(_ currentPage: Int) -> Void in
             self.indexSelected = currentPage
             self.tabBar?.selectedItem = self.tabBar?.items?[currentPage]
         }

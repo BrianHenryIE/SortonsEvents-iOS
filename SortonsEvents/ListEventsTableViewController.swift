@@ -61,7 +61,7 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
 
         let topVisibleRow = tableView.indexPathsForVisibleRows?[0]
 
-        coordinator.animate(alongsideTransition: { context in
+        coordinator.animate(alongsideTransition: { _ in
 
             let top = UIApplication.shared.statusBarFrame.size.height
             self.tableView.contentInset = UIEdgeInsets(top: top,
