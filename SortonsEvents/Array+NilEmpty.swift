@@ -8,8 +8,6 @@
 
 import Foundation
 
-import Foundation
-
 public extension Array {
     /**
      Return nil when the array is empty

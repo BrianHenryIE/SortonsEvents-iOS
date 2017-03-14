@@ -11,6 +11,7 @@
 		0A6A66029A0973617EE0862E /* Pods_FOMO_DIT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53758BD505E55471D2B6557 /* Pods_FOMO_DIT.framework */; };
 		401F7CD815CDEFC7ADC0AB5D /* Pods_FOMO_QUB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC3714A0D31113C8D0729DE /* Pods_FOMO_QUB.framework */; };
 		4F28A9AF78802111DCAF2FB5 /* Pods_FOMO_UL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F604AEE0BAF446DB4898192B /* Pods_FOMO_UL.framework */; };
+		84A343401E77B79F003AB6E3 /* Array+NilEmptyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3433F1E77B79F003AB6E3 /* Array+NilEmptyTests.swift */; };
 		A60013D61E3DEBCA00F4FE02 /* SLPagingViewSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60013D51E3DEBCA00F4FE02 /* SLPagingViewSwift.swift */; };
 		A60013D71E3DEBCA00F4FE02 /* SLPagingViewSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60013D51E3DEBCA00F4FE02 /* SLPagingViewSwift.swift */; };
 		A60013D81E3DEBCA00F4FE02 /* SLPagingViewSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60013D51E3DEBCA00F4FE02 /* SLPagingViewSwift.swift */; };
@@ -482,6 +483,7 @@
 		676AE7F75C85DD3D40CC62B9 /* Pods-FOMO TCD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO TCD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD.debug.xcconfig"; sourceTree = "<group>"; };
 		75693CB5A902F3AB50B59FEF /* Pods_FOMO_DCU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FOMO_DCU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		786DDF9E2A825C011E1D3806 /* Pods-SortonsEventsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SortonsEventsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SortonsEventsTests/Pods-SortonsEventsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		84A3433F1E77B79F003AB6E3 /* Array+NilEmptyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+NilEmptyTests.swift"; sourceTree = "<group>"; };
 		86C4D503BF874FC2107C8A4C /* Pods-FOMO DCU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO DCU.release.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO DCU/Pods-FOMO DCU.release.xcconfig"; sourceTree = "<group>"; };
 		89FCEDB6A3948FDAAA17FEB9 /* Pods-FOMO DIT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO DIT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO DIT/Pods-FOMO DIT.debug.xcconfig"; sourceTree = "<group>"; };
 		9AC3714A0D31113C8D0729DE /* Pods_FOMO_QUB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FOMO_QUB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -489,9 +491,9 @@
 		A19CAD7B611D163EDD8FC88E /* Pods-FOMO DIT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO DIT.release.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO DIT/Pods-FOMO DIT.release.xcconfig"; sourceTree = "<group>"; };
 		A4B45A6EE4E167955EE9B517 /* Pods-SortonsEventsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SortonsEventsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SortonsEventsTests/Pods-SortonsEventsTests.release.xcconfig"; sourceTree = "<group>"; };
 		A60013D51E3DEBCA00F4FE02 /* SLPagingViewSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SLPagingViewSwift.swift; path = Libraries/SLPagingViewSwift.swift; sourceTree = SOURCE_ROOT; };
-		A60013E11E3DF44200F4FE02 /* codecov.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = codecov.yml; sourceTree = SOURCE_ROOT; };
 		A60013DF1E3DEDDC00F4FE02 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Fastfile; path = fastlane/Fastfile; sourceTree = SOURCE_ROOT; };
 		A60013E01E3DEDE500F4FE02 /* Appfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Appfile; path = fastlane/Appfile; sourceTree = SOURCE_ROOT; };
+		A60013E11E3DF44200F4FE02 /* codecov.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = codecov.yml; sourceTree = SOURCE_ROOT; };
 		A609A0971E3546170058D613 /* Common.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Common.storyboard; sourceTree = "<group>"; };
 		A6141D5F1BB9F44F003150F1 /* FOMO TCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO TCD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6141D8B1BB9F537003150F1 /* FOMO UCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FOMO UCC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -544,10 +546,10 @@
 		A67DF5581DF53A7B00D351FD /* FacebookUrlTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookUrlTests.swift; sourceTree = "<group>"; };
 		A68183D41D2ADD6200E45D35 /* ListEventsTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsTableViewControllerTests.swift; sourceTree = "<group>"; };
 		A68183D91D2AFFB900E45D35 /* ListEventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsTableViewController.swift; sourceTree = "<group>"; };
-		A69065DB1E3EE18300CA4C3B /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = SOURCE_ROOT; };
 		A69065D81E3EB17D00CA4C3B /* Scanfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Scanfile; path = fastlane/Scanfile; sourceTree = SOURCE_ROOT; };
 		A69065D91E3EB17D00CA4C3B /* Snapfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Snapfile; path = fastlane/Snapfile; sourceTree = SOURCE_ROOT; };
 		A69065DA1E3ED30700CA4C3B /* Deliverfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Deliverfile; path = fastlane/Deliverfile; sourceTree = SOURCE_ROOT; };
+		A69065DB1E3EE18300CA4C3B /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = SOURCE_ROOT; };
 		A69186781DCC4B2C00372A98 /* FOMODCU.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FOMODCU.plist; path = targets/FOMODCU.plist; sourceTree = "<group>"; };
 		A69186791DCC4B2C00372A98 /* FOMODIT.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FOMODIT.plist; path = targets/FOMODIT.plist; sourceTree = "<group>"; };
 		A691867A1DCC4B2C00372A98 /* FOMONUIM.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FOMONUIM.plist; path = targets/FOMONUIM.plist; sourceTree = "<group>"; };
@@ -752,6 +754,14 @@
 				F604AEE0BAF446DB4898192B /* Pods_FOMO_UL.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8498F4A21E77B9E6002BBE49 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				84A3433F1E77B79F003AB6E3 /* Array+NilEmptyTests.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		A609A0961E3545FF0058D613 /* View */ = {
@@ -1045,6 +1055,7 @@
 				A638BD971E35A7BB0011380C /* NetworkTestsData.json */,
 				A66E37621E3D79850021C769 /* NetworkTestsDataMalformed.json */,
 				A6C45C061DA386E600FC57D5 /* FomoIdTest.swift */,
+				8498F4A21E77B9E6002BBE49 /* Utils */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -2658,6 +2669,7 @@
 				A62439191E3881D000FB16AE /* MetaInteractorTests.swift in Sources */,
 				A69DBF591C8AE8E3005064F7 /* ListEventsInteractorTests.swift in Sources */,
 				A6C02ADC1E333E1A00A80799 /* NetworkTests.swift in Sources */,
+				84A343401E77B79F003AB6E3 /* Array+NilEmptyTests.swift in Sources */,
 				A6AAD3E11D258F0D0097AF22 /* ClientPageDataTest.swift in Sources */,
 				A65CEE461DB5C4790059EF52 /* NewsViewControllerTests.swift in Sources */,
 				A6A6732B1E20CEA7003AB89A /* MetaWebViewTests.swift in Sources */,
