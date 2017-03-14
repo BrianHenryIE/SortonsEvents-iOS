@@ -35,6 +35,7 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutputProtoco
         tableViewOutlet.estimatedRowHeight = 80
 
         let gestureRecognizer = UIGestureRecognizer()
+        gestureRecognizer.cancelsTouchesInView = false
         tableViewOutlet.addGestureRecognizer(gestureRecognizer)
 
         gestureRecognizer.delegate = self
