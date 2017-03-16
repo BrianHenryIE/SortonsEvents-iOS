@@ -13,8 +13,8 @@ Originally written as a [Java web-app](https://github.com/BrianHenryIE/Sortons-E
 Check it out on the App Store for:
 
 | [![](http://www.sortons.ie/events/github/dublincityuniversity.png)](https://itunes.apple.com/ie/app/fomo-dcu/id1037323967?mt=8) | [![](http://www.sortons.ie/events/github/trinitycollegedublin.png)](https://itunes.apple.com/ie/app/fomo-tcd/id1035135187?mt=8)  |  [![](http://www.sortons.ie/events/github/universitycollegedublin.png)](https://itunes.apple.com/ie/app/fomo-ucd/id977641745?mt=8) |
-|---|---|---|---|
-|[Dublin City University](https://itunes.apple.com/ie/app/fomo-dcu/id1037323967?mt=8)|[Trinity College Dublin](https://itunes.apple.com/ie/app/fomo-tcd/id1035135187?mt=8)|[University College Dublin](https://itunes.apple.com/ie/app/fomo-ucd/id977641745?mt=8)|
+| --- | --- | --- | --- |
+| [Dublin City University](https://itunes.apple.com/ie/app/fomo-dcu/id1037323967?mt=8) | [Trinity College Dublin](https://itunes.apple.com/ie/app/fomo-tcd/id1035135187?mt=8) | [University College Dublin](https://itunes.apple.com/ie/app/fomo-ucd/id977641745?mt=8) |
 
 ## Build
 
