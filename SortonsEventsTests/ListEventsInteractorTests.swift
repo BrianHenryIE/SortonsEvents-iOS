@@ -122,6 +122,24 @@ class ListEventsInteractorTests: XCTestCase {
            //       "FetchEvents() should ask presenter to format events result")
     }
 
+    func testFetchFromNetworkHitsNetwork() {
+        let networkSpy = NetworkSpy()
+        let cacheSpy = CacheSpy<DiscoveredEvent>()
+
+        let interactorOutputSpy = OutputSpy()
+
+        let viewController = ListEventsInteractor(wireframe: ListEventsWireframe(fomoId: fomoId),
+                                       fomoId: "",
+                                       output: interactorOutputSpy,
+                                       listEventsNetworkWorker: networkSpy,
+                                       listEventsCacheWorker: cacheSpy)
+
+        viewController.fetchFromNetwork()
+
+        XCTAssertFalse(cacheSpy.fetchCalled)
+        XCTAssertTrue(networkSpy.fetchEventsCalled)
+    }
+
     func testEmptyFetchEventsShouldNotHitPresenter() {
         let emptyNetworkSpy = EmptyNetworkSpy()
         let emptyCacheSpy = EmptyCacheSpy<DiscoveredEvent>()

@@ -51,7 +51,9 @@ class ListEventsPresenterTests: XCTestCase {
 
         events.append(anEvent)
 
-        sut.presentFetchedEvents(ListEvents.Fetch.Response(events: events))
+        let data = ListEvents.Fetch.Response(events: events, source: .network)
+
+        sut.presentFetchedEvents(data)
 
         XCTAssertTrue(outputSpy.presentFetchedEventsCalled)
     }

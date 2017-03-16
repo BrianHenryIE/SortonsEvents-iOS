@@ -13,6 +13,7 @@ import UIKit
 
 protocol ListEventsTableViewControllerOutputProtocol {
     func fetchEvents(_ request: ListEvents.Fetch.Request)
+    func fetchFromNetwork()
 
     func displayEvent(for rowNumber: Int)
 }
@@ -27,6 +28,11 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupViews()
+        fetchEventsOnLoad()
+    }
+
+    func setupViews() {
         // Start content below (not beneath) the status bar
         let top = UIApplication.shared.statusBarFrame.size.height
         self.tableView.contentInset = UIEdgeInsets(top: top,
@@ -38,7 +44,12 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
 
-        fetchEventsOnLoad()
+        refreshControl?.beginRefreshing()
+        tableView.setContentOffset(CGPoint(x: 0, y: -1.2*(refreshControl?.frame.size.height ?? 0)), animated: true)
+
+        refreshControl?.addTarget(self,
+                                  action: #selector(refresh(_:)),
+                                     for: UIControlEvents.valueChanged)
     }
 
     func fetchEventsOnLoad() {
@@ -46,10 +57,18 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
         output?.fetchEvents(request)
     }
 
+    func refresh(_ sender: Any) {
+        output?.fetchFromNetwork()
+    }
+
 // MARK: Display logic ListEventsPresenterOutput
-    func presentFetchedEvents(_ viewModel: ListEvents.ViewModel) {
-        data = viewModel
+    func presentFetchedEvents(_ viewData: ListEvents.ViewModel) {
+        data = viewData
         tableView.reloadData()
+
+        if viewData.hideRefreshControl {
+//            refreshControl?.endRefreshing()
+        }
     }
 
     func displayFetchEventsFetchError(_ viewModel: ListEvents.ViewModel) {

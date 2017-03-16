@@ -8,19 +8,24 @@
 
 import Foundation
 
-struct ListEventsCellViewModel {
-//    let webUrl: URL
-//    let appUrl: URL
-    let name: String
-    let startTime: String
-    let location: String?
-    let imageUrl: URL?
-}
-
 protocol ListEventsPresenterOutputProtocol {
     func presentFetchedEvents(_ viewModel: ListEvents.ViewModel)
 
     func displayFetchEventsFetchError(_ viewModel: ListEvents.ViewModel)
+}
+
+extension ListEvents {
+    struct ViewModel {
+        struct Cell {
+            let name: String
+            let startTime: String
+            let location: String?
+            let imageUrl: URL?
+        }
+
+        let discoveredEvents: [Cell]
+        let hideRefreshControl: Bool
+    }
 }
 
 class ListEventsPresenter: ListEventsInteractorOutputProtocol {
@@ -36,20 +41,27 @@ class ListEventsPresenter: ListEventsInteractorOutputProtocol {
 
     func presentFetchedEvents(_ upcomingEvents: ListEvents.Fetch.Response) {
 
-        let cellModels: [ListEventsCellViewModel] = upcomingEvents.events.map({
-//                let webUrl = URL(string: "https://facebook.com/events/\($0.eventId)/")
-//                let appUrl = URL(string: "fb://profile/\($0.eventId)/")
+        let cells: [ListEvents.ViewModel.Cell] = upcomingEvents.events.map({
                 let imageUrl = URL(string: "https://graph.facebook.com/\($0.eventId)/picture?type=square")
 
-                return ListEventsCellViewModel(name: $0.name,
-                                          startTime: formatFriendlyTime($0.startTime, allDay: $0.dateOnly),
-                                           location: $0.location,
-                                           imageUrl: imageUrl)
+                return ListEvents.ViewModel.Cell(name: $0.name,
+                                            startTime: formatFriendlyTime($0.startTime, allDay: $0.dateOnly),
+                                             location: $0.location,
+                                             imageUrl: imageUrl)
         })
 
-        let viewModel = ListEvents.ViewModel(discoveredEvents: cellModels)
+        let hideRefreshContol: Bool
+        switch upcomingEvents.source {
+        case .cache:
+            hideRefreshContol = false
+        case .network:
+            hideRefreshContol = true
+        }
 
-        output?.presentFetchedEvents(viewModel)
+        let viewData = ListEvents.ViewModel(discoveredEvents: cells,
+                                          hideRefreshControl: hideRefreshContol)
+
+        output?.presentFetchedEvents(viewData)
     }
 
     func formatFriendlyTime(_ date: Date, allDay: Bool, observingFrom: Date = Date()) -> String {

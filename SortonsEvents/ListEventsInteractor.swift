@@ -16,11 +16,10 @@ struct ListEvents {
 
         struct Response {
             let events: [DiscoveredEvent]
-        }
-    }
+            let source: Response.Source
 
-    struct ViewModel {
-        let discoveredEvents: [ListEventsCellViewModel]
+            enum Source { case cache, network }
+        }
     }
 }
 
@@ -67,11 +66,15 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtoco
         // Get from cache
         if let eventsFromCache: [DiscoveredEvent] = cacheWorker.fetch() {
             allUpcomingEvents = filterToOngoingEvents(eventsFromCache, observingFrom: observingFrom)
-            let response = ListEvents.Fetch.Response(events: allUpcomingEvents)
+            let response = ListEvents.Fetch.Response(events: allUpcomingEvents, source: .cache)
             output.presentFetchedEvents(response)
         }
 
-        // Get from network
+        fetchFromNetwork()
+    }
+
+    func fetchFromNetwork() {
+
         listEventsNetworkWorker.fetch(fomoId) { (response: Result<[DiscoveredEvent]>) -> Void in
 
             switch response {
@@ -81,7 +84,7 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtoco
 
                     self.cacheWorker.save(allUpcomingEvents)
 
-                    let response = ListEvents.Fetch.Response(events: allUpcomingEvents)
+                    let response = ListEvents.Fetch.Response(events: allUpcomingEvents, source: .network)
 
                     self.output.presentFetchedEvents(response)
                 }
