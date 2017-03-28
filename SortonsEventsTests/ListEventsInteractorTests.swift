@@ -97,7 +97,7 @@ class ListEventsInteractorTests: XCTestCase {
                           appStoreId: "appStoreId",
                               censor: [String]())
 
-    func testFetchEventsShouldAskEventsNetworkWorkerToFetchEventsAndPresenterToFormatResult() {
+    func testFetchFromCacheShouldAskCacheWorkerForEventsAndPresenterToFormatResult() {
         let networkSpy = NetworkSpy()
         let cacheSpy = CacheSpy<DiscoveredEvent>()
 
@@ -109,13 +109,10 @@ class ListEventsInteractorTests: XCTestCase {
                                        listEventsNetworkWorker: networkSpy,
                                        listEventsCacheWorker: cacheSpy)
 
-        // When
-        let request = ListEvents.Fetch.Request()
-        sut.fetchEvents(request)
+        sut.fetchFromCache()
 
         // Then
         XCTAssert(cacheSpy.fetchCalled, "Fetch() should ask cacheWorker to fetch events")
-        XCTAssert(networkSpy.fetchEventsCalled, "FetchEvents() should ask EventsNetworkWorker to fetch events")
 
         // This only gets called when there are events to return... test for both scenarios!
         // XCTAssert(interactorOutputSpy.presentFetchedEventsCalled,
@@ -140,33 +137,7 @@ class ListEventsInteractorTests: XCTestCase {
         XCTAssertTrue(networkSpy.fetchEventsCalled)
     }
 
-    func testEmptyFetchEventsShouldNotHitPresenter() {
-        let emptyNetworkSpy = EmptyNetworkSpy()
-        let emptyCacheSpy = EmptyCacheSpy<DiscoveredEvent>()
-
-        let interactorOutputSpy = OutputSpy()
-
-        let sut = ListEventsInteractor(wireframe: ListEventsWireframe(fomoId: fomoId),
-                                       fomoId: "",
-                                       output: interactorOutputSpy,
-                                       listEventsNetworkWorker: emptyNetworkSpy,
-                                       listEventsCacheWorker: emptyCacheSpy)
-
-        // When
-        let request = ListEvents.Fetch.Request()
-        sut.fetchEvents(request)
-
-        // Then
-        XCTAssert(emptyCacheSpy.fetchCalled, "Fetch() should ask cacheWorker to fetch events")
-        XCTAssert(emptyNetworkSpy.fetchCalled, "FetchEvents() should ask EventsNetworkWorker to fetch events")
-
-        XCTAssertFalse(emptyCacheSpy.saveCalled,
-                       "If the network worker was empty, no need to save to cache"
-                        + "(or would overwrite a possibly valid cache)")
-
-        XCTAssertFalse(interactorOutputSpy.presentFetchedEventsCalled,
-                      "FetchEvents() should not ask presenter to format events result")
-    }
+    // TODO: what is sent to the presenter when 0 events returned
 
     func testShouldDiscardEarlyEvents() {
         var remainingEvents: [DiscoveredEvent]

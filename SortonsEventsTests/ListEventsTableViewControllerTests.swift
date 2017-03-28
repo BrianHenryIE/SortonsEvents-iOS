@@ -12,13 +12,13 @@ import XCTest
 
 private class OutputSpy: ListEventsTableViewControllerOutputProtocol {
 
-    var fetchEventsCalled = false
+    var fetchFromCacheCalled = false
     var fetchFromNetworkCalled = false
     var displayEventCalled = false
     var changeToNextTabRightCalled = false
 
-    func fetchEvents(_ request: ListEvents.Fetch.Request) {
-        fetchEventsCalled = true
+    func fetchFromCache() {
+        fetchFromCacheCalled = true
     }
 
     func fetchFromNetwork() {
@@ -54,7 +54,7 @@ class ListEventsTableViewControllerTests: XCTestCase {
     }
 
     func testShouldFetchEventsWhenViewIsLoaded() {
-        XCTAssert(outputSpy.fetchEventsCalled, "Should fetch events when the view is loaded")
+        XCTAssert(outputSpy.fetchFromCacheCalled, "Should fetch events when the view is loaded")
     }
 
     func testPullToRefreshIsEnabled() {

@@ -12,7 +12,7 @@
 import UIKit
 
 protocol ListEventsTableViewControllerOutputProtocol {
-    func fetchEvents(_ request: ListEvents.Fetch.Request)
+    func fetchFromCache()
     func fetchFromNetwork()
 
     func displayEvent(for rowNumber: Int)
@@ -44,21 +44,24 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
 
-        refreshControl?.beginRefreshing()
-        tableView.setContentOffset(CGPoint(x: 0, y: -1.2*(refreshControl?.frame.size.height ?? 0)), animated: true)
-
         refreshControl?.addTarget(self,
                                   action: #selector(refresh(_:)),
                                      for: UIControlEvents.valueChanged)
     }
 
     func fetchEventsOnLoad() {
-        let request = ListEvents.Fetch.Request()
-        output?.fetchEvents(request)
+        output?.fetchFromCache()
+        fetchFromNetwork()
+    }
+
+    func fetchFromNetwork() {
+        refreshControl?.beginRefreshing()
+        tableView.setContentOffset(CGPoint(x: 0, y: -1.2*(refreshControl?.frame.size.height ?? 0)), animated: true)
+        output?.fetchFromNetwork()
     }
 
     func refresh(_ sender: Any) {
-        output?.fetchFromNetwork()
+        fetchFromNetwork()
     }
 
 // MARK: Display logic ListEventsPresenterOutput
@@ -67,7 +70,7 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
         tableView.reloadData()
 
         if viewData.hideRefreshControl {
-//            refreshControl?.endRefreshing()
+            refreshControl?.endRefreshing()
         }
     }
 

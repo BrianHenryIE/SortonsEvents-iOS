@@ -11,9 +11,6 @@ import Alamofire
 
 struct ListEvents {
     struct Fetch {
-        struct Request {
-        }
-
         struct Response {
             let events: [DiscoveredEvent]
             let source: Response.Source
@@ -61,16 +58,12 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtoco
         dateFormat.timeZone = calendar.timeZone
     }
 
-    func fetchEvents(_ request: ListEvents.Fetch.Request) {
-
-        // Get from cache
+    func fetchFromCache() {
         if let eventsFromCache: [DiscoveredEvent] = cacheWorker.fetch() {
             allUpcomingEvents = filterToOngoingEvents(eventsFromCache, observingFrom: observingFrom)
             let response = ListEvents.Fetch.Response(events: allUpcomingEvents, source: .cache)
             output.presentFetchedEvents(response)
         }
-
-        fetchFromNetwork()
     }
 
     func fetchFromNetwork() {
