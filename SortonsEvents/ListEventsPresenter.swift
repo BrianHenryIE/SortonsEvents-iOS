@@ -61,7 +61,9 @@ class ListEventsPresenter: ListEventsInteractorOutputProtocol {
         let viewData = ListEvents.ViewModel(discoveredEvents: cells,
                                           hideRefreshControl: hideRefreshContol)
 
-        output?.presentFetchedEvents(viewData)
+        DispatchQueue.main.async {
+            self.output?.presentFetchedEvents(viewData)
+        }
     }
 
     func formatFriendlyTime(_ date: Date, allDay: Bool, observingFrom: Date = Date()) -> String {

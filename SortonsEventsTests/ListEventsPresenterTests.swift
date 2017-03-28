@@ -16,8 +16,11 @@ fileprivate class OutputSpy: ListEventsPresenterOutputProtocol {
     var presentFetchedEventsCalled = false
     var presentFetchEventsFetchError  = false
 
+    var asyncExpectation: XCTestExpectation?
+
     func presentFetchedEvents(_ viewModel: ListEvents.ViewModel) {
         presentFetchedEventsCalled = true
+        asyncExpectation?.fulfill()
     }
 
     func displayFetchEventsFetchError(_ viewModel: ListEvents.ViewModel) {
@@ -41,6 +44,9 @@ class ListEventsPresenterTests: XCTestCase {
 
     func testPresentFetchedEvents() throws {
 
+        let asyncExpectation = expectation(description: "testPresentFetchedEvents()")
+        outputSpy.asyncExpectation = asyncExpectation
+
         let content = readJsonFile(filename: "DiscoveredEventNIUGBicycleVolunteering")
 
         // Use objectmapper
@@ -54,6 +60,8 @@ class ListEventsPresenterTests: XCTestCase {
         let data = ListEvents.Fetch.Response(events: events, source: .network)
 
         sut.presentFetchedEvents(data)
+
+        waitForExpectations(timeout:5, handler: nil)
 
         XCTAssertTrue(outputSpy.presentFetchedEventsCalled)
     }

@@ -35,11 +35,15 @@ class MetaPresenter: MetaInteractorOutputProtocol {
 
         let objectsToShare = [shareText, appStoreLink] as [Any]
 
-        output?.share(objectsToShare)
+        DispatchQueue.main.async {
+            self.output?.share(objectsToShare)
+        }
     }
 
     func showFeedbackTypeAlert() {
-        output?.showFeedbackTypeAlert()
+        DispatchQueue.main.async {
+            self.output?.showFeedbackTypeAlert()
+        }
     }
 
     func sendFeedback(for type: FeedbackType) {
@@ -55,7 +59,9 @@ class MetaPresenter: MetaInteractorOutputProtocol {
 
         let address = "info@sortons.ie"
 
-        output?.sendFeedbackEmail(to: address, with: subject)
+        DispatchQueue.main.async {
+            self.output?.sendFeedbackEmail(to: address, with: subject)
+        }
     }
 
     func showSendMailErrorAlert() {
@@ -63,8 +69,10 @@ class MetaPresenter: MetaInteractorOutputProtocol {
         let title = "Cannot send mail"
         let message = "Maybe you don't have the Mail app set up. You can always send feedback to info@sortons.ie"
 
-        output?.showErrorAlert(title: title,
-                            message: message)
+        DispatchQueue.main.async {
+            self.output?.showErrorAlert(title: title,
+                                      message: message)
+        }
 
     }
 }

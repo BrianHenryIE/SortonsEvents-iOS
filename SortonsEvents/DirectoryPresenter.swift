@@ -57,6 +57,8 @@ class DirectoryPresenter: DirectoryInteractorOutputProtocol {
 
         let viewModel = Directory.ViewModel(directory: viewModelDirectory)
 
-        output?.presentFetchedDirectory(viewModel)
+        DispatchQueue.main.async {
+            self.output?.presentFetchedDirectory(viewModel)
+        }
     }
 }
