@@ -11,7 +11,26 @@
 		0A6A66029A0973617EE0862E /* Pods_FOMO_DIT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53758BD505E55471D2B6557 /* Pods_FOMO_DIT.framework */; };
 		401F7CD815CDEFC7ADC0AB5D /* Pods_FOMO_QUB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC3714A0D31113C8D0729DE /* Pods_FOMO_QUB.framework */; };
 		4F28A9AF78802111DCAF2FB5 /* Pods_FOMO_UL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F604AEE0BAF446DB4898192B /* Pods_FOMO_UL.framework */; };
+		84452E2D1E7B51A800EABBC9 /* RootInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84452E2C1E7B51A800EABBC9 /* RootInteractorTests.swift */; };
+		8497A0751E8AFD16003BA1FE /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497A0741E8AFD16003BA1FE /* RootInteractor.swift */; };
+		8497A0761E8AFD16003BA1FE /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497A0741E8AFD16003BA1FE /* RootInteractor.swift */; };
+		8497A0771E8AFD16003BA1FE /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497A0741E8AFD16003BA1FE /* RootInteractor.swift */; };
+		8497A0781E8AFD16003BA1FE /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497A0741E8AFD16003BA1FE /* RootInteractor.swift */; };
+		8497A0791E8AFD16003BA1FE /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497A0741E8AFD16003BA1FE /* RootInteractor.swift */; };
+		8497A07A1E8AFD16003BA1FE /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497A0741E8AFD16003BA1FE /* RootInteractor.swift */; };
+		8497A07B1E8AFD16003BA1FE /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497A0741E8AFD16003BA1FE /* RootInteractor.swift */; };
+		8497A07C1E8AFD16003BA1FE /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497A0741E8AFD16003BA1FE /* RootInteractor.swift */; };
+		8497A07D1E8AFD16003BA1FE /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497A0741E8AFD16003BA1FE /* RootInteractor.swift */; };
 		84A343401E77B79F003AB6E3 /* Array+NilEmptyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3433F1E77B79F003AB6E3 /* Array+NilEmptyTests.swift */; };
+		84DAA3ED1E8B110500E205EC /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA3EC1E8B110500E205EC /* RootPresenter.swift */; };
+		84DAA3EE1E8B110A00E205EC /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA3EC1E8B110500E205EC /* RootPresenter.swift */; };
+		84DAA3EF1E8B110A00E205EC /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA3EC1E8B110500E205EC /* RootPresenter.swift */; };
+		84DAA3F01E8B110A00E205EC /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA3EC1E8B110500E205EC /* RootPresenter.swift */; };
+		84DAA3F11E8B110B00E205EC /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA3EC1E8B110500E205EC /* RootPresenter.swift */; };
+		84DAA3F21E8B110B00E205EC /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA3EC1E8B110500E205EC /* RootPresenter.swift */; };
+		84DAA3F31E8B110B00E205EC /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA3EC1E8B110500E205EC /* RootPresenter.swift */; };
+		84DAA3F41E8B110C00E205EC /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA3EC1E8B110500E205EC /* RootPresenter.swift */; };
+		84DAA3F51E8B110D00E205EC /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA3EC1E8B110500E205EC /* RootPresenter.swift */; };
 		A60013D61E3DEBCA00F4FE02 /* SLPagingViewSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60013D51E3DEBCA00F4FE02 /* SLPagingViewSwift.swift */; };
 		A60013D71E3DEBCA00F4FE02 /* SLPagingViewSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60013D51E3DEBCA00F4FE02 /* SLPagingViewSwift.swift */; };
 		A60013D81E3DEBCA00F4FE02 /* SLPagingViewSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60013D51E3DEBCA00F4FE02 /* SLPagingViewSwift.swift */; };
@@ -483,7 +502,10 @@
 		676AE7F75C85DD3D40CC62B9 /* Pods-FOMO TCD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO TCD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD.debug.xcconfig"; sourceTree = "<group>"; };
 		75693CB5A902F3AB50B59FEF /* Pods_FOMO_DCU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FOMO_DCU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		786DDF9E2A825C011E1D3806 /* Pods-SortonsEventsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SortonsEventsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SortonsEventsTests/Pods-SortonsEventsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		84452E2C1E7B51A800EABBC9 /* RootInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootInteractorTests.swift; sourceTree = "<group>"; };
+		8497A0741E8AFD16003BA1FE /* RootInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		84A3433F1E77B79F003AB6E3 /* Array+NilEmptyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+NilEmptyTests.swift"; sourceTree = "<group>"; };
+		84DAA3EC1E8B110500E205EC /* RootPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
 		86C4D503BF874FC2107C8A4C /* Pods-FOMO DCU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO DCU.release.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO DCU/Pods-FOMO DCU.release.xcconfig"; sourceTree = "<group>"; };
 		89FCEDB6A3948FDAAA17FEB9 /* Pods-FOMO DIT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO DIT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO DIT/Pods-FOMO DIT.debug.xcconfig"; sourceTree = "<group>"; };
 		9AC3714A0D31113C8D0729DE /* Pods_FOMO_QUB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FOMO_QUB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -756,6 +778,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		84452E2A1E7B518500EABBC9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A6C02ADB1E333E1A00A80799 /* NetworkTests.swift */,
+				A638BD971E35A7BB0011380C /* NetworkTestsData.json */,
+				A66E37621E3D79850021C769 /* NetworkTestsDataMalformed.json */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		84452E2B1E7B518D00EABBC9 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				A6B7D69F1DBC156A00578C3C /* CacheTests.swift */,
+				A6C02AD71E33312A00A80799 /* ListEventsCacheTestsData.json */,
+			);
+			name = Cache;
+			sourceTree = "<group>";
+		};
 		8498F4A21E77B9E6002BBE49 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -854,6 +895,8 @@
 			isa = PBXGroup;
 			children = (
 				A6A675931C941D6300FAD755 /* AppDelegate.swift */,
+				8497A0741E8AFD16003BA1FE /* RootInteractor.swift */,
+				84DAA3EC1E8B110500E205EC /* RootPresenter.swift */,
 				A6AD95F31DCB0AD500CEEFAA /* RootViewController.swift */,
 				A6A6759A1C943AED00FAD755 /* CacheWorker.swift */,
 				A69DBF411C8AD67D005064F7 /* NetworkWorker.swift */,
@@ -1049,13 +1092,11 @@
 			isa = PBXGroup;
 			children = (
 				A6C04F751DB4590A0009C9BF /* Model */,
-				A6B7D69F1DBC156A00578C3C /* CacheTests.swift */,
-				A6C02AD71E33312A00A80799 /* ListEventsCacheTestsData.json */,
-				A6C02ADB1E333E1A00A80799 /* NetworkTests.swift */,
-				A638BD971E35A7BB0011380C /* NetworkTestsData.json */,
-				A66E37621E3D79850021C769 /* NetworkTestsDataMalformed.json */,
+				84452E2B1E7B518D00EABBC9 /* Cache */,
+				84452E2A1E7B518500EABBC9 /* Network */,
 				A6C45C061DA386E600FC57D5 /* FomoIdTest.swift */,
 				8498F4A21E77B9E6002BBE49 /* Utils */,
+				84452E2C1E7B51A800EABBC9 /* RootInteractorTests.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -2361,9 +2402,11 @@
 				A643EB831DF4F7240005E769 /* MetaViewController.swift in Sources */,
 				A63B95021DB6335400ECA301 /* NewsWireframe.swift in Sources */,
 				A63B94DE1DB6330A00ECA301 /* ListEventsTableViewCell.swift in Sources */,
+				8497A07A1E8AFD16003BA1FE /* RootInteractor.swift in Sources */,
 				A6AAD3F21D25A6610097AF22 /* DiscoveredEvent.swift in Sources */,
 				A63B95231DB6337700ECA301 /* DirectoryWireframe.swift in Sources */,
 				A63B94D61DB6330000ECA301 /* ListEventsTableViewController.swift in Sources */,
+				84DAA3F21E8B110B00E205EC /* RootPresenter.swift in Sources */,
 				A643EB951DF4F7240005E769 /* MetaWireframe.swift in Sources */,
 				A63B95061DB6335900ECA301 /* NewsViewController.swift in Sources */,
 				A67DF5541DF53A6C00D351FD /* FacebookUrl.swift in Sources */,
@@ -2400,9 +2443,11 @@
 				A643EB841DF4F7240005E769 /* MetaViewController.swift in Sources */,
 				A63B95031DB6335500ECA301 /* NewsWireframe.swift in Sources */,
 				A63B94DF1DB6330B00ECA301 /* ListEventsTableViewCell.swift in Sources */,
+				8497A07B1E8AFD16003BA1FE /* RootInteractor.swift in Sources */,
 				A6AAD3F31D25A6620097AF22 /* DiscoveredEvent.swift in Sources */,
 				A63B95241DB6337800ECA301 /* DirectoryWireframe.swift in Sources */,
 				A63B94D71DB6330000ECA301 /* ListEventsTableViewController.swift in Sources */,
+				84DAA3F31E8B110B00E205EC /* RootPresenter.swift in Sources */,
 				A643EB961DF4F7240005E769 /* MetaWireframe.swift in Sources */,
 				A63B95071DB6335900ECA301 /* NewsViewController.swift in Sources */,
 				A67DF5551DF53A6C00D351FD /* FacebookUrl.swift in Sources */,
@@ -2439,9 +2484,11 @@
 				A6C45C091DA3882B00FC57D5 /* FomoId.swift in Sources */,
 				A625EA7F1C8AF07F00B35D80 /* NetworkWorker.swift in Sources */,
 				A643EB851DF4F7240005E769 /* MetaViewController.swift in Sources */,
+				8497A07C1E8AFD16003BA1FE /* RootInteractor.swift in Sources */,
 				A67796B31DADE651003FBCE6 /* NewsWireframe.swift in Sources */,
 				A6ABE5351D3AB9A600EF3D11 /* ListEventsPresenter.swift in Sources */,
 				A6AAD3E41D258FD80097AF22 /* SourcePage.swift in Sources */,
+				84DAA3F41E8B110C00E205EC /* RootPresenter.swift in Sources */,
 				A643EB971DF4F7240005E769 /* MetaWireframe.swift in Sources */,
 				A6AAD3FC1D25B6D30097AF22 /* GAEISO8601DateTransform.swift in Sources */,
 				A67DF5561DF53A6C00D351FD /* FacebookUrl.swift in Sources */,
@@ -2478,9 +2525,11 @@
 				A643EB7E1DF4F7240005E769 /* MetaViewController.swift in Sources */,
 				A63B95041DB6335500ECA301 /* NewsWireframe.swift in Sources */,
 				A63B94E01DB6330B00ECA301 /* ListEventsTableViewCell.swift in Sources */,
+				8497A0751E8AFD16003BA1FE /* RootInteractor.swift in Sources */,
 				A6AAD3F41D25A6620097AF22 /* DiscoveredEvent.swift in Sources */,
 				A63B95251DB6337800ECA301 /* DirectoryWireframe.swift in Sources */,
 				A63B94D81DB6330100ECA301 /* ListEventsTableViewController.swift in Sources */,
+				84DAA3ED1E8B110500E205EC /* RootPresenter.swift in Sources */,
 				A643EB901DF4F7240005E769 /* MetaWireframe.swift in Sources */,
 				A63B95081DB6335A00ECA301 /* NewsViewController.swift in Sources */,
 				A67DF54F1DF53A6C00D351FD /* FacebookUrl.swift in Sources */,
@@ -2526,9 +2575,11 @@
 				A643EB811DF4F7240005E769 /* MetaViewController.swift in Sources */,
 				A69186CA1DCC543A00372A98 /* NewsWireframe.swift in Sources */,
 				A69186CB1DCC543A00372A98 /* ListEventsTableViewCell.swift in Sources */,
+				8497A0781E8AFD16003BA1FE /* RootInteractor.swift in Sources */,
 				A69186CC1DCC543A00372A98 /* DiscoveredEvent.swift in Sources */,
 				A69186CD1DCC543A00372A98 /* DirectoryWireframe.swift in Sources */,
 				A69186CE1DCC543A00372A98 /* ListEventsTableViewController.swift in Sources */,
+				84DAA3F01E8B110A00E205EC /* RootPresenter.swift in Sources */,
 				A643EB931DF4F7240005E769 /* MetaWireframe.swift in Sources */,
 				A69186CF1DCC543A00372A98 /* NewsViewController.swift in Sources */,
 				A67DF5521DF53A6C00D351FD /* FacebookUrl.swift in Sources */,
@@ -2565,9 +2616,11 @@
 				A643EB7F1DF4F7240005E769 /* MetaViewController.swift in Sources */,
 				A69187071DCC54BD00372A98 /* NewsWireframe.swift in Sources */,
 				A69187081DCC54BD00372A98 /* ListEventsTableViewCell.swift in Sources */,
+				8497A0761E8AFD16003BA1FE /* RootInteractor.swift in Sources */,
 				A69187091DCC54BD00372A98 /* DiscoveredEvent.swift in Sources */,
 				A691870A1DCC54BD00372A98 /* DirectoryWireframe.swift in Sources */,
 				A691870B1DCC54BD00372A98 /* ListEventsTableViewController.swift in Sources */,
+				84DAA3EE1E8B110A00E205EC /* RootPresenter.swift in Sources */,
 				A643EB911DF4F7240005E769 /* MetaWireframe.swift in Sources */,
 				A691870C1DCC54BD00372A98 /* NewsViewController.swift in Sources */,
 				A67DF5501DF53A6C00D351FD /* FacebookUrl.swift in Sources */,
@@ -2604,9 +2657,11 @@
 				A69187401DCC551000372A98 /* FomoId.swift in Sources */,
 				A69187411DCC551000372A98 /* NetworkWorker.swift in Sources */,
 				A643EB861DF4F7240005E769 /* MetaViewController.swift in Sources */,
+				8497A07D1E8AFD16003BA1FE /* RootInteractor.swift in Sources */,
 				A69187441DCC551000372A98 /* NewsWireframe.swift in Sources */,
 				A69187451DCC551000372A98 /* ListEventsPresenter.swift in Sources */,
 				A69187471DCC551000372A98 /* SourcePage.swift in Sources */,
+				84DAA3F51E8B110D00E205EC /* RootPresenter.swift in Sources */,
 				A643EB981DF4F7240005E769 /* MetaWireframe.swift in Sources */,
 				A69187491DCC551000372A98 /* GAEISO8601DateTransform.swift in Sources */,
 				A67DF5571DF53A6C00D351FD /* FacebookUrl.swift in Sources */,
@@ -2643,9 +2698,11 @@
 				A643EB821DF4F7240005E769 /* MetaViewController.swift in Sources */,
 				A69187961DCC591E00372A98 /* NewsWireframe.swift in Sources */,
 				A69187971DCC591E00372A98 /* ListEventsTableViewCell.swift in Sources */,
+				8497A0791E8AFD16003BA1FE /* RootInteractor.swift in Sources */,
 				A69187981DCC591E00372A98 /* DiscoveredEvent.swift in Sources */,
 				A69187991DCC591E00372A98 /* DirectoryWireframe.swift in Sources */,
 				A691879A1DCC591E00372A98 /* ListEventsTableViewController.swift in Sources */,
+				84DAA3F11E8B110B00E205EC /* RootPresenter.swift in Sources */,
 				A643EB941DF4F7240005E769 /* MetaWireframe.swift in Sources */,
 				A691879B1DCC591E00372A98 /* NewsViewController.swift in Sources */,
 				A67DF5531DF53A6C00D351FD /* FacebookUrl.swift in Sources */,
@@ -2672,6 +2729,7 @@
 				84A343401E77B79F003AB6E3 /* Array+NilEmptyTests.swift in Sources */,
 				A6AAD3E11D258F0D0097AF22 /* ClientPageDataTest.swift in Sources */,
 				A65CEE461DB5C4790059EF52 /* NewsViewControllerTests.swift in Sources */,
+				84452E2D1E7B51A800EABBC9 /* RootInteractorTests.swift in Sources */,
 				A6A6732B1E20CEA7003AB89A /* MetaWebViewTests.swift in Sources */,
 				A67DF5591DF53A7B00D351FD /* FacebookUrlTests.swift in Sources */,
 				A6B7D6A01DBC156A00578C3C /* CacheTests.swift in Sources */,
@@ -2712,9 +2770,11 @@
 				A643EB801DF4F7240005E769 /* MetaViewController.swift in Sources */,
 				A63B95011DB6335400ECA301 /* NewsWireframe.swift in Sources */,
 				A63B94DD1DB6330900ECA301 /* ListEventsTableViewCell.swift in Sources */,
+				8497A0771E8AFD16003BA1FE /* RootInteractor.swift in Sources */,
 				A6AAD3F11D25A6600097AF22 /* DiscoveredEvent.swift in Sources */,
 				A63B95221DB6337700ECA301 /* DirectoryWireframe.swift in Sources */,
 				A63B94D51DB632FF00ECA301 /* ListEventsTableViewController.swift in Sources */,
+				84DAA3EF1E8B110A00E205EC /* RootPresenter.swift in Sources */,
 				A643EB921DF4F7240005E769 /* MetaWireframe.swift in Sources */,
 				A63B95051DB6335800ECA301 /* NewsViewController.swift in Sources */,
 				A67DF5511DF53A6C00D351FD /* FacebookUrl.swift in Sources */,

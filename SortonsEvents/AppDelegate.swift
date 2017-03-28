@@ -14,6 +14,7 @@ import Crashlytics
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var rootInteractor: RootInteractor?
 
     func application(_ application: UIApplication,
          didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -27,7 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.screen = UIScreen.main
 
         let storyboard = UIStoryboard(name: "Common", bundle: Bundle.main)
-        let rvc: UIViewController
+
+        let rootViewController: UIViewController
+
         if let fomoId = FomoId(),
             let pagingViewController = storyboard.instantiateViewController(withIdentifier: "RootViewController")
                 as? RootViewController,
@@ -43,14 +46,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
             pagingViewController.viewControllers = vcs
 
-            rvc = pagingViewController as UIViewController
+            rootViewController = pagingViewController as UIViewController
+
+            let rootPresenter = RootPresenter(output: rootViewController as? RootPresenterOutput)
+            rootInteractor = RootInteractor(output: rootPresenter)
 
         } else {
 
-            rvc = storyboard.instantiateViewController(withIdentifier: "MissingFomoConfig")
+            rootViewController = storyboard.instantiateViewController(withIdentifier: "MissingFomoConfig")
         }
 
-        window.rootViewController = rvc
+        window.rootViewController = rootViewController
         window.makeKeyAndVisible()
 
         Fabric.with([Crashlytics.self])

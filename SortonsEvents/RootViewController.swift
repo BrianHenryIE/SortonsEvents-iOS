@@ -30,8 +30,6 @@ class RootViewController: SLPagingViewSwift, UITabBarDelegate {
         }
     }
 
-    var lastOpenedDate = Date()
-
     override func viewDidLoad() {
 
         super.viewDidLoad()
@@ -43,23 +41,6 @@ class RootViewController: SLPagingViewSwift, UITabBarDelegate {
             self.indexSelected = currentPage
             self.tabBar?.selectedItem = self.tabBar?.items?[currentPage]
         }
-
-        NotificationCenter.default.addObserver(self,
-                                           selector: #selector(self.willEnterForeground(notification:)),
-                                               name: NSNotification.Name.UIApplicationWillEnterForeground,
-                                             object: nil)
-    }
-
-    func willEnterForeground(notification: NSNotification!) {
-        let now = Date()
-        let timeSinceLastOpened = now.timeIntervalSince(lastOpenedDate)
-        if timeSinceLastOpened > TimeInterval(15*60) {
-            viewControllers?.forEach({
-                ($0 as? NewsViewController)?.fetchNews()
-                ($0 as? ListEventsTableViewController)?.fetchEventsOnLoad()
-            })
-        }
-        lastOpenedDate = now
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

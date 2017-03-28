@@ -16,6 +16,7 @@ PODS:
   - Mockingjay/XCTest (2.0.0):
     - Mockingjay/Core
   - ObjectMapper (2.2.2)
+  - ReachabilitySwift (3)
   - URITemplate (2.0.0)
 
 DEPENDENCIES:
@@ -26,6 +27,7 @@ DEPENDENCIES:
   - Fabric
   - Mockingjay (from `https://github.com/kylef/Mockingjay.git`)
   - ObjectMapper (from `https://github.com/Hearst-DD/ObjectMapper.git`)
+  - ReachabilitySwift (~> 3)
 
 EXTERNAL SOURCES:
   Alamofire:
@@ -64,8 +66,9 @@ SPEC CHECKSUMS:
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   Mockingjay: 95a5fbe594f963f7536d3975739df39f1366f4d1
   ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   URITemplate: a5acb3f76c6a2338116fde88b658d83f91bbac45
 
-PODFILE CHECKSUM: 395d4d5f46609f01e2a6f227962ac5d426d90bd9
+PODFILE CHECKSUM: 81d21697db92927c0f296256ebc12d672be17809
 
 COCOAPODS: 1.2.0

@@ -11,7 +11,8 @@ def common_pods
     pod 'ObjectMapper', :git => 'https://github.com/Hearst-DD/ObjectMapper.git'
     pod 'Fabric'
     pod 'Crashlytics'
-    # Mofidied and added to project
+    pod 'ReachabilitySwift', '~> 3'
+    # Mofified and added to project
     # pod 'SLPagingViewSwift-Swift3', :git => 'https://github.com/davidseek/SLPagingViewSwift-Swift-3-Tinder-Twitter.git'
 end
 
