@@ -24,7 +24,7 @@ enum SortonsNotifications {
 
     // var for testing
     var reachability = Reachability()
-    var lastOpenedDate = Date()
+    var lastOnlineDate = Date()
 
     init(output: RootInteractorOutput) {
 
@@ -52,6 +52,7 @@ enum SortonsNotifications {
         reachability?.whenReachable = { reachability in
             self.refetchData()
             self.output.showOnlineNotice()
+            self.lastOnlineDate = Date()
         }
 
         reachability?.whenUnreachable = { reachability in
@@ -63,14 +64,12 @@ enum SortonsNotifications {
 
     func refetchData() {
         let now = Date()
-        let timeSinceLastOpened = now.timeIntervalSince(lastOpenedDate)
+        let timeSinceLastOpened = now.timeIntervalSince(lastOnlineDate)
         if timeSinceLastOpened > TimeInterval(15*60) {
             DispatchQueue.main.async {
                 NotificationCenter.default.post(name: SortonsNotifications.Reload,
                                               object: self)
             }
         }
-        lastOpenedDate = now
     }
-
 }

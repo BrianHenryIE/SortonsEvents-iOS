@@ -68,11 +68,12 @@ class RootInteractorTests: XCTestCase {
         let rootInteractor = RootInteractor(output: outputMock)
 
         asyncExpectation = expectation(description: "reloadNotificationReceived")
+        asyncExpectation?.expectedFulfillmentCount = 2
 
         let calendar = Calendar.current
         let fifteenMinutesAgo = calendar.date(byAdding: .minute, value: -15, to: Date())!
 
-        rootInteractor.lastOpenedDate = fifteenMinutesAgo
+        rootInteractor.lastOnlineDate = fifteenMinutesAgo
 
         NotificationCenter.default.post(name: systemEnterForegroundNotification,
                                       object: self)
@@ -88,12 +89,12 @@ class RootInteractorTests: XCTestCase {
         let outputMock = OutputMock()
         let rootInteractor = RootInteractor(output: outputMock)
 
-        asyncExpectation = expectation(description: "reloadNotificationReceived")
+        asyncExpectation = expectation(description: "dontReloadNotificationReceived")
 
         let calendar = Calendar.current
         let fifteenMinutesAgo = calendar.date(byAdding: .minute, value: -5, to: Date())!
 
-        rootInteractor.lastOpenedDate = fifteenMinutesAgo
+        rootInteractor.lastOnlineDate = fifteenMinutesAgo
 
         NotificationCenter.default.post(name: systemEnterForegroundNotification,
                                       object: self)
@@ -119,7 +120,7 @@ class RootInteractorTests: XCTestCase {
         let calendar = Calendar.current
         let fifteenMinutesAgo = calendar.date(byAdding: .minute, value: -15, to: Date())!
 
-        rootInteractor.lastOpenedDate = fifteenMinutesAgo
+        rootInteractor.lastOnlineDate = fifteenMinutesAgo
 
         reloadNotificationReceived = false
 
@@ -140,9 +141,9 @@ class RootInteractorTests: XCTestCase {
         outputMock.asyncExpectation?.expectedFulfillmentCount = 2
 
         let calendar = Calendar.current
-        let fifteenMinutesAgo = calendar.date(byAdding: .minute, value: -5, to: Date())!
+        let fiveMinutesAgo = calendar.date(byAdding: .minute, value: -5, to: Date())!
 
-        rootInteractor.lastOpenedDate = fifteenMinutesAgo
+        rootInteractor.lastOnlineDate = fiveMinutesAgo
 
         reloadNotificationReceived = false
 
