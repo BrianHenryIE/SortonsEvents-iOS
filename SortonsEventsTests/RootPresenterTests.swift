@@ -15,13 +15,11 @@ private class OutputMock: RootPresenterOutput {
     var asyncExpectation: XCTestExpectation?
 
     var animateNoticeHit = false
-    var title: String?
-    var isVisible: Bool?
+    var viewData: Root.ViewModel.Banner?
 
-    func animateNotice(with title: String, isVisible: Bool) {
+    func animateNotice(with viewData: Root.ViewModel.Banner) {
         animateNoticeHit = true
-        self.title = title
-        self.isVisible = isVisible
+        self.viewData = viewData
         asyncExpectation?.fulfill()
     }
 }
@@ -48,8 +46,9 @@ class RootPresenterTests: XCTestCase {
         waitForExpectations(timeout:2, handler: nil)
 
         XCTAssertTrue(outputMock.animateNoticeHit)
-        XCTAssertTrue(outputMock.isVisible!)
-        XCTAssertEqual(outputMock.title!, "No Network Connection")
+        XCTAssertEqual(outputMock.viewData!.containerHeight, 66)
+        XCTAssertEqual(outputMock.viewData!.alpha, 1.0)
+        XCTAssertEqual(outputMock.viewData!.title, "No Network Connection")
     }
 
     func testShowOnlineNotice() {
@@ -59,7 +58,8 @@ class RootPresenterTests: XCTestCase {
         waitForExpectations(timeout:2, handler: nil)
 
         XCTAssertTrue(outputMock.animateNoticeHit)
-        XCTAssertFalse(outputMock.isVisible!)
-        XCTAssertEqual(outputMock.title!, "Connection Successful")
+        XCTAssertEqual(outputMock.viewData!.containerHeight, 0)
+        XCTAssertEqual(outputMock.viewData!.alpha, 0)
+        XCTAssertEqual(outputMock.viewData!.title, "Connection Successful")
     }
 }

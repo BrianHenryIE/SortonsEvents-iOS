@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
             rootViewController = pagingViewController as UIViewController
 
-            let rootPresenter = RootPresenter(output: rootViewController as? RootPresenterOutput)
+            let rootPresenter = RootPresenter(output: pagingViewController)
             rootInteractor = RootInteractor(output: rootPresenter)
 
         } else {

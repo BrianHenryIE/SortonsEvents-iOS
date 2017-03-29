@@ -13,6 +13,11 @@ class RootViewController: SLPagingViewSwift, UITabBarDelegate {
 
     var fomoId: FomoId?
 
+    @IBOutlet weak var noticeBannerParent: UIView!
+    @IBOutlet weak var noticeBannerParentHeight: NSLayoutConstraint!
+    @IBOutlet weak var noticeBanner: UIView!
+    @IBOutlet weak var noticeBannerLabel: UILabel!
+
     @IBOutlet weak var tabBar: UITabBar!
 
     var viewControllers: [UIViewController]? {
@@ -41,6 +46,9 @@ class RootViewController: SLPagingViewSwift, UITabBarDelegate {
             self.indexSelected = currentPage
             self.tabBar?.selectedItem = self.tabBar?.items?[currentPage]
         }
+        
+        noticeBannerParentHeight.constant = 0
+        noticeBannerParent.alpha = 0
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -75,7 +83,19 @@ class RootViewController: SLPagingViewSwift, UITabBarDelegate {
         setCurrentIndex(item.tag, animated: true)
     }
 
-    func animateNotice(with title: String, isVisible: Bool) {
+}
+
+extension RootViewController: RootPresenterOutput {
+
+    func animateNotice(with viewData: Root.ViewModel.Banner) {
+
+        noticeBannerLabel.text = viewData.title
+
+        UIView.animate(withDuration: 1.0, animations: {
+            self.noticeBannerParentHeight.constant = viewData.containerHeight
+            self.noticeBannerParent.alpha = viewData.alpha
+            self.view.layoutIfNeeded()
+        })
 
     }
 }

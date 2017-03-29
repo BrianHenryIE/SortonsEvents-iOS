@@ -7,17 +7,30 @@
 //
 
 import Foundation
+import UIKit
 
 protocol RootPresenterOutput: class {
 
-    func animateNotice(with title: String, isVisible: Bool)
+    func animateNotice(with viewData: Root.ViewModel.Banner)
+}
+
+struct Root {
+    struct ViewModel {
+        struct Banner {
+            let title: String
+            let containerHeight: CGFloat
+            let alpha: CGFloat
+        }
+    }
 }
 
 class RootPresenter: RootInteractorOutput {
 
     weak var output: RootPresenterOutput?
 
-    init(output: RootPresenterOutput?) {
+    let noticeBannerParentHeightDefault: CGFloat = 66
+
+    init(output: RootPresenterOutput) {
         self.output = output
     }
 
@@ -25,8 +38,12 @@ class RootPresenter: RootInteractorOutput {
 
         let offlineMessage = "No Network Connection"
 
+        let viewData = Root.ViewModel.Banner(title: offlineMessage,
+                                   containerHeight: noticeBannerParentHeightDefault,
+                                             alpha: 1.0)
+
         DispatchQueue.main.async {
-            self.output?.animateNotice(with: offlineMessage, isVisible: true)
+            self.output?.animateNotice(with: viewData)
         }
     }
 
@@ -34,8 +51,12 @@ class RootPresenter: RootInteractorOutput {
 
         let onlineMessage = "Connection Successful"
 
+        let viewData = Root.ViewModel.Banner(title: onlineMessage,
+                                   containerHeight: 0,
+                                             alpha: 0)
+
         DispatchQueue.main.async {
-            self.output?.animateNotice(with: onlineMessage, isVisible: false)
+            self.output?.animateNotice(with: viewData)
         }
     }
 }
