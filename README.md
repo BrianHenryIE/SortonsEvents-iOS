@@ -9,10 +9,14 @@ An events and news aggregator released for Irish universities.
 Sortons, from the French verb sortir (/soɾˈtiɾ/) to go out. Nous sortons – we are going out!
 
 Originally written as a [Java web-app](https://github.com/BrianHenryIE/Sortons-Events) to be used as a Facebook Page tab, the backend runs on Google App Engine. Later an [Objective-C client](https://github.com/BrianHenryIE/SortonsEvents-iOS/tree/52227492fc7abce797a3b009a13ccbd471f40457/SortonsEvents) was written which has since been rewritten in Swift from scratch using a TDD approach as described by [Clean Swift](http://clean-swift.com/).
-![](http://www.sortons.ie/events/github/sortonseventsiphonerender.png)
+
+
+![](http://www.sortons.ie/events/github/FOMO.gif)
+
+
 Check it out on the App Store for:
 
------| [![](http://www.sortons.ie/events/github/dublincityuniversity.png)](https://itunes.apple.com/ie/app/fomo-dcu/id1037323967?mt=8) |------| [![](http://www.sortons.ie/events/github/trinitycollegedublin.png)](https://itunes.apple.com/ie/app/fomo-tcd/id1035135187?mt=8) |------| [![](http://www.sortons.ie/events/github/universitycollegedublin.png)](https://itunes.apple.com/ie/app/fomo-ucd/id977641745?mt=8) |-----
+ ---| [![](http://www.sortons.ie/events/github/dublincityuniversity.png)](https://itunes.apple.com/ie/app/fomo-dcu/id1037323967?mt=8) |-----| [![](http://www.sortons.ie/events/github/trinitycollegedublin.png)](https://itunes.apple.com/ie/app/fomo-tcd/id1035135187?mt=8) |------| [![](http://www.sortons.ie/events/github/universitycollegedublin.png)](https://itunes.apple.com/ie/app/fomo-ucd/id977641745?mt=8) |----
 
 | [Dublin City University](https://itunes.apple.com/ie/app/fomo-dcu/id1037323967?mt=8) | [Trinity College Dublin](https://itunes.apple.com/ie/app/fomo-tcd/id1035135187?mt=8) | [University College Dublin](https://itunes.apple.com/ie/app/fomo-ucd/id977641745?mt=8) |
 
@@ -93,9 +97,9 @@ The other important metric I wanted for the top of this README was code coverage
 
 The other badges at the top are made by Shields IO with a simple configurable URL.
 
-* [MockuPhone](http://mockuphone.com/)
+* [Drop to GIF](https://github.com/mortenjust/droptogif)
 
-The angled phone picture above was created on MockuPhone. I'm going to replace this with a gif eventually.
+The animated gif in this README was made by recording my iPhone's screen with QuickTime – select New Movie Recording, select your iPhone in the drop-down beside the record button, and when finished recording use the Edit menu, Trim to cut it down – then simply dragging and dropping the mov into Drop to GIF.
 
 * [Fabric](https://fabric.io)
 
