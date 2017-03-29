@@ -12,6 +12,7 @@ def common_pods
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'ReachabilitySwift', '~> 3'
+    pod 'DZNEmptyDataSet'
     # Mofified and added to project
     # pod 'SLPagingViewSwift-Swift3', :git => 'https://github.com/davidseek/SLPagingViewSwift-Swift-3-Tinder-Twitter.git'
 end

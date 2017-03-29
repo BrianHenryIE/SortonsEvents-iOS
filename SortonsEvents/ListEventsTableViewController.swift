@@ -10,6 +10,7 @@
 //
 
 import UIKit
+import DZNEmptyDataSet
 
 protocol ListEventsTableViewControllerOutputProtocol {
     func fetchFromCache()
@@ -19,6 +20,7 @@ protocol ListEventsTableViewControllerOutputProtocol {
 }
 
 class ListEventsTableViewController: UITableViewController, ListEventsPresenterOutputProtocol {
+
     var output: ListEventsTableViewControllerOutputProtocol?
     var data: [ListEvents.ViewModel.Cell]?
 
@@ -48,6 +50,8 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
         // Autosizing cell heights
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
+
+        self.tableView.tableFooterView = UIView()
 
         refreshControl?.addTarget(self,
                                   action: #selector(refresh(_:)),
@@ -130,5 +134,31 @@ extension ListEventsTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         output?.displayEvent(for: indexPath.row)
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension ListEventsTableViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
+
+    func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
+
+        return UIImage(named: "ListEventsTabBarIconFilled")
+    }
+
+    func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+
+        let title = "FOMO UCD"
+
+        return NSAttributedString(string: title)
+    }
+
+    func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+
+        let description = "Loading events"
+
+        return NSAttributedString(string: description)
+    }
+
+    func emptyDataSet(_ scrollView: UIScrollView, didTap view: UIView) {
+        fetchFromNetwork()
     }
 }
