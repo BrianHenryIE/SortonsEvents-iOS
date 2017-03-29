@@ -59,6 +59,20 @@ fileprivate class NetworkSpy: NetworkProtocol {
     }
 }
 
+fileprivate class NetworkErrorMock: NetworkProtocol {
+
+    var fetchEventsCalled = false
+
+    func fetch<T: SortonsNW & ImmutableMappable>(_ fomoId: String,
+                                                 completionHandler: @escaping (_ result: Result<[T]>) -> Void) {
+        fetchEventsCalled = true
+
+        let result = Result<[T]>.failure(NSError())
+        completionHandler(result)
+
+    }
+}
+
 fileprivate class CacheSpy<T: ImmutableMappable>: CacheProtocol {
 
     var fetchCalled = false
@@ -82,9 +96,14 @@ fileprivate class CacheSpy<T: ImmutableMappable>: CacheProtocol {
 fileprivate class OutputSpy: ListEventsInteractorOutputProtocol {
 
     var presentFetchedEventsCalled = false
+    var presentErrorHit = false
 
     func presentFetchedEvents(_ upcomingEvents: ListEvents.Fetch.Response) {
         presentFetchedEventsCalled = true
+    }
+
+    func presentError(_ error: Error) {
+        presentErrorHit = true
     }
 }
 
@@ -97,7 +116,7 @@ class ListEventsInteractorTests: XCTestCase {
                           appStoreId: "appStoreId",
                               censor: [String]())
 
-    func testFetchEventsShouldAskEventsNetworkWorkerToFetchEventsAndPresenterToFormatResult() {
+    func testFetchFromCacheShouldAskCacheWorkerForEventsAndPresenterToFormatResult() {
         let networkSpy = NetworkSpy()
         let cacheSpy = CacheSpy<DiscoveredEvent>()
 
@@ -109,45 +128,49 @@ class ListEventsInteractorTests: XCTestCase {
                                        listEventsNetworkWorker: networkSpy,
                                        listEventsCacheWorker: cacheSpy)
 
-        // When
-        let request = ListEvents.Fetch.Request()
-        sut.fetchEvents(request)
+        sut.fetchFromCache()
 
         // Then
         XCTAssert(cacheSpy.fetchCalled, "Fetch() should ask cacheWorker to fetch events")
-        XCTAssert(networkSpy.fetchEventsCalled, "FetchEvents() should ask EventsNetworkWorker to fetch events")
 
         // This only gets called when there are events to return... test for both scenarios!
         // XCTAssert(interactorOutputSpy.presentFetchedEventsCalled,
            //       "FetchEvents() should ask presenter to format events result")
     }
 
-    func testEmptyFetchEventsShouldNotHitPresenter() {
-        let emptyNetworkSpy = EmptyNetworkSpy()
-        let emptyCacheSpy = EmptyCacheSpy<DiscoveredEvent>()
+    func testFetchFromNetworkHitsNetwork() {
+        let networkSpy = NetworkSpy()
+        let cacheSpy = CacheSpy<DiscoveredEvent>()
 
         let interactorOutputSpy = OutputSpy()
 
-        let sut = ListEventsInteractor(wireframe: ListEventsWireframe(fomoId: fomoId),
+        let viewController = ListEventsInteractor(wireframe: ListEventsWireframe(fomoId: fomoId),
                                        fomoId: "",
                                        output: interactorOutputSpy,
-                                       listEventsNetworkWorker: emptyNetworkSpy,
-                                       listEventsCacheWorker: emptyCacheSpy)
+                                       listEventsNetworkWorker: networkSpy,
+                                       listEventsCacheWorker: cacheSpy)
 
-        // When
-        let request = ListEvents.Fetch.Request()
-        sut.fetchEvents(request)
+        viewController.fetchFromNetwork()
 
-        // Then
-        XCTAssert(emptyCacheSpy.fetchCalled, "Fetch() should ask cacheWorker to fetch events")
-        XCTAssert(emptyNetworkSpy.fetchCalled, "FetchEvents() should ask EventsNetworkWorker to fetch events")
+        XCTAssertFalse(cacheSpy.fetchCalled)
+        XCTAssertTrue(networkSpy.fetchEventsCalled)
+    }
 
-        XCTAssertFalse(emptyCacheSpy.saveCalled,
-                       "If the network worker was empty, no need to save to cache"
-                        + "(or would overwrite a possibly valid cache)")
+    func testShouldPresentError() {
 
-        XCTAssertFalse(interactorOutputSpy.presentFetchedEventsCalled,
-                      "FetchEvents() should not ask presenter to format events result")
+        let networkErrorMock = NetworkErrorMock()
+        let cacheSpy = CacheSpy<DiscoveredEvent>()
+        let interactorOutputSpy = OutputSpy()
+
+        let viewController = ListEventsInteractor(wireframe: ListEventsWireframe(fomoId: fomoId),
+                                                  fomoId: "",
+                                                  output: interactorOutputSpy,
+                                                  listEventsNetworkWorker: networkErrorMock,
+                                                  listEventsCacheWorker: cacheSpy)
+
+        viewController.fetchFromNetwork()
+
+        XCTAssert(interactorOutputSpy.presentErrorHit)
     }
 
     func testShouldDiscardEarlyEvents() {

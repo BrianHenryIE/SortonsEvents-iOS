@@ -11,7 +11,9 @@
 import XCTest
 import ObjectMapper
 
-fileprivate class OutputSpy: DirectoryPresenterOutputProtocol {
+fileprivate class OutputMock: DirectoryPresenterOutputProtocol {
+
+    var asyncExpectation: XCTestExpectation?
 
     var viewModel: Directory.ViewModel?
     var presentFetchedDirectoryCalled = false
@@ -19,22 +21,29 @@ fileprivate class OutputSpy: DirectoryPresenterOutputProtocol {
     func presentFetchedDirectory(_ viewModel: Directory.ViewModel) {
         presentFetchedDirectoryCalled = true
         self.viewModel = viewModel
+        asyncExpectation?.fulfill()
     }
 
     func displayFetchDirectoryFetchError(_ viewModel: Directory.ViewModel) {
 
+        asyncExpectation?.fulfill()
     }
 }
 
 class DirectoryPresenterTests: XCTestCase {
 
-    fileprivate var outputSpy = OutputSpy()
+    fileprivate var outputMock: OutputMock!
     var sut: DirectoryInteractorOutputProtocol!
 
     override func setUp() {
         super.setUp()
 
-        sut = DirectoryPresenter(output: outputSpy)
+        outputMock = OutputMock()
+
+        let asyncExpectation = expectation(description: "MetaPresenterTests")
+        outputMock.asyncExpectation = asyncExpectation
+
+        sut = DirectoryPresenter(output: outputMock)
     }
 
     func testPresentFetchedDirectory() {
@@ -48,9 +57,11 @@ class DirectoryPresenterTests: XCTestCase {
 
         sut.presentFetchedDirectory(Directory.Fetch.Response(directory: tcdEvents.includedPages))
 
-        XCTAssert(outputSpy.presentFetchedDirectoryCalled, "Presenter did not pass anything to view")
+        waitForExpectations(timeout:5, handler: nil)
 
-        XCTAssertEqual(325, outputSpy.viewModel?.directory.count, "Error building viewmodel in presenter")
+        XCTAssert(outputMock.presentFetchedDirectoryCalled, "Presenter did not pass anything to view")
+
+        XCTAssertEqual(325, outputMock.viewModel?.directory.count, "Error building viewmodel in presenter")
     }
 
 //    func testDisplayFetchDirectoryFetchError() {

@@ -1,18 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="msU-ZY-gOw">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="msU-ZY-gOw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List Events Table View Controller-->
+        <!--List Events-->
         <scene sceneID="qAl-du-ZgQ">
             <objects>
-                <tableViewController storyboardIdentifier="ListEvents" id="msU-ZY-gOw" customClass="ListEventsTableViewController" customModule="SortonsEvents" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ListEvents" id="msU-ZY-gOw" userLabel="List Events" customClass="ListEventsTableViewController" customModule="SortonsEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="118" sectionHeaderHeight="28" sectionFooterHeight="28" id="Tj3-QP-mGP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,9 +81,15 @@
                         <connections>
                             <outlet property="dataSource" destination="msU-ZY-gOw" id="Uf5-gT-EqZ"/>
                             <outlet property="delegate" destination="msU-ZY-gOw" id="qak-R4-dUm"/>
+                            <outlet property="emptyDataSetDelegate" destination="msU-ZY-gOw" id="PNL-qA-xHh"/>
+                            <outlet property="emptyDataSetSource" destination="msU-ZY-gOw" id="fXd-xo-zRB"/>
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="8H8-wR-E7F">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQY-ag-hnn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

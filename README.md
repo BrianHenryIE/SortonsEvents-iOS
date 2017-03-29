@@ -1,6 +1,6 @@
 ![Platform iOS](https://img.shields.io/badge/platform-iOS-yellow.svg)
 ![Swift 3](https://img.shields.io/badge/Swift-3-orange.svg?style=flat)
-[![codecov](https://codecov.io/gh/BrianHenryIE/SortonsEvents-iOS/branch/master/graph/badge.svg)](https://codecov.io/gh/BrianHenryIE/SortonsEvents-iOS) ![App Installs](http://sortons.ie/events/github/appinstalls.php)
+[![codecov](https://codecov.io/gh/BrianHenryIE/SortonsEvents-iOS/branch/master/graph/badge.svg)](https://codecov.io/gh/BrianHenryIE/SortonsEvents-iOS) ![App Installs](http://sortons.ie/events/github/appinstalls/appinstalls.svg)
 
 # Sortons Events
 
@@ -13,8 +13,8 @@ Originally written as a [Java web-app](https://github.com/BrianHenryIE/Sortons-E
 Check it out on the App Store for:
 
 | [![](http://www.sortons.ie/events/github/dublincityuniversity.png)](https://itunes.apple.com/ie/app/fomo-dcu/id1037323967?mt=8) | [![](http://www.sortons.ie/events/github/trinitycollegedublin.png)](https://itunes.apple.com/ie/app/fomo-tcd/id1035135187?mt=8)  |  [![](http://www.sortons.ie/events/github/universitycollegedublin.png)](https://itunes.apple.com/ie/app/fomo-ucd/id977641745?mt=8) |
-|---|---|---|---|
-|[Dublin City University](https://itunes.apple.com/ie/app/fomo-dcu/id1037323967?mt=8)|[Trinity College Dublin](https://itunes.apple.com/ie/app/fomo-tcd/id1035135187?mt=8)|[University College Dublin](https://itunes.apple.com/ie/app/fomo-ucd/id977641745?mt=8)|
+| --- | --- | --- | --- |
+| [Dublin City University](https://itunes.apple.com/ie/app/fomo-dcu/id1037323967?mt=8) | [Trinity College Dublin](https://itunes.apple.com/ie/app/fomo-tcd/id1035135187?mt=8) | [University College Dublin](https://itunes.apple.com/ie/app/fomo-ucd/id977641745?mt=8) |
 
 ## Build
 

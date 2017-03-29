@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,19 +22,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="92q-tz-ovU">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="LWO-8l-cGf" id="Jji-Y9-HVe"/>
-                                </connections>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dcU-vf-qTG">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="92q-tz-ovU">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="LWO-8l-cGf" id="Jji-Y9-HVe"/>
+                                    </connections>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DirectoryPageCell" id="VyN-WR-vXu" customClass="DirectoryTableViewCell" customModule="SortonsEvents" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="22" width="375" height="69"/>
+                                        <rect key="frame" x="0.0" y="66" width="375" height="69"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VyN-WR-vXu" id="4Ec-ld-Mfy">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
@@ -89,13 +91,10 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="xyk-cw-weA" firstAttribute="top" secondItem="dcU-vf-qTG" secondAttribute="bottom" constant="49" id="DGz-CL-QNI"/>
-                            <constraint firstItem="92q-tz-ovU" firstAttribute="top" secondItem="zrh-od-CdU" secondAttribute="bottom" id="EQw-4Y-Z7F"/>
-                            <constraint firstItem="dcU-vf-qTG" firstAttribute="top" secondItem="92q-tz-ovU" secondAttribute="bottom" id="Mt9-XU-kEC"/>
-                            <constraint firstItem="92q-tz-ovU" firstAttribute="width" secondItem="HPZ-wl-kr2" secondAttribute="width" id="gV0-z2-Nta"/>
+                            <constraint firstItem="xyk-cw-weA" firstAttribute="top" secondItem="dcU-vf-qTG" secondAttribute="bottom" id="DGz-CL-QNI"/>
                             <constraint firstAttribute="centerX" secondItem="dcU-vf-qTG" secondAttribute="centerX" id="h65-9l-h47"/>
-                            <constraint firstAttribute="centerX" secondItem="92q-tz-ovU" secondAttribute="centerX" id="ice-Vt-jvI"/>
                             <constraint firstItem="dcU-vf-qTG" firstAttribute="width" secondItem="HPZ-wl-kr2" secondAttribute="width" id="mAr-u1-xYH"/>
+                            <constraint firstItem="dcU-vf-qTG" firstAttribute="top" secondItem="zrh-od-CdU" secondAttribute="bottom" id="tJc-bq-nkR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Directory" image="DirectoryTabBarIcon" id="WDl-EB-POw">

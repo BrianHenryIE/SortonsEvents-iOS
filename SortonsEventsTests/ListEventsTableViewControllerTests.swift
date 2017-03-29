@@ -10,17 +10,22 @@
 
 import XCTest
 
-fileprivate class OutputSpy: ListEventsTableViewControllerOutputProtocol {
+private class OutputSpy: ListEventsTableViewControllerOutputProtocol {
 
-    var fetchEventsCalled = false
+    var fetchFromCacheCalled = false
+    var fetchFromNetworkCalled = false
     var displayEventCalled = false
     var changeToNextTabRightCalled = false
 
-    func fetchEvents(_ request: ListEvents.Fetch.Request) {
-        fetchEventsCalled = true
+    func fetchFromCache() {
+        fetchFromCacheCalled = true
     }
 
-    internal func displayEvent(for eventDataRow: Int) {
+    func fetchFromNetwork() {
+        fetchFromNetworkCalled = true
+    }
+
+    func displayEvent(for eventDataRow: Int) {
         displayEventCalled = true
     }
 
@@ -31,43 +36,75 @@ fileprivate class OutputSpy: ListEventsTableViewControllerOutputProtocol {
 
 class ListEventsTableViewControllerTests: XCTestCase {
 
-    // MARK: Subject under test
-
-    var sut: ListEventsTableViewController!
-    var window: UIWindow!
-
-    // MARK: Test lifecycle
+    var viewController: ListEventsTableViewController!
+    private var outputSpy: OutputSpy!
 
     override func setUp() {
         super.setUp()
-        window = UIWindow()
-        setupListOrdersViewController()
-    }
 
-    override func tearDown() {
-        window = nil
-        super.tearDown()
-    }
-
-    // MARK: Test setup
-    func setupListOrdersViewController() {
         let bundle = Bundle.main
         let storyboard = UIStoryboard(name: "ListEvents", bundle: bundle)
-        sut = storyboard.instantiateViewController(withIdentifier: "ListEvents") as? ListEventsTableViewController
+        viewController = storyboard.instantiateViewController(withIdentifier: "ListEvents")
+            as? ListEventsTableViewController
+
+        outputSpy = OutputSpy()
+        viewController.output = outputSpy
+
+        _ = viewController.view
     }
 
     func testShouldFetchEventsWhenViewIsLoaded() {
-        // Given
-        let outputSpy = OutputSpy()
-
-        sut.output = outputSpy
-
-        // When
-        // Call viewDidLoad()
-        let _ = sut.view
-
-        // Then
-        XCTAssert(outputSpy.fetchEventsCalled, "Should fetch events when the view is loaded")
+        XCTAssert(outputSpy.fetchFromCacheCalled, "Should fetch events when the view is loaded")
     }
 
+    func testPullToRefreshIsEnabled() {
+        XCTAssertNotNil(viewController.tableView.refreshControl)
+    }
+
+    func testShouldDisplayLoadingIconOnLoad() {
+        XCTAssertTrue(viewController.tableView.refreshControl?.isRefreshing ?? false)
+    }
+
+    func testLoadingIconShouldRemainWhenCacheReturned() {
+
+        let cells: [ListEvents.ViewModel.Cell] = []
+
+        let hideRefreshContol = false
+
+        let data = ListEvents.ViewModel(discoveredEvents: cells,
+                                        hideRefreshControl: hideRefreshContol)
+
+        viewController.presentFetchedEvents(data)
+
+        XCTAssertTrue(viewController.tableView.refreshControl?.isRefreshing ?? false)
+    }
+
+    func testLoadingIconShouldDisappearWhenNetworkReturns() {
+
+        let cells: [ListEvents.ViewModel.Cell] = []
+
+        let hideRefreshContol = true
+
+        let data = ListEvents.ViewModel(discoveredEvents: cells,
+                                          hideRefreshControl: hideRefreshContol)
+
+        viewController.presentFetchedEvents(data)
+
+        XCTAssertFalse(viewController.tableView.refreshControl?.isRefreshing ?? true)
+    }
+
+    func testShouldFetchFromNetworkWhenRootNotifies() {
+
+        NotificationCenter.default.post(name: SortonsNotifications.Reload,
+                                      object: self)
+
+        XCTAssert(outputSpy.fetchFromNetworkCalled)
+    }
+
+    func testShouldFetchFromNetworkWhenPulledToRefresh() {
+
+        viewController.refreshControl?.sendActions(for: .valueChanged)
+
+        XCTAssertTrue(outputSpy.fetchFromNetworkCalled)
+    }
 }
