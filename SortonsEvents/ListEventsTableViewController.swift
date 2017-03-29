@@ -146,7 +146,7 @@ extension ListEventsTableViewController: DZNEmptyDataSetSource, DZNEmptyDataSetD
 
     func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
 
-        let title = "FOMO UCD"
+        let title = "FOMO"
 
         return NSAttributedString(string: title)
     }
