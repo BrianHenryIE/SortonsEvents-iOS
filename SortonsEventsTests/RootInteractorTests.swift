@@ -29,8 +29,8 @@ private class OutputMock: RootInteractorOutput {
 
 class RootInteractorTests: XCTestCase {
 
-    var rootInteractor: RootInteractor!
-    private var outputMock: OutputMock!
+//    var rootInteractor: RootInteractor!
+//    private var outputMock: OutputMock!
 
     var asyncExpectation: XCTestExpectation?
 
@@ -48,8 +48,8 @@ class RootInteractorTests: XCTestCase {
                                                    name: SortonsNotifications.Reload,
                                                  object: nil)
 
-        outputMock = OutputMock()
-        rootInteractor = RootInteractor(output: outputMock)
+//        outputMock = OutputMock()
+//        rootInteractor = RootInteractor(output: outputMock)
     }
 
     func reloadNotificationReceived(notification: NSNotification!) {
@@ -63,6 +63,10 @@ class RootInteractorTests: XCTestCase {
 
     func testShouldSendReloadNotificationEnteringForeground() {
         // when the app hasn't been opened in 15 fifteen minutes
+
+        let outputMock = OutputMock()
+        let rootInteractor = RootInteractor(output: outputMock)
+
         asyncExpectation = expectation(description: "reloadNotificationReceived")
 
         let calendar = Calendar.current
@@ -80,6 +84,10 @@ class RootInteractorTests: XCTestCase {
 
     func testShouldNotSendReloadNotificationEnteringForeground() {
         // when the app has just recently been opened
+
+        let outputMock = OutputMock()
+        let rootInteractor = RootInteractor(output: outputMock)
+
         asyncExpectation = expectation(description: "reloadNotificationReceived")
 
         let calendar = Calendar.current
@@ -102,6 +110,10 @@ class RootInteractorTests: XCTestCase {
     }
 
     func testComingOnlineShouldRefreshExpiredData() {
+
+        let outputMock = OutputMock()
+        let rootInteractor = RootInteractor(output: outputMock)
+
         asyncExpectation = expectation(description: "reachabilityReloadExpired")
 
         let calendar = Calendar.current

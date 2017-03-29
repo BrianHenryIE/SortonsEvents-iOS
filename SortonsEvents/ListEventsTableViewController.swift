@@ -30,6 +30,11 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
 
         setupViews()
         fetchEventsOnLoad()
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.reloadNotificationReceived(notification:)),
+                                                   name: SortonsNotifications.Reload,
+                                                 object: nil)
     }
 
     func setupViews() {
@@ -58,6 +63,10 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
         refreshControl?.beginRefreshing()
         tableView.setContentOffset(CGPoint(x: 0, y: -1.2*(refreshControl?.frame.size.height ?? 0)), animated: true)
         output?.fetchFromNetwork()
+    }
+
+    func reloadNotificationReceived(notification: NSNotification!) {
+        fetchFromNetwork()
     }
 
     func refresh(_ sender: Any) {

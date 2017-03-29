@@ -93,8 +93,12 @@ class ListEventsTableViewControllerTests: XCTestCase {
         XCTAssertFalse(viewController.tableView.refreshControl?.isRefreshing ?? true)
     }
 
-    func testOfflineMessageShouldDisplayWhenAppropriate() {
+    func testShouldFetchFromNetworkWhenRootNotifies() {
 
+        NotificationCenter.default.post(name: SortonsNotifications.Reload,
+                                      object: self)
+
+        XCTAssert(outputSpy.fetchFromNetworkCalled)
     }
 
     func testShouldFetchFromNetworkWhenPulledToRefresh() {

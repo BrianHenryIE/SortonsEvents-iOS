@@ -46,7 +46,7 @@ class RootViewController: SLPagingViewSwift, UITabBarDelegate {
             self.indexSelected = currentPage
             self.tabBar?.selectedItem = self.tabBar?.items?[currentPage]
         }
-        
+
         noticeBannerParentHeight.constant = 0
         noticeBannerParent.alpha = 0
     }
