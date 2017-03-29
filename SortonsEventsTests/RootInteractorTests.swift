@@ -29,32 +29,53 @@ private class OutputMock: RootInteractorOutput {
 
 class RootInteractorTests: XCTestCase {
 
-//    var rootInteractor: RootInteractor!
-//    private var outputMock: OutputMock!
+    var rootInteractor: RootInteractor!
+    fileprivate var outputMock: OutputMock!
 
     var asyncExpectation: XCTestExpectation?
 
     let systemEnterForegroundNotification = NSNotification.Name.UIApplicationWillEnterForeground
 
-    var reloadNotificationReceivedCount = 0
+    var fifteenMinutesAgo: Date!
+    var fiveMinutesAgo: Date!
+
+    var reloadNotificationReceived = false
 
     override func setUp() {
         super.setUp()
 
-        asyncExpectation = nil
+        while asyncExpectation != nil || (outputMock != nil && outputMock!.asyncExpectation != nil) {
+            Thread.sleep(forTimeInterval: 1)
+        }
+
+        NotificationCenter.default.removeObserver(self)
 
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(self.reloadNotificationReceived(notification:)),
                                                    name: SortonsNotifications.Reload,
                                                  object: nil)
 
-//        outputMock = OutputMock()
-//        rootInteractor = RootInteractor(output: outputMock)
+        // Give it a few seconds for the initial reachability notification then clear it
+        asyncExpectation = expectation(description: "setUp")
+
+        outputMock = OutputMock()
+        rootInteractor = RootInteractor(output: outputMock)
+
+        waitForExpectations(timeout:3, handler: nil)
+
+        Thread.sleep(forTimeInterval: 1)
+
+        asyncExpectation = nil
+        reloadNotificationReceived = false
+
+        let calendar = Calendar.current
+        fifteenMinutesAgo = calendar.date(byAdding: .minute, value: -15, to: Date())!
+        fiveMinutesAgo = calendar.date(byAdding: .minute, value: -5, to: Date())!
     }
 
     func reloadNotificationReceived(notification: NSNotification!) {
         asyncExpectation?.fulfill()
-        reloadNotificationReceivedCount += 1
+        reloadNotificationReceived = true
     }
 
     func fullfillExpectation() {
@@ -64,135 +85,101 @@ class RootInteractorTests: XCTestCase {
     func testShouldSendReloadNotificationEnteringForeground() {
         // when the app hasn't been opened in 15 fifteen minutes
 
-        let outputMock = OutputMock()
-        let rootInteractor = RootInteractor(output: outputMock)
-
         asyncExpectation = expectation(description: "reloadNotificationReceived")
-        asyncExpectation?.expectedFulfillmentCount = 2
-
-        let calendar = Calendar.current
-        let fifteenMinutesAgo = calendar.date(byAdding: .minute, value: -15, to: Date())!
 
         rootInteractor.lastOnlineDate = fifteenMinutesAgo
 
         NotificationCenter.default.post(name: systemEnterForegroundNotification,
                                       object: self)
 
-        waitForExpectations(timeout:5, handler: nil)
+        waitForExpectations(timeout:3, handler: nil)
 
-        XCTAssertEqual(reloadNotificationReceivedCount, 2)
+        Thread.sleep(forTimeInterval: 1)
+
+        XCTAssertTrue(reloadNotificationReceived)
+
+        asyncExpectation = nil
     }
 
     func testShouldNotSendReloadNotificationEnteringForeground() {
         // when the app has just recently been opened
 
-        let outputMock = OutputMock()
-        let rootInteractor = RootInteractor(output: outputMock)
-
         asyncExpectation = expectation(description: "dontReloadNotificationReceived")
 
-        let calendar = Calendar.current
-        let fifteenMinutesAgo = calendar.date(byAdding: .minute, value: -5, to: Date())!
-
-        rootInteractor.lastOnlineDate = fifteenMinutesAgo
+        rootInteractor.lastOnlineDate = fiveMinutesAgo
 
         NotificationCenter.default.post(name: systemEnterForegroundNotification,
                                       object: self)
 
+        // The notification should not post, so we post it manually
         Timer.scheduledTimer(timeInterval: 2,
                                    target: self,
                                  selector: #selector(self.fullfillExpectation),
                                  userInfo: nil,
                                   repeats: false)
 
-        waitForExpectations(timeout:5, handler: nil)
+        waitForExpectations(timeout:3, handler: nil)
 
-        XCTAssertEqual(reloadNotificationReceivedCount, 0)
+        Thread.sleep(forTimeInterval: 1)
+
+        XCTAssertFalse(reloadNotificationReceived)
+
+        asyncExpectation = nil
     }
 
     func testComingOnlineShouldRefreshExpiredData() {
 
-        let outputMock = OutputMock()
-        let rootInteractor = RootInteractor(output: outputMock)
-
-        asyncExpectation = expectation(description: "reachabilityReloadExpired")
-
-        let calendar = Calendar.current
-        let fifteenMinutesAgo = calendar.date(byAdding: .minute, value: -15, to: Date())!
-
         rootInteractor.lastOnlineDate = fifteenMinutesAgo
+
+        asyncExpectation = expectation(description: "reachabilityLongOnline")
 
         rootInteractor.reachability?.whenReachable?(rootInteractor.reachability!)
 
-        waitForExpectations(timeout:5, handler: nil)
+        waitForExpectations(timeout:3, handler: nil)
 
-        XCTAssertEqual(reloadNotificationReceivedCount, 1)
+        Thread.sleep(forTimeInterval: 1)
+
+        XCTAssertTrue(reloadNotificationReceived)
+
+        asyncExpectation = nil
     }
 
     func testComingOnlineShouldNotRefreshFreshData() {
-
-        let outputMock = OutputMock()
-        let rootInteractor = RootInteractor(output: outputMock)
-
-        asyncExpectation = expectation(description: "reachabilityReloadFreshFresh")
-        outputMock.asyncExpectation = expectation(description: "reachabilityWillHitThisFresh")
-        outputMock.asyncExpectation?.expectedFulfillmentCount = 2
-
-        let calendar = Calendar.current
-        let fiveMinutesAgo = calendar.date(byAdding: .minute, value: -5, to: Date())!
 
         rootInteractor.lastOnlineDate = fiveMinutesAgo
 
         rootInteractor.reachability?.whenReachable?(rootInteractor.reachability!)
 
-        Timer.scheduledTimer(timeInterval: 2,
-                             target: self,
-                             selector: #selector(self.fullfillExpectation),
-                             userInfo: nil,
-                             repeats: false)
+        Thread.sleep(forTimeInterval: 1)
 
-        waitForExpectations(timeout:5, handler: nil)
+        XCTAssertFalse(reloadNotificationReceived)
 
-        XCTAssertEqual(reloadNotificationReceivedCount, 1)
+        asyncExpectation = nil
     }
 
     func testGoingOfflineShouldShowOfflineNotice() {
 
-        let outputMock = OutputMock()
-        let rootInteractor = RootInteractor(output: outputMock)
-
         outputMock.asyncExpectation = expectation(description: "offlineReachability")
-        outputMock.asyncExpectation?.expectedFulfillmentCount = 2
-
-        outputMock.showOfflineNoticeHit = false
 
         rootInteractor.reachability?.whenUnreachable?(rootInteractor.reachability!)
 
         waitForExpectations(timeout:2, handler: nil)
 
         XCTAssertTrue(outputMock.showOfflineNoticeHit)
+
+        asyncExpectation = nil
     }
 
     func testComingOnlineShouldHideOfflineNotice() {
 
-        let outputMock = OutputMock()
-        let rootInteractor = RootInteractor(output: outputMock)
-
         outputMock.asyncExpectation = expectation(description: "onlineReachability")
-        outputMock.asyncExpectation?.expectedFulfillmentCount = 2
-
-        outputMock.showOnlineNoticeHit = false
 
         rootInteractor.reachability?.whenReachable?(rootInteractor.reachability!)
 
         waitForExpectations(timeout:2, handler: nil)
 
         XCTAssertTrue(outputMock.showOnlineNoticeHit)
-    }
 
-    override func tearDown() {
-        NotificationCenter.default.removeObserver(self)
-        super.tearDown()
+        asyncExpectation = nil
     }
-
 }
