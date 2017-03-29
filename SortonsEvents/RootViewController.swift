@@ -74,4 +74,8 @@ class RootViewController: SLPagingViewSwift, UITabBarDelegate {
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         setCurrentIndex(item.tag, animated: true)
     }
+
+    func animateNotice(with title: String, isVisible: Bool) {
+
+    }
 }

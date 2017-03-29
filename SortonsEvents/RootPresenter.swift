@@ -10,6 +10,7 @@ import Foundation
 
 protocol RootPresenterOutput: class {
 
+    func animateNotice(with title: String, isVisible: Bool)
 }
 
 class RootPresenter: RootInteractorOutput {
@@ -22,9 +23,19 @@ class RootPresenter: RootInteractorOutput {
 
     func showOfflineNotice() {
 
+        let offlineMessage = "No Network Connection"
+
+        DispatchQueue.main.async {
+            self.output?.animateNotice(with: offlineMessage, isVisible: true)
+        }
     }
 
     func showOnlineNotice() {
 
+        let onlineMessage = "Connection Successful"
+
+        DispatchQueue.main.async {
+            self.output?.animateNotice(with: onlineMessage, isVisible: false)
+        }
     }
 }

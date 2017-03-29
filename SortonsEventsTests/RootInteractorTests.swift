@@ -125,6 +125,7 @@ class RootInteractorTests: XCTestCase {
 
         asyncExpectation = expectation(description: "reachabilityReloadFreshFresh")
         outputMock.asyncExpectation = expectation(description: "reachabilityWillHitThisFresh")
+        outputMock.asyncExpectation?.expectedFulfillmentCount = 2
 
         let calendar = Calendar.current
         let fifteenMinutesAgo = calendar.date(byAdding: .minute, value: -5, to: Date())!
