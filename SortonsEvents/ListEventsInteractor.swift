@@ -23,6 +23,8 @@ struct ListEvents {
 protocol ListEventsInteractorOutputProtocol {
 
     func presentFetchedEvents(_ upcomingEvents: ListEvents.Fetch.Response)
+
+    func presentError(_ error: Error)
 }
 
 class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtocol {
@@ -73,17 +75,22 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtoco
             switch response {
             case .success(let networkData):
 
-                if let allUpcomingEvents = self.filterToOngoingEvents(networkData).nilEmpty() {
+                let allUpcomingEvents = self.filterToOngoingEvents(networkData)
 
+                if allUpcomingEvents.count > 0 {
                     self.cacheWorker.save(allUpcomingEvents)
-
-                    let response = ListEvents.Fetch.Response(events: allUpcomingEvents, source: .network)
-
-                    self.output.presentFetchedEvents(response)
                 }
+
+                let response = ListEvents.Fetch.Response(events: allUpcomingEvents,
+                                                         source: .network)
+
+                self.output.presentFetchedEvents(response)
+
                 break
 
-            case .failure( _):
+            case .failure(let error):
+
+                self.output.presentError(error)
 
                 break
             }

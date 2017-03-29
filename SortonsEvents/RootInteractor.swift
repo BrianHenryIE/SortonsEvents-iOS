@@ -65,9 +65,10 @@ enum SortonsNotifications {
         let now = Date()
         let timeSinceLastOpened = now.timeIntervalSince(lastOpenedDate)
         if timeSinceLastOpened > TimeInterval(15*60) {
-
-            NotificationCenter.default.post(name: SortonsNotifications.Reload,
-                                          object: self)
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(name: SortonsNotifications.Reload,
+                                              object: self)
+            }
         }
         lastOpenedDate = now
     }

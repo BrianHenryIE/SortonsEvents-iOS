@@ -20,7 +20,7 @@ protocol ListEventsTableViewControllerOutputProtocol {
 
 class ListEventsTableViewController: UITableViewController, ListEventsPresenterOutputProtocol {
     var output: ListEventsTableViewControllerOutputProtocol?
-    var data: ListEvents.ViewModel?
+    var data: [ListEvents.ViewModel.Cell]?
 
     // MARK: Object lifecycle
 
@@ -75,16 +75,15 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
 
 // MARK: Display logic ListEventsPresenterOutput
     func presentFetchedEvents(_ viewData: ListEvents.ViewModel) {
-        data = viewData
-        tableView.reloadData()
+
+        if let cells = viewData.discoveredEvents {
+            self.data = cells
+            tableView.reloadData()
+        }
 
         if viewData.hideRefreshControl {
             refreshControl?.endRefreshing()
         }
-    }
-
-    func displayFetchEventsFetchError(_ viewModel: ListEvents.ViewModel) {
-
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -112,11 +111,11 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
 extension ListEventsTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return data?.discoveredEvents.count ?? 0
+        return data?.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let event = data?.discoveredEvents[indexPath.row] else {
+        guard let event = data?[indexPath.row] else {
             return UITableViewCell()
         }
 

@@ -59,6 +59,20 @@ fileprivate class NetworkSpy: NetworkProtocol {
     }
 }
 
+fileprivate class NetworkErrorMock: NetworkProtocol {
+
+    var fetchEventsCalled = false
+
+    func fetch<T: SortonsNW & ImmutableMappable>(_ fomoId: String,
+               completionHandler: @escaping (_ result: Result<[T]>) -> Void) {
+        fetchEventsCalled = true
+
+        let result = Result<[T]>.failure(NSError())
+        completionHandler(result)
+
+    }
+}
+
 fileprivate class CacheSpy<T: ImmutableMappable>: CacheProtocol {
 
     var fetchCalled = false
@@ -82,9 +96,14 @@ fileprivate class CacheSpy<T: ImmutableMappable>: CacheProtocol {
 fileprivate class OutputSpy: ListEventsInteractorOutputProtocol {
 
     var presentFetchedEventsCalled = false
+    var presentErrorHit = false
 
     func presentFetchedEvents(_ upcomingEvents: ListEvents.Fetch.Response) {
         presentFetchedEventsCalled = true
+    }
+
+    func presentError(_ error: Error) {
+        presentErrorHit = true
     }
 }
 
@@ -137,7 +156,22 @@ class ListEventsInteractorTests: XCTestCase {
         XCTAssertTrue(networkSpy.fetchEventsCalled)
     }
 
-    // TODO: what is sent to the presenter when 0 events returned
+    func testShouldPresentError() {
+
+        let networkErrorMock = NetworkErrorMock()
+        let cacheSpy = CacheSpy<DiscoveredEvent>()
+        let interactorOutputSpy = OutputSpy()
+
+        let viewController = ListEventsInteractor(wireframe: ListEventsWireframe(fomoId: fomoId),
+                                                  fomoId: "",
+                                                  output: interactorOutputSpy,
+                                                  listEventsNetworkWorker: networkErrorMock,
+                                                  listEventsCacheWorker: cacheSpy)
+
+        viewController.fetchFromNetwork()
+
+        XCTAssert(interactorOutputSpy.presentErrorHit)
+    }
 
     func testShouldDiscardEarlyEvents() {
         var remainingEvents: [DiscoveredEvent]

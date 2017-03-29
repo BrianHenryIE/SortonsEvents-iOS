@@ -10,8 +10,6 @@ import Foundation
 
 protocol ListEventsPresenterOutputProtocol {
     func presentFetchedEvents(_ viewModel: ListEvents.ViewModel)
-
-    func displayFetchEventsFetchError(_ viewModel: ListEvents.ViewModel)
 }
 
 extension ListEvents {
@@ -23,7 +21,7 @@ extension ListEvents {
             let imageUrl: URL?
         }
 
-        let discoveredEvents: [Cell]
+        let discoveredEvents: [Cell]?
         let hideRefreshControl: Bool
     }
 }
@@ -58,8 +56,19 @@ class ListEventsPresenter: ListEventsInteractorOutputProtocol {
             hideRefreshContol = true
         }
 
-        let viewData = ListEvents.ViewModel(discoveredEvents: cells,
+        let viewData = ListEvents.ViewModel(discoveredEvents: cells.nilEmpty(),
                                           hideRefreshControl: hideRefreshContol)
+
+        DispatchQueue.main.async {
+            self.output?.presentFetchedEvents(viewData)
+        }
+    }
+
+    func presentError(_ error: Error) {
+        // TODO NSNotification to notice banner? or use empty ui table view?
+
+        let viewData = ListEvents.ViewModel(discoveredEvents: nil,
+                                          hideRefreshControl: true)
 
         DispatchQueue.main.async {
             self.output?.presentFetchedEvents(viewData)
