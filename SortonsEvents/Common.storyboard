@@ -22,22 +22,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afG-DP-yFZ">
-                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="4lK-oF-ZLP"/>
-                                </constraints>
-                                <items>
-                                    <tabBarItem title="Events" image="ListEventsTabBarIcon" selectedImage="ListEventsTabBarIconFilled" id="fXI-Dd-CAS"/>
-                                    <tabBarItem tag="1" title="News" image="NewsTabBarIcon" selectedImage="NewsTabBarIconFilled" id="QfQ-YN-LtX"/>
-                                    <tabBarItem tag="2" title="Directory" image="DirectoryTabBarIcon" selectedImage="DirectoryTabBarIconFilled" id="Epj-Bo-Nsp"/>
-                                    <tabBarItem tag="3" title="About" image="MetaTabBarIcon" selectedImage="MetaTabBarIconFilled" id="Ab3-UV-Au1"/>
-                                </items>
-                                <connections>
-                                    <outlet property="delegate" destination="SHA-2t-BC9" id="apx-4y-xb5"/>
-                                </connections>
-                            </tabBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ujo-K8-ONP">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
                                 <subviews>
@@ -67,19 +51,43 @@
                                     <constraint firstAttribute="height" constant="66" id="m1v-OM-vWe"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Du9-jU-oL3">
+                                <rect key="frame" x="-0.5" y="66" width="375" height="601"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afG-DP-yFZ">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="4lK-oF-ZLP"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem title="Events" image="ListEventsTabBarIcon" selectedImage="ListEventsTabBarIconFilled" id="fXI-Dd-CAS"/>
+                                    <tabBarItem tag="1" title="News" image="NewsTabBarIcon" selectedImage="NewsTabBarIconFilled" id="QfQ-YN-LtX"/>
+                                    <tabBarItem tag="2" title="Directory" image="DirectoryTabBarIcon" selectedImage="DirectoryTabBarIconFilled" id="Epj-Bo-Nsp"/>
+                                    <tabBarItem tag="3" title="About" image="MetaTabBarIcon" selectedImage="MetaTabBarIconFilled" id="Ab3-UV-Au1"/>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="SHA-2t-BC9" id="apx-4y-xb5"/>
+                                </connections>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Du9-jU-oL3" firstAttribute="top" secondItem="Ujo-K8-ONP" secondAttribute="bottom" id="EjN-NY-y33"/>
                             <constraint firstItem="Ujo-K8-ONP" firstAttribute="top" secondItem="HJr-Uk-VTP" secondAttribute="bottom" constant="-20" id="F4w-A3-tFA"/>
                             <constraint firstItem="o8q-qk-zfF" firstAttribute="top" secondItem="afG-DP-yFZ" secondAttribute="bottom" id="Ilr-gI-NGX"/>
+                            <constraint firstItem="Du9-jU-oL3" firstAttribute="width" secondItem="Nis-6m-HT0" secondAttribute="width" id="PJ9-RT-fNl"/>
                             <constraint firstItem="Ujo-K8-ONP" firstAttribute="width" secondItem="Nis-6m-HT0" secondAttribute="width" id="VDX-Hw-xm3"/>
+                            <constraint firstItem="o8q-qk-zfF" firstAttribute="top" secondItem="Du9-jU-oL3" secondAttribute="bottom" id="Xoe-BV-iXo"/>
                             <constraint firstItem="afG-DP-yFZ" firstAttribute="width" secondItem="Nis-6m-HT0" secondAttribute="width" id="ew4-Jh-d65"/>
                             <constraint firstItem="afG-DP-yFZ" firstAttribute="centerX" secondItem="Nis-6m-HT0" secondAttribute="centerX" id="gug-VX-zsE"/>
                             <constraint firstItem="Ujo-K8-ONP" firstAttribute="centerX" secondItem="Nis-6m-HT0" secondAttribute="centerX" id="slS-Vs-ria"/>
+                            <constraint firstItem="Du9-jU-oL3" firstAttribute="centerX" secondItem="Nis-6m-HT0" secondAttribute="centerX" id="yU6-Sy-D5C"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="noticeBanner" destination="9gv-Xz-2WP" id="8bW-lq-7TK"/>
+                        <outlet property="containerView" destination="Du9-jU-oL3" id="x8O-oA-Ten"/>
                         <outlet property="noticeBannerLabel" destination="i8e-uF-y1e" id="udA-Sz-XZ7"/>
                         <outlet property="noticeBannerParent" destination="Ujo-K8-ONP" id="wIS-Lr-iyo"/>
                         <outlet property="noticeBannerParentHeight" destination="m1v-OM-vWe" id="4Kz-fD-zaL"/>

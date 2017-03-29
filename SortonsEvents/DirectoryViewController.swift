@@ -40,6 +40,12 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutputProtoco
 
         gestureRecognizer.delegate = self
 
+        let top = UIApplication.shared.statusBarFrame.size.height
+        tableViewOutlet.contentInset = UIEdgeInsets(top: top,
+                                                   left: 0,
+                                                 bottom: 49,
+                                                  right: 0)
+
         let request = Directory.Request()
         output?.fetchDirectory(request)
     }

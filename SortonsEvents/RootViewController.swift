@@ -15,8 +15,9 @@ class RootViewController: SLPagingViewSwift, UITabBarDelegate {
 
     @IBOutlet weak var noticeBannerParent: UIView!
     @IBOutlet weak var noticeBannerParentHeight: NSLayoutConstraint!
-    @IBOutlet weak var noticeBanner: UIView!
     @IBOutlet weak var noticeBannerLabel: UILabel!
+
+    @IBOutlet weak var containerView: UIView!
 
     @IBOutlet weak var tabBar: UITabBar!
 
@@ -46,6 +47,9 @@ class RootViewController: SLPagingViewSwift, UITabBarDelegate {
             self.indexSelected = currentPage
             self.tabBar?.selectedItem = self.tabBar?.items?[currentPage]
         }
+
+        self.scrollView.removeFromSuperview()
+        containerView.addSubview(self.scrollView)
 
         noticeBannerParentHeight.constant = 0
         noticeBannerParent.alpha = 0
