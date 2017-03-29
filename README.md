@@ -12,7 +12,7 @@ Originally written as a [Java web-app](https://github.com/BrianHenryIE/Sortons-E
 ![](http://www.sortons.ie/events/github/sortonseventsiphonerender.png)
 Check it out on the App Store for:
 
-| [![](http://www.sortons.ie/events/github/dublincityuniversity.png)](https://itunes.apple.com/ie/app/fomo-dcu/id1037323967?mt=8) | [![](http://www.sortons.ie/events/github/trinitycollegedublin.png)](https://itunes.apple.com/ie/app/fomo-tcd/id1035135187?mt=8)  |  [![](http://www.sortons.ie/events/github/universitycollegedublin.png)](https://itunes.apple.com/ie/app/fomo-ucd/id977641745?mt=8) |
+-----| [![](http://www.sortons.ie/events/github/dublincityuniversity.png)](https://itunes.apple.com/ie/app/fomo-dcu/id1037323967?mt=8) |------| [![](http://www.sortons.ie/events/github/trinitycollegedublin.png)](https://itunes.apple.com/ie/app/fomo-tcd/id1035135187?mt=8) |------| [![](http://www.sortons.ie/events/github/universitycollegedublin.png)](https://itunes.apple.com/ie/app/fomo-ucd/id977641745?mt=8) |-----
 
 | [Dublin City University](https://itunes.apple.com/ie/app/fomo-dcu/id1037323967?mt=8) | [Trinity College Dublin](https://itunes.apple.com/ie/app/fomo-tcd/id1035135187?mt=8) | [University College Dublin](https://itunes.apple.com/ie/app/fomo-ucd/id977641745?mt=8) |
 
@@ -145,7 +145,7 @@ I once wrote an Android client but I don't use Android so never 100% finished an
 
 All my social profiles can be found at [BrianHenry.ie](http://www.brianhenry.ie) or you can email me: [brian.henry@sortons.ie](mailto:brian.henry@sortons.ie).
 
-## Licence
+## Licence
 
 I'm happy to share my code for others to see and learn from, but I think it's fair that others don't earn money off this without me also getting something. Get in touch!
 
