@@ -36,7 +36,7 @@ class RootInteractorTests: XCTestCase {
 
     let systemEnterForegroundNotification = NSNotification.Name.UIApplicationWillEnterForeground
 
-    var reloadNotificationReceived = false
+    var reloadNotificationReceivedCount = 0
 
     override func setUp() {
         super.setUp()
@@ -54,7 +54,7 @@ class RootInteractorTests: XCTestCase {
 
     func reloadNotificationReceived(notification: NSNotification!) {
         asyncExpectation?.fulfill()
-        reloadNotificationReceived = true
+        reloadNotificationReceivedCount += 1
     }
 
     func fullfillExpectation() {
@@ -80,7 +80,7 @@ class RootInteractorTests: XCTestCase {
 
         waitForExpectations(timeout:5, handler: nil)
 
-        XCTAssertTrue(reloadNotificationReceived)
+        XCTAssertEqual(reloadNotificationReceivedCount, 2)
     }
 
     func testShouldNotSendReloadNotificationEnteringForeground() {
@@ -107,7 +107,7 @@ class RootInteractorTests: XCTestCase {
 
         waitForExpectations(timeout:5, handler: nil)
 
-        XCTAssertFalse(reloadNotificationReceived)
+        XCTAssertEqual(reloadNotificationReceivedCount, 0)
     }
 
     func testComingOnlineShouldRefreshExpiredData() {
@@ -122,13 +122,11 @@ class RootInteractorTests: XCTestCase {
 
         rootInteractor.lastOnlineDate = fifteenMinutesAgo
 
-        reloadNotificationReceived = false
-
         rootInteractor.reachability?.whenReachable?(rootInteractor.reachability!)
 
         waitForExpectations(timeout:5, handler: nil)
 
-        XCTAssertTrue(reloadNotificationReceived)
+        XCTAssertEqual(reloadNotificationReceivedCount, 1)
     }
 
     func testComingOnlineShouldNotRefreshFreshData() {
@@ -145,8 +143,6 @@ class RootInteractorTests: XCTestCase {
 
         rootInteractor.lastOnlineDate = fiveMinutesAgo
 
-        reloadNotificationReceived = false
-
         rootInteractor.reachability?.whenReachable?(rootInteractor.reachability!)
 
         Timer.scheduledTimer(timeInterval: 2,
@@ -157,7 +153,7 @@ class RootInteractorTests: XCTestCase {
 
         waitForExpectations(timeout:5, handler: nil)
 
-        XCTAssertFalse(reloadNotificationReceived)
+        XCTAssertEqual(reloadNotificationReceivedCount, 1)
     }
 
     func testGoingOfflineShouldShowOfflineNotice() {
