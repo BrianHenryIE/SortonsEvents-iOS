@@ -13,15 +13,13 @@ import AlamofireObjectMapper
 
 protocol NetworkProtocol {
     func fetch<T: SortonsNW & ImmutableMappable>
-        (_ fomoId: String, completionHandler:
-        @escaping (_ result: Result<[T]>) -> Void)
+        (_ fomoId: String, completionHandler: @escaping (_ result: Result<[T]>) -> Void)
 }
 
 class NetworkWorker<T: SortonsNW & ImmutableMappable>: NetworkProtocol {
 
     func fetch<T: SortonsNW & ImmutableMappable>
-        (_ fomoId: String, completionHandler:
-        @escaping (_ result: Result<[T]>) -> Void) {
+        (_ fomoId: String, completionHandler: @escaping (_ result: Result<[T]>) -> Void) {
 
         let endpoint = "\(T.endpointBase)\(fomoId)"
         let keyPath = T.keyPath

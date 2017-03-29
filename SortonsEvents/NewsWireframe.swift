@@ -29,9 +29,9 @@ class NewsWireframe {
 
     func openUrl(_ url: FacebookUrl) {
         if let appUrl = url.appUrl, UIApplication.shared.canOpenURL(appUrl) {
-            UIApplication.shared.openURL(appUrl)
+            UIApplication.shared.open(appUrl, options: [:], completionHandler: nil)
             return
         }
-        UIApplication.shared.openURL(url.safariUrl)
+        UIApplication.shared.open(url.safariUrl, options: [:], completionHandler: nil)
     }
 }

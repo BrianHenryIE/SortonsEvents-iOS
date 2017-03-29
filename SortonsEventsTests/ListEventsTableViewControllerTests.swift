@@ -67,7 +67,7 @@ class ListEventsTableViewControllerTests: XCTestCase {
 
     func testLoadingIconShouldRemainWhenCacheReturned() {
 
-        let cells: [ListEvents.ViewModel.Cell] = Array<ListEvents.ViewModel.Cell>()
+        let cells: [ListEvents.ViewModel.Cell] = []
 
         let hideRefreshContol = false
 
@@ -81,7 +81,7 @@ class ListEventsTableViewControllerTests: XCTestCase {
 
     func testLoadingIconShouldDisappearWhenNetworkReturns() {
 
-        let cells: [ListEvents.ViewModel.Cell] = Array<ListEvents.ViewModel.Cell>()
+        let cells: [ListEvents.ViewModel.Cell] = []
 
         let hideRefreshContol = true
 

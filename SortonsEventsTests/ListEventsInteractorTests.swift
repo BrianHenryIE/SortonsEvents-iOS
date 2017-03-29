@@ -64,7 +64,7 @@ fileprivate class NetworkErrorMock: NetworkProtocol {
     var fetchEventsCalled = false
 
     func fetch<T: SortonsNW & ImmutableMappable>(_ fomoId: String,
-               completionHandler: @escaping (_ result: Result<[T]>) -> Void) {
+                                                 completionHandler: @escaping (_ result: Result<[T]>) -> Void) {
         fetchEventsCalled = true
 
         let result = Result<[T]>.failure(NSError())

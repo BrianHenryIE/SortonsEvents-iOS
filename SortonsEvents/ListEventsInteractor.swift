@@ -107,9 +107,9 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtoco
         }
 
         if UIApplication.shared.canOpenURL(appUrl) {
-            UIApplication.shared.openURL(appUrl)
+            UIApplication.shared.open(appUrl, options: [:], completionHandler: nil)
         } else {
-            UIApplication.shared.openURL(safariUrl)
+            UIApplication.shared.open(safariUrl, options: [:], completionHandler: nil)
         }
     }
 

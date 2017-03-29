@@ -16,7 +16,8 @@ class ListEventsCacheTests: XCTestCase {
     var cacheWorker: CacheProtocol!
     var testBundle: Bundle!
     let fileManager = FileManager.default
-    let fileURL = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first!)
+    let fileURL = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.cachesDirectory,
+                                                                           .userDomainMask, true).first!)
         .appendingPathComponent("DiscoveredEvent.json")
 
     override func setUp() {
