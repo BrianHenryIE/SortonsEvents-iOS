@@ -10,14 +10,13 @@ import UIKit
 import Fabric
 import Crashlytics
 
-@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var rootInteractor: RootInteractor?
 
     func application(_ application: UIApplication,
-         didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         let frame = UIScreen.main.bounds
         window = UIWindow(frame: frame)

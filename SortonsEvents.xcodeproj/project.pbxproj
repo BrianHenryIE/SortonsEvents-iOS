@@ -11,6 +11,15 @@
 		0A6A66029A0973617EE0862E /* Pods_FOMO_DIT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53758BD505E55471D2B6557 /* Pods_FOMO_DIT.framework */; };
 		401F7CD815CDEFC7ADC0AB5D /* Pods_FOMO_QUB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC3714A0D31113C8D0729DE /* Pods_FOMO_QUB.framework */; };
 		4F28A9AF78802111DCAF2FB5 /* Pods_FOMO_UL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F604AEE0BAF446DB4898192B /* Pods_FOMO_UL.framework */; };
+		8408077D1E8B686F00D7DB7D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408077C1E8B686F00D7DB7D /* main.swift */; };
+		8408077E1E8B68ED00D7DB7D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408077C1E8B686F00D7DB7D /* main.swift */; };
+		8408077F1E8B68EE00D7DB7D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408077C1E8B686F00D7DB7D /* main.swift */; };
+		840807801E8B68EE00D7DB7D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408077C1E8B686F00D7DB7D /* main.swift */; };
+		840807811E8B68EE00D7DB7D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408077C1E8B686F00D7DB7D /* main.swift */; };
+		840807821E8B68EF00D7DB7D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408077C1E8B686F00D7DB7D /* main.swift */; };
+		840807831E8B68F000D7DB7D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408077C1E8B686F00D7DB7D /* main.swift */; };
+		840807841E8B68F000D7DB7D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408077C1E8B686F00D7DB7D /* main.swift */; };
+		840807851E8B68F200D7DB7D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408077C1E8B686F00D7DB7D /* main.swift */; };
 		841733141E8B31C90077691B /* RootPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841733131E8B31C90077691B /* RootPresenterTests.swift */; };
 		84452E2D1E7B51A800EABBC9 /* RootInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84452E2C1E7B51A800EABBC9 /* RootInteractorTests.swift */; };
 		8497A0751E8AFD16003BA1FE /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497A0741E8AFD16003BA1FE /* RootInteractor.swift */; };
@@ -503,6 +512,7 @@
 		676AE7F75C85DD3D40CC62B9 /* Pods-FOMO TCD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FOMO TCD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FOMO TCD/Pods-FOMO TCD.debug.xcconfig"; sourceTree = "<group>"; };
 		75693CB5A902F3AB50B59FEF /* Pods_FOMO_DCU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FOMO_DCU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		786DDF9E2A825C011E1D3806 /* Pods-SortonsEventsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SortonsEventsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SortonsEventsTests/Pods-SortonsEventsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8408077C1E8B686F00D7DB7D /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		841733131E8B31C90077691B /* RootPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootPresenterTests.swift; sourceTree = "<group>"; };
 		84452E2C1E7B51A800EABBC9 /* RootInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootInteractorTests.swift; sourceTree = "<group>"; };
 		8497A0741E8AFD16003BA1FE /* RootInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
@@ -896,6 +906,7 @@
 		A69DBF2E1C8AD44A005064F7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8408077C1E8B686F00D7DB7D /* main.swift */,
 				A6A675931C941D6300FAD755 /* AppDelegate.swift */,
 				8497A0741E8AFD16003BA1FE /* RootInteractor.swift */,
 				84DAA3EC1E8B110500E205EC /* RootPresenter.swift */,
@@ -2382,6 +2393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A63B95371DB6338B00ECA301 /* DirectoryPresenter.swift in Sources */,
+				840807841E8B68F000D7DB7D /* main.swift in Sources */,
 				A638BDC11E35D3990011380C /* SortonsNWProtocol.swift in Sources */,
 				A63B954F1DB633A300ECA301 /* ClientPageData.swift in Sources */,
 				A6AD95FC1DCB0CBB00CEEFAA /* RootViewController.swift in Sources */,
@@ -2423,6 +2435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A63B95381DB6338C00ECA301 /* DirectoryPresenter.swift in Sources */,
+				840807831E8B68F000D7DB7D /* main.swift in Sources */,
 				A638BDC21E35D3990011380C /* SortonsNWProtocol.swift in Sources */,
 				A63B95501DB633A400ECA301 /* ClientPageData.swift in Sources */,
 				A6AD95FD1DCB0CBB00CEEFAA /* RootViewController.swift in Sources */,
@@ -2464,6 +2477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6C04F6C1DB452FD0009C9BF /* DirectoryPresenter.swift in Sources */,
+				840807821E8B68EF00D7DB7D /* main.swift in Sources */,
 				A638BDC31E35D3990011380C /* SortonsNWProtocol.swift in Sources */,
 				A625EA791C8AEEA800B35D80 /* ListEventsInteractor.swift in Sources */,
 				A65CEE4A1DB5C4F80059EF52 /* NewsPresenter.swift in Sources */,
@@ -2505,6 +2519,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A63B95391DB6338C00ECA301 /* DirectoryPresenter.swift in Sources */,
+				8408077D1E8B686F00D7DB7D /* main.swift in Sources */,
 				A638BDBC1E35D3990011380C /* SortonsNWProtocol.swift in Sources */,
 				A63B95511DB633A400ECA301 /* ClientPageData.swift in Sources */,
 				A6AD95FE1DCB0CBB00CEEFAA /* RootViewController.swift in Sources */,
@@ -2555,6 +2570,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A69186B01DCC543A00372A98 /* DirectoryPresenter.swift in Sources */,
+				840807801E8B68EE00D7DB7D /* main.swift in Sources */,
 				A638BDBF1E35D3990011380C /* SortonsNWProtocol.swift in Sources */,
 				A69186B11DCC543A00372A98 /* ClientPageData.swift in Sources */,
 				A69186B21DCC543A00372A98 /* RootViewController.swift in Sources */,
@@ -2596,6 +2612,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A69186ED1DCC54BD00372A98 /* DirectoryPresenter.swift in Sources */,
+				8408077E1E8B68ED00D7DB7D /* main.swift in Sources */,
 				A638BDBD1E35D3990011380C /* SortonsNWProtocol.swift in Sources */,
 				A69186EE1DCC54BD00372A98 /* ClientPageData.swift in Sources */,
 				A69186EF1DCC54BD00372A98 /* RootViewController.swift in Sources */,
@@ -2637,6 +2654,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A691872B1DCC551000372A98 /* DirectoryPresenter.swift in Sources */,
+				840807851E8B68F200D7DB7D /* main.swift in Sources */,
 				A638BDC41E35D3990011380C /* SortonsNWProtocol.swift in Sources */,
 				A691872C1DCC551000372A98 /* ListEventsInteractor.swift in Sources */,
 				A691872D1DCC551000372A98 /* NewsPresenter.swift in Sources */,
@@ -2678,6 +2696,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A691877C1DCC591E00372A98 /* DirectoryPresenter.swift in Sources */,
+				840807811E8B68EE00D7DB7D /* main.swift in Sources */,
 				A638BDC01E35D3990011380C /* SortonsNWProtocol.swift in Sources */,
 				A691877D1DCC591E00372A98 /* ClientPageData.swift in Sources */,
 				A691877E1DCC591E00372A98 /* RootViewController.swift in Sources */,
@@ -2751,6 +2770,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A63B95361DB6338B00ECA301 /* DirectoryPresenter.swift in Sources */,
+				8408077F1E8B68EE00D7DB7D /* main.swift in Sources */,
 				A638BDBE1E35D3990011380C /* SortonsNWProtocol.swift in Sources */,
 				A63B954E1DB633A300ECA301 /* ClientPageData.swift in Sources */,
 				A6AD95FB1DCB0CBA00CEEFAA /* RootViewController.swift in Sources */,
