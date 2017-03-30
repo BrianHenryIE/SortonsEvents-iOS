@@ -24,25 +24,8 @@ class NetworkWorker<T: SortonsNW & ImmutableMappable>: NetworkProtocol {
         let endpoint = "\(T.endpointBase)\(fomoId)"
         let keyPath = T.keyPath
 
-        Alamofire.request(endpoint).responseJSON { response in
-            if let result = response.result.value,
-                let jsonDict = result as? NSDictionary,
-                let data = jsonDict.object(forKey: keyPath),
-                let array = try? Mapper<T>().mapArray(JSONObject: data) {
-                    completionHandler(Result<[T]>.success(array))
-            } else {
-                let ERROR_CODE = 101
-                let error = NSError(domain: "ie.sortons.event.networkerror", code: ERROR_CODE, userInfo: nil)
-                completionHandler(Result<[T]>.failure(error))
-            }
+        Alamofire.request(endpoint).responseArray(keyPath: keyPath) { (response: DataResponse<[T]>) in
+            completionHandler(response.result)
         }
-
-        // This NetworkWorker could be a little neater if AlamofireObjectmapper supported 
-        // the (beta) immutable feature of ObjectMapper
-        // https://github.com/tristanhimmelman/AlamofireObjectMapper/issues/181
-        // Alamofire.request(endpoint).responseArray(keyPath: keyPath) {
-        //     (response: DataResponse<[T]>) in
-        //         completionHandler(response.result)
-        // }
     }
 }
