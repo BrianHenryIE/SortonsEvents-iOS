@@ -10,16 +10,19 @@
 //
 
 import UIKit
+import DZNEmptyDataSet
 
 protocol ListEventsTableViewControllerOutputProtocol {
-    func fetchEvents(_ request: ListEvents.Fetch.Request)
+    func fetchFromCache()
+    func fetchFromNetwork()
 
     func displayEvent(for rowNumber: Int)
 }
 
 class ListEventsTableViewController: UITableViewController, ListEventsPresenterOutputProtocol {
+
     var output: ListEventsTableViewControllerOutputProtocol?
-    var data: ListEvents.ViewModel?
+    var data: [ListEvents.ViewModel.Cell]?
 
     // MARK: Object lifecycle
 
@@ -27,6 +30,16 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupViews()
+        fetchEventsOnLoad()
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.reloadNotificationReceived(notification:)),
+                                                   name: SortonsNotifications.Reload,
+                                                 object: nil)
+    }
+
+    func setupViews() {
         // Start content below (not beneath) the status bar
         let top = UIApplication.shared.statusBarFrame.size.height
         self.tableView.contentInset = UIEdgeInsets(top: top,
@@ -38,22 +51,43 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
 
-        fetchEventsOnLoad()
+        self.tableView.tableFooterView = UIView()
+
+        refreshControl?.addTarget(self,
+                                  action: #selector(refresh(_:)),
+                                     for: UIControlEvents.valueChanged)
     }
 
     func fetchEventsOnLoad() {
-        let request = ListEvents.Fetch.Request()
-        output?.fetchEvents(request)
+        output?.fetchFromCache()
+        fetchFromNetwork()
+    }
+
+    func fetchFromNetwork() {
+        refreshControl?.beginRefreshing()
+        tableView.setContentOffset(CGPoint(x: 0, y: -1.2*(refreshControl?.frame.size.height ?? 0)), animated: true)
+        output?.fetchFromNetwork()
+    }
+
+    func reloadNotificationReceived(notification: NSNotification!) {
+        fetchFromNetwork()
+    }
+
+    func refresh(_ sender: Any) {
+        fetchFromNetwork()
     }
 
 // MARK: Display logic ListEventsPresenterOutput
-    func presentFetchedEvents(_ viewModel: ListEvents.ViewModel) {
-        data = viewModel
-        tableView.reloadData()
-    }
+    func presentFetchedEvents(_ viewData: ListEvents.ViewModel) {
 
-    func displayFetchEventsFetchError(_ viewModel: ListEvents.ViewModel) {
+        if let cells = viewData.discoveredEvents {
+            self.data = cells
+            tableView.reloadData()
+        }
 
+        if viewData.hideRefreshControl {
+            refreshControl?.endRefreshing()
+        }
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -61,7 +95,7 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
 
         let topVisibleRow = tableView.indexPathsForVisibleRows?[0]
 
-        coordinator.animate(alongsideTransition: { context in
+        coordinator.animate(alongsideTransition: { _ in
 
             let top = UIApplication.shared.statusBarFrame.size.height
             self.tableView.contentInset = UIEdgeInsets(top: top,
@@ -81,11 +115,11 @@ class ListEventsTableViewController: UITableViewController, ListEventsPresenterO
 extension ListEventsTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return data?.discoveredEvents.count ?? 0
+        return data?.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let event = data?.discoveredEvents[indexPath.row] else {
+        guard let event = data?[indexPath.row] else {
             return UITableViewCell()
         }
 
@@ -100,5 +134,31 @@ extension ListEventsTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         output?.displayEvent(for: indexPath.row)
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension ListEventsTableViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
+
+    func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
+
+        return UIImage(named: "ListEventsTabBarIconFilled")
+    }
+
+    func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+
+        let title = "FOMO"
+
+        return NSAttributedString(string: title)
+    }
+
+    func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+
+        let description = "Loading events"
+
+        return NSAttributedString(string: description)
+    }
+
+    func emptyDataSet(_ scrollView: UIScrollView, didTap view: UIView) {
+        fetchFromNetwork()
     }
 }

@@ -44,7 +44,7 @@ extension MetaWebViewController: UIWebViewDelegate {
         switch navigationType {
         case .linkClicked:
             if let url = request.url {
-                UIApplication.shared.openURL(url)
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
             return false
         default:

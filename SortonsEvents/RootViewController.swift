@@ -13,6 +13,12 @@ class RootViewController: SLPagingViewSwift, UITabBarDelegate {
 
     var fomoId: FomoId?
 
+    @IBOutlet weak var noticeBannerParent: UIView!
+    @IBOutlet weak var noticeBannerParentHeight: NSLayoutConstraint!
+    @IBOutlet weak var noticeBannerLabel: UILabel!
+
+    @IBOutlet weak var containerView: UIView!
+
     @IBOutlet weak var tabBar: UITabBar!
 
     var viewControllers: [UIViewController]? {
@@ -30,8 +36,6 @@ class RootViewController: SLPagingViewSwift, UITabBarDelegate {
         }
     }
 
-    var lastOpenedDate = Date()
-
     override func viewDidLoad() {
 
         super.viewDidLoad()
@@ -39,27 +43,16 @@ class RootViewController: SLPagingViewSwift, UITabBarDelegate {
         // The first tab isn't highlighted naturally
         tabBar?.selectedItem = self.tabBar?.items?[0]
 
-        didChangedPage = {(_ currentPage: Int)-> () in
+        didChangedPage = {(_ currentPage: Int) -> Void in
             self.indexSelected = currentPage
             self.tabBar?.selectedItem = self.tabBar?.items?[currentPage]
         }
 
-        NotificationCenter.default.addObserver(self,
-                                           selector: #selector(self.willEnterForeground(notification:)),
-                                               name: NSNotification.Name.UIApplicationWillEnterForeground,
-                                             object: nil)
-    }
+        self.scrollView.removeFromSuperview()
+        containerView.addSubview(self.scrollView)
 
-    func willEnterForeground(notification: NSNotification!) {
-        let now = Date()
-        let timeSinceLastOpened = now.timeIntervalSince(lastOpenedDate)
-        if timeSinceLastOpened > TimeInterval(15*60) {
-            viewControllers?.forEach({
-                ($0 as? NewsViewController)?.fetchNews()
-                ($0 as? ListEventsTableViewController)?.fetchEventsOnLoad()
-            })
-        }
-        lastOpenedDate = now
+        noticeBannerParentHeight.constant = 0
+        noticeBannerParent.alpha = 0
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -92,5 +85,21 @@ class RootViewController: SLPagingViewSwift, UITabBarDelegate {
 
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         setCurrentIndex(item.tag, animated: true)
+    }
+
+}
+
+extension RootViewController: RootPresenterOutput {
+
+    func animateNotice(with viewData: Root.ViewModel.Banner) {
+
+        noticeBannerLabel.text = viewData.title
+
+        UIView.animate(withDuration: 1.0, animations: {
+            self.noticeBannerParentHeight.constant = viewData.containerHeight
+            self.noticeBannerParent.alpha = viewData.alpha
+            self.view.layoutIfNeeded()
+        })
+
     }
 }

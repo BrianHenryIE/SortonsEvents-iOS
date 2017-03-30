@@ -31,8 +31,7 @@ class ListEventsNetworkTests: XCTestCase {
         // swiftlint:disable:next line_length
         stub(uri("https://sortonsevents.appspot.com/_ah/api/upcomingEvents/v1/discoveredeventsresponse/fomoId"), jsonData(responseBody))
 
-        worker.fetch("fomoId") {
-            (result: Result<[DiscoveredEvent]>) in
+        worker.fetch("fomoId") { (result: Result<[DiscoveredEvent]>) in
 
             switch result {
             case .success:
@@ -58,8 +57,7 @@ class ListEventsNetworkTests: XCTestCase {
         // swiftlint:disable:next line_length
         stub(uri("https://sortonsevents.appspot.com/_ah/api/upcomingEvents/v1/discoveredeventsresponse/fomoId"), jsonData(responseBody))
 
-        worker.fetch("fomoId") {
-            (result: Result<[DiscoveredEvent]>) in
+        worker.fetch("fomoId") { (result: Result<[DiscoveredEvent]>) in
 
             switch result {
             case .failure(let error):

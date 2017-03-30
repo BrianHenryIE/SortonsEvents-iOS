@@ -17,7 +17,9 @@ protocol CacheProtocol {
 
 class CacheWorker<T: ImmutableMappable>: CacheProtocol {
 
-    private let fileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(T.self).json")
+    private let fileURL = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.cachesDirectory,
+                                                                                   .userDomainMask, true).first!)
+        .appendingPathComponent("\(T.self).json")
 
     func fetch<T: ImmutableMappable>() -> [T]? {
 

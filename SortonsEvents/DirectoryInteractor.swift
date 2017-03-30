@@ -97,9 +97,9 @@ class DirectoryInteractor: DirectoryViewControllerOutputProtocol {
         let safariUrl = URL(string: "https://facebook.com/\(fbId)")!
 
         if UIApplication.shared.canOpenURL(appUrl) {
-            UIApplication.shared.openURL(appUrl)
+            UIApplication.shared.open(appUrl, options: [:], completionHandler: nil)
         } else {
-            UIApplication.shared.openURL(safariUrl)
+            UIApplication.shared.open(safariUrl, options: [:], completionHandler: nil)
         }
     }
 }

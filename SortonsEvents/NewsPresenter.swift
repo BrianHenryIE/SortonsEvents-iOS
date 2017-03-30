@@ -34,7 +34,9 @@ class NewsPresenter: NewsInteractorOutputProtocol {
 
         let viewModel = News.ViewModel(newsUrlRequest: urlRequest)
 
-        output?.display(viewModel)
+        DispatchQueue.main.async {
+            self.output?.display(viewModel)
+        }
     }
 
 }

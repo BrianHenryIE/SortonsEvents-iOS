@@ -1,6 +1,6 @@
 ![Platform iOS](https://img.shields.io/badge/platform-iOS-yellow.svg)
 ![Swift 3](https://img.shields.io/badge/Swift-3-orange.svg?style=flat)
-[![codecov](https://codecov.io/gh/BrianHenryIE/SortonsEvents-iOS/branch/master/graph/badge.svg)](https://codecov.io/gh/BrianHenryIE/SortonsEvents-iOS) ![App Installs](http://sortons.ie/events/github/appinstalls.php)
+[![codecov](https://codecov.io/gh/BrianHenryIE/SortonsEvents-iOS/branch/master/graph/badge.svg)](https://codecov.io/gh/BrianHenryIE/SortonsEvents-iOS) ![App Installs](http://sortons.ie/events/github/appinstalls/appinstalls.svg)
 
 # Sortons Events
 
@@ -9,12 +9,16 @@ An events and news aggregator released for Irish universities.
 Sortons, from the French verb sortir (/soɾˈtiɾ/) to go out. Nous sortons – we are going out!
 
 Originally written as a [Java web-app](https://github.com/BrianHenryIE/Sortons-Events) to be used as a Facebook Page tab, the backend runs on Google App Engine. Later an [Objective-C client](https://github.com/BrianHenryIE/SortonsEvents-iOS/tree/52227492fc7abce797a3b009a13ccbd471f40457/SortonsEvents) was written which has since been rewritten in Swift from scratch using a TDD approach as described by [Clean Swift](http://clean-swift.com/).
-![](http://www.sortons.ie/events/github/sortonseventsiphonerender.png)
+
+
+![](http://www.sortons.ie/events/github/FOMO.gif)
+
+
 Check it out on the App Store for:
 
-| [![](http://www.sortons.ie/events/github/dublincityuniversity.png)](https://itunes.apple.com/ie/app/fomo-dcu/id1037323967?mt=8) | [![](http://www.sortons.ie/events/github/trinitycollegedublin.png)](https://itunes.apple.com/ie/app/fomo-tcd/id1035135187?mt=8)  |  [![](http://www.sortons.ie/events/github/universitycollegedublin.png)](https://itunes.apple.com/ie/app/fomo-ucd/id977641745?mt=8) |
-|---|---|---|---|
-|[Dublin City University](https://itunes.apple.com/ie/app/fomo-dcu/id1037323967?mt=8)|[Trinity College Dublin](https://itunes.apple.com/ie/app/fomo-tcd/id1035135187?mt=8)|[University College Dublin](https://itunes.apple.com/ie/app/fomo-ucd/id977641745?mt=8)|
+ ---| [![](http://www.sortons.ie/events/github/dublincityuniversity.png)](https://itunes.apple.com/ie/app/fomo-dcu/id1037323967?mt=8) |-----| [![](http://www.sortons.ie/events/github/trinitycollegedublin.png)](https://itunes.apple.com/ie/app/fomo-tcd/id1035135187?mt=8) |------| [![](http://www.sortons.ie/events/github/universitycollegedublin.png)](https://itunes.apple.com/ie/app/fomo-ucd/id977641745?mt=8) |----
+
+| [Dublin City University](https://itunes.apple.com/ie/app/fomo-dcu/id1037323967?mt=8) | [Trinity College Dublin](https://itunes.apple.com/ie/app/fomo-tcd/id1035135187?mt=8) | [University College Dublin](https://itunes.apple.com/ie/app/fomo-ucd/id977641745?mt=8) |
 
 ## Build
 
@@ -55,7 +59,7 @@ Some tools I used as I built this.
 
 * [clean-swift.com](http://clean-swift.com/)
 
-I visited this page 100+ times as I disciplined myself to architect with proper separation of concerns and testing. It all makes logical sense and now seems easy but needed a mental shift when I knew whichever feature I wanted to implement was an easy few lines I could just write.
+A great website which applies Uncle Bob's Clean architecture to iOS with Swift. There's a lot of content on the site that isn't apparent from the homepage, so dig in.
 
 * [Makeappicon.com](https://makeappicon.com/)
 
@@ -87,15 +91,15 @@ I set up continuous integration as a prerequisite for the next tool!
 
 * [Codecov](https://codecov.io/)
 
-The other important metric I wanted for the top of this README was code coverage. Codecov gets called at the end of the Travis build and provides the badge image.
+The other important metric I wanted for the top of this README was code coverage. Codecov gets called at the end of the Travis build and provides the badge image. My percentage coverage dropped significantly after I [stopped loading AppDelegate](http://www.mokacoding.com/blog/prevent-unit-tests-from-loading-app-delegate-in-swift/) when running tests.
 
 * [Shields IO](http://shields.io/)
 
 The other badges at the top are made by Shields IO with a simple configurable URL.
 
-* [MockuPhone](http://mockuphone.com/)
+* [Drop to GIF](https://github.com/mortenjust/droptogif)
 
-The angled phone picture above was created on MockuPhone. I'm going to replace this with a gif eventually.
+The animated gif in this README was made by recording my iPhone's screen with QuickTime – select New Movie Recording, select your iPhone in the drop-down beside the record button, and when finished recording use the Edit menu, Trim to cut it down – then simply dragging and dropping the mov into Drop to GIF.
 
 * [Fabric](https://fabric.io)
 
@@ -108,6 +112,10 @@ Part of Fabric, I've set up FastLane to automatically take app screenshots in or
 * [SLPagingViewSwift](https://github.com/StefanLage/SLPagingViewSwift)
 
 I had implemented my own gesture recognisers to swipe between tabs but it wasn't as smooth an experience as is typical of other apps. This library made it easy to implement an improved UX. I've needed to make a few changes to this class as its properties were often marked as fileprivate which impeded subclassing.
+
+* [DZNEmptyDataSet](https://github.com/dzenbot/DZNEmptyDataSet)
+
+A very easy to use library for placing a message in UITableView when there is no content, i.e. an icon, loading message and refresh button.
 
 ## Roadmap
 
@@ -129,15 +137,19 @@ I'm a little disappointed with the number of users. When the above few points ar
 
 I'm not yet dealing with dead events or pages, so I should write a cron for that.
 
-Finding new pages to add to each directory is currently manual. A list of suggestions is built from the likes of the currently included pages. I'd like a weekly email telling me what new pages might be relevant, possibly with a confidence threshold that would automatically add them.
+Finding new pages to add to each directory is currently manual. A list of suggestions is built from the Facebook likes of the currently included pages. I'd like to build a recommender and have it automatically added pages above a confidence threshold.
 
 The server code is all at [BrianHenryIE/Sortons-Events](https://github.com/BrianHenryIE/Sortons-Events). 
+
+### Android
+
+I once wrote an Android client but I don't use Android so never 100% finished and published it. Its code is at [BrianHenryIE/Sortons-Events-Android-Client](https://github.com/BrianHenryIE/Sortons-Events-Android-Client). 
 
 ## Contact
 
 All my social profiles can be found at [BrianHenry.ie](http://www.brianhenry.ie) or you can email me: [brian.henry@sortons.ie](mailto:brian.henry@sortons.ie).
 
-## Licence
+## Licence
 
 I'm happy to share my code for others to see and learn from, but I think it's fair that others don't earn money off this without me also getting something. Get in touch!
 

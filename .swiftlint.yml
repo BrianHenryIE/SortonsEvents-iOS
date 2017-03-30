@@ -4,4 +4,4 @@ excluded:
   - Pods
 disabled_rules:
   - nesting
-
+  - vertical_parameter_alignment

@@ -75,10 +75,10 @@ class MetaWireframe: NSObject {
     }
 
     func openIosSettings() {
-        UIApplication.shared.openURL(URL(string:UIApplicationOpenSettingsURLString)!)
+        UIApplication.shared.open(URL(string:UIApplicationOpenSettingsURLString)!, options: [:], completionHandler: nil)
     }
 
     func reviewOnAppStore(_ link: String) {
-        UIApplication.shared.openURL(URL(string: link)!)
+        UIApplication.shared.open(URL(string: link)!, options: [:], completionHandler: nil)
     }
 }

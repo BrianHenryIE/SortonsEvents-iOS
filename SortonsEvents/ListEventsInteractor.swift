@@ -11,22 +11,20 @@ import Alamofire
 
 struct ListEvents {
     struct Fetch {
-        struct Request {
-        }
-
         struct Response {
             let events: [DiscoveredEvent]
-        }
-    }
+            let source: Response.Source
 
-    struct ViewModel {
-        let discoveredEvents: [ListEventsCellViewModel]
+            enum Source { case cache, network }
+        }
     }
 }
 
 protocol ListEventsInteractorOutputProtocol {
 
     func presentFetchedEvents(_ upcomingEvents: ListEvents.Fetch.Response)
+
+    func presentError(_ error: Error)
 }
 
 class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtocol {
@@ -62,32 +60,37 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtoco
         dateFormat.timeZone = calendar.timeZone
     }
 
-    func fetchEvents(_ request: ListEvents.Fetch.Request) {
-
-        // Get from cache
+    func fetchFromCache() {
         if let eventsFromCache: [DiscoveredEvent] = cacheWorker.fetch() {
             allUpcomingEvents = filterToOngoingEvents(eventsFromCache, observingFrom: observingFrom)
-            let response = ListEvents.Fetch.Response(events: allUpcomingEvents)
+            let response = ListEvents.Fetch.Response(events: allUpcomingEvents, source: .cache)
             output.presentFetchedEvents(response)
         }
+    }
 
-        // Get from network
+    func fetchFromNetwork() {
+
         listEventsNetworkWorker.fetch(fomoId) { (response: Result<[DiscoveredEvent]>) -> Void in
 
             switch response {
             case .success(let networkData):
 
-                if let allUpcomingEvents = self.filterToOngoingEvents(networkData).nilEmpty() {
+                let allUpcomingEvents = self.filterToOngoingEvents(networkData)
 
+                if allUpcomingEvents.count > 0 {
                     self.cacheWorker.save(allUpcomingEvents)
-
-                    let response = ListEvents.Fetch.Response(events: allUpcomingEvents)
-
-                    self.output.presentFetchedEvents(response)
                 }
+
+                let response = ListEvents.Fetch.Response(events: allUpcomingEvents,
+                                                         source: .network)
+
+                self.output.presentFetchedEvents(response)
+
                 break
 
-            case .failure( _):
+            case .failure(let error):
+
+                self.output.presentError(error)
 
                 break
             }
@@ -104,9 +107,9 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtoco
         }
 
         if UIApplication.shared.canOpenURL(appUrl) {
-            UIApplication.shared.openURL(appUrl)
+            UIApplication.shared.open(appUrl, options: [:], completionHandler: nil)
         } else {
-            UIApplication.shared.openURL(safariUrl)
+            UIApplication.shared.open(safariUrl, options: [:], completionHandler: nil)
         }
     }
 

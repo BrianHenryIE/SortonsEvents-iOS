@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,6 +22,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ujo-K8-ONP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gv-Xz-2WP">
+                                        <rect key="frame" x="0.0" y="33" width="375" height="33"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8e-uF-y1e">
+                                                <rect key="frame" x="134.5" y="6" width="106" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="i8e-uF-y1e" firstAttribute="centerY" secondItem="9gv-Xz-2WP" secondAttribute="centerY" id="Di4-tk-KdB"/>
+                                            <constraint firstItem="i8e-uF-y1e" firstAttribute="centerX" secondItem="9gv-Xz-2WP" secondAttribute="centerX" id="G0y-RK-KSi"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="9gv-Xz-2WP" firstAttribute="centerX" secondItem="Ujo-K8-ONP" secondAttribute="centerX" id="79F-ZY-VxG"/>
+                                    <constraint firstAttribute="bottom" secondItem="9gv-Xz-2WP" secondAttribute="bottom" id="7BY-rX-4OA"/>
+                                    <constraint firstItem="9gv-Xz-2WP" firstAttribute="width" secondItem="Ujo-K8-ONP" secondAttribute="width" id="7qI-V7-UoE"/>
+                                    <constraint firstItem="9gv-Xz-2WP" firstAttribute="height" secondItem="Ujo-K8-ONP" secondAttribute="height" multiplier="0.5" id="d01-ML-GVd"/>
+                                    <constraint firstAttribute="height" constant="66" id="m1v-OM-vWe"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Du9-jU-oL3">
+                                <rect key="frame" x="-0.5" y="66" width="375" height="601"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afG-DP-yFZ">
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -39,18 +74,29 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Du9-jU-oL3" firstAttribute="top" secondItem="Ujo-K8-ONP" secondAttribute="bottom" id="EjN-NY-y33"/>
+                            <constraint firstItem="Ujo-K8-ONP" firstAttribute="top" secondItem="HJr-Uk-VTP" secondAttribute="bottom" constant="-20" id="F4w-A3-tFA"/>
                             <constraint firstItem="o8q-qk-zfF" firstAttribute="top" secondItem="afG-DP-yFZ" secondAttribute="bottom" id="Ilr-gI-NGX"/>
+                            <constraint firstItem="Du9-jU-oL3" firstAttribute="width" secondItem="Nis-6m-HT0" secondAttribute="width" id="PJ9-RT-fNl"/>
+                            <constraint firstItem="Ujo-K8-ONP" firstAttribute="width" secondItem="Nis-6m-HT0" secondAttribute="width" id="VDX-Hw-xm3"/>
+                            <constraint firstItem="o8q-qk-zfF" firstAttribute="top" secondItem="Du9-jU-oL3" secondAttribute="bottom" id="Xoe-BV-iXo"/>
                             <constraint firstItem="afG-DP-yFZ" firstAttribute="width" secondItem="Nis-6m-HT0" secondAttribute="width" id="ew4-Jh-d65"/>
                             <constraint firstItem="afG-DP-yFZ" firstAttribute="centerX" secondItem="Nis-6m-HT0" secondAttribute="centerX" id="gug-VX-zsE"/>
+                            <constraint firstItem="Ujo-K8-ONP" firstAttribute="centerX" secondItem="Nis-6m-HT0" secondAttribute="centerX" id="slS-Vs-ria"/>
+                            <constraint firstItem="Du9-jU-oL3" firstAttribute="centerX" secondItem="Nis-6m-HT0" secondAttribute="centerX" id="yU6-Sy-D5C"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="containerView" destination="Du9-jU-oL3" id="x8O-oA-Ten"/>
+                        <outlet property="noticeBannerLabel" destination="i8e-uF-y1e" id="udA-Sz-XZ7"/>
+                        <outlet property="noticeBannerParent" destination="Ujo-K8-ONP" id="wIS-Lr-iyo"/>
+                        <outlet property="noticeBannerParentHeight" destination="m1v-OM-vWe" id="4Kz-fD-zaL"/>
                         <outlet property="tabBar" destination="afG-DP-yFZ" id="SEB-6n-5Y2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yeg-Dl-eQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1395" y="-360"/>
+            <point key="canvasLocation" x="-1362" y="-376"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="vTt-me-pni">
