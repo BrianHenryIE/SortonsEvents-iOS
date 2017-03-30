@@ -1,6 +1,6 @@
 ![Platform iOS](https://img.shields.io/badge/platform-iOS-yellow.svg)
 ![Swift 3](https://img.shields.io/badge/Swift-3-orange.svg?style=flat)
-[![codecov](https://codecov.io/gh/BrianHenryIE/SortonsEvents-iOS/branch/master/graph/badge.svg)](https://codecov.io/gh/BrianHenryIE/SortonsEvents-iOS) ![App Installs](http://sortons.ie/events/github/appinstalls/appinstalls.svg)
+[![codecov](https://codecov.io/gh/BrianHenryIE/SortonsEvents-iOS/branch/master/graph/badge.svg)](https://codecov.io/gh/BrianHenryIE/SortonsEvents-iOS) [![App Installs](http://sortons.ie/events/github/appinstalls/appinstalls.svg)](https://github.com/BrianHenryIE/iTunesConnect-App-Installs-Badge/)
 
 # Sortons Events
 
