@@ -1,11 +1,11 @@
 PODS:
-  - Alamofire (4.3.0)
+  - Alamofire (4.4.0)
   - AlamofireImage (3.2.0):
     - Alamofire (~> 4.1)
-  - AlamofireObjectMapper (4.0.1):
+  - AlamofireObjectMapper (4.1.0):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 2.0)
-  - Crashlytics (3.8.3):
+  - Crashlytics (3.8.4):
     - Fabric (~> 1.6.3)
   - DZNEmptyDataSet (1.8.1)
   - Fabric (1.6.11)
@@ -16,7 +16,7 @@ PODS:
     - URITemplate (~> 2.0)
   - Mockingjay/XCTest (2.0.0):
     - Mockingjay/Core
-  - ObjectMapper (2.2.2)
+  - ObjectMapper (2.2.5)
   - ReachabilitySwift (3)
   - URITemplate (2.0.0)
 
@@ -45,30 +45,30 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Alamofire:
-    :commit: c9c9d091b308a57ff9a744be4f2537ac9c5b4c0b
+    :commit: b03b43cc381ec02eb9855085427186ef89055eef
     :git: https://github.com/Alamofire/Alamofire.git
   AlamofireImage:
-    :commit: a4d4c0e36c3f17a80ad89687348bedbc523bba11
+    :commit: d78251c9a99bae0954aae93e4430f27a02336740
     :git: https://github.com/Alamofire/AlamofireImage.git
   AlamofireObjectMapper:
-    :commit: 10cefce003fb2cd0e9e2f6bfefc7380fae21bc29
+    :commit: c7434a645821dbc179360f2aa5ff16c8b451dddd
     :git: https://github.com/tristanhimmelman/AlamofireObjectMapper
   Mockingjay:
     :commit: a2ac2bf71b797314b4f958619963617103445ed7
     :git: https://github.com/kylef/Mockingjay.git
   ObjectMapper:
-    :commit: 5133efa3bc4be1a49c83fa8d2bff10b580e6937d
+    :commit: 1324e468d732509e6593a455f21b0f0eed12c712
     :git: https://github.com/Hearst-DD/ObjectMapper.git
 
 SPEC CHECKSUMS:
-  Alamofire: 1f72088aff8f6b40828dadd61be2e9a31beca01e
+  Alamofire: 4c2bf7fa03c4a626163606de0a417568c270575e
   AlamofireImage: 0ff319da83d6abb78a661d7296e742e7f65e15f5
-  AlamofireObjectMapper: 842d2eed43a4d0593ff0110d54ac86a170c4519c
-  Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
+  AlamofireObjectMapper: 574a93f3f08fe421ae146f46993817553b015e77
+  Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   Mockingjay: 95a5fbe594f963f7536d3975739df39f1366f4d1
-  ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
+  ObjectMapper: d4cd68f462d89a878a1c2c480f389ec5f9a7ea04
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   URITemplate: a5acb3f76c6a2338116fde88b658d83f91bbac45
 
