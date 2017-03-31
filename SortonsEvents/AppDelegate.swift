@@ -35,8 +35,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 as? RootViewController,
             let listEventsViewController = ListEventsWireframe(fomoId: fomoId).listEventsView,
             let newsViewController = NewsWireframe(fomoId: fomoId).newsView,
-            let directoryViewController = DirectoryWireframe(fomoId: fomoId).directoryView,
-            let metaViewController = MetaWireframe(fomoId: fomoId).metaMainView {
+            let directoryViewController = DirectoryWireframe(fomoId: fomoId).directoryView {
+
+            let metaViewController = MetaWireframe(fomoId: fomoId).metaView
 
             let vcs = [listEventsViewController,
                        newsViewController,

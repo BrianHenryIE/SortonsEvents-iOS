@@ -18,7 +18,6 @@ protocol MetaViewControllerOutputProtocol {
 
 class MetaViewController: UITableViewController, MetaPresenterOutputProtocol {
 
-    var rootViewController: UIViewController?
     var output: MetaViewControllerOutputProtocol?
 
     var activityVC: UIActivityViewController?
@@ -73,7 +72,7 @@ class MetaViewController: UITableViewController, MetaPresenterOutputProtocol {
         alert.popoverPresentationController?.sourceView = self.view
         alert.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
 
-        rootViewController?.present(alert, animated: true, completion:nil)
+        self.present(alert, animated: true, completion:nil)
     }
 
     func showErrorAlert(title: String, message: String) {
@@ -106,7 +105,7 @@ class MetaViewController: UITableViewController, MetaPresenterOutputProtocol {
         activityVC.popoverPresentationController?.sourceRect = CGRect(origin: alertOrigin,
                                                                       size: alertSize)
 
-        rootViewController?.present(activityVC, animated: true, completion: nil)
+        self.present(activityVC, animated: true, completion: nil)
     }
 
     func sendFeedbackEmail(to address: String, with subject: String) {
@@ -117,7 +116,7 @@ class MetaViewController: UITableViewController, MetaPresenterOutputProtocol {
         mailComposerVC.setToRecipients([address])
         mailComposerVC.setSubject(subject)
 
-        rootViewController?.present(mailComposerVC, animated: true, completion: nil)
+        self.present(mailComposerVC, animated: true, completion: nil)
     }
 }
 

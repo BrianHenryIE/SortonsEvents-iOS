@@ -14,20 +14,15 @@ class MetaWireframe: NSObject {
 
     let fomoId: FomoId
 
-    var rootViewController: UIViewController? {
-        didSet {
-            metaMainView?.rootViewController = self.rootViewController
-        }
-    }
     let storyboard = UIStoryboard(name: "Meta", bundle: Bundle.main)
 
-    var metaNavigationView: UIViewController?
-    var metaMainView: MetaViewController?
-    var metaInteractor: MetaInteractor?
+    let metaView: UINavigationController
 
     init(fomoId: FomoId) {
         self.fomoId = fomoId
+        metaView = UINavigationController()
         super.init()
+
         presentMainView()
     }
 
@@ -39,18 +34,16 @@ class MetaWireframe: NSObject {
             return
         }
 
-        self.metaMainView = metaMainView
-
-        metaNavigationView = UINavigationController(rootViewController: metaMainView)
-
         let metaPresenter = MetaPresenter(fomoId: fomoId,
                                           output: metaMainView)
 
-        metaInteractor = MetaInteractor(wireframe: self,
+        let metaInteractor = MetaInteractor(wireframe: self,
                                            fomoId: fomoId,
                                         presenter: metaPresenter)
 
         metaMainView.output = metaInteractor
+
+        metaView.pushViewController(metaMainView, animated: false)
     }
 
     func presentWebView(for url: String) {
@@ -70,8 +63,8 @@ class MetaWireframe: NSObject {
 
         metaWebViewController.output = metaWebViewInteractor
 
-        metaNavigationView?.childViewControllers[0].navigationController?.pushViewController(metaWebViewController,
-                                                                                  animated: true)
+        metaView.pushViewController(metaWebViewController,
+                                              animated: true)
     }
 
     func openIosSettings() {
