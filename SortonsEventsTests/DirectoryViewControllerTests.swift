@@ -134,4 +134,12 @@ class DirectoryViewControllerTests: XCTestCase {
     func testSearchBarDisappearsOnScroll() {
 
     }
+
+    func testTablePositionedSoSearchBarVisisble() {
+
+        let tableViewOffset = sut.tableViewOutlet.contentOffset.y * -1
+        let statusBarHeight = UIApplication.shared.statusBarFrame.size.height
+
+        XCTAssertEqual(tableViewOffset, statusBarHeight)
+    }
 }

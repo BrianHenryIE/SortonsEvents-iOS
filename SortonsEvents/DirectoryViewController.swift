@@ -46,6 +46,8 @@ class DirectoryViewController: UIViewController, DirectoryPresenterOutputProtoco
                                                  bottom: 49,
                                                   right: 0)
 
+        tableViewOutlet.setContentOffset(CGPoint(x: 0, y: top * -1), animated: false)
+
         let request = Directory.Request()
         output?.fetchDirectory(request)
     }
