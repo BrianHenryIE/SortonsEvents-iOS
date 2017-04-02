@@ -12,7 +12,7 @@ import XCTest
 import ObjectMapper
 import Alamofire
 
-fileprivate class EmptyNetworkSpy: NetworkProtocol {
+private class EmptyNetworkSpy: NetworkProtocol {
 
     var fetchCalled = false
 
@@ -25,7 +25,7 @@ fileprivate class EmptyNetworkSpy: NetworkProtocol {
     }
 }
 
-fileprivate class EmptyCacheSpy<T: ImmutableMappable>: CacheProtocol {
+private class EmptyCacheSpy<T: ImmutableMappable>: CacheProtocol {
 
     var fetchCalled = false
 
@@ -41,7 +41,7 @@ fileprivate class EmptyCacheSpy<T: ImmutableMappable>: CacheProtocol {
     }
 }
 
-fileprivate class NetworkSpy: NetworkProtocol {
+private class NetworkSpy: NetworkProtocol {
 
     var fetchEventsCalled = false
 
@@ -59,7 +59,7 @@ fileprivate class NetworkSpy: NetworkProtocol {
     }
 }
 
-fileprivate class NetworkErrorMock: NetworkProtocol {
+private class NetworkErrorMock: NetworkProtocol {
 
     var fetchEventsCalled = false
 
@@ -73,7 +73,7 @@ fileprivate class NetworkErrorMock: NetworkProtocol {
     }
 }
 
-fileprivate class CacheSpy<T: ImmutableMappable>: CacheProtocol {
+private class CacheSpy<T: ImmutableMappable>: CacheProtocol {
 
     var fetchCalled = false
 
@@ -93,7 +93,7 @@ fileprivate class CacheSpy<T: ImmutableMappable>: CacheProtocol {
     }
 }
 
-fileprivate class OutputSpy: ListEventsInteractorOutputProtocol {
+private class OutputSpy: ListEventsInteractorOutputProtocol {
 
     var presentFetchedEventsCalled = false
     var presentErrorHit = false
@@ -107,7 +107,34 @@ fileprivate class OutputSpy: ListEventsInteractorOutputProtocol {
     }
 }
 
+private class UIApplicationMock: UIApplicationProtocol {
+
+    var canOpenURLHit = false
+    var returnCanOpenURL = true
+
+    var openHit = false
+    var urlUsed: URL!
+
+    func canOpenURL(_ url: URL) -> Bool {
+        canOpenURLHit = true
+        return returnCanOpenURL
+    }
+
+    func open(_ url: URL,
+              options: [String : Any],
+              completionHandler completion: ((Bool) -> Void)?) {
+        urlUsed = url
+        openHit = true
+    }
+}
+
 class ListEventsInteractorTests: XCTestCase {
+
+    var interactor: ListEventsInteractor!
+    private var networkSpy: NetworkSpy!
+    private var cacheSpy: CacheSpy<DiscoveredEvent>!
+    private var output: ListEventsInteractorOutputProtocol!
+    private var uiApplication: UIApplicationMock!
 
     let fomoId = FomoId(fomoIdNumber: "id",
                                 name: "name",
@@ -116,19 +143,33 @@ class ListEventsInteractorTests: XCTestCase {
                           appStoreId: "appStoreId",
                               censor: [String]())
 
-    func testFetchFromCacheShouldAskCacheWorkerForEventsAndPresenterToFormatResult() {
-        let networkSpy = NetworkSpy()
-        let cacheSpy = CacheSpy<DiscoveredEvent>()
+    override func setUp() {
+        super.setUp()
 
-        let interactorOutputSpy = OutputSpy()
+        networkSpy = NetworkSpy()
+        cacheSpy = CacheSpy<DiscoveredEvent>()
 
-        let sut = ListEventsInteractor(wireframe: ListEventsWireframe(fomoId: fomoId),
+        output = OutputSpy()
+
+        uiApplication = UIApplicationMock()
+
+        interactor = ListEventsInteractor(wireframe: ListEventsWireframe(fomoId: fomoId),
                                        fomoId: "",
-                                       output: interactorOutputSpy,
+                                       output: output,
                                        listEventsNetworkWorker: networkSpy,
-                                       listEventsCacheWorker: cacheSpy)
+                                       listEventsCacheWorker: cacheSpy,
+                                       uiApplication: uiApplication)
 
-        sut.fetchFromCache()
+        let dataString = readJsonFile(filename: "ListEventsInteractorTestsData")
+
+        let dataObjects = try? Mapper<DiscoveredEvent>().mapArray(JSONString: dataString)
+
+        interactor.allUpcomingEvents = dataObjects!
+    }
+
+    func testFetchFromCacheShouldAskCacheWorkerForEventsAndPresenterToFormatResult() {
+
+        interactor.fetchFromCache()
 
         // Then
         XCTAssert(cacheSpy.fetchCalled, "Fetch() should ask cacheWorker to fetch events")
@@ -171,6 +212,34 @@ class ListEventsInteractorTests: XCTestCase {
         viewController.fetchFromNetwork()
 
         XCTAssert(interactorOutputSpy.presentErrorHit)
+    }
+
+    func testDisplayEventWithFbApp() {
+
+        uiApplication.returnCanOpenURL = true
+
+        let row = 1
+        interactor.displayEvent(for: row)
+
+        XCTAssertTrue(uiApplication.canOpenURLHit)
+
+        XCTAssertTrue(uiApplication.openHit)
+
+        XCTAssertTrue(uiApplication.urlUsed.absoluteString.hasPrefix("fb:"))
+    }
+
+    func testDisplayEventWithoutFbApp() {
+
+        uiApplication.returnCanOpenURL = false
+
+        let row = 1
+        interactor.displayEvent(for: row)
+
+        XCTAssertTrue(uiApplication.canOpenURLHit)
+
+        XCTAssertTrue(uiApplication.openHit)
+
+        XCTAssertTrue(uiApplication.urlUsed.absoluteString.hasPrefix("https:"))
     }
 
     func testShouldDiscardEarlyEvents() {

@@ -31,6 +31,7 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtoco
 
     var allUpcomingEvents = [DiscoveredEvent]()
 
+    let uiApplication: UIApplicationProtocol
     let wireframe: ListEventsWireframe
     let fomoId: String
     let output: ListEventsInteractorOutputProtocol
@@ -47,12 +48,14 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtoco
          listEventsNetworkWorker: NetworkProtocol,
            listEventsCacheWorker: CacheProtocol,
                         withDate: Date = Date(),
-                    withCalendar: Calendar = Calendar.current) {
+                    withCalendar: Calendar = Calendar.current,
+                   uiApplication: UIApplicationProtocol = UIApplication.shared) {
         self.wireframe = wireframe
         self.fomoId = fomoId
         self.output = output
         self.listEventsNetworkWorker = listEventsNetworkWorker
         self.cacheWorker = listEventsCacheWorker
+        self.uiApplication = uiApplication
 
         observingFrom = withDate
         self.calendar = withCalendar
@@ -106,10 +109,10 @@ class ListEventsInteractor: NSObject, ListEventsTableViewControllerOutputProtoco
             return
         }
 
-        if UIApplication.shared.canOpenURL(appUrl) {
-            UIApplication.shared.open(appUrl, options: [:], completionHandler: nil)
+        if uiApplication.canOpenURL(appUrl) {
+            uiApplication.open(appUrl, options: [:], completionHandler: nil)
         } else {
-            UIApplication.shared.open(safariUrl, options: [:], completionHandler: nil)
+            uiApplication.open(safariUrl, options: [:], completionHandler: nil)
         }
     }
 

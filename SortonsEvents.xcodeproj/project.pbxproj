@@ -21,6 +21,16 @@
 		840807841E8B68F000D7DB7D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408077C1E8B686F00D7DB7D /* main.swift */; };
 		840807851E8B68F200D7DB7D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408077C1E8B686F00D7DB7D /* main.swift */; };
 		841733141E8B31C90077691B /* RootPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841733131E8B31C90077691B /* RootPresenterTests.swift */; };
+		841AEDA01E9193EB00166C06 /* UIApplicationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AED9F1E9193EB00166C06 /* UIApplicationProtocol.swift */; };
+		841AEDA11E9193EB00166C06 /* UIApplicationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AED9F1E9193EB00166C06 /* UIApplicationProtocol.swift */; };
+		841AEDA21E9193EB00166C06 /* UIApplicationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AED9F1E9193EB00166C06 /* UIApplicationProtocol.swift */; };
+		841AEDA31E9193EB00166C06 /* UIApplicationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AED9F1E9193EB00166C06 /* UIApplicationProtocol.swift */; };
+		841AEDA41E9193EB00166C06 /* UIApplicationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AED9F1E9193EB00166C06 /* UIApplicationProtocol.swift */; };
+		841AEDA51E9193EB00166C06 /* UIApplicationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AED9F1E9193EB00166C06 /* UIApplicationProtocol.swift */; };
+		841AEDA61E9193EB00166C06 /* UIApplicationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AED9F1E9193EB00166C06 /* UIApplicationProtocol.swift */; };
+		841AEDA71E9193EB00166C06 /* UIApplicationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AED9F1E9193EB00166C06 /* UIApplicationProtocol.swift */; };
+		841AEDA81E9193EB00166C06 /* UIApplicationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AED9F1E9193EB00166C06 /* UIApplicationProtocol.swift */; };
+		841AEDAA1E91A54400166C06 /* ListEventsInteractorTestsData.json in Resources */ = {isa = PBXBuildFile; fileRef = 841AEDA91E91A54400166C06 /* ListEventsInteractorTestsData.json */; };
 		84452E2D1E7B51A800EABBC9 /* RootInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84452E2C1E7B51A800EABBC9 /* RootInteractorTests.swift */; };
 		8497A0751E8AFD16003BA1FE /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497A0741E8AFD16003BA1FE /* RootInteractor.swift */; };
 		8497A0761E8AFD16003BA1FE /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497A0741E8AFD16003BA1FE /* RootInteractor.swift */; };
@@ -514,6 +524,8 @@
 		786DDF9E2A825C011E1D3806 /* Pods-SortonsEventsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SortonsEventsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SortonsEventsTests/Pods-SortonsEventsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8408077C1E8B686F00D7DB7D /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		841733131E8B31C90077691B /* RootPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootPresenterTests.swift; sourceTree = "<group>"; };
+		841AED9F1E9193EB00166C06 /* UIApplicationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationProtocol.swift; sourceTree = "<group>"; };
+		841AEDA91E91A54400166C06 /* ListEventsInteractorTestsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ListEventsInteractorTestsData.json; sourceTree = "<group>"; };
 		84452E2C1E7B51A800EABBC9 /* RootInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootInteractorTests.swift; sourceTree = "<group>"; };
 		8497A0741E8AFD16003BA1FE /* RootInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		84A3433F1E77B79F003AB6E3 /* Array+NilEmptyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+NilEmptyTests.swift"; sourceTree = "<group>"; };
@@ -998,6 +1010,7 @@
 				A68183D41D2ADD6200E45D35 /* ListEventsTableViewControllerTests.swift */,
 				A6ABE5321D3AB60200EF3D11 /* ListEventsPresenterTests.swift */,
 				A69DBF481C8AD738005064F7 /* ListEventsInteractorTests.swift */,
+				841AEDA91E91A54400166C06 /* ListEventsInteractorTestsData.json */,
 			);
 			name = "List Events";
 			sourceTree = "<group>";
@@ -1046,6 +1059,7 @@
 		A6C02ADD1E33CD9F00A80799 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				841AED9F1E9193EB00166C06 /* UIApplicationProtocol.swift */,
 				A6AAD3F61D25B64D0097AF22 /* GAEISO8601DateTransform.swift */,
 				A6C02AEA1E33F5CC00A80799 /* Array+NilEmpty.swift */,
 			);
@@ -1678,6 +1692,7 @@
 				A6C02AD81E33312A00A80799 /* ListEventsCacheTestsData.json in Resources */,
 				A636D26F1D0C892F00FB9C62 /* DiscoveredEventNIUGBicycleVolunteering.json in Resources */,
 				A638BD981E35A7BB0011380C /* NetworkTestsData.json in Resources */,
+				841AEDAA1E91A54400166C06 /* ListEventsInteractorTestsData.json in Resources */,
 				A69AD4DB1DBF1474005C6CC3 /* SourcePageTcdCaliforniaAlumni.json in Resources */,
 				A638BD631E359CBD0011380C /* DirectoryInteractorTestsDummyData.json in Resources */,
 				A66DC3981CF3966700ED636B /* SourcePageTcdAsian.json in Resources */,
@@ -2410,6 +2425,7 @@
 				A643EB7A1DF4F7240005E769 /* MetaPresenter.swift in Sources */,
 				A60013DB1E3DEBCA00F4FE02 /* SLPagingViewSwift.swift in Sources */,
 				A63B95331DB6338700ECA301 /* DirectoryTableViewCell.swift in Sources */,
+				841AEDA51E9193EB00166C06 /* UIApplicationProtocol.swift in Sources */,
 				A63B953B1DB6338F00ECA301 /* DirectoryInteractor.swift in Sources */,
 				A6C02AF01E33F5CC00A80799 /* Array+NilEmpty.swift in Sources */,
 				A63B952F1DB6338400ECA301 /* DirectoryViewController.swift in Sources */,
@@ -2452,6 +2468,7 @@
 				A643EB7B1DF4F7240005E769 /* MetaPresenter.swift in Sources */,
 				A60013DC1E3DEBCA00F4FE02 /* SLPagingViewSwift.swift in Sources */,
 				A63B95341DB6338800ECA301 /* DirectoryTableViewCell.swift in Sources */,
+				841AEDA61E9193EB00166C06 /* UIApplicationProtocol.swift in Sources */,
 				A63B953C1DB6339000ECA301 /* DirectoryInteractor.swift in Sources */,
 				A6C02AF11E33F5CC00A80799 /* Array+NilEmpty.swift in Sources */,
 				A63B95301DB6338400ECA301 /* DirectoryViewController.swift in Sources */,
@@ -2494,6 +2511,7 @@
 				A643EB731DF4F7240005E769 /* MetaInteractor.swift in Sources */,
 				A60013DD1E3DEBCA00F4FE02 /* SLPagingViewSwift.swift in Sources */,
 				A6A675941C941D6300FAD755 /* AppDelegate.swift in Sources */,
+				841AEDA71E9193EB00166C06 /* UIApplicationProtocol.swift in Sources */,
 				A67796B71DADF097003FBCE6 /* DirectoryViewController.swift in Sources */,
 				A643EB7C1DF4F7240005E769 /* MetaPresenter.swift in Sources */,
 				A6C04F6E1DB4530A0009C9BF /* DirectoryInteractor.swift in Sources */,
@@ -2536,6 +2554,7 @@
 				A643EB751DF4F7240005E769 /* MetaPresenter.swift in Sources */,
 				A60013D61E3DEBCA00F4FE02 /* SLPagingViewSwift.swift in Sources */,
 				A63B95351DB6338800ECA301 /* DirectoryTableViewCell.swift in Sources */,
+				841AEDA01E9193EB00166C06 /* UIApplicationProtocol.swift in Sources */,
 				A63B953D1DB6339100ECA301 /* DirectoryInteractor.swift in Sources */,
 				A6C02AEB1E33F5CC00A80799 /* Array+NilEmpty.swift in Sources */,
 				A63B95311DB6338400ECA301 /* DirectoryViewController.swift in Sources */,
@@ -2587,6 +2606,7 @@
 				A643EB781DF4F7240005E769 /* MetaPresenter.swift in Sources */,
 				A60013D91E3DEBCA00F4FE02 /* SLPagingViewSwift.swift in Sources */,
 				A69186C51DCC543A00372A98 /* DirectoryTableViewCell.swift in Sources */,
+				841AEDA31E9193EB00166C06 /* UIApplicationProtocol.swift in Sources */,
 				A69186C61DCC543A00372A98 /* DirectoryInteractor.swift in Sources */,
 				A6C02AEE1E33F5CC00A80799 /* Array+NilEmpty.swift in Sources */,
 				A69186C71DCC543A00372A98 /* DirectoryViewController.swift in Sources */,
@@ -2629,6 +2649,7 @@
 				A643EB761DF4F7240005E769 /* MetaPresenter.swift in Sources */,
 				A60013D71E3DEBCA00F4FE02 /* SLPagingViewSwift.swift in Sources */,
 				A69187021DCC54BD00372A98 /* DirectoryTableViewCell.swift in Sources */,
+				841AEDA11E9193EB00166C06 /* UIApplicationProtocol.swift in Sources */,
 				A69187031DCC54BD00372A98 /* DirectoryInteractor.swift in Sources */,
 				A6C02AEC1E33F5CC00A80799 /* Array+NilEmpty.swift in Sources */,
 				A69187041DCC54BD00372A98 /* DirectoryViewController.swift in Sources */,
@@ -2671,6 +2692,7 @@
 				A643EB741DF4F7240005E769 /* MetaInteractor.swift in Sources */,
 				A60013DE1E3DEBCA00F4FE02 /* SLPagingViewSwift.swift in Sources */,
 				A691873C1DCC551000372A98 /* AppDelegate.swift in Sources */,
+				841AEDA81E9193EB00166C06 /* UIApplicationProtocol.swift in Sources */,
 				A691873D1DCC551000372A98 /* DirectoryViewController.swift in Sources */,
 				A643EB7D1DF4F7240005E769 /* MetaPresenter.swift in Sources */,
 				A691873E1DCC551000372A98 /* DirectoryInteractor.swift in Sources */,
@@ -2713,6 +2735,7 @@
 				A643EB791DF4F7240005E769 /* MetaPresenter.swift in Sources */,
 				A60013DA1E3DEBCA00F4FE02 /* SLPagingViewSwift.swift in Sources */,
 				A69187911DCC591E00372A98 /* DirectoryTableViewCell.swift in Sources */,
+				841AEDA41E9193EB00166C06 /* UIApplicationProtocol.swift in Sources */,
 				A69187921DCC591E00372A98 /* DirectoryInteractor.swift in Sources */,
 				A6C02AEF1E33F5CC00A80799 /* Array+NilEmpty.swift in Sources */,
 				A69187931DCC591E00372A98 /* DirectoryViewController.swift in Sources */,
@@ -2787,6 +2810,7 @@
 				A643EB771DF4F7240005E769 /* MetaPresenter.swift in Sources */,
 				A60013D81E3DEBCA00F4FE02 /* SLPagingViewSwift.swift in Sources */,
 				A63B95321DB6338700ECA301 /* DirectoryTableViewCell.swift in Sources */,
+				841AEDA21E9193EB00166C06 /* UIApplicationProtocol.swift in Sources */,
 				A63B953A1DB6338F00ECA301 /* DirectoryInteractor.swift in Sources */,
 				A6C02AED1E33F5CC00A80799 /* Array+NilEmpty.swift in Sources */,
 				A63B952E1DB6338300ECA301 /* DirectoryViewController.swift in Sources */,
